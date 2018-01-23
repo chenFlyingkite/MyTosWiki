@@ -1,4 +1,4 @@
-package com.flyingkite.androidskeleton;
+package com.flyingkite.mytoswiki;
 
 import android.app.Activity;
 import android.content.Intent;

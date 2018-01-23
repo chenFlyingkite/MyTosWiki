@@ -1,4 +1,4 @@
-package com.flyingkite.androidskeleton;
+package com.flyingkite.mytoswiki;
 
 import android.os.Bundle;
 
