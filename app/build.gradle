@@ -32,7 +32,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "com.flyingkite.mytoswiki"
+        applicationId "com.flyingkite.androidskeleton"
         minSdkVersion 21
         targetSdkVersion 26
         multiDexEnabled true

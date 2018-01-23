@@ -1,5 +1,4 @@
-package com.flyingkite.mytoswiki;
-
+package com.flyingkite.androidskeleton;
 
 import android.content.Context;
 import android.support.multidex.MultiDex;
