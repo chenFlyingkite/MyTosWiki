@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+def libraryVersion = "25.0.1"
+def googlePlayVersion = "9.8.0"
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'MyAndroid'
+            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
+            storePassword 'MyAndroid'
+        }
+    }
+
+    lintOptions {
+        ignore 'ContentDescription'
+        // TODO : RTLS
+        //ignore 'Rtls'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.flyingkite.mytoswiki"
+        minSdkVersion 21
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:multidex:1.0.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$libraryVersion"
+    implementation "com.android.support:design:$libraryVersion"
+    //implementation "com.android.support.constraint:constraint-layout:1.0.2"
+}
