@@ -19,6 +19,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+        // For MyAndroid in GitHub
+        maven { url "https://jitpack.io" }
     }
 }
 

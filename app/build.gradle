@@ -59,4 +59,11 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$libraryVersion"
     implementation "com.android.support:design:$libraryVersion"
     //implementation "com.android.support.constraint:constraint-layout:1.0.2"
+
+    //compile 'com.github.User:Repo:Tag'
+    implementation "com.github.chenFlyingkite:MyAndroid:0.0.3"
+
+    // A Java serialization/deserialization library to convert Java Objects into JSON and back
+    //https://github.com/google/gson
+    implementation "com.google.code.gson:gson:2.8.2"
 }
