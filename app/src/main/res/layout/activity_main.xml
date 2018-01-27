@@ -1,11 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello world"/>
+
+    <fragment
+        android:id="@+id/cardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t430dp"
+        android:layout_marginTop="@dimen/t40dp"
+        class="com.flyingkite.mytoswiki.TosCardFragment"/>
+
+    <ScrollView
+        android:layout_below="@id/cardFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/texts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10 - 1234567890"
+                android:textSize="@dimen/t10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11 - 1234567890"
+                android:textSize="@dimen/t11dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12 - 1234567890"
+                android:textSize="@dimen/t12dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="13 - 1234567890"
+                android:textSize="@dimen/t13dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14 - 1234567890"
+                android:textSize="@dimen/t14dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="15 - 1234567890"
+                android:textSize="@dimen/t15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16 - 1234567890"
+                android:textSize="@dimen/t16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="17 - 1234567890"
+                android:textSize="@dimen/t17dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18 - 1234567890"
+                android:textSize="@dimen/t18dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="19 - 1234567890"
+                android:textSize="@dimen/t19dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 - 1234567890"
+                android:textSize="@dimen/t20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21 - 1234567890"
+                android:textSize="@dimen/t21dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22 - 1234567890"
+                android:textSize="@dimen/t22dp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
