@@ -5,7 +5,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flyingkite.library.Say;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.TosWiki;
 import com.flyingkite.mytoswiki.data.TosCard;
 
 class CardVH extends RecyclerView.ViewHolder {
@@ -17,6 +19,10 @@ class CardVH extends RecyclerView.ViewHolder {
         super(v);
         thumb = v.findViewById(R.id.squareImg);
         text = v.findViewById(R.id.squareText);
+        v.setOnClickListener(w -> {
+            Say.Log("click %s", text);
+            TosWiki.ff();
+        });
     }
 
     public void setCard(TosCard card) {

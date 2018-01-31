@@ -8,19 +8,28 @@ def libraryVersion = "26.0.1"
 def googlePlayVersion = "9.8.0"
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'MyAndroidKey'
-            keyPassword 'MyAndroid'
-            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
-            storePassword 'MyAndroid'
-        }
+//    signingConfigs {
+//        config {
+//            keyAlias 'MyAndroidKey'
+//            keyPassword 'MyAndroid'
+//            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
+//            storePassword 'MyAndroid'
+//        }
+//    }
+
+    // https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.DexOptions.html
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "1g"
+        maxProcessCount 4 // Total Memory = maxProcessCount * javaMaxHeapSize
+        threadCount (maxProcessCount * 3)
     }
 
     lintOptions {
-        ignore 'ContentDescription'
-        // TODO : RTLS
-        //ignore 'Rtls'
+        warning 'MissingTranslation'
+        ignore  'ContentDescription'
+        ignore  'RtlCompat', 'RtlEnabled', 'RtlHardcoded', 'RtlSymmetry'
+        //abortOnError false
     }
 
     compileOptions {
@@ -42,14 +51,16 @@ android {
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
         }
         release {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    project.gradle.addListener(new TaskTicTac())
 }
 
 dependencies {
@@ -62,7 +73,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$libraryVersion"
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
 
-    //compile 'com.github.User:Repo:Tag'
+    //implementation 'com.github.User:Repo:Tag'
     implementation "com.github.chenFlyingkite:MyAndroid:0.0.3"
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
@@ -70,8 +81,58 @@ dependencies {
     implementation "com.google.code.gson:gson:2.8.2"
 
     // Glide for Image cache library.
+    // https://github.com/bumptech/glide
     implementation "com.github.bumptech.glide:glide:4.5.0"
+
+    // OkHttp for web
+    // http://square.github.io/okhttp/
+    implementation "com.squareup.okhttp3:okhttp:3.9.1"
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    // https://github.com/jhy/jsoup
+    implementation "org.jsoup:jsoup:1.11.2"
+    //
+    // https://github.com/Wikia/vignette#scale-to-width
+    
 
     // Picasso
     //implementation 'com.squareup.picasso:picasso:2.5.2'
+}
+
+
+// BuildAdapter is simple listener for BuildListener
+// TaskExecutionAdapter is simple listener for TaskExecutionListener
+class TaskTicTac extends BuildAdapter implements TaskExecutionListener {
+    private org.gradle.internal.time.Clock clock = new org.gradle.internal.time.Clock()
+    private times = []
+    private everSlow = false
+    private final SLOW = 3000
+
+    @Override
+    void beforeExecute(Task task) {
+        clock.reset()
+    }
+
+    @Override
+    void afterExecute(Task task, TaskState taskState) {
+        def ms = clock.getElapsedMillis()
+        if (!everSlow) {
+            everSlow = ms >= SLOW
+        }
+        times.add([ms, task.path])
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+        if (!everSlow) return
+
+        printf "---- TaskTicTac ---- (All %s tasks)\n", times.size()
+        printf "Tasks spend time >= %s ms:\n", SLOW
+        for (time in times) {
+            if (time[0] >= SLOW) {
+                printf "%10.03f s  %s\n", time[0] * 0.001, time[1]
+            }
+        }
+        println "--------"
+    }
 }

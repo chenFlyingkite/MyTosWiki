@@ -25,7 +25,12 @@ public class TosCardFragment extends BaseFragment {
         allCard = TosWiki.parseCards(getActivity().getAssets());
         cardLib.setDataSet(allCard);
         TicTac.tac("parseCards");
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        //TosWiki.ff();
     }
 
     @Override

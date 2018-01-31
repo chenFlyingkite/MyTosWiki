@@ -16,7 +16,7 @@ public class BaseFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        LogV("onAttach(Context)");
+        LogV("onAttach(%s)", context);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void LogV(String msg) {
-        Log.e(getTagName(), msg);
+        Log.v(getTagName(), msg);
     }
 
     protected void LogE(String msg, Object... param) {

@@ -4,22 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello world"/>
 
     <fragment
         android:id="@+id/cardFragment"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/t430dp"
-        android:layout_marginTop="@dimen/t40dp"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_tos_card"
         class="com.flyingkite.mytoswiki.TosCardFragment"/>
 
     <ScrollView
-        android:layout_below="@id/cardFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/t100dp"
+        android:layout_alignParentBottom="true">
         <LinearLayout
             android:id="@+id/texts"
             android:layout_width="match_parent"
