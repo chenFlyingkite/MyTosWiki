@@ -3,6 +3,10 @@ package com.flyingkite;
 import com.google.gson.annotations.SerializedName;
 
 public class TosCardN {
+    /** Normalized ID, in form of %4d or %c%3d */
+    @SerializedName("idNorm")
+    public String idNorm = "";
+
     @SerializedName("wikiLink")
     public String wikiLink = "";
 

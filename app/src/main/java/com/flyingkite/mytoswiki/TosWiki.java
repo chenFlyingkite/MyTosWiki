@@ -26,7 +26,7 @@ public class TosWiki {
         Reader reader = null;
         TosCardN[] cards = null;
         try {
-            reader = getReader("dataList.json", am);
+            reader = getReader("cardList.json", am);
             if (reader != null) {
                 cards = gson.fromJson(reader, TosCardN[].class);
             }
