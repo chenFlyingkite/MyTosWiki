@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
+    <FrameLayout
         android:id="@+id/cardFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_tos_card"
-        class="com.flyingkite.mytoswiki.TosCardFragment"/>
+        android:layout_height="match_parent"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="@dimen/t100dp"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
         <LinearLayout
             android:id="@+id/texts"
             android:layout_width="match_parent"

@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class BaseFragment extends Fragment {
 
@@ -80,6 +82,14 @@ public class BaseFragment extends Fragment {
         }
 
         return getActivity().findViewById(id);
+    }
+
+    protected final void showToast(@StringRes int id) {
+        Toast.makeText(getActivity(), id, Toast.LENGTH_LONG).show();
+    }
+
+    protected final void showToast(String s) {
+        Toast.makeText(getActivity(), s, Toast.LENGTH_LONG).show();
     }
 
     protected String getTagName() {

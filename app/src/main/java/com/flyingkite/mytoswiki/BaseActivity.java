@@ -6,7 +6,9 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +21,7 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogV("onCreate %s", savedInstanceState);
+        LogV("onCreate(%s)", savedInstanceState);
         requestPermissions();
     }
 
@@ -88,6 +90,14 @@ public abstract class BaseActivity extends Activity {
                 LogV("and returns results = " + Arrays.toString(grantResults));
                 break;
         }
+    }
+
+    protected final void showToast(@StringRes int id) {
+        Toast.makeText(this, id, Toast.LENGTH_LONG).show();
+    }
+
+    protected final void showToast(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
     }
 
     protected String getTagName() {

@@ -2,188 +2,159 @@ package com.flyingkite.mytoswiki.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TosCard {
+    /** Normalized ID, in form of %04d */
+    @SerializedName("idNorm")
+    public String idNorm = "";
 
-////////////////
-// Basic Profile
-////////////////
-    @SerializedName("display_num")
-    public String display_num;
+    /** Http link to wiki page */
+    @SerializedName("wikiLink")
+    public String wikiLink = "";
 
-    @SerializedName("icon_name")
-    public String icon_name;
-
-    @SerializedName("icon_url")
-    public String icon_url;
-
-    @SerializedName("imageId")
-    public String imageId;
-
-    @SerializedName("img_url")
-    public String img_url;
-
-////////////////
-// Basic Profile, Common selection
-////////////////
-
-    @SerializedName("number")
-    public int number;
-
-    @SerializedName("starCount")
-    public int starCount;
-
+    /** Name, like 鳴動威嚴 ‧ 摩迪與曼尼 */
     @SerializedName("name")
-    public String name;
+    public String name = "";
 
-    @SerializedName("ethnicity")
-    public String ethnicity;
+    /** Attributes, one of 水 火 木 光 暗, like 光 */
+    @SerializedName("attribute")
+    public String attribute = "";
 
+    /** Icon, image link  */
+    @SerializedName("icon")
+    public String icon = "";
+
+    /** Image of card, image link */
+    @SerializedName("bigImage")
+    public String bigImage = "";
+
+    /** ID, like 1063  */
+    @SerializedName("id")
+    public String id = "";
+
+    /** Rarity, star 1 ~ 8 */
+    @SerializedName("rarity")
+    public int rarity;
+
+    /** Cost of space, like 16 */
+    @SerializedName("cost")
+    public int cost;
+
+    /** Race, like 人 */
+    @SerializedName("race")
+    public String race = "";
+
+    /** Series, like 北域遺族 */
     @SerializedName("series")
-    public String series;
+    public String series = "";
 
-    @SerializedName("property")
-    public String property;
+    /** Lv max, like 99 */
+    @SerializedName("LvMax")
+    public int LvMax;
 
-    @SerializedName("spacing")
-    public int spacing;
+    /** MaxExp, like 500_0000 */
+    @SerializedName("ExpMax")
+    public long ExpMax;
 
-////////////////
-// Levels & Experience
-////////////////
+    //------------
+    //---- Active Skill 1
+    //------------
 
-    @SerializedName("levelMaxExperience")
-    public int levelMaxExperience;
+    /** Active skill name, like "木光移魂" */
+    @SerializedName("skillName")
+    public String skillName = "";
 
-    @SerializedName("feedExperience")
-    public int feedExperience;
+    /** Active skill description, like "木符石轉化為光符石" */
+    @SerializedName("skillDesc")
+    public String skillDesc = "";
 
-    @SerializedName("levelInit")
-    public int levelInit;
+    /** Active skill CD min Lv, like 16 */
+    @SerializedName("skillCDMin")
+    public int skillCDMin;
 
-    @SerializedName("levelInitHP")
-    public int levelInitHP;
+    /** Active skill CD max Lv, like 5 */
+    @SerializedName("skillCDMax")
+    public int skillCDMax;
 
-    @SerializedName("levelInitAttack")
-    public int levelInitAttack;
+    //------------
+    //---- Active Skill 2
+    //------------
 
-    @SerializedName("levelInitResilience")
-    public int levelInitResilience;
+    /** Active skill 2 name, like "天雷極地" */
+    @SerializedName("skillName2")
+    public String skillName2 = "";
 
-    @SerializedName("levelInitTotal")
-    public int levelInitTotal;
+    /** Active skill 2 description, like "1 回合內，敵方全體轉為暗屬性，並提升光屬性對暗屬性目標的攻擊力" */
+    @SerializedName("skillDesc2")
+    public String skillDesc2 = "";
 
-    @SerializedName("levelMax")
-    public int levelMax;
+    /** Active skill 2 CD min Lv, like 21 */
+    @SerializedName("skillCDMin2")
+    public int skillCDMin2;
 
-    @SerializedName("levelMaxHP")
-    public int levelMaxHP;
+    /** Active skill 2 CD max Lv, like 10 */
+    @SerializedName("skillCDMax2")
+    public int skillCDMax2;
 
-    @SerializedName("levelMaxAttack")
-    public int levelMaxAttack;
+    //------------
+    //---- Leader Skill
+    //------------
 
-    @SerializedName("levelMaxResilience")
-    public int levelMaxResilience;
-
-    @SerializedName("levelMaxTotal")
-    public int levelMaxTotal;
-
-////////////////
-// Levels & Experience - All max
-////////////////
-
-    @SerializedName("allMaxHP")
-    public int allMaxHP;
-    @SerializedName("allMaxAttack")
-    public int allMaxAttack;
-    @SerializedName("allMaxResilience")
-    public int allMaxResilience;
-    @SerializedName("allMaxTotal")
-    public int allMaxTotal;
-
-////////////////
-// Skill - Normal
-////////////////
-
-    @SerializedName("skillActivityName")
-    public String skillActivityName;
-
-    @SerializedName("skillActivityDesc")
-    public String skillActivityDesc;
-
-    @SerializedName("cdMin")
-    public String cdMin;
-
-    @SerializedName("cdMax")
-    public String cdMax;
-
-    @SerializedName("skillActivityName2")
-    public String skillActivityName2;
-
-    @SerializedName("skillActivityDesc2")
-    public String skillActivityDesc2;
-
-    @SerializedName("cdMin2")
-    public String cdMin2;
-
-    @SerializedName("cdMax2")
-    public String cdMax2;
-
-////////////////
-// Skill - Leader
-////////////////
-
+    /** Leader skill name, like "光之狂怒" */
     @SerializedName("skillLeaderName")
-    public String skillLeaderName;
+    public String skillLeaderName = "";
 
+    /** Leader skill description, like "光屬性攻擊力 2.5 倍" */
     @SerializedName("skillLeaderDesc")
-    public String skillLeaderDesc;
+    public String skillLeaderDesc = "";
 
+    /** Amelioration skill name I, 昇華1名稱 */
+    @SerializedName("skillAmeName1")
+    public String skillAmeliorationName1 = "";
 
-////////////////
-// Evolutions card number & required card materials
-////////////////
+    /** Amelioration cost, 昇華1靈魂 */
+    @SerializedName("skillAmeCost1")
+    public int skillAmeliorationCost1;
 
-    @SerializedName("beforeNumber")
-    public String beforeNumber;
+    /** Amelioration skill name II, 昇華2名稱 */
+    @SerializedName("skillAmeName2")
+    public String skillAmeliorationName2 = "";
 
-    @SerializedName("afterNumber")
-    public String afterNumber;
+    /** Amelioration cost, 昇華2靈魂 */
+    @SerializedName("skillAmeCost2")
+    public int skillAmeliorationCost2;
 
-    @SerializedName("evolution1")
-    public String evolution1;
+    /** Amelioration skill name III, 昇華3名稱 */
+    @SerializedName("skillAmeName3")
+    public String skillAmeliorationName3 = "";
 
-    @SerializedName("evolution2")
-    public String evolution2;
+    /** Amelioration cost, 昇華3靈魂 */
+    @SerializedName("skillAmeCost3")
+    public int skillAmeliorationCost3;
 
-    @SerializedName("evolution3")
-    public String evolution3;
+    /** Amelioration skill name IV, 昇華4名稱 */
+    @SerializedName("skillAmeName4")
+    public String skillAmeliorationName4 = "";
 
-    @SerializedName("evolution4")
-    public String evolution4;
+    /** Amelioration cost, 昇華4靈魂 */
+    @SerializedName("skillAmeCost4")
+    public int skillAmeliorationCost4;
 
-    @SerializedName("evolution5")
-    public String evolution5;
+    //------------
+    //---- Evolution
+    //------------
 
+    /** Evolution from card idNorm */
+    @SerializedName("evolveFrom")
+    public String evolveFrom = "";
 
-////////////////
-// Others
-////////////////
+    /** Evolution material card idNorm */
+    @SerializedName("evolveNeed")
+    public List<String> evolveNeed = new ArrayList<>();
 
-    @SerializedName("cardFall")
-    public String cardFall;
-
-    @SerializedName("sublimation_num")
-    public String sublimation_num;
-
-    @SerializedName("sublimation_name")
-    public String sublimation_name;
-
-    @SerializedName("liberation_name")
-    public String liberation_name;
-
-    @SerializedName("hell_name")
-    public String hell_name;
-
-    @SerializedName("reincarnation_name")
-    public String reincarnation_name;
+    /** Evolution to card idNorm */
+    @SerializedName("evolveTo")
+    public String evolveTo = "";
 }

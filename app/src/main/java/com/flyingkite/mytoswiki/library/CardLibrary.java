@@ -1,10 +1,10 @@
-package com.flyingkite.mytoswiki.page;
+package com.flyingkite.mytoswiki.library;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.flyingkite.TosCardN;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
 
 public class CardLibrary {
     private RecyclerView recycler;
@@ -14,18 +14,18 @@ public class CardLibrary {
         recycler = recyclerView;
 
         recycler.setLayoutManager(new GridLayoutManager(recyclerView.getContext(), 5));
-        //recycler.setAdapter();
     }
 
-    public void setDataSet(TosCard[] cards) {
+    @Deprecated
+    public void setDataSetRMD(TosCardRMDKVIR[] cards) {
         cardAdapter = new CardAdapter();
-        cardAdapter.setCards(cards);
+        cardAdapter.setCardsRMD(cards);
         recycler.setAdapter(cardAdapter);
     }
 
-    public void setDataSet2(TosCardN[] cards, CardVH.OnClickCard click) {
+    public void setDataSet(TosCard[] cards, CardVH.OnClickCard click) {
         cardAdapter = new CardAdapter();
-        cardAdapter.setCards2(cards);
+        cardAdapter.setCards(cards);
         cardAdapter.setOnClickCard(click);
         recycler.setAdapter(cardAdapter);
     }

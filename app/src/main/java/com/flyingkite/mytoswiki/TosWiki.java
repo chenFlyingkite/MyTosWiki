@@ -2,10 +2,11 @@ package com.flyingkite.mytoswiki;
 
 import android.content.res.AssetManager;
 
-import com.flyingkite.TosCardN;
+import com.flyingkite.library.TicTac2;
+import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.Say;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -15,48 +16,60 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 public class TosWiki {
-    private static final String cardJson = "card.json";
-    private static final TosWiki me = new TosWiki();
+    public static final TosWiki me = new TosWiki();
 
     private TosWiki() {}
 
-    public static TosCardN[] parseCards2(AssetManager am) {
-        Say.Log("parseCards 2");
-        Gson gson = new Gson();
-        Reader reader = null;
-        TosCardN[] cards = null;
-        try {
-            reader = getReader("cardList.json", am);
-            if (reader != null) {
-                cards = gson.fromJson(reader, TosCardN[].class);
-            }
+    public TosCard[] parseCards(AssetManager am) {
+        final String assetName = "cardList.json";
+        Say.Log("parsing Cards");
+        TicTac2 clk = new TicTac2();
 
-            Say.Log("%s cards", cards == null ? 0 : cards.length);
-        } finally {
-            IOUtil.closeIt(reader);
-        }
-        return cards;
-    }
-
-    public static TosCard[] parseCards(AssetManager am) {
-        Say.Log("parseCards");
         Gson gson = new Gson();
         Reader reader = null;
         TosCard[] cards = null;
         try {
-            reader = getReader(cardJson, am);
-            if (reader != null) {
+            reader = getReader(assetName, am);
+            if (reader == null) {
+                Say.Log("reader not found, %s", assetName);
+            } else {
+                clk.tic();
                 cards = gson.fromJson(reader, TosCard[].class);
+                int n = cards == null ? 0 : cards.length;
+                clk.tac("%s cards read", n);
             }
-
-            Say.Log("%s cards", cards == null ? 0 : cards.length);
         } finally {
             IOUtil.closeIt(reader);
         }
         return cards;
     }
 
-    private static InputStreamReader getReader(String assetFile, AssetManager am) {
+    public TosCardRMDKVIR[] parseCardsRMD(AssetManager am) {
+        final String assetName = "card.json";
+        Say.Log("parseCardsRMD");
+        TicTac2 clk = new TicTac2();
+
+        Gson gson = new Gson();
+        Reader reader = null;
+        TosCardRMDKVIR[] cards = null;
+        try {
+            reader = getReader(assetName, am);
+
+            if (reader == null) {
+                Say.Log("reader not found, %s", assetName);
+            } else {
+                clk.tic();
+                cards = gson.fromJson(reader, TosCardRMDKVIR[].class);
+                int n = cards == null ? 0 : cards.length;
+                clk.tac("%s cards read", n);
+            }
+        } finally {
+            IOUtil.closeIt(reader);
+        }
+        return cards;
+    }
+
+    private InputStreamReader getReader(String assetFile, AssetManager am) {
         try {
             return new InputStreamReader(am.open(assetFile), "UTF-8");
             //return new InputStreamReader(new FileInputStream(file), "UTF-8");
@@ -66,7 +79,7 @@ public class TosWiki {
         }
     }
 
-    private static InputStreamReader getReader(File file) {
+    private InputStreamReader getReader(File file) {
         try {
             return new InputStreamReader(new FileInputStream(file), "UTF-8");
         } catch (IOException e) {
