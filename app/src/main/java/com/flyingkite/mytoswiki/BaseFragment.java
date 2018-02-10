@@ -84,8 +84,9 @@ public class BaseFragment extends Fragment {
         return getActivity().findViewById(id);
     }
 
-    protected final void showToast(@StringRes int id) {
-        Toast.makeText(getActivity(), id, Toast.LENGTH_LONG).show();
+    protected final void showToast(@StringRes int id, Object... args) {
+        String s = getActivity().getString(id, args);
+        showToast(s);
     }
 
     protected final void showToast(String s) {

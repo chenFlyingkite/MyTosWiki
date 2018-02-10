@@ -32,7 +32,7 @@ public class TosCardFragment extends BaseFragment {
 
         TosCard[] allCards = TosWiki.me.parseCards(getActivity().getAssets());
         int n = allCards == null ? 0 : allCards.length;
-        showToast(n + " 張卡片已讀取");
+        showToast(R.string.cards_read, n);
         cardLib.setDataSet(allCards, (position, card) -> {
             DialogManager.GenericViewBuilder.InflateListener onInflate = (v, dialog) -> {
                 ImageView icon = v.findViewById(R.id.cardIcon);
