@@ -1,21 +1,25 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 def libraryVersion = "26.0.1"
 def googlePlayVersion = "9.8.0"
 
+task MyBuildInfo {
+    ext.versionCode = 1
+    ext.versionName = "1.0.0"
+    ext.APK_NAME = "MyTosWiki-${versionName}.apk"
+}
+
 android {
-//    signingConfigs {
-//        config {
-//            keyAlias 'MyAndroidKey'
-//            keyPassword 'MyAndroid'
-//            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
-//            storePassword 'MyAndroid'
-//        }
-//    }
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'MyAndroid'
+            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
+            storePassword 'MyAndroid'
+        }
+    }
 
     // https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.DexOptions.html
     dexOptions {
@@ -45,17 +49,18 @@ android {
         minSdkVersion 21
         targetSdkVersion 26
         multiDexEnabled true
-        versionCode 1
-        versionName "1.0.0"
+        versionCode MyBuildInfo.versionCode
+        versionName MyBuildInfo.versionName
     }
+
 
     buildTypes {
         debug {
-            //signingConfig signingConfigs.config
+            signingConfig signingConfigs.config
         }
         release {
-            //signingConfig signingConfigs.config
-            minifyEnabled false
+            signingConfig signingConfigs.config
+            //minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -86,17 +91,46 @@ dependencies {
 
     // OkHttp for web
     // http://square.github.io/okhttp/
-    implementation "com.squareup.okhttp3:okhttp:3.9.1"
+    //implementation "com.squareup.okhttp3:okhttp:3.9.1"
 
     // jsoup HTML parser library @ https://jsoup.org/
     // https://github.com/jhy/jsoup
-    implementation "org.jsoup:jsoup:1.11.2"
+    //implementation "org.jsoup:jsoup:1.11.2"
     //
     // https://github.com/Wikia/vignette#scale-to-width
     
 
     // Picasso
     //implementation 'com.squareup.picasso:picasso:2.5.2'
+}
+
+android.applicationVariants.all { variant ->
+    def buildType = variant.buildType.name
+
+    println "[applicationVariants.all] ${variant.name}"
+    if (buildType == "release") {
+        variant.assemble.doLast {
+            variant.outputs.each { output ->
+                println "[assemble.doLast] copy" +
+                    "\n    from(${output.outputFile})" +
+                    "\n    into(${rootDir}/apks-${buildType})" +
+                    "\n    rename(${MyBuildInfo.APK_NAME})"
+                copy {
+                    from output.outputFile
+                    into "${rootDir}/apks-${buildType}"
+                    rename '(.*)', MyBuildInfo.APK_NAME
+                }
+            }
+//            if (variant.getBuildType().isMinifyEnabled()) {
+//                println "[assemble.doLast] copy from(${variant.mappingFile}) into(${buildType}) rename(${makeInfo.MAPPING})"
+//                copy {
+//                    from variant.mappingFile
+//                    into "${rootDir}/${buildType}"
+//                    rename '(.*)', makeInfo.MAPPING
+//                }
+//            }
+        }
+    }
 }
 
 
