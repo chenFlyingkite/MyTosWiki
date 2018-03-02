@@ -13,16 +13,25 @@ import com.flyingkite.library.Say;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
+import com.flyingkite.mytoswiki.tos.TosCardFilter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 class CardAdapter extends RecyclerView.Adapter<CardVH> {
     @Deprecated
     private List<TosCardRMDKVIR> cardsRMD = new ArrayList<>();
     private List<TosCard> cards = new ArrayList<>();
     private CardVH.OnClickCard onClick;
+    private boolean showFilter;
+    private List<Integer> filterIndices = new ArrayList<>();
+    private OnFilterCard onFilter;
+
+    public interface OnFilterCard {
+        void onFiltered(int selected, int total, Map<String, String> map);
+    }
 
     @Deprecated
     public void setCardsRMD(TosCardRMDKVIR[] c) {
@@ -37,8 +46,12 @@ class CardAdapter extends RecyclerView.Adapter<CardVH> {
         return c == null ? new ArrayList<>() : Arrays.asList(c);
     }
 
-    public void setOnClickCard(CardVH.OnClickCard click) {
-        onClick = click;
+    public void setOnClickCard(CardVH.OnClickCard listener) {
+        onClick = listener;
+    }
+
+    public void setOnFilter(OnFilterCard listener) {
+        onFilter = listener;
     }
 
     @Override
@@ -50,7 +63,12 @@ class CardAdapter extends RecyclerView.Adapter<CardVH> {
 
     @Override
     public void onBindViewHolder(CardVH holder, int position) {
-        TosCard c = cards.get(position);
+        TosCard c;
+        if (showFilter) {
+            c = cards.get(filterIndices.get(position));
+        } else {
+            c = cards.get(position);
+        }
         //Say.Log("bind #%d -> %s ,name = %s", position, c.id, c.name);
 
         holder.setCard(c);
@@ -59,7 +77,24 @@ class CardAdapter extends RecyclerView.Adapter<CardVH> {
 
     @Override
     public int getItemCount() {
-        return cards.size();
+        if (showFilter) {
+            return filterIndices.size();
+        } else {
+            return cards.size();
+        }
+    }
+
+    public void showSelection(Map<String, String> map) {
+        showFilter = map != null && map.size() > 0;
+
+        filterIndices.clear();
+        if (showFilter) {
+            filterIndices = TosCardFilter.me.filter(cards, map);
+            notifyDataSetChanged();
+            if (onFilter != null) {
+                onFilter.onFiltered(filterIndices.size(), cards.size(), map);
+            }
+        }
     }
 }
 
@@ -104,7 +139,7 @@ class CardVH extends RecyclerView.ViewHolder {
     private void loadImage(String url) {
         Glide.with(thumb.getContext()).load(url)
                 .apply(RequestOptions.centerCropTransform()
-                        .placeholder(R.drawable.unkown_card))
+                        .placeholder(R.drawable.unknown_card))
                 .into(thumb);
     }
 }

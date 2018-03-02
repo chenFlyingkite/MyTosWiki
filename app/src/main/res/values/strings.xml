@@ -4,5 +4,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
+    <string name="cards_attr">屬性</string>
+    <string name="cards_attr_water">水</string>
+    <string name="cards_attr_fires">火</string>
+    <string name="cards_attr_earth">木</string>
+    <string name="cards_attr_light">光</string>
+    <string name="cards_attr_darks">暗</string>
 </resources>

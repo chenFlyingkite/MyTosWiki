@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/tosTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tosSortMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_sort_black_48dp"/>
+
+        <TextView
+            android:id="@+id/tosInfo"
+            android:layout_toLeftOf="@id/tosSortMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/common_text"
+            android:layout_centerVertical="true"
+            tools:text="@string/cards_selection"/>
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tosRecycler"
+        android:layout_below="@id/tosTopBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:fastScrollEnabled="true"
+        app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
+        app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
+        app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
+        app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb">
 
     </android.support.v7.widget.RecyclerView>
 

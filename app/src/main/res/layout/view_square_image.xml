@@ -10,7 +10,7 @@
         android:id="@+id/squareImg"
         android:padding="@dimen/t2dp"
         app:layout_widthPercent="100%"
-        android:src="@drawable/unkown_card"
+        android:src="@drawable/unknown_card"
         app:layout_aspectRatio="100%"/>
 
     <TextView

@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity {
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fx = fm.beginTransaction();
-        fx.add(R.id.cardFragment, f, "TosCardFragment");
+        fx.replace(R.id.cardFragment, f, TosCardFragment.TAG);
         fx.commitAllowingStateLoss();
 
         fm.executePendingTransactions();
