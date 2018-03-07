@@ -16,12 +16,13 @@ import com.bumptech.glide.Glide;
 import com.flyingkite.DialogManager;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
-import com.flyingkite.mytoswiki.tos.TosAttribute;
+import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class TosCardFragment extends BaseFragment {
     public static final String TAG = "TosCardFragment";
@@ -30,6 +31,7 @@ public class TosCardFragment extends BaseFragment {
     private View sortMenu;
     private PopupWindow sortWindow;
     private TextView tosInfo;
+    private TosCard[] allCards;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -48,7 +50,7 @@ public class TosCardFragment extends BaseFragment {
 //        cardLib.setDataSetRMD(allCard);
 //        TicTac.tac("parseCardsRMD");
 
-        TosCard[] allCards = TosWiki.me.parseCards(getActivity().getAssets());
+        allCards = TosWiki.me.parseCards(getActivity().getAssets());
         int n = allCards == null ? 0 : allCards.length;
         showToast(R.string.cards_read, n);
         tosInfo.setText(getString(R.string.cards_selection, n, n));
@@ -74,9 +76,8 @@ public class TosCardFragment extends BaseFragment {
         //            } catch (ActivityNotFoundException e) {
         //                e.printStackTrace();
         //            }
-                }, (selected, total, map) ->  {
+                }, (selected, total) ->  {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
-
                 }
         );
     }
@@ -112,18 +113,20 @@ public class TosCardFragment extends BaseFragment {
 
         // Log the tag
         int n = vg.getChildCount();
-        String s = "";
+        List<String> sel = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             View w = vg.getChildAt(i);
             if (w.isSelected()) {
-                s += w.getTag().toString();
+                sel.add(w.getTag().toString());
             }
         }
-        LogE("sel = %s", s);
+        LogE("sel = %s", sel);
 
-        Map<String, String> map = new HashMap<>();
-        map.put(TosAttribute.KEY, s);
-        cardLib.showSelection(map);
+        cardLib.cardAdapter.setSelection(new TosSelectAttribute(Arrays.asList(allCards), sel));
+
+//        Map<String, String> map = new HashMap<>();
+//        map.put(TosAttribute.KEY, s);
+//        cardLib.cardAdapter.showSelection(map);
     }
 
     private void setAllChildrenSelected(ViewGroup vg, boolean sel) {

@@ -8,11 +8,9 @@ import android.support.v7.widget.SnapHelper;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
 
-import java.util.Map;
-
 public class CardLibrary {
-    private RecyclerView recycler;
-    private CardAdapter cardAdapter;
+    public RecyclerView recycler;
+    public CardAdapter cardAdapter;
 
     public CardLibrary(RecyclerView recyclerView) {
         recycler = recyclerView;
@@ -29,16 +27,11 @@ public class CardLibrary {
         recycler.setAdapter(cardAdapter);
     }
 
-    public void setDataSet(TosCard[] cards, CardVH.OnClickCard click, CardAdapter.OnFilterCard filter) {
+    public void setDataSet(TosCard[] cards, CardAdapter.OnClickCard click, CardAdapter.OnFilterCard filter) {
         cardAdapter = new CardAdapter();
         cardAdapter.setCards(cards);
         cardAdapter.setOnClickCard(click);
         cardAdapter.setOnFilter(filter);
         recycler.setAdapter(cardAdapter);
     }
-
-    public void showSelection(Map<String, String> map) {
-        cardAdapter.showSelection(map);
-    }
-
 }
