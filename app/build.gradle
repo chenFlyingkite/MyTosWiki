@@ -16,7 +16,7 @@ android {
         config {
             keyAlias 'MyAndroidKey'
             keyPassword 'MyAndroid'
-            storeFile file('F:\\GitHub\\KeyStores\\flyingkite.jks')
+            storeFile file('../../KeyStores/chenflyingkite.jks')
             storePassword 'MyAndroid'
         }
     }
