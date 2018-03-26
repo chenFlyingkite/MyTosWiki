@@ -142,19 +142,19 @@ class CardVH extends RecyclerView.ViewHolder {
 
     public void setCard(TosCardRMDKVIR c) {
         cardRMDKVIR = c;
-        text.setText(cardRMDKVIR.display_num);
+        text.setText(c.display_num);
     }
 
     public void setCard(TosCard c) {
         card = c;
-        text.setText(card.id);
-        loadImage(card.icon);
+        text.setText(c.id);
+        loadImage(thumb, c.icon);
     }
 
-    private void loadImage(String url) {
-        Glide.with(thumb.getContext()).load(url)
+    private void loadImage(ImageView v, String url) {
+        Glide.with(v.getContext()).load(url)
                 .apply(RequestOptions.centerCropTransform()
                         .placeholder(R.drawable.unknown_card))
-                .into(thumb);
+                .into(v);
     }
 }

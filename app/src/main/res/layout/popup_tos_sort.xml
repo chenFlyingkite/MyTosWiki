@@ -4,46 +4,104 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="#8000">
 
         <TextView
             android:id="@+id/sortAttrTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/t18dp"
-            android:textColor="#fff"
+            style="@style/sortTitle"
             android:text="@string/cards_attr"/>
 
         <LinearLayout
             android:id="@+id/sortAttributes"
-            android:layout_below="@id/sortAttrTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageView
-                style="@style/common_icon"
+                style="@style/sortIcon"
                 android:tag="@string/cards_attr_water"
                 android:src="@drawable/inv_water"/>
             <ImageView
-                style="@style/common_icon"
+                style="@style/sortIcon"
                 android:tag="@string/cards_attr_fires"
                 android:src="@drawable/inv_fire"/>
             <ImageView
-                style="@style/common_icon"
+                style="@style/sortIcon"
                 android:tag="@string/cards_attr_earth"
                 android:src="@drawable/inv_earth"/>
             <ImageView
-                style="@style/common_icon"
+                style="@style/sortIcon"
                 android:tag="@string/cards_attr_light"
                 android:src="@drawable/inv_light"/>
             <ImageView
-                style="@style/common_icon"
+                style="@style/sortIcon"
                 android:tag="@string/cards_attr_darks"
                 android:src="@drawable/inv_dark"/>
         </LinearLayout>
-    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sortRaceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_race"/>
+
+        <LinearLayout
+            android:id="@+id/sortRaces1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_god"
+                android:src="@drawable/inv_god"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_demon"
+                android:src="@drawable/inv_fiend"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_human"
+                android:src="@drawable/inv_human"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_beast"
+                android:src="@drawable/inv_beast"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_dragon"
+                android:src="@drawable/inv_dragon"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sortRaces2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_elf"
+                android:src="@drawable/inv_elf"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_machina"
+                android:src="@drawable/inv_machina"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_evolve"
+                android:src="@drawable/inv_evolve"/>
+            <ImageView
+                style="@style/sortIcon"
+                android:tag="@string/cards_race_level"
+                android:src="@drawable/inv_level"/>
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

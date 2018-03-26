@@ -2,9 +2,9 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/tosTopBar"
@@ -16,11 +16,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:background="@drawable/bg_press"
             android:src="@drawable/ic_sort_black_48dp"/>
+
+        <ImageView
+            android:id="@+id/tosGoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tosSortMenu"
+            android:rotation="90"
+            android:background="@drawable/bg_press"
+            android:src="@drawable/ic_skip_next_black_48dp"/>
+
+        <ImageView
+            android:id="@+id/tosGoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tosGoBottom"
+            android:rotation="270"
+            android:background="@drawable/bg_press"
+            android:src="@drawable/ic_skip_next_black_48dp"/>
 
         <TextView
             android:id="@+id/tosInfo"
-            android:layout_toLeftOf="@id/tosSortMenu"
+            android:layout_toLeftOf="@id/tosGoTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/common_text"
@@ -38,7 +57,6 @@
         app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
         app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
         app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb">
-
     </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

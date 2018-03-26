@@ -1,7 +1,11 @@
 package com.flyingkite.mytoswiki;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -13,10 +17,12 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.flyingkite.DialogManager;
+import com.flyingkite.util.DialogManager;
+import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
+import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,21 +42,29 @@ public class TosCardFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         tosInfo = findViewById(R.id.tosInfo);
-        initCardLibrary();
+
+        cardsRecycler = findViewById(R.id.tosRecycler);
+        cardLib = new CardLibrary(cardsRecycler);
+        sortMenu = findViewById(R.id.tosSortMenu);
         initSortMenu();
+        initScroll();
+
+        new ParseCardsTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
+    }
+
+    private void initScroll() {
+        findViewById(R.id.tosGoTop).setOnClickListener((v) -> {
+            int index = 0;
+            cardLib.recycler.scrollToPosition(index);
+        });
+
+        findViewById(R.id.tosGoBottom).setOnClickListener((v) -> {
+            int index = cardLib.cardAdapter.getItemCount() - 1;
+            cardLib.recycler.scrollToPosition(index);
+        });
     }
 
     private void initCardLibrary() {
-        cardsRecycler = findViewById(R.id.tosRecycler);
-        cardLib = new CardLibrary(cardsRecycler);
-        //parseCardsRMD()
-
-//        TicTac.tic();
-//        TosCardRMDKVIR[] allCard = TosWiki.parseCardsRMD(getActivity().getAssets());
-//        cardLib.setDataSetRMD(allCard);
-//        TicTac.tac("parseCardsRMD");
-
-        allCards = TosWiki.me.parseCards(getActivity().getAssets());
         int n = allCards == null ? 0 : allCards.length;
         showToast(R.string.cards_read, n);
         tosInfo.setText(getString(R.string.cards_selection, n, n));
@@ -70,20 +84,22 @@ public class TosCardFragment extends BaseFragment {
 
                     new DialogManager.GenericViewBuilder(getActivity(), R.layout.dialog_card, onInflate).buildAndShow();
 
-        //            Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(card.wikiLink));
-        //            try {
-        //                startActivity(it);
-        //            } catch (ActivityNotFoundException e) {
-        //                e.printStackTrace();
-        //            }
                 }, (selected, total) ->  {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
                 }
         );
     }
 
+    private void viewLink(TosCard card) {
+        Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(card.wikiLink));
+        try {
+            startActivity(it);
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void initSortMenu() {
-        sortMenu = findViewById(R.id.tosSortMenu);
         // Create MenuWindow
         View menu = LayoutInflater.from(getActivity()).inflate(R.layout.popup_tos_sort, (ViewGroup) getView(), false);
         int wrap = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -92,9 +108,17 @@ public class TosCardFragment extends BaseFragment {
         sortWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         sortMenu.setOnClickListener(v -> {
-            sortWindow.showAsDropDown(v);
+            if (sortWindow.isShowing()) {
+                sortWindow.dismiss();
+            } else {
+                sortWindow.showAsDropDown(v);
+            }
         });
 
+        initSortByAttribute(menu);
+    }
+
+    private void initSortByAttribute(View menu) {
         ViewGroup vg = menu.findViewById(R.id.sortAttributes);
         setAllChildrenSelected(vg, true);
         int n = vg.getChildCount();
@@ -150,8 +174,6 @@ public class TosCardFragment extends BaseFragment {
         return true;
     }
 
-
-
     @Override
     public void onResume() {
         super.onResume();
@@ -161,5 +183,26 @@ public class TosCardFragment extends BaseFragment {
     @Override
     protected int getPageLayoutId() {
         return R.layout.fragment_tos_card;
+    }
+
+    private class ParseCardsTask extends AsyncTask<Void, Void, Void> {
+        private WaitingDialog dialog;
+        @Override
+        protected void onPreExecute() {
+            dialog = new WaitingDialog.Builder(getActivity()).buildAndShow();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            allCards = TosWiki.parseCards(getActivity().getAssets());
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            dialog.dismiss();
+            dialog = null;
+            initCardLibrary();
+        }
     }
 }

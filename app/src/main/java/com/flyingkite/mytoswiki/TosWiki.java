@@ -16,11 +16,9 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 public class TosWiki {
-    public static final TosWiki me = new TosWiki();
-
     private TosWiki() {}
 
-    public TosCard[] parseCards(AssetManager am) {
+    public static TosCard[] parseCards(AssetManager am) {
         final String assetName = "cardList.json";
         Say.Log("parsing Cards");
         TicTac2 clk = new TicTac2();
@@ -69,7 +67,7 @@ public class TosWiki {
         return cards;
     }
 
-    private InputStreamReader getReader(String assetFile, AssetManager am) {
+    private static InputStreamReader getReader(String assetFile, AssetManager am) {
         try {
             return new InputStreamReader(am.open(assetFile), "UTF-8");
             //return new InputStreamReader(new FileInputStream(file), "UTF-8");
@@ -79,7 +77,7 @@ public class TosWiki {
         }
     }
 
-    private InputStreamReader getReader(File file) {
+    private static InputStreamReader getReader(File file) {
         try {
             return new InputStreamReader(new FileInputStream(file), "UTF-8");
         } catch (IOException e) {

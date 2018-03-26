@@ -16,15 +16,25 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
-
-    <style name="common_icon">
-        <item name="android:layout_width">@dimen/t40dp</item>
-        <item name="android:layout_height">@dimen/t40dp</item>
-        <item name="android:padding">@dimen/t5dp</item>
-        <item name="android:background">@drawable/bg_select</item>
+    <style name="WaitingDialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
+
     <style name="common_text">
         <item name="android:textSize">@dimen/t14dp</item>
+    </style>
+
+    <!-- Sort menu -->
+    <style name="sortTitle">
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="sortIcon">
+        <item name="android:layout_width">@dimen/t50dp</item>
+        <item name="android:layout_height">@dimen/t50dp</item>
+        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:background">@drawable/bg_select</item>
     </style>
 
 </resources>

@@ -12,4 +12,14 @@
     <string name="cards_attr_earth">木</string>
     <string name="cards_attr_light">光</string>
     <string name="cards_attr_darks">暗</string>
+    <string name="cards_race">種族</string>
+    <string name="cards_race_god">神族</string>
+    <string name="cards_race_demon">魔族</string>
+    <string name="cards_race_human">人類</string>
+    <string name="cards_race_beast">獸類</string>
+    <string name="cards_race_dragon">龍類</string>
+    <string name="cards_race_elf">妖精</string>
+    <string name="cards_race_machina">機械族</string>
+    <string name="cards_race_evolve">進化素材</string>
+    <string name="cards_race_level">強化素材</string>
 </resources>

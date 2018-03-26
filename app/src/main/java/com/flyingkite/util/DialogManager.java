@@ -1,4 +1,4 @@
-package com.flyingkite;
+package com.flyingkite.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -346,12 +346,12 @@ public class DialogManager {
 
             View dialogView = LayoutInflater.from(activity).inflate(viewLayoutId, null);
             final AlertDialog dialog = new AlertDialog.Builder(activity, themeResId).setView(dialogView).create();
+            dialog.setCanceledOnTouchOutside(true);
+            dialog.setCancelable(true);
+
             if (onViewInflated != null) {
                 onViewInflated.onFinishInflate(dialogView, dialog);
             }
-
-            dialog.setCanceledOnTouchOutside(true);
-            dialog.setCancelable(true);
             dialog.show();
         }
     }
