@@ -17,11 +17,12 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.flyingkite.util.DialogManager;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
+import com.flyingkite.mytoswiki.tos.query.TosSelectRaceAttribute;
+import com.flyingkite.util.DialogManager;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -38,6 +39,8 @@ public class TosCardFragment extends BaseFragment {
     private PopupWindow sortWindow;
     private TextView tosInfo;
     private TosCard[] allCards;
+    private ViewGroup sortAttributes;
+    private ViewGroup sortRace;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -116,11 +119,12 @@ public class TosCardFragment extends BaseFragment {
         });
 
         initSortByAttribute(menu);
+        initSortByRace(menu);
     }
 
     private void initSortByAttribute(View menu) {
-        ViewGroup vg = menu.findViewById(R.id.sortAttributes);
-        setAllChildrenSelected(vg, true);
+        sortAttributes = menu.findViewById(R.id.sortAttributes);
+        ViewGroup vg = sortAttributes;
         int n = vg.getChildCount();
         for (int i = 0; i < n; i++) {
             View w = vg.getChildAt(i);
@@ -128,22 +132,29 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
-    private void clickAttr(View v) {
-        v.setSelected(!v.isSelected());
-        ViewGroup vg = (ViewGroup) v.getParent();
-        if (isAllNonSelected(vg)) {
-            setAllChildrenSelected(vg, true);
-        }
+    private void initSortByRace(View menu) {
+        sortRace = menu.findViewById(R.id.sortRaces);
 
-        // Log the tag
+        ViewGroup vg = sortRace;
         int n = vg.getChildCount();
-        List<String> sel = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             View w = vg.getChildAt(i);
-            if (w.isSelected()) {
-                sel.add(w.getTag().toString());
-            }
+            w.setOnClickListener(this::clickRace);
         }
+    }
+
+    private void clickAttr(View v) {
+        v.setSelected(!v.isSelected());
+        ViewGroup vg = sortAttributes;
+        // Deselect all if all selected
+        if (isAllAsSelected(vg, true)) {
+            setAllChildrenSelected(vg, false);
+        }
+
+        // Collect selections, attribute
+        List<String> sel = new ArrayList<>();
+        getSelectTags(vg, sel);
+        LogE("---------");
         LogE("sel = %s", sel);
 
         cardLib.cardAdapter.setSelection(new TosSelectAttribute(Arrays.asList(allCards), sel));
@@ -151,6 +162,50 @@ public class TosCardFragment extends BaseFragment {
 //        Map<String, String> map = new HashMap<>();
 //        map.put(TosAttribute.KEY, s);
 //        cardLib.cardAdapter.showSelection(map);
+    }
+
+    private void clickRace(View v) {
+        v.setSelected(!v.isSelected());
+        // Deselect all if all selected
+        if (isAllAsSelected(sortRace, true)) {
+            setAllChildrenSelected(sortRace, false);
+        }
+
+        // Collect selections, race
+        List<String> sel = new ArrayList<>();
+        getSelectTags(sortRace, sel);
+        // Collect selections, attribute
+        List<String> attrs = new ArrayList<>();
+        getSelectTags(sortAttributes, attrs);
+
+        LogE("---------");
+        LogE("sel T = %s", attrs);
+        LogE("sel R = %s", sel);
+
+        cardLib.cardAdapter.setSelection(new TosSelectRaceAttribute(Arrays.asList(allCards), attrs, sel));
+    }
+
+    private void getSelectTags(ViewGroup vg, List<String> result) {
+        if (result == null) {
+            result = new ArrayList<>();
+        }
+        int n = vg.getChildCount();
+
+        List<String> all = new ArrayList<>();
+        boolean added = false;
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            String tag = w.getTag().toString();
+            if (w.isSelected()) {
+                added = true;
+                result.add(tag);
+            }
+            all.add(tag);
+        }
+        // If no children is added, add all the child tags
+        if (!added) {
+            result.addAll(all);
+        }
     }
 
     private void setAllChildrenSelected(ViewGroup vg, boolean sel) {
@@ -162,12 +217,12 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
-    private boolean isAllNonSelected(ViewGroup vg) {
-        if (vg == null) return true;
+    private boolean isAllAsSelected(ViewGroup vg, boolean selected) {
+        if (vg == null) return false;
 
         int n = vg.getChildCount();
         for (int i = 0; i < n; i++) {
-            if (vg.getChildAt(i).isSelected()) {
+            if (vg.getChildAt(i).isSelected() != selected) {
                 return false;
             }
         }
@@ -177,7 +232,6 @@ public class TosCardFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        //TosWiki.ff();
     }
 
     @Override

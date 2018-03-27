@@ -10,6 +10,10 @@ import java.util.List;
 
 public interface TosCardSelection {
 
+    default <T> List<T> nonEmpty(List<T> list) {
+        return list == null ? new ArrayList<>() : list;
+    }
+
     @NonNull
     default List<TosCard> from() {
         return new ArrayList<>();
