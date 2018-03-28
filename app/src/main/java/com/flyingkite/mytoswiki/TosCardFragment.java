@@ -17,10 +17,11 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
-import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
+import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectRaceAttribute;
 import com.flyingkite.util.DialogManager;
 import com.flyingkite.util.WaitingDialog;
@@ -29,6 +30,7 @@ import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class TosCardFragment extends BaseFragment {
@@ -145,23 +147,12 @@ public class TosCardFragment extends BaseFragment {
 
     private void clickAttr(View v) {
         v.setSelected(!v.isSelected());
-        ViewGroup vg = sortAttributes;
         // Deselect all if all selected
-        if (isAllAsSelected(vg, true)) {
-            setAllChildrenSelected(vg, false);
+        if (isAllAsSelected(sortAttributes, true)) {
+            setAllChildrenSelected(sortAttributes, false);
         }
 
-        // Collect selections, attribute
-        List<String> sel = new ArrayList<>();
-        getSelectTags(vg, sel);
-        LogE("---------");
-        LogE("sel = %s", sel);
-
-        cardLib.cardAdapter.setSelection(new TosSelectAttribute(Arrays.asList(allCards), sel));
-
-//        Map<String, String> map = new HashMap<>();
-//        map.put(TosAttribute.KEY, s);
-//        cardLib.cardAdapter.showSelection(map);
+        applySelection();
     }
 
     private void clickRace(View v) {
@@ -171,18 +162,23 @@ public class TosCardFragment extends BaseFragment {
             setAllChildrenSelected(sortRace, false);
         }
 
-        // Collect selections, race
-        List<String> sel = new ArrayList<>();
-        getSelectTags(sortRace, sel);
-        // Collect selections, attribute
+        applySelection();
+    }
+
+    private void applySelection() {
+        // attribute
         List<String> attrs = new ArrayList<>();
         getSelectTags(sortAttributes, attrs);
+        // race
+        List<String> races = new ArrayList<>();
+        getSelectTags(sortRace, races);
 
         LogE("---------");
         LogE("sel T = %s", attrs);
-        LogE("sel R = %s", sel);
+        LogE("sel R = %s", races);
 
-        cardLib.cardAdapter.setSelection(new TosSelectRaceAttribute(Arrays.asList(allCards), attrs, sel));
+        TosCardCondition cond = new TosCardCondition().attr(attrs).race(races);
+        cardLib.cardAdapter.setSelection(new TosSelectRaceAttribute(Arrays.asList(allCards), cond));
     }
 
     private void getSelectTags(ViewGroup vg, List<String> result) {
@@ -249,7 +245,23 @@ public class TosCardFragment extends BaseFragment {
         @Override
         protected Void doInBackground(Void... voids) {
             allCards = TosWiki.parseCards(getActivity().getAssets());
+            check();
             return null;
+        }
+
+        private void check() {
+            HashSet<String> attr = new HashSet<>();
+            for (TosCard c : allCards) {
+                attr.add(c.attribute);
+            }
+            Say.Log("attr = %s", attr);
+
+            HashSet<String> race = new HashSet<>();
+            for (TosCard c : allCards) {
+                race.add(c.race);
+            }
+            Say.Log("race = %s", race);
+
         }
 
         @Override

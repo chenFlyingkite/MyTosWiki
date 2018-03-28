@@ -4,16 +4,15 @@ import android.support.annotation.NonNull;
 
 import com.flyingkite.mytoswiki.data.TosCard;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TosSelectAttribute implements TosCardSelection {
     protected List<TosCard> data;
-    protected List<String> attributes;
+    protected TosCardCondition select;
 
-    public TosSelectAttribute(List<TosCard> source, List<String> attr) {
+    public TosSelectAttribute(List<TosCard> source, TosCardCondition condition) {
         data = nonEmpty(source);
-        attributes = (attr);
+        select = condition;
     }
 
     @NonNull
@@ -22,16 +21,8 @@ public class TosSelectAttribute implements TosCardSelection {
         return data;
     }
 
-    @NonNull
     @Override
-    public List<Integer> select() {
-        List<Integer> index = new ArrayList<>();
-        for (int i = 0; i < data.size(); i++) {
-            TosCard c = data.get(i);
-            if (attributes.contains(c.attribute)) {
-                index.add(i);
-            }
-        }
-        return index;
+    public boolean onSelect(TosCard c) {
+        return select.getAttr().contains(c.attribute);
     }
 }

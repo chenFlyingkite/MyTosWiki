@@ -8,12 +8,7 @@ import com.flyingkite.mytoswiki.data.TosCard;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface TosCardSelection {
-
-    default <T> List<T> nonEmpty(List<T> list) {
-        return list == null ? new ArrayList<>() : list;
-    }
-
+public interface TosCardSelection extends Common {
     @NonNull
     default List<TosCard> from() {
         return new ArrayList<>();
@@ -21,7 +16,19 @@ public interface TosCardSelection {
 
     @NonNull
     default List<Integer> select() {
-        return new ArrayList<>();
+        List<TosCard> data = nonEmpty(from());
+        List<Integer> index = new ArrayList<>();
+        for (int i = 0; i < data.size(); i++) {
+            TosCard c = data.get(i);
+            if (onSelect(c)) {
+                index.add(i);
+            }
+        }
+        return index;
+    }
+
+    default boolean onSelect(TosCard c) {
+        return true;
     }
 
     @NonNull
