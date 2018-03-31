@@ -52,16 +52,24 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
             selectTask.cancel(true);
         }
         selectTask = new AsyncTask<Void, Void, Void>() {
+            // Very fast to clicking on selection icons will have Inconsistency
+            // java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{d9296d2 position=15 id=-1, oldPos=-1, pLpos:-1 no parent}
+            // So we save result when in background, and then set data set on UI thread
+            private List<Integer> _indices = new ArrayList<>();
+            private List<String> _msg = new ArrayList<>();
             @Override
             protected Void doInBackground(Void... voids) {
                 selection = s == null ? new TosCardSelection.All(cards) : s;
-                selectedIndices = selection.query();
-                selectedMessage = selection.getMessages(selectedIndices);
+                if (isCancelled()) return null;
+                _indices = selection.query();
+                _msg = selection.getMessages(selectedIndices);
                 return null;
             }
 
             @Override
             protected void onPostExecute(Void aVoid) {
+                selectedIndices = _indices;
+                selectedMessage = _msg;
                 notifyDataSetChanged();
                 notifyFiltered();
             }
@@ -107,12 +115,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
     @Override
     public void onBindViewHolder(CardVH holder, int position) {
         TosCard c;
+
         c = cards.get(selectedIndices.get(position));
-//        if (showFilter) {
-//            c = cards.get(filterIndices.get(position));
-//        } else {
-//            c = cards.get(position);
-//        }
         //Say.Log("bind #%d -> %s ,name = %s", position, c.id, c.name);
         String msg = null;
         if (selectedMessage != null && position < selectedMessage.size()) {
@@ -130,12 +134,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
     @Override
     public int getItemCount() {
         return selectedIndices.size();
-//        //-- No need
-//        if (showFilter) {
-//            return filterIndices.size();
-//        } else {
-//            return cards.size();
-//        }
     }
 
     public void showSelection(Map<String, String> map) {

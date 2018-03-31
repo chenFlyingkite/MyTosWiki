@@ -19,7 +19,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
@@ -45,8 +44,10 @@ public class TosCardFragment extends BaseFragment {
     private PopupWindow sortWindow;
     private TextView tosInfo;
     private TosCard[] allCards;
+    private View sortReset;
     private ViewGroup sortAttributes;
     private ViewGroup sortRace;
+    private ViewGroup sortStar;
     private RadioGroup sortCassandra;
 
     @Override
@@ -125,9 +126,16 @@ public class TosCardFragment extends BaseFragment {
             }
         });
 
+        initSortReset(menu);
         initSortByAttribute(menu);
         initSortByRace(menu);
         initSortByCassandra(menu);
+        initSortByStar(menu);
+    }
+
+    private void initSortReset(View menu) {
+        sortReset = menu.findViewById(R.id.sortReset);
+        sortReset.setOnClickListener(this::clickReset);
     }
 
     private void initSortByAttribute(View menu) {
@@ -162,6 +170,27 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void initSortByStar(View menu) {
+        sortStar = menu.findViewById(R.id.sortStar);
+
+        ViewGroup vg = sortStar;
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            w.setOnClickListener(this::clickStar);
+        }
+    }
+
+    private void clickReset(View v) {
+        ViewGroup[] vgs = {sortAttributes, sortRace, sortStar};
+        for (ViewGroup vg : vgs) {
+            setAllChildrenSelected(vg, false);
+        }
+        sortCassandra.check(R.id.sortCassandraNo);
+
+        applySelection();
+    }
+
     private void clickAttr(View v) {
         v.setSelected(!v.isSelected());
         // Deselect all if all selected
@@ -185,28 +214,37 @@ public class TosCardFragment extends BaseFragment {
 
     private void clickCassandra(View v) {
         sortCassandra.check(v.getId());
-        //v.setSelected(!v.isSelected());
+
+        applySelection();
+    }
+
+    private void clickStar(View v) {
+        v.setSelected(!v.isSelected());
         // Deselect all if all selected
-//        if (isAllAsSelected(sortRace, true)) {
-//            setAllChildrenSelected(sortRace, false);
-//        }
+        if (isAllAsSelected(sortStar, true)) {
+            setAllChildrenSelected(sortStar, false);
+        }
 
         applySelection();
     }
 
     private void applySelection() {
-        // attribute
+        // Attribute
         List<String> attrs = new ArrayList<>();
         getSelectTags(sortAttributes, attrs);
-        // race
+        // Race
         List<String> races = new ArrayList<>();
         getSelectTags(sortRace, races);
+        // Star
+        List<String> stars = new ArrayList<>();
+        getSelectTags(sortStar, stars);
 
         LogE("---------");
         LogE("sel T = %s", attrs);
         LogE("sel R = %s", races);
+        LogE("sel S = %s", stars);
 
-        TosCardCondition cond = new TosCardCondition().attr(attrs).race(races);
+        TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
         cardLib.cardAdapter.setSelection(new TosSelect(Arrays.asList(allCards), cond));
     }
 
@@ -283,13 +321,13 @@ public class TosCardFragment extends BaseFragment {
             for (TosCard c : allCards) {
                 attr.add(c.attribute);
             }
-            Say.Log("attr = %s", attr);
+            LogE("attr = %s", attr);
 
             HashSet<String> race = new HashSet<>();
             for (TosCard c : allCards) {
                 race.add(c.race);
             }
-            Say.Log("race = %s", race);
+            LogE("race = %s", race);
 
         }
 
@@ -308,9 +346,10 @@ public class TosCardFragment extends BaseFragment {
 
         @Override
         public boolean onSelect (TosCard c){
-            List<String> attributes = select.getAttr();
+            List<String> attrs = select.getAttr();
             List<String> races = select.getRace();
-            return attributes.contains(c.attribute) && races.contains(c.race);
+            List<String> stars = select.getStar();
+            return attrs.contains(c.attribute) && races.contains(c.race) && stars.contains("" + c.rarity);
         }
 
         @NonNull

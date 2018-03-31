@@ -26,4 +26,5 @@
     <string name="cards_no">無</string>
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
+    <string name="cards_star">星 (稀有度)</string>
 </resources>

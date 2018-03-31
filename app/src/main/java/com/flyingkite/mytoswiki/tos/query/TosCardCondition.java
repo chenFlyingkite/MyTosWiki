@@ -6,6 +6,7 @@ import java.util.List;
 public class TosCardCondition implements Common {
     private List<String> attr = new ArrayList<>();
     private List<String> race = new ArrayList<>();
+    private List<String> star = new ArrayList<>();
 
     public TosCardCondition attr(List<String> a) {
         attr = nonEmpty(a);
@@ -17,11 +18,20 @@ public class TosCardCondition implements Common {
         return this;
     }
 
+    public TosCardCondition star(List<String> s) {
+        star = nonEmpty(s);
+        return this;
+    }
+
     public List<String> getAttr() {
         return attr;
     }
 
     public List<String> getRace() {
         return race;
+    }
+
+    public List<String> getStar() {
+        return star;
     }
 }
