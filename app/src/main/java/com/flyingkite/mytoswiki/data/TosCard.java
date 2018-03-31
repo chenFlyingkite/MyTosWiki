@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TosCard {
+    //------------
+    //---- Basic info, 基礎卡片內容
+    //------------
+
     /** Normalized ID, in form of %04d */
     @SerializedName("idNorm")
     public String idNorm = "";
@@ -22,7 +26,7 @@ public class TosCard {
     @SerializedName("attribute")
     public String attribute = "";
 
-    /** Icon, image link  */
+    /** Icon, image link */
     @SerializedName("icon")
     public String icon = "";
 
@@ -58,8 +62,62 @@ public class TosCard {
     @SerializedName("ExpMax")
     public long ExpMax;
 
+    /** Max Heath point, like 129 */
+    @SerializedName("maxHP")
+    public long maxHP;
+
+    /** Max Attack, like 71 */
+    @SerializedName("maxAttack")
+    public long maxAttack;
+
+    /** Max Recovery, like 24 */
+    @SerializedName("maxRecovery")
+    public long maxRecovery;
+
+    /** Min Heath point, like 86 */
+    @SerializedName("minHP")
+    public long minHP;
+
+    /** Min Attack, like 47 */
+    @SerializedName("minAttack")
+    public long minAttack;
+
+    /** Min Recovery, like 15 */
+    @SerializedName("minRecovery")
+    public long minRecovery;
+
+    /** Experience curve, like 50 * k 萬, k = 1, 2, ..., 20 */
+    @SerializedName("expCurve")
+    public int expCurve;
+
+    /** Min exp when eaten by others, like 700 */
+    @SerializedName("minExpSacrifice")
+    public int minExpSacrifice;
+
+    /** Sacrifice exp raised per Lv, like 1000 */
+    @SerializedName("perLvExpSacrifice")
+    public int perLvExpSacrifice;
+
     //------------
-    //---- Active Skill 1
+    // Economics of Sacrifice of card, index of Happiness
+    // Marginal Utility, 邊際效用
+    // Total Utility, 總效用
+    //------------
+
+    /** Max marginal utility of card level,
+     * After level N, TU(N+1) - TU(N) < dExp = perLvExpSacrifice
+     * So gained Exp per level < need exp per level*/
+    @SerializedName("maxMUPerLevel")
+    public int maxMUPerLevel;
+
+    /** Max total utility of card level,
+     * After level N, ExpSacrifice(N) < ExpNeed(N),
+     * So gained Exp of level < need exp of level */
+    @SerializedName("maxTUAllLevel")
+    public int maxTUAllLevel;
+
+    //------------
+    //---- Active Skill 1, 主動技能1
     //------------
 
     /** Active skill name, like "木光移魂" */
@@ -79,7 +137,7 @@ public class TosCard {
     public int skillCDMax;
 
     //------------
-    //---- Active Skill 2
+    //---- Active Skill 2, 主動技能2
     //------------
 
     /** Active skill 2 name, like "天雷極地" */
@@ -99,7 +157,7 @@ public class TosCard {
     public int skillCDMax2;
 
     //------------
-    //---- Leader Skill
+    //---- Leader Skill, 隊長技能
     //------------
 
     /** Leader skill name, like "光之狂怒" */
@@ -143,7 +201,7 @@ public class TosCard {
     public int skillAmeliorationCost4;
 
     //------------
-    //---- Evolution
+    //---- Evolution, 卡片進化
     //------------
 
     /** Evolution from card idNorm */
@@ -157,4 +215,17 @@ public class TosCard {
     /** Evolution to card idNorm */
     @SerializedName("evolveTo")
     public String evolveTo = "";
+
+    //------------
+    //---- Combination, 卡片合體
+    //------------
+
+    /** Combination material cards idNorm */
+    @SerializedName("combineFrom")
+    public List<String> combineFrom = new ArrayList<>();
+
+    /** Combination material cards idNorm */
+    @SerializedName("combineTo")
+    public List<String> combineTo = new ArrayList<>();
 }
+

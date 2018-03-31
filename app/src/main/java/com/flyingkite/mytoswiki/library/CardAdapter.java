@@ -1,5 +1,7 @@
 package com.flyingkite.mytoswiki.library;
 
+import android.annotation.SuppressLint;
+import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.library.Say;
+import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
@@ -32,6 +35,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
 
     private TosCardSelection selection;
     private List<Integer> selectedIndices = new ArrayList<>();
+    private List<String> selectedMessage = new ArrayList<>();
+    private AsyncTask<Void, Void, Void> selectTask;
 
     public interface OnFilterCard {
         void onFiltered(int selected, int total);
@@ -41,11 +46,27 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         void onClick(int position, TosCard card);
     }
 
+    @SuppressLint("StaticFieldLeak")
     public void setSelection(TosCardSelection s) {
-        selection = s == null ? new TosCardSelection.All(cards) : s;
-        selectedIndices = selection.query();
-        notifyDataSetChanged();
-        notifyFiltered();
+        if (selectTask != null) {
+            selectTask.cancel(true);
+        }
+        selectTask = new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... voids) {
+                selection = s == null ? new TosCardSelection.All(cards) : s;
+                selectedIndices = selection.query();
+                selectedMessage = selection.getMessages(selectedIndices);
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                notifyDataSetChanged();
+                notifyFiltered();
+            }
+        };
+        selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     @Deprecated
@@ -93,8 +114,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
 //            c = cards.get(position);
 //        }
         //Say.Log("bind #%d -> %s ,name = %s", position, c.id, c.name);
-
-        holder.setCard(c);
+        String msg = null;
+        if (selectedMessage != null && position < selectedMessage.size()) {
+            msg = selectedMessage.get(position);
+        }
+        holder.setCard(c, msg);
         holder.itemView.setOnClickListener(w -> {
             Say.Log("click %s, %s", c.name, c.id);
             if (onClick != null) {
@@ -133,11 +157,13 @@ class CardVH extends RecyclerView.ViewHolder {
     private TosCard card;
     private ImageView thumb;
     private TextView text;
+    private TextView message;
 
     public CardVH(View v) {
         super(v);
         thumb = v.findViewById(R.id.squareImg);
         text = v.findViewById(R.id.squareText);
+        message = v.findViewById(R.id.squareMessage);
     }
 
     public void setCard(TosCardRMDKVIR c) {
@@ -145,10 +171,20 @@ class CardVH extends RecyclerView.ViewHolder {
         text.setText(c.display_num);
     }
 
-    public void setCard(TosCard c) {
+    public void setCard(TosCard c, String msg) {
+        boolean hasMsg = msg != null;
         card = c;
         text.setText(c.id);
+        message.setText(msg);
         loadImage(thumb, c.icon);
+        setVisible(text, !hasMsg);
+        setVisible(message, hasMsg);
+    }
+
+    private void setVisible(View v, boolean visible) {
+        if (v != null) {
+            v.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
     }
 
     private void loadImage(ImageView v, String url) {

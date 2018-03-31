@@ -22,4 +22,8 @@
     <string name="cards_race_machina">機械族</string>
     <string name="cards_race_evolve">進化素材</string>
     <string name="cards_race_level">強化素材</string>
+    <string name="cards_Cassandra">卡珊德拉(水巫)技能: 滿等卡\n3.5x回復力+攻擊力</string>
+    <string name="cards_no">無</string>
+    <string name="cards_Cassandra_attack">攻擊力</string>
+    <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
 </resources>

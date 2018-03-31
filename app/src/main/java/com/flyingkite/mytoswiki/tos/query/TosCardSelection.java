@@ -2,7 +2,7 @@ package com.flyingkite.mytoswiki.tos.query;
 
 import android.support.annotation.NonNull;
 
-import com.flyingkite.library.Say;
+import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
 
 import java.util.ArrayList;
@@ -37,9 +37,16 @@ public interface TosCardSelection extends Common {
     }
 
     default List<Integer> query() {
+        TicTac2 t = new TicTac2();
+        t.tic();
         List<Integer> result = sort(select());
-        Say.LogI("From %s selects %s items", from().size(), result.size());
+        t.tac("From %s selects %s items", from().size(), result.size());
+        //Say.LogI("From %s selects %s items", from().size(), result.size());
         return result;
+    }
+
+    default List<String> getMessages(List<Integer> result) {
+        return null; // No messages
     }
 
     class All implements TosCardSelection {

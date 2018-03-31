@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -22,7 +24,7 @@ import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
-import com.flyingkite.mytoswiki.tos.query.TosSelectRaceAttribute;
+import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
 import com.flyingkite.util.DialogManager;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
@@ -30,6 +32,8 @@ import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -43,6 +47,7 @@ public class TosCardFragment extends BaseFragment {
     private TosCard[] allCards;
     private ViewGroup sortAttributes;
     private ViewGroup sortRace;
+    private RadioGroup sortCassandra;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -122,6 +127,7 @@ public class TosCardFragment extends BaseFragment {
 
         initSortByAttribute(menu);
         initSortByRace(menu);
+        initSortByCassandra(menu);
     }
 
     private void initSortByAttribute(View menu) {
@@ -145,6 +151,17 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void initSortByCassandra(View menu) {
+        sortCassandra = menu.findViewById(R.id.sortCassandraList);
+
+        ViewGroup vg = sortCassandra;
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            w.setOnClickListener(this::clickCassandra);
+        }
+    }
+
     private void clickAttr(View v) {
         v.setSelected(!v.isSelected());
         // Deselect all if all selected
@@ -165,6 +182,18 @@ public class TosCardFragment extends BaseFragment {
         applySelection();
     }
 
+
+    private void clickCassandra(View v) {
+        sortCassandra.check(v.getId());
+        //v.setSelected(!v.isSelected());
+        // Deselect all if all selected
+//        if (isAllAsSelected(sortRace, true)) {
+//            setAllChildrenSelected(sortRace, false);
+//        }
+
+        applySelection();
+    }
+
     private void applySelection() {
         // attribute
         List<String> attrs = new ArrayList<>();
@@ -178,7 +207,7 @@ public class TosCardFragment extends BaseFragment {
         LogE("sel R = %s", races);
 
         TosCardCondition cond = new TosCardCondition().attr(attrs).race(races);
-        cardLib.cardAdapter.setSelection(new TosSelectRaceAttribute(Arrays.asList(allCards), cond));
+        cardLib.cardAdapter.setSelection(new TosSelect(Arrays.asList(allCards), cond));
     }
 
     private void getSelectTags(ViewGroup vg, List<String> result) {
@@ -269,6 +298,104 @@ public class TosCardFragment extends BaseFragment {
             dialog.dismiss();
             dialog = null;
             initCardLibrary();
+        }
+    }
+
+    private class TosSelect extends TosSelectAttribute {
+        public TosSelect(List<TosCard> source, TosCardCondition condition) {
+            super(source, condition);
+        }
+
+        @Override
+        public boolean onSelect (TosCard c){
+            List<String> attributes = select.getAttr();
+            List<String> races = select.getRace();
+            return attributes.contains(c.attribute) && races.contains(c.race);
+        }
+
+        @NonNull
+        @Override
+        public List<Integer> sort (@NonNull List < Integer > result) {
+            Comparator<Integer> cmp = getCassandraComparator();
+
+            // Apply the comparator on result
+            if (cmp != null) {
+                Collections.sort(result, cmp);
+            }
+            return result;
+        }
+
+        @Override
+        public List<String> getMessages(List<Integer> result) {
+            List<String> messages = getCassandraMessages(result);
+            return messages;
+        }
+
+        private Comparator<Integer> getCassandraComparator() {
+            // Create comparator
+            int id = sortCassandra.getCheckedRadioButtonId();
+            switch (id) {
+                case R.id.sortCassandraAttack:
+                    return (o1, o2) -> {
+                        boolean dsc = true;
+                        TosCard c1 = data.get(o1);
+                        TosCard c2 = data.get(o2);
+                        double atk1 = c1.maxAttack + c1.maxRecovery * 3.5;
+                        double atk2 = c2.maxAttack + c2.maxRecovery * 3.5;
+                        if (dsc) {
+                            return Double.compare(atk2, atk1);
+                        } else {
+                            return Double.compare(atk1, atk2);
+                        }
+                    };
+                case R.id.sortCassandraRatio:
+                    return (o1, o2) -> {
+                        boolean dsc = true;
+                        TosCard c1 = data.get(o1);
+                        TosCard c2 = data.get(o2);
+                        double atk1 = 1 + c1.maxRecovery * 3.5 / c1.maxAttack;
+                        double atk2 = 1 + c2.maxRecovery * 3.5 / c2.maxAttack;
+                        if (dsc) {
+                            return Double.compare(atk2, atk1);
+                        } else {
+                            return Double.compare(atk1, atk2);
+                        }
+                    };
+                default:
+                    break;
+            }
+            return null;
+        }
+
+        private List<String> getCassandraMessages(List<Integer> result) {
+            List<String> message = null;
+            TosCard c;
+            String msg;
+            // Create Message
+            int id = sortCassandra.getCheckedRadioButtonId();
+            switch (id) {
+                case R.id.sortCassandraAttack:
+                    message = new ArrayList<>();
+                    for (int i = 0; i < result.size(); i++) {
+                        c = data.get(result.get(i));
+                        double atk = c.maxAttack + c.maxRecovery * 3.5;
+                        msg = String.format("%.1f", atk);
+                        message.add(msg);
+                    }
+                    break;
+                case R.id.sortCassandraRatio:
+                    message = new ArrayList<>();
+                    for (int i = 0; i < result.size(); i++) {
+                        c = data.get(result.get(i));
+                        double atk = 1 + c.maxRecovery * 3.5 / c.maxAttack;
+                        msg = String.format("%.2f", atk);
+                        message.add(msg);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return message;
         }
     }
 }

@@ -96,5 +96,40 @@
                 android:tag="@string/cards_race_level"
                 android:src="@drawable/inv_level"/>
         </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/sortCassandraTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/sortTitle"
+                android:text="@string/cards_Cassandra"/>
+            <RadioGroup
+                android:id="@+id/sortCassandraList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/sortCassandraNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="@string/cards_no"/>
+                <RadioButton
+                    android:id="@+id/sortCassandraAttack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="@string/cards_Cassandra_attack"/>
+                <RadioButton
+                    android:id="@+id/sortCassandraRatio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="@string/cards_Cassandra_attack_ratio"/>
+            </RadioGroup>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
