@@ -345,7 +345,7 @@ public class TosCardFragment extends BaseFragment {
         }
 
         @Override
-        public boolean onSelect (TosCard c){
+        public boolean onSelect(TosCard c){
             List<String> attrs = select.getAttr();
             List<String> races = select.getRace();
             List<String> stars = select.getStar();
@@ -354,7 +354,7 @@ public class TosCardFragment extends BaseFragment {
 
         @NonNull
         @Override
-        public List<Integer> sort (@NonNull List < Integer > result) {
+        public List<Integer> sort(@NonNull List <Integer> result) {
             Comparator<Integer> cmp = getCassandraComparator();
 
             // Apply the comparator on result
@@ -381,6 +381,8 @@ public class TosCardFragment extends BaseFragment {
                         TosCard c2 = data.get(o2);
                         double atk1 = c1.maxAttack + c1.maxRecovery * 3.5;
                         double atk2 = c2.maxAttack + c2.maxRecovery * 3.5;
+                        //logCard("#1", c1);
+                        //logCard("#2", c2);
                         if (dsc) {
                             return Double.compare(atk2, atk1);
                         } else {
@@ -404,6 +406,15 @@ public class TosCardFragment extends BaseFragment {
                     break;
             }
             return null;
+        }
+
+        private void logCard(String prefix, TosCard c) {
+            // https://stackoverflow.com/questions/16946694/how-do-i-align-the-decimal-point-when-displaying-doubles-and-floats
+            // Align float point is %(x+y+1).yf
+            LogE("%s %s -> %4s + %4s * 3.5 = %7.1f => %s"
+                , prefix, c.idNorm, c.maxAttack, c.maxRecovery
+                , c.maxAttack + c.maxRecovery * 3.5, c.name
+            );
         }
 
         private List<String> getCassandraMessages(List<Integer> result) {

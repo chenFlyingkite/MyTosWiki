@@ -62,7 +62,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
                 selection = s == null ? new TosCardSelection.All(cards) : s;
                 if (isCancelled()) return null;
                 _indices = selection.query();
-                _msg = selection.getMessages(selectedIndices);
+                _msg = selection.getMessages(_indices);
                 return null;
             }
 
