@@ -42,11 +42,11 @@ android {
     }
 
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 26
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode
@@ -139,19 +139,21 @@ android.applicationVariants.all { variant ->
 // BuildAdapter is simple listener for BuildListener
 // TaskExecutionAdapter is simple listener for TaskExecutionListener
 class TaskTicTac extends BuildAdapter implements TaskExecutionListener {
-    private org.gradle.internal.time.Clock clock = new org.gradle.internal.time.Clock()
+    //private org.gradle.internal.time.DefaultTimer clock = new org.gradle.internal.time.DefaultTimer()
+    private TicTac clock = new TicTac()
     private times = []
     private everSlow = false
     private final SLOW = 3000
+    private a = System.currentTimeMillis()
 
     @Override
     void beforeExecute(Task task) {
-        clock.reset()
+        clock.tic()
     }
 
     @Override
     void afterExecute(Task task, TaskState taskState) {
-        def ms = clock.getElapsedMillis()
+        long ms = clock.tacL()
         if (!everSlow) {
             everSlow = ms >= SLOW
         }
@@ -170,5 +172,57 @@ class TaskTicTac extends BuildAdapter implements TaskExecutionListener {
             }
         }
         println "--------"
+    }
+}
+
+class TicTac {
+    private Stack<Long> tictac = new Stack<>();
+
+    void reset() {
+        tictac.clear()
+    }
+
+    long tic() {
+        long tic = System.currentTimeMillis()
+        tictac.push(tic)
+        return tic
+    }
+
+    long tacL() {
+        long tac = System.currentTimeMillis()
+        if (tictac.size() < 1) {
+            logError(tac, "")
+            return -1
+        } else {
+            long tic = tictac.pop()
+            return tac - tic
+        }
+    }
+
+    void tac() {
+        long tac = System.currentTimeMillis()
+
+        if (tictac.size() < 1) {
+            logError(tac, msg)
+        } else {
+            long tic = tictac.pop()
+            StringBuilder s = new StringBuilder()
+            int n = tictac.size()
+
+            for(int i = 0; i < n; ++i) {
+                s.append(" ")
+            }
+
+            s.append("[").append(tac - tic).append("] : ").append(msg);
+            logTac(s.toString());
+        }
+    }
+
+    void logTac(String s) {
+        printf "Hi, $s\n"
+    }
+
+    void logError(long tac, String msg) {
+        printf "Hi, X_X [tic = N/A, tac = $tac] : $msg\n"
     }
 }
