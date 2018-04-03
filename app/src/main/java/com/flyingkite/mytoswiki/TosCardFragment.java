@@ -49,6 +49,7 @@ public class TosCardFragment extends BaseFragment {
     private ViewGroup sortRace;
     private ViewGroup sortStar;
     private RadioGroup sortCassandra;
+    private RadioGroup sortSpecial;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -99,6 +100,28 @@ public class TosCardFragment extends BaseFragment {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
                 }
         );
+        test();
+    }
+
+    private void test() {
+        if (true) return;
+
+        int cnt = 0;
+        for (TosCard c : allCards) {
+            String desc = c.skillDesc + " & " + c.skillDesc2;// + " & " + c.skillLeaderDesc;
+
+            String[] names = {"可任意移動符石而不會發動消除", "任意移動符石", "不會發動消除"};
+
+            boolean found = false;
+            for (int i = 0; i < names.length && !found; i++) {
+                if (desc.contains(names[i])) {
+                    LogE("#%s -> @%d -> %s / %s", c.idNorm, i, c.name, desc);
+                    found = true;
+                    cnt++;
+                }
+            }
+        }
+        LogE("%s cards", cnt);
     }
 
     private void viewLink(TosCard card) {
@@ -131,6 +154,7 @@ public class TosCardFragment extends BaseFragment {
         initSortByRace(menu);
         initSortByCassandra(menu);
         initSortByStar(menu);
+        initSortBySpecial(menu);
     }
 
     private void initSortReset(View menu) {
@@ -181,12 +205,24 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void initSortBySpecial(View menu) {
+        sortSpecial = menu.findViewById(R.id.sortSpecialList);
+
+        ViewGroup vg = sortSpecial;
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            w.setOnClickListener(this::clickSpecial);
+        }
+    }
+
     private void clickReset(View v) {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar};
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
         sortCassandra.check(R.id.sortCassandraNo);
+        sortSpecial.check(R.id.sortSpecialNo);
 
         applySelection();
     }
@@ -211,7 +247,6 @@ public class TosCardFragment extends BaseFragment {
         applySelection();
     }
 
-
     private void clickCassandra(View v) {
         sortCassandra.check(v.getId());
 
@@ -224,6 +259,12 @@ public class TosCardFragment extends BaseFragment {
         if (isAllAsSelected(sortStar, true)) {
             setAllChildrenSelected(sortStar, false);
         }
+
+        applySelection();
+    }
+
+    private void clickSpecial(View v) {
+        sortSpecial.check(v.getId());
 
         applySelection();
     }
@@ -340,6 +381,8 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private class TosSelect extends TosSelectAttribute {
+        private final String[] freemove = getResources().getStringArray(R.array.cards_freemove_keys);
+
         public TosSelect(List<TosCard> source, TosCardCondition condition) {
             super(source, condition);
         }
@@ -349,7 +392,30 @@ public class TosCardFragment extends BaseFragment {
             List<String> attrs = select.getAttr();
             List<String> races = select.getRace();
             List<String> stars = select.getStar();
-            return attrs.contains(c.attribute) && races.contains(c.race) && stars.contains("" + c.rarity);
+
+            return attrs.contains(c.attribute)
+                    && races.contains(c.race)
+                    && stars.contains("" + c.rarity)
+                    && selectForFreeMove(c)
+            ;
+        }
+
+        private boolean selectForFreeMove(TosCard c) {
+            String key = c.skillDesc + " & " + c.skillDesc2;
+            final int id = sortSpecial.getCheckedRadioButtonId();
+            boolean result = false;
+            switch (id) {
+                case R.id.sortSpecialFreeMove:
+                    for (int i = 0; i < freemove.length && !result; i++) {
+                        if (key.contains(freemove[i])) {
+                            result = true;
+                        }
+                    }
+                    break;
+                default:
+                    result = true;
+            }
+            return result;
         }
 
         @NonNull

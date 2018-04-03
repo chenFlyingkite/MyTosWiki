@@ -27,4 +27,10 @@
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
+    <string name="cards_special">特選</string>
+    <string name="cards_freemove">排珠</string>
+    <string-array name="cards_freemove_keys">
+        <item>可任意移動符石而不會發動消除</item>
+        <item>可任意移動符石</item>
+    </string-array>
 </resources>

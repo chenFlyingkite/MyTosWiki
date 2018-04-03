@@ -182,5 +182,29 @@
                     android:text="@string/cards_Cassandra_attack_ratio"/>
             </RadioGroup>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/sortSpecialTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_special"/>
+        <RadioGroup
+            android:id="@+id/sortSpecialList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/sortSpecialNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="@string/cards_no"/>
+            <RadioButton
+                android:id="@+id/sortSpecialFreeMove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="@string/cards_freemove"/>
+        </RadioGroup>
     </LinearLayout>
 </ScrollView>
