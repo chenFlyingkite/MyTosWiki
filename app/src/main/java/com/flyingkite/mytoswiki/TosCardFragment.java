@@ -48,6 +48,7 @@ public class TosCardFragment extends BaseFragment {
     private ViewGroup sortAttributes;
     private ViewGroup sortRace;
     private ViewGroup sortStar;
+    private RadioGroup sortCommon;
     private RadioGroup sortCassandra;
     private RadioGroup sortSpecial;
 
@@ -154,6 +155,7 @@ public class TosCardFragment extends BaseFragment {
         initSortByRace(menu);
         initSortByCassandra(menu);
         initSortByStar(menu);
+        initSortByCommon(menu);
         initSortBySpecial(menu);
     }
 
@@ -205,6 +207,17 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void initSortByCommon(View menu) {
+        sortCommon = menu.findViewById(R.id.sortCommonList);
+
+        ViewGroup vg = sortCommon;
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            w.setOnClickListener(this::clickCommon);
+        }
+    }
+
     private void initSortBySpecial(View menu) {
         sortSpecial = menu.findViewById(R.id.sortSpecialList);
 
@@ -221,6 +234,7 @@ public class TosCardFragment extends BaseFragment {
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
+        sortCommon.check(R.id.sortCommonNo);
         sortCassandra.check(R.id.sortCassandraNo);
         sortSpecial.check(R.id.sortSpecialNo);
 
@@ -248,7 +262,12 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickCassandra(View v) {
-        sortCassandra.check(v.getId());
+        int id = v.getId();
+        sortCassandra.check(id);
+        if (id != R.id.sortCassandraNo) {
+            sortCommon.check(R.id.sortCommonNo);
+        }
+        sortCommon.setEnabled(id != R.id.sortCassandraNo);
 
         applySelection();
     }
@@ -265,6 +284,17 @@ public class TosCardFragment extends BaseFragment {
 
     private void clickSpecial(View v) {
         sortSpecial.check(v.getId());
+
+        applySelection();
+    }
+
+    private void clickCommon(View v) {
+        int id = v.getId();
+        sortCommon.check(id);
+        if (id != R.id.sortCommonNo) {
+            sortCassandra.check(R.id.sortCassandraNo);
+        }
+        sortCassandra.setEnabled(id != R.id.sortCassandraNo);
 
         applySelection();
     }
@@ -382,6 +412,7 @@ public class TosCardFragment extends BaseFragment {
 
     private class TosSelect extends TosSelectAttribute {
         private final String[] freemove = getResources().getStringArray(R.array.cards_freemove_keys);
+        private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys);
 
         public TosSelect(List<TosCard> source, TosCardCondition condition) {
             super(source, condition);
@@ -421,7 +452,11 @@ public class TosCardFragment extends BaseFragment {
         @NonNull
         @Override
         public List<Integer> sort(@NonNull List <Integer> result) {
-            Comparator<Integer> cmp = getCassandraComparator();
+            Comparator<Integer> cmp;
+            cmp = getCommonComparator();
+            if (cmp == null) {
+                cmp = getCassandraComparator();
+            }
 
             // Apply the comparator on result
             if (cmp != null) {
@@ -432,7 +467,11 @@ public class TosCardFragment extends BaseFragment {
 
         @Override
         public List<String> getMessages(List<Integer> result) {
-            List<String> messages = getCassandraMessages(result);
+            List<String> messages;
+            messages = getCommonMessages(result);
+            if (messages == null) {
+                messages = getCassandraMessages(result);
+            }
             return messages;
         }
 
@@ -474,6 +513,52 @@ public class TosCardFragment extends BaseFragment {
             return null;
         }
 
+        private Comparator<Integer> getCommonComparator() {
+            // Create comparator
+            int id = sortCommon.getCheckedRadioButtonId();
+            if (id == RadioGroup.NO_ID || id == R.id.sortCommonNo) {
+                return null;
+            }
+            return (o1, o2) -> {
+                boolean dsc = true;
+                TosCard c1 = data.get(o1);
+                TosCard c2 = data.get(o2);
+                long v1 = -1, v2 = -1;
+                //logCard("#1", c1);
+                //logCard("#2", c2);
+
+                switch (id) {
+                    case R.id.sortCommonMaxHP:
+                        v1 = c1.maxHP;
+                        v2 = c2.maxHP;
+                        break;
+                    case R.id.sortCommonMaxAttack:
+                        v1 = c1.maxAttack;
+                        v2 = c2.maxAttack;
+                        break;
+                    case R.id.sortCommonMaxRecovery:
+                        v1 = c1.maxRecovery;
+                        v2 = c2.maxRecovery;
+                        break;
+                    case R.id.sortCommonMaxSum:
+                        v1 = c1.maxHP + c1.maxAttack + c1.maxRecovery;
+                        v2 = c2.maxHP + c2.maxAttack + c2.maxRecovery;
+                        break;
+                    case R.id.sortCommonRace:
+                        dsc = false;
+                        v1 = indexOf(commonRace, c1.race);
+                        v2 = indexOf(commonRace, c2.race);
+                        break;
+                }
+
+                if (dsc) {
+                    return Long.compare(v2, v1);
+                } else {
+                    return Long.compare(v1, v2);
+                }
+            };
+        }
+
         private void logCard(String prefix, TosCard c) {
             // https://stackoverflow.com/questions/16946694/how-do-i-align-the-decimal-point-when-displaying-doubles-and-floats
             // Align float point is %(x+y+1).yf
@@ -512,6 +597,49 @@ public class TosCardFragment extends BaseFragment {
                     break;
             }
             return message;
+        }
+
+        private List<String> getCommonMessages(List<Integer> result) {
+            List<String> message = new ArrayList<>();
+            TosCard c;
+            String msg;
+            // Create Message
+            boolean added = false;
+            int id = sortCommon.getCheckedRadioButtonId();
+
+            for (int i = 0; i < result.size(); i++) {
+                c = data.get(result.get(i));
+                msg = null;
+                switch (id) {
+                    case R.id.sortCommonMaxHP:
+                        msg = String.valueOf(c.maxHP);
+                        break;
+                    case R.id.sortCommonMaxAttack:
+                        msg = String.valueOf(c.maxAttack);
+                        break;
+                    case R.id.sortCommonMaxRecovery:
+                        msg = String.valueOf(c.maxRecovery);
+                        break;
+                    case R.id.sortCommonMaxSum:
+                        msg = String.valueOf(c.maxHP + c.maxAttack + c.maxRecovery);
+                        break;
+                    case R.id.sortCommonRace:
+                        msg = c.id + "\n" + c.race;
+                        break;
+                    default:
+                }
+
+                if (msg != null) {
+                    added = true;
+                    message.add(msg);
+                }
+            }
+
+            if (added) {
+                return message;
+            } else {
+                return null;
+            }
         }
     }
 }

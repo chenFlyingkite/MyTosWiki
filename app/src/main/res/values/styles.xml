@@ -28,6 +28,7 @@
     <!-- Sort menu -->
     <style name="sortTitle">
         <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">#fff</item>
     </style>
     <style name="sortIcon">
@@ -44,6 +45,13 @@
         <item name="android:shadowRadius">2</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/t30dp</item>
+    </style>
+
+    <style name="sortRadio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/bg_press</item>
     </style>
 
 </resources>

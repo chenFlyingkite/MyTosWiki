@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="@dimen/t80dp"
         android:background="#8000">
 
         <ImageView
@@ -148,44 +149,69 @@
 
         </GridLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/sortCommonTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/sortCassandraTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/sortTitle"
-                android:text="@string/cards_Cassandra"/>
-            <RadioGroup
-                android:id="@+id/sortCassandraList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/sortCassandraNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:text="@string/cards_no"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraAttack"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:text="@string/cards_Cassandra_attack"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraRatio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:text="@string/cards_Cassandra_attack_ratio"/>
-            </RadioGroup>
-        </LinearLayout>
+            style="@style/sortTitle"
+            android:text="@string/cards_common"/>
+        <RadioGroup
+            android:id="@+id/sortCommonList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/sortCommonNo"
+                style="@style/sortRadio"
+                android:text="@string/cards_no"/>
+            <RadioButton
+                android:id="@+id/sortCommonMaxHP"
+                style="@style/sortRadio"
+                android:text="@string/cards_common_maxHP"/>
+            <RadioButton
+                android:id="@+id/sortCommonMaxAttack"
+                style="@style/sortRadio"
+                android:text="@string/cards_common_maxAttack"/>
+            <RadioButton
+                android:id="@+id/sortCommonMaxRecovery"
+                style="@style/sortRadio"
+                android:text="@string/cards_common_macRecovery"/>
+            <RadioButton
+                android:id="@+id/sortCommonMaxSum"
+                style="@style/sortRadio"
+                android:text="@string/cards_common_maxSum"/>
+            <RadioButton
+                android:id="@+id/sortCommonRace"
+                style="@style/sortRadio"
+                android:text="@string/cards_common_race"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/sortCassandraTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_Cassandra"/>
+        <RadioGroup
+            android:id="@+id/sortCassandraList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/sortCassandraNo"
+                style="@style/sortRadio"
+                android:text="@string/cards_no"/>
+            <RadioButton
+                android:id="@+id/sortCassandraAttack"
+                style="@style/sortRadio"
+                android:text="@string/cards_Cassandra_attack"/>
+            <RadioButton
+                android:id="@+id/sortCassandraRatio"
+                style="@style/sortRadio"
+                android:text="@string/cards_Cassandra_attack_ratio"/>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/sortSpecialTitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/sortTitle"
             android:text="@string/cards_special"/>
@@ -195,15 +221,11 @@
             android:layout_height="wrap_content">
             <RadioButton
                 android:id="@+id/sortSpecialNo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
+                style="@style/sortRadio"
                 android:text="@string/cards_no"/>
             <RadioButton
                 android:id="@+id/sortSpecialFreeMove"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
+                style="@style/sortRadio"
                 android:text="@string/cards_freemove"/>
         </RadioGroup>
     </LinearLayout>

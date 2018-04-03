@@ -27,6 +27,23 @@
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
+    <string name="cards_common">常用排序</string>
+    <string name="cards_common_maxHP">生命力</string>
+    <string name="cards_common_maxAttack">攻擊力</string>
+    <string name="cards_common_macRecovery">回復力</string>
+    <string name="cards_common_maxSum">三圍(生+攻+回)</string>
+    <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
+    <string-array name="cards_common_keys">
+        <item>@string/cards_race_god</item>
+        <item>@string/cards_race_demon</item>
+        <item>@string/cards_race_human</item>
+        <item>@string/cards_race_beast</item>
+        <item>@string/cards_race_dragon</item>
+        <item>@string/cards_race_elf</item>
+        <item>@string/cards_race_machina</item>
+        <item>@string/cards_race_evolve</item>
+        <item>@string/cards_race_level</item>
+    </string-array>
     <string name="cards_special">特選</string>
     <string name="cards_freemove">排珠</string>
     <string-array name="cards_freemove_keys">
