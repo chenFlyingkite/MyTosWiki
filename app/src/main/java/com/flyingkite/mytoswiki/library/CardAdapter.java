@@ -117,7 +117,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         TosCard c;
 
         c = cards.get(selectedIndices.get(position));
-        //Say.Log("bind #%d -> %s ,name = %s", position, c.id, c.name);
+        //Say.Log("bind #%d -> %s, name = %s", position, c.id, c.name);
         String msg = null;
         if (selectedMessage != null && position < selectedMessage.size()) {
             msg = selectedMessage.get(position);

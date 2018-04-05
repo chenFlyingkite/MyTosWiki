@@ -1,9 +1,13 @@
 package com.flyingkite.mytoswiki;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,7 +23,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.flyingkite.library.FilesHelper;
+import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.ThreadUtil;
+import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
@@ -29,6 +36,9 @@ import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -60,12 +70,12 @@ public class TosCardFragment extends BaseFragment {
         cardLib = new CardLibrary(cardsRecycler);
         sortMenu = findViewById(R.id.tosSortMenu);
         initSortMenu();
-        initScroll();
+        initToolIcons();
 
         new ParseCardsTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
-    private void initScroll() {
+    private void initToolIcons() {
         findViewById(R.id.tosGoTop).setOnClickListener((v) -> {
             int index = 0;
             cardLib.recycler.scrollToPosition(index);
@@ -74,6 +84,29 @@ public class TosCardFragment extends BaseFragment {
         findViewById(R.id.tosGoBottom).setOnClickListener((v) -> {
             int index = cardLib.cardAdapter.getItemCount() - 1;
             cardLib.recycler.scrollToPosition(index);
+        });
+
+        findViewById(R.id.tosSave).setOnClickListener((v) -> {
+            View view = cardsRecycler;
+            //File folder = Environment.getExternalStoragePublicDirectory()
+            File folder = App.getContext().getExternalCacheDir();
+            String name = folder.getAbsolutePath() + File.separator + "1.png";
+            LogE("Save to %s", name);
+
+            @SuppressLint("StaticFieldLeak")
+            SaveViewToBitmapTask task = new SaveViewToBitmapTask(view, name){
+                @Override
+                protected void onPostExecute(Void aVoid) {
+                    super.onPostExecute(aVoid);
+
+                    MediaScannerConnection.scanFile(getActivity(), new String[]{name}, null,
+                        (path, uri) -> {
+                            LogE("Scanned %s\n  as -> %s", path, uri);
+                            sendUriIntent(uri, "image/png");
+                        });
+                }
+            };
+            task.executeOnExecutor(ThreadUtil.cachedThreadPool);
         });
     }
 
@@ -134,11 +167,22 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void sendUriIntent(Uri uri, String type) {
+        Intent it = new Intent(Intent.ACTION_SEND);
+        it.putExtra(Intent.EXTRA_STREAM, uri);
+        it.setType(type);
+        try {
+            startActivity(it);
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void initSortMenu() {
         // Create MenuWindow
         View menu = LayoutInflater.from(getActivity()).inflate(R.layout.popup_tos_sort, (ViewGroup) getView(), false);
         int wrap = ViewGroup.LayoutParams.WRAP_CONTENT;
-        sortWindow = new PopupWindow(menu, wrap, wrap);
+        sortWindow = new PopupWindow(menu, wrap, wrap, true);
         sortWindow.setOutsideTouchable(true);
         sortWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -399,14 +443,91 @@ public class TosCardFragment extends BaseFragment {
                 race.add(c.race);
             }
             LogE("race = %s", race);
-
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            dialog.dismiss();
-            dialog = null;
+            if (dialog != null) {
+                dialog.dismiss();
+                dialog = null;
+            }
             initCardLibrary();
+        }
+    }
+
+    private class SaveViewToBitmapTask extends AsyncTask<Void, Void, Void> {
+        private View view;
+        private String savedName;
+        private int width;
+        private int height;
+        private WaitingDialog w;
+        private TicTac2 tt = new TicTac2();
+
+        public SaveViewToBitmapTask(View v, String filename) {
+            view = v;
+            savedName = filename;
+            ofSize(v.getWidth(), v.getHeight());
+        }
+
+        public SaveViewToBitmapTask ofSize(int w, int h) {
+            width = w;
+            height = h;
+            return this;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            w = new WaitingDialog.Builder(getActivity(), true)
+                    .onCancel((dialog) -> {
+                        cancel(true);
+                    }).buildAndShow();
+            tt.tic();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            if (view == null || savedName == null) {
+                LogE("Cannot save bitmap : %s, %s", view, savedName);
+                return null;
+            }
+
+            // 1. [<10ms] Create new bitmap
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            if (isCancelled()) return null;
+
+            // 2. [100ms] Let view draws to the bitmap
+            Canvas c = new Canvas(bitmap);
+            view.draw(c);
+            if (isCancelled()) return null;
+
+            // 3. [<10ms] Create output file
+            File f = new File(savedName);
+            File fp = f.getParentFile();
+            if (fp != null) {
+                fp.mkdirs();
+            }
+            FilesHelper.fullDelete(f);
+            if (isCancelled()) return null;
+
+            // 4. [~1kms] Writing bitmap to file
+            FileOutputStream fos = null;
+            try {
+                fos = new FileOutputStream(f);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                IOUtil.closeIt(fos);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            tt.tac("Save done");
+            if (w != null) {
+                w.dismiss();
+            }
         }
     }
 
