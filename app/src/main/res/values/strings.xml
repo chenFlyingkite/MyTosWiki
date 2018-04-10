@@ -4,6 +4,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="share_to">分享到&#8230;</string>
+    <string name="complete">已完成</string>
+
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
     <string name="cards_attr">屬性</string>
@@ -50,4 +53,7 @@
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
     </string-array>
+
+    <string name="texts_tools">文字區域</string>
+    <string name="texts_pools">文字池</string>
 </resources>

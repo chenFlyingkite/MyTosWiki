@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t14dp"
+            android:textColor="#000"
+            android:text="@string/texts_tools"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tedSend"
+                style="@style/textsIcon"
+                android:src="@drawable/ic_send_black_48dp"/>
+
+            <ImageView
+                style="@style/textsIcon"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/tedDelete"
+                style="@style/textsIcon"
+                android:src="@drawable/ic_delete_black_48dp"/>
+
+            <ImageView
+                android:id="@+id/tedPrev"
+                style="@style/textsIcon"
+                android:rotation="180"
+                android:src="@drawable/ic_skip_next_black_48dp"/>
+
+            <ImageView
+                android:id="@+id/tedNext"
+                style="@style/textsIcon"
+                android:src="@drawable/ic_skip_next_black_48dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t14dp"
+            android:textColor="#000"
+            android:text="@string/texts_pools"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tedSave"
+                style="@style/textsIcon"
+                android:src="@drawable/ic_save_black_48dp"/>
+
+            <ImageView
+                style="@style/textsIcon"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/tedClear"
+                style="@style/textsIcon"
+                android:src="@drawable/ic_clear_black_48dp"/>
+
+            <ImageView
+                android:id="@+id/tedExpand"
+                style="@style/textsIcon"
+                android:rotation="270"
+                android:src="@drawable/ic_skip_next_black_48dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tedPoolString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/skyBlue2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/tedAdd"
+                    style="@style/tosIcon"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_add_black_48dp"/>
+
+                <EditText
+                    android:id="@+id/tedNewString"
+                    android:layout_toLeftOf="@id/tedAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/texts_pools"
+                    android:inputType="text"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tedRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t50dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/tedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/texts_tools"
+            android:inputType="textMultiLine"/>
+
+    </LinearLayout>
+</ScrollView>

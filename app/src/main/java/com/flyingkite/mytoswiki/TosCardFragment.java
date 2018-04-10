@@ -32,6 +32,7 @@ import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
 import com.flyingkite.util.DialogManager;
+import com.flyingkite.util.TextEditorDialog;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -107,6 +108,13 @@ public class TosCardFragment extends BaseFragment {
                 }
             };
             task.executeOnExecutor(ThreadUtil.cachedThreadPool);
+        });
+
+        findViewById(R.id.tosTexts).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new TextEditorDialog(TosCardFragment.this::getActivity).show();
+            }
         });
     }
 
@@ -187,11 +195,7 @@ public class TosCardFragment extends BaseFragment {
         sortWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         sortMenu.setOnClickListener(v -> {
-            if (sortWindow.isShowing()) {
-                sortWindow.dismiss();
-            } else {
-                sortWindow.showAsDropDown(v);
-            }
+            sortWindow.showAsDropDown(v);
         });
 
         initSortReset(menu);

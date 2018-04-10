@@ -54,4 +54,16 @@
         <item name="android:background">@drawable/bg_press</item>
     </style>
 
+    <style name="tosIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_press</item>
+    </style>
+
+    <style name="textsIcon">
+        <item name="android:layout_width">@dimen/t50dp</item>
+        <item name="android:layout_height">@dimen/t50dp</item>
+        <item name="android:background">@drawable/bg_press</item>
+    </style>
+
 </resources>
