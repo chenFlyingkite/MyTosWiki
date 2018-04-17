@@ -162,7 +162,7 @@
             <RadioButton
                 android:id="@+id/sortCommonNo"
                 style="@style/sortRadio"
-                android:text="@string/cards_no"/>
+                android:text="@string/cards_normId"/>
             <RadioButton
                 android:id="@+id/sortCommonMaxHP"
                 style="@style/sortRadio"

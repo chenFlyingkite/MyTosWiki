@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.tos.query.Common;
+import com.flyingkite.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.TextsVH> implements Common {
+public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.TextsVH> implements ListUtil {
     public interface ItemListener {
         void onClick(String data, TextsVH vh, int position);
         void onDelete(String data, TextsVH vh, int position);

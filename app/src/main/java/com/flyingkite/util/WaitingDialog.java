@@ -8,60 +8,64 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.flyingkite.mytoswiki.R;
 
 public class WaitingDialog extends AlertDialog {
     protected WaitingDialog(Context context) {
         super(context);
+        init();
     }
 
     protected WaitingDialog(Context context, boolean cancelable, OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
+        init();
     }
 
     protected WaitingDialog(Context context, int themeResId) {
         super(context, themeResId);
+        init();
+    }
+
+    private void init() {
+        message = getContext().getString(R.string.loading);
     }
 
     public static class Builder {
-        private Activity activity;
-        private boolean cancelable;
-        private long delay;
-        private OnCancelListener onCancel;
-        private OnDismissListener onDismiss;
+        private WaitingDialog dlg;
 
         public Builder(Activity act) {
             this(act, false);
         }
 
         public Builder(Activity act, boolean cancel) {
-            activity = act;
-            cancelable = cancel;
+            dlg = new WaitingDialog(act, R.style.WaitingDialog);
+            dlg.setCancelable(cancel);
         }
 
         public Builder delay(long ms) {
-            delay = ms;
+            dlg.setDelayDuration(ms);
             return this;
         }
 
         public Builder onCancel(OnCancelListener listener) {
-            onCancel = listener;
+            dlg.setOnCancelListener(listener);
             return this;
         }
 
         public Builder onDismiss(OnDismissListener listener) {
-            onDismiss = listener;
+            dlg.setOnDismissListener(listener);
+            return this;
+        }
+
+        public Builder message(CharSequence msg) {
+            dlg.setLoading(msg);
             return this;
         }
 
         public WaitingDialog build() {
-            WaitingDialog d = new WaitingDialog(activity, R.style.WaitingDialog);
-            d.setDelayDuration(delay);
-            d.setCancelable(cancelable);
-            d.setOnCancelListener(onCancel);
-            d.setOnDismissListener(onDismiss);
-            return d;
+            return dlg;
         }
 
         public WaitingDialog buildAndShow() {
@@ -71,6 +75,7 @@ public class WaitingDialog extends AlertDialog {
         }
     }
 
+    private CharSequence message;
     private long delayDuration;
     private static final Handler ui = new Handler(Looper.getMainLooper());
 
@@ -79,11 +84,19 @@ public class WaitingDialog extends AlertDialog {
         return this;
     }
 
+    private WaitingDialog setLoading(CharSequence seq) {
+        message = seq;
+        return this;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE); // // https://stackoverflow.com/a/38007874
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_waiting_dialog);
+
+        TextView t = findViewById(R.id.waitText);
+        t.setText(message);
 
         if (delayDuration > 0) {
             setWindowAttr(0, 0);

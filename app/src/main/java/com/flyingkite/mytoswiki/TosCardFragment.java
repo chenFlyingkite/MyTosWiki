@@ -88,6 +88,9 @@ public class TosCardFragment extends BaseFragment {
         });
 
         findViewById(R.id.tosSave).setOnClickListener((v) -> {
+            //new SkillEatingDialog(TosCardFragment.this::getActivity).show();
+            //if (true) return;
+
             View view = cardsRecycler;
             //File folder = Environment.getExternalStoragePublicDirectory()
             File folder = App.getContext().getExternalCacheDir();

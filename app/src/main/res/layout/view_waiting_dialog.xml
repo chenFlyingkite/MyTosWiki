@@ -5,9 +5,21 @@
     android:layout_height="match_parent">
 
     <ProgressBar
+        android:id="@+id/waitProgress"
         android:layout_width="@dimen/t100dp"
         android:layout_height="@dimen/t100dp"
         android:layout_centerInParent="true"
         android:background="@drawable/bg_waiting_round_corner"
         android:indeterminate="true"/>
+
+    <TextView
+        android:id="@+id/waitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        style="@style/blackText"
+        android:textColor="#000"
+        android:padding="@dimen/t5dp"
+        android:layout_below="@id/waitProgress"
+        android:text="@string/loading"/>
 </RelativeLayout>

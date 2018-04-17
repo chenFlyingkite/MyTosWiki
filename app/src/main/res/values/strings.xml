@@ -6,9 +6,12 @@
 
     <string name="share_to">分享到&#8230;</string>
     <string name="complete">已完成</string>
+    <string name="loading">讀取中&#8230;</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
+    <string name="cards_normId">編號</string>
+    <string name="cards_level">等級</string>
     <string name="cards_attr">屬性</string>
     <string name="cards_attr_water">水</string>
     <string name="cards_attr_fires">火</string>

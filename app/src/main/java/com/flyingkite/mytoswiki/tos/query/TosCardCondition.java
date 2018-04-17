@@ -1,9 +1,11 @@
 package com.flyingkite.mytoswiki.tos.query;
 
+import com.flyingkite.util.ListUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class TosCardCondition implements Common {
+public class TosCardCondition implements ListUtil {
     private List<String> attr = new ArrayList<>();
     private List<String> race = new ArrayList<>();
     private List<String> star = new ArrayList<>();

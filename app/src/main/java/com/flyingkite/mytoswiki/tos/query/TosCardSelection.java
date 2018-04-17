@@ -4,11 +4,12 @@ import android.support.annotation.NonNull;
 
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public interface TosCardSelection extends Common {
+public interface TosCardSelection extends ListUtil {
     @NonNull
     default List<TosCard> from() {
         return new ArrayList<>();

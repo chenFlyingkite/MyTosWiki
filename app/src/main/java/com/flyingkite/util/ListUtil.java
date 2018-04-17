@@ -1,9 +1,9 @@
-package com.flyingkite.mytoswiki.tos.query;
+package com.flyingkite.util;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public interface Common {
+public interface ListUtil {
 
     default <T> List<T> nonEmpty(List<T> list) {
         return list == null ? new ArrayList<>() : list;
@@ -11,6 +11,7 @@ public interface Common {
 
     default <T> int indexOf(T[] list, T item) {
         if (list != null) {
+            // Just as it done in ArrayList#indexOf(Object)
             for (int i = 0; i < list.length; i++) {
                 T li = list[i];
                 if (item == null) {
