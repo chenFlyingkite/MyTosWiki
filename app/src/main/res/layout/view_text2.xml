@@ -10,7 +10,7 @@
         android:id="@+id/simpleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_select"
+        android:background="@drawable/bg_press"
         android:padding="@dimen/t10dp"
         style="@style/blackText"
         tools:text="@string/app_name"/>

@@ -22,4 +22,16 @@
         android:padding="@dimen/t5dp"
         android:layout_below="@id/waitProgress"
         android:text="@string/loading"/>
+
+    <View
+        android:layout_width="@dimen/t30dp"
+        android:layout_height="@dimen/t30dp"
+        android:background="#ff0"/>
+
+    <View
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="@dimen/t30dp"
+        android:layout_height="@dimen/t30dp"
+        android:background="#0ff"/>
 </RelativeLayout>

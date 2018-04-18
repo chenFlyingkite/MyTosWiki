@@ -91,7 +91,7 @@ public class WaitingDialog extends AlertDialog {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE); // // https://stackoverflow.com/a/38007874
+        //requestWindowFeature(Window.FEATURE_NO_TITLE); // // https://stackoverflow.com/a/38007874
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_waiting_dialog);
 

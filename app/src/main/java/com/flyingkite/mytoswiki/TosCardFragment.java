@@ -26,8 +26,10 @@ import com.bumptech.glide.Glide;
 import com.flyingkite.library.FilesHelper;
 import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.ThreadUtil;
+import com.flyingkite.library.TicTac;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
@@ -88,8 +90,10 @@ public class TosCardFragment extends BaseFragment {
         });
 
         findViewById(R.id.tosSave).setOnClickListener((v) -> {
-            //new SkillEatingDialog(TosCardFragment.this::getActivity).show();
-            //if (true) return;
+            TicTac.tic();
+            new SkillEatingDialog(TosCardFragment.this::getActivity).show();
+            TicTac.tac("dlg");
+            if (true) return;
 
             View view = cardsRecycler;
             //File folder = Environment.getExternalStoragePublicDirectory()

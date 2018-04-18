@@ -5,7 +5,10 @@ import android.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
+import com.flyingkite.library.TicTac;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 
@@ -27,6 +30,11 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, AlertDialog dialog) {
+        TicTac.tic();
+        initSpinners(view);
+        TicTac.tac("spin");
+
+        TicTac.tic();
         recycler = view.findViewById(R.id.skillTable);
         int row = 4;
         recycler.setLayoutManager(new GridLayoutManager(getActivity(), row));
@@ -39,6 +47,33 @@ public class SkillEatingDialog extends BaseTosDialog {
         }
         adapter.setDataList(data);
         recycler.setAdapter(adapter);
+        TicTac.tac("adapter");
+    }
+
+    private void initSpinners(View v) {
+        ArrayAdapter<String> levels = new ArrayAdapter<>(getActivity()
+                , android.R.layout.simple_spinner_item
+                //, R.layout.view_text
+        );
+        for (int i = 1; i <= 15; i++) {
+            levels.add("   " + i + "   ");
+        }
+
+        Spinner from = v.findViewById(R.id.skillFrom);
+        from.setAdapter(levels);
+        Spinner to = v.findViewById(R.id.skillTo);
+        to.setAdapter(levels);
+
+
+        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity()
+                , android.R.layout.simple_spinner_item
+                //, R.layout.view_text
+        );
+        for (int i = 0; i < 100; i++) {
+            progress.add("   " + i + "   ");
+        }
+        Spinner pgs = v.findViewById(R.id.skillPercent);
+        pgs.setAdapter(progress);
     }
 
     private Activity getActivity() {
