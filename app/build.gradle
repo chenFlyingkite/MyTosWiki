@@ -139,12 +139,10 @@ android.applicationVariants.all { variant ->
 // BuildAdapter is simple listener for BuildListener
 // TaskExecutionAdapter is simple listener for TaskExecutionListener
 class TaskTicTac extends BuildAdapter implements TaskExecutionListener {
-    //private org.gradle.internal.time.DefaultTimer clock = new org.gradle.internal.time.DefaultTimer()
     private TicTac clock = new TicTac()
     private times = []
     private everSlow = false
     private final SLOW = 3000
-    private a = System.currentTimeMillis()
 
     @Override
     void beforeExecute(Task task) {
