@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/simpleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:background="@drawable/bg_press"
-        android:padding="@dimen/t10dp"
+        android:paddingLeft="@dimen/t10dp"
+        android:paddingRight="@dimen/t10dp"
+        android:paddingTop="@dimen/t5dp"
+        android:paddingBottom="@dimen/t5dp"
         style="@style/blackText"
         tools:text="@string/app_name"/>
 
-</LinearLayout>
+</RelativeLayout>

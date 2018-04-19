@@ -29,6 +29,9 @@
         <item name="android:textSize">@dimen/t18dp</item>
         <item name="android:textColor">#000</item>
     </style>
+    <style name="blackText.center">
+        <item name="android:gravity">center</item>
+    </style>
 
     <!-- Sort menu -->
     <style name="sortTitle">
@@ -76,5 +79,18 @@
         <item name="android:layout_height">@dimen/t3dp</item>
         <item name="android:background">#888</item>
     </style>
+
+    <!-- sed = Skill eat dialog -->
+    <style name="sed_round_text" parent="blackText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="sed_round_text.left">
+        <item name="android:paddingLeft">@dimen/t10dp</item>
+    </style>
+
+    <!-- Skill eat -->
+
 
 </resources>

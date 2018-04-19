@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:baselineAligned="false">
@@ -23,12 +23,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:layout_weight="4">
+                android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/blackText"
+                    style="@style/sed_round_text"
                     android:text="@string/cards_level"/>
 
                 <Spinner
@@ -37,9 +35,7 @@
                     android:layout_height="@dimen/t40dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/blackText"
+                    style="@style/sed_round_text"
                     android:text="@string/progress"/>
 
                 <Spinner
@@ -48,16 +44,12 @@
                     android:layout_height="@dimen/t40dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/blackText"
-                    android:text="@string/allRound"/>
+                    style="@style/sed_round_text"
+                    android:text="@string/sumRound"/>
 
                 <TextView
                     android:id="@+id/skillFromRound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/t18dp"
+                    style="@style/sed_round_text.left"
                     android:text="0"/>
             </GridLayout>
 
@@ -71,13 +63,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
-                android:layout_weight="5">
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/skillToTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/blackText"
+                    style="@style/sed_round_text"
                     android:text="@string/cards_level"/>
 
                 <Spinner
@@ -86,32 +76,24 @@
                     android:layout_height="@dimen/t40dp"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/blackText"
-                    android:text="@string/allRound"/>
+                    style="@style/sed_round_text"
+                    android:text="@string/sumRound"/>
 
                 <TextView
                     android:id="@+id/skillToRound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/t18dp"
+                    style="@style/sed_round_text.left"
                     android:text="0"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/t18dp"
+                    style="@style/sed_round_text"
                     android:textColor="#00a"
                     android:textStyle="bold"
                     android:text="@string/needRound"/>
 
                 <TextView
                     android:id="@+id/skillNeedRound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/sed_round_text.left"
                     android:textColor="#00a"
-                    android:textSize="@dimen/t18dp"
                     android:text="0"/>
             </GridLayout>
         </LinearLayout>
@@ -129,16 +111,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/t10dp"
+                android:checked="true"
                 android:textSize="@dimen/t15dp"
                 android:text="@string/skill_eat600"/>
 
             <TextView
+                android:id="@+id/skillEatCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/t18dp"
                 android:textStyle="bold"
                 android:textColor="#080"
-                android:text="@string/skill_600_200"/>
+                android:text="@string/skill_eat_card"/>
         </LinearLayout>
 
         <View
@@ -146,9 +130,9 @@
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/skillTable"
+            android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#fff">
+            android:layout_height="@dimen/t250dp">
 
         </android.support.v7.widget.RecyclerView>
 
