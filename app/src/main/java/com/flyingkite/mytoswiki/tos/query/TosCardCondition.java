@@ -11,17 +11,17 @@ public class TosCardCondition implements ListUtil {
     private List<String> star = new ArrayList<>();
 
     public TosCardCondition attr(List<String> a) {
-        attr = nonEmpty(a);
+        attr = nonNull(a);
         return this;
     }
 
     public TosCardCondition race(List<String> r) {
-        race = nonEmpty(r);
+        race = nonNull(r);
         return this;
     }
 
     public TosCardCondition star(List<String> s) {
-        star = nonEmpty(s);
+        star = nonNull(s);
         return this;
     }
 

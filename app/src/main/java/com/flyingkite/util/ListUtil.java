@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ListUtil {
 
-    default <T> List<T> nonEmpty(List<T> list) {
+    default <T> List<T> nonNull(List<T> list) {
         return list == null ? new ArrayList<>() : list;
     }
 

@@ -22,7 +22,7 @@ public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.TextsVH> imp
     private ItemListener onClick;
 
     public TextsAdapter setData(List<String> strings) {
-        data = nonEmpty(strings);
+        data = nonNull(strings);
         return this;
     }
 

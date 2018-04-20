@@ -23,7 +23,6 @@ public abstract class BaseTosDialog {
         owner = own;
     }
 
-
     protected final Activity getActivity() {
         return owner.getActivity();
     }

@@ -11,7 +11,7 @@ public class TosSelectAttribute implements TosCardSelection {
     protected TosCardCondition select;
 
     public TosSelectAttribute(List<TosCard> source, TosCardCondition condition) {
-        data = nonEmpty(source);
+        data = nonNull(source);
         select = condition;
     }
 

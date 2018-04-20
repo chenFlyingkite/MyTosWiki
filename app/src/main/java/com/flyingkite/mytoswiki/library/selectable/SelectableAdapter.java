@@ -24,7 +24,7 @@ public class SelectableAdapter extends RecyclerView.Adapter<SelectableAdapter.Se
     private int rows = 3;
 
     public void setDataList(List<String> list) {
-        dataList = nonEmpty(list);
+        dataList = nonNull(list);
     }
 
     public void itemListener(ItemListener listener) {

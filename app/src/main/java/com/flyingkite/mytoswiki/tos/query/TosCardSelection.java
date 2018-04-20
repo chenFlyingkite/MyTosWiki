@@ -17,7 +17,7 @@ public interface TosCardSelection extends ListUtil {
 
     @NonNull
     default List<Integer> select() {
-        List<TosCard> data = nonEmpty(from());
+        List<TosCard> data = nonNull(from());
         List<Integer> index = new ArrayList<>();
         for (int i = 0; i < data.size(); i++) {
             TosCard c = data.get(i);
