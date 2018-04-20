@@ -1,6 +1,5 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
@@ -13,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
@@ -58,11 +58,56 @@ public class SkillEatingDialog extends BaseTosDialog {
             , 11260, 14260, 17260, 20260, 23260
     };
 
+    private List<String> tableData = new ArrayList<>();
+
     @Override
     protected void onFinishInflate(View view, AlertDialog dialog) {
         initSpinners(view);
         new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
 
+        initShare(view);
+        initTable(view);
+    }
+
+    private void initShare(View view) {
+        view.findViewById(R.id.skillShareEat).setOnClickListener((v) -> {
+            String shareText = getActivity().getString(R.string.skill_share_eat_format
+                    , fromSpin.getSelectedItem().toString().trim()
+                    , pgsSpin.getSelectedItem().toString().trim()
+                    , fromRnd.getText()
+                    , toSpin.getSelectedItem().toString().trim()
+                    , toRnd.getText()
+                    , eatCard.getText());
+
+            Say.Log("s = %s", shareText);
+            shareString(shareText);
+        });
+
+        view.findViewById(R.id.skillShareTable).setOnClickListener((v) -> {
+            StringBuilder s = new StringBuilder();
+
+            int n = tableData.size() / 3;
+
+            for (int i = 0; i < n; i++) {
+                String s0 = tableData.get(3 * i);
+                String s1 = tableData.get(3 * i + 1);
+                String s2 = tableData.get(3 * i + 2);
+                s.append(String.format(java.util.Locale.US, "%7s | %7s | %7s\n", s0, s1, s2));
+            }
+            Say.Log("s = %s", s);
+            String shareText = getActivity().getString(R.string.skill_share_eat_format
+                    , fromSpin.getSelectedItem().toString()
+                    , pgsSpin.getSelectedItem().toString()
+                    , fromRnd.getText()
+                    , toSpin.getSelectedItem().toString()
+                    , toRnd.getText()
+                    , eatCard.getText());
+
+            shareString(s.toString());
+        });
+    }
+
+    private void initTable(View view) {
         recycler = view.findViewById(R.id.skillTable);
         int row = 3;
         recycler.setLayoutManager(new GridLayoutManager(getActivity(), row));
@@ -82,7 +127,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         data.add("-----");
         data.add("" + ROUNDS_SUM[15]);
 
-        adapter.setDataList(data);
+        tableData = data;
+        adapter.setDataList(tableData);
         recycler.setAdapter(adapter);
     }
 
@@ -165,10 +211,6 @@ public class SkillEatingDialog extends BaseTosDialog {
         pgsSpin.setSelection(skEat.progress);
         use600.setChecked(skEat.use600);
         computeEatCard();
-    }
-
-    private Activity getActivity() {
-        return owner.getActivity();
     }
 
     @Override

@@ -2,19 +2,19 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/simpleText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/t100dp"
         android:layout_alignParentRight="true"
-        android:background="@drawable/bg_press"
-        android:paddingLeft="@dimen/t10dp"
-        android:paddingRight="@dimen/t10dp"
-        android:paddingTop="@dimen/t5dp"
-        android:paddingBottom="@dimen/t5dp"
+        android:background="@drawable/bg_press_light"
+        android:paddingLeft="@dimen/t5dp"
+        android:paddingRight="@dimen/t5dp"
+        android:gravity="right"
         style="@style/blackText"
         tools:text="@string/app_name"/>
 

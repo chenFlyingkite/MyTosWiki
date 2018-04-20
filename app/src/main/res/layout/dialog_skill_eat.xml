@@ -16,14 +16,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <GridLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:columnCount="2">
 
                 <TextView
                     style="@style/sed_round_text"
@@ -55,15 +55,16 @@
 
             <ImageView
                 android:layout_width="@dimen/t30dp"
-                android:layout_height="@dimen/t30dp"
-                android:src="@drawable/s_i049"
-                android:layout_gravity="center_vertical"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@drawable/evo_arrow"/>
 
             <GridLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:columnCount="2">
 
                 <TextView
                     android:id="@+id/skillToTitle"
@@ -86,15 +87,15 @@
 
                 <TextView
                     style="@style/sed_round_text"
+                    android:text="@string/needRound"
                     android:textColor="#00a"
-                    android:textStyle="bold"
-                    android:text="@string/needRound"/>
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/skillNeedRound"
                     style="@style/sed_round_text.left"
-                    android:textColor="#00a"
-                    android:text="0"/>
+                    android:text="0"
+                    android:textColor="#00a"/>
             </GridLayout>
         </LinearLayout>
 
@@ -110,19 +111,45 @@
                 android:id="@+id/skillUse600"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="@dimen/t10dp"
                 android:checked="true"
-                android:textSize="@dimen/t15dp"
-                android:text="@string/skill_eat600"/>
+                android:paddingRight="@dimen/t10dp"
+                android:text="@string/skill_eat600"
+                android:textSize="@dimen/t15dp"/>
 
             <TextView
                 android:id="@+id/skillEatCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/t18dp"
-                android:textStyle="bold"
+                android:text="@string/skill_eat_card"
                 android:textColor="#080"
-                android:text="@string/skill_eat_card"/>
+                android:textSize="@dimen/t18dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/blackText"
+                android:text="@string/share"/>
+
+            <Button
+                android:id="@+id/skillShareEat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skill_eat"
+                android:layout_marginRight="@dimen/t10dp"/>
+
+            <Button
+                android:id="@+id/skillShareTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/table"
+                android:layout_marginRight="@dimen/t10dp"/>
         </LinearLayout>
 
         <View
@@ -130,9 +157,9 @@
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/skillTable"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/t250dp">
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/t250dp"
+            android:layout_gravity="center_horizontal">
 
         </android.support.v7.widget.RecyclerView>
 

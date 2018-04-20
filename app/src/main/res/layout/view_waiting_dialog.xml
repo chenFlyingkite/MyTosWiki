@@ -26,12 +26,14 @@
     <View
         android:layout_width="@dimen/t30dp"
         android:layout_height="@dimen/t30dp"
-        android:background="#ff0"/>
+        android:background="#ff0"
+        android:visibility="gone"/>
 
     <View
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_width="@dimen/t30dp"
         android:layout_height="@dimen/t30dp"
-        android:background="#0ff"/>
+        android:background="#0ff"
+        android:visibility="gone"/>
 </RelativeLayout>
