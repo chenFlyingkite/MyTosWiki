@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/sldTools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sldSave"
+            style="@style/tosIcon"
+            android:src="@drawable/ic_save_black_48dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/sldGoTop"
+            style="@style/tosIcon.goTop"/>
+
+        <ImageView
+            android:id="@+id/sldGoBottom"
+            style="@style/tosIcon.goBottom"/>
+
+        <ImageView
+            android:id="@+id/sldSortMenu"
+            style="@style/tosIcon"
+            android:src="@drawable/ic_sort_black_48dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ddd"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sld_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+    </HorizontalScrollView>
+
+</LinearLayout>

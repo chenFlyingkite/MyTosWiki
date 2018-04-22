@@ -37,7 +37,7 @@ public class TextEditorDialog {
 
     // The file of text pool
     private File getTextPoolFile() {
-        File folder = App.getContext().getExternalCacheDir();
+        File folder = App.me.getExternalCacheDir();
         return new File(folder, "text.txt");
     }
 

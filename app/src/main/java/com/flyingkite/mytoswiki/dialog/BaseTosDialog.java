@@ -5,7 +5,9 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
+import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.View;
 
@@ -18,6 +20,8 @@ public abstract class BaseTosDialog {
     }
 
     protected DialogOwner owner;
+    protected View mView;
+    protected AlertDialog mDialog;
 
     public BaseTosDialog(DialogOwner own) {
         owner = own;
@@ -37,10 +41,24 @@ public abstract class BaseTosDialog {
         dialog.setOnDismissListener(this::onDismiss);
         dialog.setOnCancelListener(this::onCancel);
         dialog.setOnKeyListener(this::onKey);
+        mView = view;
+        mDialog = dialog;
         onFinishInflate(view, dialog);
     }
 
     protected abstract void onFinishInflate(View view, AlertDialog dialog);
+
+    protected final <T extends View> T findViewById(@IdRes int id) {
+        View w = mView;
+        if (w != null) {
+            T v = w.findViewById(id);
+            if (v != null) {
+                return v;
+            }
+        }
+
+        return getActivity().findViewById(id);
+    }
 
     protected void onDismiss(DialogInterface dialog) {
 
@@ -66,6 +84,32 @@ public abstract class BaseTosDialog {
             getActivity().startActivity(Intent.createChooser(it, chooser));
         } catch (ActivityNotFoundException e) {
             e.printStackTrace();
+        }
+    }
+
+    protected void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
+        View w;
+        w = findViewById(goTop);
+        if (w != null) {
+            w.setOnClickListener((v) -> {
+                if (recycler != null) {
+                    recycler.scrollToPosition(0);
+                }
+            });
+        }
+
+        w = findViewById(goBottom);
+        if (w != null) {
+            w.setOnClickListener((v) -> {
+                if (recycler != null) {
+                    RecyclerView.Adapter a = recycler.getAdapter();
+                    int end = 0;
+                    if (a != null) {
+                        end = a.getItemCount() - 1;
+                    }
+                    recycler.scrollToPosition(end);
+                }
+            });
         }
     }
 }

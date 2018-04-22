@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
+import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.tos.TCard;
@@ -16,6 +17,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
     private List<String> tools = Arrays.asList(
             TCard.Bird.url
+            , TCard.Bird.url
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -49,6 +51,9 @@ public class MainActivity extends BaseActivity {
                 switch (position) {
                     case 0:
                         new SkillEatingDialog(MainActivity.this::getActivity).show();
+                        break;
+                    case 1:
+                        new SummonerLevelDialog(MainActivity.this::getActivity).show();
                         break;
                 }
             }

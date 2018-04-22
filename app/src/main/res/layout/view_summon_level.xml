@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/sld_row_level"
+            style="@style/sld_row_item"
+            tools:text="850"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ddd"/>
+
+        <TextView
+            android:id="@+id/sld_row_exp_dx"
+            style="@style/sld_row_item"
+            android:layout_width="@dimen/t100dp"
+            tools:text="980665"/>
+
+        <TextView
+            android:id="@+id/sld_row_exp_sum"
+            style="@style/sld_row_item"
+            android:layout_width="@dimen/t120dp"
+            tools:text="315699657"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ddd"/>
+
+        <TextView
+            android:id="@+id/sld_row_stamina"
+            style="@style/sld_row_item"
+            tools:text="218"/>
+
+        <TextView
+            android:id="@+id/sld_row_team_cost"
+            style="@style/sld_row_item"
+            tools:text="194"/>
+
+        <TextView
+            android:id="@+id/sld_row_team_slot"
+            style="@style/sld_row_item"
+            tools:text="20"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/sld_row_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

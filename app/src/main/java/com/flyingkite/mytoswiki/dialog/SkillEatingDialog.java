@@ -62,15 +62,15 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, AlertDialog dialog) {
-        initSpinners(view);
+        initSpinners();
         new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
 
-        initShare(view);
-        initTable(view);
+        initShare();
+        initTable();
     }
 
-    private void initShare(View view) {
-        view.findViewById(R.id.skillShareEat).setOnClickListener((v) -> {
+    private void initShare() {
+        findViewById(R.id.skillShareEat).setOnClickListener((v) -> {
             String shareText = getActivity().getString(R.string.skill_share_eat_format
                     , fromSpin.getSelectedItem().toString().trim()
                     , pgsSpin.getSelectedItem().toString().trim()
@@ -83,7 +83,7 @@ public class SkillEatingDialog extends BaseTosDialog {
             shareString(shareText);
         });
 
-        view.findViewById(R.id.skillShareTable).setOnClickListener((v) -> {
+        findViewById(R.id.skillShareTable).setOnClickListener((v) -> {
             StringBuilder s = new StringBuilder();
 
             int n = tableData.size() / 3;
@@ -107,8 +107,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         });
     }
 
-    private void initTable(View view) {
-        recycler = view.findViewById(R.id.skillTable);
+    private void initTable() {
+        recycler = findViewById(R.id.skillTable);
         int row = 3;
         recycler.setLayoutManager(new GridLayoutManager(getActivity(), row));
         adapter = new SelectableAdapter();
@@ -132,12 +132,12 @@ public class SkillEatingDialog extends BaseTosDialog {
         recycler.setAdapter(adapter);
     }
 
-    private void initSpinners(View v) {
-        fromRnd = v.findViewById(R.id.skillFromRound);
-        toRnd = v.findViewById(R.id.skillToRound);
-        needRnd = v.findViewById(R.id.skillNeedRound);
-        use600 = v.findViewById(R.id.skillUse600);
-        eatCard = v.findViewById(R.id.skillEatCard);
+    private void initSpinners() {
+        fromRnd = findViewById(R.id.skillFromRound);
+        toRnd = findViewById(R.id.skillToRound);
+        needRnd = findViewById(R.id.skillNeedRound);
+        use600 = findViewById(R.id.skillUse600);
+        eatCard = findViewById(R.id.skillEatCard);
         use600.setOnClickListener((v1) -> {
             computeEatCard();
         });
@@ -151,8 +151,8 @@ public class SkillEatingDialog extends BaseTosDialog {
             }
             levelsT.add("   " + i + "   ");
         }
-        fromSpin = v.findViewById(R.id.skillFrom);
-        toSpin = v.findViewById(R.id.skillTo);
+        fromSpin = findViewById(R.id.skillFrom);
+        toSpin = findViewById(R.id.skillTo);
         fromSpin.setAdapter(levelsF);
         toSpin.setAdapter(levelsT);
         fromSpin.setOnItemSelectedListener(adapterSelect);
@@ -162,7 +162,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         for (int i = 0; i < 100; i++) {
             progress.add("   " + i + "   ");
         }
-        pgsSpin = v.findViewById(R.id.skillPercent);
+        pgsSpin = findViewById(R.id.skillPercent);
         pgsSpin.setAdapter(progress);
         pgsSpin.setOnItemSelectedListener(adapterSelect);
     }
@@ -225,7 +225,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     // The file of dialog setting
     private File getSkillEatFile() {
-        File folder = App.getContext().getExternalCacheDir();
+        File folder = App.me.getExternalCacheDir();
         return new File(folder, "skillEat.txt");
     }
 

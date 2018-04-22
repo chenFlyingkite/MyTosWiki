@@ -90,7 +90,7 @@ public class TosCardFragment extends BaseFragment {
         findViewById(R.id.tosSave).setOnClickListener((v) -> {
             View view = cardsRecycler;
             //File folder = Environment.getExternalStoragePublicDirectory()
-            File folder = App.getContext().getExternalCacheDir();
+            File folder = App.me.getExternalCacheDir();
             String name = folder.getAbsolutePath() + File.separator + "1.png";
             LogE("Save to %s", name);
 

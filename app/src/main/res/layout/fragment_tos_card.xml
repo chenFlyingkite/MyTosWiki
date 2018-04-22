@@ -25,15 +25,11 @@
 
             <ImageView
                 android:id="@+id/tosGoTop"
-                style="@style/tosIcon"
-                android:rotation="270"
-                android:src="@drawable/ic_skip_next_black_48dp"/>
+                style="@style/tosIcon.goTop"/>
 
             <ImageView
                 android:id="@+id/tosGoBottom"
-                style="@style/tosIcon"
-                android:rotation="90"
-                android:src="@drawable/ic_skip_next_black_48dp"/>
+                style="@style/tosIcon.goBottom"/>
 
             <ImageView
                 android:id="@+id/tosSortMenu"
@@ -55,7 +51,7 @@
             android:id="@+id/tosTexts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_press"
+            android:background="@drawable/bg_press_sky"
             android:layout_below="@id/tosTools"
             android:layout_alignParentRight="true"
             android:visibility="gone"
