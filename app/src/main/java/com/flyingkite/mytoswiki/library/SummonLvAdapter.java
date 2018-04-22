@@ -27,7 +27,7 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
 
     private static final int[] CHILD_IDS = {R.id.sld_row_level, R.id.sld_row_exp_dx, R.id.sld_row_exp_sum
             , R.id.sld_row_stamina, R.id.sld_row_team_cost, R.id.sld_row_team_slot};
-    private final String[] header = TosSummonerLevel.header;//Zh;
+    private final String[] header = TosSummonerLevel.headerZh;
     private final long[][] table = TosSummonerLevel.table;
     private ItemListener onClick;
     private int selected = NO_POS;
