@@ -33,6 +33,12 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="gray_button" parent="common_text">
+        <item name="android:layout_width">@dimen/t60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_button_round</item>
+    </style>
+
     <!-- Sort menu -->
     <style name="sortTitle">
         <item name="android:textSize">@dimen/t18dp</item>
@@ -100,7 +106,13 @@
         <item name="android:background">#888</item>
     </style>
 
-    <!-- sed = Skill eat dialog -->
+    <style name="divider_horizontal_1dp_ddd">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#ddd</item>
+    </style>
+
+    <!-- sed = Skill Eat Dialog -->
     <style name="sed_round_text" parent="blackText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/t40dp</item>
@@ -110,19 +122,13 @@
         <item name="android:paddingLeft">@dimen/t10dp</item>
     </style>
 
+    <!-- sld = Summoner Level Dialog -->
     <style name="sld_row_item" parent="blackText">
         <item name="android:layout_width">@dimen/t60dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">right</item>
         <item name="android:paddingLeft">@dimen/t5dp</item>
         <item name="android:paddingRight">@dimen/t5dp</item>
-        <!--
-        <item name="android:ellipsize">marquee</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:focusable">true</item>
-        <item name="android:focusableInTouchMode">true</item>
-        <item name="android:marqueeRepeatLimit">marquee_forever</item>
-        -->
     </style>
 
 
