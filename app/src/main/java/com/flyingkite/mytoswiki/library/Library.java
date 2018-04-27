@@ -8,8 +8,18 @@ public class Library<T extends RecyclerView.Adapter> {
     public T adapter;
 
     public Library(RecyclerView view) {
+        this(view, false);
+    }
+
+    public Library(RecyclerView view, boolean vertical) {
         recyclerView = view;
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        int orient = vertical ? LinearLayoutManager.VERTICAL : LinearLayoutManager.HORIZONTAL;
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), orient, false));
+    }
+
+    public Library(RecyclerView view, RecyclerView.LayoutManager layout) {
+        recyclerView = view;
+        recyclerView.setLayoutManager(layout);
     }
 
     public void setViewAdapter(T rvAdapter) {

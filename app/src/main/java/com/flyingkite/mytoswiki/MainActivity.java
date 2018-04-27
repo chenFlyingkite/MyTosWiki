@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity {
     private void initToolIcons() {
         iconLibrary = new Library<>(findViewById(R.id.mainTools));
         IconAdapter adapter = new IconAdapter();
-        adapter.setIcons(tools);
+        adapter.setDataList(tools);
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(String iconId, IconAdapter.IconVH vh, int position) {

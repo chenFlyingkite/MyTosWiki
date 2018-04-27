@@ -2,14 +2,14 @@ package com.flyingkite.mytoswiki.tos.query;
 
 import android.support.annotation.NonNull;
 
+import com.flyingkite.library.ListUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
-import com.flyingkite.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public interface TosCardSelection extends ListUtil {
+public interface TosCardSelection {
     @NonNull
     default List<TosCard> from() {
         return new ArrayList<>();
@@ -17,7 +17,7 @@ public interface TosCardSelection extends ListUtil {
 
     @NonNull
     default List<Integer> select() {
-        List<TosCard> data = nonNull(from());
+        List<TosCard> data = ListUtil.nonNull(from());
         List<Integer> index = new ArrayList<>();
         for (int i = 0; i < data.size(); i++) {
             TosCard c = data.get(i);

@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.flyingkite.library.FilesHelper;
 import com.flyingkite.library.IOUtil;
+import com.flyingkite.library.ListUtil;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
@@ -510,7 +511,7 @@ public class TosCardFragment extends BaseFragment {
             if (fp != null) {
                 fp.mkdirs();
             }
-            FilesHelper.fullDelete(f);
+            FilesHelper.ensureDelete(f);
             if (isCancelled()) return null;
 
             // 4. [~1kms] Writing bitmap to file
@@ -671,8 +672,8 @@ public class TosCardFragment extends BaseFragment {
                         break;
                     case R.id.sortCommonRace:
                         dsc = false;
-                        v1 = indexOf(commonRace, c1.race);
-                        v2 = indexOf(commonRace, c2.race);
+                        v1 = ListUtil.indexOf(commonRace, c1.race);
+                        v2 = ListUtil.indexOf(commonRace, c2.race);
                         break;
                 }
 

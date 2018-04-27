@@ -1,35 +1,21 @@
 package com.flyingkite.mytoswiki.library.selectable;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.util.ListUtil;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SelectableAdapter extends RecyclerView.Adapter<SelectableAdapter.SelectableVH> implements ListUtil {
-    public interface ItemListener {
-        void onClick(String item, SelectableVH holder, int position);
+public class SelectableAdapter extends RVAdapter<String, SelectableAdapter.SelectableVH, SelectableAdapter.ItemListener> {
+    public interface ItemListener extends RVAdapter.ItemListener<String, SelectableVH> {
+        //void onClick(String item, SelectableVH holder, int position);
     }
 
     private static final int NO_POS = RecyclerView.NO_POSITION;
-    private List<String> dataList = new ArrayList<>();
-    private ItemListener onClick;
     private int selected = NO_POS;
     private int rows = 3;
-
-    public void setDataList(List<String> list) {
-        dataList = nonNull(list);
-    }
-
-    public void itemListener(ItemListener listener) {
-        onClick = listener;
-    }
 
     public void setRow(int row) {
         rows = Math.max(1, row);
@@ -37,12 +23,12 @@ public class SelectableAdapter extends RecyclerView.Adapter<SelectableAdapter.Se
 
     @Override
     public SelectableVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_text2, parent, false);
-        return new SelectableVH(v);
+        return new SelectableVH(inflateView(parent, R.layout.view_text2));
     }
 
     @Override
     public void onBindViewHolder(SelectableVH vh, int position) {
+        super.onBindViewHolder(vh, position);
         final String s = dataList.get(position);
         vh.text.setText(s);
 
@@ -57,29 +43,18 @@ public class SelectableAdapter extends RecyclerView.Adapter<SelectableAdapter.Se
             sel = sameRow || sameCol;
         }
         vh.itemView.setSelected(sel);
-
-        vh.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int pos = vh.getAdapterPosition();
-                if (selected == pos) {
-                    selected = NO_POS;
-                } else {
-                    selected = pos;
-                }
-                notifyDataSetChanged();
-                if (onClick != null) {
-                    onClick.onClick(s, vh, vh.getAdapterPosition());
-                }
-            }
-        });
     }
 
     @Override
-    public int getItemCount() {
-        return dataList.size();
+    protected void onClickItem(String item, SelectableVH vh) {
+        int pos = vh.getAdapterPosition();
+        if (selected == pos) {
+            selected = NO_POS;
+        } else {
+            selected = pos;
+        }
+        notifyDataSetChanged();
     }
-
 
     public static class SelectableVH extends RecyclerView.ViewHolder {
         private TextView text;

@@ -80,7 +80,8 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
 
     //implementation 'com.github.User:Repo:Tag'
-    implementation "com.github.chenFlyingkite:MyAndroid:0.0.5"
+    //implementation "com.github.chenFlyingkite:MyAndroid:0.0.5.0"
+    implementation "com.github.chenFlyingkite:MyAndroid:7afd7b39a1"
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
     //https://github.com/google/gson

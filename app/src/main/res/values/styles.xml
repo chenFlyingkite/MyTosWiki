@@ -34,8 +34,14 @@
     </style>
 
     <style name="gray_button" parent="common_text">
-        <item name="android:layout_width">@dimen/t60dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/t10dp</item>
+        <item name="android:paddingRight">@dimen/t10dp</item>
+        <item name="android:paddingTop">@dimen/t5dp</item>
+        <item name="android:paddingBottom">@dimen/t5dp</item>
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:background">@drawable/bg_button_round</item>
     </style>
 
@@ -74,24 +80,20 @@
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
-    <style name="tosIcon.goTop" parent="btnGoTop">
+    <style name="tosGoTop">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="tosIcon.goBottom" parent="btnGoBottom">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="btnGoTop">
         <item name="android:rotation">270</item>
         <item name="android:src">@drawable/ic_skip_next_black_48dp</item>
+        <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
-    <style name="btnGoBottom">
+    <style name="tosGoBottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:rotation">90</item>
         <item name="android:src">@drawable/ic_skip_next_black_48dp</item>
+        <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
     <style name="textsIcon">

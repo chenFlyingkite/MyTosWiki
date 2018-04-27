@@ -149,11 +149,11 @@ public class TextEditorDialog {
         if (textAdapter == null) {
             textAdapter = new TextsAdapter();
         }
-        textAdapter.setData(texts.data).setListener(new TextsAdapter.ItemListener() {
+        textAdapter.setDataList(texts.data);
+        textAdapter.setItemListener(new TextsAdapter.ItemListener() {
             @Override
             public void onClick(String data, TextsAdapter.TextsVH vh, int position) {
-                //noinspection StringConcatenationInsideStringBufferAppend
-                mainText.getText().append(data + " ");
+                mainText.getText().append(data).append(" ");
             }
 
             @Override

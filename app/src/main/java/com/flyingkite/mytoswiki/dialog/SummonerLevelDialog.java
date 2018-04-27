@@ -1,22 +1,26 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.view.View;
-import android.view.ViewGroup;
 
-import com.flyingkite.library.Say;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.library.ButtonsAdapter;
+import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.library.SummonLvAdapter;
+import com.flyingkite.mytoswiki.tos.TosSummonerLevel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SummonerLevelDialog extends BaseTosDialog {
     public SummonerLevelDialog(DialogOwner own) {
         super(own);
     }
 
-    private RecyclerView tableRV;
-    private SummonLvAdapter tableAT;
+    private Library<SummonLvAdapter> tableLibrary;
 
     @Override
     protected int getLayoutId() {
@@ -26,27 +30,41 @@ public class SummonerLevelDialog extends BaseTosDialog {
     @Override
     protected void onFinishInflate(View view, AlertDialog dialog) {
         initTable();
-        initScrollTools(R.id.sldGoTop, R.id.sldGoBottom, tableRV);
+        initScrollTools(R.id.sldGoTop, R.id.sldGoBottom, tableLibrary.recyclerView);
         initShortcuts();
     }
 
     private void initShortcuts() {
-        ViewGroup ll = findViewById(R.id.sldShortcuts);
+        RecyclerView shortcuts = findViewById(R.id.sldShortcuts);
 
-        View child = LayoutInflater.from(ll.getContext()).inflate(R.layout.view_round_button, ll, false);
-
-        findViewById(R.id.sld50).setOnClickListener(new View.OnClickListener() {
+        ButtonsAdapter ba = new ButtonsAdapter();
+        List<String> s = new ArrayList<>();
+        int max = TosSummonerLevel.table.length;
+        for (int i = 0; i <= max; i += 50) {
+            s.add("" + i);
+        }
+        ba.setDataList(s);
+        ba.setItemListener(new ButtonsAdapter.ItemListener() {
             @Override
-            public void onClick(View v) {
-                Say.Log("clk");
+            public void onClick(String item, ButtonsAdapter.ButtonVH holder, int position) {
+                int pos = Integer.parseInt(item);
+                LayoutManager lm = tableLibrary.recyclerView.getLayoutManager();
+
+                if (lm instanceof LinearLayoutManager) {
+                    LinearLayoutManager llm = (LinearLayoutManager) lm;
+                    llm.scrollToPositionWithOffset(pos, 0);
+                } else {
+                    lm.scrollToPosition(pos);
+                }
             }
         });
+
+        shortcuts.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        shortcuts.setAdapter(ba);
     }
 
     private void initTable() {
-        tableRV = findViewById(R.id.sld_recycler);
-        tableAT = new SummonLvAdapter();
-        tableRV.setLayoutManager(tableAT.getLayoutManager(tableRV.getContext()));
-        tableRV.setAdapter(tableAT);
+        tableLibrary = new Library<>(findViewById(R.id.sld_recycler), true);
+        tableLibrary.setViewAdapter(new SummonLvAdapter());
     }
 }

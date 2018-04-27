@@ -1,27 +1,27 @@
 package com.flyingkite.mytoswiki.tos.query;
 
-import com.flyingkite.util.ListUtil;
+import com.flyingkite.library.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TosCardCondition implements ListUtil {
+public class TosCardCondition {
     private List<String> attr = new ArrayList<>();
     private List<String> race = new ArrayList<>();
     private List<String> star = new ArrayList<>();
 
     public TosCardCondition attr(List<String> a) {
-        attr = nonNull(a);
+        attr = ListUtil.nonNull(a);
         return this;
     }
 
     public TosCardCondition race(List<String> r) {
-        race = nonNull(r);
+        race = ListUtil.nonNull(r);
         return this;
     }
 
     public TosCardCondition star(List<String> s) {
-        star = nonNull(s);
+        star = ListUtil.nonNull(s);
         return this;
     }
 

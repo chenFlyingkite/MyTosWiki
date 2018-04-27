@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:divider="?android:attr/dividerVertical"
-        android:showDividers="middle">
+        android:showDividers="middle"
+        android:background="@drawable/bg_press_light_sky">
 
         <TextView
             android:id="@+id/sld_row_level"

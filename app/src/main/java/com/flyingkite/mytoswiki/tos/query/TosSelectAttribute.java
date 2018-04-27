@@ -2,6 +2,7 @@ package com.flyingkite.mytoswiki.tos.query;
 
 import android.support.annotation.NonNull;
 
+import com.flyingkite.library.ListUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public class TosSelectAttribute implements TosCardSelection {
     protected TosCardCondition select;
 
     public TosSelectAttribute(List<TosCard> source, TosCardCondition condition) {
-        data = nonNull(source);
+        data = ListUtil.nonNull(source);
         select = condition;
     }
 

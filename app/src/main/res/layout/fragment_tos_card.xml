@@ -25,11 +25,11 @@
 
             <ImageView
                 android:id="@+id/tosGoTop"
-                style="@style/tosIcon.goTop"/>
+                style="@style/tosGoTop"/>
 
             <ImageView
                 android:id="@+id/tosGoBottom"
-                style="@style/tosIcon.goBottom"/>
+                style="@style/tosGoBottom"/>
 
             <ImageView
                 android:id="@+id/tosSortMenu"

@@ -20,24 +20,43 @@
 
         <ImageView
             android:id="@+id/sldGoTop"
-            style="@style/tosIcon.goTop"/>
+            style="@style/tosGoTop"/>
 
         <ImageView
             android:id="@+id/sldGoBottom"
-            style="@style/tosIcon.goBottom"/>
+            style="@style/tosGoBottom"/>
 
         <ImageView
             android:id="@+id/sldSortMenu"
             style="@style/tosIcon"
             android:src="@drawable/ic_sort_black_48dp"
-
             android:visibility="gone"/>
     </LinearLayout>
 
     <View
         style="@style/divider_horizontal_1dp_ddd"/>
 
-    <!-- Shortcuts views are added in program -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/blackText"
+            android:paddingLeft="@dimen/t5dp"
+            android:paddingRight="@dimen/t5dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/cards_level"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sldShortcuts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!--
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -50,6 +69,7 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+    -->
 
     <View
         style="@style/divider_horizontal_1dp_ddd"/>

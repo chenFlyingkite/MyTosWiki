@@ -1,7 +1,5 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +9,13 @@ import android.widget.TextView;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.tos.TosSummonerLevel;
-import com.flyingkite.util.ListUtil;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.SummonLvVH> implements ListUtil {
+public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.SummonLvVH> {
     public interface ItemListener {
         void onClick(String item, SummonLvVH holder, int position);
     }
@@ -41,10 +38,6 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
 
     public void itemListener(ItemListener listener) {
         onClick = listener;
-    }
-
-    public LinearLayoutManager getLayoutManager(Context c) {
-        return new LinearLayoutManager(c, LinearLayoutManager.VERTICAL, false);
     }
 
     @Override
@@ -72,31 +65,21 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
             bg = bgs[row % 5];
         }
         vh.divider.setBackgroundColor(App.me.getResources().getColor(bg));
-
-        /*
-        boolean sel = false;
-        if (selected >= 0) {
-            int selRow = selected % rows;
-            int posRow = position % rows;
-            int selCol = selected / rows;
-            int posCol = position / rows;
-            boolean sameRow = posCol == selCol;
-            boolean sameCol = selRow == posRow;
-            sel = sameRow || sameCol;
-        }
-        vh.itemView.setSelected(sel);
-        */
+        vh.itemView.setSelected(selected == position);
 
         vh.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int pos = vh.getAdapterPosition();
-                if (selected == pos) {
+                int newPos = vh.getAdapterPosition();
+                int oldPos = selected;
+
+                if (oldPos == newPos) {
                     selected = NO_POS;
                 } else {
-                    selected = pos;
+                    selected = newPos;
                 }
-                notifyDataSetChanged();
+                notifyItemChanged(oldPos);
+                notifyItemChanged(newPos);
                 if (onClick != null) {
                     onClick.onClick("", vh, vh.getAdapterPosition());
                 }
