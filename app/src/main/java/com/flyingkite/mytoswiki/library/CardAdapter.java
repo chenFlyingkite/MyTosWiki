@@ -33,6 +33,24 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
     private List<Integer> filterIndices = new ArrayList<>();
     private OnFilterCard onFilter;
 
+    public enum NameType {
+        id, idNorm, name,
+        ;
+
+        public String getName(TosCard c) {
+            switch (this) {
+                case id:
+                    return c.id;
+                default:
+                case idNorm:
+                    return c.idNorm;
+                case name:
+                    return c.name;
+            }
+        }
+    }
+    private NameType nameType = NameType.idNorm;
+
     private TosCardSelection selection;
     private List<Integer> selectedIndices = new ArrayList<>();
     private List<String> selectedMessage = new ArrayList<>();
@@ -87,6 +105,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         setSelection(null);
     }
 
+    public void setNameType(NameType type) {
+        nameType = type == null ? NameType.idNorm : type;
+    }
+
     private <T> List<T> asList(T[] c) {
         return c == null ? new ArrayList<>() : Arrays.asList(c);
     }
@@ -122,7 +144,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         if (selectedMessage != null && position < selectedMessage.size()) {
             msg = selectedMessage.get(position);
         }
-        holder.setCard(c, msg);
+        holder.setCard(c, nameType.getName(c), msg);
         holder.itemView.setOnClickListener(w -> {
             Say.Log("click %s, %s", c.name, c.id);
             if (onClick != null) {
@@ -169,10 +191,10 @@ class CardVH extends RecyclerView.ViewHolder {
         text.setText(c.display_num);
     }
 
-    public void setCard(TosCard c, String msg) {
+    public void setCard(TosCard c, String name, String msg) {
         boolean hasMsg = msg != null;
         card = c;
-        text.setText(c.id);
+        text.setText(name);
         message.setText(msg);
         loadImage(thumb, c.icon);
         setVisible(text, !hasMsg);

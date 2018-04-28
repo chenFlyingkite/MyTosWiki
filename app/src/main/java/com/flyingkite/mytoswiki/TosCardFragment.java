@@ -33,6 +33,7 @@ import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
@@ -67,6 +68,7 @@ public class TosCardFragment extends BaseFragment {
     private RadioGroup sortCassandra;
     private RadioGroup sortSpecial;
     private ViewGroup sortHide;
+    private RadioGroup sortDisplay;
 
     private CardSort cardSort = new CardSort();
 
@@ -224,6 +226,7 @@ public class TosCardFragment extends BaseFragment {
         initSortByCommon(menu);
         initSortBySpecial(menu);
         initSortByHide(menu);
+        initDisplay(menu);
     }
 
     private void initSortReset(View menu) {
@@ -273,6 +276,13 @@ public class TosCardFragment extends BaseFragment {
         setChildClick(vg, this::clickHide);
     }
 
+    private void initDisplay(View menu) {
+        ViewGroup vg = sortDisplay = menu.findViewById(R.id.sortDisplayList);
+
+        setChildClick(vg, this::clickDisplay);
+        sortDisplay.check(R.id.sortDisplayNormId);
+    }
+
     private void clickReset(View v) {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar};
         for (ViewGroup vg : vgs) {
@@ -318,6 +328,19 @@ public class TosCardFragment extends BaseFragment {
         sortSpecial.check(v.getId());
 
         applySelection();
+    }
+
+    private void clickDisplay(View v) {
+        sortDisplay.check(v.getId());
+
+        CardAdapter.NameType type = CardAdapter.NameType.idNorm;
+        switch (v.getId()) {
+            case R.id.sortDisplayName:
+                type = CardAdapter.NameType.name;
+                break;
+        }
+        cardLib.cardAdapter.setNameType(type);
+        cardLib.cardAdapter.notifyDataSetChanged();
     }
 
     private void clickCommon(View v) {

@@ -268,7 +268,27 @@
                 android:id="@+id/sortHide9xxx"
                 style="@style/sortText"
                 android:text="@string/cards_hide_9xxx"/>
-
         </GridLayout>
+
+        <TextView
+            android:id="@+id/sortDisplayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_display"/>
+        <RadioGroup
+            android:id="@+id/sortDisplayList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/sortDisplayNormId"
+                style="@style/sortRadio"
+                android:text="@string/cards_normId"/>
+            <RadioButton
+                android:id="@+id/sortDisplayName"
+                style="@style/sortRadio"
+                android:text="@string/cards_name"/>
+        </RadioGroup>
+
     </LinearLayout>
 </ScrollView>
