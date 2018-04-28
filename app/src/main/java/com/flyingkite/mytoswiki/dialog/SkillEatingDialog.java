@@ -12,13 +12,13 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
-import com.flyingkite.util.GsonUtil;
 import com.google.gson.Gson;
 
 import java.io.File;

@@ -11,10 +11,21 @@
         android:paddingBottom="@dimen/t80dp"
         android:background="#8000">
 
-        <ImageView
-            android:id="@+id/sortReset"
-            style="@style/sortIcon"
-            android:src="@drawable/s_i049"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sortReset"
+                style="@style/sortIcon"
+                android:src="@drawable/s_i049"/>
+
+            <ImageView
+                android:id="@+id/tosSave"
+                style="@style/sortIcon"
+                android:src="@drawable/ic_save_white_48dp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/sortAttrTitle"
@@ -228,5 +239,36 @@
                 style="@style/sortRadio"
                 android:text="@string/cards_freemove"/>
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/sortHideTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_hide"/>
+
+        <GridLayout
+            android:id="@+id/sortHide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/t20dp"
+            android:columnCount="1">
+
+            <TextView
+                android:id="@+id/sortHide6xxx"
+                style="@style/sortText"
+                android:text="@string/cards_hide_6xxx"/>
+
+            <TextView
+                android:id="@+id/sortHide8xxx"
+                style="@style/sortText"
+                android:text="@string/cards_hide_8xxx"/>
+
+            <TextView
+                android:id="@+id/sortHide9xxx"
+                style="@style/sortText"
+                android:text="@string/cards_hide_9xxx"/>
+
+        </GridLayout>
     </LinearLayout>
 </ScrollView>

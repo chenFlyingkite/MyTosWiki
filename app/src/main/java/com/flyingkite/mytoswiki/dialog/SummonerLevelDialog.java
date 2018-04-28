@@ -44,6 +44,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
             s.add("" + i);
         }
         ba.setDataList(s);
+        ba.setAutoScroll(true);
         ba.setItemListener(new ButtonsAdapter.ItemListener() {
             @Override
             public void onClick(String item, ButtonsAdapter.ButtonVH holder, int position) {

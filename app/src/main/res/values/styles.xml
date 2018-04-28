@@ -73,6 +73,10 @@
         <item name="android:textColor">#fff</item>
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
+    <style name="sortText" parent="sortRadio">
+        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:textSize">@dimen/t16dp</item>
+    </style>
 
     <style name="tosIcon">
         <item name="android:layout_width">wrap_content</item>

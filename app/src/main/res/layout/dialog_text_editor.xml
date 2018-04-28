@@ -12,12 +12,24 @@
         android:focusableInTouchMode="true"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/t14dp"
-            android:textColor="#000"
-            android:text="@string/texts_tools"/>
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="@dimen/t100dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t14dp"
+                android:textColor="#000"
+                android:text="@string/texts_tools"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t12dp"
+                android:textColor="#000"
+                android:text="@string/texts_tools_details"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,12 +62,24 @@
                 android:src="@drawable/ic_skip_next_black_48dp"/>
         </LinearLayout>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/t14dp"
-            android:textColor="#000"
-            android:text="@string/texts_pools"/>
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/t100dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t14dp"
+                android:textColor="#000"
+                android:text="@string/texts_pools"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/t12dp"
+                android:textColor="#000"
+                android:text="@string/texts_pools_details"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

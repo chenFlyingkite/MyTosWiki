@@ -59,9 +59,15 @@
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
     </string-array>
+    <string name="cards_hide">隱藏卡片</string>
+    <string name="cards_hide_6xxx">動態造型</string>
+    <string name="cards_hide_8xxx">迪士尼</string>
+    <string name="cards_hide_9xxx">72柱神</string>
 
     <string name="texts_tools">文字區域</string>
+    <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>
     <string name="texts_pools">文字池</string>
+    <string name="texts_pools_details">刪除全部，列表收合</string>
 
     <string name="skill_eat">吃技</string>
     <string name="skill_eat600">吃600</string>

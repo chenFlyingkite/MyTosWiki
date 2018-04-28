@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
+import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;

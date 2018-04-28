@@ -15,6 +15,7 @@ public class ButtonsAdapter extends RVAdapter<String, ButtonsAdapter.ButtonVH, B
 
     @Override
     public ButtonVH onCreateViewHolder(ViewGroup parent, int viewType) {
+        initCenterScroller(parent);
         return new ButtonVH(inflateView(parent, R.layout.view_round_button));
     }
 

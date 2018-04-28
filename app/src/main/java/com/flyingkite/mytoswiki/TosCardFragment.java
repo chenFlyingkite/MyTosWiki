@@ -2,6 +2,7 @@ package com.flyingkite.mytoswiki;
 
 import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -24,16 +25,18 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.flyingkite.library.FilesHelper;
+import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.ListUtil;
+import com.flyingkite.library.MathUtil;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.library.TicTac2;
+import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
 import com.flyingkite.util.DialogManager;
-import com.flyingkite.util.TextEditorDialog;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -63,6 +66,9 @@ public class TosCardFragment extends BaseFragment {
     private RadioGroup sortCommon;
     private RadioGroup sortCassandra;
     private RadioGroup sortSpecial;
+    private ViewGroup sortHide;
+
+    private CardSort cardSort = new CardSort();
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -74,6 +80,7 @@ public class TosCardFragment extends BaseFragment {
         initSortMenu();
         initToolIcons();
 
+        new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
         new ParseCardsTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
@@ -88,35 +95,18 @@ public class TosCardFragment extends BaseFragment {
             cardLib.recycler.scrollToPosition(index);
         });
 
-        findViewById(R.id.tosSave).setOnClickListener((v) -> {
-            View view = cardsRecycler;
-            //File folder = Environment.getExternalStoragePublicDirectory()
-            File folder = App.me.getExternalCacheDir();
-            String name = folder.getAbsolutePath() + File.separator + "1.png";
-            LogE("Save to %s", name);
-
-            @SuppressLint("StaticFieldLeak")
-            SaveViewToBitmapTask task = new SaveViewToBitmapTask(view, name){
-                @Override
-                protected void onPostExecute(Void aVoid) {
-                    super.onPostExecute(aVoid);
-
-                    MediaScannerConnection.scanFile(getActivity(), new String[]{name}, null,
-                        (path, uri) -> {
-                            LogE("Scanned %s\n  as -> %s", path, uri);
-                            sendUriIntent(uri, "image/png");
-                        });
-                }
-            };
-            task.executeOnExecutor(ThreadUtil.cachedThreadPool);
-        });
-
-        findViewById(R.id.tosTexts).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new TextEditorDialog(TosCardFragment.this::getActivity).show();
+        View tool = findViewById(R.id.tosTooBar);
+        tool.setOnClickListener((v) -> {
+            v.setSelected(!v.isSelected());
+            if (toolOwner != null) {
+                toolOwner.setToolsVisible(v.isSelected());
             }
         });
+        boolean sel = false;
+        if (toolOwner != null) {
+            sel = toolOwner.isToolsVisible();
+        }
+        tool.setSelected(sel);
     }
 
     private void initCardLibrary() {
@@ -143,7 +133,33 @@ public class TosCardFragment extends BaseFragment {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
                 }
         );
+        applySelection();
         test();
+    }
+
+    private void initShareImage(View parent) {
+        parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
+            View view = cardsRecycler;
+            //File folder = Environment.getExternalStoragePublicDirectory()
+            File folder = App.me.getExternalCacheDir();
+            String name = folder.getAbsolutePath() + File.separator + "1.png";
+            LogE("Save to %s", name);
+
+            @SuppressLint("StaticFieldLeak")
+            SaveViewToBitmapTask task = new SaveViewToBitmapTask(view, name){
+                @Override
+                protected void onPostExecute(Void aVoid) {
+                    super.onPostExecute(aVoid);
+
+                    MediaScannerConnection.scanFile(getActivity(), new String[]{name}, null,
+                            (path, uri) -> {
+                                LogE("Scanned %s\n  as -> %s", path, uri);
+                                sendUriIntent(uri, "image/png");
+                            });
+                }
+            };
+            task.executeOnExecutor(ThreadUtil.cachedThreadPool);
+        });
     }
 
     private void test() {
@@ -199,6 +215,7 @@ public class TosCardFragment extends BaseFragment {
             sortWindow.showAsDropDown(v);
         });
 
+        initShareImage(menu);
         initSortReset(menu);
         initSortByAttribute(menu);
         initSortByRace(menu);
@@ -206,6 +223,7 @@ public class TosCardFragment extends BaseFragment {
         initSortByStar(menu);
         initSortByCommon(menu);
         initSortBySpecial(menu);
+        initSortByHide(menu);
     }
 
     private void initSortReset(View menu) {
@@ -214,68 +232,45 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void initSortByAttribute(View menu) {
-        sortAttributes = menu.findViewById(R.id.sortAttributes);
-        ViewGroup vg = sortAttributes;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickAttr);
-        }
+        ViewGroup vg = sortAttributes = menu.findViewById(R.id.sortAttributes);
+
+        setChildClick(vg, this::clickAttr);
     }
 
     private void initSortByRace(View menu) {
-        sortRace = menu.findViewById(R.id.sortRaces);
+        ViewGroup vg = sortRace = menu.findViewById(R.id.sortRaces);
 
-        ViewGroup vg = sortRace;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickRace);
-        }
+        setChildClick(vg, this::clickRace);
     }
 
     private void initSortByCassandra(View menu) {
-        sortCassandra = menu.findViewById(R.id.sortCassandraList);
+        ViewGroup vg = sortCassandra = menu.findViewById(R.id.sortCassandraList);
 
-        ViewGroup vg = sortCassandra;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickCassandra);
-        }
+        setChildClick(vg, this::clickCassandra);
     }
 
     private void initSortByStar(View menu) {
-        sortStar = menu.findViewById(R.id.sortStar);
+        ViewGroup vg = sortStar = menu.findViewById(R.id.sortStar);
 
-        ViewGroup vg = sortStar;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickStar);
-        }
+        setChildClick(vg, this::clickStar);
     }
 
     private void initSortByCommon(View menu) {
-        sortCommon = menu.findViewById(R.id.sortCommonList);
+        ViewGroup vg = sortCommon = menu.findViewById(R.id.sortCommonList);
 
-        ViewGroup vg = sortCommon;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickCommon);
-        }
+        setChildClick(vg, this::clickCommon);
     }
 
     private void initSortBySpecial(View menu) {
-        sortSpecial = menu.findViewById(R.id.sortSpecialList);
+        ViewGroup vg = sortSpecial = menu.findViewById(R.id.sortSpecialList);
 
-        ViewGroup vg = sortSpecial;
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(this::clickSpecial);
-        }
+        setChildClick(vg, this::clickSpecial);
+    }
+
+    private void initSortByHide(View menu) {
+        ViewGroup vg = sortHide = menu.findViewById(R.id.sortHide);
+
+        setChildClick(vg, this::clickHide);
     }
 
     private void clickReset(View v) {
@@ -291,21 +286,13 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickAttr(View v) {
-        v.setSelected(!v.isSelected());
-        // Deselect all if all selected
-        if (isAllAsSelected(sortAttributes, true)) {
-            setAllChildrenSelected(sortAttributes, false);
-        }
+        toggleSelection(v, sortAttributes);
 
         applySelection();
     }
 
     private void clickRace(View v) {
-        v.setSelected(!v.isSelected());
-        // Deselect all if all selected
-        if (isAllAsSelected(sortRace, true)) {
-            setAllChildrenSelected(sortRace, false);
-        }
+        toggleSelection(v, sortRace);
 
         applySelection();
     }
@@ -322,11 +309,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickStar(View v) {
-        v.setSelected(!v.isSelected());
-        // Deselect all if all selected
-        if (isAllAsSelected(sortStar, true)) {
-            setAllChildrenSelected(sortStar, false);
-        }
+        toggleSelection(v, sortStar);
 
         applySelection();
     }
@@ -345,6 +328,11 @@ public class TosCardFragment extends BaseFragment {
         }
         sortCassandra.setEnabled(id != R.id.sortCassandraNo);
 
+        applySelection();
+    }
+
+    private void clickHide(View v) {
+        v.setSelected(!v.isSelected());
         applySelection();
     }
 
@@ -391,6 +379,22 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void setChildClick(ViewGroup vg, View.OnClickListener clk) {
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            w.setOnClickListener(clk);
+        }
+    }
+
+    private void toggleSelection(View v, ViewGroup vg) {
+        v.setSelected(!v.isSelected());
+        // Deselect all if all selected
+        if (isAllAsSelected(vg, true)) {
+            setAllChildrenSelected(vg, false);
+        }
+    }
+
     private void setAllChildrenSelected(ViewGroup vg, boolean sel) {
         if (vg == null) return;
 
@@ -413,6 +417,15 @@ public class TosCardFragment extends BaseFragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
+        cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
+        cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
+        GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
     }
@@ -420,6 +433,27 @@ public class TosCardFragment extends BaseFragment {
     @Override
     protected int getPageLayoutId() {
         return R.layout.fragment_tos_card;
+    }
+
+    public interface ToolBarOwner {
+        void setToolsVisible(boolean visible);
+        boolean isToolsVisible();
+    }
+
+    private ToolBarOwner toolOwner;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof ToolBarOwner) {
+            toolOwner = (ToolBarOwner) context;
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        toolOwner = null;
     }
 
     private class ParseCardsTask extends AsyncTask<Void, Void, Void> {
@@ -554,7 +588,33 @@ public class TosCardFragment extends BaseFragment {
                     && races.contains(c.race)
                     && stars.contains("" + c.rarity)
                     && selectForFreeMove(c)
+                    && selectForShow(c)
             ;
+        }
+
+        private boolean selectForShow(TosCard c) {
+            int idNorm = Integer.parseInt(c.idNorm);
+            boolean accept = true;
+
+            ViewGroup vg = sortHide;
+            int n = vg.getChildCount();
+            for (int i = 0; i < n; i++) {
+                View v = vg.getChildAt(i);
+                if (v.isSelected()) {
+                    switch (v.getId()) {
+                        case R.id.sortHide6xxx:
+                            accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
+                            break;
+                        case R.id.sortHide8xxx:
+                            accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
+                            break;
+                        case R.id.sortHide9xxx:
+                            accept &= !MathUtil.isInRange(idNorm, 9000, 10000);
+                            break;
+                    }
+                }
+            }
+            return accept;
         }
 
         private boolean selectForFreeMove(TosCard c) {
@@ -766,6 +826,34 @@ public class TosCardFragment extends BaseFragment {
             } else {
                 return null;
             }
+        }
+    }
+
+    // The file of dialog setting
+    private File getTosCardSortFile() {
+        File folder = App.me.getExternalCacheDir();
+        return new File(folder, "cardSort.txt");
+    }
+
+    private class LoadDataAsyncTask extends AsyncTask<Void, Void, CardSort> {
+        @Override
+        protected CardSort doInBackground(Void... voids) {
+            return GsonUtil.loadFile(getTosCardSortFile(), CardSort.class);
+        }
+
+        @Override
+        protected void onPostExecute(CardSort data) {
+            cardSort = data != null ? data : new CardSort();
+            updateHide();
+            if (allCards != null) {
+                applySelection();
+            }
+        }
+
+        private void updateHide() {
+            sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
+            sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
+            sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
         }
     }
 }

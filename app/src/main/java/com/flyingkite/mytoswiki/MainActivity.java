@@ -4,20 +4,23 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.view.View;
 
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.tos.TCard;
+import com.flyingkite.util.TextEditorDialog;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
     private List<String> tools = Arrays.asList(
             TCard.Bird.url
             , TCard.Bird.url
+            , App.getUriOfResource(R.drawable.ic_description_black_48dp).toString()
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -55,6 +58,9 @@ public class MainActivity extends BaseActivity {
                     case 1:
                         new SummonerLevelDialog(MainActivity.this::getActivity).show();
                         break;
+                    case 2:
+                        new TextEditorDialog(MainActivity.this::getActivity).show();
+                        break;
                 }
             }
         });
@@ -63,5 +69,15 @@ public class MainActivity extends BaseActivity {
 
     private Activity getActivity() {
         return this;
+    }
+
+    @Override
+    public void setToolsVisible(boolean visible) {
+        iconLibrary.recyclerView.setVisibility(visible ? View.VISIBLE : View.GONE);
+    }
+
+    @Override
+    public boolean isToolsVisible() {
+        return iconLibrary.recyclerView.getVisibility() == View.VISIBLE;
     }
 }
