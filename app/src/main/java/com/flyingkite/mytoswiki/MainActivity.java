@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
+import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.tos.TCard;
@@ -21,6 +22,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             TCard.Bird.url
             , TCard.Bird.url
             , App.getUriOfResource(R.drawable.ic_description_black_48dp).toString()
+            , TCard.Bird.url
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -53,13 +55,16 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             public void onClick(String iconId, IconAdapter.IconVH vh, int position) {
                 switch (position) {
                     case 0:
-                        new SkillEatingDialog(MainActivity.this::getActivity).show();
+                        new SkillEatingDialog(getActivity()).show();
                         break;
                     case 1:
-                        new SummonerLevelDialog(MainActivity.this::getActivity).show();
+                        new SummonerLevelDialog(getActivity()).show();
                         break;
                     case 2:
                         new TextEditorDialog(MainActivity.this::getActivity).show();
+                        break;
+                    case 3:
+                        new WebDialog(getActivity()).show();
                         break;
                 }
             }

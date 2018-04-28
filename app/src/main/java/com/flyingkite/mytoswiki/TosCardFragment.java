@@ -439,6 +439,12 @@ public class TosCardFragment extends BaseFragment {
         return true;
     }
 
+    private void updateHide() {
+        sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
+        sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
+        sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
+    }
+
     @Override
     public void onPause() {
         super.onPause();
@@ -871,12 +877,6 @@ public class TosCardFragment extends BaseFragment {
             if (allCards != null) {
                 applySelection();
             }
-        }
-
-        private void updateHide() {
-            sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
-            sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
-            sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
         }
     }
 }

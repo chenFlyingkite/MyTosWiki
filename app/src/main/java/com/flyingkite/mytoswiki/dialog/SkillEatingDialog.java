@@ -1,8 +1,10 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -26,8 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SkillEatingDialog extends BaseTosDialog {
-    public SkillEatingDialog(DialogOwner own) {
-        super(own);
+    public SkillEatingDialog(@NonNull Context context) {
+        super(context);
     }
 
     @Override
@@ -61,7 +63,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     private List<String> tableData = new ArrayList<>();
 
     @Override
-    protected void onFinishInflate(View view, AlertDialog dialog) {
+    protected void onFinishInflate(View view, Dialog dialog) {
         initSpinners();
         new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
 
@@ -71,7 +73,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     private void initShare() {
         findViewById(R.id.skillShareEat).setOnClickListener((v) -> {
-            String shareText = getActivity().getString(R.string.skill_share_eat_format
+            String shareText = getString(R.string.skill_share_eat_format
                     , fromSpin.getSelectedItem().toString().trim()
                     , pgsSpin.getSelectedItem().toString().trim()
                     , fromRnd.getText()
@@ -95,7 +97,7 @@ public class SkillEatingDialog extends BaseTosDialog {
                 s.append(String.format(java.util.Locale.US, "%7s | %7s | %7s\n", s0, s1, s2));
             }
             Say.Log("s = %s", s);
-            String shareText = getActivity().getString(R.string.skill_share_eat_format
+            String shareText = getString(R.string.skill_share_eat_format
                     , fromSpin.getSelectedItem().toString()
                     , pgsSpin.getSelectedItem().toString()
                     , fromRnd.getText()
@@ -110,14 +112,14 @@ public class SkillEatingDialog extends BaseTosDialog {
     private void initTable() {
         recycler = findViewById(R.id.skillTable);
         int row = 3;
-        recycler.setLayoutManager(new GridLayoutManager(getActivity(), row));
+        recycler.setLayoutManager(new GridLayoutManager(getContext(), row));
         adapter = new SelectableAdapter();
         adapter.setRow(row);
 
         List<String> data = new ArrayList<>();
-        data.add(getActivity().getString(R.string.cards_level));
-        data.add(getActivity().getString(R.string.skill_needRnd));
-        data.add(getActivity().getString(R.string.skill_sumRnd));
+        data.add(getString(R.string.cards_level));
+        data.add(getString(R.string.skill_needRnd));
+        data.add(getString(R.string.skill_sumRnd));
         for (int i = 2; i < 15; i++) {
             data.add("" + i);
             data.add("" + (ROUNDS_SUM[i] - ROUNDS_SUM[i - 1]));
@@ -143,8 +145,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         });
 
         final int layoutId = android.R.layout.simple_spinner_dropdown_item;
-        ArrayAdapter<String> levelsF = new ArrayAdapter<>(getActivity(), layoutId);
-        ArrayAdapter<String> levelsT = new ArrayAdapter<>(getActivity(), layoutId);
+        ArrayAdapter<String> levelsF = new ArrayAdapter<>(getContext(), layoutId);
+        ArrayAdapter<String> levelsT = new ArrayAdapter<>(getContext(), layoutId);
         for (int i = 1; i <= 15; i++) {
             if (i < 15) {
                 levelsF.add("   " + i + "   ");
@@ -158,7 +160,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         fromSpin.setOnItemSelectedListener(adapterSelect);
         toSpin.setOnItemSelectedListener(adapterSelect);
 
-        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity(), layoutId);
+        ArrayAdapter<String> progress = new ArrayAdapter<>(getContext(), layoutId);
         for (int i = 0; i < 100; i++) {
             progress.add("   " + i + "   ");
         }
@@ -202,7 +204,7 @@ public class SkillEatingDialog extends BaseTosDialog {
             q1 = 0;
             q2 = need / 200;
         }
-        eatCard.setText(getActivity().getString(R.string.skill_eat_card, q1, q2, r));
+        eatCard.setText(getString(R.string.skill_eat_card, q1, q2, r));
     }
 
     private void updateFromData() {
