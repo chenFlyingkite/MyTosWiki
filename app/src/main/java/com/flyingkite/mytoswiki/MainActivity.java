@@ -20,9 +20,9 @@ import java.util.List;
 public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
     private List<String> tools = Arrays.asList(
             TCard.Bird.url
-            , TCard.Bird.url
+            , App.getUriOfResource(R.drawable.logo_stamina).toString()
             , App.getUriOfResource(R.drawable.ic_description_black_48dp).toString()
-            , TCard.Bird.url
+            , App.getUriOfResource(R.drawable.logo_chrome).toString()
     );
     private Library<IconAdapter> iconLibrary;
 
