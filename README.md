@@ -12,7 +12,7 @@
 
 <img width="360" height="640" src="/images/1.0.0/Screenshot_20180210-155715.png"><img width="100"><img width="360" height="640" src="/images/1.0.0/Screenshot_20180210-155723.png">
 
-<img width="360" height="640" src="/images/1.0.0/sample.gif">
+<img width="360" height="640" src="/images/sample.gif">
 
 <!--  Images too big
 ![Sample Home][v1.0.0_1]
@@ -25,7 +25,7 @@
 
 [v1.0.0_1]: /images/1.0.0/Screenshot_20180210-155715.png "首頁"
 [v1.0.0_2]: /images/1.0.0/Screenshot_20180210-155723.png "點卡片後出現Dialog"
-[v1.0.0_3]: /images/1.0.0/sample.gif "功能簡介"
+[v1.0.0_3]: /images/sample.gif "功能簡介"
 
 <!-- Reference links - Readme syntax -->
 [syntax1]: https://guides.github.com/features/mastering-markdown/ "Mark down"
