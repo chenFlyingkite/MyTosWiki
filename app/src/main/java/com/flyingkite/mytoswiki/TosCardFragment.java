@@ -24,6 +24,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.library.FilesHelper;
 import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.IOUtil;
@@ -122,8 +123,8 @@ public class TosCardFragment extends BaseFragment {
                         ImageView image = v.findViewById(R.id.cardImage);
                         TextView info = v.findViewById(R.id.cardInfo);
 
-                        Glide.with(icon).load(card.icon).into(icon);
-                        Glide.with(image).load(card.bigImage).into(image);
+                        Glide.with(icon).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(icon);
+                        Glide.with(image).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(image);
                         Gson g = new GsonBuilder().setPrettyPrinting().create();
                         String s = g.toJson(card, TosCard.class);
                         info.setText(s);

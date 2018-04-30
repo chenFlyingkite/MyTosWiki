@@ -17,6 +17,7 @@
             android:adjustViewBounds="true"
             android:layout_centerHorizontal="true"
             android:scaleType="centerCrop"
+            android:src="@drawable/card_background"
             tools:background="#a00"/>
 
 
@@ -24,6 +25,7 @@
             android:id="@+id/cardIcon"
             android:layout_width="@dimen/t70dp"
             android:layout_height="@dimen/t70dp"
+            android:src="@drawable/unknown_card"
             tools:background="#aa0"/>
 
         <TextView
