@@ -12,6 +12,8 @@
 
 <img width="360" height="640" src="/images/1.0.0/Screenshot_20180210-155715.png"><img width="100"><img width="360" height="640" src="/images/1.0.0/Screenshot_20180210-155723.png">
 
+<img width="360" height="640" src="/images/1.0.0/sample.gif">
+
 <!--  Images too big
 ![Sample Home][v1.0.0_1]
 ![Sample Card][v1.0.0_2]
