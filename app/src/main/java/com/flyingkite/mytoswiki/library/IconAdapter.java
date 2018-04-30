@@ -6,13 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 
-public class IconAdapter extends RVAdapter<String, IconAdapter.IconVH, IconAdapter.ItemListener> {
-    public interface ItemListener extends RVAdapter.ItemListener<String, IconVH> {
+public class IconAdapter extends RVAdapter<Integer, IconAdapter.IconVH, IconAdapter.ItemListener> {
+    public interface ItemListener extends RVAdapter.ItemListener<Integer, IconVH> {
         //void onClick(String name, IconVH vh, int position);
     }
 
@@ -25,10 +23,13 @@ public class IconAdapter extends RVAdapter<String, IconAdapter.IconVH, IconAdapt
     public void onBindViewHolder(IconVH vh, int position) {
         super.onBindViewHolder(vh, position);
         Context c = vh.itemView.getContext();
-        String cid = itemOf(position);
-        Glide.with(c).load(cid).apply(RequestOptions.centerCropTransform()
-                .placeholder(R.drawable.unknown_card))
-                .into(vh.icon);
+        int cid = itemOf(position);
+        vh.icon.setImageResource(cid);
+        // This is string part
+        //String cid = itemOf(position);
+//        Glide.with(c).load(cid)
+//                .apply(RequestOptions.centerCropTransform().placeholder(R.drawable.unknown_card))
+//                .into(vh.icon);
     }
 
     public static class IconVH extends RecyclerView.ViewHolder {

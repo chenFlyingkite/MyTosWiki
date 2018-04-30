@@ -12,29 +12,22 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.flyingkite.library.Say;
-import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.Library;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class WebDialog extends BaseTosDialog {
     public WebDialog(@NonNull Context context) {
         super(context);
-
-        tools = new ArrayList<>();
-        for (int id : toolsIds) {
-            tools.add(App.getUriOfResource(id).toString());
-        }
     }
 
-    private List<String> tools;
-    private int[] toolsIds = {R.drawable.ic_home_black_48dp
+    private List<Integer> toolsIds = Arrays.asList(R.drawable.ic_home_black_48dp
             , R.drawable.ic_arrow_back_black_48dp
             , R.drawable.ic_arrow_forward_black_48dp
-    };
+    );
 
     private static final String tosWikiHome = "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_Tower_of_Saviors_%E7%BB%B4%E5%9F%BA";
     private Library<IconAdapter> iconLibrary;
@@ -67,10 +60,10 @@ public class WebDialog extends BaseTosDialog {
         iconLibrary = new Library<>(findViewById(R.id.wdTools));
         IconAdapter adapter = new IconAdapter();
         adapter.setAutoScroll(true);
-        adapter.setDataList(tools);
+        adapter.setDataList(toolsIds);
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
-            public void onClick(String s, IconAdapter.IconVH iconVH, int position) {
+            public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
                 switch (position) {
                     case 0:
                         web.loadUrl(tosWikiHome);

@@ -11,18 +11,16 @@ import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.Library;
-import com.flyingkite.mytoswiki.tos.TCard;
 import com.flyingkite.util.TextEditorDialog;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
-    private List<String> tools = Arrays.asList(
-            TCard.Bird.url
-            , App.getUriOfResource(R.drawable.logo_stamina).toString()
-            , App.getUriOfResource(R.drawable.ic_description_black_48dp).toString()
-            , App.getUriOfResource(R.drawable.logo_chrome).toString()
+    private List<Integer> tools = Arrays.asList(R.drawable.card_0617
+            , R.drawable.logo_stamina
+            , R.drawable.ic_description_black_48dp
+            , R.drawable.logo_chrome
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -52,7 +50,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         adapter.setDataList(tools);
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
-            public void onClick(String iconId, IconAdapter.IconVH vh, int position) {
+            public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
                 switch (position) {
                     case 0:
                         new SkillEatingDialog(getActivity()).show();

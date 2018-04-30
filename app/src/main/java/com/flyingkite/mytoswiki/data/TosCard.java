@@ -117,6 +117,14 @@ public class TosCard {
     public int maxTUAllLevel;
 
     //------------
+    //---- Card Details, 卡片資訊
+    //------------
+
+    /** Evolution to card idNorm */
+    @SerializedName("cardDetails")
+    public String cardDetails = "";
+
+    //------------
     //---- Active Skill 1, 主動技能1
     //------------
 
