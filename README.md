@@ -23,6 +23,7 @@
 
 [v1.0.0_1]: /images/1.0.0/Screenshot_20180210-155715.png "首頁"
 [v1.0.0_2]: /images/1.0.0/Screenshot_20180210-155723.png "點卡片後出現Dialog"
+[v1.0.0_3]: /images/1.0.0/sample.gif "功能簡介"
 
 <!-- Reference links - Readme syntax -->
 [syntax1]: https://guides.github.com/features/mastering-markdown/ "Mark down"
