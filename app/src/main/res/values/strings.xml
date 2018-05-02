@@ -65,6 +65,10 @@
     <string name="cards_hide_8xxx">迪士尼</string>
     <string name="cards_hide_9xxx">72柱神</string>
     <string name="cards_display">顯示名稱</string>
+    <string name="cards_improve">卡片提升能力</string>
+    <string name="cards_improve_amelioration">可昇華</string>
+    <string name="cards_improve_awakenRecall">可突破</string>
+    <string name="cards_improve_no">無限制</string>
 
     <string name="texts_tools">文字區域</string>
     <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>

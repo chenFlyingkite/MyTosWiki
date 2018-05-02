@@ -18,6 +18,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
@@ -70,6 +71,10 @@ public class TosCardFragment extends BaseFragment {
     private RadioGroup sortSpecial;
     private ViewGroup sortHide;
     private RadioGroup sortDisplay;
+    private ViewGroup sortImprove;
+    private CheckBox sortImproveNo;
+    private CheckBox sortImproveAme;
+    private CheckBox sortImproveAwk;
 
     private CardSort cardSort = new CardSort();
 
@@ -228,6 +233,7 @@ public class TosCardFragment extends BaseFragment {
         initSortBySpecial(menu);
         initSortByHide(menu);
         initDisplay(menu);
+        initSortByImprove(menu);
     }
 
     private void initSortReset(View menu) {
@@ -283,6 +289,18 @@ public class TosCardFragment extends BaseFragment {
         setChildClick(vg, this::clickDisplay);
         sortDisplay.check(R.id.sortDisplayNormId);
     }
+
+    private void initSortByImprove(View menu) {
+        ViewGroup vg = sortImprove = menu.findViewById(R.id.sortImprove);
+
+        sortImproveNo = menu.findViewById(R.id.sortImproveNo);
+        sortImproveAme = menu.findViewById(R.id.sortImproveAmelioration);
+        sortImproveAwk = menu.findViewById(R.id.sortImproveAwakenRecall);
+
+        setChildClick(vg, this::clickImprove);
+    }
+
+    //------
 
     private void clickReset(View v) {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar};
@@ -357,6 +375,22 @@ public class TosCardFragment extends BaseFragment {
 
     private void clickHide(View v) {
         v.setSelected(!v.isSelected());
+        applySelection();
+    }
+
+    private void clickImprove(View v) {
+        switch (v.getId()) {
+            default:
+            case R.id.sortImproveNo:
+                sortImproveAme.setChecked(false);
+                sortImproveAwk.setChecked(false);
+                break;
+            case R.id.sortImproveAmelioration:
+            case R.id.sortImproveAwakenRecall:
+                sortImproveNo.setChecked(false);
+                break;
+        }
+
         applySelection();
     }
 
@@ -619,6 +653,7 @@ public class TosCardFragment extends BaseFragment {
                     && stars.contains("" + c.rarity)
                     && selectForFreeMove(c)
                     && selectForShow(c)
+                    && selectForImprove(c)
             ;
         }
 
@@ -663,6 +698,20 @@ public class TosCardFragment extends BaseFragment {
                     result = true;
             }
             return result;
+        }
+
+        private boolean selectForImprove(TosCard c) {
+            boolean accept = true;
+            if (!sortImproveNo.isChecked()) {
+                if (sortImproveAme.isChecked()) {
+                    //noinspection ConstantConditions
+                    accept &= c.skillAmeliorationCost1 > 0;
+                }
+                if (sortImproveAwk.isChecked()) {
+                    accept &= !c.skillAwakenRecallName.isEmpty();
+                }
+            }
+            return accept;
         }
 
         @NonNull

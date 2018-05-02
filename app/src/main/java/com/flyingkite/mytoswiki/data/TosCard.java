@@ -176,6 +176,18 @@ public class TosCard {
     @SerializedName("skillLeaderDesc")
     public String skillLeaderDesc = "";
 
+    //------------
+    //---- Amelioration Skill, 昇華技能
+    //------------
+
+    /** Amelioration battle name, like "星辰所挑選 ‧ 加斯陀與波魯克斯" */
+    @SerializedName("skillAmeBattleName")
+    public String skillAmeliorationBattleName = "";
+
+    /** Active skill 2 description, like "http://zh.tos.wikia.com/wiki/%E6%98%9F%E8%BE%B0%E6%89%80%E6%8C%91%E9%81%B8_%E2%80%A7_%E5%8A%A0%E6%96%AF%E9%99%80%E8%88%87%E6%B3%A2%E9%AD%AF%E5%85%8B%E6%96%AF" */
+    @SerializedName("skillAmeBattleLink")
+    public String skillAmeliorationBattleLink = "";
+
     /** Amelioration skill name I, 昇華1名稱 */
     @SerializedName("skillAmeName1")
     public String skillAmeliorationName1 = "";
@@ -209,6 +221,18 @@ public class TosCard {
     public int skillAmeliorationCost4;
 
     //------------
+    //---- Awakening Recall Skill, 極限突破技能
+    //------------
+
+    /** Awakening Recall skill name, like "每次消除 1 組 5 粒或以上的心符石，自身攻擊力提升，最大提升至 6 倍，效果持續至戰鬥結束" */
+    @SerializedName("skillAwkName")
+    public String skillAwakenRecallName = "";
+
+    /** Awakening Recall skill name, like "http://zh.tos.wikia.com/wiki/%E9%97%87%E4%B9%8B%E9%9B%99%E5%AD%90%E5%AE%AE#.E4.B8.8D.E6.96.B7.E7.9A.84.E6.86.B6.E5.BF.B5" */
+    @SerializedName("skillAwkBattleLink")
+    public String skillAwakenRecallBattleLink = "";
+
+    //------------
     //---- Evolution, 卡片進化
     //------------
 
@@ -236,4 +260,3 @@ public class TosCard {
     @SerializedName("combineTo")
     public List<String> combineTo = new ArrayList<>();
 }
-

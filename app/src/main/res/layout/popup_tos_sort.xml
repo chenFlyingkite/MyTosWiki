@@ -271,6 +271,36 @@
         </GridLayout>
 
         <TextView
+            android:id="@+id/sortImproveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/sortTitle"
+            android:text="@string/cards_improve"/>
+
+        <LinearLayout
+            android:id="@+id/sortImprove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/t20dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/sortImproveNo"
+                style="@style/sortText"
+                android:text="@string/cards_improve_no"/>
+
+            <CheckBox
+                android:id="@+id/sortImproveAmelioration"
+                style="@style/sortText"
+                android:text="@string/cards_improve_amelioration"/>
+
+            <CheckBox
+                android:id="@+id/sortImproveAwakenRecall"
+                style="@style/sortText"
+                android:text="@string/cards_improve_awakenRecall"/>
+        </LinearLayout>
+
+        <TextView
             android:id="@+id/sortDisplayTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
