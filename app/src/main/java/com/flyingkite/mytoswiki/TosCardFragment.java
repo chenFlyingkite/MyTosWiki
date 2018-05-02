@@ -123,8 +123,8 @@ public class TosCardFragment extends BaseFragment {
                         ImageView image = v.findViewById(R.id.cardImage);
                         TextView info = v.findViewById(R.id.cardInfo);
 
-                        Glide.with(icon).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(icon);
-                        Glide.with(image).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(image);
+                        Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(icon);
+                        Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(image);
                         Gson g = new GsonBuilder().setPrettyPrinting().create();
                         String s = g.toJson(card, TosCard.class);
                         info.setText(s);
