@@ -53,16 +53,16 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
                 switch (position) {
                     case 0:
-                        new SkillEatingDialog(getActivity()).show();
+                        new SkillEatingDialog().show(getActivity());
                         break;
                     case 1:
-                        new SummonerLevelDialog(getActivity()).show();
+                        new SummonerLevelDialog().show(getActivity());
                         break;
                     case 2:
                         new TextEditorDialog(MainActivity.this::getActivity).show();
                         break;
                     case 3:
-                        new WebDialog(getActivity()).show();
+                        new WebDialog().show(getActivity());
                         break;
                 }
             }

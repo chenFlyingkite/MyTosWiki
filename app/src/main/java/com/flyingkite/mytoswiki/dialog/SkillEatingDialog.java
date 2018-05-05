@@ -1,10 +1,8 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -28,9 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SkillEatingDialog extends BaseTosDialog {
-    public SkillEatingDialog(@NonNull Context context) {
-        super(context);
-    }
 
     @Override
     protected int getLayoutId() {
@@ -112,7 +107,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     private void initTable() {
         recycler = findViewById(R.id.skillTable);
         int row = 3;
-        recycler.setLayoutManager(new GridLayoutManager(getContext(), row));
+        recycler.setLayoutManager(new GridLayoutManager(getActivity(), row));
         adapter = new SelectableAdapter();
         adapter.setRow(row);
 
@@ -145,8 +140,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         });
 
         final int layoutId = android.R.layout.simple_spinner_dropdown_item;
-        ArrayAdapter<String> levelsF = new ArrayAdapter<>(getContext(), layoutId);
-        ArrayAdapter<String> levelsT = new ArrayAdapter<>(getContext(), layoutId);
+        ArrayAdapter<String> levelsF = new ArrayAdapter<>(getActivity(), layoutId);
+        ArrayAdapter<String> levelsT = new ArrayAdapter<>(getActivity(), layoutId);
         for (int i = 1; i <= 15; i++) {
             if (i < 15) {
                 levelsF.add("   " + i + "   ");
@@ -160,7 +155,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         fromSpin.setOnItemSelectedListener(adapterSelect);
         toSpin.setOnItemSelectedListener(adapterSelect);
 
-        ArrayAdapter<String> progress = new ArrayAdapter<>(getContext(), layoutId);
+        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity(), layoutId);
         for (int i = 0; i < 100; i++) {
             progress.add("   " + i + "   ");
         }
@@ -216,7 +211,8 @@ public class SkillEatingDialog extends BaseTosDialog {
     }
 
     @Override
-    protected void onDismiss(DialogInterface dialog) {
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
         skEat = new SkillEat();
         skEat.fromLevel = fromSpin.getSelectedItemPosition();
         skEat.toLevel = toSpin.getSelectedItemPosition();

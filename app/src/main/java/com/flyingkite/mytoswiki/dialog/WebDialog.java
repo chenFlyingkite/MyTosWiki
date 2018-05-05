@@ -1,9 +1,7 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -20,10 +18,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class WebDialog extends BaseTosDialog {
-    public WebDialog(@NonNull Context context) {
-        super(context);
-    }
-
     private List<Integer> toolsIds = Arrays.asList(R.drawable.ic_home_black_48dp
             , R.drawable.ic_arrow_back_black_48dp
             , R.drawable.ic_arrow_forward_black_48dp

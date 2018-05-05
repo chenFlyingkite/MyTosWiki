@@ -1,6 +1,8 @@
 package com.flyingkite.mytoswiki;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +37,7 @@ import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
@@ -135,7 +138,15 @@ public class TosCardFragment extends BaseFragment {
                         info.setText(s);
                     };
 
-                    new DialogManager.GenericViewBuilder(getActivity(), R.layout.dialog_card, onInflate).buildAndShow();
+                    //new DialogManager.GenericViewBuilder(getActivity(), R.layout.dialog_card, onInflate).buildAndShow();
+                    CardDialog d = new CardDialog();
+
+                    Bundle b = new Bundle();
+                    b.putParcelable(CardDialog.BUNDLE_CARD, card);
+                    d.setArguments(b);
+
+                    d.show(getFragmentManager(), "123");
+
 
                 }, (selected, total) ->  {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
@@ -143,6 +154,12 @@ public class TosCardFragment extends BaseFragment {
         );
         applySelection();
         test();
+    }
+
+    private void showDialog(Dialog dialog, Bundle bundle) {
+        FragmentManager fm = getActivity().getFragmentManager();
+        fm.beginTransaction();
+
     }
 
     private void initShareImage(View parent) {

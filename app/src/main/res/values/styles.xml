@@ -30,8 +30,45 @@
         <item name="android:textSize">@dimen/t18dp</item>
         <item name="android:textColor">#000</item>
     </style>
-    <style name="blackText.center">
+
+    <style name="cardText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/t20dp</item>
+        <item name="android:textColor">#fff</item>
         <item name="android:gravity">center</item>
+    </style>
+    <style name="cardText.header">
+        <item name="android:background">@drawable/bg_rect_skyblue</item>
+        <item name="android:textSize">@dimen/t15dp</item>
+    </style>
+    <style name="cardText.header.2">
+        <item name="android:layout_width">@dimen/cardText2</item>
+    </style>
+    <style name="cardText.header.4">
+        <item name="android:layout_width">@dimen/cardText4</item>
+    </style>
+    <style name="cardText.header.6">
+        <item name="android:layout_width">@dimen/cardText6</item>
+    </style>
+    <style name="cardText.header.8">
+        <item name="android:layout_width">@dimen/cardText8</item>
+    </style>
+    <style name="cardText.item">
+        <item name="android:background">@drawable/bg_rect_green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="cardText.item.2">
+        <item name="android:layout_width">@dimen/cardText2</item>
+    </style>
+    <style name="cardText.item.4">
+        <item name="android:layout_width">@dimen/cardText4</item>
+    </style>
+    <style name="cardText.item.6">
+        <item name="android:layout_width">@dimen/cardText6</item>
+    </style>
+    <style name="cardText.item.8">
+        <item name="android:layout_width">@dimen/cardText8</item>
     </style>
 
     <style name="gray_button" parent="common_text">
@@ -145,7 +182,6 @@
         <item name="android:textSize">@dimen/t14dp</item>
         <item name="android:textColor">#000</item>
     </style>
-
 
     <!-- Skill eat -->
 

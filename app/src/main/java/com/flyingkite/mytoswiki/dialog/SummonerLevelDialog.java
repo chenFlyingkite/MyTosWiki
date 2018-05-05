@@ -1,8 +1,6 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
-import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.LayoutManager;
@@ -18,12 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SummonerLevelDialog extends BaseTosDialog {
-    public SummonerLevelDialog(@NonNull Context context) {
-        super(context);
-    }
-
     private Library<SummonLvAdapter> tableLibrary;
-
 
     @Override
     protected int getLayoutId() {
@@ -63,7 +56,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
             }
         });
 
-        shortcuts.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        shortcuts.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         shortcuts.setAdapter(ba);
     }
 

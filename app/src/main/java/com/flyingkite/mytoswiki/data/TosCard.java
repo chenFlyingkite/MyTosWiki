@@ -1,11 +1,15 @@
 package com.flyingkite.mytoswiki.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TosCard {
+public class TosCard implements Parcelable {
     //------------
     //---- Basic info, 基礎卡片內容
     //------------
@@ -259,4 +263,30 @@ public class TosCard {
     /** Combination material cards idNorm */
     @SerializedName("combineTo")
     public List<String> combineTo = new ArrayList<>();
+
+    //-- For parcelable
+    private static final Gson gson = new Gson();
+
+    public static final Parcelable.Creator<TosCard> CREATOR = new Parcelable.Creator<TosCard>() {
+        @Override
+        public TosCard createFromParcel(Parcel in) {
+            return gson.fromJson(in.readString(), TosCard.class);
+        }
+
+        @Override
+        public TosCard[] newArray(int size) {
+            return new TosCard[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        String s = gson.toJson(this);
+        dest.writeString(s);
+    }
 }
