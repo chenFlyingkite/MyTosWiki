@@ -34,6 +34,11 @@ public class WebDialog extends BaseTosDialog {
     }
 
     @Override
+    protected boolean isFloating() {
+        return false;
+    }
+
+    @Override
     protected void onFinishInflate(View view, Dialog dialog) {
         web = findViewById(R.id.wdWeb);
         progress = findViewById(R.id.wdProgress);

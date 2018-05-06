@@ -16,6 +16,11 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+    <style name="CommonAlertDialog.noFloating">
+        <item name="android:windowIsFloating">false</item>
     </style>
     <style name="WaitingDialog">
         <item name="android:windowCloseOnTouchOutside">false</item>
@@ -165,6 +170,12 @@
     <style name="sed_round_text.left">
         <item name="android:paddingLeft">@dimen/t10dp</item>
     </style>
+    <style name="sed_spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+        <item name="android:background">@drawable/bg_spinner</item>
+        <item name="android:minWidth">@dimen/t200dp</item>
+    </style>
 
     <!-- sld = Summoner Level Dialog -->
     <style name="sld_row_item" parent="blackText">
@@ -176,11 +187,11 @@
     </style>
 
     <style name="dialog_title">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:textSize">@dimen/t14dp</item>
         <item name="android:textColor">#000</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <!-- Skill eat -->

@@ -30,15 +30,26 @@ public class BaseTosDialog extends DialogFragment implements
                 //DialogFragment.STYLE_NORMAL
                 //DialogFragment.STYLE_NO_TITLE
                 DialogFragment.STYLE_NO_FRAME
+                //, android.R.style.Theme
+                //, android.R.style.Theme_Translucent
                 //, android.R.style.Theme_Translucent_NoTitleBar
+                //, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen // No status bar
                 //, android.R.style.Theme_Holo_Light_Dialog
                 //, R.style.AppTheme
-                //, R.style.aaa
-                //, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen
-                , R.style.CommonAlertDialog
+                //, ofTheme()
+                , R.style.CommonAlertDialog_noFloating
+                //, R.style.CommonAlertDialog
                 //, android.R.style.Theme_DeviceDefault_Light_NoActionBar_TranslucentDecor
                 //, getTheme()
         );
+    }
+
+    private int ofTheme() {
+        return isFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
+    }
+
+    protected boolean isFloating() {
+        return true;
     }
 //
 //    @Override
@@ -77,6 +88,11 @@ public class BaseTosDialog extends DialogFragment implements
         if (layoutId > 0) {
             v = inflater.inflate(layoutId, container, false);
         }
+        if (v != null) {
+            v.setOnClickListener((v1) -> {
+                dismissAllowingStateLoss();
+            });
+        }
         return v;
     }
 
@@ -85,6 +101,7 @@ public class BaseTosDialog extends DialogFragment implements
         Dialog d = super.onCreateDialog(savedInstanceState);
         d.setOnKeyListener(this);
         d.setOnShowListener(this);
+        //d.getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
         return d;
     }
 

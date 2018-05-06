@@ -139,14 +139,20 @@ public class SkillEatingDialog extends BaseTosDialog {
             computeEatCard();
         });
 
-        final int layoutId = android.R.layout.simple_spinner_dropdown_item;
+        int downId = android.R.layout.simple_spinner_dropdown_item;
+        int layoutId = R.layout.view_spinner_item;
         ArrayAdapter<String> levelsF = new ArrayAdapter<>(getActivity(), layoutId);
+        levelsF.setDropDownViewResource(downId);
         ArrayAdapter<String> levelsT = new ArrayAdapter<>(getActivity(), layoutId);
+        levelsT.setDropDownViewResource(downId);
+        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity(), layoutId);
+        progress.setDropDownViewResource(downId);
         for (int i = 1; i <= 15; i++) {
+            String s = "" + i;
             if (i < 15) {
-                levelsF.add("   " + i + "   ");
+                levelsF.add(s);
             }
-            levelsT.add("   " + i + "   ");
+            levelsT.add(s);
         }
         fromSpin = findViewById(R.id.skillFrom);
         toSpin = findViewById(R.id.skillTo);
@@ -155,9 +161,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         fromSpin.setOnItemSelectedListener(adapterSelect);
         toSpin.setOnItemSelectedListener(adapterSelect);
 
-        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity(), layoutId);
         for (int i = 0; i < 100; i++) {
-            progress.add("   " + i + "   ");
+            progress.add("" + i);
         }
         pgsSpin = findViewById(R.id.skillPercent);
         pgsSpin.setAdapter(progress);

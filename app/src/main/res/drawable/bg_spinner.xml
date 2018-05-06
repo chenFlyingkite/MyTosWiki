@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Draw the triangle by overlap two rect, See
+ https://stackoverflow.com/a/46381155
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- border color & inner color -->
+        <shape android:shape="rectangle">
+            <stroke android:color="#aaa" android:width="1dp"/>
+            <solid android:color="#fff"/>
+            <corners android:radius="@dimen/t5dp" />
+        </shape>
+    </item>
+    <item android:gravity="center_vertical|right" android:left="@dimen/t30dp" android:right="@dimen/t5dp">
+        <layer-list>
+            <!-- Arrow color -->
+            <item android:gravity="center">
+                <rotate
+                    android:fromDegrees="45"
+                    android:toDegrees="45">
+                    <shape android:shape="rectangle">
+                        <size android:width="@dimen/t8dp" android:height="@dimen/t8dp"/>
+                        <solid android:color="#000" />
+                    </shape>
+                </rotate>
+            </item>
+            <!-- Shield of arrow color -->
+            <item android:gravity="center" android:top="@dimen/t2dp"
+                android:bottom="@dimen/t10dp">
+                <shape android:shape="rectangle">
+                    <size android:width="@dimen/t15dp" android:height="@dimen/t8dp"/>
+                    <solid android:color="#fff"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</layer-list>

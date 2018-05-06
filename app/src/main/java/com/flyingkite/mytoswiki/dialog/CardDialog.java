@@ -17,6 +17,11 @@ import com.flyingkite.mytoswiki.data.TosCard;
 public class CardDialog extends BaseTosDialog {
     public static final String BUNDLE_CARD = "TosCard";
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.dialog_card;
+    }
+
     private TosCard card;
     private ImageView cardIcon;
     private ImageView cardImage;
@@ -114,11 +119,5 @@ public class CardDialog extends BaseTosDialog {
             cdlv.setText((smin - smax + 1) + "");
             desc.setText(sdesc);
         }
-    }
-
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.dialog_card;
     }
 }
