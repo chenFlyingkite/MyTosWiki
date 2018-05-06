@@ -6,6 +6,7 @@ import android.app.DialogFragment;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -48,7 +49,8 @@ public class BaseTosDialog extends DialogFragment implements
         return isFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
     }
 
-    protected boolean isFloating() {
+    @Deprecated
+    private boolean isFloating() {
         return true;
     }
 //
@@ -88,6 +90,7 @@ public class BaseTosDialog extends DialogFragment implements
         if (layoutId > 0) {
             v = inflater.inflate(layoutId, container, false);
         }
+        // Dismiss if click on view container
         if (v != null) {
             v.setOnClickListener((v1) -> {
                 dismissAllowingStateLoss();
@@ -110,6 +113,7 @@ public class BaseTosDialog extends DialogFragment implements
         onFinishInflate(view, getDialog());
     }
 
+    //https://developer.android.com/guide/topics/ui/dialogs?authuser=1&hl=zh-tw
 //    @Override
 //    public Dialog onCreateDialog(Bundle savedInstanceState) {
 //        // The only reason you might override this method when using onCreateView() is
@@ -139,6 +143,15 @@ public class BaseTosDialog extends DialogFragment implements
         it.setType("text/plain");
         try {
             getActivity().startActivity(Intent.createChooser(it, chooser));
+        } catch (ActivityNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void viewLink(String link) {
+        Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        try {
+            startActivity(it);
         } catch (ActivityNotFoundException e) {
             e.printStackTrace();
         }

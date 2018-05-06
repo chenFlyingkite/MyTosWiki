@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:background="#888">
+    tools:background="#8000">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -57,6 +57,6 @@
 
     <TextView
         android:id="@+id/cardSkillDesc"
-        style="@style/cardText.item.8"
+        style="@style/cardText.item.10"
         tools:text="技能內容"/>
 </LinearLayout>

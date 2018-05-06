@@ -3,6 +3,7 @@ package com.flyingkite.mytoswiki.dialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.annotation.IdRes;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -92,14 +93,6 @@ public class SkillEatingDialog extends BaseTosDialog {
                 s.append(String.format(java.util.Locale.US, "%7s | %7s | %7s\n", s0, s1, s2));
             }
             Say.Log("s = %s", s);
-            String shareText = getString(R.string.skill_share_eat_format
-                    , fromSpin.getSelectedItem().toString()
-                    , pgsSpin.getSelectedItem().toString()
-                    , fromRnd.getText()
-                    , toSpin.getSelectedItem().toString()
-                    , toRnd.getText()
-                    , eatCard.getText());
-
             shareString(s.toString());
         });
     }
@@ -139,34 +132,28 @@ public class SkillEatingDialog extends BaseTosDialog {
             computeEatCard();
         });
 
+        toSpin = makeSpin(R.id.skillTo, 2, 15);
+        pgsSpin = makeSpin(R.id.skillPercent, 0, 99);
+        fromSpin = makeSpin(R.id.skillFrom, 1, 14);
+    }
+
+    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
         int downId = android.R.layout.simple_spinner_dropdown_item;
         int layoutId = R.layout.view_spinner_item;
-        ArrayAdapter<String> levelsF = new ArrayAdapter<>(getActivity(), layoutId);
-        levelsF.setDropDownViewResource(downId);
-        ArrayAdapter<String> levelsT = new ArrayAdapter<>(getActivity(), layoutId);
-        levelsT.setDropDownViewResource(downId);
-        ArrayAdapter<String> progress = new ArrayAdapter<>(getActivity(), layoutId);
-        progress.setDropDownViewResource(downId);
-        for (int i = 1; i <= 15; i++) {
-            String s = "" + i;
-            if (i < 15) {
-                levelsF.add(s);
-            }
-            levelsT.add(s);
-        }
-        fromSpin = findViewById(R.id.skillFrom);
-        toSpin = findViewById(R.id.skillTo);
-        fromSpin.setAdapter(levelsF);
-        toSpin.setAdapter(levelsT);
-        fromSpin.setOnItemSelectedListener(adapterSelect);
-        toSpin.setOnItemSelectedListener(adapterSelect);
 
-        for (int i = 0; i < 100; i++) {
-            progress.add("" + i);
+        // Set up adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
+        adapter.setDropDownViewResource(downId);
+        for (int i = from; i <= to; i++) {
+            adapter.add("" + i);
         }
-        pgsSpin = findViewById(R.id.skillPercent);
-        pgsSpin.setAdapter(progress);
-        pgsSpin.setOnItemSelectedListener(adapterSelect);
+
+        // Set up spinner
+        Spinner spinner = findViewById(spinnerID);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(adapterSelect);
+
+        return spinner;
     }
 
     private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {

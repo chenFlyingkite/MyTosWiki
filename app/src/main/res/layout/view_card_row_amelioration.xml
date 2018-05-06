@@ -3,51 +3,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:background="#888">
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            style="@style/cardText.header.2"
-            android:layout_width="@dimen/t50dp"
-            android:text="@string/cards_ameLv"/>
-
-        <TextView
-            style="@style/cardText.header.2"
-            android:text="@string/cards_soul"/>
-
-        <TextView
-            style="@style/cardText.header.6"
-            android:text="@string/cards_name"/>
-    </LinearLayout>
+    tools:background="#8000">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RelativeLayout
-            android:layout_width="@dimen/t50dp"
-            android:layout_height="match_parent">
+            style="@style/cardText.item.2"
+            android:minHeight="@dimen/t40dp">
+
             <ImageView
                 android:id="@+id/cardAmeLv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/t30dp"
+                android:layout_height="@dimen/t30dp"
                 android:layout_centerInParent="true"/>
         </RelativeLayout>
 
         <TextView
             android:id="@+id/cardAmeCost"
-            style="@style/cardText.header.2"
+            style="@style/cardText.item.2"
             tools:text="100"/>
 
         <TextView
             android:id="@+id/cardAmeName"
-            style="@style/cardText.header.6"
-            android:text="@string/cards_name"/>
+            style="@style/cardText.item.6"
+            tools:text="@string/cards_name"/>
     </LinearLayout>
 
 </LinearLayout>

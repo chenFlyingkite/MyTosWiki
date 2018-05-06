@@ -7,4 +7,5 @@
     <dimen name="cardText4">@dimen/t140dp</dimen>
     <dimen name="cardText6">@dimen/t210dp</dimen>
     <dimen name="cardText8">@dimen/t280dp</dimen>
+    <dimen name="cardText10">@dimen/t350dp</dimen>
 </resources>

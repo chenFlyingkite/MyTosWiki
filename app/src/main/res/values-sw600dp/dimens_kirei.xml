@@ -330,6 +330,7 @@
     <dimen name="t313dp">391dp</dimen>
     <dimen name="t320dp">400dp</dimen>
     <dimen name="t340dp">425dp</dimen>
+    <dimen name="t350dp">438dp</dimen>
     <dimen name="t360dp">450dp</dimen>
     <dimen name="t380dp">475dp</dimen>
     <dimen name="t430dp">538dp</dimen>

@@ -1,314 +1,431 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#8000">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <android.support.percent.PercentRelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8000">
 
-        <!--
-
-            android:layout_width="@dimen/t360dp"
-            android:layout_height="@dimen/t200dp"
-         -->
-        <ImageView
-            android:id="@+id/cardImage"
+        <android.support.percent.PercentRelativeLayout
             android:layout_width="match_parent"
-            app:layout_aspectRatio="180%"
-            android:adjustViewBounds="true"
-            android:layout_centerHorizontal="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/card_background"
-            tools:background="#a00"/>
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                app:layout_aspectRatio="180%"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card_background"
+                tools:background="#a00"/>
 
-        <ImageView
-            android:id="@+id/cardIcon"
-            android:layout_width="@dimen/t70dp"
-            android:layout_height="@dimen/t70dp"
-            android:src="@drawable/unknown_card"
-            tools:background="#aa0"/>
+            <ImageView
+                android:id="@+id/cardIcon"
+                android:layout_width="@dimen/t70dp"
+                android:layout_height="@dimen/t70dp"
+                android:src="@drawable/unknown_card"
+                tools:background="#aa0"/>
 
-        <TextView
-            android:id="@+id/cardInfo"
-            android:layout_below="@id/cardImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textColor="#fff"/>
-
-        <HorizontalScrollView
-            android:id="@+id/cardTable"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cardImage">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/cardInfo"
+                android:layout_below="@id/cardImage"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:visibility="gone"
+                android:textColor="#fff"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/t10dp"/>
+            <HorizontalScrollView
+                android:id="@+id/cardTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardImage">
 
-                <!-- Card basic info : name -->
                 <LinearLayout
+                    android:id="@+id/cardContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_normId"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_attr"/>
-
-                    <TextView
-                        style="@style/cardText.header.4"
-                        android:text="@string/cards_name"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/cardIdNorm"
-                        style="@style/cardText.item.2"
-                        tools:text="0004"/>
-
-                    <TextView
-                        android:id="@+id/cardAttr"
-                        style="@style/cardText.item.2"
-                        tools:text="@string/cards_attr_water"/>
-
-                    <TextView
-                        android:id="@+id/cardName"
-                        style="@style/cardText.item.4"
-                        tools:text="水元素\n賢者莫莉"/>
-                </LinearLayout>
-
-                <!-- Card basic info : race  -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_race"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_rarity"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_space"/>
-
-                    <TextView
-                        style="@style/cardText.header.4"
-                        android:text="@string/cards_series"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/cardRace"
-                        style="@style/cardText.item.2"
-                        tools:text="@string/cards_race_human"/>
-
-                    <TextView
-                        android:id="@+id/cardRarity"
-                        style="@style/cardText.item.2"
-                        tools:text="5★"/>
-
-                    <TextView
-                        android:id="@+id/cardSpace"
-                        style="@style/cardText.item.2"
-                        tools:text="9"/>
-
-                    <TextView
-                        android:id="@+id/cardSeries"
-                        style="@style/cardText.item.4"
-                        tools:text="主角"/>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/t10dp"/>
-
-                <!-- Card basic info : exp  -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_maxMuLv"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_maxTuLv"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_maxLv"/>
-
-                    <TextView
-                        style="@style/cardText.header.4"
-                        android:text="@string/cards_expMax"/>
-
-                    <TextView
-                        style="@style/cardText.header.2"
-                        android:text="@string/cards_expCurve"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/cardMu"
-                        style="@style/cardText.item.2"
-                        tools:text="2"/>
-
-                    <TextView
-                        android:id="@+id/cardTu"
-                        style="@style/cardText.item.2"
-                        tools:text="4"/>
-
-                    <TextView
-                        android:id="@+id/cardLvMax"
-                        style="@style/cardText.item.2"
-                        tools:text="99"/>
-
-                    <TextView
-                        android:id="@+id/cardExpMax"
-                        style="@style/cardText.item.4"
-                        tools:text="3,000,000"/>
-
-                    <TextView
-                        android:id="@+id/cardExpCurve"
-                        style="@style/cardText.item.2"
-                        tools:text="300萬"/>
-                </LinearLayout>
-
-                <!-- Card basic info : skill  -->
-                <!--
-                <LinearLayout
-                    android:id="@+id/cardSkill1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/t10dp"
+                    android:paddingBottom="@dimen/t80dp"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
+                        android:layout_height="@dimen/t10dp"/>
+
+                    <!-- Card basic info : name -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
-                            style="@style/cardText.header.6"
-                            android:text="@string/cards_skill"/>
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_normId"/>
 
                         <TextView
                             style="@style/cardText.header.2"
-                            android:text="@string/cards_skillMin"/>
+                            android:text="@string/cards_attr"/>
+
+                        <TextView
+                            style="@style/cardText.header.4"
+                            android:text="@string/cards_name"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cardIdNorm"
+                            style="@style/cardText.item.2"
+                            tools:text="0004"/>
+
+                        <TextView
+                            android:id="@+id/cardAttr"
+                            style="@style/cardText.item.2"
+                            tools:text="@string/cards_attr_water"/>
+
+                        <TextView
+                            android:id="@+id/cardName"
+                            style="@style/cardText.item.4"
+                            tools:text="水元素\n賢者莫莉"/>
+                    </LinearLayout>
+
+                    <!-- Card basic info : race  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <TextView
                             style="@style/cardText.header.2"
-                            android:text="@string/cards_skillMax"/>
+                            android:text="@string/cards_race"/>
+
+                        <TextView
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_rarity"/>
+
+                        <TextView
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_space"/>
+
+                        <TextView
+                            style="@style/cardText.header.4"
+                            android:text="@string/cards_series"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cardRace"
+                            style="@style/cardText.item.2"
+                            tools:text="@string/cards_race_human"/>
+
+                        <TextView
+                            android:id="@+id/cardRarity"
+                            style="@style/cardText.item.2"
+                            tools:text="5★"/>
+
+                        <TextView
+                            android:id="@+id/cardSpace"
+                            style="@style/cardText.item.2"
+                            tools:text="9"/>
+
+                        <TextView
+                            android:id="@+id/cardSeries"
+                            style="@style/cardText.item.4"
+                            tools:text="主角"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t10dp"/>
+
+                    <!-- Card basic info : exp  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_maxMuLv"
+                            android:textColor="@color/yellow"/>
+
+                        <TextView
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_maxTuLv"
+                            android:textColor="@color/yellow"/>
 
                         <TextView
                             style="@style/cardText.header.2"
                             android:text="@string/cards_maxLv"/>
+
+                        <TextView
+                            style="@style/cardText.header.4"
+                            android:text="@string/cards_expMax"/>
+
+                        <TextView
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_expCurve"/>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/cardSkillName1"
-                            style="@style/cardText.item.6"
-                            tools:text="符石激發 ‧ 水"/>
+                            android:id="@+id/cardMu"
+                            style="@style/cardText.item.2"
+                            android:textColor="@color/yellow"
+                            tools:text="2"/>
 
                         <TextView
-                            android:id="@+id/cardSkillCDMin1"
+                            android:id="@+id/cardTu"
                             style="@style/cardText.item.2"
-                            tools:text="14"/>
+                            android:textColor="@color/yellow"
+                            tools:text="4"/>
 
                         <TextView
-                            android:id="@+id/cardSkillCDMax1"
+                            android:id="@+id/cardLvMax"
                             style="@style/cardText.item.2"
-                            tools:text="5"/>
+                            tools:text="99"/>
 
                         <TextView
-                            android:id="@+id/cardSkillLv1"
+                            android:id="@+id/cardExpMax"
+                            style="@style/cardText.item.4"
+                            tools:text="3,000,000"/>
+
+                        <TextView
+                            android:id="@+id/cardExpCurve"
                             style="@style/cardText.item.2"
-                            tools:text="10"/>
+                            tools:text="300萬"/>
                     </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/cardSkillDesc1"
-                        style="@style/cardText.item"
-                        tools:text="直接引爆木符石造成敵全體水屬性傷害，並產生強化符石"/>
-                </LinearLayout>
-                -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/t10dp"/>
+                    <!-- Card basic info : skill  -->
+                    <!--
+                    <LinearLayout
+                        android:id="@+id/cardSkill1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/t10dp"
+                        android:orientation="vertical">
 
-                <include
-                    android:id="@+id/cardSkill_1"
-                    layout="@layout/view_card_row_skill"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <include
-                    android:id="@+id/cardSkill_2"
-                    layout="@layout/view_card_row_skill"/>
-                <!--
+                            <TextView
+                                style="@style/cardText.header.6"
+                                android:text="@string/cards_skill"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_skillMin"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_skillMax"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_maxLv"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/cardSkillName1"
+                                style="@style/cardText.item.6"
+                                tools:text="符石激發 ‧ 水"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillCDMin1"
+                                style="@style/cardText.item.2"
+                                tools:text="14"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillCDMax1"
+                                style="@style/cardText.item.2"
+                                tools:text="5"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillLv1"
+                                style="@style/cardText.item.2"
+                                tools:text="10"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cardSkillDesc1"
+                            style="@style/cardText.item"
+                            tools:text="直接引爆木符石造成敵全體水屬性傷害，並產生強化符石"/>
+                    </LinearLayout>
+                    -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t10dp"/>
+
+                    <include
+                        android:id="@+id/cardSkill_1"
+                        layout="@layout/view_card_row_skill"/>
+
+                    <include
+                        android:id="@+id/cardSkill_2"
+                        layout="@layout/view_card_row_skill"/>
+                    <!--
+                    <LinearLayout
+                        android:id="@+id/cardSkill2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/cardText.header.6"
+                                android:text="@string/cards_skill"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_skillMin"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_skillMax"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_maxLv"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/cardSkillName2"
+                                style="@style/cardText.item.6"
+                                tools:text="技二名稱"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillCDMin2"
+                                style="@style/cardText.item.2"
+                                tools:text="14"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillCDMax2"
+                                style="@style/cardText.item.2"
+                                tools:text="5"/>
+
+                            <TextView
+                                android:id="@+id/cardSkillLv2"
+                                style="@style/cardText.item.2"
+                                tools:text="10"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cardSkillDesc2"
+                            style="@style/cardText.item"
+                            tools:text="第二個技能內容"/>
+                    </LinearLayout>
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/cardAmeliorationTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/t10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_battleName"/>
+
+                            <TextView
+                                android:id="@+id/cardAmeBattleName"
+                                style="@style/cardText.item.6"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/skyBlue"
+                                tools:text="@string/cards_battleName"/>
+
+                            <ImageView
+                                android:id="@+id/cardAmeBattleLink"
+                                android:layout_width="@dimen/t30dp"
+                                android:layout_height="@dimen/t30dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/logo_chrome"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_ameLv"/>
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:text="@string/cards_soul"/>
+
+                            <TextView
+                                style="@style/cardText.header.6"
+                                android:text="@string/cards_name"/>
+                        </LinearLayout>
+
+                        <include
+                            android:id="@+id/cardAme1"
+                            layout="@layout/view_card_row_amelioration"/>
+
+                        <include
+                            android:id="@+id/cardAme2"
+                            layout="@layout/view_card_row_amelioration"/>
+
+                        <include
+                            android:id="@+id/cardAme3"
+                            layout="@layout/view_card_row_amelioration"/>
+
+                        <include
+                            android:id="@+id/cardAme4"
+                            layout="@layout/view_card_row_amelioration"/>
+                    </LinearLayout>
+
+
                 <LinearLayout
-                    android:id="@+id/cardSkill2"
+                    android:id="@+id/cardAwakenRecallTable"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <View
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/cardText.header.6"
-                            android:text="@string/cards_skill"/>
-
-                        <TextView
-                            style="@style/cardText.header.2"
-                            android:text="@string/cards_skillMin"/>
-
-                        <TextView
-                            style="@style/cardText.header.2"
-                            android:text="@string/cards_skillMax"/>
-
-                        <TextView
-                            style="@style/cardText.header.2"
-                            android:text="@string/cards_maxLv"/>
-                    </LinearLayout>
+                        android:layout_height="@dimen/t10dp"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -316,34 +433,29 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/cardSkillName2"
+                            style="@style/cardText.header.2"
+                            android:text="@string/cards_battleName"/>
+
+                        <TextView
+                            android:id="@+id/cardAwkBattleName"
                             style="@style/cardText.item.6"
-                            tools:text="技二名稱"/>
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/skyBlue"
+                            tools:text="@string/cards_battleName"/>
 
-                        <TextView
-                            android:id="@+id/cardSkillCDMin2"
-                            style="@style/cardText.item.2"
-                            tools:text="14"/>
+                        <ImageView
+                            android:id="@+id/cardAwkBattleLink"
+                            android:layout_width="@dimen/t30dp"
+                            android:layout_height="@dimen/t30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/logo_chrome"/>
 
-                        <TextView
-                            android:id="@+id/cardSkillCDMax2"
-                            style="@style/cardText.item.2"
-                            tools:text="5"/>
-
-                        <TextView
-                            android:id="@+id/cardSkillLv2"
-                            style="@style/cardText.item.2"
-                            tools:text="10"/>
                     </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/cardSkillDesc2"
-                        style="@style/cardText.item"
-                        tools:text="第二個技能內容"/>
                 </LinearLayout>
-                -->
-            </LinearLayout>
-        </HorizontalScrollView>
 
-    </android.support.percent.PercentRelativeLayout>
-</ScrollView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </android.support.percent.PercentRelativeLayout>
+    </ScrollView>
+</RelativeLayout>

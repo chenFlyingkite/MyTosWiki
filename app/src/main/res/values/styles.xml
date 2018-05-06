@@ -17,7 +17,7 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:backgroundDimAmount">0.8</item>
     </style>
     <style name="CommonAlertDialog.noFloating">
         <item name="android:windowIsFloating">false</item>
@@ -42,6 +42,8 @@
         <item name="android:textSize">@dimen/t20dp</item>
         <item name="android:textColor">#fff</item>
         <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/t5dp</item>
+        <item name="android:paddingRight">@dimen/t5dp</item>
     </style>
     <style name="cardText.header">
         <item name="android:background">@drawable/bg_rect_skyblue</item>
@@ -59,6 +61,9 @@
     <style name="cardText.header.8">
         <item name="android:layout_width">@dimen/cardText8</item>
     </style>
+    <style name="cardText.header.10">
+        <item name="android:layout_width">@dimen/cardText10</item>
+    </style>
     <style name="cardText.item">
         <item name="android:background">@drawable/bg_rect_green</item>
         <item name="android:textStyle">bold</item>
@@ -74,6 +79,9 @@
     </style>
     <style name="cardText.item.8">
         <item name="android:layout_width">@dimen/cardText8</item>
+    </style>
+    <style name="cardText.item.10">
+        <item name="android:layout_width">@dimen/cardText10</item>
     </style>
 
     <style name="gray_button" parent="common_text">

@@ -31,6 +31,7 @@
     <string name="cards_skillDesc">效果</string>
     <string name="cards_skillMin">初始 CD</string>
     <string name="cards_skillMax">滿等 CD</string>
+    <string name="cards_battleName">關卡名稱</string>
     <string name="cards_attr_water">水</string>
     <string name="cards_attr_fires">火</string>
     <string name="cards_attr_earth">木</string>
