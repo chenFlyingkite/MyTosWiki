@@ -3,10 +3,7 @@ package com.flyingkite.mytoswiki.dialog;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -18,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.flyingkite.library.Say;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.share.ShareHelper;
 
 public class BaseTosDialog extends DialogFragment implements
     DialogInterface.OnKeyListener
@@ -138,23 +136,15 @@ public class BaseTosDialog extends DialogFragment implements
     }
 
     protected void shareString(String msg, String chooser) {
-        Intent it = new Intent(Intent.ACTION_SEND);
-        it.putExtra(Intent.EXTRA_TEXT, msg);
-        it.setType("text/plain");
-        try {
-            getActivity().startActivity(Intent.createChooser(it, chooser));
-        } catch (ActivityNotFoundException e) {
-            e.printStackTrace();
-        }
+        ShareHelper.shareString(getActivity(), msg, chooser);
     }
 
     protected void viewLink(String link) {
-        Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-        try {
-            startActivity(it);
-        } catch (ActivityNotFoundException e) {
-            e.printStackTrace();
-        }
+        ShareHelper.viewLink(getActivity(), link);
+    }
+
+    protected void shareImage(View view, String filename) {
+        ShareHelper.shareImage(getActivity(), view, filename);
     }
 
     public void show(Activity activity) {

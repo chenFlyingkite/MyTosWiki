@@ -71,7 +71,7 @@
                             android:text="@string/cards_attr"/>
 
                         <TextView
-                            style="@style/cardText.header.4"
+                            style="@style/cardText.header.6"
                             android:text="@string/cards_name"/>
                     </LinearLayout>
 
@@ -92,7 +92,7 @@
 
                         <TextView
                             android:id="@+id/cardName"
-                            style="@style/cardText.item.4"
+                            style="@style/cardText.item.6"
                             tools:text="水元素\n賢者莫莉"/>
                     </LinearLayout>
 

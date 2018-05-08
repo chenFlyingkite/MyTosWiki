@@ -16,6 +16,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.share.ShareHelper;
+
+import java.text.NumberFormat;
 
 public class CardDialog extends BaseTosDialog {
     public static final String BUNDLE_CARD = "CardDialog.TosCard";
@@ -89,6 +92,15 @@ public class CardDialog extends BaseTosDialog {
 
         Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
         Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
+        cardIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //ShareHelper.shareBitmap(getActivity(), card.icon);
+                //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
+                String name = ShareHelper.cacheName("2.png");
+                ShareHelper.shareImage(getActivity(), v, name);
+            }
+        });
 
         cardIdNorm.setText(card.idNorm + "");
         cardAttr.setText(card.attribute + "");
@@ -101,12 +113,14 @@ public class CardDialog extends BaseTosDialog {
         cardMu.setText(card.maxMUPerLevel + "");
         cardTu.setText(card.maxTUAllLevel + "");
         cardLvMax.setText(card.LvMax + "");
-        cardExpMax.setText(card.ExpMax + "");
+        cardExpMax.setText(NumberFormat.getInstance().format(card.ExpMax));
         cardExpCurve.setText(card.expCurve + "萬");
 
+        // Fill in main skills
         setSkill(R.id.cardSkill_1, card.skillName, card.skillCDMin, card.skillCDMax, card.skillDesc);
         setSkill(R.id.cardSkill_2, card.skillName2, card.skillCDMin2, card.skillCDMax2, card.skillDesc2);
 
+        // Fill in Amelioration, I, II, III, IV
         boolean hasAme = card.skillAmeliorationCost1 > 0;
         cardAmeTable.setVisibility(hasAme ? View.VISIBLE : View.GONE);
         if (hasAme) {
@@ -118,6 +132,7 @@ public class CardDialog extends BaseTosDialog {
             setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeliorationCost4, card.skillAmeliorationName4);
         }
 
+        // Fill in AwakenRecall
         boolean hasAwk = !TextUtils.isEmpty(card.skillAwakenRecallName);
         cardAwkTable.setVisibility(hasAwk ? View.VISIBLE : View.GONE);
         if (hasAwk) {

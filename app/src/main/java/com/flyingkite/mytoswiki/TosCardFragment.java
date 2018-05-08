@@ -1,6 +1,5 @@
 package com.flyingkite.mytoswiki;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
@@ -10,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -40,6 +38,7 @@ import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
+import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
 import com.flyingkite.util.DialogManager;
@@ -166,24 +165,10 @@ public class TosCardFragment extends BaseFragment {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
             View view = cardsRecycler;
             //File folder = Environment.getExternalStoragePublicDirectory()
-            File folder = App.me.getExternalCacheDir();
-            String name = folder.getAbsolutePath() + File.separator + "1.png";
+            String name = ShareHelper.cacheName("1.png");
             LogE("Save to %s", name);
 
-            @SuppressLint("StaticFieldLeak")
-            SaveViewToBitmapTask task = new SaveViewToBitmapTask(view, name){
-                @Override
-                protected void onPostExecute(Void aVoid) {
-                    super.onPostExecute(aVoid);
-
-                    MediaScannerConnection.scanFile(getActivity(), new String[]{name}, null,
-                            (path, uri) -> {
-                                LogE("Scanned %s\n  as -> %s", path, uri);
-                                sendUriIntent(uri, "image/png");
-                            });
-                }
-            };
-            task.executeOnExecutor(ThreadUtil.cachedThreadPool);
+            ShareHelper.shareImage(getActivity(), view, name);
         });
     }
 
@@ -210,17 +195,6 @@ public class TosCardFragment extends BaseFragment {
 
     private void viewLink(TosCard card) {
         Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(card.wikiLink));
-        try {
-            startActivity(it);
-        } catch (ActivityNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void sendUriIntent(Uri uri, String type) {
-        Intent it = new Intent(Intent.ACTION_SEND);
-        it.putExtra(Intent.EXTRA_STREAM, uri);
-        it.setType(type);
         try {
             startActivity(it);
         } catch (ActivityNotFoundException e) {

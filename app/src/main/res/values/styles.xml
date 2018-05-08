@@ -17,7 +17,7 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="android:backgroundDimAmount">0.6</item>
     </style>
     <style name="CommonAlertDialog.noFloating">
         <item name="android:windowIsFloating">false</item>
