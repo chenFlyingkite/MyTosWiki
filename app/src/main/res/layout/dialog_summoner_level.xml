@@ -1,78 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#fff">
-
-    <LinearLayout
-        android:id="@+id/sldTools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/sldSave"
-            style="@style/tosIcon"
-            android:src="@drawable/ic_save_black_48dp"
-            android:visibility="gone"/>
-
-        <ImageView
-            android:id="@+id/sldGoTop"
-            style="@style/tosGoTop"/>
-
-        <ImageView
-            android:id="@+id/sldGoBottom"
-            style="@style/tosGoBottom"/>
-
-        <ImageView
-            android:id="@+id/sldSortMenu"
-            style="@style/tosIcon"
-            android:src="@drawable/ic_sort_black_48dp"
-            android:visibility="gone"/>
-    </LinearLayout>
-
-    <View
-        style="@style/divider_horizontal_1dp_ddd"/>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="#fff">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/blackText"
-            android:paddingLeft="@dimen/t5dp"
-            android:paddingRight="@dimen/t5dp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/cards_level"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/sldShortcuts"
+        <LinearLayout
+            android:id="@+id/sldTools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/sldSave"
+                style="@style/tosIcon"
+                android:src="@drawable/ic_save_black_48dp"
+                android:visibility="gone"/>
 
-    <View
-        style="@style/divider_horizontal_1dp_ddd"/>
+            <ImageView
+                android:id="@+id/sldGoTop"
+                style="@style/tosGoTop"/>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/t360dp">
+            <ImageView
+                android:id="@+id/sldGoBottom"
+                style="@style/tosGoBottom"/>
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/sldSortMenu"
+                style="@style/tosIcon"
+                android:src="@drawable/ic_sort_black_48dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <View
+            style="@style/divider_horizontal_1dp_ddd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/blackText"
+                android:paddingLeft="@dimen/t5dp"
+                android:paddingRight="@dimen/t5dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/cards_level"/>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/sld_recycler"
-                android:layout_width="wrap_content"
+                android:id="@+id/sldShortcuts"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-        </ScrollView>
-    </HorizontalScrollView>
 
-</LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/divider_horizontal_1dp_ddd"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t360dp">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/sld_recycler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
