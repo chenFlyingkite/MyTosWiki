@@ -21,6 +21,7 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import java.text.NumberFormat;
 
 public class CardDialog extends BaseTosDialog {
+    public static final String TAG = "CardDialog";
     public static final String BUNDLE_CARD = "CardDialog.TosCard";
 
     @Override

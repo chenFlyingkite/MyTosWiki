@@ -1,17 +1,11 @@
 package com.flyingkite.mytoswiki;
 
-import android.app.Dialog;
-import android.app.FragmentManager;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -19,20 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.flyingkite.library.FilesHelper;
 import com.flyingkite.library.GsonUtil;
-import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.ListUtil;
 import com.flyingkite.library.MathUtil;
 import com.flyingkite.library.ThreadUtil;
-import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
@@ -41,20 +29,17 @@ import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
-import com.flyingkite.util.DialogManager;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 
 public class TosCardFragment extends BaseFragment {
     public static final String TAG = "TosCardFragment";
@@ -79,6 +64,13 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortImproveAwk;
 
     private CardSort cardSort = new CardSort();
+
+    private ToolBarOwner toolOwner;
+
+    public interface ToolBarOwner {
+        void setToolsVisible(boolean visible);
+        boolean isToolsVisible();
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -125,27 +117,12 @@ public class TosCardFragment extends BaseFragment {
         tosInfo.setText(getString(R.string.cards_selection, n, n));
         cardLib.setDataSet(allCards
                 , (position, card) -> {
-                    DialogManager.GenericViewBuilder.InflateListener onInflate = (v, dialog) -> {
-                        ImageView icon = v.findViewById(R.id.cardIcon);
-                        ImageView image = v.findViewById(R.id.cardImage);
-                        TextView info = v.findViewById(R.id.cardInfo);
-
-                        Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(icon);
-                        Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(image);
-                        Gson g = new GsonBuilder().setPrettyPrinting().create();
-                        String s = g.toJson(card, TosCard.class);
-                        info.setText(s);
-                    };
-
-                    //new DialogManager.GenericViewBuilder(getActivity(), R.layout.dialog_card, onInflate).buildAndShow();
                     CardDialog d = new CardDialog();
 
                     Bundle b = new Bundle();
                     b.putParcelable(CardDialog.BUNDLE_CARD, card);
                     d.setArguments(b);
-
-                    d.show(getFragmentManager(), "123");
-
+                    d.show(getFragmentManager(), CardDialog.TAG);
 
                 }, (selected, total) ->  {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
@@ -153,12 +130,6 @@ public class TosCardFragment extends BaseFragment {
         );
         applySelection();
         test();
-    }
-
-    private void showDialog(Dialog dialog, Bundle bundle) {
-        FragmentManager fm = getActivity().getFragmentManager();
-        fm.beginTransaction();
-
     }
 
     private void initShareImage(View parent) {
@@ -193,15 +164,6 @@ public class TosCardFragment extends BaseFragment {
         LogE("%s cards", cnt);
     }
 
-    private void viewLink(TosCard card) {
-        Intent it = new Intent(Intent.ACTION_VIEW, Uri.parse(card.wikiLink));
-        try {
-            startActivity(it);
-        } catch (ActivityNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void initSortMenu() {
         // Create MenuWindow
         View menu = LayoutInflater.from(getActivity()).inflate(R.layout.popup_tos_sort, (ViewGroup) getView(), false);
@@ -233,62 +195,50 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void initSortByAttribute(View menu) {
-        ViewGroup vg = sortAttributes = menu.findViewById(R.id.sortAttributes);
-
-        setChildClick(vg, this::clickAttr);
+        sortAttributes = initSortOf(menu, R.id.sortAttributes, this::clickAttr);
     }
 
     private void initSortByRace(View menu) {
-        ViewGroup vg = sortRace = menu.findViewById(R.id.sortRaces);
-
-        setChildClick(vg, this::clickRace);
+        sortRace = initSortOf(menu, R.id.sortRaces, this::clickRace);
     }
 
     private void initSortByCassandra(View menu) {
-        ViewGroup vg = sortCassandra = menu.findViewById(R.id.sortCassandraList);
-
-        setChildClick(vg, this::clickCassandra);
+        sortCassandra = initSortOf(menu, R.id.sortCassandraList, this::clickCassandra);
     }
 
     private void initSortByStar(View menu) {
-        ViewGroup vg = sortStar = menu.findViewById(R.id.sortStar);
-
-        setChildClick(vg, this::clickStar);
+        sortStar = initSortOf(menu, R.id.sortStar, this::clickStar);
     }
 
     private void initSortByCommon(View menu) {
-        ViewGroup vg = sortCommon = menu.findViewById(R.id.sortCommonList);
-
-        setChildClick(vg, this::clickCommon);
+        sortCommon = initSortOf(menu, R.id.sortCommonList, this::clickCommon);
     }
 
     private void initSortBySpecial(View menu) {
-        ViewGroup vg = sortSpecial = menu.findViewById(R.id.sortSpecialList);
-
-        setChildClick(vg, this::clickSpecial);
+        sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
 
     private void initSortByHide(View menu) {
-        ViewGroup vg = sortHide = menu.findViewById(R.id.sortHide);
+        sortHide = initSortOf(menu, R.id.sortHide, this::clickHide);
+    }
 
-        setChildClick(vg, this::clickHide);
+    private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
+        T vg = menu.findViewById(id);
+        setChildClick(vg, childClick);
+        return vg;
     }
 
     private void initDisplay(View menu) {
-        ViewGroup vg = sortDisplay = menu.findViewById(R.id.sortDisplayList);
-
-        setChildClick(vg, this::clickDisplay);
+        sortDisplay = initSortOf(menu, R.id.sortDisplayList, this::clickDisplay);
         sortDisplay.check(R.id.sortDisplayNormId);
     }
 
     private void initSortByImprove(View menu) {
-        ViewGroup vg = sortImprove = menu.findViewById(R.id.sortImprove);
-
         sortImproveNo = menu.findViewById(R.id.sortImproveNo);
         sortImproveAme = menu.findViewById(R.id.sortImproveAmelioration);
         sortImproveAwk = menu.findViewById(R.id.sortImproveAwakenRecall);
 
-        setChildClick(vg, this::clickImprove);
+        sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
 
     //------
@@ -306,15 +256,11 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickAttr(View v) {
-        toggleSelection(v, sortAttributes);
-
-        applySelection();
+        nonAllApply(v, sortAttributes);
     }
 
     private void clickRace(View v) {
-        toggleSelection(v, sortRace);
-
-        applySelection();
+        nonAllApply(v, sortRace);
     }
 
     private void clickCassandra(View v) {
@@ -329,9 +275,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickStar(View v) {
-        toggleSelection(v, sortStar);
-
-        applySelection();
+        nonAllApply(v, sortStar);
     }
 
     private void clickSpecial(View v) {
@@ -428,6 +372,12 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
+    private void nonAllApply(View v, ViewGroup vg) {
+        toggleSelection(v, vg);
+
+        applySelection();
+    }
+
     private void setChildClick(ViewGroup vg, View.OnClickListener clk) {
         int n = vg.getChildCount();
         for (int i = 0; i < n; i++) {
@@ -490,13 +440,6 @@ public class TosCardFragment extends BaseFragment {
         return R.layout.fragment_tos_card;
     }
 
-    public interface ToolBarOwner {
-        void setToolsVisible(boolean visible);
-        boolean isToolsVisible();
-    }
-
-    private ToolBarOwner toolOwner;
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -549,83 +492,8 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
-    private class SaveViewToBitmapTask extends AsyncTask<Void, Void, Void> {
-        private View view;
-        private String savedName;
-        private int width;
-        private int height;
-        private WaitingDialog w;
-        private TicTac2 tt = new TicTac2();
-
-        public SaveViewToBitmapTask(View v, String filename) {
-            view = v;
-            savedName = filename;
-            ofSize(v.getWidth(), v.getHeight());
-        }
-
-        public SaveViewToBitmapTask ofSize(int w, int h) {
-            width = w;
-            height = h;
-            return this;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            w = new WaitingDialog.Builder(getActivity(), true)
-                    .onCancel((dialog) -> {
-                        cancel(true);
-                    }).buildAndShow();
-            tt.tic();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            if (view == null || savedName == null) {
-                LogE("Cannot save bitmap : %s, %s", view, savedName);
-                return null;
-            }
-
-            // 1. [<10ms] Create new bitmap
-            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-            if (isCancelled()) return null;
-
-            // 2. [100ms] Let view draws to the bitmap
-            Canvas c = new Canvas(bitmap);
-            view.draw(c);
-            if (isCancelled()) return null;
-
-            // 3. [<10ms] Create output file
-            File f = new File(savedName);
-            File fp = f.getParentFile();
-            if (fp != null) {
-                fp.mkdirs();
-            }
-            FilesHelper.ensureDelete(f);
-            if (isCancelled()) return null;
-
-            // 4. [~1kms] Writing bitmap to file
-            FileOutputStream fos = null;
-            try {
-                fos = new FileOutputStream(f);
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } finally {
-                IOUtil.closeIt(fos);
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            tt.tac("Save done");
-            if (w != null) {
-                w.dismiss();
-            }
-        }
-    }
-
     private class TosSelect extends TosSelectAttribute {
+        private final String[] keep = getResources().getStringArray(R.array.cards_keep_keys);
         private final String[] freemove = getResources().getStringArray(R.array.cards_freemove_keys);
         private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys);
 
@@ -642,7 +510,7 @@ public class TosCardFragment extends BaseFragment {
             return attrs.contains(c.attribute)
                     && races.contains(c.race)
                     && stars.contains("" + c.rarity)
-                    && selectForFreeMove(c)
+                    && selectForSpecial(c)
                     && selectForShow(c)
                     && selectForImprove(c)
             ;
@@ -673,23 +541,32 @@ public class TosCardFragment extends BaseFragment {
             return accept;
         }
 
-        private boolean selectForFreeMove(TosCard c) {
+        private boolean selectForSpecial(TosCard c) {
             String key = c.skillDesc + " & " + c.skillDesc2;
             final int id = sortSpecial.getCheckedRadioButtonId();
             boolean result = false;
             switch (id) {
                 case R.id.sortSpecialFreeMove:
-                    for (int i = 0; i < freemove.length && !result; i++) {
-                        if (key.contains(freemove[i])) {
-                            result = true;
-                        }
-                    }
+                    result = find(key, freemove);
+                    break;
+                case R.id.sortSpecialKeep:
+                    result = find(key, keep);
                     break;
                 default:
                     result = true;
             }
             return result;
         }
+
+        private boolean find(String key, String[] data) {
+            for (int i = 0; i < data.length; i++) {
+                if (key.contains(data[i])) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         private boolean selectForImprove(TosCard c) {
             boolean accept = true;
@@ -707,7 +584,7 @@ public class TosCardFragment extends BaseFragment {
 
         @NonNull
         @Override
-        public List<Integer> sort(@NonNull List <Integer> result) {
+        public List<Integer> sort(@NonNull List<Integer> result) {
             Comparator<Integer> cmp;
             cmp = getCommonComparator();
             if (cmp == null) {
@@ -836,7 +713,7 @@ public class TosCardFragment extends BaseFragment {
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
                         double atk = c.maxAttack + c.maxRecovery * 3.5;
-                        msg = String.format("%.1f", atk);
+                        msg = String.format(Locale.US, "%.1f", atk);
                         message.add(msg);
                     }
                     break;
@@ -845,7 +722,7 @@ public class TosCardFragment extends BaseFragment {
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
                         double atk = 1 + c.maxRecovery * 3.5 / c.maxAttack;
-                        msg = String.format("%.2f", atk);
+                        msg = String.format(Locale.US, "%.2f", atk);
                         message.add(msg);
                     }
                     break;

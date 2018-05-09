@@ -238,6 +238,10 @@
                 android:id="@+id/sortSpecialFreeMove"
                 style="@style/sortRadio"
                 android:text="@string/cards_freemove"/>
+            <RadioButton
+                android:id="@+id/sortSpecialKeep"
+                style="@style/sortRadio"
+                android:text="@string/cards_keep"/>
         </RadioGroup>
 
         <TextView

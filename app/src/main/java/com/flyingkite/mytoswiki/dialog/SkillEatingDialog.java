@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
+import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
@@ -169,12 +170,12 @@ public class SkillEatingDialog extends BaseTosDialog {
     };
 
     private void computeEatCard() {
-        int lvFrom = fromSpin.getSelectedItemPosition() + 1;
-        int pgs = pgsSpin.getSelectedItemPosition();
+        int lvFrom = Integer.parseInt(fromSpin.getSelectedItem().toString());
+        int pgs = Integer.parseInt(pgsSpin.getSelectedItem().toString());
         int from = (int) Math.round(ROUNDS_SUM[lvFrom] + 0.01 * pgs * (ROUNDS_SUM[lvFrom + 1] - ROUNDS_SUM[lvFrom]));
         fromRnd.setText("" + from);
 
-        int lvTo = toSpin.getSelectedItemPosition() + 1;
+        int lvTo = Integer.parseInt(toSpin.getSelectedItem().toString());
         int to = ROUNDS_SUM[lvTo];
         toRnd.setText("" + to);
 
@@ -220,6 +221,12 @@ public class SkillEatingDialog extends BaseTosDialog {
     }
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
+        private TicTac2 clk = new TicTac2();
+        @Override
+        protected void onPreExecute() {
+            clk.tic();
+        }
+
         @Override
         protected SkillEat doInBackground(Void... voids) {
             return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
@@ -227,6 +234,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
         @Override
         protected void onPostExecute(SkillEat data) {
+            clk.tac("skEat loaded");
             skEat = data != null ? data : new SkillEat();
             updateFromData();
         }
