@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.flyingkite.library.GsonUtil;
-import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.Texts;
@@ -20,11 +19,16 @@ import com.flyingkite.mytoswiki.library.TextsAdapter;
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class TextEditorDialog {
     public interface DialogOwner {
         Activity getActivity();
     }
+    protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 
     private DialogOwner owner;
     private Texts texts;
@@ -143,7 +147,7 @@ public class TextEditorDialog {
             }
         });
 
-        new LoadTextAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
+        new LoadTextAsyncTask().executeOnExecutor(sSingle);
     }
 
     private void updateTextData() {

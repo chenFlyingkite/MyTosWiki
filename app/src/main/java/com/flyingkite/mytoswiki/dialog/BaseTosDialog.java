@@ -17,11 +17,16 @@ import com.flyingkite.library.Say;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 public class BaseTosDialog extends DialogFragment implements
-    DialogInterface.OnKeyListener
-    , DialogInterface.OnShowListener
-    //, KeyEvent.Callback
-{
+        DialogInterface.OnKeyListener,
+        DialogInterface.OnShowListener {
+    protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
+
     public BaseTosDialog() {
         // https://stackoverflow.com/a/15004206
         super();
@@ -43,6 +48,7 @@ public class BaseTosDialog extends DialogFragment implements
         );
     }
 
+    @Deprecated
     private int ofTheme() {
         return isFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
     }
@@ -68,11 +74,6 @@ public class BaseTosDialog extends DialogFragment implements
     @Override
     public void onCancel(DialogInterface dialog) {
         super.onCancel(dialog);
-        if (isCancelable()) {
-            onBackPressed();
-        } else {
-            dismissAllowingStateLoss();
-        }
     }
 
     @Override
@@ -111,18 +112,6 @@ public class BaseTosDialog extends DialogFragment implements
         onFinishInflate(view, getDialog());
     }
 
-    //https://developer.android.com/guide/topics/ui/dialogs?authuser=1&hl=zh-tw
-//    @Override
-//    public Dialog onCreateDialog(Bundle savedInstanceState) {
-//        // The only reason you might override this method when using onCreateView() is
-//        // to modify any dialog characteristics. For example, the dialog includes a
-//        // title by default, but your custom layout might not need it. So here you can
-//        // remove the dialog title, but you must call the superclass to get the Dialog.
-//        Dialog dialog = super.onCreateDialog(savedInstanceState);
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        return dialog;
-//    }
-
     protected int getLayoutId() {
         return -1;
     }
@@ -148,8 +137,12 @@ public class BaseTosDialog extends DialogFragment implements
     }
 
     public void show(Activity activity) {
-        Say.Log("name = %s", this.getClass().getCanonicalName());
-        show(activity.getFragmentManager(), this.getClass().getCanonicalName());
+        Say.Log("show %s", sig());
+        show(activity.getFragmentManager(), sig());
+    }
+
+    protected final String sig() {
+        return this.getClass().getCanonicalName();
     }
 
     protected void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
@@ -178,7 +171,13 @@ public class BaseTosDialog extends DialogFragment implements
         }
     }
 
-    public void onBackPressed() {
+    /**
+     *
+     * @return true if this event was consumed.
+     * @see Dialog#dispatchKeyEvent(KeyEvent)
+     */
+    public boolean onBackPressed() {
+        return false;
     }
 
     protected <T extends View> T findViewById(@IdRes int id) {
@@ -187,6 +186,16 @@ public class BaseTosDialog extends DialogFragment implements
 
     @Override
     public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+        int action = event.getAction();
+        switch (action) {
+            case KeyEvent.ACTION_UP:
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    if (onBackPressed()) {
+                        return true;
+                    }
+                }
+                break;
+        }
         return false;
     }
 
@@ -194,37 +203,4 @@ public class BaseTosDialog extends DialogFragment implements
     public void onShow(DialogInterface dialog) {
 
     }
-
-    // From android.app.Dialog
-    /*
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            event.startTracking();
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public boolean onKeyLongPress(int keyCode, KeyEvent event) {
-        return false;
-    }
-
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.isTracking()
-                && !event.isCanceled()) {
-            onBackPressed();
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean onKeyMultiple(int keyCode, int count, KeyEvent event) {
-        return false;
-    }
-    */
 }

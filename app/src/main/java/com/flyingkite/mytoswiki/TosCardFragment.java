@@ -82,7 +82,7 @@ public class TosCardFragment extends BaseFragment {
         initSortMenu();
         initToolIcons();
 
-        new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
+        new LoadDataAsyncTask().executeOnExecutor(sSingle);
         new ParseCardsTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
@@ -427,7 +427,9 @@ public class TosCardFragment extends BaseFragment {
         cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
         cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
         cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
-        GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
+        sSingle.submit(() -> {
+            GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
+        });
     }
 
     @Override

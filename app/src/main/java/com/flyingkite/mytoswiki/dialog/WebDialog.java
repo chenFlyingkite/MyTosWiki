@@ -54,11 +54,12 @@ public class WebDialog extends BaseTosDialog {
     }
 
     @Override
-    public void onBackPressed() {
+    public boolean onBackPressed() {
         if (web.canGoBack()) {
             web.goBack();
+            return true;
         } else {
-            super.onBackPressed();
+            return super.onBackPressed();
         }
     }
 

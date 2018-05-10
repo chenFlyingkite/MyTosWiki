@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.Say;
-import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
@@ -62,7 +61,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
         initSpinners();
-        new LoadDataAsyncTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
+        new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
         initShare();
         initTable();
@@ -211,7 +210,9 @@ public class SkillEatingDialog extends BaseTosDialog {
         skEat.toLevel = toSpin.getSelectedItemPosition();
         skEat.progress = pgsSpin.getSelectedItemPosition();
         skEat.use600 = use600.isChecked();
-        GsonUtil.writeFile(getSkillEatFile(), new Gson().toJson(skEat));
+        sSingle.submit(() -> {
+            GsonUtil.writeFile(getSkillEatFile(), new Gson().toJson(skEat));
+        });
     }
 
     // The file of dialog setting

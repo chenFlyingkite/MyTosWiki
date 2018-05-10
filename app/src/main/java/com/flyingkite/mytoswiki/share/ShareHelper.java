@@ -35,6 +35,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
+/**
+ * <a href="https://developer.android.com/training/sharing/send">
+ *     https://developer.android.com/training/sharing/send
+ *     </a>
+ */
 public class ShareHelper {
     private ShareHelper() {}
 
