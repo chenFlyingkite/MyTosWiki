@@ -36,6 +36,20 @@
         <item name="android:textColor">#000</item>
     </style>
 
+    <!-- Borders of table -->
+    <style name="cardRow">
+        <item name="android:showDividers">middle</item>
+    </style>
+    <style name="cardRow.blueV">
+        <item name="android:background">@drawable/bg_rect_skyblue</item>
+        <item name="android:divider">@drawable/bg_v_skyblue</item>
+    </style>
+    <style name="cardRow.greenV">
+        <item name="android:background">@drawable/bg_rect_green</item>
+        <item name="android:divider">@drawable/bg_v_green</item>
+    </style>
+
+    <!-- Texts of table -->
     <style name="cardText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -46,7 +60,6 @@
         <item name="android:paddingRight">@dimen/t5dp</item>
     </style>
     <style name="cardText.header">
-        <item name="android:background">@drawable/bg_rect_skyblue</item>
         <item name="android:textSize">@dimen/t15dp</item>
     </style>
     <style name="cardText.header.2">
@@ -65,7 +78,6 @@
         <item name="android:layout_width">@dimen/cardText10</item>
     </style>
     <style name="cardText.item">
-        <item name="android:background">@drawable/bg_rect_green</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="cardText.item.2">

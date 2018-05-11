@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <android.support.percent.PercentRelativeLayout
+                android:id="@+id/cardImages"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
@@ -63,6 +64,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.blueV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -81,6 +83,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.greenV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -103,6 +106,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.blueV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -125,6 +129,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.greenV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -156,6 +161,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.blueV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -184,6 +190,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        style="@style/cardRow.greenV"
                         android:orientation="horizontal">
 
                         <TextView
@@ -220,12 +227,8 @@
                         android:layout_height="@dimen/t10dp"/>
 
                     <include
-                        android:id="@+id/cardSkill_1"
-                        layout="@layout/view_card_row_skill"/>
-
-                    <include
-                        android:id="@+id/cardSkill_2"
-                        layout="@layout/view_card_row_skill"/>
+                        android:id="@+id/cardSkill_leader"
+                        layout="@layout/view_card_skill_leader"/>
 
                     <!-- Card basic info : skill -->
                     <View
@@ -233,8 +236,12 @@
                         android:layout_height="@dimen/t10dp"/>
 
                     <include
-                        android:id="@+id/cardSkill_leader"
-                        layout="@layout/view_card_skill_leader"/>
+                        android:id="@+id/cardSkill_1"
+                        layout="@layout/view_card_row_skill"/>
+
+                    <include
+                        android:id="@+id/cardSkill_2"
+                        layout="@layout/view_card_row_skill"/>
 
                     <!-- Card info : Amelioration 昇華 -->
                     <LinearLayout
@@ -248,33 +255,38 @@
                             android:layout_height="@dimen/t10dp"/>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            style="@style/cardRow.greenV"
                             android:orientation="horizontal">
 
                             <TextView
                                 style="@style/cardText.header.2"
+                                android:background="@drawable/bg_rect_skyblue"
                                 android:text="@string/cards_battleName"/>
 
                             <TextView
                                 android:id="@+id/cardAmeBattleName"
                                 style="@style/cardText.item.6"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/skyBlue"
-                                tools:text="@string/cards_battleName"/>
+                                tools:text="string cards battleName"/>
 
                             <ImageView
                                 android:id="@+id/cardAmeBattleLink"
-                                android:layout_width="@dimen/t30dp"
-                                android:layout_height="@dimen/t30dp"
+                                android:layout_width="@dimen/t40dp"
+                                android:layout_height="@dimen/t40dp"
+                                android:padding="@dimen/t5dp"
                                 android:layout_gravity="center_vertical"
                                 android:src="@drawable/logo_chrome"/>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            style="@style/cardRow.blueV"
                             android:orientation="horizontal">
                             <TextView
                                 style="@style/cardText.header.2"
@@ -345,6 +357,11 @@
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <View
+                android:id="@+id/cardEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t50dp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

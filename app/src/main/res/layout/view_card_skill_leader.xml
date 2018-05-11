@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/cardRow.blueV"
         android:orientation="horizontal">
 
         <TextView
@@ -34,6 +35,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/cardRow.greenV"
         android:orientation="horizontal">
 
         <TextView
@@ -59,8 +61,15 @@
         -->
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/cardSkillLeaderDesc"
-        style="@style/cardText.item.10"
-        tools:text="技能內容"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/cardRow.greenV"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cardSkillLeaderDesc"
+            style="@style/cardText.item.10"
+            tools:text="技能內容"/>
+    </LinearLayout>
 </LinearLayout>

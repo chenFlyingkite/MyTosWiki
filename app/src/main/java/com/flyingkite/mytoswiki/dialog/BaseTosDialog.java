@@ -81,6 +81,14 @@ public class BaseTosDialog extends DialogFragment implements
         super.onDismiss(dialog);
     }
 
+    protected void dismissWhenClick(@IdRes int... ids) {
+        for (int i : ids) {
+            findViewById(i).setOnClickListener((v) -> {
+                dismissAllowingStateLoss();
+            });
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

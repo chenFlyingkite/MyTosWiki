@@ -93,6 +93,7 @@ public class CardDialog extends BaseTosDialog {
 
         if (card == null) return;
 
+        dismissWhenClick(R.id.cardImages, R.id.cardEnd);
         Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
         Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
         cardIcon.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +144,6 @@ public class CardDialog extends BaseTosDialog {
             setAwkLink();
         }
     }
-
 
     private void setSkillLeader(@IdRes int id, String sname, String sdesc) {
         View vg = findViewById(id);
