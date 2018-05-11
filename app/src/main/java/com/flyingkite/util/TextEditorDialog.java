@@ -2,8 +2,6 @@ package com.flyingkite.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +14,7 @@ import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.Texts;
 import com.flyingkite.mytoswiki.library.TextsAdapter;
+import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -42,8 +41,7 @@ public class TextEditorDialog {
 
     // The file of text pool
     private File getTextPoolFile() {
-        File folder = App.me.getExternalCacheDir();
-        return new File(folder, "text.txt");
+        return ShareHelper.cacheFile("text.txt");
     }
 
     public TextEditorDialog(DialogOwner own) {
@@ -66,15 +64,7 @@ public class TextEditorDialog {
             @Override
             public void onClick(View v) {
                 String msg = txt.getText().toString();
-                Intent it = new Intent(Intent.ACTION_SEND);
-                it.putExtra(Intent.EXTRA_TEXT, msg);
-                it.setType("text/plain");
-                try {
-                    Activity a = getActivity();
-                    a.startActivity(Intent.createChooser(it, a.getString(R.string.share_to)));
-                } catch (ActivityNotFoundException e) {
-                    e.printStackTrace();
-                }
+                ShareHelper.shareString(getActivity(), msg);
             }
         });
 
@@ -183,7 +173,12 @@ public class TextEditorDialog {
     private class LoadTextAsyncTask extends AsyncTask<Void, Void, Texts> {
         @Override
         protected Texts doInBackground(Void... voids) {
-            return GsonUtil.loadFile(getTextPoolFile(), Texts.class);
+            File f = getTextPoolFile();
+            if (f.exists()) {
+                return GsonUtil.loadFile(getTextPoolFile(), Texts.class);
+            } else {
+                return null;
+            }
         }
 
         @Override

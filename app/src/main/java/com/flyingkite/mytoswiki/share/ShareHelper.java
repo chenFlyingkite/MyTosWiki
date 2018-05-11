@@ -99,6 +99,11 @@ public class ShareHelper {
         return folder.getAbsolutePath() + File.separator + name;
     }
 
+    public static File cacheFile(String filename) {
+        File folder = App.me.getExternalCacheDir();
+        return new File(folder, filename);
+    }
+
     @Deprecated
     public static void shareBitmap(@NonNull Activity activity, String url) {
         Glide.with(activity).asBitmap().load(url)

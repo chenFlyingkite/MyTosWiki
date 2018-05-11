@@ -54,6 +54,7 @@
         android:layout_below="@id/tosTopBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#fff"
         app:fastScrollEnabled="true"
         app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
         app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"

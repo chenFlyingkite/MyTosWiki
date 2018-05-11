@@ -16,10 +16,10 @@ import android.widget.TextView;
 import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
-import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
+import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -217,8 +217,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     // The file of dialog setting
     private File getSkillEatFile() {
-        File folder = App.me.getExternalCacheDir();
-        return new File(folder, "skillEat.txt");
+        return ShareHelper.cacheFile("skillEat.txt");
     }
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
@@ -230,7 +229,12 @@ public class SkillEatingDialog extends BaseTosDialog {
 
         @Override
         protected SkillEat doInBackground(Void... voids) {
-            return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
+            File f = getSkillEatFile();
+            if (f.exists()) {
+                return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
+            } else {
+                return null;
+            }
         }
 
         @Override

@@ -780,14 +780,18 @@ public class TosCardFragment extends BaseFragment {
 
     // The file of dialog setting
     private File getTosCardSortFile() {
-        File folder = App.me.getExternalCacheDir();
-        return new File(folder, "cardSort.txt");
+        return ShareHelper.cacheFile("cardSort.txt");
     }
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, CardSort> {
         @Override
         protected CardSort doInBackground(Void... voids) {
-            return GsonUtil.loadFile(getTosCardSortFile(), CardSort.class);
+            File f = getTosCardSortFile();
+            if (f.exists()) {
+                return GsonUtil.loadFile(getTosCardSortFile(), CardSort.class);
+            } else {
+                return null;
+            }
         }
 
         @Override
