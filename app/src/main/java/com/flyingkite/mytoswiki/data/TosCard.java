@@ -133,20 +133,20 @@ public class TosCard implements Parcelable {
     //------------
 
     /** Active skill name, like "木光移魂" */
-    @SerializedName("skillName")
-    public String skillName = "";
+    @SerializedName("skillName1")
+    public String skillName1 = "";
 
     /** Active skill description, like "木符石轉化為光符石" */
-    @SerializedName("skillDesc")
-    public String skillDesc = "";
+    @SerializedName("skillDesc1")
+    public String skillDesc1 = "";
 
     /** Active skill CD min Lv, like 16 */
-    @SerializedName("skillCDMin")
-    public int skillCDMin;
+    @SerializedName("skillCDMin1")
+    public int skillCDMin1;
 
     /** Active skill CD max Lv, like 5 */
-    @SerializedName("skillCDMax")
-    public int skillCDMax;
+    @SerializedName("skillCDMax1")
+    public int skillCDMax1;
 
     //------------
     //---- Active Skill 2, 主動技能2

@@ -148,7 +148,7 @@ public class TosCardFragment extends BaseFragment {
 
         int cnt = 0;
         for (TosCard c : allCards) {
-            String desc = c.skillDesc + " & " + c.skillDesc2;// + " & " + c.skillLeaderDesc;
+            String desc = c.skillDesc1 + " & " + c.skillDesc2;// + " & " + c.skillLeaderDesc;
 
             String[] names = {"可任意移動符石而不會發動消除", "任意移動符石", "不會發動消除"};
 
@@ -544,7 +544,7 @@ public class TosCardFragment extends BaseFragment {
         }
 
         private boolean selectForSpecial(TosCard c) {
-            String key = c.skillDesc + " & " + c.skillDesc2;
+            String key = c.skillDesc1 + " & " + c.skillDesc2;
             final int id = sortSpecial.getCheckedRadioButtonId();
             boolean result = false;
             switch (id) {

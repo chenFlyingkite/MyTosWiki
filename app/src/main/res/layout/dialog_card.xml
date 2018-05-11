@@ -227,6 +227,15 @@
                         android:id="@+id/cardSkill_2"
                         layout="@layout/view_card_row_skill"/>
 
+                    <!-- Card basic info : skill -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t10dp"/>
+
+                    <include
+                        android:id="@+id/cardSkill_leader"
+                        layout="@layout/view_card_skill_leader"/>
+
                     <!-- Card info : Amelioration 昇華 -->
                     <LinearLayout
                         android:id="@+id/cardAmeliorationTable"

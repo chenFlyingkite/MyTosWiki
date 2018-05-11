@@ -48,6 +48,7 @@ public class CardDialog extends BaseTosDialog {
     private TextView cardExpCurve;
     private ViewGroup cardSkill1;
     private ViewGroup cardSkill2;
+    private ViewGroup cardSkillLeader;
     private ViewGroup cardAmeTable;
     private ViewGroup cardAwkTable;
 
@@ -86,6 +87,7 @@ public class CardDialog extends BaseTosDialog {
         cardExpCurve = findViewById(R.id.cardExpCurve);
         cardSkill1 = findViewById(R.id.cardSkill_1);
         cardSkill2 = findViewById(R.id.cardSkill_2);
+        cardSkillLeader = findViewById(R.id.cardSkill_leader);
         cardAmeTable = findViewById(R.id.cardAmeliorationTable);
         cardAwkTable = findViewById(R.id.cardAwakenRecallTable);
 
@@ -117,8 +119,9 @@ public class CardDialog extends BaseTosDialog {
         cardExpMax.setText(NumberFormat.getInstance().format(card.ExpMax));
         cardExpCurve.setText(card.expCurve + "萬");
 
-        // Fill in main skills
-        setSkill(R.id.cardSkill_1, card.skillName, card.skillCDMin, card.skillCDMax, card.skillDesc);
+        // Fill in leader & main skills
+        setSkillLeader(R.id.cardSkill_leader, card.skillLeaderName, card.skillLeaderDesc);
+        setSkill(R.id.cardSkill_1, card.skillName1, card.skillCDMin1, card.skillCDMax1, card.skillDesc1);
         setSkill(R.id.cardSkill_2, card.skillName2, card.skillCDMin2, card.skillCDMax2, card.skillDesc2);
 
         // Fill in Amelioration, I, II, III, IV
@@ -139,6 +142,15 @@ public class CardDialog extends BaseTosDialog {
         if (hasAwk) {
             setAwkLink();
         }
+    }
+
+
+    private void setSkillLeader(@IdRes int id, String sname, String sdesc) {
+        View vg = findViewById(id);
+        TextView name = vg.findViewById(R.id.cardSkillLeaderName);
+        TextView desc = vg.findViewById(R.id.cardSkillLeaderDesc);
+        name.setText(sname);
+        desc.setText(sdesc);
     }
 
     private void setSkill(@IdRes int id, String sname, int smin, int smax, String sdesc) {
