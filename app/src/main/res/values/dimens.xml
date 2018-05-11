@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="cardText1">@dimen/t50dp</dimen>
     <dimen name="cardText2">@dimen/t70dp</dimen>
     <dimen name="cardText4">@dimen/t140dp</dimen>
     <dimen name="cardText6">@dimen/t210dp</dimen>

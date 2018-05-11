@@ -220,6 +220,16 @@
                             style="@style/cardText.item.2"
                             tools:text="300萬"/>
                     </LinearLayout>
+                    <!-- Card basic info : hp + attack + recover -->
+                    <include
+                        android:id="@+id/cardHp"
+                        layout="@layout/view_card_row_hp_header"/>
+                    <include
+                        android:id="@+id/cardHpMin"
+                        layout="@layout/view_card_hp"/>
+                    <include
+                        android:id="@+id/cardHpMax"
+                        layout="@layout/view_card_hp"/>
 
                     <!-- Card basic info : skill -->
                     <View
@@ -354,6 +364,24 @@
                                 android:src="@drawable/logo_chrome"/>
 
                         </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Card details -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/cardRow.greenV"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cardDetails"
+                            style="@style/cardText.header.10"
+                            android:layout_height="wrap_content"
+                            tools:text="@string/texts_t"/>
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>

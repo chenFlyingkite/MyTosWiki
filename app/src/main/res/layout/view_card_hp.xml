@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/cardRow.greenV"
+    tools:background="#8000"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/cardHpSum"
+        style="@style/cardText.item.2"
+        android:textColor="@color/yellow"
+        tools:text="@string/cards_Sum"/>
+
+    <TextView
+        android:id="@+id/cardHpHp"
+        style="@style/cardText.item.2"
+        tools:text="@string/cards_HP"/>
+
+    <TextView
+        android:id="@+id/cardHpAttack"
+        style="@style/cardText.item.2"
+        tools:text="@string/cards_Attack"/>
+
+    <TextView
+        android:id="@+id/cardHpRecovery"
+        style="@style/cardText.item.2"
+        tools:text="@string/cards_Recovery"/>
+
+    <TextView
+        android:id="@+id/cardHpLevel"
+        style="@style/cardText.item.2"
+        tools:text="@string/cards_min"/>
+</LinearLayout>

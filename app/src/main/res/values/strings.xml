@@ -20,6 +20,8 @@
     <string name="cards_rarity">稀有</string>
     <string name="cards_space">空間</string>
     <string name="cards_series">系列</string>
+    <string name="cards_min">最小</string>
+    <string name="cards_max">最大</string>
     <string name="cards_maxLv">最大 Lv</string>
     <string name="cards_maxMuLv">肥料最佳 Lv</string>
     <string name="cards_maxTuLv">肥料上限 Lv</string>
@@ -54,6 +56,10 @@
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
     <string name="cards_common">常用排序</string>
+    <string name="cards_HP">生命力</string>
+    <string name="cards_Attack">攻擊力</string>
+    <string name="cards_Recovery">回復力</string>
+    <string name="cards_Sum">三圍</string>
     <string name="cards_common_maxHP">生命力</string>
     <string name="cards_common_maxAttack">攻擊力</string>
     <string name="cards_common_macRecovery">回復力</string>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
@@ -93,7 +94,7 @@ public class CardDialog extends BaseTosDialog {
 
         if (card == null) return;
 
-        dismissWhenClick(R.id.cardImages, R.id.cardEnd);
+        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardEnd);
         Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
         Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
         cardIcon.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +121,10 @@ public class CardDialog extends BaseTosDialog {
         cardExpMax.setText(NumberFormat.getInstance().format(card.ExpMax));
         cardExpCurve.setText(card.expCurve + "萬");
 
+        // Fill in HP
+        setHp(R.id.cardHpMin, R.string.cards_min, card.minHP, card.minAttack, card.minRecovery);
+        setHp(R.id.cardHpMax, R.string.cards_max, card.maxHP, card.maxAttack, card.maxRecovery);
+
         // Fill in leader & main skills
         setSkillLeader(R.id.cardSkill_leader, card.skillLeaderName, card.skillLeaderDesc);
         setSkill(R.id.cardSkill_1, card.skillName1, card.skillCDMin1, card.skillCDMax1, card.skillDesc1);
@@ -143,6 +148,23 @@ public class CardDialog extends BaseTosDialog {
         if (hasAwk) {
             setAwkLink();
         }
+
+        TextView dt = findViewById(R.id.cardDetails);
+        dt.setText(Html.fromHtml(card.cardDetails));
+    }
+
+    private void setHp(@IdRes int id, @StringRes int level, long hps, long attack, long recovery) {
+        View vg = findViewById(id);
+        TextView lv = vg.findViewById(R.id.cardHpLevel);
+        TextView hp = vg.findViewById(R.id.cardHpHp);
+        TextView ak = vg.findViewById(R.id.cardHpAttack);
+        TextView rc = vg.findViewById(R.id.cardHpRecovery);
+        TextView sm = vg.findViewById(R.id.cardHpSum);
+        lv.setText(level);
+        hp.setText("" + hps);
+        ak.setText("" + attack);
+        rc.setText("" + recovery);
+        sm.setText("" + (hps + attack + recovery));
     }
 
     private void setSkillLeader(@IdRes int id, String sname, String sdesc) {

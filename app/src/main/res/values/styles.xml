@@ -62,6 +62,9 @@
     <style name="cardText.header">
         <item name="android:textSize">@dimen/t15dp</item>
     </style>
+    <style name="cardText.header.1">
+        <item name="android:layout_width">@dimen/cardText1</item>
+    </style>
     <style name="cardText.header.2">
         <item name="android:layout_width">@dimen/cardText2</item>
     </style>
@@ -79,6 +82,9 @@
     </style>
     <style name="cardText.item">
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="cardText.item.1">
+        <item name="android:layout_width">@dimen/cardText1</item>
     </style>
     <style name="cardText.item.2">
         <item name="android:layout_width">@dimen/cardText2</item>
