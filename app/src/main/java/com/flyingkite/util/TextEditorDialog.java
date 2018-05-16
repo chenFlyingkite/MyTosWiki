@@ -41,7 +41,7 @@ public class TextEditorDialog {
 
     // The file of text pool
     private File getTextPoolFile() {
-        return ShareHelper.cacheFile("text.txt");
+        return ShareHelper.extFilesFile("text.txt");
     }
 
     public TextEditorDialog(DialogOwner own) {

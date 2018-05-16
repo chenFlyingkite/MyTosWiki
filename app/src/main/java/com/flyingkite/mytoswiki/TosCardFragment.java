@@ -780,7 +780,7 @@ public class TosCardFragment extends BaseFragment {
 
     // The file of dialog setting
     private File getTosCardSortFile() {
-        return ShareHelper.cacheFile("cardSort.txt");
+        return ShareHelper.extFilesFile("cardSort.txt");
     }
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, CardSort> {

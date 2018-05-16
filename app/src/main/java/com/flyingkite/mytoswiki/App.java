@@ -11,14 +11,47 @@ import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
+import com.flyingkite.mytoswiki.share.ShareHelper;
+
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class App extends MultiDexApplication {
     public static App me;
+    private static final SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh_mm_ss_SSS", Locale.US);
+    private static Thread.UncaughtExceptionHandler defaultHandler;
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
         me = this;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        initCrashHandler();
+    }
+
+    private void initCrashHandler() {
+        defaultHandler = Thread.getDefaultUncaughtExceptionHandler();
+        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread t, Throwable e) {
+                e.printStackTrace();
+                String name = String.format(Locale.US, "crash-%s.txt", timeFormat.format(new Date()));
+                try {
+                    e.printStackTrace(new PrintStream(ShareHelper.cacheName(name)));
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+                defaultHandler.uncaughtException(t, e);
+            }
+        });
     }
 
     public static void showToast(@StringRes int id) {

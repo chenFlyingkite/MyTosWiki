@@ -99,8 +99,10 @@ public class ShareHelper {
         return folder.getAbsolutePath() + File.separator + name;
     }
 
-    public static File cacheFile(String filename) {
-        File folder = App.me.getExternalCacheDir();
+    private static final String data = "data";
+
+    public static File extFilesFile(String filename) {
+        File folder = App.me.getExternalFilesDir(data);
         return new File(folder, filename);
     }
 

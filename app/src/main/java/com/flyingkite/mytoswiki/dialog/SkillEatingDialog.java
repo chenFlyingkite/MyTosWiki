@@ -217,7 +217,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     // The file of dialog setting
     private File getSkillEatFile() {
-        return ShareHelper.cacheFile("skillEat.txt");
+        return ShareHelper.extFilesFile("skillEat.txt");
     }
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
