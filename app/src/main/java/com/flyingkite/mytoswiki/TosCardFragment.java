@@ -345,8 +345,10 @@ public class TosCardFragment extends BaseFragment {
         LogE("sel R = %s", races);
         LogE("sel S = %s", stars);
 
-        TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
-        cardLib.cardAdapter.setSelection(new TosSelect(Arrays.asList(allCards), cond));
+        if (cardLib.cardAdapter != null) {
+            TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
+            cardLib.cardAdapter.setSelection(new TosSelect(Arrays.asList(allCards), cond));
+        }
     }
 
     private void getSelectTags(ViewGroup vg, List<String> result) {
