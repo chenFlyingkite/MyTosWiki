@@ -21,6 +21,7 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 
 import java.text.NumberFormat;
 
+@SuppressLint("SetTextI18n")
 public class CardDialog extends BaseTosDialog {
     public static final String TAG = "CardDialog";
     public static final String BUNDLE_CARD = "CardDialog.TosCard";
@@ -68,7 +69,6 @@ public class CardDialog extends BaseTosDialog {
         card = b.getParcelable(BUNDLE_CARD);
     }
 
-    @SuppressLint("SetTextI18n")
     private void initCard() {
         cardIcon = findViewById(R.id.cardIcon);
         cardImage = findViewById(R.id.cardImage);
@@ -150,7 +150,7 @@ public class CardDialog extends BaseTosDialog {
         }
 
         TextView dt = findViewById(R.id.cardDetails);
-        dt.setText(Html.fromHtml(card.cardDetails));
+        dt.setText(card.cardDetails);
     }
 
     private void setHp(@IdRes int id, @StringRes int level, long hps, long attack, long recovery) {
@@ -181,13 +181,13 @@ public class CardDialog extends BaseTosDialog {
         vg.setVisibility(exist ? View.VISIBLE : View.GONE);
         if (exist) {
             TextView name = vg.findViewById(R.id.cardSkillName);
-            TextView cdmin = vg.findViewById(R.id.cardSkillCDMin);
-            TextView cdmax = vg.findViewById(R.id.cardSkillCDMax);
+            TextView cd_m = vg.findViewById(R.id.cardSkillCDMin);
+            TextView cd_M = vg.findViewById(R.id.cardSkillCDMax);
             TextView cdlv = vg.findViewById(R.id.cardSkillLv);
             TextView desc = vg.findViewById(R.id.cardSkillDesc);
             name.setText(sname);
-            cdmin.setText("" + smin);
-            cdmax.setText("" + smax);
+            cd_m.setText("" + smin);
+            cd_M.setText("" + smax);
             cdlv.setText("" + (smin - smax + 1));
             desc.setText(sdesc);
         }
@@ -198,7 +198,9 @@ public class CardDialog extends BaseTosDialog {
     }
 
     private void setAwkLink() {
-        setLink(R.id.cardAwkBattleName, R.id.cardAwkBattleLink, card.skillAwakenRecallName, card.skillAwakenRecallBattleLink);
+        setLink(R.id.cardAwkBattleName, R.id.cardAwkBattleLink, card.skillAwakenRecallBattleName, card.skillAwakenRecallBattleLink);
+        TextView t = findViewById(R.id.cardAwkName);
+        t.setText(card.skillAwakenRecallName);
     }
 
     private void setLink(@IdRes int nameId, @IdRes int linkId, String bname, String blink) {

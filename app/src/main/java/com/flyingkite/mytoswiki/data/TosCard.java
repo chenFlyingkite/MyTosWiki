@@ -232,9 +232,25 @@ public class TosCard implements Parcelable {
     @SerializedName("skillAwkName")
     public String skillAwakenRecallName = "";
 
+    /** Awakening Recall skill name, like "每次消除 1 組 5 粒或以上的心符石，自身攻擊力提升，最大提升至 6 倍，效果持續至戰鬥結束" */
+    @SerializedName("skillAwkBattleName")
+    public String skillAwakenRecallBattleName = "";
+
     /** Awakening Recall skill name, like "http://zh.tos.wikia.com/wiki/%E9%97%87%E4%B9%8B%E9%9B%99%E5%AD%90%E5%AE%AE#.E4.B8.8D.E6.96.B7.E7.9A.84.E6.86.B6.E5.BF.B5" */
     @SerializedName("skillAwkBattleLink")
     public String skillAwakenRecallBattleLink = "";
+
+    //------------
+    //---- Power Release stage, 潛能解放關卡
+    //------------
+
+    /** Power Release stage, like "記憶的水鏡" */
+    @SerializedName("skillPowBattleName")
+    public String skillPowBattleName = "";
+
+    /** Power Release stage, like "http://zh.tos.wikia.com/wiki/%E8%A8%98%E6%86%B6%E7%9A%84%E6%B0%B4%E9%8F%A1" */
+    @SerializedName("skillPowBattleLink")
+    public String skillPowBattleLink = "";
 
     //------------
     //---- Evolution, 卡片進化

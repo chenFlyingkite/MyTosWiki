@@ -285,10 +285,7 @@
 
                             <ImageView
                                 android:id="@+id/cardAmeBattleLink"
-                                android:layout_width="@dimen/t40dp"
-                                android:layout_height="@dimen/t40dp"
-                                android:padding="@dimen/t5dp"
-                                android:layout_gravity="center_vertical"
+                                style="@style/card_icon"
                                 android:src="@drawable/logo_chrome"/>
 
                         </LinearLayout>
@@ -332,7 +329,7 @@
                     <!-- Card info : Awaken Recall 突破 -->
                     <LinearLayout
                         android:id="@+id/cardAwakenRecallTable"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
@@ -341,28 +338,42 @@
                             android:layout_height="@dimen/t10dp"/>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            style="@style/cardRow.greenV"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <TextView
                                 style="@style/cardText.header.2"
+                                android:background="@drawable/bg_rect_skyblue"
                                 android:text="@string/cards_battleName"/>
 
                             <TextView
                                 android:id="@+id/cardAwkBattleName"
                                 style="@style/cardText.item.6"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
                                 android:textColor="@color/skyBlue"
                                 tools:text="@string/cards_battleName"/>
 
                             <ImageView
                                 android:id="@+id/cardAwkBattleLink"
-                                android:layout_width="@dimen/t30dp"
-                                android:layout_height="@dimen/t30dp"
-                                android:layout_gravity="center_vertical"
+                                style="@style/card_icon"
                                 android:src="@drawable/logo_chrome"/>
 
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/cardAwkName"
+                                style="@style/cardText.item.8"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_rect_green"
+
+                                tools:text="技能\n內容 技能 內容 技能 內容 技能 內容 技能 內容 技能 內容 技能 內容 技能"/>
                         </LinearLayout>
                     </LinearLayout>
 
