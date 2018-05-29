@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
@@ -122,8 +121,8 @@ public class CardDialog extends BaseTosDialog {
         cardExpCurve.setText(card.expCurve + "萬");
 
         // Fill in HP
-        setHp(R.id.cardHpMin, R.string.cards_min, card.minHP, card.minAttack, card.minRecovery);
-        setHp(R.id.cardHpMax, R.string.cards_max, card.maxHP, card.maxAttack, card.maxRecovery);
+        setHp(R.id.cardHpMin, "1", card.minHP, card.minAttack, card.minRecovery);
+        setHp(R.id.cardHpMax, "" + card.LvMax, card.maxHP, card.maxAttack, card.maxRecovery);
 
         // Fill in leader & main skills
         setSkillLeader(R.id.cardSkill_leader, card.skillLeaderName, card.skillLeaderDesc);
@@ -153,7 +152,7 @@ public class CardDialog extends BaseTosDialog {
         dt.setText(card.cardDetails);
     }
 
-    private void setHp(@IdRes int id, @StringRes int level, long hps, long attack, long recovery) {
+    private void setHp(@IdRes int id, String level, long hps, long attack, long recovery) {
         View vg = findViewById(id);
         TextView lv = vg.findViewById(R.id.cardHpLevel);
         TextView hp = vg.findViewById(R.id.cardHpHp);
