@@ -10,6 +10,6 @@
     <TextView
         android:id="@+id/textRound"
         style="@style/gray_button"
-        android:layout_width="@dimen/t50dp"
+        android:minWidth="@dimen/t50dp"
         tools:text="123"/>
 </RelativeLayout>

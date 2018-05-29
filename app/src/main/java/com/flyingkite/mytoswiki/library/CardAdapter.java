@@ -146,7 +146,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         }
         holder.setCard(c, nameType.getName(c), msg);
         holder.itemView.setOnClickListener(w -> {
-            Say.Log("click %s, %s", c.name, c.id);
+            Say.Log("click %s, %s", c.id, c.name);
             if (onClick != null) {
                 onClick.onClick(position, c);
             }

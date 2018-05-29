@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
+            , R.drawable.logo_stamina
             , R.drawable.logo_stamina
             , R.drawable.ic_description_black_48dp
             , R.drawable.logo_chrome
@@ -59,9 +61,12 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         new SummonerLevelDialog().show(getActivity());
                         break;
                     case 2:
-                        new TextEditorDialog(MainActivity.this::getActivity).show();
+                        new MonsterLevelDialog().show(getActivity());
                         break;
                     case 3:
+                        new TextEditorDialog(MainActivity.this::getActivity).show();
+                        break;
+                    case 4:
                         new WebDialog().show(getActivity());
                         break;
                 }

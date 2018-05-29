@@ -212,6 +212,11 @@
         <item name="android:paddingRight">@dimen/t5dp</item>
     </style>
 
+    <!-- mld = Monster Level Dialog -->
+    <style name="mld_row_item" parent="sld_row_item">
+        <item name="android:layout_width">@dimen/t50dp</item>
+    </style>
+
     <style name="dialog_title">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

@@ -42,12 +42,15 @@ public class App extends MultiDexApplication {
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override
             public void uncaughtException(Thread t, Throwable e) {
-                e.printStackTrace();
-                String name = String.format(Locale.US, "crash-%s.txt", timeFormat.format(new Date()));
-                try {
-                    e.printStackTrace(new PrintStream(ShareHelper.cacheName(name)));
-                } catch (FileNotFoundException e1) {
-                    e1.printStackTrace();
+                if (BuildConfig.DEBUG) {
+                } else {
+                    e.printStackTrace();
+                    String name = String.format(Locale.US, "crash-%s.txt", timeFormat.format(new Date()));
+                    try {
+                        e.printStackTrace(new PrintStream(ShareHelper.cacheName(name)));
+                    } catch (FileNotFoundException e1) {
+                        e1.printStackTrace();
+                    }
                 }
                 defaultHandler.uncaughtException(t, e);
             }

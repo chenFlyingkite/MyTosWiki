@@ -103,6 +103,9 @@
     <string name="texts_pools">文字池</string>
     <string name="texts_pools_details">刪除全部，列表收合</string>
 
+    <string name="summoner_level_title">召喚師 經驗表</string>
+    <string name="monster_level_title">卡片 經驗表</string>
+
     <string name="skill_eat">吃技</string>
     <string name="skill_eat600">吃600</string>
     <string name="skill_eat_card">600 = %d 張, 200 = %d 張, 餘 %d</string>

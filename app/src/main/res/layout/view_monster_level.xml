@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle"
+        android:background="@drawable/bg_press_light_sky">
+
+        <TextView
+            android:id="@+id/mld_row_level"
+            style="@style/mld_row_item"
+            tools:text="850"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#ddd"/>
+
+        <TextView
+            android:id="@+id/mld_row_exp_dx"
+            style="@style/mld_row_item"
+            android:layout_width="@dimen/t90dp"
+            tools:text="980665"/>
+
+        <TextView
+            android:id="@+id/mld_row_exp_sum"
+            style="@style/mld_row_item"
+            android:layout_width="@dimen/t110dp"
+            tools:text="315699657"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/green4"/>
+
+        <!--
+        <TextView
+            android:id="@+id/mld_row_stamina"
+            style="@style/mld_row_item"
+            tools:text="218"/>
+
+        <TextView
+            android:id="@+id/mld_row_team_cost"
+            style="@style/mld_row_item"
+            tools:text="194"/>
+
+        <TextView
+            android:id="@+id/mld_row_team_slot"
+            style="@style/mld_row_item"
+            tools:text="20"/>
+        -->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mld_row_divider"
+        tools:background="@color/skyBlue"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

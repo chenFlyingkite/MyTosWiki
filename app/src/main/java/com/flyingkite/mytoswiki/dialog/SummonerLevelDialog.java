@@ -5,6 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.view.View;
+import android.widget.TextView;
 
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.ButtonsAdapter;
@@ -44,6 +45,9 @@ public class SummonerLevelDialog extends BaseTosDialog {
         ba.setItemListener(new ButtonsAdapter.ItemListener() {
             @Override
             public void onClick(String item, ButtonsAdapter.ButtonVH holder, int position) {
+                setHeader(item);
+
+                // Scroll to item
                 int pos = Integer.parseInt(item);
                 LayoutManager lm = tableLibrary.recyclerView.getLayoutManager();
 
@@ -60,8 +64,14 @@ public class SummonerLevelDialog extends BaseTosDialog {
         shortcuts.setAdapter(ba);
     }
 
+    private void setHeader(String h) {
+        TextView t = findViewById(R.id.sldHeader);
+        t.setText(h);
+    }
+
     private void initTable() {
         tableLibrary = new Library<>(findViewById(R.id.sld_recycler), true);
+        tableLibrary.recyclerView.setItemAnimator(null);
         tableLibrary.setViewAdapter(new SummonLvAdapter());
     }
 }
