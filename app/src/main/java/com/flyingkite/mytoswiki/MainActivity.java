@@ -20,7 +20,7 @@ import java.util.List;
 public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
             , R.drawable.logo_stamina
-            , R.drawable.logo_stamina
+            , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
             , R.drawable.logo_chrome
     );
