@@ -35,6 +35,11 @@
         <item name="android:textSize">@dimen/t18dp</item>
         <item name="android:textColor">#000</item>
     </style>
+    <style name="blackText.2">
+        <item name="android:paddingLeft">@dimen/t5dp</item>
+        <item name="android:paddingRight">@dimen/t5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
     <!-- Borders of table -->
     <style name="cardRow">

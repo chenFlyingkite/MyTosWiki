@@ -211,4 +211,13 @@ public class BaseTosDialog extends DialogFragment implements
     public void onShow(DialogInterface dialog) {
 
     }
+
+    protected void setVisibilities(int vis, int... ids) {
+        for (int i : ids) {
+            View v = findViewById(i);
+            if (v != null) {
+                v.setVisibility(vis);
+            }
+        }
+    }
 }

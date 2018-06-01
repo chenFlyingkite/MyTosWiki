@@ -92,6 +92,14 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:4.5.0"
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
+    // MathView is a third-party view library, which might help you display math formula on Android apps easier.
+    // https://github.com/kexanie/MathView
+    implementation 'io.github.kexanie.library:MathView:0.0.6'
+
+    // Drawing the Charts like Excel in Android
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+
     // OkHttp for web
     // http://square.github.io/okhttp/
     //implementation "com.squareup.okhttp3:okhttp:3.9.1"

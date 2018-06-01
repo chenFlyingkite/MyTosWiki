@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center">
@@ -19,6 +20,7 @@
             android:id="@+id/mldTools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
@@ -43,12 +45,13 @@
 
             <TextView
                 android:id="@+id/mldHeader"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/t90dp"
                 android:layout_height="wrap_content"
                 style="@style/blackText"
+                android:gravity="center"
+                android:background="@drawable/bg_rect_skyblue"
                 android:paddingLeft="@dimen/t5dp"
                 android:paddingRight="@dimen/t5dp"
-                android:layout_gravity="center_vertical"
                 android:text="@string/cards_expCurve"/>
         </LinearLayout>
 
@@ -81,13 +84,18 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/t360dp">
+            android:layout_height="@dimen/t320dp">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/mld_recycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </HorizontalScrollView>
+
+        <io.github.kexanie.library.MathView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            auto:text="@string/math_monster_level"/>
     </LinearLayout>
 
 </RelativeLayout>

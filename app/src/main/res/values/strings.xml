@@ -10,6 +10,7 @@
     <string name="loading">讀取中&#8230;</string>
     <string name="progress">進度 %</string>
     <string name="table">表格</string>
+    <string name="option">選項</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -116,6 +117,11 @@
     <string name="skill_sumRnd">累積回合數</string>
     <string name="skill_share_eat_format">從技 %s, %s%% (累積經驗 %s) &#61;&#62; 到技 %s (累積經驗 %s)\n需要 %s</string>
 
+    <!-- MathView's content, Adding Chinese makes MathView fall back as text.
+    https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+     -->
+    <string name="math_summoner_level">Let \\(n\\) = level, then \\(ExpSum = \\Theta(n^3)\\)</string>
+    <string name="math_monster_level">Let \\(n\\) = level, \\(A\\) = exp curve, then \\(ExpSum = \\lceil A ({n - 1 \\over 98})^2 \\rceil \\)</string>
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)
