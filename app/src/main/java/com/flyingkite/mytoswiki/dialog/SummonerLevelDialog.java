@@ -110,7 +110,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
         mathChart = findViewById(R.id.sldMathChart);
         chartOptions = findViewById(R.id.sldChartOptions);
 
-        findViewById(R.id.sldChartTitle).setOnClickListener((v) -> {
+        findViewById(R.id.sldChartReset).setOnClickListener((v) -> {
             mathChart.fitScreen();
         });
         int n = TosSummonerChart.getColumnCount();
@@ -119,9 +119,9 @@ public class SummonerLevelDialog extends BaseTosDialog {
 
         //mathChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
         mathChart.getAxisLeft().setEnabled(false);
-        mathChart.getDescription().setText("");
         mathChart.setData(data);
         mathChart.invalidate();
+        setDesc("");
         mathChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
             public void onValueSelected(Entry e, Highlight h) {
@@ -131,10 +131,6 @@ public class SummonerLevelDialog extends BaseTosDialog {
             @Override
             public void onNothingSelected() {
                 setDesc("");
-            }
-
-            private void setDesc(String s) {
-                mathChart.getDescription().setText(s);
             }
         });
         //mathChart.setMarker(new MarkerView(getActivity(), R.layout.view_text2));
@@ -150,6 +146,10 @@ public class SummonerLevelDialog extends BaseTosDialog {
             t.setChecked(j == 4);
             vg.addView(v);
         }
+    }
+
+    private void setDesc(String s) {
+        mathChart.getDescription().setText(s);
     }
 
     private void clickChartItem(View v) {

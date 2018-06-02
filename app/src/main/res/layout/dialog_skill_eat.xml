@@ -134,99 +134,6 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <!--
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <GridLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:columnCount="2">
-
-                    <TextView
-                        style="@style/sed_round_text"
-                        android:text="@string/cards_level"/>
-
-                    <Spinner
-                        android:id="@+id/skillFrom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/t40dp"/>
-
-                    <TextView
-                        style="@style/sed_round_text"
-                        android:text="@string/progress"/>
-
-                    <Spinner
-                        android:id="@+id/skillPercent"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/t40dp"/>
-
-                    <TextView
-                        style="@style/sed_round_text"
-                        android:text="@string/sumRound"/>
-
-                    <TextView
-                        android:id="@+id/skillFromRound"
-                        style="@style/sed_round_text.left"
-                        android:text="0"/>
-                </GridLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/t40dp">
-
-                    <ImageView
-                        android:layout_width="@dimen/t30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/evo_arrow"/>
-                </LinearLayout>
-
-                <GridLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:columnCount="2">
-
-                    <TextView
-                        android:id="@+id/skillToTitle"
-                        style="@style/sed_round_text"
-                        android:text="@string/cards_level"/>
-
-                    <Spinner
-                        android:id="@+id/skillTo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/t40dp"/>
-
-                    <TextView
-                        style="@style/sed_round_text"
-                        android:text="@string/sumRound"/>
-
-                    <TextView
-                        android:id="@+id/skillToRound"
-                        style="@style/sed_round_text.left"
-                        android:text="0"/>
-
-                    <TextView
-                        style="@style/sed_round_text"
-                        android:text="@string/needRound"
-                        android:textColor="#00a"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/skillNeedRound"
-                        style="@style/sed_round_text.left"
-                        android:text="0"
-                        android:textColor="#00a"/>
-                </GridLayout>
-            </LinearLayout>
-            -->
-
             <View
                 style="@style/divider_horizontal"/>
 
@@ -240,7 +147,6 @@
                     android:id="@+id/skillUse600"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:paddingRight="@dimen/t10dp"
                     android:text="@string/skill_eat600"
                     android:textSize="@dimen/t15dp"/>
