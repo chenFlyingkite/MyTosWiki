@@ -32,6 +32,7 @@ public class CardDialog extends BaseTosDialog {
 
     private TosCard card;
     private ImageView cardIcon;
+    private ImageView cardLink;
     private ImageView cardImage;
     private TextView cardIdNorm;
 
@@ -52,6 +53,7 @@ public class CardDialog extends BaseTosDialog {
     private ViewGroup cardSkillLeader;
     private ViewGroup cardAmeTable;
     private ViewGroup cardAwkTable;
+    private ViewGroup cardPowTable;
 
 
     @Override
@@ -70,6 +72,7 @@ public class CardDialog extends BaseTosDialog {
 
     private void initCard() {
         cardIcon = findViewById(R.id.cardIcon);
+        cardLink = findViewById(R.id.cardLink);
         cardImage = findViewById(R.id.cardImage);
 
         cardIdNorm = findViewById(R.id.cardIdNorm);
@@ -90,6 +93,7 @@ public class CardDialog extends BaseTosDialog {
         cardSkillLeader = findViewById(R.id.cardSkill_leader);
         cardAmeTable = findViewById(R.id.cardAmeliorationTable);
         cardAwkTable = findViewById(R.id.cardAwakenRecallTable);
+        cardPowTable = findViewById(R.id.cardPowerReleaseTable);
 
         if (card == null) return;
 
@@ -105,6 +109,9 @@ public class CardDialog extends BaseTosDialog {
                 ShareHelper.shareImage(getActivity(), v, name);
             }
         });
+        cardLink.setOnClickListener((v) -> {
+            viewLinkAsWebDialog(card.wikiLink);
+        });
 
         cardIdNorm.setText(card.idNorm + "");
         cardAttr.setText(card.attribute + "");
@@ -119,6 +126,14 @@ public class CardDialog extends BaseTosDialog {
         cardLvMax.setText(card.LvMax + "");
         cardExpMax.setText(NumberFormat.getInstance().format(card.ExpMax));
         cardExpCurve.setText(card.expCurve + "萬");
+        underline(cardExpCurve);
+        cardExpCurve.setOnClickListener((v) -> {
+            MonsterLevelDialog d = new MonsterLevelDialog();
+            Bundle b = new Bundle();
+            b.putInt(MonsterLevelDialog.BUNDLE_CURVE, card.expCurve);
+            d.setArguments(b);
+            d.show(getActivity());
+        });
 
         // Fill in HP
         setHp(R.id.cardHpMin, "1", card.minHP, card.minAttack, card.minRecovery);
@@ -141,11 +156,18 @@ public class CardDialog extends BaseTosDialog {
             setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeliorationCost4, card.skillAmeliorationName4);
         }
 
-        // Fill in AwakenRecall
+        // Fill in Awaken Recall
         boolean hasAwk = !TextUtils.isEmpty(card.skillAwakenRecallName);
         cardAwkTable.setVisibility(hasAwk ? View.VISIBLE : View.GONE);
         if (hasAwk) {
             setAwkLink();
+        }
+
+        // Fill in Power Release
+        boolean hasPow = !TextUtils.isEmpty(card.skillPowBattleName);
+        cardPowTable.setVisibility(hasPow ? View.VISIBLE : View.GONE);
+        if (hasPow) {
+            setPowLink();
         }
 
         TextView dt = findViewById(R.id.cardDetails);
@@ -202,6 +224,15 @@ public class CardDialog extends BaseTosDialog {
         t.setText(card.skillAwakenRecallName);
     }
 
+    private void setPowLink() {
+        setLink(R.id.cardPowBattleName, R.id.cardPowBattleLink, card.skillPowBattleName, card.skillPowBattleLink);
+    }
+
+    private void underline(TextView t) {
+        CharSequence cs = Html.fromHtml("<u>" + t.getText() + "</u>");
+        t.setText(cs);
+    }
+
     private void setLink(@IdRes int nameId, @IdRes int linkId, String bname, String blink) {
         TextView t;
         t = findViewById(nameId);
@@ -209,14 +240,18 @@ public class CardDialog extends BaseTosDialog {
         t.setText(cs);
         View.OnClickListener clk = (v) -> {
             //viewLink(card.skillAmeliorationBattleLink);
-            WebDialog d = new WebDialog();
-            Bundle b = new Bundle();
-            b.putString(WebDialog.BUNDLE_LINK, blink);
-            d.setArguments(b);
-            d.show(getActivity());
+            viewLinkAsWebDialog(blink);
         };
         t.setOnClickListener(clk);
         findViewById(linkId).setOnClickListener(clk);
+    }
+
+    private void viewLinkAsWebDialog(String link) {
+        WebDialog d = new WebDialog();
+        Bundle b = new Bundle();
+        b.putString(WebDialog.BUNDLE_LINK, link);
+        d.setArguments(b);
+        d.show(getActivity());
     }
 
     private void setAmelioration(@IdRes int id, @DrawableRes int ameLv, int scost, String sdesc) {

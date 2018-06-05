@@ -36,6 +36,13 @@
                     android:layout_height="@dimen/t70dp"
                     android:src="@drawable/unknown_card"
                     tools:background="#aa0"/>
+
+                <ImageView
+                    android:id="@+id/cardLink"
+                    style="@style/card_icon"
+                    android:src="@drawable/logo_chrome"
+                    android:background="@drawable/bg_rect_green"
+                    android:layout_alignBottom="@id/cardImage"/>
             </android.support.percent.PercentRelativeLayout>
 
             <TextView
@@ -218,6 +225,7 @@
                         <TextView
                             android:id="@+id/cardExpCurve"
                             style="@style/cardText.item.2"
+                            android:textColor="@color/skyBlue"
                             tools:text="300萬"/>
                     </LinearLayout>
                     <!-- Card basic info : hp + attack + recover -->
@@ -263,6 +271,12 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/t10dp"/>
+
+                        <TextView
+                            style="@style/cardText.header.10"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_amelioration"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -326,7 +340,50 @@
                     </LinearLayout>
 
 
-                    <!-- Card info : Awaken Recall 突破 -->
+                    <!-- Card info : Power Release 潛能解放 -->
+                    <LinearLayout
+                        android:id="@+id/cardPowerReleaseTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/t10dp"/>
+
+                        <TextView
+                            style="@style/cardText.header.10"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_powerRelease"/>
+
+                        <LinearLayout
+                            style="@style/cardRow.greenV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:background="@drawable/bg_rect_skyblue"
+                                android:text="@string/cards_battleName"/>
+
+                            <TextView
+                                android:id="@+id/cardPowBattleName"
+                                style="@style/cardText.item.6"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/skyBlue"
+                                tools:text="@string/cards_battleName"/>
+
+                            <ImageView
+                                android:id="@+id/cardPowBattleLink"
+                                style="@style/card_icon"
+                                android:src="@drawable/logo_chrome"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Card info : Awaken Recall 極限突破 -->
                     <LinearLayout
                         android:id="@+id/cardAwakenRecallTable"
                         android:layout_width="wrap_content"
@@ -336,6 +393,11 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/t10dp"/>
+
+                        <TextView
+                            style="@style/cardText.header.10"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_awakenRecall"/>
 
                         <LinearLayout
                             style="@style/cardRow.greenV"

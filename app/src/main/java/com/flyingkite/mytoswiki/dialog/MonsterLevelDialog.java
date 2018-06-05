@@ -1,6 +1,7 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
+import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +18,9 @@ import java.util.List;
 
 public class MonsterLevelDialog extends BaseTosDialog {
     private Library<MonsterLvAdapter> tableLibrary;
+    public static final String BUNDLE_CURVE = "MonsterLevelDialog.Curve";
+    private boolean hasBundle;
+    private int curve = 50;
 
     @Override
     protected int getLayoutId() {
@@ -25,9 +29,22 @@ public class MonsterLevelDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
+        parseBundle(getArguments());
         initTable();
         initScrollTools(R.id.mldGoTop, R.id.mldGoBottom, tableLibrary.recyclerView);
         initShortcuts();
+        if (hasBundle) {
+            setHeader(curve + "萬");
+        }
+    }
+
+
+    private void parseBundle(Bundle b) {
+        boolean hasCurve = b != null && b.containsKey(BUNDLE_CURVE);
+        if (hasCurve) {
+            hasBundle = true;
+            curve = b.getInt(BUNDLE_CURVE);
+        }
     }
 
     private void initShortcuts() {
@@ -64,6 +81,8 @@ public class MonsterLevelDialog extends BaseTosDialog {
     private void initTable() {
         tableLibrary = new Library<>(findViewById(R.id.mld_recycler), new GridLayoutManager(getActivity(), 3));
         tableLibrary.recyclerView.setItemAnimator(null);
-        tableLibrary.setViewAdapter(new MonsterLvAdapter());
+        MonsterLvAdapter a = new MonsterLvAdapter();
+        a.setExpCurve(curve);
+        tableLibrary.setViewAdapter(a);
     }
 }

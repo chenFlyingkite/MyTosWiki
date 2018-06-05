@@ -98,6 +98,9 @@
     <string name="cards_improve_amelioration">可昇華</string>
     <string name="cards_improve_awakenRecall">可突破</string>
     <string name="cards_improve_no">無限制</string>
+    <string name="cards_amelioration">昇華</string>
+    <string name="cards_awakenRecall">極限突破</string>
+    <string name="cards_powerRelease">潛能解放</string>
 
     <string name="texts_tools">文字區域</string>
     <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>
