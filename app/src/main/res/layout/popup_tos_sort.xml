@@ -302,6 +302,11 @@
                 android:id="@+id/sortImproveAwakenRecall"
                 style="@style/sortText"
                 android:text="@string/cards_improve_awakenRecall"/>
+
+            <CheckBox
+                android:id="@+id/sortImprovePowerRelease"
+                style="@style/sortText"
+                android:text="@string/cards_improve_powerRelease"/>
         </LinearLayout>
 
         <TextView

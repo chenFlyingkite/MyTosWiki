@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-def libraryVersion = "26.0.1"
+String libraryVersion = "27.1.1"
 def googlePlayVersion = "9.8.0"
 
 task MyBuildInfo {
@@ -41,13 +41,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileSdkVersion 26
+    compileSdkVersion 27
     buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode
         versionName MyBuildInfo.versionName
@@ -183,7 +183,7 @@ class TaskTicTac extends BuildAdapter implements TaskExecutionListener {
 }
 
 class TicTac {
-    private Stack<Long> tictac = new Stack<>();
+    private Stack<Long> tictac = new Stack<>()
 
     void reset() {
         tictac.clear()
@@ -220,8 +220,8 @@ class TicTac {
                 s.append(" ")
             }
 
-            s.append("[").append(tac - tic).append("] : ").append(msg);
-            logTac(s.toString());
+            s.append("[").append(tac - tic).append("] : ").append(msg)
+            logTac(s.toString())
         }
     }
 

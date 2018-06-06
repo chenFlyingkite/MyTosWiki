@@ -62,6 +62,7 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortImproveNo;
     private CheckBox sortImproveAme;
     private CheckBox sortImproveAwk;
+    private CheckBox sortImprovePow;
 
     private CardSort cardSort = new CardSort();
 
@@ -237,6 +238,7 @@ public class TosCardFragment extends BaseFragment {
         sortImproveNo = menu.findViewById(R.id.sortImproveNo);
         sortImproveAme = menu.findViewById(R.id.sortImproveAmelioration);
         sortImproveAwk = menu.findViewById(R.id.sortImproveAwakenRecall);
+        sortImprovePow = menu.findViewById(R.id.sortImprovePowerRelease);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
@@ -319,7 +321,9 @@ public class TosCardFragment extends BaseFragment {
             case R.id.sortImproveNo:
                 sortImproveAme.setChecked(false);
                 sortImproveAwk.setChecked(false);
+                sortImprovePow.setChecked(false);
                 break;
+            case R.id.sortImprovePowerRelease:
             case R.id.sortImproveAmelioration:
             case R.id.sortImproveAwakenRecall:
                 sortImproveNo.setChecked(false);
@@ -548,7 +552,7 @@ public class TosCardFragment extends BaseFragment {
         private boolean selectForSpecial(TosCard c) {
             String key = c.skillDesc1 + " & " + c.skillDesc2;
             final int id = sortSpecial.getCheckedRadioButtonId();
-            boolean result = false;
+            boolean result;
             switch (id) {
                 case R.id.sortSpecialFreeMove:
                     result = find(key, freemove);
@@ -581,6 +585,9 @@ public class TosCardFragment extends BaseFragment {
                 }
                 if (sortImproveAwk.isChecked()) {
                     accept &= !c.skillAwakenRecallName.isEmpty();
+                }
+                if (sortImprovePow.isChecked()) {
+                    accept &= !c.skillPowBattleLink.isEmpty();
                 }
             }
             return accept;

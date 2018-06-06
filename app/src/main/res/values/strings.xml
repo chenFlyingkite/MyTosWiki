@@ -89,15 +89,16 @@
         <item>效果會在關閉此技能或死亡後消失</item>
         <item>死亡後消失</item>
     </string-array>
-    <string name="cards_hide">隱藏卡片</string>
+    <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_6xxx">動態造型</string>
     <string name="cards_hide_8xxx">迪士尼</string>
     <string name="cards_hide_9xxx">72柱神</string>
     <string name="cards_display">顯示名稱</string>
     <string name="cards_improve">卡片提升能力</string>
-    <string name="cards_improve_amelioration">可昇華</string>
-    <string name="cards_improve_awakenRecall">可突破</string>
     <string name="cards_improve_no">無限制</string>
+    <string name="cards_improve_amelioration">可昇華</string>
+    <string name="cards_improve_awakenRecall">可極限突破</string>
+    <string name="cards_improve_powerRelease">可潛能解放</string>
     <string name="cards_amelioration">昇華</string>
     <string name="cards_awakenRecall">極限突破</string>
     <string name="cards_powerRelease">潛能解放</string>
