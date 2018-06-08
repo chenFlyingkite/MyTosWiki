@@ -15,7 +15,6 @@ import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.TosCard;
-import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
 import com.flyingkite.mytoswiki.tos.TosCardFilter;
 import com.flyingkite.mytoswiki.tos.query.TosCardSelection;
 
@@ -25,8 +24,6 @@ import java.util.List;
 import java.util.Map;
 
 public class CardAdapter extends RecyclerView.Adapter<CardVH> {
-    @Deprecated
-    private List<TosCardRMDKVIR> cardsRMD = new ArrayList<>();
     private List<TosCard> cards = new ArrayList<>();
     private OnClickCard onClick;
     private boolean showFilter;
@@ -93,11 +90,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
             }
         };
         selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
-    }
-
-    @Deprecated
-    public void setCardsRMD(TosCardRMDKVIR[] c) {
-        cardsRMD = asList(c);
     }
 
     public void setCards(TosCard[] c) {
@@ -173,7 +165,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
 }
 
 class CardVH extends RecyclerView.ViewHolder {
-    private TosCardRMDKVIR cardRMDKVIR;
     private TosCard card;
     private ImageView thumb;
     private TextView text;
@@ -184,11 +175,6 @@ class CardVH extends RecyclerView.ViewHolder {
         thumb = v.findViewById(R.id.squareImg);
         text = v.findViewById(R.id.squareText);
         message = v.findViewById(R.id.squareMessage);
-    }
-
-    public void setCard(TosCardRMDKVIR c) {
-        cardRMDKVIR = c;
-        text.setText(c.display_num);
     }
 
     public void setCard(TosCard c, String name, String msg) {

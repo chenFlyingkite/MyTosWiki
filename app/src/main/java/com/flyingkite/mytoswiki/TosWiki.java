@@ -2,11 +2,10 @@ package com.flyingkite.mytoswiki;
 
 import android.content.res.AssetManager;
 
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.Say;
-import com.flyingkite.mytoswiki.data.TosCardRMDKVIR;
+import com.flyingkite.library.TicTac2;
+import com.flyingkite.mytoswiki.data.TosCard;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -33,31 +32,6 @@ public class TosWiki {
             } else {
                 clk.tic();
                 cards = gson.fromJson(reader, TosCard[].class);
-                int n = cards == null ? 0 : cards.length;
-                clk.tac("%s cards read", n);
-            }
-        } finally {
-            IOUtil.closeIt(reader);
-        }
-        return cards;
-    }
-
-    public TosCardRMDKVIR[] parseCardsRMD(AssetManager am) {
-        final String assetName = "card.json";
-        Say.Log("parseCardsRMD");
-        TicTac2 clk = new TicTac2();
-
-        Gson gson = new Gson();
-        Reader reader = null;
-        TosCardRMDKVIR[] cards = null;
-        try {
-            reader = getReader(assetName, am);
-
-            if (reader == null) {
-                Say.Log("reader not found, %s", assetName);
-            } else {
-                clk.tic();
-                cards = gson.fromJson(reader, TosCardRMDKVIR[].class);
                 int n = cards == null ? 0 : cards.length;
                 clk.tac("%s cards read", n);
             }
