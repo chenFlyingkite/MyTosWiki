@@ -452,6 +452,7 @@
                         <TextView
                             android:id="@+id/cardDetails"
                             style="@style/cardText.header.10"
+                            android:gravity="left"
                             android:layout_height="wrap_content"
                             tools:text="@string/texts_t"/>
                     </LinearLayout>

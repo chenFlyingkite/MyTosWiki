@@ -307,6 +307,11 @@
                 android:id="@+id/sortImprovePowerRelease"
                 style="@style/sortText"
                 android:text="@string/cards_improve_powerRelease"/>
+
+            <CheckBox
+                android:id="@+id/sortImproveTwoSkill"
+                style="@style/sortText"
+                android:text="@string/cards_improve_two_skill"/>
         </LinearLayout>
 
         <TextView
