@@ -1,0 +1,81 @@
+{
+  "project_info": {
+    "project_number": "717212475904",
+    "firebase_url": "https://mytoswiki.firebaseio.com",
+    "project_id": "mytoswiki",
+    "storage_bucket": "mytoswiki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717212475904:android:177ba9e46debb179",
+        "android_client_info": {
+          "package_name": "com.flyingkite.mytoswiki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtGAStgc67XyQv8qmDKzrMyUhrygbm2WE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717212475904:android:e40701f0f7111b15",
+        "android_client_info": {
+          "package_name": "com.flyingkite.mytoswiki.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtGAStgc67XyQv8qmDKzrMyUhrygbm2WE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
