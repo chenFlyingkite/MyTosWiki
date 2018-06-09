@@ -83,9 +83,12 @@ public class BaseTosDialog extends DialogFragment implements
 
     protected void dismissWhenClick(@IdRes int... ids) {
         for (int i : ids) {
-            findViewById(i).setOnClickListener((v) -> {
-                dismissAllowingStateLoss();
-            });
+            View w = findViewById(i);
+            if (w != null) {
+                w.setOnClickListener((v) -> {
+                    dismissAllowingStateLoss();
+                });
+            }
         }
     }
 

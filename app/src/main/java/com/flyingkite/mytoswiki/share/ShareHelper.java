@@ -79,6 +79,10 @@ public class ShareHelper {
     }
 
     public static void shareImage(@NonNull Activity context, View view, String filename) {
+        shareImage(context, view, filename, view.getWidth(), view.getHeight());
+    }
+
+    public static void shareImage(@NonNull Activity context, View view, String filename, int width, int height) {
         SaveViewToBitmapTask task = new SaveViewToBitmapTask(context, view, filename){
             @Override
             protected void onPostExecute(Void aVoid) {
@@ -91,6 +95,7 @@ public class ShareHelper {
                         });
             }
         };
+        task.ofSize(width, height);
         task.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
@@ -181,18 +186,19 @@ public class ShareHelper {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            if (getW(view) == null || savedName == null) {
+            View vw = getW(view);
+            if (vw == null || savedName == null) {
                 LogV("Cannot save bitmap : %s, %s", view, savedName);
                 return null;
             }
 
             // 1. [<10ms] Create new bitmap
-            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            Bitmap bitmap = Bitmap.createBitmap(vw.getWidth(), vw.getHeight(), Bitmap.Config.ARGB_8888);
             if (isCancelled()) return null;
 
             // 2. [100ms] Let view draws to the bitmap
             Canvas c = new Canvas(bitmap);
-            getW(view).draw(c);
+            vw.draw(c);
             if (isCancelled()) return null;
 
             // 3. [<10ms] Create output file
@@ -204,7 +210,12 @@ public class ShareHelper {
             FilesHelper.ensureDelete(f);
             if (isCancelled()) return null;
 
-            // 4. [~1kms] Writing bitmap to file
+            // 4. Scale bitmap
+            Bitmap bmp = Bitmap.createScaledBitmap(bitmap, width, height, false);
+            bitmap.recycle();
+            bitmap = bmp;
+
+            // 5. [~1kms] Writing bitmap to file
             FileOutputStream fos = null;
             try {
                 fos = new FileOutputStream(f);

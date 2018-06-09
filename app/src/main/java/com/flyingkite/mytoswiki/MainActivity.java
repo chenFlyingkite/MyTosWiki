@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import com.flyingkite.mytoswiki.dialog.AppIconDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
@@ -23,6 +24,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
             , R.drawable.logo_chrome
+            //, R.mipmap.app_icon
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -53,21 +55,24 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
-                switch (position) {
-                    case 0:
+                switch (iconId) {
+                    case R.drawable.card_0617:
                         new SkillEatingDialog().show(getActivity());
                         break;
-                    case 1:
+                    case R.drawable.logo_stamina:
                         new SummonerLevelDialog().show(getActivity());
                         break;
-                    case 2:
+                    case R.drawable.exp_eat:
                         new MonsterLevelDialog().show(getActivity());
                         break;
-                    case 3:
+                    case R.drawable.ic_description_black_48dp:
                         new TextEditorDialog(MainActivity.this::getActivity).show();
                         break;
-                    case 4:
+                    case R.drawable.logo_chrome:
                         new WebDialog().show(getActivity());
+                        break;
+                    case R.mipmap.app_icon:
+                        new AppIconDialog().show(getActivity());
                         break;
                 }
             }

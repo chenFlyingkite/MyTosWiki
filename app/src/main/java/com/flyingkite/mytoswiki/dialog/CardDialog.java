@@ -106,7 +106,7 @@ public class CardDialog extends BaseTosDialog {
                 //ShareHelper.shareBitmap(getActivity(), card.icon);
                 //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
                 String name = ShareHelper.cacheName("2.png");
-                ShareHelper.shareImage(getActivity(), v, name);
+                shareImage(v, name);
             }
         });
         cardLink.setOnClickListener((v) -> {
