@@ -7,7 +7,6 @@ import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
 import com.flyingkite.library.StringUtils;
-import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.util.FileUtil;
 import com.flyingkite.util.TicTacv;
 
@@ -19,10 +18,11 @@ import io.fabric.sdk.android.Fabric;
 
 public class CrashReport {
     private static final String TAG = "CrashReport";
-    private static final boolean DEBUG = BuildConfig.DEBUG;
+    private static boolean DEBUG = true;
     private CrashReport() {}
 
-    public static void init(Context context) {
+    public static void init(Context context, boolean debug) {
+        DEBUG = debug;
         TicTacv t = new TicTacv();
         t.tic();
         Fabric.with(new Fabric.Builder(context)

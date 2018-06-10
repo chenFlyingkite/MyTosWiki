@@ -13,6 +13,7 @@ import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.flyingkite.crashlytics.CrashReport;
+import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 
 import java.io.FileNotFoundException;
@@ -38,7 +39,8 @@ public class App extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         strictMode();
-        CrashReport.init(this);
+        CrashReport.init(this, DEBUG);
+        RemoteConfig.init(DEBUG, R.xml.remote_config_default);
         //initCrashHandler();
     }
 

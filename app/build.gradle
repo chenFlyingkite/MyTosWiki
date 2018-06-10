@@ -17,7 +17,6 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
-String supLibraryVer = "27.1.1"
 def googlePlayVersion = "9.8.0"
 
 task MyBuildInfo {
@@ -88,18 +87,22 @@ android {
 }
 
 dependencies {
+    def supportLibVer = "27.1.1"
+    def firebaseLibVer = "16.0.0"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:multidex:1.0.3"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$supLibraryVer"
-    implementation "com.android.support:design:$supLibraryVer"
-    implementation "com.android.support:percent:$supLibraryVer"
-    implementation "com.android.support:recyclerview-v7:$supLibraryVer"
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
+    implementation "com.android.support:design:$supportLibVer"
+    implementation "com.android.support:percent:$supportLibVer"
+    implementation "com.android.support:recyclerview-v7:$supportLibVer"
     implementation "com.android.support.constraint:constraint-layout:1.1.1"
 
     // Firebase
     // https://console.firebase.google.com/project/mytoswiki/overview
-    implementation "com.google.firebase:firebase-core:16.0.0"
+    implementation "com.google.firebase:firebase-core:$firebaseLibVer"
+    implementation "com.google.firebase:firebase-config:$firebaseLibVer"
     // Fabric Crashlytics
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
 
