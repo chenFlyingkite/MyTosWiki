@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'io.fabric'
+apply plugin: 'kotlin-kapt'
 
+// Fabric -- Start
+// https://fabric.io/kits/android/crashlytics/install
+apply plugin: 'io.fabric'
 buildscript {
     repositories {
         maven { url 'https://maven.fabric.io/public' }
@@ -16,6 +19,7 @@ buildscript {
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
+// Fabric -- End
 
 def googlePlayVersion = "9.8.0"
 
@@ -43,11 +47,13 @@ android {
         threadCount (maxProcessCount * 3)
     }
 
+    // See this for options
+    // http://tools.android.com/tips/lint-checks
     lintOptions {
         warning 'MissingTranslation'
         ignore  'ContentDescription', 'SpUsage'
         ignore  'RtlCompat', 'RtlEnabled', 'RtlHardcoded', 'RtlSymmetry'
-        //abortOnError false
+        abortOnError false
     }
 
     compileOptions {
@@ -58,6 +64,8 @@ android {
     compileSdkVersion 27
     buildToolsVersion "27.0.3"
 
+    flavorDimensions "default"
+
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
         minSdkVersion 19
@@ -67,79 +75,101 @@ android {
         versionName MyBuildInfo.versionName
     }
 
-
     buildTypes {
         debug {
             signingConfig signingConfigs.config
             applicationIdSuffix ".debug"
+
+            // --- Crashlytics --- start
             manifestPlaceholders.crashlyticsEnabled = false
+            // https://developer.android.com/studio/build/optimize-your-build.html#disable_crashlytics
+            // https://stackoverflow.com/a/49528129
+            //ext.enableCrashlytics = false
+            // https://docs.fabric.io/android/crashlytics/build-tools.html
+            // Only use this flag on builds you don't proguard or upload to beta-by-crashlytics
+            ext.alwaysUpdateBuildId = false
+            // --- Crashlytics --- end
         }
         release {
             signingConfig signingConfigs.config
-            //minifyEnabled false
+            minifyEnabled false
+            //zipAlignEnabled true
+            //jniDebuggable false
+            //shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
+            // --- Crashlytics --- start
             manifestPlaceholders.crashlyticsEnabled = true
+            ext.enableCrashlytics = true
+            // --- Crashlytics --- end
         }
     }
 
     project.gradle.addListener(new TaskTicTac())
 }
 
+// Implementation Vs Api in Android Gradle plugin 3.0
+// https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa
+// https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration#variant_aware
 dependencies {
     def supportLibVer = "27.1.1"
 
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:multidex:1.0.3"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$supportLibVer"
-    implementation "com.android.support:design:$supportLibVer"
-    implementation "com.android.support:percent:$supportLibVer"
-    implementation "com.android.support:recyclerview-v7:$supportLibVer"
-    implementation "com.android.support.constraint:constraint-layout:1.1.1"
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:multidex:1.0.3"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "com.android.support:appcompat-v7:$supportLibVer"
+    api "com.android.support:design:$supportLibVer"
+    api "com.android.support:percent:$supportLibVer"
+    api "com.android.support:recyclerview-v7:$supportLibVer"
+    api "com.android.support.constraint:constraint-layout:1.1.1"
 
     // Firebase
+    // https://firebase.google.com/docs/android/setup
     // https://console.firebase.google.com/project/mytoswiki/overview
-    implementation "com.google.firebase:firebase-core:16.0.0"
-    implementation "com.google.firebase:firebase-config:16.0.0"
-    implementation 'com.google.firebase:firebase-messaging:17.0.0'
-    // Fabric Crashlytics
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+    api "com.google.firebase:firebase-core:16.0.0"
+    api "com.google.firebase:firebase-config:16.0.0"
+    api 'com.google.firebase:firebase-messaging:17.0.0'
 
-    //implementation 'com.github.User:Repo:Tag'
-    //implementation "com.github.chenFlyingkite:MyAndroid:0.0.5.0"
-    implementation "com.github.chenFlyingkite:MyAndroid:2431683fb8"
+    // Flurry Analytics
+    // https://developer.yahoo.com/flurry/docs/integrateflurry/android/
+
+    // Fabric Crashlytics
+    api 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+
+    //api 'com.github.User:Repo:Tag'
+    //api "com.github.chenFlyingkite:MyAndroid:0.0.5.0"
+    api "com.github.chenFlyingkite:MyAndroid:2431683fb8"
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
     //https://github.com/google/gson
-    implementation "com.google.code.gson:gson:2.8.2"
+    api "com.google.code.gson:gson:2.8.2"
 
     // Glide for Image cache library.
     // https://github.com/bumptech/glide
-    implementation "com.github.bumptech.glide:glide:4.7.1"
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    api "com.github.bumptech.glide:glide:4.7.1"
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.
     // https://github.com/kexanie/MathView
-    implementation 'io.github.kexanie.library:MathView:0.0.6'
+    api 'io.github.kexanie.library:MathView:0.0.6'
 
     // Drawing the Charts like Excel in Android
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    api 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
 
     // OkHttp for web
     // http://square.github.io/okhttp/
-    //implementation "com.squareup.okhttp3:okhttp:3.9.1"
+    //api "com.squareup.okhttp3:okhttp:3.9.1"
 
     // jsoup HTML parser library @ https://jsoup.org/
     // https://github.com/jhy/jsoup
-    //implementation "org.jsoup:jsoup:1.11.2"
+    //api "org.jsoup:jsoup:1.11.2"
     //
     // https://github.com/Wikia/vignette#scale-to-width
     
 
     // Picasso
-    //implementation 'com.squareup.picasso:picasso:2.5.2'
+    //api 'com.squareup.picasso:picasso:2.5.2'
 }
 
 // Firebase : Add to the bottom of the file
@@ -147,8 +177,10 @@ apply plugin: 'com.google.gms.google-services'
 
 android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
+    variant.assemble.doFirst {
+        println "[applicationVariants.all] ${variant.name}"
+    }
 
-    println "[applicationVariants.all] ${variant.name}"
     if (buildType == "release") {
         variant.assemble.doLast {
             variant.outputs.each { output ->

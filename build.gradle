@@ -5,11 +5,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        // Firebase Crashlytics
-        // https://firebase.google.com/docs/crashlytics/get-started?authuser=0
-        maven {
-            url 'https://maven.fabric.io/public'
-        }
 
     }
     dependencies {
