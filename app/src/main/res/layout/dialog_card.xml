@@ -172,11 +172,13 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/cardMuLv"
                             style="@style/cardText.header.2"
                             android:text="@string/cards_maxMuLv"
                             android:textColor="@color/yellow"/>
 
                         <TextView
+                            android:id="@+id/cardTuLv"
                             style="@style/cardText.header.2"
                             android:text="@string/cards_maxTuLv"
                             android:textColor="@color/yellow"/>

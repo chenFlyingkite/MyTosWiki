@@ -111,6 +111,7 @@
 
     <string name="summoner_level_title">召喚師 經驗表</string>
     <string name="monster_level_title">卡片 經驗表</string>
+    <string name="monster_eat_title">卡片堆肥表</string>
 
     <string name="skill_eat">吃技</string>
     <string name="skill_eat600">吃600</string>
@@ -127,6 +128,7 @@
      -->
     <string name="math_summoner_level">Let \\(n\\) = level, then \\(ExpSum = \\Theta(n^3)\\)</string>
     <string name="math_monster_level">Let \\(n\\) = level, \\(A\\) = exp curve, then \\(ExpSum = \\lceil A ({n - 1 \\over 98})^2 \\rceil \\)</string>
+
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)

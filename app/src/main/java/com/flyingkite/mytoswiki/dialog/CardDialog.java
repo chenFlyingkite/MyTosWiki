@@ -112,6 +112,7 @@ public class CardDialog extends BaseTosDialog {
         cardLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(card.wikiLink);
         });
+        setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
 
         cardIdNorm.setText(card.idNorm + "");
         cardAttr.setText(card.attribute + "");
@@ -172,6 +173,7 @@ public class CardDialog extends BaseTosDialog {
 
         TextView dt = findViewById(R.id.cardDetails);
         dt.setText(card.cardDetails);
+
     }
 
     private void setHp(@IdRes int id, String level, long hps, long attack, long recovery) {
@@ -266,5 +268,14 @@ public class CardDialog extends BaseTosDialog {
             cost.setText("" + scost);
             desc.setText(sdesc);
         }
+    }
+
+    private void showMonsterEatDialog(View v) {
+        MonsterEatingDialog d = new MonsterEatingDialog();
+
+        Bundle b = new Bundle();
+        b.putParcelable(MonsterEatingDialog.BUNDLE_CARD, card);
+        d.setArguments(b);
+        d.show(getFragmentManager(), MonsterEatingDialog.TAG);
     }
 }

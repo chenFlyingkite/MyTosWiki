@@ -223,4 +223,10 @@ public class BaseTosDialog extends DialogFragment implements
             }
         }
     }
+
+    protected void setOnClickListeners(View.OnClickListener lis, @IdRes int... ids) {
+        for (int i : ids) {
+            findViewById(i).setOnClickListener(lis);
+        }
+    }
 }
