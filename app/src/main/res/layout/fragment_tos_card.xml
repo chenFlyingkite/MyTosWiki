@@ -22,7 +22,7 @@
                 android:id="@+id/tosTooBar"
                 style="@style/tosIcon"
                 android:src="@drawable/ic_open_in_browser_black_48dp"
-                android:background="@drawable/bg_select_sky"/>
+                android:background="@drawable/bg_press_sky"/>
 
             <ImageView
                 android:id="@+id/tosGoTop"

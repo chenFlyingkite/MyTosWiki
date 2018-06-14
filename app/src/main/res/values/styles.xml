@@ -129,7 +129,7 @@
         <item name="android:layout_width">@dimen/t50dp</item>
         <item name="android:layout_height">@dimen/t50dp</item>
         <item name="android:padding">@dimen/t5dp</item>
-        <item name="android:background">@drawable/bg_select_sky</item>
+        <item name="android:background">@drawable/bg_press_sky</item>
     </style>
     <style name="sortStarText" parent="sortIcon">
         <item name="android:textColor">#fff</item>
@@ -235,6 +235,10 @@
         <item name="android:layout_height">@dimen/t40dp</item>
         <item name="android:padding">@dimen/t5dp</item>
         <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="card_icon.chrome">
+        <item name="android:src">@drawable/logo_chrome</item>
+        <item name="android:background">@drawable/bg_press_light_sky</item>
     </style>
 
     <!-- Skill eat -->
