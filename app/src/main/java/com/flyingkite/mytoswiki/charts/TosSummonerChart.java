@@ -47,6 +47,7 @@ public class TosSummonerChart {
         for (Integer i : index) {
             set.add(allDataSet.get(i));
         }
+
         return new LineData(set);
     }
 

@@ -21,7 +21,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.transition.Transition;
-import com.flyingkite.library.FilesHelper;
+import com.flyingkite.library.FileUtil;
 import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.ThreadUtil;
@@ -207,7 +207,7 @@ public class ShareHelper {
             if (fp != null) {
                 fp.mkdirs();
             }
-            FilesHelper.ensureDelete(f);
+            FileUtil.ensureDelete(f);
             if (isCancelled()) return null;
 
             // 4. Scale bitmap

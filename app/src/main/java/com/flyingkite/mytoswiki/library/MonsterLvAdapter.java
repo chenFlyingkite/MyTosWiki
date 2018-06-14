@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.tos.TosMath;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -47,9 +48,7 @@ public class MonsterLvAdapter extends RecyclerView.Adapter<MonsterLvAdapter.Mons
         curve10K = of10K;
         table = new long[MAX_LV][3];
         for (int i = 1; i < MAX_LV; i++) {
-            double p = (i - 1) / 98.0;
-            double exp = curve10K * 10_000F * p * p;
-            long sumExp = (long) Math.ceil(exp);
+            long sumExp = TosMath.getExpSum(i, curve10K);
             table[i][0] = i;
             table[i-1][1] = sumExp - table[i - 1][2];
             table[i][2] = sumExp;

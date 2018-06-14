@@ -6,8 +6,8 @@ import android.os.Build;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
-import com.flyingkite.library.StringUtils;
-import com.flyingkite.util.FileUtil;
+import com.flyingkite.library.FileUtil;
+import com.flyingkite.library.StringUtil;
 import com.flyingkite.util.TicTacv;
 
 import java.io.File;
@@ -87,8 +87,8 @@ public class CrashReport {
         ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(memInfo);
 
-        setValue("Max_Hw_Mem", StringUtils.formatByte(memInfo.totalMem));
-        setValue("Max_Vm_Mem", StringUtils.formatByte(Runtime.getRuntime().maxMemory()));
+        setValue("Max_Hw_Mem", StringUtil.formatByte(memInfo.totalMem));
+        setValue("Max_Vm_Mem", StringUtil.formatByte(Runtime.getRuntime().maxMemory()));
     }
 
     private static void logGLES(Context context) {

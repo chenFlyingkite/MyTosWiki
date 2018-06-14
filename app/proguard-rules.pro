@@ -18,7 +18,14 @@
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-renamesourcefileattribute SourceFile
+
+# keep all native method names
+# https://www.guardsquare.com/en/products/proguard/manual/usage
+# https://www.guardsquare.com/en/products/proguard/manual/examples#native
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
 
 # Google Gson library -- Start
 -keep class com.google.gson.** { *; }
@@ -31,46 +38,15 @@
   **[] $VALUES;
   public *;
 }
-
 # for DexGuard only
 #-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 # Glide -- End
 
-# Chunk in MathView
-# https://github.com/tomj74/chunk-templates/
-# https://github.com/kennytm/CatSaver/blob/master/app/proguard-rules.pro
-
-###### Chunk
-
--dontwarn sun.misc.BASE64Decoder
--dontwarn sun.misc.BASE64Encoder
-# ^ we don't use base64 filters
-
--assumenosideeffects class com.csvreader.CsvReader { *; }
-# ^ we are not using the *.csv files for localization, it's safe to ignore it. (this saves ~8 KB)
-
--dontwarn org.cheffo.jeplite.**
-# ^ we don't use the `calc` filter, only `qcalc` which doesn't need the expression parser
-
--dontwarn com.madrobot.beans.**
--dontwarn java.beans.**
-# ^ we don't use Java Beans.
-
--assumenosideeffects class com.x5.template.MacroTag {
-    *** *Json*(...);
-}
-# ^ we don't use macros. Don't let it introduce yet another JSON library. (this saves ~4 KB)
-
-
-
-# OkHttp
--keep class com.squareup.okhttp3.** { *; }
--keep interface com.squareup.okhttp3.** { *; }
-# Ignore warnings: https://github.com/square/okhttp/wiki/FAQs
--dontwarn com.squareup.okhttp.internal.huc.**
-# Ignore warnings: https://github.com/square/okio/issues/60
--dontwarn okio.**
-# --- End : OkHttp ---
+# MathView - Start
+-dontwarn com.x5.**
+-keep class com.x5.template.** { *; }
+-keep class com.x5.util.** { *; }
+# MathView - End
 
 
 # Flurry SDK
@@ -81,9 +57,6 @@
 #    public <init>(android.content.Context, android.util.AttributeSet, int);
 #}
 
--keepclasseswithmembernames,includedescriptorclasses class * {
-    native <methods>;
-}
 
 # Crashlytics -- Start
 # https://docs.fabric.io/android/crashlytics/dex-and-proguard.html
@@ -91,3 +64,12 @@
 -dontwarn com.crashlytics.**
 -printmapping mapping.txt
 # Crashlytics -- End
+
+# OkHttp -- start
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-dontwarn javax.annotation.**
+-dontwarn org.conscrypt.**
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+# OkHttp -- end
