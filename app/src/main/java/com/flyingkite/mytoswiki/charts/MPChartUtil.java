@@ -11,14 +11,16 @@ public final class MPChartUtil {
         public float y;
         public float sx;
         public float sy;
+
+        @Override
+        public String toString() {
+            return String.format(java.util.Locale.US, "p = (%s, %s), s = (%s, %s)", x, y, sx, sy);
+        }
     }
 
     public static ScaleXY getPrettyZoom(long[][] table, int xmin, int xmax, int lvMax) {
         ScaleXY p = new ScaleXY();
         // Center of x
-//        int xmin = Math.max(card.maxMUPerLevel - 2, 1);
-//        int xmax = Math.min(card.maxTUAllLevel + 1, N);
-        //int x = (xmax + xmin) / 2;
         final int N = lvMax;
         p.x = (xmax + xmin) * 0.5F;
 
@@ -29,7 +31,6 @@ public final class MPChartUtil {
         long ymin = minOf(yIn);
         long ymax = maxOf(yIn);
         p.y = (ymin + ymax) * 0.5F;
-        // 小魔女 0086
 
         // Scale of x
         float sx;

@@ -38,72 +38,42 @@ public class MonsterEatingDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         parseBundle(getArguments());
-        initScrollTools(R.id.medGoTop, R.id.medGoBottom, null); // TODO : NO NEED
         initChart();
-        //adjust1();
     }
 
     private void parseBundle(Bundle b) {
         boolean hasCard = b != null && b.containsKey(BUNDLE_CARD);
         if (!hasCard) return;
 
+
         card = b.getParcelable(BUNDLE_CARD);
     }
 
     private void initChart() {
         mathChart = findViewById(R.id.medMathChart);
-        //chartOptions = findViewById(R.id.sldChartOptions);
 
         long[][] table = initChartData(card);
         List<ILineDataSet> sets = asLineDataSet(headers, table, 1);
         LineData data = getLineData(Arrays.asList(1, 2, 3), sets);
 
+        // Evaluate pretty zoom
         int N = card.LvMax;
-        // Center of x
         int xmin = Math.max(card.maxMUPerLevel - 2, 1);
         int xmax = Math.min(card.maxTUAllLevel + 1, N);
         MPChartUtil.ScaleXY z = MPChartUtil.getPrettyZoom(table, xmin, xmax, N);
-        /*
-        int x = (xmax + xmin) / 2;
-        float xf = (xmax + xmin) * 0.5F;
 
-        // Center of y
-        List<Long> yIn = Arrays.asList(table[xmin][1], table[xmin][2], table[xmin][3]
-                , table[xmax][1], table[xmax][2], table[xmax][3]);
-        long ymin = mins(yIn);
-        long ymax = maxs(yIn);
-        long y = (ymin + ymax) / 2;
-        // 小魔女 0086
-
-        // Scale of x
-        float sx;
-        int q = xmax - xmin + 1;
-        if (q == 0) {
-            sx = 1;
-        } else {
-            sx = 1F * N / q;
-        }
-        // Scale of y
-        List<Long> yAll = Arrays.asList(table[N][1], table[N][2], table[N][3]);
-        long yAllmin = mins(yAll);
-        long yAllmax = maxs(yAll);
-        float sy = 1F * (yAllmax - yAllmin) / (ymax - ymin);
-        Say.Log("min = %s, max = %s, x = %s", xmin, xmax, x);
-        Say.Log("y : min = %s, max = %s", ymin, ymax);
-        Say.Log("O : min = %s, max = %s", yAllmin, yAllmax);
-        Say.Log("sy : %s", sy);
-        */
         //mathChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
         mathChart.setData(data);
         mathChart.getAxisLeft().setEnabled(false);
         mathChart.zoom(z.sx, z.sy, z.x, z.y, YAxis.AxisDependency.RIGHT);
-        //mathChart.setVisibleYRange(table[xmax][3], Math.max(table[xmax][2], table[xmax][1]), YAxis.AxisDependency.LEFT);
-        //mathChart.moveViewToX(center);
         mathChart.invalidate();
         setDesc("");
 
         findViewById(R.id.medChartReset).setOnClickListener((v) -> {
-            mathChart.zoom(z.sx, z.sy, z.x, z.y, YAxis.AxisDependency.RIGHT);
+            // Reset back to pretty zoom
+            float sx = 1F * z.sx / mathChart.getScaleX();
+            float sy = 1F * z.sy / mathChart.getScaleY();
+            mathChart.zoom(sx, sy, z.x, z.y, YAxis.AxisDependency.RIGHT);
         });
         mathChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
@@ -117,7 +87,6 @@ public class MonsterEatingDialog extends BaseTosDialog {
             }
         });
         //mathChart.setMarker(new MarkerView(getActivity(), R.layout.view_text2));
-        //mathChart.resetZoom();
 
 //        ViewGroup vg = chartOptions;
 //        for (int j = 1; j < n; j++) {
@@ -199,21 +168,4 @@ public class MonsterEatingDialog extends BaseTosDialog {
         }
         return new LineData(set);
     }
-//
-//    private void clickChartItem(View v) {
-//        List<Integer> indices = new ArrayList<>();
-//        int n = chartOptions.getChildCount();
-//        for (int i = 0; i < n; i++) {
-//            View w = chartOptions.getChildAt(i);
-//            CheckBox ch = w.findViewById(R.id.check);
-//            if (ch.isChecked()) {
-//                indices.add(i + 1);
-//            }
-//        }
-//
-//        LineData data = TosSummonerChart.getLineData(indices);
-//
-//        mathChart.setData(data);
-//        mathChart.invalidate();
-//    }
 }

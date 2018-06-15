@@ -11,6 +11,7 @@
     <string name="progress">進度 %</string>
     <string name="table">表格</string>
     <string name="option">選項</string>
+    <string name="detail">細節</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -122,6 +123,9 @@
     <string name="skill_needRnd">需要回合數</string>
     <string name="skill_sumRnd">累積回合數</string>
     <string name="skill_share_eat_format">從技 %s, %s%% (累積經驗 %s) &#61;&#62; 到技 %s (累積經驗 %s)\n需要 %s</string>
+
+    <string name="monster_eat_form1">經驗收益 = 貢獻經驗 - 飼料經驗</string>
+    <string name="monster_eat_detail">如何堆肥最有效益? 建議堆肥的卡片\n等級不超過   肥料上限 Lv，\n愈接近   肥料最佳 Lv   愈好。</string>
 
     <!-- MathView's content, Adding Chinese makes MathView fall back as text.
     https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
