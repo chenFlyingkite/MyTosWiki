@@ -22,10 +22,15 @@ repositories {
 // Fabric -- End
 
 def googlePlayVersion = "9.8.0"
+boolean createPlayApk = false
 
 task MyBuildInfo {
     ext.versionCode = 2
-    ext.versionName = "1.0.0.1"
+    if (createPlayApk) {
+        ext.versionName = "1.0.0.1"
+    } else {
+        ext.versionName = "local"
+    }
     ext.APK_NAME = "MyTosWiki-${versionName}-${versionCode}.apk"
 }
 
