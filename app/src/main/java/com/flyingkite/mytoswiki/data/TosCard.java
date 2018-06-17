@@ -253,6 +253,18 @@ public class TosCard implements Parcelable {
     public String skillPowBattleLink = "";
 
     //------------
+    //---- Virtual Rebirth stage, 異空轉生關卡
+    //------------
+
+    /** Virtual Rebirth stage, like "迷茫的岔路 ‧ 暗" */
+    @SerializedName("skillVirBattleName")
+    public String skillVirBattleName = "";
+
+    /** Virtual Rebirth stage, like "http://zh.tos.wikia.com/wiki/%E8%BF%B7%E8%8C%AB%E7%9A%84%E5%B2%94%E8%B7%AF_%E2%80%A7_%E6%9A%97" */
+    @SerializedName("skillVirBattleLink")
+    public String skillVirBattleLink = "";
+
+    //------------
     //---- Evolution, 卡片進化
     //------------
 

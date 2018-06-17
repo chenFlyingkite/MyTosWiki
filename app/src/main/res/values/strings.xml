@@ -100,10 +100,13 @@
     <string name="cards_improve_amelioration">可昇華</string>
     <string name="cards_improve_awakenRecall">可極限突破</string>
     <string name="cards_improve_powerRelease">可潛能解放</string>
+    <string name="cards_improve_virtualRebirth">可異空轉生</string>
     <string name="cards_improve_two_skill">雙主動技能</string>
+
     <string name="cards_amelioration">昇華</string>
     <string name="cards_awakenRecall">極限突破</string>
     <string name="cards_powerRelease">潛能解放</string>
+    <string name="cards_virtualRebirth">異空轉生</string>
 
     <string name="texts_tools">文字區域</string>
     <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>

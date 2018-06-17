@@ -309,6 +309,11 @@
                 android:text="@string/cards_improve_powerRelease"/>
 
             <CheckBox
+                android:id="@+id/sortImproveVirtualRebirth"
+                style="@style/sortText"
+                android:text="@string/cards_improve_virtualRebirth"/>
+
+            <CheckBox
                 android:id="@+id/sortImproveTwoSkill"
                 style="@style/sortText"
                 android:text="@string/cards_improve_two_skill"/>

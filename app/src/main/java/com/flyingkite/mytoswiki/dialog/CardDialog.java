@@ -54,6 +54,7 @@ public class CardDialog extends BaseTosDialog {
     private ViewGroup cardAmeTable;
     private ViewGroup cardAwkTable;
     private ViewGroup cardPowTable;
+    private ViewGroup cardVirTable;
 
 
     @Override
@@ -94,6 +95,7 @@ public class CardDialog extends BaseTosDialog {
         cardAmeTable = findViewById(R.id.cardAmeliorationTable);
         cardAwkTable = findViewById(R.id.cardAwakenRecallTable);
         cardPowTable = findViewById(R.id.cardPowerReleaseTable);
+        cardVirTable = findViewById(R.id.cardVirtualRebirthTable);
 
         if (card == null) return;
 
@@ -146,34 +148,19 @@ public class CardDialog extends BaseTosDialog {
         setSkill(R.id.cardSkill_2, card.skillName2, card.skillCDMin2, card.skillCDMax2, card.skillDesc2);
 
         // Fill in Amelioration, I, II, III, IV
-        boolean hasAme = card.skillAmeliorationCost1 > 0;
-        cardAmeTable.setVisibility(hasAme ? View.VISIBLE : View.GONE);
-        if (hasAme) {
-            setAmeLink();
-
-            setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeliorationCost1, card.skillAmeliorationName1);
-            setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeliorationCost2, card.skillAmeliorationName2);
-            setAmelioration(R.id.cardAme3, R.drawable.refine3, card.skillAmeliorationCost3, card.skillAmeliorationName3);
-            setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeliorationCost4, card.skillAmeliorationName4);
-        }
+        setImproves(card.skillAmeliorationCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
 
         // Fill in Awaken Recall
-        boolean hasAwk = !TextUtils.isEmpty(card.skillAwakenRecallName);
-        cardAwkTable.setVisibility(hasAwk ? View.VISIBLE : View.GONE);
-        if (hasAwk) {
-            setAwkLink();
-        }
+        setImproves(!TextUtils.isEmpty(card.skillAwakenRecallName), R.id.cardAwakenRecallTable, this::setAwkLink);
 
         // Fill in Power Release
-        boolean hasPow = !TextUtils.isEmpty(card.skillPowBattleName);
-        cardPowTable.setVisibility(hasPow ? View.VISIBLE : View.GONE);
-        if (hasPow) {
-            setPowLink();
-        }
+        setImproves(!TextUtils.isEmpty(card.skillPowBattleName), R.id.cardPowerReleaseTable, this::setPowLink);
+
+        // Fill in Virtual Rebirth
+        setImproves(!TextUtils.isEmpty(card.skillVirBattleName), R.id.cardVirtualRebirthTable, this::setVirLink);
 
         TextView dt = findViewById(R.id.cardDetails);
         dt.setText(card.cardDetails);
-
     }
 
     private void setHp(@IdRes int id, String level, long hps, long attack, long recovery) {
@@ -216,8 +203,20 @@ public class CardDialog extends BaseTosDialog {
         }
     }
 
+    private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {
+        findViewById(tableId).setVisibility(has ? View.VISIBLE : View.GONE);
+        if (has) {
+            runIfExist.run();
+        }
+    }
+
     private void setAmeLink() {
         setLink(R.id.cardAmeBattleName, R.id.cardAmeBattleLink, card.skillAmeliorationBattleName, card.skillAmeliorationBattleLink);
+
+        setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeliorationCost1, card.skillAmeliorationName1);
+        setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeliorationCost2, card.skillAmeliorationName2);
+        setAmelioration(R.id.cardAme3, R.drawable.refine3, card.skillAmeliorationCost3, card.skillAmeliorationName3);
+        setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeliorationCost4, card.skillAmeliorationName4);
     }
 
     private void setAwkLink() {
@@ -228,6 +227,10 @@ public class CardDialog extends BaseTosDialog {
 
     private void setPowLink() {
         setLink(R.id.cardPowBattleName, R.id.cardPowBattleLink, card.skillPowBattleName, card.skillPowBattleLink);
+    }
+
+    private void setVirLink() {
+        setLink(R.id.cardVirBattleName, R.id.cardVirBattleLink, card.skillVirBattleName, card.skillVirBattleLink);
     }
 
     private void underline(TextView t) {

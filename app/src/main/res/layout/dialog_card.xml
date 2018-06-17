@@ -350,7 +350,6 @@
                             layout="@layout/view_card_row_amelioration"/>
                     </LinearLayout>
 
-
                     <!-- Card info : Power Release 潛能解放 -->
                     <LinearLayout
                         android:id="@+id/cardPowerReleaseTable"
@@ -389,6 +388,49 @@
 
                             <ImageView
                                 android:id="@+id/cardPowBattleLink"
+                                style="@style/card_icon.chrome"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Card info : Virtual Rebirth 異空轉生 -->
+                    <LinearLayout
+                        android:id="@+id/cardVirtualRebirthTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/t10dp"/>
+
+                        <TextView
+                            style="@style/cardText.header.10"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_virtualRebirth"/>
+
+                        <LinearLayout
+                            style="@style/cardRow.greenV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/cardText.header.2"
+                                android:background="@drawable/bg_rect_skyblue"
+                                android:text="@string/cards_battleName"/>
+
+                            <TextView
+                                android:id="@+id/cardVirBattleName"
+                                style="@style/cardText.item.6"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/skyBlue"
+                                android:background="@drawable/bg_press_light_sky"
+                                tools:text="@string/cards_battleName"/>
+
+                            <ImageView
+                                android:id="@+id/cardVirBattleLink"
                                 style="@style/card_icon.chrome"/>
 
                         </LinearLayout>

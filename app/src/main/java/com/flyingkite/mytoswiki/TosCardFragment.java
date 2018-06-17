@@ -63,6 +63,7 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortImproveAme;
     private CheckBox sortImproveAwk;
     private CheckBox sortImprovePow;
+    private CheckBox sortImproveVir;
     private CheckBox sortImproveTwo;
 
     private CardSort cardSort = new CardSort();
@@ -240,6 +241,7 @@ public class TosCardFragment extends BaseFragment {
         sortImproveAme = menu.findViewById(R.id.sortImproveAmelioration);
         sortImproveAwk = menu.findViewById(R.id.sortImproveAwakenRecall);
         sortImprovePow = menu.findViewById(R.id.sortImprovePowerRelease);
+        sortImproveVir = menu.findViewById(R.id.sortImproveVirtualRebirth);
         sortImproveTwo = menu.findViewById(R.id.sortImproveTwoSkill);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
@@ -324,11 +326,13 @@ public class TosCardFragment extends BaseFragment {
                 sortImproveAme.setChecked(false);
                 sortImproveAwk.setChecked(false);
                 sortImprovePow.setChecked(false);
+                sortImproveVir.setChecked(false);
                 sortImproveTwo.setChecked(false);
                 break;
             case R.id.sortImprovePowerRelease:
             case R.id.sortImproveAmelioration:
             case R.id.sortImproveAwakenRecall:
+            case R.id.sortImproveVirtualRebirth:
             case R.id.sortImproveTwoSkill:
                 sortImproveNo.setChecked(false);
                 break;
@@ -591,7 +595,10 @@ public class TosCardFragment extends BaseFragment {
                     accept &= !c.skillAwakenRecallName.isEmpty();
                 }
                 if (sortImprovePow.isChecked()) {
-                    accept &= !c.skillPowBattleLink.isEmpty();
+                    accept &= !c.skillPowBattleName.isEmpty();
+                }
+                if (sortImproveVir.isChecked()) {
+                    accept &= !c.skillVirBattleName.isEmpty();
                 }
                 if (sortImproveTwo.isChecked()) {
                     accept &= !c.skillName2.isEmpty();
