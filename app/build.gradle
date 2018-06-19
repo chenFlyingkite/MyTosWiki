@@ -22,14 +22,13 @@ repositories {
 // Fabric -- End
 
 def googlePlayVersion = "9.8.0"
-boolean createPlayApk = true
+boolean createPlayApk = false
 
 task MyBuildInfo {
     ext.versionCode = 3
-    if (createPlayApk) {
-        ext.versionName = "1.0.0.2"
-    } else {
-        ext.versionName = "local"
+    ext.versionName = "1.0.0.2"
+    if (!createPlayApk) {
+        ext.versionName += "-Me"
     }
     ext.APK_NAME = "MyTosWiki-${versionName}-${versionCode}.apk"
 }
@@ -89,7 +88,7 @@ android {
             manifestPlaceholders.crashlyticsEnabled = false
             // https://developer.android.com/studio/build/optimize-your-build.html#disable_crashlytics
             // https://stackoverflow.com/a/49528129
-            //ext.enableCrashlytics = false
+            ext.enableCrashlytics = false
             // https://docs.fabric.io/android/crashlytics/build-tools.html
             // Only use this flag on builds you don't proguard or upload to beta-by-crashlytics
             ext.alwaysUpdateBuildId = false

@@ -6,6 +6,7 @@ import android.os.Build;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.core.CrashlyticsCore;
 import com.flyingkite.library.FileUtil;
 import com.flyingkite.library.StringUtil;
 import com.flyingkite.util.TicTacv;
@@ -25,10 +26,13 @@ public class CrashReport {
         DEBUG = debug;
         TicTacv t = new TicTacv();
         t.tic();
-        Fabric.with(new Fabric.Builder(context)
-                .kits(new Crashlytics())
-                .debuggable(DEBUG)
-                .build());
+        // https://docs.fabric.io/android/crashlytics/build-tools.html#disable-crashlytics-for-debug-builds
+        // Set up Crashlytics, disabled for debug builds
+        CrashlyticsCore core = new CrashlyticsCore.Builder().disabled(debug).build();
+        Crashlytics kit = new Crashlytics.Builder().core(core).build();
+
+        // Initialize Fabric with the debug-disabled crashlytics.
+        Fabric.with(context, kit);
 
         logDeviceInfo(context);
         t.tac("%s init OK", TAG);
