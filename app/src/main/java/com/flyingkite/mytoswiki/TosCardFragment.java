@@ -55,6 +55,7 @@ public class TosCardFragment extends BaseFragment {
     private ViewGroup sortStar;
     private RadioGroup sortCommon;
     private RadioGroup sortCassandra;
+    private ViewGroup sortRunestone;
     private RadioGroup sortSpecial;
     private ViewGroup sortHide;
     private RadioGroup sortDisplay;
@@ -184,6 +185,7 @@ public class TosCardFragment extends BaseFragment {
         initSortByAttribute(menu);
         initSortByRace(menu);
         initSortByCassandra(menu);
+        initSortByTurnRuneStones(menu);
         initSortByStar(menu);
         initSortByCommon(menu);
         initSortBySpecial(menu);
@@ -207,6 +209,10 @@ public class TosCardFragment extends BaseFragment {
 
     private void initSortByCassandra(View menu) {
         sortCassandra = initSortOf(menu, R.id.sortCassandraList, this::clickCassandra);
+    }
+
+    private void initSortByTurnRuneStones(View menu) {
+        sortRunestone = initSortOf(menu, R.id.sortRunestone, this::clickTurnRuneStones);
     }
 
     private void initSortByStar(View menu) {
@@ -250,7 +256,7 @@ public class TosCardFragment extends BaseFragment {
     //------
 
     private void clickReset(View v) {
-        ViewGroup[] vgs = {sortAttributes, sortRace, sortStar};
+        ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone};
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
@@ -278,6 +284,10 @@ public class TosCardFragment extends BaseFragment {
         sortCommon.setEnabled(id != R.id.sortCassandraNo);
 
         applySelection();
+    }
+
+    private void clickTurnRuneStones(View v) {
+        clickHide(v);// TODO : Click
     }
 
     private void clickStar(View v) {
@@ -344,13 +354,13 @@ public class TosCardFragment extends BaseFragment {
     private void applySelection() {
         // Attribute
         List<String> attrs = new ArrayList<>();
-        getSelectTags(sortAttributes, attrs);
+        getSelectTags(sortAttributes, attrs, true);
         // Race
         List<String> races = new ArrayList<>();
-        getSelectTags(sortRace, races);
+        getSelectTags(sortRace, races, true);
         // Star
         List<String> stars = new ArrayList<>();
-        getSelectTags(sortStar, stars);
+        getSelectTags(sortStar, stars, true);
 
         LogE("---------");
         LogE("sel T = %s", attrs);
@@ -363,7 +373,7 @@ public class TosCardFragment extends BaseFragment {
         }
     }
 
-    private void getSelectTags(ViewGroup vg, List<String> result) {
+    private void getSelectTags(ViewGroup vg, List<String> result, boolean addAllIfEmpty) {
         if (result == null) {
             result = new ArrayList<>();
         }
@@ -381,7 +391,7 @@ public class TosCardFragment extends BaseFragment {
             all.add(tag);
         }
         // If no children is added, add all the child tags
-        if (!added) {
+        if (addAllIfEmpty && !added) {
             result.addAll(all);
         }
     }
@@ -526,10 +536,29 @@ public class TosCardFragment extends BaseFragment {
             return attrs.contains(c.attribute)
                     && races.contains(c.race)
                     && stars.contains("" + c.rarity)
+                    && selectForTurnRunestones(c)
                     && selectForSpecial(c)
                     && selectForShow(c)
                     && selectForImprove(c)
             ;
+        }
+
+        private boolean selectForTurnRunestones(TosCard c) {
+            // Runestones keys as st
+            List<String> stones = new ArrayList<>();
+            getSelectTags(sortRunestone, stones, false);
+            int n = stones.size();
+            if (n == 0) {
+                return true;
+            } else {
+                String[] st = new String[n];
+                for (int i = 0; i < n; i++) {
+                    st[i] = getString(R.string.cards_turn_into) + "" + stones.get(i);
+                }
+
+                String key = c.skillDesc1 + " & " + c.skillDesc2;
+                return find(key, st);
+            }
         }
 
         private boolean selectForShow(TosCard c) {

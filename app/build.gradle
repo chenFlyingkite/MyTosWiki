@@ -28,7 +28,7 @@ task MyBuildInfo {
     ext.versionCode = 3
     ext.versionName = "1.0.0.2"
     if (!createPlayApk) {
-        ext.versionName += "-Me"
+        ext.versionName = "Me"
     }
     ext.APK_NAME = "MyTosWiki-${versionName}-${versionCode}.apk"
 }

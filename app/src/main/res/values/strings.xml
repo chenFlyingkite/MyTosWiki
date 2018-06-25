@@ -42,6 +42,7 @@
     <string name="cards_attr_earth">木</string>
     <string name="cards_attr_light">光</string>
     <string name="cards_attr_darks">暗</string>
+    <string name="cards_attr_heart">心</string>
     <string name="cards_race">種族</string>
     <string name="cards_race_god">神族</string>
     <string name="cards_race_demon">魔族</string>
@@ -52,6 +53,22 @@
     <string name="cards_race_machina">機械族</string>
     <string name="cards_race_evolve">進化素材</string>
     <string name="cards_race_level">強化素材</string>
+    <string name="cards_turn_runestone">轉化為X符石</string>
+    <string name="cards_turn_into">轉化為</string>
+
+    <string name="cards_runestone_water">水符石</string>
+    <string name="cards_runestone_fires">火符石</string>
+    <string name="cards_runestone_earth">木符石</string>
+    <string name="cards_runestone_light">光符石</string>
+    <string name="cards_runestone_darks">暗符石</string>
+    <string name="cards_runestone_heart">心符石</string>
+
+    <string name="cards_runestone_water_enchanted">水強化符石</string>
+    <string name="cards_runestone_fires_enchanted">火強化符石</string>
+    <string name="cards_runestone_earth_enchanted">木強化符石</string>
+    <string name="cards_runestone_light_enchanted">光強化符石</string>
+    <string name="cards_runestone_darks_enchanted">暗強化符石</string>
+    <string name="cards_runestone_heart_enchanted">心強化符石</string>
     <string name="cards_Cassandra">卡珊德拉(水巫)技能: 滿等卡\n3.5x回復力+攻擊力</string>
     <string name="cards_no">無</string>
     <string name="cards_Cassandra_attack">攻擊力</string>
