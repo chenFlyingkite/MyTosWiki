@@ -544,6 +544,8 @@ public class TosCardFragment extends BaseFragment {
         }
 
         private boolean selectForTurnRunestones(TosCard c) {
+            // Still fail for 轉化為固定數量及位置 & X及Y符石轉化為強化符石
+            // like, 洛可可(1169) & 龍葵(0900) & 1772 (尼特羅)
             // Runestones keys as st
             List<String> stones = new ArrayList<>();
             getSelectTags(sortRunestone, stones, false);
