@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.flyingkite.library.GsonUtil;
 import com.flyingkite.library.ListUtil;
 import com.flyingkite.library.MathUtil;
-import com.flyingkite.library.ThreadUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
@@ -86,8 +85,8 @@ public class TosCardFragment extends BaseFragment {
         initSortMenu();
         initToolIcons();
 
+        new ParseCardsTask().executeOnExecutor(sSingle);//ThreadUtil.cachedThreadPool);
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
-        new ParseCardsTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     private void initToolIcons() {
@@ -443,17 +442,24 @@ public class TosCardFragment extends BaseFragment {
         sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
         sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
         sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
+        int id = cardSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
+        clickDisplay(sortDisplay.findViewById(id));
+    }
+
+    private void toGsonHide() {
+        cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
+        cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
+        cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
+        cardSort.displayByName = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayName;
+        sSingle.submit(() -> {
+            GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
+        });
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
-        cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
-        cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
-        sSingle.submit(() -> {
-            GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
-        });
+        toGsonHide();
     }
 
     @Override

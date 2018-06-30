@@ -11,4 +11,7 @@ public class CardSort {
 
     @SerializedName("hideCard9xxx")
     public boolean hideCard9xxx;
+
+    @SerializedName("displayByName")
+    public boolean displayByName;
 }
