@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
@@ -23,7 +24,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
             , R.drawable.logo_chrome
-            //, R.mipmap.app_icon
+            , R.mipmap.app_icon
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -71,7 +72,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         new WebDialog().show(getActivity());
                         break;
                     case R.mipmap.app_icon:
-                        //new AppIconDialog().show(getActivity());
+                        new FeedbackDialog().show(getActivity());
                         break;
                 }
             }

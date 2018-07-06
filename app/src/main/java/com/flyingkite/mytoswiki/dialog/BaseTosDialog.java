@@ -40,8 +40,8 @@ public class BaseTosDialog extends DialogFragment implements
                 //, android.R.style.Theme_Translucent_NoTitleBar_Fullscreen // No status bar
                 //, android.R.style.Theme_Holo_Light_Dialog
                 //, R.style.AppTheme
-                //, ofTheme()
-                , R.style.CommonAlertDialog_noFloating
+                , ofTheme()
+                //, R.style.CommonAlertDialog_noFloating
                 //, R.style.CommonAlertDialog
                 //, android.R.style.Theme_DeviceDefault_Light_NoActionBar_TranslucentDecor
                 //, getTheme()
@@ -49,13 +49,13 @@ public class BaseTosDialog extends DialogFragment implements
     }
 
     @Deprecated
-    private int ofTheme() {
+    protected int ofTheme() {
         return isFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
     }
 
     @Deprecated
     private boolean isFloating() {
-        return true;
+        return false;
     }
 //
 //    @Override

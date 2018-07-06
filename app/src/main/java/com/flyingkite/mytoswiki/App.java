@@ -93,8 +93,10 @@ public class App extends MultiDexApplication {
     }
 
     public static Uri getUriOfResource(@AnyRes int resId) {
-        Resources r = me.getResources();
+        return getUriOfResource(me.getResources(), resId);
+    }
 
+    public static Uri getUriOfResource(Resources r, @AnyRes int resId) {
         return Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
                 + "://" + r.getResourcePackageName(resId)
                 + '/' + r.getResourceTypeName(resId)
