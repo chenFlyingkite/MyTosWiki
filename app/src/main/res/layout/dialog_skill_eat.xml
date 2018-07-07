@@ -137,29 +137,46 @@
             <View
                 style="@style/divider_horizontal"/>
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/skillUse600"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/t10dp"
+                        android:text="@string/skill_eat600"
+                        android:textSize="@dimen/t15dp"/>
+
+                    <ImageView
+                        style="@style/icon_t40"
+                        android:src="@drawable/card_1709" />
+
+                    <ImageView
+                        style="@style/icon_t40"
+                        android:src="@drawable/card_1735"/>
+
+                    <ImageView
+                        style="@style/icon_t40"
+                        android:src="@drawable/card_1777"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/skillEatCard"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <CheckBox
-                    android:id="@+id/skillUse600"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="@dimen/t10dp"
-                    android:text="@string/skill_eat600"
-                    android:textSize="@dimen/t15dp"/>
-
-                <TextView
-                    android:id="@+id/skillEatCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/skill_eat_card"
-                    android:textColor="#080"
-                    android:textSize="@dimen/t18dp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
+                android:text="@string/skill_eat_card"
+                android:textColor="#080"
+                android:textSize="@dimen/t18dp"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -23,6 +23,7 @@ public class WebDialog extends BaseTosDialog {
             , R.drawable.ic_arrow_back_black_48dp
             , R.drawable.ic_arrow_forward_black_48dp
             , R.drawable.ic_share_black_48dp
+            , R.drawable.ic_clear_black_48dp
     );
 
     public static final String BUNDLE_LINK = "WebDialog.WebLink";
@@ -71,22 +72,25 @@ public class WebDialog extends BaseTosDialog {
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
-                switch (position) {
-                    case 0:
+                switch (s) {
+                    case R.drawable.ic_home_black_48dp:
                         web.loadUrl(tosWikiHome);
                         break;
-                    case 1:
+                    case R.drawable.ic_arrow_back_black_48dp:
                         if (web.canGoBack()) {
                             web.goBack();
                         }
                         break;
-                    case 2:
+                    case R.drawable.ic_arrow_forward_black_48dp:
                         if (web.canGoForward()) {
                             web.goForward();
                         }
                         break;
-                    case 3:
+                    case R.drawable.ic_share_black_48dp:
                         shareString(web.getUrl());
+                        break;
+                    case R.drawable.ic_clear_black_48dp:
+                        dismissAllowingStateLoss();
                         break;
                 }
             }

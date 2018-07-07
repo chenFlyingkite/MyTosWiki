@@ -19,12 +19,15 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
+    // Provide alternative bitmaps
+    // https://developer.android.com/training/multiscreen/screendensities
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
+            , R.drawable.logo_chrome
+            , R.drawable.ic_send_black_48dp
             , R.drawable.logo_stamina
+            , R.mipmap.app_icon
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
-            , R.drawable.logo_chrome
-            , R.mipmap.app_icon
     );
     private Library<IconAdapter> iconLibrary;
 
@@ -71,7 +74,8 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                     case R.drawable.logo_chrome:
                         new WebDialog().show(getActivity());
                         break;
-                    case R.mipmap.app_icon:
+                    case R.mipmap.app_icon: // TODO
+                    case R.drawable.ic_send_black_48dp:
                         new FeedbackDialog().show(getActivity());
                         break;
                 }

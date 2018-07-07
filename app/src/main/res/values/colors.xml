@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="transparent">#0000</color>
+    <color name="gray3a">#3a3a3a</color>
+    <color name="gray4">#444</color>
     <color name="gray8">#888</color>
     <color name="grayd">#ddd</color>
     <color name="skyBlue">#00A2FF</color>

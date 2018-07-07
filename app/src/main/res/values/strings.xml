@@ -12,6 +12,8 @@
     <string name="table">表格</string>
     <string name="option">選項</string>
     <string name="detail">細節</string>
+    <string name="ok">確定</string>
+    <string name="cancel">取消</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -153,7 +155,15 @@
     <string name="math_summoner_level">Let \\(n\\) = level, then \\(ExpSum = \\Theta(n^3)\\)</string>
     <string name="math_monster_level">Let \\(n\\) = level, \\(A\\) = exp curve, then \\(ExpSum = \\lceil A ({n - 1 \\over 98})^2 \\rceil \\)</string>
 
-    <string name="feedback_title">123456789</string>
+    <string name="feedback_title">許願池 與 傳送意見回饋</string>
+    <string name="feedback_author">☆首先，神魔數學家團隊感謝召喚師的安裝。\n(其實團隊只有作者一人 T_T)\n\n
+★召喚師有什麼想法、建議或是想要的新功能，都可以在這裡告訴團隊哦。\n\n
+★寫完後請按下送出按鈕，意見將會在您下次開啟程式時候一併送給團隊。
+</string>
+    <string name="feedback_hint">想給團隊什麼意見和建議呢?</string>
+    <string name="feedback_thanks">感謝您的寶貴意見，意見將會在您下次開啟程式時候一併送給團隊。</string>
+
+    <string name="leave">離開頁面?</string>
 
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。

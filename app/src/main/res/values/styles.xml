@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/green</item>
     </style>
 
     <style name="CommonAlertDialog">
@@ -241,7 +241,29 @@
         <item name="android:background">@drawable/bg_press_light_sky</item>
     </style>
 
+    <style name="icon_t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+
     <!-- Skill eat -->
+
+    <style name="common_base">
+        <item name="android:padding">@dimen/t20dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="common_base.title">
+        <item name="android:textSize">@dimen/t20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="common_base.message">
+        <item name="android:textSize">@dimen/t16dp</item>
+    </style>
+    <style name="common_base.button">
+        <item name="android:background">@drawable/bg_press_gray4</item>
+        <item name="android:textSize">@dimen/t16dp</item>
+        <item name="android:textColor">@color/text_sky</item>
+    </style>
 
 
 </resources>
