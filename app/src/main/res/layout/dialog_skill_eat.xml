@@ -155,17 +155,11 @@
                         android:text="@string/skill_eat600"
                         android:textSize="@dimen/t15dp"/>
 
-                    <ImageView
-                        style="@style/icon_t40"
-                        android:src="@drawable/card_1709" />
-
-                    <ImageView
-                        style="@style/icon_t40"
-                        android:src="@drawable/card_1735"/>
-
-                    <ImageView
-                        style="@style/icon_t40"
-                        android:src="@drawable/card_1777"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/skillCard600"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
                 </LinearLayout>
             </HorizontalScrollView>
 

@@ -233,12 +233,12 @@
     <style name="card_icon">
         <item name="android:layout_width">@dimen/t40dp</item>
         <item name="android:layout_height">@dimen/t40dp</item>
-        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:padding">@dimen/t2dp</item>
         <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_press_light_sky</item>
     </style>
     <style name="card_icon.chrome">
         <item name="android:src">@drawable/logo_chrome</item>
-        <item name="android:background">@drawable/bg_press_light_sky</item>
     </style>
 
     <style name="icon_t40">
@@ -263,6 +263,20 @@
         <item name="android:background">@drawable/bg_press_gray4</item>
         <item name="android:textSize">@dimen/t16dp</item>
         <item name="android:textColor">@color/text_sky</item>
+    </style>
+
+    <style name="card_sort_active">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/t25dp</item>
+        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="toswiki_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/t48dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@drawable/toswiki_wordmark</item>
     </style>
 
 

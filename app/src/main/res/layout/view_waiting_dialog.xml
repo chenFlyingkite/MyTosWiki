@@ -21,7 +21,7 @@
         android:textColor="#000"
         android:padding="@dimen/t5dp"
         android:layout_below="@id/waitProgress"
-        android:text="@string/loading"/>
+        android:text="@string/cardsLoading"/>
 
     <View
         android:layout_width="@dimen/t30dp"

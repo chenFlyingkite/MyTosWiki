@@ -490,7 +490,7 @@ public class TosCardFragment extends BaseFragment {
         private WaitingDialog dialog;
         @Override
         protected void onPreExecute() {
-            dialog = new WaitingDialog.Builder(getActivity()).buildAndShow();
+            dialog = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
         }
 
         @Override

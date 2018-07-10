@@ -14,6 +14,7 @@
     <string name="detail">細節</string>
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
+    <string name="cardsLoading">讀取卡片中&#8230;</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>

@@ -99,20 +99,15 @@ public class CardDialog extends BaseTosDialog {
 
         if (card == null) return;
 
-        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardEnd);
+        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd);
         Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
         Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
-        cardIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //ShareHelper.shareBitmap(getActivity(), card.icon);
-                //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
-                String name = ShareHelper.cacheName("2.png");
-                shareImage(v, name);
-            }
-        });
+        cardIcon.setOnClickListener(this::shareImage);
         cardLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(card.wikiLink);
+        });
+        findViewById(R.id.cardShare).setOnClickListener((v) -> {
+            shareImage(findViewById(R.id.cardContent));
         });
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
 
@@ -280,5 +275,13 @@ public class CardDialog extends BaseTosDialog {
         b.putParcelable(MonsterEatingDialog.BUNDLE_CARD, card);
         d.setArguments(b);
         d.show(getFragmentManager(), MonsterEatingDialog.TAG);
+    }
+
+    private void shareImage(View v) {
+        //ShareHelper.shareBitmap(getActivity(), card.icon);
+        //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
+        String name = ShareHelper.cacheName("2.png");
+        //shareImage(v, name);
+        shareImage(v, name);
     }
 }

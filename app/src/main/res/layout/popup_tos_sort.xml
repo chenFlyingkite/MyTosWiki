@@ -404,6 +404,8 @@
                     android:text="@string/cards_name"/>
             </RadioGroup>
 
+            <ImageView
+                style="@style/toswiki_style"/>
         </LinearLayout>
     </HorizontalScrollView>
 

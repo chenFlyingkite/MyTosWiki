@@ -119,19 +119,19 @@ dependencies {
     def supportLibVer = "27.1.1"
 
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api "com.android.support:multidex:1.0.3"
+    api 'com.android.support:multidex:1.0.3'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api "com.android.support:appcompat-v7:$supportLibVer"
     api "com.android.support:design:$supportLibVer"
     api "com.android.support:percent:$supportLibVer"
     api "com.android.support:recyclerview-v7:$supportLibVer"
-    api "com.android.support.constraint:constraint-layout:1.1.1"
+    api 'com.android.support.constraint:constraint-layout:1.1.1'
 
     // Firebase
     // https://firebase.google.com/docs/android/setup
     // https://console.firebase.google.com/project/mytoswiki/overview
-    api "com.google.firebase:firebase-core:16.0.0"
-    api "com.google.firebase:firebase-config:16.0.0"
+    api 'com.google.firebase:firebase-core:16.0.0'
+    api 'com.google.firebase:firebase-config:16.0.0'
     api 'com.google.firebase:firebase-messaging:17.0.0'
 
     // Flurry Analytics
@@ -146,14 +146,14 @@ dependencies {
     //implementation 'com.github.chenFlyingkite:MyAndroid:b564948325'
     api 'com.github.chenFlyingkite:MyAndroid:4abe23b720'
 
-
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
+
     //https://github.com/google/gson
-    api "com.google.code.gson:gson:2.8.5"
+    api 'com.google.code.gson:gson:2.8.5'
 
     // Glide for Image cache library.
     // https://github.com/bumptech/glide
-    api "com.github.bumptech.glide:glide:4.7.1"
+    api 'com.github.bumptech.glide:glide:4.7.1'
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.
@@ -162,7 +162,6 @@ dependencies {
 
     // Drawing the Charts like Excel in Android
     api 'com.github.PhilJay:MPAndroidChart:v3.0.3'
-
 
     // OkHttp for web
     // http://square.github.io/okhttp/
@@ -173,8 +172,6 @@ dependencies {
     //api "org.jsoup:jsoup:1.11.2"
     //
     // https://github.com/Wikia/vignette#scale-to-width
-    
-
     // Picasso
     //api 'com.squareup.picasso:picasso:2.5.2'
 }

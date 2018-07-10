@@ -37,17 +37,21 @@
                     android:src="@drawable/unknown_card"
                     tools:background="#aa0"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/cardRow.greenV"
-                    android:layout_alignBottom="@id/cardImage">
-
-                    <ImageView
-                        android:id="@+id/cardLink"
-                        style="@style/card_icon.chrome"/>
-                </LinearLayout>
             </android.support.percent.PercentRelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cardLink"
+                    style="@style/card_icon.chrome"/>
+
+                <ImageView
+                    android:id="@+id/cardShare"
+                    style="@style/card_icon"
+                    android:src="@drawable/ic_save_white_48dp"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/cardInfo"
@@ -65,6 +69,7 @@
                     android:id="@+id/cardContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#d000"
                     android:orientation="vertical">
 
                     <View
@@ -251,18 +256,48 @@
                         layout="@layout/view_card_hp"/>
 
                     <!-- Card basic info : skill -->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/t10dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        style="@style/cardText.header.10"
+                        android:padding="@dimen/t5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:src="@drawable/skill_title_leader"
+                            style="@style/card_sort_active" />
+
+                        <ImageView
+                            android:src="@drawable/skill_title_leader"
+                            style="@style/card_sort_active" />
+
+                        <ImageView
+                            android:src="@drawable/skill_title_leader"
+                            style="@style/card_sort_active" />
+                    </LinearLayout>
 
                     <include
                         android:id="@+id/cardSkill_leader"
                         layout="@layout/view_card_skill_leader"/>
 
                     <!-- Card basic info : skill -->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/t10dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        style="@style/cardText.header.10"
+                        android:padding="@dimen/t5dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:src="@drawable/skill_title_active"
+                            style="@style/card_sort_active" />
+
+                        <ImageView
+                            android:src="@drawable/skill_title_active"
+                            style="@style/card_sort_active" />
+
+                        <ImageView
+                            android:src="@drawable/skill_title_active"
+                            style="@style/card_sort_active" />
+                    </LinearLayout>
 
                     <include
                         android:id="@+id/cardSkill_1"
@@ -511,10 +546,15 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <ImageView
+                android:id="@+id/cardMark"
+                style="@style/toswiki_style" />
+
             <View
                 android:id="@+id/cardEnd"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/t50dp"/>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

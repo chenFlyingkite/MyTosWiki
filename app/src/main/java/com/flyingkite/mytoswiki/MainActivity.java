@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_chrome
             , R.drawable.ic_send_black_48dp
             , R.drawable.logo_stamina
-            , R.mipmap.app_icon
+            //, R.mipmap.app_icon
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
     );
@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                     case R.drawable.logo_chrome:
                         new WebDialog().show(getActivity());
                         break;
-                    case R.mipmap.app_icon: // TODO
+                    //case R.mipmap.app_icon: // TODO
                     case R.drawable.ic_send_black_48dp:
                         new FeedbackDialog().show(getActivity());
                         break;

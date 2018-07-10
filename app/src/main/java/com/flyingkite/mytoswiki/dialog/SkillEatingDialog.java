@@ -18,12 +18,15 @@ import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
+import com.flyingkite.mytoswiki.library.IconAdapter;
+import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SkillEatingDialog extends BaseTosDialog {
@@ -46,6 +49,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     private TextView needRnd;
     private CheckBox use600;
     private TextView eatCard;
+    private Library<IconAdapter> card600;
 
     private static final int[] ROUNDS_SUM = {0
             // LV  1 ~  5, diff = 16, 19, 50, 75
@@ -61,6 +65,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
         initSpinners();
+        initCard600();
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
         initShare();
@@ -95,6 +100,26 @@ public class SkillEatingDialog extends BaseTosDialog {
             Say.Log("s = %s", s);
             shareString(s.toString());
         });
+    }
+
+    private void initCard600() {
+        card600 = new Library<>(findViewById(R.id.skillCard600));
+        IconAdapter adapter = new IconAdapter() {
+            @Override
+            protected int holderLayout() {
+                return R.layout.view_small_image;
+            }
+
+            @Override
+            protected int itemId() {
+                return R.id.smallImage;
+            }
+        };
+        List<Integer> list = Arrays.asList(R.drawable.card_1709, R.drawable.card_1735
+                , R.drawable.card_1777, R.drawable.card_1801
+        );
+        adapter.setDataList(list);
+        card600.setViewAdapter(adapter);
     }
 
     private void initTable() {

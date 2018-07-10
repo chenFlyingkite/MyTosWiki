@@ -1,6 +1,8 @@
 package com.flyingkite.mytoswiki.library;
 
 import android.content.Context;
+import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +12,24 @@ import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 
 public class IconAdapter extends RVAdapter<Integer, IconAdapter.IconVH, IconAdapter.ItemListener> {
+    private int vhLayout = R.layout.view_simple_icon;
+    private int idImage = R.id.itemIcon;
+
+    protected @LayoutRes int holderLayout() {
+        return vhLayout;
+    }
+
+    protected @IdRes int itemId() {
+        return idImage;
+    }
+
     public interface ItemListener extends RVAdapter.ItemListener<Integer, IconVH> {
         //void onClick(String name, IconVH vh, int position);
     }
 
     @Override
     public IconVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new IconVH(inflateView(parent, R.layout.view_simple_icon));
+        return new IconVH(inflateView(parent, vhLayout));
     }
 
     @Override
@@ -32,12 +45,12 @@ public class IconAdapter extends RVAdapter<Integer, IconAdapter.IconVH, IconAdap
 //                .into(vh.icon);
     }
 
-    public static class IconVH extends RecyclerView.ViewHolder {
+    public class IconVH extends RecyclerView.ViewHolder {
         private ImageView icon;
 
         public IconVH(View itemView) {
             super(itemView);
-            icon = itemView.findViewById(R.id.itemIcon);
+            icon = itemView.findViewById(idImage);
         }
     }
 }
