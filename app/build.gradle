@@ -151,10 +151,18 @@ dependencies {
     //https://github.com/google/gson
     api 'com.google.code.gson:gson:2.8.5'
 
+    // Room Persistence Library
+    // https://developer.android.com/training/data-storage/room/
+    def roomVersion = "1.1.1"
+    api "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+
     // Glide for Image cache library.
     // https://github.com/bumptech/glide
     api 'com.github.bumptech.glide:glide:4.7.1'
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.
     // https://github.com/kexanie/MathView

@@ -41,7 +41,7 @@ public class TosWiki {
         return cards;
     }
 
-    private static InputStreamReader getReader(String assetFile, AssetManager am) {
+    public static InputStreamReader getReader(String assetFile, AssetManager am) {
         try {
             return new InputStreamReader(am.open(assetFile), "UTF-8");
             //return new InputStreamReader(new FileInputStream(file), "UTF-8");
@@ -51,7 +51,7 @@ public class TosWiki {
         }
     }
 
-    private static InputStreamReader getReader(File file) {
+    public static InputStreamReader getReader(File file) {
         try {
             return new InputStreamReader(new FileInputStream(file), "UTF-8");
         } catch (IOException e) {

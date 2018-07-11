@@ -384,6 +384,18 @@
                         <include
                             android:id="@+id/cardAme4"
                             layout="@layout/view_card_row_amelioration"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/t10dp"/>
+
+                        <include
+                            android:id="@+id/cardAmeSkill_1"
+                            layout="@layout/view_card_row_skill"/>
+
+                        <include
+                            android:id="@+id/cardAmeSkill_2"
+                            layout="@layout/view_card_row_skill"/>
                     </LinearLayout>
 
                     <!-- Card info : Power Release 潛能解放 -->
