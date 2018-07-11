@@ -325,6 +325,7 @@
                             android:text="@string/cards_amelioration"/>
 
                         <LinearLayout
+                            android:id="@+id/cardAmeBattle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/cardRow.greenV"

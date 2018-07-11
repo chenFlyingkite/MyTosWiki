@@ -207,6 +207,7 @@ public class CardDialog extends BaseTosDialog {
 
     private void setAmeLink() {
         setLink(R.id.cardAmeBattleName, R.id.cardAmeBattleLink, card.skillAmeliorationBattleName, card.skillAmeliorationBattleLink);
+        setViewVisibility(R.id.cardAmeBattle, TextUtils.isEmpty(card.skillAmeliorationBattleName));
 
         setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeliorationCost1, card.skillAmeliorationName1);
         setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeliorationCost2, card.skillAmeliorationName2);
@@ -266,6 +267,11 @@ public class CardDialog extends BaseTosDialog {
             cost.setText("" + scost);
             desc.setText(sdesc);
         }
+    }
+
+    private void setViewVisibility(@IdRes int parent, boolean hide) {
+        int v = hide ? View.GONE : View.VISIBLE;
+        findViewById(parent).setVisibility(v);
     }
 
     private void showMonsterEatDialog(View v) {

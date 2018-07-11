@@ -22,7 +22,7 @@ repositories {
 // Fabric -- End
 
 def googlePlayVersion = "9.8.0"
-boolean createPlayApk = true
+boolean createPlayApk = false
 
 task MyBuildInfo {
     ext.versionCode = 6
@@ -282,7 +282,7 @@ class TicTac {
             StringBuilder s = new StringBuilder()
             int n = tictac.size()
 
-            for(int i = 0; i < n; ++i) {
+            for (int i = 0; i < n; ++i) {
                 s.append(" ")
             }
 
