@@ -1,6 +1,6 @@
 package com.flyingkite.mytoswiki.tos.query;
 
-import com.flyingkite.library.ListUtil;
+import com.flyingkite.library.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;

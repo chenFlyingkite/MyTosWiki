@@ -2,7 +2,7 @@ package com.flyingkite.mytoswiki.tos.query;
 
 import android.support.annotation.NonNull;
 
-import com.flyingkite.library.ListUtil;
+import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.data.TosCard;
 
@@ -42,7 +42,6 @@ public interface TosCardSelection {
         t.tic();
         List<Integer> result = sort(select());
         t.tac("From %s selects %s items", from().size(), result.size());
-        //Say.LogI("From %s selects %s items", from().size(), result.size());
         return result;
     }
 

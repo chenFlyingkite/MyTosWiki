@@ -17,9 +17,9 @@ import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.flyingkite.library.GsonUtil;
-import com.flyingkite.library.ListUtil;
-import com.flyingkite.library.MathUtil;
+import com.flyingkite.library.util.GsonUtil;
+import com.flyingkite.library.util.ListUtil;
+import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
@@ -28,7 +28,6 @@ import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
-import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -36,7 +35,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
@@ -47,7 +45,6 @@ public class TosCardFragment extends BaseFragment {
     private View sortMenu;
     private PopupWindow sortWindow;
     private TextView tosInfo;
-    private TosCard[] allCards;
     private View sortReset;
     private ViewGroup sortAttributes;
     private ViewGroup sortRace;
@@ -68,6 +65,9 @@ public class TosCardFragment extends BaseFragment {
 
     private CardSort cardSort = new CardSort();
 
+    // Major components
+    private List<TosCard> allCards;
+
     private ToolBarOwner toolOwner;
 
     public interface ToolBarOwner {
@@ -85,19 +85,19 @@ public class TosCardFragment extends BaseFragment {
         initSortMenu();
         initToolIcons();
 
-        new ParseCardsTask().executeOnExecutor(sSingle);//ThreadUtil.cachedThreadPool);
+        //new ParseCardsTask().executeOnExecutor(sSingle);//ThreadUtil.cachedThreadPool);
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
     }
 
     private void initToolIcons() {
         findViewById(R.id.tosGoTop).setOnClickListener((v) -> {
             int index = 0;
-            cardLib.recycler.scrollToPosition(index);
+            cardLib.recyclerView.scrollToPosition(index);
         });
 
         findViewById(R.id.tosGoBottom).setOnClickListener((v) -> {
-            int index = cardLib.cardAdapter.getItemCount() - 1;
-            cardLib.recycler.scrollToPosition(index);
+            int index = cardLib.adapter.getItemCount() - 1;
+            cardLib.recyclerView.scrollToPosition(index);
         });
 
         View tool = findViewById(R.id.tosTooBar);
@@ -114,9 +114,9 @@ public class TosCardFragment extends BaseFragment {
         tool.setSelected(sel);
     }
 
-    private void initCardLibrary() {
-        int n = allCards == null ? 0 : allCards.length;
-        showToast(R.string.cards_read, n);
+    public void onCardsReady(TosCard[] cards) {
+        allCards = Arrays.asList(cards);
+        int n = allCards.size();
         tosInfo.setText(getString(R.string.cards_selection, n, n));
         cardLib.setDataSet(allCards
                 , (position, card) -> {
@@ -286,7 +286,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickTurnRuneStones(View v) {
-        clickHide(v);// TODO : Click
+        clickHide(v);
     }
 
     private void clickStar(View v) {
@@ -302,14 +302,17 @@ public class TosCardFragment extends BaseFragment {
     private void clickDisplay(View v) {
         sortDisplay.check(v.getId());
 
-        CardAdapter.NameType type = CardAdapter.NameType.idNorm;
+        int type = CardAdapter.NT_ID_NORM;
         switch (v.getId()) {
             case R.id.sortDisplayName:
-                type = CardAdapter.NameType.name;
+                type = CardAdapter.NT_NAME;
                 break;
         }
-        cardLib.cardAdapter.setNameType(type);
-        cardLib.cardAdapter.notifyDataSetChanged();
+        // TODO
+        if (cardLib.adapter != null) {
+            cardLib.adapter.setNameType(type);
+            cardLib.adapter.notifyDataSetChanged();
+        }
     }
 
     private void clickCommon(View v) {
@@ -366,9 +369,12 @@ public class TosCardFragment extends BaseFragment {
         LogE("sel R = %s", races);
         LogE("sel S = %s", stars);
 
-        if (cardLib.cardAdapter != null) {
+        if (cardLib.adapter != null) {
             TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
-            cardLib.cardAdapter.setSelection(new TosSelect(Arrays.asList(allCards), cond));
+            cardLib.adapter.setSelection(new TosSelect(allCards, cond));
+//            TicTac.tic();
+//            TosWiki.cards().DB.dao().attr_race_rarity(attrs, races, stars);
+//            TicTac.tac("DB select");
         }
     }
 
@@ -486,44 +492,6 @@ public class TosCardFragment extends BaseFragment {
         toolOwner = null;
     }
 
-    private class ParseCardsTask extends AsyncTask<Void, Void, Void> {
-        private WaitingDialog dialog;
-        @Override
-        protected void onPreExecute() {
-            dialog = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            allCards = TosWiki.parseCards(getActivity().getAssets());
-            check();
-            return null;
-        }
-
-        private void check() {
-            HashSet<String> attr = new HashSet<>();
-            for (TosCard c : allCards) {
-                attr.add(c.attribute);
-            }
-            LogE("attr = %s", attr);
-
-            HashSet<String> race = new HashSet<>();
-            for (TosCard c : allCards) {
-                race.add(c.race);
-            }
-            LogE("race = %s", race);
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            if (dialog != null) {
-                dialog.dismiss();
-                dialog = null;
-            }
-            initCardLibrary();
-        }
-    }
-
     private class TosSelect extends TosSelectAttribute {
         private final String[] keep = getResources().getStringArray(R.array.cards_keep_keys);
         private final String[] freemove = getResources().getStringArray(R.array.cards_freemove_keys);
@@ -626,10 +594,10 @@ public class TosCardFragment extends BaseFragment {
             if (!sortImproveNo.isChecked()) {
                 if (sortImproveAme.isChecked()) {
                     //noinspection ConstantConditions
-                    accept &= c.skillAmeliorationCost1 > 0;
+                    accept &= c.skillAmeCost1 > 0;
                 }
                 if (sortImproveAwk.isChecked()) {
-                    accept &= !c.skillAwakenRecallName.isEmpty();
+                    accept &= !c.skillAwkName.isEmpty();
                 }
                 if (sortImprovePow.isChecked()) {
                     accept &= !c.skillPowBattleName.isEmpty();
@@ -857,7 +825,9 @@ public class TosCardFragment extends BaseFragment {
         @Override
         protected void onPostExecute(CardSort data) {
             cardSort = data != null ? data : new CardSort();
-            updateHide();
+            //if (cardLib.cardAdapter != null) {
+                updateHide(); // TODO
+            //}
             if (allCards != null) {
                 applySelection();
             }

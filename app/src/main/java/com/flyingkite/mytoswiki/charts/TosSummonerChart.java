@@ -2,8 +2,8 @@ package com.flyingkite.mytoswiki.charts;
 
 import android.graphics.Color;
 
-import com.flyingkite.library.ListUtil;
 import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.mytoswiki.tos.TosSummonerLevel;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;

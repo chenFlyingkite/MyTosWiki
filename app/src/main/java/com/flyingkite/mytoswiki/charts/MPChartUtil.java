@@ -60,6 +60,7 @@ public final class MPChartUtil {
         return list;
     }
 
+    // TODO : Math
     private static long minOf(List<Long> param) {
         if (param == null || param.size() == 0) return 0;
         long min = param.get(0);

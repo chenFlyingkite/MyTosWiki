@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.MPChartUtil;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.tos.TosMath;
-import com.flyingkite.util.TicTacv;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -135,7 +135,7 @@ public class MonsterEatingDialog extends BaseTosDialog {
         int[] colors = {Color.BLACK, Color.RED, Color.GREEN, Color.BLUE};
 
         final List<ILineDataSet> allDataSet = new ArrayList<>();
-        TicTacv clock = new TicTacv();
+        TicTac2.v clock = new TicTac2.v();
         clock.tic();
         for (int j = 0; j < n; j++) {
             // Add each row points

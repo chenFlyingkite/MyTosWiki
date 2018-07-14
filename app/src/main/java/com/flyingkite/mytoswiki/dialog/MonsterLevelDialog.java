@@ -8,10 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.library.ButtonsAdapter;
-import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.library.MonsterLvAdapter;
+import com.flyingkite.mytoswiki.library.TextAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +50,7 @@ public class MonsterLevelDialog extends BaseTosDialog {
     private void initShortcuts() {
         RecyclerView shortcuts = findViewById(R.id.mldShortcuts);
 
-        ButtonsAdapter ba = new ButtonsAdapter();
+        TextAdapter ba = new TextAdapter();
         List<String> s = new ArrayList<>();
         int max = 1000;
         for (int i = 50; i <= max; i += 50) {
@@ -58,9 +58,9 @@ public class MonsterLevelDialog extends BaseTosDialog {
         }
         ba.setDataList(s);
         ba.setAutoScroll(true);
-        ba.setItemListener(new ButtonsAdapter.ItemListener() {
+        ba.setItemListener(new TextAdapter.ItemListener() {
             @Override
-            public void onClick(String item, ButtonsAdapter.ButtonVH holder, int position) {
+            public void onClick(String item, TextAdapter.TextVH holder, int position) {
                 setHeader(item);
 
                 // Change table

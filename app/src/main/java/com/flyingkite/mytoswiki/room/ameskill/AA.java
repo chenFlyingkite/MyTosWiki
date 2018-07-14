@@ -1,9 +1,10 @@
 package com.flyingkite.mytoswiki.room.ameskill;
 
 public class AA {
+    // Database table name
     public static final String AmeDB = "AmeSkill";
 
-    // Table column name
+    // All column name
     public static final String skillName     = "skillName";
     public static final String skillLink     = "skillLink";
     public static final String skillCDMin    = "skillCDMin";

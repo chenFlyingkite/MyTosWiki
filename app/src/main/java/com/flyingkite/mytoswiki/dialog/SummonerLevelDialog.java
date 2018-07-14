@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.TosSummonerChart;
-import com.flyingkite.mytoswiki.library.ButtonsAdapter;
-import com.flyingkite.mytoswiki.library.Library;
 import com.flyingkite.mytoswiki.library.SummonLvAdapter;
+import com.flyingkite.mytoswiki.library.TextAdapter;
 import com.flyingkite.mytoswiki.tos.TosSummonerLevel;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -65,7 +65,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
     private void initShortcuts() {
         RecyclerView shortcuts = findViewById(R.id.sldShortcuts);
 
-        ButtonsAdapter ba = new ButtonsAdapter();
+        TextAdapter ba = new TextAdapter();
         List<String> s = new ArrayList<>();
         int max = TosSummonerLevel.table.length;
         for (int i = 0; i <= max; i += 50) {
@@ -73,9 +73,9 @@ public class SummonerLevelDialog extends BaseTosDialog {
         }
         ba.setDataList(s);
         ba.setAutoScroll(true);
-        ba.setItemListener(new ButtonsAdapter.ItemListener() {
+        ba.setItemListener(new TextAdapter.ItemListener() {
             @Override
-            public void onClick(String item, ButtonsAdapter.ButtonVH holder, int position) {
+            public void onClick(String item, TextAdapter.TextVH holder, int position) {
                 setHeader(item);
 
                 // Scroll to item

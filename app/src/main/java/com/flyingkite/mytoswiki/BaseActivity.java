@@ -92,6 +92,10 @@ public abstract class BaseActivity extends Activity {
         }
     }
 
+    protected final void showToast(@StringRes int id, Object... args) {
+        showToast(getString(id, args));
+    }
+
     protected final void showToast(@StringRes int id) {
         Toast.makeText(this, id, Toast.LENGTH_LONG).show();
     }

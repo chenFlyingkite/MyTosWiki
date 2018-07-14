@@ -1,33 +1,33 @@
 package com.flyingkite.mytoswiki;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.arch.persistence.room.Room;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
-import com.flyingkite.library.IOUtil;
 import com.flyingkite.library.Say;
-import com.flyingkite.library.ThreadUtil;
-import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.logging.Loggable;
+import com.flyingkite.library.util.StringUtil;
+import com.flyingkite.library.widget.Library;
+import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
-import com.flyingkite.mytoswiki.library.Library;
-import com.flyingkite.mytoswiki.room.ameskill.AmeSkill;
-import com.flyingkite.mytoswiki.room.ameskill.AmeSkillDB;
+import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.util.TextEditorDialog;
-import com.google.gson.Gson;
+import com.flyingkite.util.WaitingDialog;
 
-import java.io.Reader;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
+public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner, Loggable {
     // Provide alternative bitmaps
     // https://developer.android.com/training/multiscreen/screendensities
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
@@ -41,56 +41,131 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
     private Library<IconAdapter> iconLibrary;
 
     @Override
+    public void log(String message) {
+        Log.e(LTag(), message);
+    }
+
+    private WaitingDialog waiting;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //new CheckTosDBTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
         initToolIcons();
         addTosFragment();
+        waiting = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
 
+        log("+ card = %s", TosWiki.isLoaded_allCards());
+        log("+ ame = %s", TosWiki.isLoaded_ameSkills());
+        TosWiki.registerLoaded(new TosWiki.OnLoadState() {
+            @Override
+            public void onLoaded_allCards() {
+                log("Reg : card");
+            }
+
+            @Override
+            public void onLoaded_ameSkills() {
+                log("Reg : ame");
+            }
+
+            @Override
+            public void onLoaded_All() {
+                log("Reg : all");
+                onOK();
+            }
+        });
+
+        findViewById(R.id.mainTools).postDelayed(() -> {
+            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
+                @Override
+                public void onLoaded_allCards() {
+                    log("Reg1 : card");
+                }
+
+                @Override
+                public void onLoaded_ameSkills() {
+                    log("Reg1 : ame");
+                }
+
+                @Override
+                public void onLoaded_All() {
+                    log("Reg1 : all");
+                }
+            });
+        }, 1000);
+
+
+        findViewById(R.id.mainTools).postDelayed(() -> {
+            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
+                @Override
+                public void onLoaded_allCards() {
+                    log("Reg2 : card");
+                }
+
+                @Override
+                public void onLoaded_ameSkills() {
+                    log("Reg2 : ame");
+                }
+
+                @Override
+                public void onLoaded_All() {
+                    log("Reg2 : all");
+                }
+            });
+        }, 2000);
+        findViewById(R.id.mainTools).postDelayed(() -> {
+            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
+                @Override
+                public void onLoaded_allCards() {
+                    log("Reg7 : card");
+                }
+
+                @Override
+                public void onLoaded_ameSkills() {
+                    log("Reg7 : ame");
+                }
+
+                @Override
+                public void onLoaded_All() {
+                    log("Reg7 : all");
+                }
+            });
+        }, 7000);
+        findViewById(R.id.mainTools).postDelayed(() -> {
+            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
+                @Override
+                public void onLoaded_allCards() {
+                    log("Reg12 : card");
+                }
+
+                @Override
+                public void onLoaded_ameSkills() {
+                    log("Reg12 : ame");
+                }
+
+                @Override
+                public void onLoaded_All() {
+                    log("Reg12 : all");
+                }
+            });
+        }, 12000);
+
+    }
+
+    private void onCardsLoaded(TosCard[] cards) {
+        FragmentManager fm = getFragmentManager();
+        Fragment f = fm.findFragmentByTag(TosCardFragment.TAG);
+        if (f instanceof TosCardFragment) {
+            TosCardFragment tf = (TosCardFragment) f;
+            tf.onCardsReady(cards);
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadAme();
-    }
-
-    private void loadAme() {
-        final String assetName = "ameActiveSkills.json";
-        Say.Log("parsing Cards");
-        TicTac2 clk = new TicTac2();
-
-        Gson gson = new Gson();
-        Reader reader = null;
-        AmeSkill[] cards = null;
-        try {
-            reader = TosWiki.getReader(assetName, getAssets());
-            if (reader == null) {
-                Say.Log("reader not found, %s", assetName);
-            } else {
-                clk.tic();
-                cards = gson.fromJson(reader, AmeSkill[].class);
-                int n = cards == null ? 0 : cards.length;
-                clk.tac("%s ames read", n);
-            }
-        } finally {
-            IOUtil.closeIt(reader);
-        }
-
-        final AmeSkill[] aa = cards;
-
-        if (aa != null) {
-            ThreadUtil.runOnWorkerThread(() -> {
-                AmeSkillDB db = Room.inMemoryDatabaseBuilder(getApplicationContext(), AmeSkillDB.class).build();
-                Say.Log("DB = %s", db.dao().getAll());
-                for (AmeSkill a : aa) {
-                    db.dao().insertAll(a);
-                }
-                Say.Log("DB = %s", db.dao().getAll());
-                Say.Log("DB sel = %s", db.dao().getAll2(10));
-            });
-        }
     }
 
     private void addTosFragment() {
@@ -109,6 +184,10 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         IconAdapter adapter = new IconAdapter();
         adapter.setDataList(tools);
         adapter.setItemListener(new IconAdapter.ItemListener() {
+//            public void onHello() {
+//
+//            }
+
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
                 switch (iconId) {
@@ -150,4 +229,53 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
     public boolean isToolsVisible() {
         return iconLibrary.recyclerView.getVisibility() == View.VISIBLE;
     }
+
+    private class CheckTosDBTask extends AsyncTask<Void, Void, Void> {
+        private WaitingDialog dialog;
+        private int n = 0;
+        private static final int time = 16_000; // 6 second
+
+        @Override
+        protected void onPreExecute() {
+            dialog = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            long tic = System.currentTimeMillis();
+            while (TosWiki.allCards() == null) {
+
+            };
+            long tac = System.currentTimeMillis();
+//            do {
+//                tac = System.currentTimeMillis();
+//                try {
+//                    Thread.sleep(5);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            } while (tac - tic < time && TosWiki.allCards() == null);
+            Say.Log(" End %s", StringUtil.toTimeMMSSF(tac - tic));
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            onOK();
+            if (dialog != null) {
+                dialog.dismiss();
+                dialog = null;
+            }
+        }
+    }
+    private void onOK() {
+        TosCard[] cards = TosWiki.allCards();
+        showToast(R.string.cards_read, cards.length);
+        onCardsLoaded(cards);
+        if (waiting != null) {
+            waiting.dismiss();
+            waiting = null;
+        }
+    }
+
 }

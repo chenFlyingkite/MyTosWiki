@@ -11,9 +11,10 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.flyingkite.library.Say;
+import com.flyingkite.library.widget.IconRVAdapter;
+import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
-import com.flyingkite.mytoswiki.library.Library;
 
 import java.util.Arrays;
 import java.util.List;
@@ -69,9 +70,9 @@ public class WebDialog extends BaseTosDialog {
         IconAdapter adapter = new IconAdapter();
         adapter.setAutoScroll(true);
         adapter.setDataList(toolsIds);
-        adapter.setItemListener(new IconAdapter.ItemListener() {
+        adapter.setItemListener(new IconRVAdapter.ItemListener() {
             @Override
-            public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
+            public void onClick(Integer s, IconRVAdapter.IconVH iconVH, int position) {
                 switch (s) {
                     case R.drawable.ic_home_black_48dp:
                         web.loadUrl(tosWikiHome);

@@ -1,10 +1,11 @@
-package com.flyingkite.mytoswiki.room.ameskill;
+package com.flyingkite.mytoswiki.data;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import com.flyingkite.mytoswiki.room.ameskill.AA;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;

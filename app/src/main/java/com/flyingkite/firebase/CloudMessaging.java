@@ -1,8 +1,8 @@
 package com.flyingkite.firebase;
 
-import com.flyingkite.library.GsonUtil;
+import com.flyingkite.library.preference.BasePreference;
+import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.mytoswiki.App;
-import com.flyingkite.util.BasePreference;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
@@ -21,6 +21,10 @@ public class CloudMessaging {
 
     private static class FCMPref extends BasePreference {
         private static final String FCM_TOKEN = "fcmToken";
+
+        public FCMPref() {
+            super(App.me);
+        }
 
         public String getFcmToken() {
             return getString(FCM_TOKEN);

@@ -143,10 +143,10 @@ public class CardDialog extends BaseTosDialog {
         setSkill(R.id.cardSkill_2, card.skillName2, card.skillCDMin2, card.skillCDMax2, card.skillDesc2);
 
         // Fill in Amelioration, I, II, III, IV
-        setImproves(card.skillAmeliorationCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
+        setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
 
         // Fill in Awaken Recall
-        setImproves(!TextUtils.isEmpty(card.skillAwakenRecallName), R.id.cardAwakenRecallTable, this::setAwkLink);
+        setImproves(!TextUtils.isEmpty(card.skillAwkName), R.id.cardAwakenRecallTable, this::setAwkLink);
 
         // Fill in Power Release
         setImproves(!TextUtils.isEmpty(card.skillPowBattleName), R.id.cardPowerReleaseTable, this::setPowLink);
@@ -206,19 +206,19 @@ public class CardDialog extends BaseTosDialog {
     }
 
     private void setAmeLink() {
-        setLink(R.id.cardAmeBattleName, R.id.cardAmeBattleLink, card.skillAmeliorationBattleName, card.skillAmeliorationBattleLink);
-        setViewVisibility(R.id.cardAmeBattle, TextUtils.isEmpty(card.skillAmeliorationBattleName));
+        setLink(R.id.cardAmeBattleName, R.id.cardAmeBattleLink, card.skillAmeBattleName, card.skillAmeBattleLink);
+        setViewVisibility(R.id.cardAmeBattle, TextUtils.isEmpty(card.skillAmeBattleName));
 
-        setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeliorationCost1, card.skillAmeliorationName1);
-        setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeliorationCost2, card.skillAmeliorationName2);
-        setAmelioration(R.id.cardAme3, R.drawable.refine3, card.skillAmeliorationCost3, card.skillAmeliorationName3);
-        setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeliorationCost4, card.skillAmeliorationName4);
+        setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeCost1, card.skillAmeName1);
+        setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeCost2, card.skillAmeName2);
+        setAmelioration(R.id.cardAme3, R.drawable.refine3, card.skillAmeCost3, card.skillAmeName3);
+        setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeCost4, card.skillAmeName4);
     }
 
     private void setAwkLink() {
-        setLink(R.id.cardAwkBattleName, R.id.cardAwkBattleLink, card.skillAwakenRecallBattleName, card.skillAwakenRecallBattleLink);
+        setLink(R.id.cardAwkBattleName, R.id.cardAwkBattleLink, card.skillAwkBattleName, card.skillAwkBattleLink);
         TextView t = findViewById(R.id.cardAwkName);
-        t.setText(card.skillAwakenRecallName);
+        t.setText(card.skillAwkName);
     }
 
     private void setPowLink() {
@@ -240,7 +240,7 @@ public class CardDialog extends BaseTosDialog {
         CharSequence cs = Html.fromHtml("<u>" + bname + "</u>");
         t.setText(cs);
         View.OnClickListener clk = (v) -> {
-            //viewLink(card.skillAmeliorationBattleLink);
+            //viewLink(card.skillAmeBattleLink);
             viewLinkAsWebDialog(blink);
         };
         t.setOnClickListener(clk);
@@ -287,7 +287,6 @@ public class CardDialog extends BaseTosDialog {
         //ShareHelper.shareBitmap(getActivity(), card.icon);
         //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
         String name = ShareHelper.cacheName("2.png");
-        //shareImage(v, name);
         shareImage(v, name);
     }
 }

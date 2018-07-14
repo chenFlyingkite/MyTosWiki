@@ -77,6 +77,13 @@ android {
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode
         versionName MyBuildInfo.versionName
+
+        // https://stackoverflow.com/questions/44322178/room-schema-export-directory-is-not-provided-to-the-annotation-processor-so-we
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
     }
 
     buildTypes {
@@ -142,9 +149,9 @@ dependencies {
 
     //api 'com.github.User:Repo:Tag'
     //api "com.github.chenFlyingkite:MyAndroid:0.0.5.0"
-    //api "com.github.chenFlyingkite:MyAndroid:2431683fb8"
     //implementation 'com.github.chenFlyingkite:MyAndroid:b564948325'
-    api 'com.github.chenFlyingkite:MyAndroid:4abe23b720'
+    //api 'com.github.chenFlyingkite:MyAndroid:4abe23b720'
+    api 'com.github.chenFlyingkite:MyAndroid:59a1c1b71e'
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 

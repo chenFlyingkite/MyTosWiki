@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.XmlRes;
 import android.util.Log;
 
-import com.flyingkite.util.TicTacv;
+import com.flyingkite.library.TicTac2;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
@@ -27,7 +27,7 @@ public class RemoteConfig {
 
         final int cacheExpireTime = 0;
 
-        TicTacv t = new TicTacv();
+        TicTac2.v t = new TicTac2.v();
         //printAll(); // Print them if need to peek old values
         t.tic();
         remoteConfig.fetch(cacheExpireTime)

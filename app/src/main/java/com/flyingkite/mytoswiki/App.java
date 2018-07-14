@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.google.firebase.FirebaseApp;
 
 import java.io.FileNotFoundException;
@@ -43,6 +44,7 @@ public class App extends MultiDexApplication {
         CrashReport.init(this, DEBUG);
         FirebaseApp.initializeApp(this);
         RemoteConfig.init(DEBUG, R.xml.remote_config_default);
+        TosWiki.init(this);
         //initCrashHandler();
     }
 

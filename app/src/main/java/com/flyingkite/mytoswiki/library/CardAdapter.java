@@ -2,6 +2,8 @@ package com.flyingkite.mytoswiki.library;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
+import android.support.annotation.IntRange;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,41 +14,35 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.library.Say;
-import com.flyingkite.library.ThreadUtil;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.TosCard;
 import com.flyingkite.mytoswiki.tos.TosCardFilter;
 import com.flyingkite.mytoswiki.tos.query.TosCardSelection;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-public class CardAdapter extends RecyclerView.Adapter<CardVH> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
     private List<TosCard> cards = new ArrayList<>();
     private OnClickCard onClick;
     private boolean showFilter;
     private List<Integer> filterIndices = new ArrayList<>();
     private OnFilterCard onFilter;
 
-    public enum NameType {
-        id, idNorm, name,
-        ;
+    public static final int NT_ID_NORM = 0;
+    public static final int NT_NAME = 1;
 
-        public String getName(TosCard c) {
-            switch (this) {
-                case id:
-                    return c.id;
-                default:
-                case idNorm:
-                    return c.idNorm;
-                case name:
-                    return c.name;
-            }
-        }
-    }
-    private NameType nameType = NameType.idNorm;
+    @Retention(RetentionPolicy.SOURCE)
+    @IntRange(from = NT_ID_NORM, to = NT_NAME)
+    public @interface NameType{}
+
+
+    private int nameType = NT_ID_NORM;
 
     private TosCardSelection selection;
     private List<Integer> selectedIndices = new ArrayList<>();
@@ -92,15 +88,24 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
-    public void setCards(TosCard[] c) {
-        cards = asList(c);
+    public void setCards(List<TosCard> c) {
+        cards = c;
         setSelection(null);
     }
 
-    public void setNameType(NameType type) {
-        nameType = type == null ? NameType.idNorm : type;
+    public void setNameType(@NameType int type) {
+        nameType = type;
     }
 
+    private String name(TosCard c) {
+        switch (nameType) {
+            default:
+            case NT_ID_NORM: return c.idNorm;
+            case NT_NAME:    return c.name;
+        }
+    }
+
+    // TODO
     private <T> List<T> asList(T[] c) {
         return c == null ? new ArrayList<>() : Arrays.asList(c);
     }
@@ -119,15 +124,16 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         }
     }
 
+    @NonNull
     @Override
-    public CardVH onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CardVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //Say.Log("create type #%s", viewType);
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_square_image, parent, false);
         return new CardVH(v);
     }
 
     @Override
-    public void onBindViewHolder(CardVH holder, int position) {
+    public void onBindViewHolder(@NonNull CardVH holder, int position) {
         TosCard c;
 
         c = cards.get(selectedIndices.get(position));
@@ -136,7 +142,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
         if (selectedMessage != null && position < selectedMessage.size()) {
             msg = selectedMessage.get(position);
         }
-        holder.setCard(c, nameType.getName(c), msg);
+        holder.setCard(c, name(c), msg);
         holder.itemView.setOnClickListener(w -> {
             Say.Log("click %s, %s", c.id, c.name);
             if (onClick != null) {
@@ -155,48 +161,49 @@ public class CardAdapter extends RecyclerView.Adapter<CardVH> {
 
         filterIndices.clear();
         if (showFilter) {
-            filterIndices = TosCardFilter.me.filter(cards, map);
+            filterIndices = TosCardFilter.filter(cards, map);
             notifyDataSetChanged();
             if (onFilter != null) {
                 onFilter.onFiltered(filterIndices.size(), cards.size());
             }
         }
     }
-}
 
-class CardVH extends RecyclerView.ViewHolder {
-    private TosCard card;
-    private ImageView thumb;
-    private TextView text;
-    private TextView message;
+    public static class CardVH extends RecyclerView.ViewHolder {
+        private TosCard card;
+        private ImageView thumb;
+        private TextView text;
+        private TextView message;
 
-    public CardVH(View v) {
-        super(v);
-        thumb = v.findViewById(R.id.squareImg);
-        text = v.findViewById(R.id.squareText);
-        message = v.findViewById(R.id.squareMessage);
-    }
+        public CardVH(View v) {
+            super(v);
+            thumb = v.findViewById(R.id.squareImg);
+            text = v.findViewById(R.id.squareText);
+            message = v.findViewById(R.id.squareMessage);
+        }
 
-    public void setCard(TosCard c, String name, String msg) {
-        boolean hasMsg = msg != null;
-        card = c;
-        text.setText(name);
-        message.setText(msg);
-        loadImage(thumb, c.icon);
-        setVisible(text, !hasMsg);
-        setVisible(message, hasMsg);
-    }
+        public void setCard(TosCard c, String name, String msg) {
+            boolean hasMsg = msg != null;
+            card = c;
+            text.setText(name);
+            message.setText(msg);
+            loadImage(thumb, c.icon);
+            setVisible(text, !hasMsg);
+            setVisible(message, hasMsg);
+        }
 
-    private void setVisible(View v, boolean visible) {
-        if (v != null) {
-            v.setVisibility(visible ? View.VISIBLE : View.GONE);
+        private void setVisible(View v, boolean visible) {
+            if (v != null) {
+                v.setVisibility(visible ? View.VISIBLE : View.GONE);
+            }
+        }
+
+        private void loadImage(ImageView v, String url) {
+            Glide.with(v.getContext()).load(url)
+                    .apply(RequestOptions.centerCropTransform()
+                            .placeholder(R.drawable.unknown_card))
+                    .into(v);
         }
     }
-
-    private void loadImage(ImageView v, String url) {
-        Glide.with(v.getContext()).load(url)
-                .apply(RequestOptions.centerCropTransform()
-                        .placeholder(R.drawable.unknown_card))
-                .into(v);
-    }
 }
+
