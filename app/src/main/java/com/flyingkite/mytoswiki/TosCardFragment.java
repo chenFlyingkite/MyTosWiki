@@ -26,8 +26,10 @@ import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
 import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
+import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -87,6 +89,8 @@ public class TosCardFragment extends BaseFragment {
 
         //new ParseCardsTask().executeOnExecutor(sSingle);//ThreadUtil.cachedThreadPool);
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
+
+        TosWiki.attendDatabaseTasks(onCardsReady);
     }
 
     private void initToolIcons() {
@@ -113,6 +117,24 @@ public class TosCardFragment extends BaseFragment {
         }
         tool.setSelected(sel);
     }
+
+    private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
+        @Override
+        public void onTaskDone(int index, String tag) {
+            runOnUiThread(() -> {
+                if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
+                    //allCards = Arrays.asList(Objects.requireNonNull(TosWiki.allCards()));
+                    onCardsReady(TosWiki.allCards());
+                }
+                log("#%s (%s) is done", index, tag);
+            });
+        }
+
+        @Override
+        public void onAllTaskDone() {
+            log("All task OK");
+        }
+    };
 
     public void onCardsReady(TosCard[] cards) {
         allCards = Arrays.asList(cards);

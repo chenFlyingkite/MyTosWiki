@@ -45,7 +45,7 @@ android {
 
     // https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.DexOptions.html
     dexOptions {
-        jumboMode true
+        jumboMode false
         javaMaxHeapSize "1g"
         maxProcessCount 4 // Total Memory = maxProcessCount * javaMaxHeapSize
         threadCount (maxProcessCount * 3)

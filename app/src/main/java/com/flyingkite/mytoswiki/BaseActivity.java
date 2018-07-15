@@ -1,10 +1,13 @@
 package com.flyingkite.mytoswiki;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.util.Log;
@@ -59,6 +62,24 @@ public abstract class BaseActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         LogV("result : %s", RESULT_STATE[resultCode + 1]);
+    }
+
+    protected Fragment findFragmentById(@IdRes int fragmentId) {
+        FragmentManager fm = getFragmentManager();
+        if (fm == null) {
+            return null;
+        } else {
+            return fm.findFragmentById(fragmentId);
+        }
+    }
+
+    protected Fragment findFragmentByTag(String tag) {
+        FragmentManager fm = getFragmentManager();
+        if (fm == null) {
+            return null;
+        } else {
+            return fm.findFragmentByTag(tag);
+        }
     }
 
 
