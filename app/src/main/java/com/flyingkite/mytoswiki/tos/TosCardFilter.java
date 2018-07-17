@@ -2,7 +2,7 @@ package com.flyingkite.mytoswiki.tos;
 
 import android.support.annotation.NonNull;
 
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 import java.util.ArrayList;
 import java.util.List;

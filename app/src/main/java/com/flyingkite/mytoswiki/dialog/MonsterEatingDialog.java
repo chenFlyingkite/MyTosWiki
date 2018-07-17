@@ -8,7 +8,7 @@ import android.view.View;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.MPChartUtil;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.TosMath;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.YAxis;

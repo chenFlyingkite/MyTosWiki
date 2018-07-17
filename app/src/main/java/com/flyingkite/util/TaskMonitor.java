@@ -1,7 +1,6 @@
 package com.flyingkite.util;
 
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.flyingkite.library.logging.Loggable;
 
@@ -68,9 +67,6 @@ public class TaskMonitor implements Loggable {
                 // For each task[j], notify client[i] if task[j] is done
                 for (int j = 0; j < taskOwner.taskCount(); j++) {
                     if (taskOwner.isTaskDone(j)) {
-                        if (j == 0) {
-                            n = n;
-                        }
                         ci.onTaskDone(j, taskOwner.getTaskTag(j));
                         done++;
                     }
@@ -95,6 +91,6 @@ public class TaskMonitor implements Loggable {
 
     @Override
     public void log(String message) {
-        Log.e(LTag(), message);
+        //Log.i(LTag(), message);
     }
 }

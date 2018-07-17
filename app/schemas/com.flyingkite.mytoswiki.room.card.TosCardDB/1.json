@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "e34ae9b59b17dc322bacd043a86311c2",
+    "identityHash": "d1803905bd52a72cbb902ab1ad5bd8e5",
     "entities": [
       {
         "tableName": "Cards",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idNorm` TEXT NOT NULL, `wikiLink` TEXT, `name` TEXT, `attribute` TEXT, `icon` TEXT, `bigImage` TEXT, `id` TEXT, `rarity` INTEGER NOT NULL, `cost` INTEGER NOT NULL, `race` TEXT, `series` TEXT, `LvMax` INTEGER NOT NULL, `ExpMax` INTEGER NOT NULL, `maxHP` INTEGER NOT NULL, `maxAttack` INTEGER NOT NULL, `maxRecovery` INTEGER NOT NULL, `minHP` INTEGER NOT NULL, `minAttack` INTEGER NOT NULL, `minRecovery` INTEGER NOT NULL, `expCurve` INTEGER NOT NULL, `minExpSacrifice` INTEGER NOT NULL, `perLvExpSacrifice` INTEGER NOT NULL, `maxMUPerLevel` INTEGER NOT NULL, `maxTUAllLevel` INTEGER NOT NULL, `cardDetails` TEXT, `skillName1` TEXT, `skillDesc1` TEXT, `skillCDMin1` INTEGER NOT NULL, `skillCDMax1` INTEGER NOT NULL, `skillName2` TEXT, `skillDesc2` TEXT, `skillCDMin2` INTEGER NOT NULL, `skillCDMax2` INTEGER NOT NULL, `skillLeaderName` TEXT, `skillLeaderDesc` TEXT, `skillAmeBattleName` TEXT, `skillAmeBattleLink` TEXT, `skillAmeName1` TEXT, `skillAmeCost1` INTEGER NOT NULL, `skillAmeName2` TEXT, `skillAmeCost2` INTEGER NOT NULL, `skillAmeName3` TEXT, `skillAmeCost3` INTEGER NOT NULL, `skillAmeName4` TEXT, `skillAmeCost4` INTEGER NOT NULL, `skillAwkName` TEXT, `skillAwkBattleName` TEXT, `skillAwkBattleLink` TEXT, `skillPowBattleName` TEXT, `skillPowBattleLink` TEXT, `skillVirBattleName` TEXT, `skillVirBattleLink` TEXT, `evolveFrom` TEXT, `evolveNeed` TEXT, `evolveTo` TEXT, `combineFrom` TEXT, `combineTo` TEXT, PRIMARY KEY(`idNorm`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idNorm` TEXT NOT NULL, `wikiLink` TEXT, `name` TEXT, `attribute` TEXT, `icon` TEXT, `bigImage` TEXT, `id` TEXT, `rarity` INTEGER NOT NULL, `cost` INTEGER NOT NULL, `race` TEXT, `series` TEXT, `LvMax` INTEGER NOT NULL, `ExpMax` INTEGER NOT NULL, `maxHP` INTEGER NOT NULL, `maxAttack` INTEGER NOT NULL, `maxRecovery` INTEGER NOT NULL, `minHP` INTEGER NOT NULL, `minAttack` INTEGER NOT NULL, `minRecovery` INTEGER NOT NULL, `expCurve` INTEGER NOT NULL, `minExpSacrifice` INTEGER NOT NULL, `perLvExpSacrifice` INTEGER NOT NULL, `maxMUPerLevel` INTEGER NOT NULL, `maxTUAllLevel` INTEGER NOT NULL, `cardDetails` TEXT, `skillName1` TEXT, `skillDesc1` TEXT, `skillCDMin1` INTEGER NOT NULL, `skillCDMax1` INTEGER NOT NULL, `skillName2` TEXT, `skillDesc2` TEXT, `skillCDMin2` INTEGER NOT NULL, `skillCDMax2` INTEGER NOT NULL, `skillLeaderName` TEXT, `skillLeaderDesc` TEXT, `skillAmeBattleName` TEXT, `skillAmeBattleLink` TEXT, `skillAmeName1` TEXT, `skillAmeCost1` INTEGER NOT NULL, `skillAmeName2` TEXT, `skillAmeCost2` INTEGER NOT NULL, `skillAmeName3` TEXT, `skillAmeCost3` INTEGER NOT NULL, `skillAmeName4` TEXT, `skillAmeCost4` INTEGER NOT NULL, `skillAwkName` TEXT, `skillAwkBattleName` TEXT, `skillAwkBattleLink` TEXT, `skillPowBattleName` TEXT, `skillPowBattleLink` TEXT, `skillVirBattleName` TEXT, `skillVirBattleLink` TEXT, `evolveFrom` TEXT, `evolveNeed` TEXT, `evolveTo` TEXT, `combineFrom` TEXT, `combineTo` TEXT, `skillChange` TEXT, PRIMARY KEY(`idNorm`))",
         "fields": [
           {
             "fieldPath": "idNorm",
@@ -349,6 +349,12 @@
             "columnName": "combineTo",
             "affinity": "TEXT",
             "notNull": false
+          },
+          {
+            "fieldPath": "skillChange",
+            "columnName": "skillChange",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -363,7 +369,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e34ae9b59b17dc322bacd043a86311c2\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"d1803905bd52a72cbb902ab1ad5bd8e5\")"
     ]
   }
 }

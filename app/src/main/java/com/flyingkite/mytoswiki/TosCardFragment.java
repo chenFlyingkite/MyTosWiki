@@ -21,7 +21,7 @@ import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;

@@ -2,6 +2,7 @@ package com.flyingkite.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.os.Build;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
@@ -93,7 +94,7 @@ public class DialogManager {
         }
 
         private void _buildAndShow() {
-            if (activity.isFinishing() || activity.isDestroyed()) return;
+            if (isDead(activity)) return;
             // TODO :
 //
 //            View dialogView = LayoutInflater.from(activity).inflate(R.layout.view_customize_alert_dialog, null);
@@ -224,7 +225,7 @@ public class DialogManager {
          * client to invoke dialog method at unexpected situation.
          */
         public void createAndShow() {
-            if (activity.isFinishing() || activity.isDestroyed()) return;
+            if (isDead(activity)) return;
             // TODO :
 //
 //            final View dialogView = LayoutInflater.from(activity).inflate(R.layout.view_customize_input_dialog, null);
@@ -309,6 +310,14 @@ public class DialogManager {
         ((TextView) dialogView.findViewById(textViewResId)).setMovementMethod(LinkMovementMethod.getInstance());
     }
 
+    private static boolean isDead(Activity activity) {
+        if (activity.isFinishing()) return true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            if (activity.isDestroyed()) return true;
+        }
+        return false;
+    }
+
     public static class GenericViewBuilder {
         public interface InflateListener {
             void onFinishInflate(View view, AlertDialog dialog);
@@ -342,7 +351,6 @@ public class DialogManager {
         }
 
         private void _buildAndShow() {
-            if (activity.isFinishing() || activity.isDestroyed()) return;
 
             View dialogView = LayoutInflater.from(activity).inflate(viewLayoutId, null);
             final AlertDialog dialog = new AlertDialog.Builder(activity, themeResId).setView(dialogView).create();

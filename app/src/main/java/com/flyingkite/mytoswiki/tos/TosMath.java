@@ -1,6 +1,6 @@
 package com.flyingkite.mytoswiki.tos;
 
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 public final class TosMath {
     private TosMath() {}

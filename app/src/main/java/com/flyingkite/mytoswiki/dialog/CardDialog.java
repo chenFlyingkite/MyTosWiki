@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 
 import java.text.NumberFormat;

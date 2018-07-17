@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SnapHelper;
 
 import com.flyingkite.library.widget.Library;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 import java.util.List;
 

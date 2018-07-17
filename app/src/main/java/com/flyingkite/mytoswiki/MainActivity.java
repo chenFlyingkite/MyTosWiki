@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.flyingkite.library.logging.Loggable;
 import com.flyingkite.library.widget.Library;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;

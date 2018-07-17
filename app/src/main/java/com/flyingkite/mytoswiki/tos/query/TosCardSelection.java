@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.TicTac2;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 import java.util.ArrayList;
 import java.util.List;

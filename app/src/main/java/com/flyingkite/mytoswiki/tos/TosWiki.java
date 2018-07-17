@@ -9,8 +9,7 @@ import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.logging.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.mytoswiki.data.AmeSkill;
-import com.flyingkite.mytoswiki.data.TosCard;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.util.TaskMonitor;
 
 import java.util.Arrays;
@@ -21,14 +20,14 @@ public class TosWiki {
 //    private static CardsDB tosCardDB = new CardsDB();
 //    private static AmeSkillsDB ameSkillDB = new AmeSkillsDB();
     private static TosCard[] allCards;
-    private static AmeSkill[] ameSkills;
     //private static final int ALL_DB = 2;// There are two DBs. allCards & ameSkills
     //private static List<OnLoadState> onDatabaseLoad = Collections.synchronizedList(new ArrayList<>());
 
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_AME_SKILL = "AmeSkill";
-    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS, TAG_AME_SKILL};
+    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS//, TAG_AME_SKILL
+    };
 
 
     public static void init(Context ctx) {
@@ -60,12 +59,12 @@ public class TosWiki {
             t.tic();
             if (mock) {
                 Say.sleep(3_000);
-                ameSkills = new AmeSkill[1];
+                //ameSkills = new AmeSkill[1];
             } else {
-                ameSkills = GsonUtil.loadAsset("ameActiveSkills.json", AmeSkill[].class, ctx.getAssets());
+                //ameSkills = GsonUtil.loadAsset("ameActiveSkills.json", AmeSkill[].class, ctx.getAssets());
             }
 
-            t.tac("%s ame skill loaded", ameSkills == null ? 0 : ameSkills.length);
+            t.tac("%s ame skill loaded", 0);
             //notifyDatabaseState();
             monitorDB.notifyClientsState();
         });
@@ -85,7 +84,7 @@ public class TosWiki {
             String tag = TAG_ALL_TASKS[index];
             switch (tag) {
                 case TAG_ALL_CARDS: return allCards != null;
-                case TAG_AME_SKILL: return ameSkills != null;
+                //case TAG_AME_SKILL: return ameSkills != null;
                 default:
                     throw new NullPointerException(taskCount() + " tasks but did not define done for " + index);
             }
@@ -97,14 +96,6 @@ public class TosWiki {
         }
     };
     private static TaskMonitor monitorDB = new TaskMonitor(monitorSource);
-
-    public static boolean isLoaded_allCards() {
-        return allCards != null;
-    }
-
-    public static boolean isLoaded_ameSkills() {
-        return ameSkills != null;
-    }
 
     // attend & absent
     // retain & remove
@@ -183,32 +174,6 @@ public class TosWiki {
             return Arrays.copyOf(allCards, allCards.length);
         }
     }
-
-    public static AmeSkill[] ameSkills() {
-        if (ameSkills == null) {
-            return null;
-        } else {
-            return Arrays.copyOf(ameSkills, ameSkills.length);
-        }
-    }
-
-//    public static CardsDB cards() {
-//        return tosCardDB;
-//    }
-//
-//    public static AmeSkillsDB ameSkills() {
-//        return ameSkillDB;
-//    }
-//
-//    public static boolean isAllTasksDone() {
-//        List<BaseTosDB> db = Arrays.asList(tosCardDB, ameSkillDB);
-//        for (BaseTosDB d : db) {
-//            if (!d.future.isDone()) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
 
     private static Loggable z = new Loggable() {
         @Override
