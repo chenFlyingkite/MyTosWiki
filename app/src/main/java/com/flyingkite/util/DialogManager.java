@@ -351,6 +351,7 @@ public class DialogManager {
         }
 
         private void _buildAndShow() {
+            if (isDead(activity)) return;
 
             View dialogView = LayoutInflater.from(activity).inflate(viewLayoutId, null);
             final AlertDialog dialog = new AlertDialog.Builder(activity, themeResId).setView(dialogView).create();
