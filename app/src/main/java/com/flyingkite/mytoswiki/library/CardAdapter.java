@@ -94,12 +94,16 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
         nameType = type;
     }
 
-    private String name(TosCard c) {
+    public String name(TosCard c) {
         switch (nameType) {
             default:
             case NT_ID_NORM: return c.idNorm;
             case NT_NAME:    return c.name;
         }
+    }
+
+    public void updateSelection() {
+        setSelection(selection);
     }
 
     public void setOnClickCard(OnClickCard listener) {

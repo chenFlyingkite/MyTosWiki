@@ -17,24 +17,17 @@ import java.util.concurrent.ExecutorService;
 
 public class TosWiki {
     private TosWiki() {}
-//    private static CardsDB tosCardDB = new CardsDB();
-//    private static AmeSkillsDB ameSkillDB = new AmeSkillsDB();
     private static TosCard[] allCards;
-    //private static final int ALL_DB = 2;// There are two DBs. allCards & ameSkills
-    //private static List<OnLoadState> onDatabaseLoad = Collections.synchronizedList(new ArrayList<>());
-
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
-    public static final String TAG_AME_SKILL = "AmeSkill";
-    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS//, TAG_AME_SKILL
+    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS
     };
 
-
     public static void init(Context ctx) {
-        ExecutorService e = ThreadUtil.cachedThreadPool;
+        ExecutorService p = ThreadUtil.cachedThreadPool;
 
         boolean mock = false;
-        e.submit(() -> {
+        p.submit(() -> {
             TicTac2 t = new TicTac2();
             z.log("Load Cards");
             t.tic();
@@ -45,7 +38,6 @@ public class TosWiki {
                 allCards = GsonUtil.loadAsset("cardList.json", TosCard[].class, ctx.getAssets());
             }
             t.tac("%s cards loaded", allCards == null ? 0 : allCards.length);
-            //notifyDatabaseState();
             monitorDB.notifyClientsState();
         });
 
@@ -53,24 +45,21 @@ public class TosWiki {
             Say.sleep(500);
         }
 
-        e.submit(() -> {
-            TicTac2 t = new TicTac2();
-            z.log("Load Ame");
-            t.tic();
-            if (mock) {
-                Say.sleep(3_000);
-                //ameSkills = new AmeSkill[1];
-            } else {
-                //ameSkills = GsonUtil.loadAsset("ameActiveSkills.json", AmeSkill[].class, ctx.getAssets());
-            }
+//        p.submit(() -> {
+//            TicTac2 t = new TicTac2();
+//            z.log("Load Ame");
+//            t.tic();
+//            if (mock) {
+//                Say.sleep(3_000);
+//                //ameSkills = new AmeSkill[1];
+//            } else {
+//                //ameSkills = GsonUtil.loadAsset("ameActiveSkills.json", AmeSkill[].class, ctx.getAssets());
+//            }
+//
+//            t.tac("%s ame skill loaded", 0);
+//            monitorDB.notifyClientsState();
+//        });
 
-            t.tac("%s ame skill loaded", 0);
-            //notifyDatabaseState();
-            monitorDB.notifyClientsState();
-        });
-
-        //tosCardDB.init(ctx, TosCardDB.class);
-        //ameSkillDB.init(ctx, AmeSkillDB.class);
     }
 
     private static TaskMonitor.TaskOwner monitorSource = new TaskMonitor.TaskOwner() {
@@ -100,64 +89,8 @@ public class TosWiki {
     // attend & absent
     // retain & remove
     public static void attendDatabaseTasks(@NonNull TaskMonitor.OnTaskState listener) {
-        Say.Log("Attend");
         monitorDB.registerClient(listener);
     }
-
-//    public static void registerLoaded(OnLoadState listener) {
-//        if (listener == null) return;
-//
-//        Say.Log("Register");
-//        onDatabaseLoad.add(listener);
-//        notifyDatabaseState();
-//
-//        monitorDB.registerClient(new TaskMonitor.OnTaskState() {
-//            @Override
-//            public void onTaskDone(int index) {
-//                Say.Log("V #%s task", index);
-//            }
-//
-//            @Override
-//            public void onAllTaskDone() {
-//                Say.Log("W All tasks done");
-//            }
-//        });
-//    }
-//
-//    private static void notifyDatabaseState() {
-//        Say.Log("+ onDB Load = %s", onDatabaseLoad);
-//        List<Integer> toRemove = new ArrayList<>();
-//        int n = onDatabaseLoad.size();
-//        for (int i = 0; i < n; i++) {
-//            int x = 0;
-//            OnLoadState li = onDatabaseLoad.get(i);
-//            if (isLoaded_ameSkills()) {
-//                li.onLoaded_ameSkills();
-//                x++;
-//            }
-//            if (isLoaded_allCards()) {
-//                li.onLoaded_allCards();
-//                x++;
-//            }
-//            if (x == ALL_DB) {
-//                li.onLoaded_All();
-//                toRemove.add(i);
-//            }
-//        }
-//        Say.Log("remove = %s", toRemove);
-//
-//        n = toRemove.size();
-//        for (int i = n - 1; i >= 0; i--) {
-//            onDatabaseLoad.remove((int)toRemove.get(i));
-//        }
-//        Say.Log("- onDB %s lis, Load = %s", onDatabaseLoad.size(), onDatabaseLoad);
-//    }
-//
-//    public interface OnLoadState {
-//        default void onLoaded_allCards() {}
-//        default void onLoaded_ameSkills() {}
-//        default void onLoaded_All() {}
-//    }
 
     public static int getAllCardsCount() {
         if (allCards == null) {

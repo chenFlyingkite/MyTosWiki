@@ -362,6 +362,7 @@ public class TosCardFragment extends BaseFragment {
         }
         if (cardLib.adapter != null) {
             cardLib.adapter.setNameType(type);
+            cardLib.adapter.updateSelection();
             cardLib.adapter.notifyDataSetChanged();
         }
     }
@@ -861,7 +862,11 @@ public class TosCardFragment extends BaseFragment {
                         msg = String.valueOf(c.maxHP + c.maxAttack + c.maxRecovery);
                         break;
                     case R.id.sortCommonRace:
-                        msg = c.id + "\n" + c.race;
+                        String name = c.id;
+                        if (cardLib.adapter != null) {
+                            name = cardLib.adapter.name(c);
+                        }
+                        msg = name + "\n" + c.race;
                         break;
                     default:
                 }
