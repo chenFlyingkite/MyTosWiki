@@ -17,15 +17,12 @@ import com.flyingkite.library.Say;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
-import com.flyingkite.mytoswiki.tos.TosCardFilter;
 import com.flyingkite.mytoswiki.tos.query.TosCardSelection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
     private List<TosCard> cards = new ArrayList<>();
@@ -105,11 +102,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
         }
     }
 
-    // TODO
-    private <T> List<T> asList(T[] c) {
-        return c == null ? new ArrayList<>() : Arrays.asList(c);
-    }
-
     public void setOnClickCard(OnClickCard listener) {
         onClick = listener;
     }
@@ -154,19 +146,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
     @Override
     public int getItemCount() {
         return selectedIndices.size();
-    }
-
-    public void showSelection(Map<String, String> map) {
-        showFilter = map != null && map.size() > 0;
-
-        filterIndices.clear();
-        if (showFilter) {
-            filterIndices = TosCardFilter.filter(cards, map);
-            notifyDataSetChanged();
-            if (onFilter != null) {
-                onFilter.onFiltered(filterIndices.size(), cards.size());
-            }
-        }
     }
 
     public static class CardVH extends RecyclerView.ViewHolder {
