@@ -101,7 +101,12 @@ public class ShareHelper {
 
     public static String cacheName(String name) {
         File folder = App.me.getExternalCacheDir();
-        return folder.getAbsolutePath() + File.separator + name;
+        // FIXME : In 4.3, getExternalCacheDir() returns null
+        if (folder != null) {
+            return folder.getAbsolutePath() + File.separator + name;
+        } else {
+            return extFilesFile(name).getAbsolutePath();
+        }
     }
 
     private static final String data = "data";

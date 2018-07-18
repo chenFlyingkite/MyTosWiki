@@ -316,7 +316,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/t10dp"/>
+                            android:layout_height="@dimen/t20dp"/>
 
                         <TextView
                             style="@style/cardText.header.10"
@@ -385,17 +385,32 @@
                             android:id="@+id/cardAme4"
                             layout="@layout/view_card_row_amelioration"/>
 
-                        <View
+
+                        <LinearLayout
+                            android:id="@+id/cardAmeSkillChange"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/t10dp"/>
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/divider_h"
+                            android:showDividers="middle"
+                            android:orientation="vertical">
 
-                        <include
-                            android:id="@+id/cardAmeSkill_1"
-                            layout="@layout/view_card_row_skill"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/t10dp"/>
 
-                        <include
-                            android:id="@+id/cardAmeSkill_2"
-                            layout="@layout/view_card_row_skill"/>
+                            <TextView
+                                style="@style/cardText.header.10"
+                                android:textStyle="bold"
+                                android:text="@string/cards_improve_skill_change"/>
+
+                            <include
+                                android:id="@+id/cardAmeSkillChangeSample"
+                                layout="@layout/view_card_row_skill"
+                                tools:visibility="visible"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <!-- Card info : Power Release 潛能解放 -->
@@ -407,7 +422,7 @@
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/t10dp"/>
+                            android:layout_height="@dimen/t20dp"/>
 
                         <TextView
                             style="@style/cardText.header.10"

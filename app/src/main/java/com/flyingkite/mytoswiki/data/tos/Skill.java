@@ -31,7 +31,11 @@ public class Skill {
     @SerializedName(SK.cdMax)
     public int cdMax = 0;
 
-    public boolean isActive() {
+    public boolean isLeader() {
         return cdMin < 0 && cdMax < 0;
+    }
+
+    public boolean isActive() {
+        return cdMin >= 0 && cdMax >= 0;
     }
 }

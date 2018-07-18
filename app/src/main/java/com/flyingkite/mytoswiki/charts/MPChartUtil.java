@@ -1,6 +1,7 @@
 package com.flyingkite.mytoswiki.charts;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public final class MPChartUtil {
@@ -60,28 +61,13 @@ public final class MPChartUtil {
         return list;
     }
 
-    // TODO : Math
     private static long minOf(List<Long> param) {
         if (param == null || param.size() == 0) return 0;
-        long min = param.get(0);
-        for (int i = 1; i < param.size(); i++) {
-            long v = param.get(i);
-            if (v < min) {
-                min = v;
-            }
-        }
-        return min;
+        return Collections.min(param);
     }
 
     private static long maxOf(List<Long> param) {
         if (param == null || param.size() == 0) return 0;
-        long max = param.get(0);
-        for (int i = 1; i < param.size(); i++) {
-            long v = param.get(i);
-            if (v > max) {
-                max = v;
-            }
-        }
-        return max;
+        return Collections.max(param);
     }
 }

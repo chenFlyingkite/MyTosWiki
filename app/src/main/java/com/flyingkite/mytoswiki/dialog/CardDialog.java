@@ -7,6 +7,7 @@ import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.text.Html;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.data.tos.Skill;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 
@@ -145,6 +147,9 @@ public class CardDialog extends BaseTosDialog {
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
 
+        // Fill in Skill changes by Amelioration, I, II, III, IV
+        setImproves(card.skillChange.size() > 0, R.id.cardAmeSkillChange, this::setSkillChange);
+
         // Fill in Awaken Recall
         setImproves(!TextUtils.isEmpty(card.skillAwkName), R.id.cardAwakenRecallTable, this::setAwkLink);
 
@@ -172,18 +177,31 @@ public class CardDialog extends BaseTosDialog {
         sm.setText("" + (hps + attack + recovery));
     }
 
-    private void setSkillLeader(@IdRes int id, String sname, String sdesc) {
-        View vg = findViewById(id);
+    private void setSkillLeader(int id, String sname, String sdesc) {
+        setSkillLeader(findViewById(id), sname, sdesc);
+    }
+
+    private void setSkillLeader(View vg, String sname, String sdesc) {
         TextView name = vg.findViewById(R.id.cardSkillLeaderName);
         TextView desc = vg.findViewById(R.id.cardSkillLeaderDesc);
         name.setText(sname);
         desc.setText(sdesc);
     }
 
+    private void setSkill(View parent, String sname, int smin, int smax, String sdesc) {
+        boolean exist = !TextUtils.isEmpty(sname);
+        setViewVisibility(parent, exist);
+        setSkill(exist, parent, sname, smin, smax, sdesc);
+    }
+
     private void setSkill(@IdRes int id, String sname, int smin, int smax, String sdesc) {
         boolean exist = !TextUtils.isEmpty(sname);
         View vg = findViewById(id);
-        vg.setVisibility(exist ? View.VISIBLE : View.GONE);
+        setViewVisibility(vg, exist);
+        setSkill(exist, vg, sname, smin, smax, sdesc);
+    }
+
+    private void setSkill(boolean exist, View vg, String sname, int smin, int smax, String sdesc) {
         if (exist) {
             TextView name = vg.findViewById(R.id.cardSkillName);
             TextView cd_m = vg.findViewById(R.id.cardSkillCDMin);
@@ -199,7 +217,7 @@ public class CardDialog extends BaseTosDialog {
     }
 
     private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {
-        findViewById(tableId).setVisibility(has ? View.VISIBLE : View.GONE);
+        setViewVisibility(tableId, has);
         if (has) {
             runIfExist.run();
         }
@@ -207,12 +225,42 @@ public class CardDialog extends BaseTosDialog {
 
     private void setAmeLink() {
         setLink(R.id.cardAmeBattleName, R.id.cardAmeBattleLink, card.skillAmeBattleName, card.skillAmeBattleLink);
-        setViewVisibility(R.id.cardAmeBattle, TextUtils.isEmpty(card.skillAmeBattleName));
+        setViewVisibility(R.id.cardAmeBattle, !TextUtils.isEmpty(card.skillAmeBattleName));
 
         setAmelioration(R.id.cardAme1, R.drawable.refine1, card.skillAmeCost1, card.skillAmeName1);
         setAmelioration(R.id.cardAme2, R.drawable.refine2, card.skillAmeCost2, card.skillAmeName2);
         setAmelioration(R.id.cardAme3, R.drawable.refine3, card.skillAmeCost3, card.skillAmeName3);
         setAmelioration(R.id.cardAme4, R.drawable.refine4, card.skillAmeCost4, card.skillAmeName4);
+    }
+
+    private void setSkillChange() {
+        ViewGroup vg = findViewById(R.id.cardAmeSkillChange);
+        int n = card.skillChange.size();
+        for (int i = 0; i < n; i++) {
+            Skill s = card.skillChange.get(i);
+            View v = createSkillRow(s, vg);
+            vg.addView(v);
+        }
+    }
+
+    private View createSkillRow(Skill s, ViewGroup parent) {
+        boolean leader = s.isLeader();
+        // Inflate row view
+        int childId;
+        if (leader) {
+            childId = R.layout.view_card_skill_leader;
+        } else {
+            childId = R.layout.view_card_row_skill;
+        }
+        View v = LayoutInflater.from(getActivity()).inflate(childId, parent, false);
+
+        // Fill in content
+        if (leader) {
+            setSkillLeader(v, s.name, s.effect);
+        } else {
+            setSkill(v, s.name, s.cdMin, s.cdMax, s.effect);
+        }
+        return v;
     }
 
     private void setAwkLink() {
@@ -258,7 +306,7 @@ public class CardDialog extends BaseTosDialog {
     private void setAmelioration(@IdRes int id, @DrawableRes int ameLv, int scost, String sdesc) {
         boolean exist = scost > 0;
         View vg = findViewById(id);
-        vg.setVisibility(exist ? View.VISIBLE : View.GONE);
+        setViewVisibility(vg, exist);
         if (exist) {
             ImageView lv = vg.findViewById(R.id.cardAmeLv);
             TextView cost = vg.findViewById(R.id.cardAmeCost);
@@ -267,11 +315,6 @@ public class CardDialog extends BaseTosDialog {
             cost.setText("" + scost);
             desc.setText(sdesc);
         }
-    }
-
-    private void setViewVisibility(@IdRes int parent, boolean hide) {
-        int v = hide ? View.GONE : View.VISIBLE;
-        findViewById(parent).setVisibility(v);
     }
 
     private void showMonsterEatDialog(View v) {

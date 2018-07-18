@@ -1,7 +1,6 @@
 package com.flyingkite.mytoswiki;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.view.View;
 
 import com.flyingkite.library.logging.Loggable;
 import com.flyingkite.library.widget.Library;
-import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
@@ -50,18 +48,9 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //new CheckTosDBTask().executeOnExecutor(ThreadUtil.cachedThreadPool);
         initToolIcons();
         addTosFragment();
         showCardsLoading();
-    }
-
-    private void onCardsLoaded(TosCard[] cards) {
-        Fragment f = findFragmentByTag(TosCardFragment.TAG);
-        if (f instanceof TosCardFragment) {
-            TosCardFragment tf = (TosCardFragment) f;
-            tf.onCardsReady(cards);
-        }
     }
 
     private void test() {
@@ -230,45 +219,6 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         return iconLibrary.recyclerView.getVisibility() == View.VISIBLE;
     }
 
-//    private class CheckTosDBTask extends AsyncTask<Void, Void, Void> {
-//        private WaitingDialog dialog;
-//        private int n = 0;
-//        private static final int time = 16_000; // 6 second
-//
-//        @Override
-//        protected void onPreExecute() {
-//            dialog = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
-//        }
-//
-//        @Override
-//        protected Void doInBackground(Void... voids) {
-//            long tic = System.currentTimeMillis();
-//            while (TosWiki.allCards() == null) {
-//
-//            };
-//            long tac = System.currentTimeMillis();
-////            do {
-////                tac = System.currentTimeMillis();
-////                try {
-////                    Thread.sleep(5);
-////                } catch (InterruptedException e) {
-////                    e.printStackTrace();
-////                }
-////            } while (tac - tic < time && TosWiki.allCards() == null);
-//            Say.Log(" End %s", StringUtil.toTimeMMSSF(tac - tic));
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Void aVoid) {
-//            //onOK();
-//            if (dialog != null) {
-//                dialog.dismiss();
-//                dialog = null;
-//            }
-//        }
-//    }
-
     private void showCardsLoading() {
         waiting = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
         TosWiki.attendDatabaseTasks(onDatabaseState);
@@ -296,16 +246,4 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             log("All done");
         }
     };
-
-    //
-//    private void onOK() {
-//        TosCard[] cards = TosWiki.allCards();
-//        showToast(R.string.cards_read, cards.length);
-//        onCardsLoaded(cards);
-//        if (waiting != null) {
-//            waiting.dismiss();
-//            waiting = null;
-//        }
-//    }
-
 }

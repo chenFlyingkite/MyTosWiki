@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.ArrayRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -42,21 +44,32 @@ import java.util.Locale;
 
 public class TosCardFragment extends BaseFragment {
     public static final String TAG = "TosCardFragment";
+    // Top Status bar
+    private TextView tosInfo;
+    // Main library
     private RecyclerView cardsRecycler;
     private CardLibrary cardLib;
+    // Popup Menus
     private View sortMenu;
     private PopupWindow sortWindow;
-    private TextView tosInfo;
+    // Popup Menu tool bar
     private View sortReset;
+    // 屬性 種族 星
     private ViewGroup sortAttributes;
     private ViewGroup sortRace;
     private ViewGroup sortStar;
+    // Common Sorting order
     private RadioGroup sortCommon;
     private RadioGroup sortCassandra;
+    // 轉化符石
     private ViewGroup sortRunestone;
-    private RadioGroup sortSpecial;
-    private ViewGroup sortHide;
-    private RadioGroup sortDisplay;
+    // 特選
+    private ViewGroup sortSpecial;
+    private CheckBox sortSpecialNo;
+    private CheckBox sortSpecialFree;
+    private CheckBox sortSpecialKeep;
+    private CheckBox sortSpecialExplode;
+    // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
     private CheckBox sortImproveAme;
@@ -64,6 +77,12 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortImprovePow;
     private CheckBox sortImproveVir;
     private CheckBox sortImproveTwo;
+    private CheckBox sortImproveChg; // Skill change
+    // Hide cards
+    private ViewGroup sortHide;
+    // Display card name
+    private RadioGroup sortDisplay;
+
 
     private CardSort cardSort = new CardSort();
 
@@ -87,7 +106,6 @@ public class TosCardFragment extends BaseFragment {
         initSortMenu();
         initToolIcons();
 
-        //new ParseCardsTask().executeOnExecutor(sSingle);//ThreadUtil.cachedThreadPool);
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
         TosWiki.attendDatabaseTasks(onCardsReady);
@@ -123,7 +141,6 @@ public class TosCardFragment extends BaseFragment {
         public void onTaskDone(int index, String tag) {
             runOnUiThread(() -> {
                 if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
-                    //allCards = Arrays.asList(Objects.requireNonNull(TosWiki.allCards()));
                     onCardsReady(TosWiki.allCards());
                 }
                 log("#%s (%s) is done", index, tag);
@@ -136,7 +153,12 @@ public class TosCardFragment extends BaseFragment {
         }
     };
 
-    public void onCardsReady(TosCard[] cards) {
+    @Override
+    public void log(String message) {
+        //Log.v(LTag(), message);
+    }
+
+    private void onCardsReady(TosCard[] cards) {
         allCards = Arrays.asList(cards);
         int n = allCards.size();
         tosInfo.setText(getString(R.string.cards_selection, n, n));
@@ -153,6 +175,7 @@ public class TosCardFragment extends BaseFragment {
                     tosInfo.setText(getString(R.string.cards_selection, selected, total));
                 }
         );
+        updateHide();
         applySelection();
         test();
     }
@@ -245,6 +268,11 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void initSortBySpecial(View menu) {
+        sortSpecialNo = menu.findViewById(R.id.sortSpecialNo);
+        sortSpecialFree = menu.findViewById(R.id.sortSpecialFreeMove);
+        sortSpecialKeep = menu.findViewById(R.id.sortSpecialKeep);
+        sortSpecialExplode = menu.findViewById(R.id.sortSpecialExplode);
+
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
 
@@ -270,6 +298,7 @@ public class TosCardFragment extends BaseFragment {
         sortImprovePow = menu.findViewById(R.id.sortImprovePowerRelease);
         sortImproveVir = menu.findViewById(R.id.sortImproveVirtualRebirth);
         sortImproveTwo = menu.findViewById(R.id.sortImproveTwoSkill);
+        sortImproveChg = menu.findViewById(R.id.sortImproveSkillChange);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
@@ -283,7 +312,8 @@ public class TosCardFragment extends BaseFragment {
         }
         sortCommon.check(R.id.sortCommonNo);
         sortCassandra.check(R.id.sortCassandraNo);
-        sortSpecial.check(R.id.sortSpecialNo);
+        setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
+        setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
 
         applySelection();
     }
@@ -316,7 +346,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickSpecial(View v) {
-        sortSpecial.check(v.getId());
+        setCheckedIncludeNo(v, R.id.sortSpecialNo, sortSpecial);
 
         applySelection();
     }
@@ -330,7 +360,6 @@ public class TosCardFragment extends BaseFragment {
                 type = CardAdapter.NT_NAME;
                 break;
         }
-        // TODO
         if (cardLib.adapter != null) {
             cardLib.adapter.setNameType(type);
             cardLib.adapter.notifyDataSetChanged();
@@ -354,24 +383,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickImprove(View v) {
-        switch (v.getId()) {
-            default:
-            case R.id.sortImproveNo:
-                sortImproveAme.setChecked(false);
-                sortImproveAwk.setChecked(false);
-                sortImprovePow.setChecked(false);
-                sortImproveVir.setChecked(false);
-                sortImproveTwo.setChecked(false);
-                break;
-            case R.id.sortImprovePowerRelease:
-            case R.id.sortImproveAmelioration:
-            case R.id.sortImproveAwakenRecall:
-            case R.id.sortImproveVirtualRebirth:
-            case R.id.sortImproveTwoSkill:
-                sortImproveNo.setChecked(false);
-                break;
-        }
-
+        setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
         applySelection();
     }
 
@@ -429,6 +441,39 @@ public class TosCardFragment extends BaseFragment {
         applySelection();
     }
 
+    //-- View's helpers --
+    private void setCheckedIncludeNo(View clicked, @IdRes int noId, ViewGroup parent) {
+        View noView = null;
+        // Find the noView
+        int n = parent.getChildCount();
+        for (int i = 0; i < n && noView == null; i++) {
+            View v = parent.getChildAt(i);
+            if (v.getId() == noId) {
+                noView = v;
+            }
+        }
+
+        int vid = clicked.getId();
+        Checkable c;
+        if (vid != noId) { // If select something, uncheck no
+            setViewCheck(false, noView);
+        } else {
+            // selected no, uncheck all others except no
+            for (int i = 0; i < n; i++) {
+                setViewCheck(false, parent.getChildAt(i));
+            }
+            setViewCheck(true, noView);
+        }
+    }
+
+    private void setViewCheck(boolean check, View v) {
+        Checkable c;
+        if (v instanceof Checkable) {
+            c = (Checkable) v;
+            c.setChecked(check);
+        }
+    }
+
     private void setChildClick(ViewGroup vg, View.OnClickListener clk) {
         int n = vg.getChildCount();
         for (int i = 0; i < n; i++) {
@@ -465,6 +510,7 @@ public class TosCardFragment extends BaseFragment {
         }
         return true;
     }
+    //-- View helpers --
 
     private void updateHide() {
         sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
@@ -515,8 +561,6 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private class TosSelect extends TosSelectAttribute {
-        private final String[] keep = getResources().getStringArray(R.array.cards_keep_keys);
-        private final String[] freemove = getResources().getStringArray(R.array.cards_freemove_keys);
         private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys);
 
         public TosSelect(List<TosCard> source, TosCardCondition condition) {
@@ -586,19 +630,25 @@ public class TosCardFragment extends BaseFragment {
 
         private boolean selectForSpecial(TosCard c) {
             String key = c.skillDesc1 + " & " + c.skillDesc2;
-            final int id = sortSpecial.getCheckedRadioButtonId();
-            boolean result;
-            switch (id) {
-                case R.id.sortSpecialFreeMove:
-                    result = find(key, freemove);
-                    break;
-                case R.id.sortSpecialKeep:
-                    result = find(key, keep);
-                    break;
-                default:
-                    result = true;
+            boolean accept = true;
+            if (!sortSpecialNo.isChecked()) {
+                if (sortSpecialFree.isChecked()) {
+                    //noinspection ConstantConditions
+                    accept &= find(key, R.array.cards_freemove_keys);
+                }
+                if (sortSpecialKeep.isChecked()) {
+                    accept &= find(key, R.array.cards_keep_keys);
+                }
+                if (sortSpecialExplode.isChecked()) {
+                    accept &= find(key, R.array.cards_explode_keys);
+                }
             }
-            return result;
+            return accept;
+        }
+
+        private boolean find(String key, @ArrayRes int dataId) {
+            String[] data = getResources().getStringArray(dataId);
+            return find(key, data);
         }
 
         private boolean find(String key, String[] data) {
@@ -609,7 +659,6 @@ public class TosCardFragment extends BaseFragment {
             }
             return false;
         }
-
 
         private boolean selectForImprove(TosCard c) {
             boolean accept = true;
@@ -629,6 +678,9 @@ public class TosCardFragment extends BaseFragment {
                 }
                 if (sortImproveTwo.isChecked()) {
                     accept &= !c.skillName2.isEmpty();
+                }
+                if (sortImproveChg.isChecked()) {
+                    accept &= c.skillChange.size() > 0;
                 }
             }
             return accept;
@@ -847,12 +899,8 @@ public class TosCardFragment extends BaseFragment {
         @Override
         protected void onPostExecute(CardSort data) {
             cardSort = data != null ? data : new CardSort();
-            //if (cardLib.cardAdapter != null) {
-                updateHide(); // TODO
-            //}
-            if (allCards != null) {
-                applySelection();
-            }
+            updateHide();
+            applySelection();
         }
     }
 }

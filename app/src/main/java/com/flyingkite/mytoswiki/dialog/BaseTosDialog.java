@@ -215,9 +215,26 @@ public class BaseTosDialog extends DialogFragment implements
 
     }
 
+    protected void setViewVisibility(@IdRes int parent, boolean show) {
+        setViewVisibility(findViewById(parent), show);
+    }
+
+    protected void setViewVisibility(View v, boolean show) {
+        int vis = show ? View.VISIBLE : View.GONE;
+        v.setVisibility(vis);
+    }
+
     protected void setVisibilities(int vis, int... ids) {
         for (int i : ids) {
             View v = findViewById(i);
+            if (v != null) {
+                v.setVisibility(vis);
+            }
+        }
+    }
+
+    protected void setVisibilities(int vis, View... vs) {
+        for (View v : vs) {
             if (v != null) {
                 v.setVisibility(vis);
             }

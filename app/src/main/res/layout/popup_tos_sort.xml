@@ -291,23 +291,32 @@
                 android:layout_height="wrap_content"
                 style="@style/sortTitle"
                 android:text="@string/cards_special"/>
-            <RadioGroup
+            <LinearLayout
                 android:id="@+id/sortSpecialList"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/t20dp">
+                <CheckBox
                     android:id="@+id/sortSpecialNo"
                     style="@style/sortRadio"
                     android:text="@string/cards_no"/>
-                <RadioButton
+
+                <CheckBox
                     android:id="@+id/sortSpecialFreeMove"
                     style="@style/sortRadio"
                     android:text="@string/cards_freemove"/>
-                <RadioButton
+
+                <CheckBox
                     android:id="@+id/sortSpecialKeep"
                     style="@style/sortRadio"
                     android:text="@string/cards_keep"/>
-            </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialExplode"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_explode"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/sortImproveTitle"
@@ -352,6 +361,11 @@
                     android:id="@+id/sortImproveTwoSkill"
                     style="@style/sortText"
                     android:text="@string/cards_improve_two_skill"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveSkillChange"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_skill_change"/>
             </LinearLayout>
 
             <TextView
