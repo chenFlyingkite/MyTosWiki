@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/dialog_title"
+                android:text="@string/about_mytoswiki"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/blackText"
+                android:padding="@dimen/t2dp"
+                android:text="@string/about_thanks"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/blackText"
+                android:padding="@dimen/t2dp"
+                android:text="@string/about_author"/>
+
+            <View
+                style="@style/divider_horizontal"/>
+
+            <TextView
+                android:id="@+id/abd_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/blackText"
+                android:padding="@dimen/t2dp"
+                android:text="@string/about_thanks"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

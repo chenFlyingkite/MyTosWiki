@@ -23,8 +23,8 @@ public class CommonDialog extends BaseTosDialog {
     private CharSequence ccText;
 
     @Override
-    protected int ofTheme() {
-        return R.style.CommonAlertDialog;
+    protected boolean useFloating() {
+        return true;
     }
 
     @Override

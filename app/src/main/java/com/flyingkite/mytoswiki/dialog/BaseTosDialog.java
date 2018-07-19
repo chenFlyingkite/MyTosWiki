@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.flyingkite.library.Say;
+import com.flyingkite.library.logging.Loggable;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 
@@ -23,6 +23,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTosDialog extends DialogFragment implements
+        Loggable,
         DialogInterface.OnKeyListener,
         DialogInterface.OnShowListener {
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
@@ -48,13 +49,11 @@ public class BaseTosDialog extends DialogFragment implements
         );
     }
 
-    @Deprecated
     protected int ofTheme() {
-        return isFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
+        return useFloating() ? R.style.CommonAlertDialog : R.style.CommonAlertDialog_noFloating;
     }
 
-    @Deprecated
-    private boolean isFloating() {
+    protected boolean useFloating() {
         return false;
     }
 //
@@ -148,7 +147,7 @@ public class BaseTosDialog extends DialogFragment implements
     }
 
     public void show(Activity activity) {
-        Say.Log("show %s", sig());
+        log("show %s", sig());
         show(activity.getFragmentManager(), sig());
     }
 

@@ -1,7 +1,8 @@
 package com.flyingkite.firebase;
 
 public enum RemoteConfigKey implements RemoteConfig.RCKey {
-    HELLO("Hello")
+    HELLO("Hello"),
+    DIALOG_BULLETIN_MESSAGE("dialog_bulletin_message"),
     ;
 
     private final String key;

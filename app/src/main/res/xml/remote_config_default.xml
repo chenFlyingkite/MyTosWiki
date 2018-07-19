@@ -4,4 +4,8 @@
         <key>Hello</key>
         <value>World</value>
     </entry>
+    <entry>
+        <key>dialog_bulletin_message</key>
+        <value>神魔數學家團隊感謝召喚師的安裝。</value>
+    </entry>
 </defaultsMap>

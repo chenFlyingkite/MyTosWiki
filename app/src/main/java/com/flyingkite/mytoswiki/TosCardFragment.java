@@ -407,9 +407,6 @@ public class TosCardFragment extends BaseFragment {
         if (cardLib.adapter != null) {
             TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
             cardLib.adapter.setSelection(new TosSelect(allCards, cond));
-//            TicTac.tic();
-//            TosWiki.cards().DB.dao().attr_race_rarity(attrs, races, stars);
-//            TicTac.tac("DB select");
         }
     }
 

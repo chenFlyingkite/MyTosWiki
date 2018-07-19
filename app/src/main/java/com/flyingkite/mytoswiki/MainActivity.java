@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.flyingkite.library.logging.Loggable;
 import com.flyingkite.library.widget.Library;
+import com.flyingkite.mytoswiki.dialog.AboutDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
@@ -30,8 +31,8 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_chrome
             , R.drawable.ic_send_black_48dp
             , R.drawable.logo_stamina
-            //, R.mipmap.app_icon
             , R.drawable.exp_eat
+            , R.mipmap.app_icon
             , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
@@ -195,9 +196,11 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                     case R.drawable.logo_chrome:
                         new WebDialog().show(getActivity());
                         break;
-                    //case R.mipmap.app_icon: // TODO
                     case R.drawable.ic_send_black_48dp:
                         new FeedbackDialog().show(getActivity());
+                        break;
+                    case R.mipmap.app_icon:
+                        new AboutDialog().show(getActivity());
                         break;
                 }
             }
