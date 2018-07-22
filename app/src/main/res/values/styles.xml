@@ -279,5 +279,10 @@
         <item name="android:src">@drawable/toswiki_wordmark</item>
     </style>
 
+    <style name="square_t70">
+        <item name="android:layout_width">@dimen/t70dp</item>
+        <item name="android:layout_height">@dimen/t70dp</item>
+    </style>
+
 
 </resources>

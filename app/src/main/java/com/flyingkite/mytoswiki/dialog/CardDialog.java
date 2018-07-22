@@ -44,6 +44,7 @@ public class CardDialog extends BaseTosDialog {
     private TextView cardSpace;
     private TextView cardRarity;
     private TextView cardSeries;
+    private ImageView cardIcon2;
 
     private TextView cardMu;
     private TextView cardTu;
@@ -85,6 +86,7 @@ public class CardDialog extends BaseTosDialog {
         cardSpace = findViewById(R.id.cardSpace);
         cardRarity = findViewById(R.id.cardRarity);
         cardSeries = findViewById(R.id.cardSeries);
+        cardIcon2 = findViewById(R.id.cardIcon2);
 
         cardMu = findViewById(R.id.cardMu);
         cardTu = findViewById(R.id.cardTu);
@@ -103,6 +105,7 @@ public class CardDialog extends BaseTosDialog {
 
         dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd);
         Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
+        Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon2);
         Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
         cardIcon.setOnClickListener(this::shareImage);
         cardLink.setOnClickListener((v) -> {
