@@ -388,6 +388,11 @@
                     android:text="@string/cards_hide_6xxx"/>
 
                 <TextView
+                    android:id="@+id/sortHide7xxx"
+                    style="@style/sortText"
+                    android:text="@string/cards_hide_7xxx"/>
+
+                <TextView
                     android:id="@+id/sortHide8xxx"
                     style="@style/sortText"
                     android:text="@string/cards_hide_8xxx"/>

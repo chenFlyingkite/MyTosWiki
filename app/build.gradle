@@ -22,11 +22,11 @@ repositories {
 // Fabric -- End
 
 def googlePlayVersion = "9.8.0"
-boolean createPlayApk = false
+boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 7
-    ext.versionName = "1.0.0.6"
+    ext.versionCode = 8
+    ext.versionName = "1.0.0.7"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }

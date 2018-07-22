@@ -6,6 +6,9 @@ public class CardSort {
     @SerializedName("hideCard6xxx")
     public boolean hideCard6xxx;
 
+    @SerializedName("hideCard7xxx")
+    public boolean hideCard7xxx;
+
     @SerializedName("hideCard8xxx")
     public boolean hideCard8xxx;
 

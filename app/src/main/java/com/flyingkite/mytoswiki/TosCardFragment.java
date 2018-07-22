@@ -512,6 +512,7 @@ public class TosCardFragment extends BaseFragment {
 
     private void updateHide() {
         sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
+        sortHide.findViewById(R.id.sortHide7xxx).setSelected(cardSort.hideCard7xxx);
         sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
         sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
         int id = cardSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
@@ -520,6 +521,7 @@ public class TosCardFragment extends BaseFragment {
 
     private void toGsonHide() {
         cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
+        cardSort.hideCard7xxx = sortHide.findViewById(R.id.sortHide7xxx).isSelected();
         cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
         cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
         cardSort.displayByName = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayName;
@@ -613,6 +615,9 @@ public class TosCardFragment extends BaseFragment {
                     switch (v.getId()) {
                         case R.id.sortHide6xxx:
                             accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
+                            break;
+                        case R.id.sortHide7xxx:
+                            accept &= !MathUtil.isInRange(idNorm, 7000, 8000);
                             break;
                         case R.id.sortHide8xxx:
                             accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
