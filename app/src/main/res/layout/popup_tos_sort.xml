@@ -316,6 +316,11 @@
                     android:id="@+id/sortSpecialExplode"
                     style="@style/sortRadio"
                     android:text="@string/cards_explode"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialMoreCoin"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_morecoin"/>
             </LinearLayout>
 
             <TextView

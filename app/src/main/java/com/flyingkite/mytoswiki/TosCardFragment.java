@@ -69,6 +69,7 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortSpecialFree;
     private CheckBox sortSpecialKeep;
     private CheckBox sortSpecialExplode;
+    private CheckBox sortSpecialMoreCoin;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -272,6 +273,7 @@ public class TosCardFragment extends BaseFragment {
         sortSpecialFree = menu.findViewById(R.id.sortSpecialFreeMove);
         sortSpecialKeep = menu.findViewById(R.id.sortSpecialKeep);
         sortSpecialExplode = menu.findViewById(R.id.sortSpecialExplode);
+        sortSpecialMoreCoin = menu.findViewById(R.id.sortSpecialMoreCoin);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -644,6 +646,10 @@ public class TosCardFragment extends BaseFragment {
                 }
                 if (sortSpecialExplode.isChecked()) {
                     accept &= find(key, R.array.cards_explode_keys);
+                }
+                if (sortSpecialMoreCoin.isChecked()) {
+                    key += " & " + c.skillLeaderDesc;
+                    accept &= find(key, R.array.cards_morecoin_keys);
                 }
             }
             return accept;
