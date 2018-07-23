@@ -11,10 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.query.TosCardSelection;
@@ -182,10 +181,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardVH> {
         }
 
         private void loadImage(ImageView v, String url) {
-            Glide.with(v.getContext()).load(url)
-                    .apply(RequestOptions.centerCropTransform()
-                            .placeholder(R.drawable.unknown_card))
-                    .into(v);
+            GlideApp.with(v.getContext()).load(url).centerCrop().placeholder(R.drawable.unknown_card).into(v);
         }
     }
 }

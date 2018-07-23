@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.Skill;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -104,9 +103,9 @@ public class CardDialog extends BaseTosDialog {
         if (card == null) return;
 
         dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd);
-        Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon);
-        Glide.with(getActivity()).load(card.icon).apply(RequestOptions.placeholderOf(R.drawable.unknown_card)).into(cardIcon2);
-        Glide.with(getActivity()).load(card.bigImage).apply(RequestOptions.placeholderOf(R.drawable.card_background)).into(cardImage);
+        GlideApp.with(getActivity()).load(card.icon).placeholder(R.drawable.unknown_card).into(cardIcon);
+        GlideApp.with(getActivity()).load(card.icon).placeholder(R.drawable.unknown_card).into(cardIcon2);
+        GlideApp.with(getActivity()).load(card.bigImage).placeholder(R.drawable.card_background).into(cardImage);
         cardIcon.setOnClickListener(this::shareImage);
         cardLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(card.wikiLink);

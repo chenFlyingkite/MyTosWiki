@@ -14,7 +14,6 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
@@ -27,6 +26,7 @@ import com.flyingkite.library.util.FileUtil;
 import com.flyingkite.library.util.IOUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
+import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.util.WaitingDialog;
 
@@ -118,7 +118,7 @@ public class ShareHelper {
 
     @Deprecated
     public static void shareBitmap(@NonNull Activity activity, String url) {
-        Glide.with(activity).asBitmap().load(url)
+        GlideApp.with(activity).asBitmap().load(url)
         .listener(new RequestListener<Bitmap>() {
             @Override
             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
