@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.logging.Loggable;
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.data.tos.TosCard;

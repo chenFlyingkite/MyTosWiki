@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.flyingkite.library.logging.Loggable;
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 

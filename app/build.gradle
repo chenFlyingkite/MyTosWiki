@@ -148,10 +148,8 @@ dependencies {
     api 'com.crashlytics.sdk.android:crashlytics:2.9.3'
 
     //api 'com.github.User:Repo:Tag'
-    //api "com.github.chenFlyingkite:MyAndroid:0.0.5.0"
-    //implementation 'com.github.chenFlyingkite:MyAndroid:b564948325'
-    //api 'com.github.chenFlyingkite:MyAndroid:4abe23b720'
-    api 'com.github.chenFlyingkite:MyAndroid:59a1c1b71e'
+    //api 'com.github.chenFlyingkite:MyAndroid:59a1c1b71e'
+    api 'com.github.chenFlyingkite:MyAndroid:7296a9df76'
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 
@@ -160,9 +158,9 @@ dependencies {
 
     // Room Persistence Library
     // https://developer.android.com/training/data-storage/room/
-    def roomVersion = "1.1.1"
-    api "android.arch.persistence.room:runtime:$roomVersion"
-    kapt "android.arch.persistence.room:compiler:$roomVersion"
+//    def roomVersion = "1.1.1"
+//    api "android.arch.persistence.room:runtime:$roomVersion"
+//    kapt "android.arch.persistence.room:compiler:$roomVersion"
 
 
     // Glide for Image cache library.

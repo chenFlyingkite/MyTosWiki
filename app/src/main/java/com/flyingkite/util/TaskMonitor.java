@@ -2,7 +2,7 @@ package com.flyingkite.util;
 
 import android.support.annotation.NonNull;
 
-import com.flyingkite.library.logging.Loggable;
+import com.flyingkite.library.log.Loggable;
 
 import java.util.ArrayList;
 import java.util.Collections;

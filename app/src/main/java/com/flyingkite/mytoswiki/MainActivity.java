@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.flyingkite.library.logging.Loggable;
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
