@@ -25,8 +25,8 @@ def googlePlayVersion = "9.8.0"
 boolean createPlayApk = false
 
 task MyBuildInfo {
-    ext.versionCode = 8
-    ext.versionName = "1.0.0.7"
+    ext.versionCode = 9
+    ext.versionName = "1.0.0.8"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }
@@ -149,7 +149,7 @@ dependencies {
 
     //api 'com.github.User:Repo:Tag'
     //api 'com.github.chenFlyingkite:MyAndroid:59a1c1b71e'
-    api 'com.github.chenFlyingkite:MyAndroid:7296a9df76'
+    api 'com.github.chenFlyingkite:MyAndroid:d956d567f9'
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 
