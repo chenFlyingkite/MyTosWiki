@@ -73,14 +73,26 @@
     <style name="cardText.header.2">
         <item name="android:layout_width">@dimen/cardText2</item>
     </style>
+    <style name="cardText.header.3">
+        <item name="android:layout_width">@dimen/cardText3</item>
+    </style>
     <style name="cardText.header.4">
         <item name="android:layout_width">@dimen/cardText4</item>
+    </style>
+    <style name="cardText.header.5">
+        <item name="android:layout_width">@dimen/cardText5</item>
     </style>
     <style name="cardText.header.6">
         <item name="android:layout_width">@dimen/cardText6</item>
     </style>
+    <style name="cardText.header.7">
+        <item name="android:layout_width">@dimen/cardText7</item>
+    </style>
     <style name="cardText.header.8">
         <item name="android:layout_width">@dimen/cardText8</item>
+    </style>
+    <style name="cardText.header.9">
+        <item name="android:layout_width">@dimen/cardText9</item>
     </style>
     <style name="cardText.header.10">
         <item name="android:layout_width">@dimen/cardText10</item>
@@ -94,14 +106,26 @@
     <style name="cardText.item.2">
         <item name="android:layout_width">@dimen/cardText2</item>
     </style>
+    <style name="cardText.item.3">
+        <item name="android:layout_width">@dimen/cardText3</item>
+    </style>
     <style name="cardText.item.4">
         <item name="android:layout_width">@dimen/cardText4</item>
+    </style>
+    <style name="cardText.item.5">
+        <item name="android:layout_width">@dimen/cardText5</item>
     </style>
     <style name="cardText.item.6">
         <item name="android:layout_width">@dimen/cardText6</item>
     </style>
+    <style name="cardText.item.7">
+        <item name="android:layout_width">@dimen/cardText7</item>
+    </style>
     <style name="cardText.item.8">
         <item name="android:layout_width">@dimen/cardText8</item>
+    </style>
+    <style name="cardText.item.9">
+        <item name="android:layout_width">@dimen/cardText9</item>
     </style>
     <style name="cardText.item.10">
         <item name="android:layout_width">@dimen/cardText10</item>

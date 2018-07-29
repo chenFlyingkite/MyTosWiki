@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="#8000">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/cardRow.blueV"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/cardText.header.2"
+            android:text="@string/cards_normId"/>
+
+        <TextView
+            style="@style/cardText.header.2"
+            android:text="@string/craft_mode"/>
+
+        <TextView
+            style="@style/cardText.header.6"
+            android:text="@string/cards_name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/cardRow.greenV"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/craftIdNorm"
+            style="@style/cardText.item.2"
+            tools:text="0002"/>
+
+        <TextView
+            android:id="@+id/craftMode"
+            style="@style/cardText.item.2"
+            tools:text="轉動龍印"/>
+
+        <TextView
+            android:id="@+id/craftName"
+            style="@style/cardText.item.6"
+            tools:text="虛之狂暴龍印"/>
+
+    </LinearLayout>
+</LinearLayout>

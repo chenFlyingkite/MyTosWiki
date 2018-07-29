@@ -35,7 +35,8 @@
     <string name="cards_expCurve">經驗曲線</string>
     <string name="cards_ameLv">昇華</string>
     <string name="cards_soul">靈魂</string>
-    <string name="cards_skill">主動技</string>
+    <string name="cards_skill">技能</string>
+    <string name="cards_skillActive">主動技</string>
     <string name="cards_skillLeader">隊長技</string>
     <string name="cards_skillDesc">效果</string>
     <string name="cards_skillMin">初始 CD</string>
@@ -142,6 +143,14 @@
     <string name="cards_awakenRecall">極限突破</string>
     <string name="cards_powerRelease">潛能解放</string>
     <string name="cards_virtualRebirth">異空轉生</string>
+
+    <!-- Crafts & Armed crafts -->
+    <string name="craft_selection">%d / %d 個龍刻</string>
+    <string name="craft_mode">模式</string>
+    <string name="craft_charge">增加能量條件</string>
+    <string name="craft_precondition">前提</string>
+    <string name="craft_score">積分</string>
+    <string name="craft_up">提升</string>
 
     <string name="texts_tools">文字區域</string>
     <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>

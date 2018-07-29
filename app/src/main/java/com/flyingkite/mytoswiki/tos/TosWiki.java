@@ -4,11 +4,12 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.data.tos.CraftsArm;
+import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.util.TaskMonitor;
 
@@ -18,48 +19,55 @@ import java.util.concurrent.ExecutorService;
 public class TosWiki {
     private TosWiki() {}
     private static TosCard[] allCards;
+    private static CraftsNormal[] normalCrafts;
+    private static CraftsArm[] armCrafts;
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
-    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS
+    public static final String TAG_NORMAL_CRAFTS = "Crafts";
+    public static final String TAG_ARM_CRAFTS = "ArmCards";
+    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS
     };
 
     public static void init(Context ctx) {
         ExecutorService p = ThreadUtil.cachedThreadPool;
 
-        boolean mock = false;
         p.submit(() -> {
             TicTac2 t = new TicTac2();
-            z.log("Load Cards");
             t.tic();
-            if (mock) {
-                Say.sleep(10_000);
-                allCards = new TosCard[1];
-            } else {
-                allCards = GsonUtil.loadAsset("cardList.json", TosCard[].class, ctx.getAssets());
-            }
-            t.tac("%s cards loaded", allCards == null ? 0 : allCards.length);
+            allCards = GsonUtil.loadAsset("cardList.json", TosCard[].class, ctx.getAssets());
+            t.tac("%s cards loaded", len(allCards));
             monitorDB.notifyClientsState();
         });
 
-        if (mock) {
-            Say.sleep(500);
-        }
+        p.submit(() -> {
+            TicTac2.v t = new TicTac2.v();
+            t.tic();
+            normalCrafts = GsonUtil.loadAsset("crafts.json", CraftsNormal[].class, ctx.getAssets());
+            t.tac("%s craft loaded, Norm", len(normalCrafts));
+        });
 
-//        p.submit(() -> {
-//            TicTac2 t = new TicTac2();
-//            z.log("Load Ame");
-//            t.tic();
-//            if (mock) {
-//                Say.sleep(3_000);
-//                //ameSkills = new AmeSkill[1];
-//            } else {
-//                //ameSkills = GsonUtil.loadAsset("ameActiveSkills.json", AmeSkill[].class, ctx.getAssets());
-//            }
-//
-//            t.tac("%s ame skill loaded", 0);
-//            monitorDB.notifyClientsState();
-//        });
+        p.submit(() -> {
+            TicTac2.v t = new TicTac2.v();
+            t.tic();
+            armCrafts = GsonUtil.loadAsset("armCrafts.json", CraftsArm[].class, ctx.getAssets());
+            t.tac("%s craft loaded, Arm", len(armCrafts));
+        });
+    }
 
+    public static int getAllCardsCount() {
+        return len(allCards);
+    }
+
+    public static TosCard[] allCards() {
+        return copy(allCards);
+    }
+
+    public static CraftsNormal[] allNormalCrafts() {
+        return copy(normalCrafts);
+    }
+
+    public static CraftsArm[] allArmCrafts() {
+        return copy(armCrafts);
     }
 
     private static TaskMonitor.TaskOwner monitorSource = new TaskMonitor.TaskOwner() {
@@ -72,6 +80,8 @@ public class TosWiki {
         public boolean isTaskDone(int index) {
             String tag = TAG_ALL_TASKS[index];
             switch (tag) {
+                case TAG_ARM_CRAFTS: return armCrafts != null;
+                case TAG_NORMAL_CRAFTS: return normalCrafts != null;
                 case TAG_ALL_CARDS: return allCards != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:
@@ -92,19 +102,15 @@ public class TosWiki {
         monitorDB.registerClient(listener);
     }
 
-    public static int getAllCardsCount() {
-        if (allCards == null) {
-            return 0;
-        } else {
-            return allCards.length;
-        }
+    private static <T> int len(T[] a) {
+        return a == null ? 0 : a.length;
     }
 
-    public static TosCard[] allCards() {
-        if (allCards == null) {
+    private static <T> T[] copy(T[] a) {
+        if (a == null) {
             return null;
         } else {
-            return Arrays.copyOf(allCards, allCards.length);
+            return Arrays.copyOf(a, len(a));
         }
     }
 

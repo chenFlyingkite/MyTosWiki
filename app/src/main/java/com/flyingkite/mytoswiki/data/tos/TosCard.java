@@ -265,6 +265,18 @@ public class TosCard implements Parcelable {
     public String skillVirBattleLink = "";
 
     //------------
+    //---- Combination, 卡片合體
+    //------------
+
+    /** Combination material cards idNorm */
+    @SerializedName(TC.combineFrom)
+    public List<String> combineFrom = new ArrayList<>();
+
+    /** Combination material cards idNorm */
+    @SerializedName(TC.combineTo)
+    public List<String> combineTo = new ArrayList<>();
+
+    //------------
     //---- Evolution, 卡片進化
     //------------
 
@@ -280,17 +292,6 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.evolveTo)
     public String evolveTo = "";
 
-    //------------
-    //---- Combination, 卡片合體
-    //------------
-
-    /** Combination material cards idNorm */
-    @SerializedName(TC.combineFrom)
-    public List<String> combineFrom = new ArrayList<>();
-
-    /** Combination material cards idNorm */
-    @SerializedName(TC.combineTo)
-    public List<String> combineTo = new ArrayList<>();
 
     //------------
     //---- Skill change, 技能變更

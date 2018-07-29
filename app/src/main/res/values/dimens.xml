@@ -5,8 +5,12 @@
 
     <dimen name="cardText1">@dimen/t50dp</dimen>
     <dimen name="cardText2">@dimen/t70dp</dimen>
+    <dimen name="cardText3">@dimen/t110dp</dimen>
     <dimen name="cardText4">@dimen/t140dp</dimen>
+    <dimen name="cardText5">@dimen/t175dp</dimen>
     <dimen name="cardText6">@dimen/t210dp</dimen>
+    <dimen name="cardText7">@dimen/t70dp</dimen>
     <dimen name="cardText8">@dimen/t280dp</dimen>
+    <dimen name="cardText9">@dimen/t320dp</dimen>
     <dimen name="cardText10">@dimen/t350dp</dimen>
 </resources>

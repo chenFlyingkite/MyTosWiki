@@ -15,7 +15,7 @@
 
         <TextView
             style="@style/cardText.header.4"
-            android:text="@string/cards_skill"/>
+            android:text="@string/cards_skillActive"/>
 
         <TextView
             style="@style/cardText.header.2"

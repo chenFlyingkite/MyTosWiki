@@ -7,15 +7,14 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+import com.flyingkite.mytoswiki.util.PageUtil;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -23,7 +22,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTosDialog extends DialogFragment implements
-        Loggable,
+        PageUtil,
         DialogInterface.OnKeyListener,
         DialogInterface.OnShowListener {
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
@@ -81,14 +80,9 @@ public class BaseTosDialog extends DialogFragment implements
     }
 
     protected void dismissWhenClick(@IdRes int... ids) {
-        for (int i : ids) {
-            View w = findViewById(i);
-            if (w != null) {
-                w.setOnClickListener((v) -> {
-                    dismissAllowingStateLoss();
-                });
-            }
-        }
+        setOnClickListeners((v) -> {
+            dismissAllowingStateLoss();
+        }, ids);
     }
 
     @Nullable
@@ -146,39 +140,22 @@ public class BaseTosDialog extends DialogFragment implements
         ShareHelper.shareImage(getActivity(), view, filename);
     }
 
+    protected void shareImage(View v) {
+        String name = ShareHelper.cacheName("2.png");
+        shareImage(v, name);
+    }
+
+    protected void viewLinkAsWebDialog(String link) {
+        WebDialog d = new WebDialog();
+        Bundle b = new Bundle();
+        b.putString(WebDialog.BUNDLE_LINK, link);
+        d.setArguments(b);
+        d.show(getActivity());
+    }
+
     public void show(Activity activity) {
         log("show %s", sig());
         show(activity.getFragmentManager(), sig());
-    }
-
-    protected final String sig() {
-        return this.getClass().getCanonicalName();
-    }
-
-    protected void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
-        View w;
-        w = findViewById(goTop);
-        if (w != null) {
-            w.setOnClickListener((v) -> {
-                if (recycler != null) {
-                    recycler.scrollToPosition(0);
-                }
-            });
-        }
-
-        w = findViewById(goBottom);
-        if (w != null) {
-            w.setOnClickListener((v) -> {
-                if (recycler != null) {
-                    RecyclerView.Adapter a = recycler.getAdapter();
-                    int end = 0;
-                    if (a != null) {
-                        end = a.getItemCount() - 1;
-                    }
-                    recycler.scrollToPosition(end);
-                }
-            });
-        }
     }
 
     /**
@@ -188,10 +165,6 @@ public class BaseTosDialog extends DialogFragment implements
      */
     public boolean onBackPressed() {
         return false;
-    }
-
-    protected <T extends View> T findViewById(@IdRes int id) {
-        return getView().findViewById(id);
     }
 
     @Override
@@ -214,35 +187,4 @@ public class BaseTosDialog extends DialogFragment implements
 
     }
 
-    protected void setViewVisibility(@IdRes int parent, boolean show) {
-        setViewVisibility(findViewById(parent), show);
-    }
-
-    protected void setViewVisibility(View v, boolean show) {
-        int vis = show ? View.VISIBLE : View.GONE;
-        v.setVisibility(vis);
-    }
-
-    protected void setVisibilities(int vis, int... ids) {
-        for (int i : ids) {
-            View v = findViewById(i);
-            if (v != null) {
-                v.setVisibility(vis);
-            }
-        }
-    }
-
-    protected void setVisibilities(int vis, View... vs) {
-        for (View v : vs) {
-            if (v != null) {
-                v.setVisibility(vis);
-            }
-        }
-    }
-
-    protected void setOnClickListeners(View.OnClickListener lis, @IdRes int... ids) {
-        for (int i : ids) {
-            findViewById(i).setOnClickListener(lis);
-        }
-    }
 }

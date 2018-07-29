@@ -1,0 +1,4507 @@
+[
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2006",
+    "name": "銀紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a5/C2006.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130958\u0026path-prefix\u003dzh",
+      "iconKey": "C2006.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2007",
+    "name": "銀印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d5/C2007.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130958\u0026path-prefix\u003dzh",
+      "iconKey": "C2007.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2008",
+    "name": "銀咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ee/C2008.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130959\u0026path-prefix\u003dzh",
+      "iconKey": "C2008.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2009",
+    "name": "銀符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2e/C2009.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130959\u0026path-prefix\u003dzh",
+      "iconKey": "C2009.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2010",
+    "name": "銀璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a8/C2010.png/revision/latest/scale-to-width-down/60?cb\u003d20171204131000\u0026path-prefix\u003dzh",
+      "iconKey": "C2010.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0004",
+      "0408"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3031",
+    "name": "水刀龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c8/C3031.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130919\u0026path-prefix\u003dzh",
+      "iconKey": "C3031.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0004",
+      "0408"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3032",
+    "name": "水刀龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/82/C3032.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130920\u0026path-prefix\u003dzh",
+      "iconKey": "C3032.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0004",
+      "0408"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3033",
+    "name": "水刀龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/84/C3033.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130920\u0026path-prefix\u003dzh",
+      "iconKey": "C3033.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0004",
+      "0408"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3034",
+    "name": "水刀龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c0/C3034.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130920\u0026path-prefix\u003dzh",
+      "iconKey": "C3034.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0004",
+      "0408"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3035",
+    "name": "水刀龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/82/C3035.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130921\u0026path-prefix\u003dzh",
+      "iconKey": "C3035.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0008",
+      "0409"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3036",
+    "name": "火刃龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E5%88%83%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f0/C3036.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130921\u0026path-prefix\u003dzh",
+      "iconKey": "C3036.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0008",
+      "0409"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3037",
+    "name": "火刃龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E5%88%83%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/da/C3037.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130922\u0026path-prefix\u003dzh",
+      "iconKey": "C3037.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0008",
+      "0409"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3038",
+    "name": "火刃龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E5%88%83%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fc/C3038.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130922\u0026path-prefix\u003dzh",
+      "iconKey": "C3038.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0008",
+      "0409"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3039",
+    "name": "火刃龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E5%88%83%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e2/C3039.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130922\u0026path-prefix\u003dzh",
+      "iconKey": "C3039.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0008",
+      "0409"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3040",
+    "name": "火刃龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E5%88%83%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9d/C3040.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130923\u0026path-prefix\u003dzh",
+      "iconKey": "C3040.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0012",
+      "0410"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3041",
+    "name": "獸角龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8D%B8%E8%A7%92%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/94/C3041.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130923\u0026path-prefix\u003dzh",
+      "iconKey": "C3041.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0012",
+      "0410"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3042",
+    "name": "獸角龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8D%B8%E8%A7%92%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C3042.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130923\u0026path-prefix\u003dzh",
+      "iconKey": "C3042.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0012",
+      "0410"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3043",
+    "name": "獸角龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8D%B8%E8%A7%92%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C3043.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130924\u0026path-prefix\u003dzh",
+      "iconKey": "C3043.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0012",
+      "0410"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3044",
+    "name": "獸角龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8D%B8%E8%A7%92%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/32/C3044.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130924\u0026path-prefix\u003dzh",
+      "iconKey": "C3044.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0012",
+      "0410"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3045",
+    "name": "獸角龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8D%B8%E8%A7%92%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fc/C3045.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130924\u0026path-prefix\u003dzh",
+      "iconKey": "C3045.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0016",
+      "0411"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3046",
+    "name": "銀鱗劍龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E9%B1%97%E5%8A%8D%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fe/C3046.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130925\u0026path-prefix\u003dzh",
+      "iconKey": "C3046.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0016",
+      "0411"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3047",
+    "name": "銀鱗劍龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E9%B1%97%E5%8A%8D%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/da/C3047.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130925\u0026path-prefix\u003dzh",
+      "iconKey": "C3047.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0016",
+      "0411"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3048",
+    "name": "銀鱗劍龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E9%B1%97%E5%8A%8D%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/55/C3048.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130925\u0026path-prefix\u003dzh",
+      "iconKey": "C3048.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0016",
+      "0411"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3049",
+    "name": "銀鱗劍龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E9%B1%97%E5%8A%8D%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d7/C3049.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130926\u0026path-prefix\u003dzh",
+      "iconKey": "C3049.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0016",
+      "0411"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3050",
+    "name": "銀鱗劍龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%8A%80%E9%B1%97%E5%8A%8D%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/65/C3050.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130926\u0026path-prefix\u003dzh",
+      "iconKey": "C3050.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0020",
+      "0412"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3051",
+    "name": "冥籠珠龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%B1%A0%E7%8F%A0%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/20/C3051.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130941\u0026path-prefix\u003dzh",
+      "iconKey": "C3051.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0020",
+      "0412"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3052",
+    "name": "冥籠珠龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%B1%A0%E7%8F%A0%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b3/C3052.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130942\u0026path-prefix\u003dzh",
+      "iconKey": "C3052.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0020",
+      "0412"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3053",
+    "name": "冥籠珠龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%B1%A0%E7%8F%A0%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3b/C3053.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130943\u0026path-prefix\u003dzh",
+      "iconKey": "C3053.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0020",
+      "0412"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3054",
+    "name": "冥籠珠龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%B1%A0%E7%8F%A0%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/55/C3054.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130944\u0026path-prefix\u003dzh",
+      "iconKey": "C3054.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0020",
+      "0412"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3055",
+    "name": "冥籠珠龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%B1%A0%E7%8F%A0%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8d/C3055.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130944\u0026path-prefix\u003dzh",
+      "iconKey": "C3055.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的水符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0414",
+      "1066"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3056",
+    "name": "水龍扇龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E9%BE%8D%E6%89%87%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/79/C3056.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130945\u0026path-prefix\u003dzh",
+      "iconKey": "C3056.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的水符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0414",
+      "1066"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3057",
+    "name": "水龍扇龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E9%BE%8D%E6%89%87%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c2/C3057.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130945\u0026path-prefix\u003dzh",
+      "iconKey": "C3057.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的水符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0414",
+      "1066"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3058",
+    "name": "水龍扇龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E9%BE%8D%E6%89%87%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C3058.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130945\u0026path-prefix\u003dzh",
+      "iconKey": "C3058.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的水符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0414",
+      "1066"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3059",
+    "name": "水龍扇龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E9%BE%8D%E6%89%87%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/99/C3059.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130946\u0026path-prefix\u003dzh",
+      "iconKey": "C3059.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的水符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0414",
+      "1066"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3060",
+    "name": "水龍扇龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B4%E9%BE%8D%E6%89%87%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/01/C3060.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130946\u0026path-prefix\u003dzh",
+      "iconKey": "C3060.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的火符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0416",
+      "1067"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3061",
+    "name": "火龍雙刀龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E9%BE%8D%E9%9B%99%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ee/C3061.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130946\u0026path-prefix\u003dzh",
+      "iconKey": "C3061.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的火符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0416",
+      "1067"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3062",
+    "name": "火龍雙刀龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E9%BE%8D%E9%9B%99%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C3062.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130947\u0026path-prefix\u003dzh",
+      "iconKey": "C3062.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的火符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0416",
+      "1067"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3063",
+    "name": "火龍雙刀龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E9%BE%8D%E9%9B%99%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a5/C3063.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130947\u0026path-prefix\u003dzh",
+      "iconKey": "C3063.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的火符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0416",
+      "1067"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3064",
+    "name": "火龍雙刀龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E9%BE%8D%E9%9B%99%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/99/C3064.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130947\u0026path-prefix\u003dzh",
+      "iconKey": "C3064.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的火符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0416",
+      "1067"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3065",
+    "name": "火龍雙刀龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%81%AB%E9%BE%8D%E9%9B%99%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C3065.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130948\u0026path-prefix\u003dzh",
+      "iconKey": "C3065.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0418",
+      "1068"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3066",
+    "name": "木龍法杖龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9C%A8%E9%BE%8D%E6%B3%95%E6%9D%96%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b5/C3066.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130948\u0026path-prefix\u003dzh",
+      "iconKey": "C3066.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0418",
+      "1068"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3067",
+    "name": "木龍法杖龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9C%A8%E9%BE%8D%E6%B3%95%E6%9D%96%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/47/C3067.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130949\u0026path-prefix\u003dzh",
+      "iconKey": "C3067.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0418",
+      "1068"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3068",
+    "name": "木龍法杖龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9C%A8%E9%BE%8D%E6%B3%95%E6%9D%96%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/71/C3068.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130949\u0026path-prefix\u003dzh",
+      "iconKey": "C3068.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0418",
+      "1068"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3069",
+    "name": "木龍法杖龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9C%A8%E9%BE%8D%E6%B3%95%E6%9D%96%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e2/C3069.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130949\u0026path-prefix\u003dzh",
+      "iconKey": "C3069.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0418",
+      "1068"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3070",
+    "name": "木龍法杖龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9C%A8%E9%BE%8D%E6%B3%95%E6%9D%96%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C3070.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130950\u0026path-prefix\u003dzh",
+      "iconKey": "C3070.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的光符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0420",
+      "1069"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3071",
+    "name": "光龍劍龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E9%BE%8D%E5%8A%8D%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C3071.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130954\u0026path-prefix\u003dzh",
+      "iconKey": "C3071.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的光符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0420",
+      "1069"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3072",
+    "name": "光龍劍龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E9%BE%8D%E5%8A%8D%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b2/C3072.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130954\u0026path-prefix\u003dzh",
+      "iconKey": "C3072.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的光符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0420",
+      "1069"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3073",
+    "name": "光龍劍龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E9%BE%8D%E5%8A%8D%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1c/C3073.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130954\u0026path-prefix\u003dzh",
+      "iconKey": "C3073.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的光符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0420",
+      "1069"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3074",
+    "name": "光龍劍龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E9%BE%8D%E5%8A%8D%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/93/C3074.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130955\u0026path-prefix\u003dzh",
+      "iconKey": "C3074.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的光符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0420",
+      "1069"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3075",
+    "name": "光龍劍龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E9%BE%8D%E5%8A%8D%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/86/C3075.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130955\u0026path-prefix\u003dzh",
+      "iconKey": "C3075.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0422",
+      "1070"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3076",
+    "name": "暗龍弓龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9A%97%E9%BE%8D%E5%BC%93%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9f/C3076.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130956\u0026path-prefix\u003dzh",
+      "iconKey": "C3076.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0422",
+      "1070"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3077",
+    "name": "暗龍弓龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9A%97%E9%BE%8D%E5%BC%93%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b2/C3077.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130956\u0026path-prefix\u003dzh",
+      "iconKey": "C3077.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0422",
+      "1070"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3078",
+    "name": "暗龍弓龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9A%97%E9%BE%8D%E5%BC%93%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/48/C3078.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130956\u0026path-prefix\u003dzh",
+      "iconKey": "C3078.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0422",
+      "1070"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3079",
+    "name": "暗龍弓龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9A%97%E9%BE%8D%E5%BC%93%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/71/C3079.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130957\u0026path-prefix\u003dzh",
+      "iconKey": "C3079.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0422",
+      "1070"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3080",
+    "name": "暗龍弓龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%9A%97%E9%BE%8D%E5%BC%93%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/ce/C3080.png/revision/latest/scale-to-width-down/60?cb\u003d20171204130957\u0026path-prefix\u003dzh",
+      "iconKey": "C3080.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0591",
+      "1081",
+      "1082"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3081",
+    "name": "龍王劍龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E7%8E%8B%E5%8A%8D%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e4/C3081.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084709\u0026path-prefix\u003dzh",
+      "iconKey": "C3081.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0591",
+      "1081",
+      "1082"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3082",
+    "name": "龍王劍龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E7%8E%8B%E5%8A%8D%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ec/C3082.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084710\u0026path-prefix\u003dzh",
+      "iconKey": "C3082.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0591",
+      "1081",
+      "1082"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3083",
+    "name": "龍王劍龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E7%8E%8B%E5%8A%8D%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e4/C3083.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084710\u0026path-prefix\u003dzh",
+      "iconKey": "C3083.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0591",
+      "1081",
+      "1082"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3084",
+    "name": "龍王劍龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E7%8E%8B%E5%8A%8D%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e0/C3084.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084711\u0026path-prefix\u003dzh",
+      "iconKey": "C3084.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0591",
+      "1081",
+      "1082"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3085",
+    "name": "龍王劍龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E7%8E%8B%E5%8A%8D%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fe/C3085.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084711\u0026path-prefix\u003dzh",
+      "iconKey": "C3085.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0592",
+      "1083",
+      "1084"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3086",
+    "name": "風火輪龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%A8%E7%81%AB%E8%BC%AA%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C3086.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084712\u0026path-prefix\u003dzh",
+      "iconKey": "C3086.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0592",
+      "1083",
+      "1084"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3087",
+    "name": "風火輪龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%A8%E7%81%AB%E8%BC%AA%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C3087.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084712\u0026path-prefix\u003dzh",
+      "iconKey": "C3087.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0592",
+      "1083",
+      "1084"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3088",
+    "name": "風火輪龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%A8%E7%81%AB%E8%BC%AA%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/89/C3088.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084713\u0026path-prefix\u003dzh",
+      "iconKey": "C3088.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0592",
+      "1083",
+      "1084"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3089",
+    "name": "風火輪龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%A8%E7%81%AB%E8%BC%AA%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5b/C3089.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084713\u0026path-prefix\u003dzh",
+      "iconKey": "C3089.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0592",
+      "1083",
+      "1084"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3090",
+    "name": "風火輪龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%A8%E7%81%AB%E8%BC%AA%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/99/C3090.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084714\u0026path-prefix\u003dzh",
+      "iconKey": "C3090.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0593",
+      "1085",
+      "1086"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3091",
+    "name": "大力鎚龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A7%E5%8A%9B%E9%8E%9A%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C3091.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084714\u0026path-prefix\u003dzh",
+      "iconKey": "C3091.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0593",
+      "1085",
+      "1086"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3092",
+    "name": "大力鎚龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A7%E5%8A%9B%E9%8E%9A%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C3092.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084715\u0026path-prefix\u003dzh",
+      "iconKey": "C3092.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0593",
+      "1085",
+      "1086"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3093",
+    "name": "大力鎚龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A7%E5%8A%9B%E9%8E%9A%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f4/C3093.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084715\u0026path-prefix\u003dzh",
+      "iconKey": "C3093.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0593",
+      "1085",
+      "1086"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3094",
+    "name": "大力鎚龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A7%E5%8A%9B%E9%8E%9A%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5c/C3094.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084716\u0026path-prefix\u003dzh",
+      "iconKey": "C3094.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0593",
+      "1085",
+      "1086"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3095",
+    "name": "大力鎚龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A7%E5%8A%9B%E9%8E%9A%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/65/C3095.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084716\u0026path-prefix\u003dzh",
+      "iconKey": "C3095.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0594",
+      "1087",
+      "1088"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3096",
+    "name": "如意棒龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%82%E6%84%8F%E6%A3%92%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9a/C3096.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084717\u0026path-prefix\u003dzh",
+      "iconKey": "C3096.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0594",
+      "1087",
+      "1088"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3097",
+    "name": "如意棒龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%82%E6%84%8F%E6%A3%92%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4c/C3097.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084717\u0026path-prefix\u003dzh",
+      "iconKey": "C3097.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0594",
+      "1087",
+      "1088"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3098",
+    "name": "如意棒龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%82%E6%84%8F%E6%A3%92%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C3098.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084718\u0026path-prefix\u003dzh",
+      "iconKey": "C3098.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0594",
+      "1087",
+      "1088"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3099",
+    "name": "如意棒龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%82%E6%84%8F%E6%A3%92%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/14/C3099.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084718\u0026path-prefix\u003dzh",
+      "iconKey": "C3099.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0594",
+      "1087",
+      "1088"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3100",
+    "name": "如意棒龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%82%E6%84%8F%E6%A3%92%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ec/C3100.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084719\u0026path-prefix\u003dzh",
+      "iconKey": "C3100.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0595",
+      "1089",
+      "1090"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3101",
+    "name": "妖羽扇龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%BE%BD%E6%89%87%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/46/C3101.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084742\u0026path-prefix\u003dzh",
+      "iconKey": "C3101.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0595",
+      "1089",
+      "1090"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3102",
+    "name": "妖羽扇龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%BE%BD%E6%89%87%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2f/C3102.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084743\u0026path-prefix\u003dzh",
+      "iconKey": "C3102.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0595",
+      "1089",
+      "1090"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3103",
+    "name": "妖羽扇龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%BE%BD%E6%89%87%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C3103.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084743\u0026path-prefix\u003dzh",
+      "iconKey": "C3103.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0595",
+      "1089",
+      "1090"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3104",
+    "name": "妖羽扇龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%BE%BD%E6%89%87%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C3104.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084744\u0026path-prefix\u003dzh",
+      "iconKey": "C3104.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0595",
+      "1089",
+      "1090"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3105",
+    "name": "妖羽扇龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%BE%BD%E6%89%87%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f7/C3105.png/revision/latest/scale-to-width-down/60?cb\u003d20180215084744\u0026path-prefix\u003dzh",
+      "iconKey": "C3105.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0481"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3106",
+    "name": "天鵝指環龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E9%B5%9D%E6%8C%87%E7%92%B0%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/74/C3106.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111650\u0026path-prefix\u003dzh",
+      "iconKey": "C3106.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0481"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3107",
+    "name": "天鵝指環龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E9%B5%9D%E6%8C%87%E7%92%B0%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/83/C3107.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111651\u0026path-prefix\u003dzh",
+      "iconKey": "C3107.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0481"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3108",
+    "name": "天鵝指環龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E9%B5%9D%E6%8C%87%E7%92%B0%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/58/C3108.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111652\u0026path-prefix\u003dzh",
+      "iconKey": "C3108.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0481"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3109",
+    "name": "天鵝指環龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E9%B5%9D%E6%8C%87%E7%92%B0%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d7/C3109.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111652\u0026path-prefix\u003dzh",
+      "iconKey": "C3109.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0481"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3110",
+    "name": "天鵝指環龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E9%B5%9D%E6%8C%87%E7%92%B0%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3b/C3110.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111653\u0026path-prefix\u003dzh",
+      "iconKey": "C3110.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0482"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3111",
+    "name": "終結剪刀龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%B5%82%E7%B5%90%E5%89%AA%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6e/C3111.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111654\u0026path-prefix\u003dzh",
+      "iconKey": "C3111.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0482"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3112",
+    "name": "終結剪刀龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%B5%82%E7%B5%90%E5%89%AA%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/91/C3112.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111654\u0026path-prefix\u003dzh",
+      "iconKey": "C3112.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0482"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3113",
+    "name": "終結剪刀龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%B5%82%E7%B5%90%E5%89%AA%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6f/C3113.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111655\u0026path-prefix\u003dzh",
+      "iconKey": "C3113.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0482"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3114",
+    "name": "終結剪刀龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%B5%82%E7%B5%90%E5%89%AA%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cd/C3114.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111655\u0026path-prefix\u003dzh",
+      "iconKey": "C3114.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0482"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3115",
+    "name": "終結剪刀龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%B5%82%E7%B5%90%E5%89%AA%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C3115.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111656\u0026path-prefix\u003dzh",
+      "iconKey": "C3115.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0483"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3116",
+    "name": "命運紗線龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%91%BD%E9%81%8B%E7%B4%97%E7%B7%9A%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1a/C3116.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111656\u0026path-prefix\u003dzh",
+      "iconKey": "C3116.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0483"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3117",
+    "name": "命運紗線龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%91%BD%E9%81%8B%E7%B4%97%E7%B7%9A%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/31/C3117.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111657\u0026path-prefix\u003dzh",
+      "iconKey": "C3117.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0483"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3118",
+    "name": "命運紗線龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%91%BD%E9%81%8B%E7%B4%97%E7%B7%9A%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e5/C3118.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111657\u0026path-prefix\u003dzh",
+      "iconKey": "C3118.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0483"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3119",
+    "name": "命運紗線龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%91%BD%E9%81%8B%E7%B4%97%E7%B7%9A%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f2/C3119.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111658\u0026path-prefix\u003dzh",
+      "iconKey": "C3119.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0483"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3120",
+    "name": "命運紗線龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%91%BD%E9%81%8B%E7%B4%97%E7%B7%9A%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/85/C3120.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111658\u0026path-prefix\u003dzh",
+      "iconKey": "C3120.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0484"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3121",
+    "name": "永生聖果龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B8%E7%94%9F%E8%81%96%E6%9E%9C%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/99/C3121.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111659\u0026path-prefix\u003dzh",
+      "iconKey": "C3121.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0484"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3122",
+    "name": "永生聖果龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B8%E7%94%9F%E8%81%96%E6%9E%9C%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/27/C3122.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111659\u0026path-prefix\u003dzh",
+      "iconKey": "C3122.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0484"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3123",
+    "name": "永生聖果龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B8%E7%94%9F%E8%81%96%E6%9E%9C%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f6/C3123.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111700\u0026path-prefix\u003dzh",
+      "iconKey": "C3123.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0484"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3124",
+    "name": "永生聖果龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B8%E7%94%9F%E8%81%96%E6%9E%9C%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/94/C3124.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111701\u0026path-prefix\u003dzh",
+      "iconKey": "C3124.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0484"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3125",
+    "name": "永生聖果龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%B0%B8%E7%94%9F%E8%81%96%E6%9E%9C%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c5/C3125.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111701\u0026path-prefix\u003dzh",
+      "iconKey": "C3125.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0485"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3126",
+    "name": "狩魂鐮刀龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E9%AD%82%E9%90%AE%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9b/C3126.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111805\u0026path-prefix\u003dzh",
+      "iconKey": "C3126.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0485"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3127",
+    "name": "狩魂鐮刀龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E9%AD%82%E9%90%AE%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/71/C3127.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111806\u0026path-prefix\u003dzh",
+      "iconKey": "C3127.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0485"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3128",
+    "name": "狩魂鐮刀龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E9%AD%82%E9%90%AE%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a4/C3128.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111807\u0026path-prefix\u003dzh",
+      "iconKey": "C3128.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0485"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3129",
+    "name": "狩魂鐮刀龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E9%AD%82%E9%90%AE%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/90/C3129.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111807\u0026path-prefix\u003dzh",
+      "iconKey": "C3129.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0485"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3130",
+    "name": "狩魂鐮刀龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E9%AD%82%E9%90%AE%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/87/C3130.png/revision/latest/scale-to-width-down/60?cb\u003d20180326111808\u0026path-prefix\u003dzh",
+      "iconKey": "C3130.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1380",
+      "1381"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3131",
+    "name": "天津法杖龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E6%B4%A5%E6%B3%95%E6%9D%96%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cc/C3131.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085537\u0026path-prefix\u003dzh",
+      "iconKey": "C3131.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1380",
+      "1381"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3132",
+    "name": "天津法杖龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E6%B4%A5%E6%B3%95%E6%9D%96%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/36/C3132.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085538\u0026path-prefix\u003dzh",
+      "iconKey": "C3132.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1380",
+      "1381"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3133",
+    "name": "天津法杖龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E6%B4%A5%E6%B3%95%E6%9D%96%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/00/C3133.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085539\u0026path-prefix\u003dzh",
+      "iconKey": "C3133.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1380",
+      "1381"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3134",
+    "name": "天津法杖龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E6%B4%A5%E6%B3%95%E6%9D%96%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dc/C3134.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085540\u0026path-prefix\u003dzh",
+      "iconKey": "C3134.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1380",
+      "1381"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3135",
+    "name": "天津法杖龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E6%B4%A5%E6%B3%95%E6%9D%96%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/44/C3135.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085541\u0026path-prefix\u003dzh",
+      "iconKey": "C3135.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1382",
+      "1383"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3136",
+    "name": "公允之杖龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%AC%E5%85%81%E4%B9%8B%E6%9D%96%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4d/C3136.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085543\u0026path-prefix\u003dzh",
+      "iconKey": "C3136.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1382",
+      "1383"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3137",
+    "name": "公允之杖龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%AC%E5%85%81%E4%B9%8B%E6%9D%96%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/46/C3137.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085543\u0026path-prefix\u003dzh",
+      "iconKey": "C3137.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1382",
+      "1383"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3138",
+    "name": "公允之杖龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%AC%E5%85%81%E4%B9%8B%E6%9D%96%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5b/C3138.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085544\u0026path-prefix\u003dzh",
+      "iconKey": "C3138.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1382",
+      "1383"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3139",
+    "name": "公允之杖龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%AC%E5%85%81%E4%B9%8B%E6%9D%96%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9e/C3139.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085545\u0026path-prefix\u003dzh",
+      "iconKey": "C3139.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1382",
+      "1383"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3140",
+    "name": "公允之杖龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%85%AC%E5%85%81%E4%B9%8B%E6%9D%96%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C3140.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085545\u0026path-prefix\u003dzh",
+      "iconKey": "C3140.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1384",
+      "1385"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3141",
+    "name": "颶風吊飾龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%B6%E9%A2%A8%E5%90%8A%E9%A3%BE%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b7/C3141.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085546\u0026path-prefix\u003dzh",
+      "iconKey": "C3141.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1384",
+      "1385"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3142",
+    "name": "颶風吊飾龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%B6%E9%A2%A8%E5%90%8A%E9%A3%BE%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/10/C3142.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085547\u0026path-prefix\u003dzh",
+      "iconKey": "C3142.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1384",
+      "1385"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3143",
+    "name": "颶風吊飾龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%B6%E9%A2%A8%E5%90%8A%E9%A3%BE%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/19/C3143.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085548\u0026path-prefix\u003dzh",
+      "iconKey": "C3143.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1384",
+      "1385"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3144",
+    "name": "颶風吊飾龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%B6%E9%A2%A8%E5%90%8A%E9%A3%BE%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/40/C3144.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085548\u0026path-prefix\u003dzh",
+      "iconKey": "C3144.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1384",
+      "1385"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3145",
+    "name": "颶風吊飾龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A2%B6%E9%A2%A8%E5%90%8A%E9%A3%BE%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/38/C3145.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085549\u0026path-prefix\u003dzh",
+      "iconKey": "C3145.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1386",
+      "1387"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3146",
+    "name": "日環鑰匙龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%97%A5%E7%92%B0%E9%91%B0%E5%8C%99%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/10/C3146.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085550\u0026path-prefix\u003dzh",
+      "iconKey": "C3146.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1386",
+      "1387"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3147",
+    "name": "日環鑰匙龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%97%A5%E7%92%B0%E9%91%B0%E5%8C%99%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a8/C3147.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085550\u0026path-prefix\u003dzh",
+      "iconKey": "C3147.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1386",
+      "1387"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3148",
+    "name": "日環鑰匙龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%97%A5%E7%92%B0%E9%91%B0%E5%8C%99%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2a/C3148.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085552\u0026path-prefix\u003dzh",
+      "iconKey": "C3148.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1386",
+      "1387"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3149",
+    "name": "日環鑰匙龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%97%A5%E7%92%B0%E9%91%B0%E5%8C%99%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/39/C3149.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085552\u0026path-prefix\u003dzh",
+      "iconKey": "C3149.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1386",
+      "1387"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3150",
+    "name": "日環鑰匙龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%97%A5%E7%92%B0%E9%91%B0%E5%8C%99%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ea/C3150.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085553\u0026path-prefix\u003dzh",
+      "iconKey": "C3150.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1388",
+      "1389"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3151",
+    "name": "冥界寶杖龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%95%8C%E5%AF%B6%E6%9D%96%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e1/C3151.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085558\u0026path-prefix\u003dzh",
+      "iconKey": "C3151.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1388",
+      "1389"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3152",
+    "name": "冥界寶杖龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%95%8C%E5%AF%B6%E6%9D%96%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3c/C3152.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085559\u0026path-prefix\u003dzh",
+      "iconKey": "C3152.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1388",
+      "1389"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3153",
+    "name": "冥界寶杖龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%95%8C%E5%AF%B6%E6%9D%96%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C3153.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085559\u0026path-prefix\u003dzh",
+      "iconKey": "C3153.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1388",
+      "1389"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3154",
+    "name": "冥界寶杖龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%95%8C%E5%AF%B6%E6%9D%96%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c5/C3154.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085600\u0026path-prefix\u003dzh",
+      "iconKey": "C3154.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1388",
+      "1389"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3155",
+    "name": "冥界寶杖龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%86%A5%E7%95%8C%E5%AF%B6%E6%9D%96%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d6/C3155.png/revision/latest/scale-to-width-down/60?cb\u003d20180611085600\u0026path-prefix\u003dzh",
+      "iconKey": "C3155.png"
+    }
+  }
+]

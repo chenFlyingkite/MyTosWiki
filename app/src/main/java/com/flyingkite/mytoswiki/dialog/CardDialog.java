@@ -17,7 +17,6 @@ import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.Skill;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
-import com.flyingkite.mytoswiki.share.ShareHelper;
 
 import java.text.NumberFormat;
 
@@ -297,14 +296,6 @@ public class CardDialog extends BaseTosDialog {
         findViewById(linkId).setOnClickListener(clk);
     }
 
-    private void viewLinkAsWebDialog(String link) {
-        WebDialog d = new WebDialog();
-        Bundle b = new Bundle();
-        b.putString(WebDialog.BUNDLE_LINK, link);
-        d.setArguments(b);
-        d.show(getActivity());
-    }
-
     private void setAmelioration(@IdRes int id, @DrawableRes int ameLv, int scost, String sdesc) {
         boolean exist = scost > 0;
         View vg = findViewById(id);
@@ -326,12 +317,5 @@ public class CardDialog extends BaseTosDialog {
         b.putParcelable(MonsterEatingDialog.BUNDLE_CARD, card);
         d.setArguments(b);
         d.show(getFragmentManager(), MonsterEatingDialog.TAG);
-    }
-
-    private void shareImage(View v) {
-        //ShareHelper.shareBitmap(getActivity(), card.icon);
-        //ShareHelper.sendUriIntent(getActivity(), Uri.parse(card.icon), "image/png");
-        String name = ShareHelper.cacheName("2.png");
-        shareImage(v, name);
     }
 }

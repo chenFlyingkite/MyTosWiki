@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="#8000">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/cardRow.greenV"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/craftSkillLevel"
+            style="@style/cardText.item.2"
+            tools:text="1"/>
+
+        <TextView
+            android:id="@+id/craftSkillDesc"
+            style="@style/cardText.item.6"
+            tools:text="1 回合內，回復 50% 生命力"/>
+
+        <TextView
+            android:id="@+id/craftSkillScore"
+            style="@style/cardText.item.2"
+            tools:text="2000"/>
+
+    </LinearLayout>
+</LinearLayout>

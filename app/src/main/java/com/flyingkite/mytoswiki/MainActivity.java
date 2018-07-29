@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
+import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
@@ -24,7 +24,7 @@ import com.flyingkite.util.WaitingDialog;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner, Loggable {
+public class MainActivity extends BaseActivity implements TosCardFragment.ToolBarOwner {
     // Provide alternative bitmaps
     // https://developer.android.com/training/multiscreen/screendensities
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
             , R.mipmap.app_icon
+            , R.drawable.logo_craft_1
             , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
@@ -202,14 +203,22 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                     case R.mipmap.app_icon:
                         new AboutDialog().show(getActivity());
                         break;
+                    case R.drawable.logo_craft_1:
+                        new CraftDialog().show(getActivity());
+                        break;
                 }
             }
         });
         iconLibrary.setViewAdapter(adapter);
     }
 
-    private Activity getActivity() {
+    public Activity getActivity() {
         return this;
+    }
+
+    @Override
+    public View getView() {
+        return getWindow().getDecorView();
     }
 
     @Override

@@ -10,14 +10,16 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
-import android.util.Log;
-import android.widget.Toast;
+
+import com.flyingkite.mytoswiki.util.PageUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity implements
+        PageUtil
+{
     private static final int REQ_PERMISSION = 1;
     private static final String[] RESULT_STATE = {"OK", "Cancel"};
 
@@ -113,35 +115,7 @@ public abstract class BaseActivity extends Activity {
         }
     }
 
-    protected final void showToast(@StringRes int id, Object... args) {
-        showToast(getString(id, args));
-    }
-
     protected final void showToast(@StringRes int id) {
-        Toast.makeText(this, id, Toast.LENGTH_LONG).show();
-    }
-
-    protected final void showToast(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
-    }
-
-    protected String getTagName() {
-        return "Hi " + getClass().getSimpleName();
-    }
-
-    protected void LogV(String msg, Object... param) {
-        LogV(String.format(msg, param));
-    }
-
-    protected void LogV(String msg) {
-        Log.v(getTagName(), msg);
-    }
-
-    protected void LogE(String msg, Object... param) {
-        LogE(String.format(msg, param));
-    }
-
-    protected void LogE(String msg) {
-        Log.e(getTagName(), msg);
+        showToast(getString(id));
     }
 }
