@@ -1,8 +1,6 @@
 package com.flyingkite.mytoswiki;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.ArrayRes;
@@ -10,11 +8,10 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
+import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.Checkable;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -27,10 +24,11 @@ import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
+import com.flyingkite.mytoswiki.library.Misc;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.mytoswiki.tos.query.TosCardCondition;
-import com.flyingkite.mytoswiki.tos.query.TosSelectAttribute;
+import com.flyingkite.mytoswiki.tos.query.AllCards;
+import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
@@ -163,22 +161,26 @@ public class TosCardFragment extends BaseFragment {
         allCards = Arrays.asList(cards);
         int n = allCards.size();
         tosInfo.setText(getString(R.string.cards_selection, n, n));
-        cardLib.setDataSet(allCards
-                , (position, card) -> {
-                    CardDialog d = new CardDialog();
+        CardAdapter a = new CardAdapter();
+        a.setDataList(allCards);
+        a.setItemListener(new CardAdapter.ItemListener() {
+            @Override
+            public void onClick(TosCard card, CardAdapter.CardVH cardVH, int position) {
+                CardDialog d = new CardDialog();
+                Bundle b = new Bundle();
+                b.putParcelable(CardDialog.BUNDLE_CARD, card);
+                d.setArguments(b);
+                d.show(getFragmentManager(), CardDialog.TAG);
+            }
 
-                    Bundle b = new Bundle();
-                    b.putParcelable(CardDialog.BUNDLE_CARD, card);
-                    d.setArguments(b);
-                    d.show(getFragmentManager(), CardDialog.TAG);
-
-                }, (selected, total) ->  {
-                    tosInfo.setText(getString(R.string.cards_selection, selected, total));
-                }
-        );
+            @Override
+            public void onFiltered(int selected, int total) {
+                tosInfo.setText(getString(R.string.cards_selection, selected, total));
+            }
+        });
+        cardLib.setViewAdapter(a);
         updateHide();
         applySelection();
-        test();
     }
 
     private void initShareImage(View parent) {
@@ -192,34 +194,12 @@ public class TosCardFragment extends BaseFragment {
         });
     }
 
-    private void test() {
-        if (true) return;
-
-        int cnt = 0;
-        for (TosCard c : allCards) {
-            String desc = c.skillDesc1 + " & " + c.skillDesc2;// + " & " + c.skillLeaderDesc;
-
-            String[] names = {"可任意移動符石而不會發動消除", "任意移動符石", "不會發動消除"};
-
-            boolean found = false;
-            for (int i = 0; i < names.length && !found; i++) {
-                if (desc.contains(names[i])) {
-                    LogE("#%s -> @%d -> %s / %s", c.idNorm, i, c.name, desc);
-                    found = true;
-                    cnt++;
-                }
-            }
-        }
-        LogE("%s cards", cnt);
-    }
-
+    //region init sort menus and put onClickListeners
     private void initSortMenu() {
         // Create MenuWindow
-        View menu = LayoutInflater.from(getActivity()).inflate(R.layout.popup_tos_sort, (ViewGroup) getView(), false);
-        int wrap = ViewGroup.LayoutParams.WRAP_CONTENT;
-        sortWindow = new PopupWindow(menu, wrap, wrap, true);
-        sortWindow.setOutsideTouchable(true);
-        sortWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Pair<View, PopupWindow> pair = createPopupWindow(R.layout.popup_tos_sort_card, (ViewGroup) getView());
+        sortWindow = pair.second;
+        View menu = pair.first;
 
         sortMenu.setOnClickListener(v -> {
             sortWindow.showAsDropDown(v);
@@ -304,9 +284,9 @@ public class TosCardFragment extends BaseFragment {
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
+    //endregion
 
-    //------
-
+    //region click listeners for sort menus
     private void clickReset(View v) {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone};
         for (ViewGroup vg : vgs) {
@@ -356,10 +336,10 @@ public class TosCardFragment extends BaseFragment {
     private void clickDisplay(View v) {
         sortDisplay.check(v.getId());
 
-        int type = CardAdapter.NT_ID_NORM;
+        int type = Misc.NT_ID_NORM;
         switch (v.getId()) {
             case R.id.sortDisplayName:
-                type = CardAdapter.NT_NAME;
+                type = Misc.NT_NAME;
                 break;
         }
         if (cardLib.adapter != null) {
@@ -389,7 +369,9 @@ public class TosCardFragment extends BaseFragment {
         setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
         applySelection();
     }
+    //endregion
 
+    //region Apply selection to adapter
     private void applySelection() {
         // Attribute
         List<String> attrs = new ArrayList<>();
@@ -407,31 +389,8 @@ public class TosCardFragment extends BaseFragment {
         LogE("sel S = %s", stars);
 
         if (cardLib.adapter != null) {
-            TosCardCondition cond = new TosCardCondition().attr(attrs).race(races).star(stars);
-            cardLib.adapter.setSelection(new TosSelect(allCards, cond));
-        }
-    }
-
-    private void getSelectTags(ViewGroup vg, List<String> result, boolean addAllIfEmpty) {
-        if (result == null) {
-            result = new ArrayList<>();
-        }
-        int n = vg.getChildCount();
-
-        List<String> all = new ArrayList<>();
-        boolean added = false;
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            String tag = w.getTag().toString();
-            if (w.isSelected()) {
-                added = true;
-                result.add(tag);
-            }
-            all.add(tag);
-        }
-        // If no children is added, add all the child tags
-        if (addAllIfEmpty && !added) {
-            result.addAll(all);
+            TosCondition cond = new TosCondition().attr(attrs).race(races).star(stars);
+            cardLib.adapter.setSelection(new TosSelectCard(allCards, cond));
         }
     }
 
@@ -441,77 +400,6 @@ public class TosCardFragment extends BaseFragment {
         applySelection();
     }
 
-    //-- View's helpers --
-    private void setCheckedIncludeNo(View clicked, @IdRes int noId, ViewGroup parent) {
-        View noView = null;
-        // Find the noView
-        int n = parent.getChildCount();
-        for (int i = 0; i < n && noView == null; i++) {
-            View v = parent.getChildAt(i);
-            if (v.getId() == noId) {
-                noView = v;
-            }
-        }
-
-        int vid = clicked.getId();
-        Checkable c;
-        if (vid != noId) { // If select something, uncheck no
-            setViewCheck(false, noView);
-        } else {
-            // selected no, uncheck all others except no
-            for (int i = 0; i < n; i++) {
-                setViewCheck(false, parent.getChildAt(i));
-            }
-            setViewCheck(true, noView);
-        }
-    }
-
-    private void setViewCheck(boolean check, View v) {
-        Checkable c;
-        if (v instanceof Checkable) {
-            c = (Checkable) v;
-            c.setChecked(check);
-        }
-    }
-
-    private void setChildClick(ViewGroup vg, View.OnClickListener clk) {
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            View w = vg.getChildAt(i);
-            w.setOnClickListener(clk);
-        }
-    }
-
-    private void toggleSelection(View v, ViewGroup vg) {
-        v.setSelected(!v.isSelected());
-        // Deselect all if all selected
-        if (isAllAsSelected(vg, true)) {
-            setAllChildrenSelected(vg, false);
-        }
-    }
-
-    private void setAllChildrenSelected(ViewGroup vg, boolean sel) {
-        if (vg == null) return;
-
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            vg.getChildAt(i).setSelected(sel);
-        }
-    }
-
-    private boolean isAllAsSelected(ViewGroup vg, boolean selected) {
-        if (vg == null) return false;
-
-        int n = vg.getChildCount();
-        for (int i = 0; i < n; i++) {
-            if (vg.getChildAt(i).isSelected() != selected) {
-                return false;
-            }
-        }
-        return true;
-    }
-    //-- View helpers --
-
     private void updateHide() {
         sortHide.findViewById(R.id.sortHide6xxx).setSelected(cardSort.hideCard6xxx);
         sortHide.findViewById(R.id.sortHide7xxx).setSelected(cardSort.hideCard7xxx);
@@ -520,7 +408,9 @@ public class TosCardFragment extends BaseFragment {
         int id = cardSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
         clickDisplay(sortDisplay.findViewById(id));
     }
+    //endregion
 
+    //region Saving preference as Gson
     private void toGsonHide() {
         cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
         cardSort.hideCard7xxx = sortHide.findViewById(R.id.sortHide7xxx).isSelected();
@@ -531,6 +421,7 @@ public class TosCardFragment extends BaseFragment {
             GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
         });
     }
+    //endregion
 
     @Override
     public void onPause() {
@@ -562,27 +453,38 @@ public class TosCardFragment extends BaseFragment {
         toolOwner = null;
     }
 
-    private class TosSelect extends TosSelectAttribute {
+    private class TosSelectCard extends AllCards<TosCard> {
         private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys);
 
-        public TosSelect(List<TosCard> source, TosCardCondition condition) {
-            super(source, condition);
+        private TosCondition select;
+
+        public TosSelectCard(List<TosCard> source, TosCondition condition) {
+            super(source);
+            select = condition;
+        }
+
+        @Override
+        public String typeName() {
+            return "TosCard";
         }
 
         @Override
         public boolean onSelect(TosCard c){
-            List<String> attrs = select.getAttr();
-            List<String> races = select.getRace();
-            List<String> stars = select.getStar();
-
-            return attrs.contains(c.attribute)
-                    && races.contains(c.race)
-                    && stars.contains("" + c.rarity)
+            return selectForBasic(c)
                     && selectForTurnRunestones(c)
                     && selectForSpecial(c)
                     && selectForShow(c)
                     && selectForImprove(c)
             ;
+        }
+
+        private boolean selectForBasic(TosCard c) {
+            List<String> attrs = select.getAttr();
+            List<String> races = select.getRace();
+            List<String> stars = select.getStar();
+            return attrs.contains(c.attribute)
+                    && races.contains(c.race)
+                    && stars.contains("" + c.rarity);
         }
 
         private boolean selectForTurnRunestones(TosCard c) {
@@ -660,13 +562,8 @@ public class TosCardFragment extends BaseFragment {
             return find(key, data);
         }
 
-        private boolean find(String key, String[] data) {
-            for (int i = 0; i < data.length; i++) {
-                if (key.contains(data[i])) {
-                    return true;
-                }
-            }
-            return false;
+        private boolean find(String key, String[] data) { // TODO : Fix me
+            return flyingkite.tool.StringUtil.containsAt(key, data) >= 0;
         }
 
         private boolean selectForImprove(TosCard c) {
@@ -770,8 +667,6 @@ public class TosCardFragment extends BaseFragment {
                 TosCard c1 = data.get(o1);
                 TosCard c2 = data.get(o2);
                 long v1 = -1, v2 = -1;
-                //logCard("#1", c1);
-                //logCard("#2", c2);
 
                 switch (id) {
                     case R.id.sortCommonMaxHP:
@@ -892,6 +787,8 @@ public class TosCardFragment extends BaseFragment {
             }
         }
     }
+    //region Actual implementation of TosSelectCard
+    //endregion
 
     // The file of dialog setting
     private File getTosCardSortFile() {

@@ -20,7 +20,7 @@ import com.google.gson.Gson;
 public class CraftItemDialog extends BaseTosDialog {
     public static final String BUNDLE_CRAFT = "CraftItemDialog.Craft";
 
-    //
+    // Views
     private ImageView craftIcon;
     private View craftLink;
     private TextView craftIdNorm;

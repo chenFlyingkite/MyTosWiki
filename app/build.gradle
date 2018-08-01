@@ -148,8 +148,11 @@ dependencies {
     api 'com.crashlytics.sdk.android:crashlytics:2.9.3'
 
     //api 'com.github.User:Repo:Tag'
-    //api 'com.github.chenFlyingkite:MyAndroid:59a1c1b71e'
-    api 'com.github.chenFlyingkite:MyAndroid:d956d567f9'
+    //api "com.github.chenFlyingkite:MyAndroid:d956d567f9"
+    //api "com.github.chenFlyingkite:MyAndroid:5a667c037a"
+    //api "com.github.chenFlyingkite:MyAndroid:6c11ccbabd"
+    api "com.github.chenFlyingkite:MyAndroid:814effba4b" // x
+    //api "com.github.chenFlyingkite:MyAndroid:c1d44477e1"
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 

@@ -1,17 +1,24 @@
 package com.flyingkite.mytoswiki.util;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.Pair;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
 
-public interface PageUtil extends Loggable {
+public interface PageUtil extends Loggable, ViewUtil {
 
     Activity getActivity();
 
@@ -52,6 +59,19 @@ public interface PageUtil extends Loggable {
         }
     }
 
+    /**
+     * @return pair of inflated menu view & popup window
+     */
+    default Pair<View, PopupWindow> createPopupWindow(@LayoutRes int layoutId, ViewGroup root) {
+        // Create MenuWindow
+        View menu = LayoutInflater.from(getActivity()).inflate(layoutId, root, false);
+        int wrap = ViewGroup.LayoutParams.WRAP_CONTENT;
+        PopupWindow w = new PopupWindow(menu, wrap, wrap, true);
+        w.setOutsideTouchable(true);
+        w.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        return new Pair<>(menu, w);
+    }
+
     default void showToast(@StringRes int id, Object... args) {
         String s = getActivity().getString(id, args);
         showToast(s);
@@ -65,22 +85,9 @@ public interface PageUtil extends Loggable {
         setViewVisibility(findViewById(parent), show);
     }
 
-    default void setViewVisibility(View v, boolean show) {
-        int vis = show ? View.VISIBLE : View.GONE;
-        v.setVisibility(vis);
-    }
-
     default void setVisibilities(int vis, int... ids) {
         for (int i : ids) {
             View v = findViewById(i);
-            if (v != null) {
-                v.setVisibility(vis);
-            }
-        }
-    }
-
-    default void setVisibilities(int vis, View... vs) {
-        for (View v : vs) {
             if (v != null) {
                 v.setVisibility(vis);
             }

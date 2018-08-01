@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -79,7 +78,7 @@ public class MonsterLevelDialog extends BaseTosDialog {
     }
 
     private void initTable() {
-        tableLibrary = new Library<>(findViewById(R.id.mld_recycler), new GridLayoutManager(getActivity(), 3));
+        tableLibrary = new Library<>(findViewById(R.id.mld_recycler), 3);
         tableLibrary.recyclerView.setItemAnimator(null);
         MonsterLvAdapter a = new MonsterLvAdapter();
         a.setExpCurve(curve);

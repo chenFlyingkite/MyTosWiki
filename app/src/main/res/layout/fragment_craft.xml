@@ -28,6 +28,11 @@
                 android:background="@drawable/bg_press_sky"/>
 
             <ImageView
+                android:id="@+id/craftClose"
+                style="@style/tosGoTop"
+                android:src="@drawable/ic_clear_black_48dp"/>
+
+            <ImageView
                 android:id="@+id/craftGoTop"
                 style="@style/tosGoTop"/>
 

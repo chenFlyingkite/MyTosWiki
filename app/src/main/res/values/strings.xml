@@ -151,6 +151,39 @@
     <string name="craft_precondition">前提</string>
     <string name="craft_score">積分</string>
     <string name="craft_up">提升</string>
+    <!-- #1, 連接同色 -->
+    <string name="craft_1_pattern">連鎖龍紋</string>
+    <!-- #2, 轉動糖果 -->
+    <string name="craft_2_seal">轉動龍印</string>
+    <!-- #3, 點單色連 -->
+    <string name="craft_3_spell">破碎龍咒</string>
+    <!-- #35, 點對應同色 -->
+    <string name="craft_4_amulet">映照龍符</string>
+    <!-- #58, 怪物彈珠 -->
+    <string name="craft_5_jasper">疾速龍玉</string>
+    <!-- #75, 切西瓜 -->
+    <string name="craft_6_blade">裂空龍刃</string>
+    <!-- #112, 跳舞機 -->
+    <string name="craft_7_opal">落影龍璃</string>
+    <!-- #171, 同色相連 -->
+    <string name="craft_8_chain">擴散龍結</string>
+    <!-- Keys -->
+    <string name="craft_1_key_pattern">龍紋</string>
+    <string name="craft_2_key_seal">龍印</string>
+    <string name="craft_3_key_spell">龍咒</string>
+    <string name="craft_4_key_amulet">龍符</string>
+    <string name="craft_5_key_jasper">龍玉</string>
+    <string name="craft_6_key_blade">龍刃</string>
+    <string name="craft_7_key_opal">龍璃</string>
+    <string name="craft_8_key_chain">龍結</string>
+    <string name="cards_craft_select">篩選一般龍刻</string>
+    <string name="craft_attr">適用屬性</string>
+    <string name="craft_race">適用種族</string>
+    <string name="cards_hide_craft_0xxx">一般龍刻</string>
+    <string name="cards_hide_craft_2xxx">龍刻武裝素材</string>
+    <string name="cards_hide_craft_3xxx">龍刻武裝</string>
+
+
 
     <string name="texts_tools">文字區域</string>
     <string name="texts_tools_details">刪除全部，游標往左，游標往右</string>

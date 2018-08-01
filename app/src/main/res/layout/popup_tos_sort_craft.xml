@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/t80dp"
+            android:background="#8000">
+
+            <!-- Reset & save -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sortReset"
+                    style="@style/sortIcon"
+                    android:src="@drawable/s_i049"/>
+
+                <ImageView
+                    android:id="@+id/tosSave"
+                    style="@style/sortIcon"
+                    android:src="@drawable/ic_save_white_48dp"/>
+            </LinearLayout>
+
+            <!-- Mode -->
+            <TextView
+                style="@style/sortTitle"
+                android:text="@string/craft_mode"/>
+            <GridLayout
+                android:id="@+id/sortModes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="5">
+
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_1_key_pattern"
+                    android:src="@drawable/craft_001"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_2_key_seal"
+                    android:src="@drawable/craft_002"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_3_key_spell"
+                    android:src="@drawable/craft_003"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_4_key_amulet"
+                    android:src="@drawable/craft_004"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_5_key_jasper"
+                    android:src="@drawable/craft_005"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_6_key_blade"
+                    android:src="@drawable/craft_006"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_7_key_opal"
+                    android:src="@drawable/craft_007"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_8_key_chain"
+                    android:src="@drawable/craft_008"/>
+            </GridLayout>
+
+            <!-- 123星 -->
+            <TextView
+                android:id="@+id/sortStarTitle"
+                style="@style/sortTitle"
+                android:text="@string/cards_star"/>
+            <GridLayout
+                android:id="@+id/sortStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="4">
+
+                <TextView
+                    style="@style/sortStarText"
+                    android:tag="1"
+                    android:text="1"/>
+                <TextView
+                    style="@style/sortStarText"
+                    android:tag="2"
+                    android:text="2"/>
+                <TextView
+                    style="@style/sortStarText"
+                    android:tag="3"
+                    android:text="3"/>
+            </GridLayout>
+
+            <TextView
+                style="@style/sortTitle"
+                android:text="@string/cards_craft_select"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/t20dp"
+                android:orientation="vertical">
+
+                <!-- 屬性-->
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/craft_attr"/>
+                <LinearLayout
+                    android:id="@+id/sortAttributes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_water"
+                        android:src="@drawable/inv_water"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_fires"
+                        android:src="@drawable/inv_fire"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_earth"
+                        android:src="@drawable/inv_earth"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_light"
+                        android:src="@drawable/inv_light"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_darks"
+                        android:src="@drawable/inv_dark"/>
+                </LinearLayout>
+
+                <!-- 種族 -->
+                <TextView
+                    android:id="@+id/sortRaceTitle"
+                    style="@style/sortTitle"
+                    android:text="@string/craft_race"/>
+                <GridLayout
+                    android:id="@+id/sortRaces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="5">
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_god"
+                        android:src="@drawable/inv_god"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_demon"
+                        android:src="@drawable/inv_fiend"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_human"
+                        android:src="@drawable/inv_human"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_beast"
+                        android:src="@drawable/inv_beast"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_dragon"
+                        android:src="@drawable/inv_dragon"/>
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_elf"
+                        android:src="@drawable/inv_elf"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_machina"
+                        android:src="@drawable/inv_machina"/>
+                </GridLayout>
+            </LinearLayout>
+
+            <!-- No show crafts -->
+            <TextView
+                style="@style/sortTitle"
+                android:text="@string/cards_hide"/>
+            <LinearLayout
+                android:id="@+id/sortHide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/t20dp">
+
+                <TextView
+                    android:id="@+id/sortHideCraft0xxx"
+                    style="@style/sortText"
+                    android:text="@string/cards_hide_craft_0xxx"/>
+
+                <TextView
+                    android:id="@+id/sortHideCraft2xxx"
+                    style="@style/sortText"
+                    android:text="@string/cards_hide_craft_2xxx"/>
+
+                <TextView
+                    android:id="@+id/sortHideCraft3xxx"
+                    style="@style/sortText"
+                    android:text="@string/cards_hide_craft_3xxx"/>
+            </LinearLayout>
+
+
+            <ImageView
+                style="@style/toswiki_style"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</ScrollView>

@@ -1,26 +1,27 @@
 package com.flyingkite.mytoswiki.tos.query;
 
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
-import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.TicTac2;
-import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.library.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public interface TosCardSelection {
+public interface TosSelection<T> {
+
     @NonNull
-    default List<TosCard> from() {
+    default List<T> from() {
         return new ArrayList<>();
     }
 
     @NonNull
     default List<Integer> select() {
-        List<TosCard> data = ListUtil.nonNull(from());
+        List<T> data = ListUtil.nonNull(from());
         List<Integer> index = new ArrayList<>();
         for (int i = 0; i < data.size(); i++) {
-            TosCard c = data.get(i);
+            T c = data.get(i);
             if (onSelect(c)) {
                 index.add(i);
             }
@@ -28,7 +29,7 @@ public interface TosCardSelection {
         return index;
     }
 
-    default boolean onSelect(TosCard c) {
+    default boolean onSelect(T c) {
         return true;
     }
 
@@ -38,10 +39,14 @@ public interface TosCardSelection {
     }
 
     default List<Integer> query() {
+        String s = "";
+        if (!TextUtils.isEmpty(typeName())) {
+            s = "(" + typeName() + ")";
+        }
         TicTac2 t = new TicTac2();
         t.tic();
         List<Integer> result = sort(select());
-        t.tac("From %s selects %s items", from().size(), result.size());
+        t.tac("From %s selects %s items %s", from().size(), result.size(), s);
         return result;
     }
 
@@ -49,26 +54,16 @@ public interface TosCardSelection {
         return null; // No messages
     }
 
-    class All implements TosCardSelection {
-        private List<TosCard> all;
-        public All(List<TosCard> list) {
-            all = list;
-        }
+//    default void a() {
+//        Say.Log("class = %s", getClass());
+//        Say.Log("class = %s", Arrays.toString(getClass().getGenericInterfaces()));
+//        Say.Log("class = %s", Arrays.toString(getClass().getInterfaces()));
+//        Say.Log("class = %s", getClass());
+//        Say.Log("class = %s", getClass());
+//        Say.Log("class = %s", getClass());
+//    }
 
-        @NonNull
-        @Override
-        public List<TosCard> from() {
-            return all;
-        }
-
-        @NonNull
-        @Override
-        public List<Integer> select() {
-            List<Integer> result = new ArrayList<>();
-            for (int i = 0; i < all.size(); i++) {
-                result.add(i);
-            }
-            return result;
-        }
+    default String typeName() {
+        return "";
     }
 }

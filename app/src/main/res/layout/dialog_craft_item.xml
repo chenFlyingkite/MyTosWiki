@@ -46,6 +46,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#d000"
                     android:orientation="vertical">
 
                     <!-- Craft id & name -->
@@ -303,17 +304,17 @@
                                 tools:text="+10%"/>
                         </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/craftMark"
-                        style="@style/toswiki_style" />
-
-                    <View
-                        android:id="@+id/craftEnd"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/t50dp"/>
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/craftMark"
+                style="@style/toswiki_style" />
+
+            <View
+                android:id="@+id/craftEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t50dp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

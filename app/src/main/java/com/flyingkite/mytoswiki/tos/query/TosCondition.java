@@ -5,23 +5,30 @@ import com.flyingkite.library.util.ListUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TosCardCondition {
+public class TosCondition {
     private List<String> attr = new ArrayList<>();
     private List<String> race = new ArrayList<>();
     private List<String> star = new ArrayList<>();
+    // For craft
+    private List<String> mode = new ArrayList<>();
 
-    public TosCardCondition attr(List<String> a) {
+    public TosCondition attr(List<String> a) {
         attr = ListUtil.nonNull(a);
         return this;
     }
 
-    public TosCardCondition race(List<String> r) {
+    public TosCondition race(List<String> r) {
         race = ListUtil.nonNull(r);
         return this;
     }
 
-    public TosCardCondition star(List<String> s) {
+    public TosCondition star(List<String> s) {
         star = ListUtil.nonNull(s);
+        return this;
+    }
+
+    public TosCondition mode(List<String> m) {
+        mode = ListUtil.nonNull(m);
         return this;
     }
 
@@ -35,5 +42,9 @@ public class TosCardCondition {
 
     public List<String> getStar() {
         return star;
+    }
+
+    public List<String> getMode() {
+        return mode;
     }
 }
