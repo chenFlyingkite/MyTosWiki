@@ -25,12 +25,13 @@ def googlePlayVersion = "9.8.0"
 boolean createPlayApk = false
 
 task MyBuildInfo {
-    ext.versionCode = 10
-    ext.versionName = "1.0.0.9"
+    ext.versionCode = 11
+    ext.versionName = "1.0.0.10"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }
     ext.APK_NAME = "MyTosWiki-${versionName}-${versionCode}.apk"
+    ext.MAPPING = "MyTosWiki-${versionName}-${versionCode}-mapping.txt"
 }
 
 android {
@@ -214,14 +215,17 @@ android.applicationVariants.all { variant ->
                     rename '(.*)', MyBuildInfo.APK_NAME
                 }
             }
-//            if (variant.getBuildType().isMinifyEnabled()) {
-//                println "[assemble.doLast] copy from(${variant.mappingFile}) into(${buildType}) rename(${makeInfo.MAPPING})"
-//                copy {
-//                    from variant.mappingFile
-//                    into "${rootDir}/${buildType}"
-//                    rename '(.*)', makeInfo.MAPPING
-//                }
-//            }
+            if (variant.getBuildType().isMinifyEnabled()) {
+                println "[assemble.doLast] copy" +
+                    "\n    from(${variant.mappingFile})" +
+                    "\n    into(${rootDir}/apks-${buildType})" +
+                    "\n    rename(${MyBuildInfo.MAPPING})"
+                copy {
+                    from variant.mappingFile
+                    into "${rootDir}/apks-${buildType}"
+                    rename '(.*)', MyBuildInfo.MAPPING
+                }
+            }
         }
     }
 }
