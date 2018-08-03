@@ -14,6 +14,7 @@
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
+    "cardLimitName": [],
     "upHp": "",
     "upAttack": "",
     "upRecovery": "",
@@ -40,6 +41,7 @@
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
+    "cardLimitName": [],
     "upHp": "",
     "upAttack": "",
     "upRecovery": "",
@@ -66,6 +68,7 @@
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
+    "cardLimitName": [],
     "upHp": "",
     "upAttack": "",
     "upRecovery": "",
@@ -92,6 +95,7 @@
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
+    "cardLimitName": [],
     "upHp": "",
     "upAttack": "",
     "upRecovery": "",
@@ -118,6 +122,7 @@
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
+    "cardLimitName": [],
     "upHp": "",
     "upAttack": "",
     "upRecovery": "",
@@ -151,6 +156,10 @@
     "cardLimit": [
       "0004",
       "0408"
+    ],
+    "cardLimitName": [
+      "水元素賢者莫莉",
+      "大魔導士莫莉"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -186,6 +195,10 @@
       "0004",
       "0408"
     ],
+    "cardLimitName": [
+      "水元素賢者莫莉",
+      "大魔導士莫莉"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -219,6 +232,10 @@
     "cardLimit": [
       "0004",
       "0408"
+    ],
+    "cardLimitName": [
+      "水元素賢者莫莉",
+      "大魔導士莫莉"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -254,6 +271,10 @@
       "0004",
       "0408"
     ],
+    "cardLimitName": [
+      "水元素賢者莫莉",
+      "大魔導士莫莉"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -287,6 +308,10 @@
     "cardLimit": [
       "0004",
       "0408"
+    ],
+    "cardLimitName": [
+      "水元素賢者莫莉",
+      "大魔導士莫莉"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -322,6 +347,10 @@
       "0008",
       "0409"
     ],
+    "cardLimitName": [
+      "紅蓮劍士肖恩",
+      "龍焰騎士肖恩"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -355,6 +384,10 @@
     "cardLimit": [
       "0008",
       "0409"
+    ],
+    "cardLimitName": [
+      "紅蓮劍士肖恩",
+      "龍焰騎士肖恩"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -390,6 +423,10 @@
       "0008",
       "0409"
     ],
+    "cardLimitName": [
+      "紅蓮劍士肖恩",
+      "龍焰騎士肖恩"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -423,6 +460,10 @@
     "cardLimit": [
       "0008",
       "0409"
+    ],
+    "cardLimitName": [
+      "紅蓮劍士肖恩",
+      "龍焰騎士肖恩"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -458,6 +499,10 @@
       "0008",
       "0409"
     ],
+    "cardLimitName": [
+      "紅蓮劍士肖恩",
+      "龍焰騎士肖恩"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -491,6 +536,10 @@
     "cardLimit": [
       "0012",
       "0410"
+    ],
+    "cardLimitName": [
+      "森林王者鄧肯",
+      "大地霸主鄧肯"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -526,6 +575,10 @@
       "0012",
       "0410"
     ],
+    "cardLimitName": [
+      "森林王者鄧肯",
+      "大地霸主鄧肯"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -559,6 +612,10 @@
     "cardLimit": [
       "0012",
       "0410"
+    ],
+    "cardLimitName": [
+      "森林王者鄧肯",
+      "大地霸主鄧肯"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -594,6 +651,10 @@
       "0012",
       "0410"
     ],
+    "cardLimitName": [
+      "森林王者鄧肯",
+      "大地霸主鄧肯"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -627,6 +688,10 @@
     "cardLimit": [
       "0012",
       "0410"
+    ],
+    "cardLimitName": [
+      "森林王者鄧肯",
+      "大地霸主鄧肯"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -662,6 +727,10 @@
       "0016",
       "0411"
     ],
+    "cardLimitName": [
+      "侯爵奈寶尼",
+      "公爵奈寶尼"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -695,6 +764,10 @@
     "cardLimit": [
       "0016",
       "0411"
+    ],
+    "cardLimitName": [
+      "侯爵奈寶尼",
+      "公爵奈寶尼"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -730,6 +803,10 @@
       "0016",
       "0411"
     ],
+    "cardLimitName": [
+      "侯爵奈寶尼",
+      "公爵奈寶尼"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -763,6 +840,10 @@
     "cardLimit": [
       "0016",
       "0411"
+    ],
+    "cardLimitName": [
+      "侯爵奈寶尼",
+      "公爵奈寶尼"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -798,6 +879,10 @@
       "0016",
       "0411"
     ],
+    "cardLimitName": [
+      "侯爵奈寶尼",
+      "公爵奈寶尼"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -831,6 +916,10 @@
     "cardLimit": [
       "0020",
       "0412"
+    ],
+    "cardLimitName": [
+      "死靈祭師安多",
+      "死靈魔導安多"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -866,6 +955,10 @@
       "0020",
       "0412"
     ],
+    "cardLimitName": [
+      "死靈祭師安多",
+      "死靈魔導安多"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -899,6 +992,10 @@
     "cardLimit": [
       "0020",
       "0412"
+    ],
+    "cardLimitName": [
+      "死靈祭師安多",
+      "死靈魔導安多"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -934,6 +1031,10 @@
       "0020",
       "0412"
     ],
+    "cardLimitName": [
+      "死靈祭師安多",
+      "死靈魔導安多"
+    ],
     "upHp": "0",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -967,6 +1068,10 @@
     "cardLimit": [
       "0020",
       "0412"
+    ],
+    "cardLimitName": [
+      "死靈祭師安多",
+      "死靈魔導安多"
     ],
     "upHp": "0",
     "upAttack": "+10%",
@@ -1002,6 +1107,10 @@
       "0414",
       "1066"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 烏蘇拉",
+      "蒼海的迴聲 ‧ 烏蘇拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1035,6 +1144,10 @@
     "cardLimit": [
       "0414",
       "1066"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 烏蘇拉",
+      "蒼海的迴聲 ‧ 烏蘇拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1070,6 +1183,10 @@
       "0414",
       "1066"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 烏蘇拉",
+      "蒼海的迴聲 ‧ 烏蘇拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1103,6 +1220,10 @@
     "cardLimit": [
       "0414",
       "1066"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 烏蘇拉",
+      "蒼海的迴聲 ‧ 烏蘇拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1138,6 +1259,10 @@
       "0414",
       "1066"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 烏蘇拉",
+      "蒼海的迴聲 ‧ 烏蘇拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1171,6 +1296,10 @@
     "cardLimit": [
       "0416",
       "1067"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 愛格德",
+      "赤焰的領袖 ‧ 愛格德"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1206,6 +1335,10 @@
       "0416",
       "1067"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 愛格德",
+      "赤焰的領袖 ‧ 愛格德"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1239,6 +1372,10 @@
     "cardLimit": [
       "0416",
       "1067"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 愛格德",
+      "赤焰的領袖 ‧ 愛格德"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1274,6 +1411,10 @@
       "0416",
       "1067"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 愛格德",
+      "赤焰的領袖 ‧ 愛格德"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1307,6 +1448,10 @@
     "cardLimit": [
       "0416",
       "1067"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 愛格德",
+      "赤焰的領袖 ‧ 愛格德"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1342,6 +1487,10 @@
       "0418",
       "1068"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 芭芭拉",
+      "青林的風祭 ‧ 芭芭拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1375,6 +1524,10 @@
     "cardLimit": [
       "0418",
       "1068"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 芭芭拉",
+      "青林的風祭 ‧ 芭芭拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1410,6 +1563,10 @@
       "0418",
       "1068"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 芭芭拉",
+      "青林的風祭 ‧ 芭芭拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1443,6 +1600,10 @@
     "cardLimit": [
       "0418",
       "1068"
+    ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 芭芭拉",
+      "青林的風祭 ‧ 芭芭拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1478,6 +1639,10 @@
       "0418",
       "1068"
     ],
+    "cardLimitName": [
+      "龍儀姬 ‧ 芭芭拉",
+      "青林的風祭 ‧ 芭芭拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1511,6 +1676,10 @@
     "cardLimit": [
       "0420",
       "1069"
+    ],
+    "cardLimitName": [
+      "龍脈者 ‧ 安納",
+      "永恆的聖焰 ‧ 安納"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1546,6 +1715,10 @@
       "0420",
       "1069"
     ],
+    "cardLimitName": [
+      "龍脈者 ‧ 安納",
+      "永恆的聖焰 ‧ 安納"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1579,6 +1752,10 @@
     "cardLimit": [
       "0420",
       "1069"
+    ],
+    "cardLimitName": [
+      "龍脈者 ‧ 安納",
+      "永恆的聖焰 ‧ 安納"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1614,6 +1791,10 @@
       "0420",
       "1069"
     ],
+    "cardLimitName": [
+      "龍脈者 ‧ 安納",
+      "永恆的聖焰 ‧ 安納"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1647,6 +1828,10 @@
     "cardLimit": [
       "0420",
       "1069"
+    ],
+    "cardLimitName": [
+      "龍脈者 ‧ 安納",
+      "永恆的聖焰 ‧ 安納"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1682,6 +1867,10 @@
       "0422",
       "1070"
     ],
+    "cardLimitName": [
+      "龍脈者 ‧ 諾瓦利斯",
+      "闇噬的蘊量 ‧ 諾瓦利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1715,6 +1904,10 @@
     "cardLimit": [
       "0422",
       "1070"
+    ],
+    "cardLimitName": [
+      "龍脈者 ‧ 諾瓦利斯",
+      "闇噬的蘊量 ‧ 諾瓦利斯"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1750,6 +1943,10 @@
       "0422",
       "1070"
     ],
+    "cardLimitName": [
+      "龍脈者 ‧ 諾瓦利斯",
+      "闇噬的蘊量 ‧ 諾瓦利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1784,6 +1981,10 @@
       "0422",
       "1070"
     ],
+    "cardLimitName": [
+      "龍脈者 ‧ 諾瓦利斯",
+      "闇噬的蘊量 ‧ 諾瓦利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -1817,6 +2018,10 @@
     "cardLimit": [
       "0422",
       "1070"
+    ],
+    "cardLimitName": [
+      "龍脈者 ‧ 諾瓦利斯",
+      "闇噬的蘊量 ‧ 諾瓦利斯"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1858,6 +2063,11 @@
       "1081",
       "1082"
     ],
+    "cardLimitName": [
+      "萬龍真主 ‧ 敖廣",
+      "萬龍帝君 ‧ 敖廣",
+      "孤高龍王 ‧ 敖廣"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -1897,6 +2107,11 @@
       "0591",
       "1081",
       "1082"
+    ],
+    "cardLimitName": [
+      "萬龍真主 ‧ 敖廣",
+      "萬龍帝君 ‧ 敖廣",
+      "孤高龍王 ‧ 敖廣"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -1938,6 +2153,11 @@
       "1081",
       "1082"
     ],
+    "cardLimitName": [
+      "萬龍真主 ‧ 敖廣",
+      "萬龍帝君 ‧ 敖廣",
+      "孤高龍王 ‧ 敖廣"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -1977,6 +2197,11 @@
       "0591",
       "1081",
       "1082"
+    ],
+    "cardLimitName": [
+      "萬龍真主 ‧ 敖廣",
+      "萬龍帝君 ‧ 敖廣",
+      "孤高龍王 ‧ 敖廣"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2018,6 +2243,11 @@
       "1081",
       "1082"
     ],
+    "cardLimitName": [
+      "萬龍真主 ‧ 敖廣",
+      "萬龍帝君 ‧ 敖廣",
+      "孤高龍王 ‧ 敖廣"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2057,6 +2287,11 @@
       "0592",
       "1083",
       "1084"
+    ],
+    "cardLimitName": [
+      "多聞護法 ‧ 哪吒",
+      "威靈護法 ‧ 哪吒",
+      "狂戰鬥將 ‧ 哪吒"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2098,6 +2333,11 @@
       "1083",
       "1084"
     ],
+    "cardLimitName": [
+      "多聞護法 ‧ 哪吒",
+      "威靈護法 ‧ 哪吒",
+      "狂戰鬥將 ‧ 哪吒"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2137,6 +2377,11 @@
       "0592",
       "1083",
       "1084"
+    ],
+    "cardLimitName": [
+      "多聞護法 ‧ 哪吒",
+      "威靈護法 ‧ 哪吒",
+      "狂戰鬥將 ‧ 哪吒"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2178,6 +2423,11 @@
       "1083",
       "1084"
     ],
+    "cardLimitName": [
+      "多聞護法 ‧ 哪吒",
+      "威靈護法 ‧ 哪吒",
+      "狂戰鬥將 ‧ 哪吒"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2217,6 +2467,11 @@
       "0592",
       "1083",
       "1084"
+    ],
+    "cardLimitName": [
+      "多聞護法 ‧ 哪吒",
+      "威靈護法 ‧ 哪吒",
+      "狂戰鬥將 ‧ 哪吒"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2258,6 +2513,11 @@
       "1085",
       "1086"
     ],
+    "cardLimitName": [
+      "混世霸者 ‧ 牛魔王",
+      "混世戰霸 ‧ 牛魔王",
+      "山林霸妖 ‧ 牛魔王"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2297,6 +2557,11 @@
       "0593",
       "1085",
       "1086"
+    ],
+    "cardLimitName": [
+      "混世霸者 ‧ 牛魔王",
+      "混世戰霸 ‧ 牛魔王",
+      "山林霸妖 ‧ 牛魔王"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2338,6 +2603,11 @@
       "1085",
       "1086"
     ],
+    "cardLimitName": [
+      "混世霸者 ‧ 牛魔王",
+      "混世戰霸 ‧ 牛魔王",
+      "山林霸妖 ‧ 牛魔王"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2377,6 +2647,11 @@
       "0593",
       "1085",
       "1086"
+    ],
+    "cardLimitName": [
+      "混世霸者 ‧ 牛魔王",
+      "混世戰霸 ‧ 牛魔王",
+      "山林霸妖 ‧ 牛魔王"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2418,6 +2693,11 @@
       "1085",
       "1086"
     ],
+    "cardLimitName": [
+      "混世霸者 ‧ 牛魔王",
+      "混世戰霸 ‧ 牛魔王",
+      "山林霸妖 ‧ 牛魔王"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2457,6 +2737,11 @@
       "0594",
       "1087",
       "1088"
+    ],
+    "cardLimitName": [
+      "鬥神聖者 ‧ 孫悟空",
+      "鬥神霸者 ‧ 孫悟空",
+      "赫耀聖者 ‧ 孫悟空"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2498,6 +2783,11 @@
       "1087",
       "1088"
     ],
+    "cardLimitName": [
+      "鬥神聖者 ‧ 孫悟空",
+      "鬥神霸者 ‧ 孫悟空",
+      "赫耀聖者 ‧ 孫悟空"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2537,6 +2827,11 @@
       "0594",
       "1087",
       "1088"
+    ],
+    "cardLimitName": [
+      "鬥神聖者 ‧ 孫悟空",
+      "鬥神霸者 ‧ 孫悟空",
+      "赫耀聖者 ‧ 孫悟空"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2578,6 +2873,11 @@
       "1087",
       "1088"
     ],
+    "cardLimitName": [
+      "鬥神聖者 ‧ 孫悟空",
+      "鬥神霸者 ‧ 孫悟空",
+      "赫耀聖者 ‧ 孫悟空"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2617,6 +2917,11 @@
       "0594",
       "1087",
       "1088"
+    ],
+    "cardLimitName": [
+      "鬥神聖者 ‧ 孫悟空",
+      "鬥神霸者 ‧ 孫悟空",
+      "赫耀聖者 ‧ 孫悟空"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2658,6 +2963,11 @@
       "1089",
       "1090"
     ],
+    "cardLimitName": [
+      "傾世媚狐 ‧ 蘇妲己",
+      "背疚媚狐 ‧ 蘇妲己",
+      "善心狐仙 ‧ 蘇妲己"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2697,6 +3007,11 @@
       "0595",
       "1089",
       "1090"
+    ],
+    "cardLimitName": [
+      "傾世媚狐 ‧ 蘇妲己",
+      "背疚媚狐 ‧ 蘇妲己",
+      "善心狐仙 ‧ 蘇妲己"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2738,6 +3053,11 @@
       "1089",
       "1090"
     ],
+    "cardLimitName": [
+      "傾世媚狐 ‧ 蘇妲己",
+      "背疚媚狐 ‧ 蘇妲己",
+      "善心狐仙 ‧ 蘇妲己"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2777,6 +3097,11 @@
       "0595",
       "1089",
       "1090"
+    ],
+    "cardLimitName": [
+      "傾世媚狐 ‧ 蘇妲己",
+      "背疚媚狐 ‧ 蘇妲己",
+      "善心狐仙 ‧ 蘇妲己"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -2818,6 +3143,11 @@
       "1089",
       "1090"
     ],
+    "cardLimitName": [
+      "傾世媚狐 ‧ 蘇妲己",
+      "背疚媚狐 ‧ 蘇妲己",
+      "善心狐仙 ‧ 蘇妲己"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "+10%",
@@ -2850,6 +3180,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0481"
+    ],
+    "cardLimitName": [
+      "記憶與遺忘 ‧ 女武神烏爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -2884,6 +3217,9 @@
     "cardLimit": [
       "0481"
     ],
+    "cardLimitName": [
+      "記憶與遺忘 ‧ 女武神烏爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -2916,6 +3252,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0481"
+    ],
+    "cardLimitName": [
+      "記憶與遺忘 ‧ 女武神烏爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -2950,6 +3289,9 @@
     "cardLimit": [
       "0481"
     ],
+    "cardLimitName": [
+      "記憶與遺忘 ‧ 女武神烏爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -2982,6 +3324,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0481"
+    ],
+    "cardLimitName": [
+      "記憶與遺忘 ‧ 女武神烏爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3016,6 +3361,9 @@
     "cardLimit": [
       "0482"
     ],
+    "cardLimitName": [
+      "開端與終結 ‧ 女武神斯庫爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3048,6 +3396,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0482"
+    ],
+    "cardLimitName": [
+      "開端與終結 ‧ 女武神斯庫爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3082,6 +3433,9 @@
     "cardLimit": [
       "0482"
     ],
+    "cardLimitName": [
+      "開端與終結 ‧ 女武神斯庫爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3114,6 +3468,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0482"
+    ],
+    "cardLimitName": [
+      "開端與終結 ‧ 女武神斯庫爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3148,6 +3505,9 @@
     "cardLimit": [
       "0482"
     ],
+    "cardLimitName": [
+      "開端與終結 ‧ 女武神斯庫爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3180,6 +3540,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0483"
+    ],
+    "cardLimitName": [
+      "命定與改變 ‧ 女武神薇兒丹蒂"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3214,6 +3577,9 @@
     "cardLimit": [
       "0483"
     ],
+    "cardLimitName": [
+      "命定與改變 ‧ 女武神薇兒丹蒂"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3246,6 +3612,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0483"
+    ],
+    "cardLimitName": [
+      "命定與改變 ‧ 女武神薇兒丹蒂"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3280,6 +3649,9 @@
     "cardLimit": [
       "0483"
     ],
+    "cardLimitName": [
+      "命定與改變 ‧ 女武神薇兒丹蒂"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3312,6 +3684,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0483"
+    ],
+    "cardLimitName": [
+      "命定與改變 ‧ 女武神薇兒丹蒂"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3346,6 +3721,9 @@
     "cardLimit": [
       "0484"
     ],
+    "cardLimitName": [
+      "神木之眷 ‧ 永祭之伊登"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3378,6 +3756,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0484"
+    ],
+    "cardLimitName": [
+      "神木之眷 ‧ 永祭之伊登"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3412,6 +3793,9 @@
     "cardLimit": [
       "0484"
     ],
+    "cardLimitName": [
+      "神木之眷 ‧ 永祭之伊登"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3444,6 +3828,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0484"
+    ],
+    "cardLimitName": [
+      "神木之眷 ‧ 永祭之伊登"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3478,6 +3865,9 @@
     "cardLimit": [
       "0484"
     ],
+    "cardLimitName": [
+      "神木之眷 ‧ 永祭之伊登"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3510,6 +3900,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0485"
+    ],
+    "cardLimitName": [
+      "破刃之鐮 ‧ 布倫希爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3544,6 +3937,9 @@
     "cardLimit": [
       "0485"
     ],
+    "cardLimitName": [
+      "破刃之鐮 ‧ 布倫希爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3576,6 +3972,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0485"
+    ],
+    "cardLimitName": [
+      "破刃之鐮 ‧ 布倫希爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3610,6 +4009,9 @@
     "cardLimit": [
       "0485"
     ],
+    "cardLimitName": [
+      "破刃之鐮 ‧ 布倫希爾德"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -3642,6 +4044,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0485"
+    ],
+    "cardLimitName": [
+      "破刃之鐮 ‧ 布倫希爾德"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -3677,6 +4082,10 @@
       "1380",
       "1381"
     ],
+    "cardLimitName": [
+      "天律善心 ‧ 泰芙努特",
+      "扼殺惻隱 ‧ 泰芙努特"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -3710,6 +4119,10 @@
     "cardLimit": [
       "1380",
       "1381"
+    ],
+    "cardLimitName": [
+      "天律善心 ‧ 泰芙努特",
+      "扼殺惻隱 ‧ 泰芙努特"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -3745,6 +4158,10 @@
       "1380",
       "1381"
     ],
+    "cardLimitName": [
+      "天律善心 ‧ 泰芙努特",
+      "扼殺惻隱 ‧ 泰芙努特"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -3778,6 +4195,10 @@
     "cardLimit": [
       "1380",
       "1381"
+    ],
+    "cardLimitName": [
+      "天律善心 ‧ 泰芙努特",
+      "扼殺惻隱 ‧ 泰芙努特"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -3813,6 +4234,10 @@
       "1380",
       "1381"
     ],
+    "cardLimitName": [
+      "天律善心 ‧ 泰芙努特",
+      "扼殺惻隱 ‧ 泰芙努特"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -3846,6 +4271,10 @@
     "cardLimit": [
       "1382",
       "1383"
+    ],
+    "cardLimitName": [
+      "公允長存 ‧ 賽特",
+      "始祖真諦 ‧ 賽特"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -3881,6 +4310,10 @@
       "1382",
       "1383"
     ],
+    "cardLimitName": [
+      "公允長存 ‧ 賽特",
+      "始祖真諦 ‧ 賽特"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -3914,6 +4347,10 @@
     "cardLimit": [
       "1382",
       "1383"
+    ],
+    "cardLimitName": [
+      "公允長存 ‧ 賽特",
+      "始祖真諦 ‧ 賽特"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -3949,6 +4386,10 @@
       "1382",
       "1383"
     ],
+    "cardLimitName": [
+      "公允長存 ‧ 賽特",
+      "始祖真諦 ‧ 賽特"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -3982,6 +4423,10 @@
     "cardLimit": [
       "1382",
       "1383"
+    ],
+    "cardLimitName": [
+      "公允長存 ‧ 賽特",
+      "始祖真諦 ‧ 賽特"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4017,6 +4462,10 @@
       "1384",
       "1385"
     ],
+    "cardLimitName": [
+      "颶風不終 ‧ 舒",
+      "天命不違 ‧ 舒"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4050,6 +4499,10 @@
     "cardLimit": [
       "1384",
       "1385"
+    ],
+    "cardLimitName": [
+      "颶風不終 ‧ 舒",
+      "天命不違 ‧ 舒"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4085,6 +4538,10 @@
       "1384",
       "1385"
     ],
+    "cardLimitName": [
+      "颶風不終 ‧ 舒",
+      "天命不違 ‧ 舒"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4118,6 +4575,10 @@
     "cardLimit": [
       "1384",
       "1385"
+    ],
+    "cardLimitName": [
+      "颶風不終 ‧ 舒",
+      "天命不違 ‧ 舒"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4153,6 +4614,10 @@
       "1384",
       "1385"
     ],
+    "cardLimitName": [
+      "颶風不終 ‧ 舒",
+      "天命不違 ‧ 舒"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4186,6 +4651,10 @@
     "cardLimit": [
       "1386",
       "1387"
+    ],
+    "cardLimitName": [
+      "執行公義 ‧ 拉",
+      "善惡不變 ‧ 拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4221,6 +4690,10 @@
       "1386",
       "1387"
     ],
+    "cardLimitName": [
+      "執行公義 ‧ 拉",
+      "善惡不變 ‧ 拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4254,6 +4727,10 @@
     "cardLimit": [
       "1386",
       "1387"
+    ],
+    "cardLimitName": [
+      "執行公義 ‧ 拉",
+      "善惡不變 ‧ 拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4289,6 +4766,10 @@
       "1386",
       "1387"
     ],
+    "cardLimitName": [
+      "執行公義 ‧ 拉",
+      "善惡不變 ‧ 拉"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4322,6 +4803,10 @@
     "cardLimit": [
       "1386",
       "1387"
+    ],
+    "cardLimitName": [
+      "執行公義 ‧ 拉",
+      "善惡不變 ‧ 拉"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4357,6 +4842,10 @@
       "1388",
       "1389"
     ],
+    "cardLimitName": [
+      "冥界判罪 ‧ 奧西利斯",
+      "死寂救贖 ‧ 奧西利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4390,6 +4879,10 @@
     "cardLimit": [
       "1388",
       "1389"
+    ],
+    "cardLimitName": [
+      "冥界判罪 ‧ 奧西利斯",
+      "死寂救贖 ‧ 奧西利斯"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4425,6 +4918,10 @@
       "1388",
       "1389"
     ],
+    "cardLimitName": [
+      "冥界判罪 ‧ 奧西利斯",
+      "死寂救贖 ‧ 奧西利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4458,6 +4955,10 @@
     "cardLimit": [
       "1388",
       "1389"
+    ],
+    "cardLimitName": [
+      "冥界判罪 ‧ 奧西利斯",
+      "死寂救贖 ‧ 奧西利斯"
     ],
     "upHp": "+10%",
     "upAttack": "+10%",
@@ -4493,6 +4994,10 @@
       "1388",
       "1389"
     ],
+    "cardLimitName": [
+      "冥界判罪 ‧ 奧西利斯",
+      "死寂救贖 ‧ 奧西利斯"
+    ],
     "upHp": "+10%",
     "upAttack": "+10%",
     "upRecovery": "0",
@@ -4525,6 +5030,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0686"
+    ],
+    "cardLimitName": [
+      "皇祐承傳 ‧ 水舞劍神"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4559,6 +5067,9 @@
     "cardLimit": [
       "0686"
     ],
+    "cardLimitName": [
+      "皇祐承傳 ‧ 水舞劍神"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4591,6 +5102,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0686"
+    ],
+    "cardLimitName": [
+      "皇祐承傳 ‧ 水舞劍神"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4625,6 +5139,9 @@
     "cardLimit": [
       "0686"
     ],
+    "cardLimitName": [
+      "皇祐承傳 ‧ 水舞劍神"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4657,6 +5174,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0686"
+    ],
+    "cardLimitName": [
+      "皇祐承傳 ‧ 水舞劍神"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4691,6 +5211,9 @@
     "cardLimit": [
       "0687"
     ],
+    "cardLimitName": [
+      "熾焱承傳 ‧ 炎舞軍神"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4723,6 +5246,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0687"
+    ],
+    "cardLimitName": [
+      "熾焱承傳 ‧ 炎舞軍神"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4757,6 +5283,9 @@
     "cardLimit": [
       "0687"
     ],
+    "cardLimitName": [
+      "熾焱承傳 ‧ 炎舞軍神"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4789,6 +5318,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0687"
+    ],
+    "cardLimitName": [
+      "熾焱承傳 ‧ 炎舞軍神"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4823,6 +5355,9 @@
     "cardLimit": [
       "0687"
     ],
+    "cardLimitName": [
+      "熾焱承傳 ‧ 炎舞軍神"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4855,6 +5390,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0688"
+    ],
+    "cardLimitName": [
+      "悠古承傳 ‧ 疾風神射手"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4889,6 +5427,9 @@
     "cardLimit": [
       "0688"
     ],
+    "cardLimitName": [
+      "悠古承傳 ‧ 疾風神射手"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4921,6 +5462,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0688"
+    ],
+    "cardLimitName": [
+      "悠古承傳 ‧ 疾風神射手"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -4955,6 +5499,9 @@
     "cardLimit": [
       "0688"
     ],
+    "cardLimitName": [
+      "悠古承傳 ‧ 疾風神射手"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -4987,6 +5534,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0688"
+    ],
+    "cardLimitName": [
+      "悠古承傳 ‧ 疾風神射手"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -5021,6 +5571,9 @@
     "cardLimit": [
       "0689"
     ],
+    "cardLimitName": [
+      "聖耀承傳 ‧ 萬劍遊俠"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -5053,6 +5606,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0689"
+    ],
+    "cardLimitName": [
+      "聖耀承傳 ‧ 萬劍遊俠"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -5087,6 +5643,9 @@
     "cardLimit": [
       "0689"
     ],
+    "cardLimitName": [
+      "聖耀承傳 ‧ 萬劍遊俠"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -5119,6 +5678,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0689"
+    ],
+    "cardLimitName": [
+      "聖耀承傳 ‧ 萬劍遊俠"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -5153,6 +5715,9 @@
     "cardLimit": [
       "0689"
     ],
+    "cardLimitName": [
+      "聖耀承傳 ‧ 萬劍遊俠"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -5185,6 +5750,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0690"
+    ],
+    "cardLimitName": [
+      "邪譽承傳 ‧ 暗影劍豪"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -5219,6 +5787,9 @@
     "cardLimit": [
       "0690"
     ],
+    "cardLimitName": [
+      "邪譽承傳 ‧ 暗影劍豪"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -5251,6 +5822,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0690"
+    ],
+    "cardLimitName": [
+      "邪譽承傳 ‧ 暗影劍豪"
     ],
     "upHp": "+10%",
     "upAttack": "0",
@@ -5285,6 +5859,9 @@
     "cardLimit": [
       "0690"
     ],
+    "cardLimitName": [
+      "邪譽承傳 ‧ 暗影劍豪"
+    ],
     "upHp": "+10%",
     "upAttack": "0",
     "upRecovery": "+10%",
@@ -5317,6 +5894,9 @@
     "raceLimit": "",
     "cardLimit": [
       "0690"
+    ],
+    "cardLimitName": [
+      "邪譽承傳 ‧ 暗影劍豪"
     ],
     "upHp": "+10%",
     "upAttack": "0",

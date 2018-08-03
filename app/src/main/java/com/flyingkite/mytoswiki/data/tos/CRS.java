@@ -7,6 +7,7 @@ public class CRS {
 
     // Arm Craft
     public static final String cardLimit = "cardLimit";
+    public static final String cardLimitName = "cardLimitName";
     public static final String upHp = "upHp";
     public static final String upAttack = "upAttack";
     public static final String upRecovery = "upRecovery";

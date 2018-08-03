@@ -12,6 +12,10 @@ public class CraftsNormal extends BaseCraft {
     @SerializedName(CRS.raceLimit)
     public String raceLimit = "";
 
+    @Override
+    public String toString() {
+        return _fmt("#%s : %s★, %s, %s, %s", idNorm, rarity, mode, attrLimit, raceLimit);
+    }
 
     //-- For parcelable
 

@@ -15,7 +15,6 @@ import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftSkill;
 import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
-import com.google.gson.Gson;
 
 public class CraftItemDialog extends BaseTosDialog {
     public static final String BUNDLE_CRAFT = "CraftItemDialog.Craft";
@@ -29,12 +28,6 @@ public class CraftItemDialog extends BaseTosDialog {
     private TextView craftRarity;
     private TextView craftLevel;
     private TextView craftCharge;
-//    private TextView craftMode;
-//    private TextView craftMode;
-//    private TextView craftMode;
-//    private TextView craftMode;
-//    private TextView craftMode;
-//    private TextView craftMode;
 
     // Major content
     private BaseCraft craft;
@@ -56,7 +49,6 @@ public class CraftItemDialog extends BaseTosDialog {
         if (hasCurve) {
             craft = b.getParcelable(BUNDLE_CRAFT);
         }
-        LogE("craft = %s, \n%s", craft, new Gson().toJson(craft));
     }
 
     @SuppressLint("SetTextI18n")
@@ -82,7 +74,7 @@ public class CraftItemDialog extends BaseTosDialog {
         }
 
         GlideApp.with(getActivity()).load(c.icon.iconLink).placeholder(R.drawable.unknown_craft).into(craftIcon);
-        dismissWhenClick(R.id.craftTop, R.id.craftMark, R.id.craftEnd);
+        dismissWhenClick(R.id.craftTop, R.id.craftMark, R.id.craftEnd, R.id.craftMajor, R.id.craftMajorHeader);
         craftIcon.setOnClickListener(this::shareImage);
         craftLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(craft.link);
@@ -102,8 +94,16 @@ public class CraftItemDialog extends BaseTosDialog {
         } else if (arm != null) {
             setViewVisibility(R.id.craftAttributeLimit, false);
             setViewVisibility(R.id.craftRaceLimit, false);
-            // TODO: AS LIST
-            setPreCondition(R.id.craftCardLimit, getString(R.string.cards_normId), TextUtils.join("  ", arm.cardLimit));
+            // Join card limit as #ID name
+            int n = Math.min(arm.cardLimit.size(), arm.cardLimitName.size());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < n; i++) {
+                if (i != 0) {
+                    sb.append("\n");
+                }
+                sb.append(arm.cardLimit.get(i)).append(" ").append(arm.cardLimitName.get(i));
+            }
+            setPreCondition(R.id.craftCardLimit, getString(R.string.cards_normId), sb.toString());
         }
 
         if (normal != null) {
@@ -122,7 +122,7 @@ public class CraftItemDialog extends BaseTosDialog {
             setViewVisibility(R.id.craftSkillNormal, false);
             // Set arm skill
             setViewVisibility(R.id.craftSkillArms, true);
-            int[] ids = {R.id.craftSkillArm1, R.id.craftSkillArm2};
+            int[] ids = {R.id.craftSkillArm1, R.id.craftSkillArm2, R.id.craftSkillArm3};
             setVisibilities(View.GONE, ids);
             for (int i = 0; i < c.craftSkill.size(); i++) {
                 CraftSkill cs = c.craftSkill.get(i);

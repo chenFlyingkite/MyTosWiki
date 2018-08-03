@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="@dimen/t80dp"
-            android:background="#8000">
+            android:background="#a000">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,7 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
-                    android:id="@+id/sortCommonNo"
+                    android:id="@+id/sortCommonNormId"
                     style="@style/sortRadio"
                     android:text="@string/cards_normId"/>
                 <RadioButton
@@ -277,6 +277,10 @@
                 android:id="@+id/sortSpecialTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_special"/>
+            <TextView
+                android:id="@+id/sortSpecialAddDetail"
+                style="@style/sortText.rect"
+                android:text="@string/cards_special_add_detail"/>
             <LinearLayout
                 android:id="@+id/sortSpecialList"
                 android:orientation="vertical"
@@ -285,28 +289,63 @@
                 android:paddingLeft="@dimen/t20dp">
                 <CheckBox
                     android:id="@+id/sortSpecialNo"
-                    style="@style/sortRadio"
+                    style="@style/sortText"
                     android:text="@string/cards_no"/>
 
                 <CheckBox
                     android:id="@+id/sortSpecialFreeMove"
-                    style="@style/sortRadio"
+                    style="@style/sortText"
                     android:text="@string/cards_freemove"/>
 
                 <CheckBox
                     android:id="@+id/sortSpecialKeep"
-                    style="@style/sortRadio"
+                    style="@style/sortText"
                     android:text="@string/cards_keep"/>
 
                 <CheckBox
                     android:id="@+id/sortSpecialExplode"
-                    style="@style/sortRadio"
+                    style="@style/sortText"
                     android:text="@string/cards_explode"/>
 
                 <CheckBox
                     android:id="@+id/sortSpecialMoreCoin"
-                    style="@style/sortRadio"
+                    style="@style/sortText"
                     android:text="@string/cards_morecoin"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialExtend"
+                    style="@style/sortText"
+                    android:text="@string/cards_extend_time"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAlsoActive"
+                    style="@style/sortText"
+                    android:text="@string/cards_active_also_possess"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAlsoLeader"
+                    style="@style/sortText"
+                    android:text="@string/cards_leader_also_possess"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialFix"
+                    style="@style/sortText"
+                    android:text="@string/cards_fix"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialNoDefeat"
+                    style="@style/sortText"
+                    android:text="@string/cards_no_defeat"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialDamageLessActive"
+                    style="@style/sortText"
+                    android:text="@string/cards_active_damage_less"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialDamageLessLeader"
+                    style="@style/sortText"
+                    android:text="@string/cards_leader_damage_less"/>
             </LinearLayout>
 
             <TextView
@@ -371,22 +410,22 @@
 
                 <TextView
                     android:id="@+id/sortHide6xxx"
-                    style="@style/sortText"
+                    style="@style/sortText.rect"
                     android:text="@string/cards_hide_6xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide7xxx"
-                    style="@style/sortText"
+                    style="@style/sortText.rect"
                     android:text="@string/cards_hide_7xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide8xxx"
-                    style="@style/sortText"
+                    style="@style/sortText.rect"
                     android:text="@string/cards_hide_8xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide9xxx"
-                    style="@style/sortText"
+                    style="@style/sortText.rect"
                     android:text="@string/cards_hide_9xxx"/>
             </GridLayout>
 

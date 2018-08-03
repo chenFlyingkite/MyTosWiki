@@ -40,6 +40,12 @@ public interface ViewUtil {
         }
     }
 
+    default <T extends ViewGroup> T setTargetChildChick(View parent, @IdRes int targetId, View.OnClickListener childClick) {
+        T vg = parent.findViewById(targetId);
+        setChildClick(vg, childClick);
+        return vg;
+    }
+
     //-- View's helpers --
     default void setCheckedIncludeNo(View clicked, @IdRes int noId, ViewGroup parent) {
         View noView = null;

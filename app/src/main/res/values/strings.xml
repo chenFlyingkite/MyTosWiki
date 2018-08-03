@@ -16,6 +16,7 @@
     <string name="cancel">取消</string>
     <string name="cardsLoading">讀取卡片中&#8230;</string>
     <string name="leave">離開頁面?</string>
+    <string name="star">★</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -89,7 +90,7 @@
     <string name="cards_common_macRecovery">回復力</string>
     <string name="cards_common_maxSum">三圍(生+攻+回)</string>
     <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
-    <string-array name="cards_common_keys">
+    <string-array name="cards_common_keys_race">
         <item>@string/cards_race_god</item>
         <item>@string/cards_race_demon</item>
         <item>@string/cards_race_human</item>
@@ -100,15 +101,30 @@
         <item>@string/cards_race_evolve</item>
         <item>@string/cards_race_level</item>
     </string-array>
-    <string name="cards_special">特選</string>
-    <!-- Unlimited movement, https://towerofsaviors.wikia.com/wiki/1213 -->
+    <!-- Skill, https://towerofsaviors.wikia.com/wiki/1408 -->
+    <string name="cards_special">技能特選</string>
+    <string name="cards_special_add_detail">包括 隊伍技能，組合技能 (卡牌資訊)</string>
+    <!-- Unlimited movement, #1213 -->
     <string name="cards_freemove">排珠</string>
-    <!-- Skill stays in play, https://towerofsaviors.wikia.com/wiki/1408 -->
+    <!-- Skill stays in play, #1408 -->
     <string name="cards_keep">效果在卡片上</string>
-    <!-- Explode Runestones, https://towerofsaviors.wikia.com/wiki/1297 -->
+    <!-- Explode Runestones, #1297 -->
     <string name="cards_explode">引爆符石</string>
-    <!-- Coins obtain increase, https://towerofsaviors.wikia.com/wiki/1695 -->
+    <!-- Coins obtain increase, #1695 -->
     <string name="cards_morecoin">獲得的金幣增加</string>
+    <!-- extend Runestone-moving time, #408, #1765, #961 -->
+    <string name="cards_extend_time">延長移動符石時間</string>
+    <!-- Runestones also possess the effect of Runestones, https://towerofsaviors.wikia.com/wiki/1695 -->
+    <string name="cards_active_also_possess">主動技 - 兼具</string>
+    <string name="cards_leader_also_possess">隊長技 - 兼具</string>
+    <!-- Coins obtain increase, https://towerofsaviors.wikia.com/wiki/1695 -->
+    <string name="cards_fix">轉化為固定數量</string>
+    <!-- The next damage received will not lead to your defeat., #686 -->
+    <string name="cards_no_defeat">不會使你死亡</string>
+    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <string name="cards_active_damage_less">主動技 - 傷害減少</string>
+    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <string name="cards_leader_damage_less">隊長技 - 傷害減少</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -123,6 +139,27 @@
     </string-array>
     <string-array name="cards_morecoin_keys">
         <item>戰鬥中所獲得的金幣增加</item>
+    </string-array>
+    <string-array name="cards_extend_keys">
+        <item>延長移動符石時間</item>
+        <item>移動符石時間延長</item>
+    </string-array>
+    <string-array name="cards_also_keys">
+        <!-- #433 #223 #898 #906 #981 兼具隊長技能-->
+        <!-- #433 #223 #898 #906 #981 水三清 不包括兼具效果-->
+        <item>符石兼具</item>
+    </string-array>
+    <string-array name="cards_fix_keys">
+        <!-- #1094 #1224 #1279 #1585 固定位置 #1439 瑪雅引爆-->
+        <item>轉化為固定數量</item>
+    </string-array>
+    <string-array name="cards_no_defeat_keys">
+        <item>不會使你死亡</item>
+    </string-array>
+    <string-array name="cards_damage_less_keys">
+        <!-- #228 大聖減傷-->
+        <item>傷害減少</item>
+        <item>所受傷害愈低</item>
     </string-array>
     <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_6xxx">動態造型</string>
@@ -176,12 +213,49 @@
     <string name="craft_6_key_blade">龍刃</string>
     <string name="craft_7_key_opal">龍璃</string>
     <string name="craft_8_key_chain">龍結</string>
+    <string name="craft_no_limit">沒有限制</string>
     <string name="cards_craft_select">篩選一般龍刻</string>
-    <string name="craft_attr">適用屬性</string>
-    <string name="craft_race">適用種族</string>
-    <string name="cards_hide_craft_0xxx">一般龍刻</string>
-    <string name="cards_hide_craft_2xxx">龍刻武裝素材</string>
-    <string name="cards_hide_craft_3xxx">龍刻武裝</string>
+    <string name="craft_attr">適用卡片屬性</string>
+    <string name="craft_race">適用卡片種族</string>
+    <string name="craft_limit">龍刻限制</string>
+    <string name="craft_limit_all_attr">不限屬性</string>
+    <string name="craft_limit_all_race">不限種族</string>
+    <string name="craft_hide">不顯示龍刻</string>
+    <string name="craft_hide_0xxx">一般龍刻</string>
+    <string name="craft_hide_2xxx">龍刻武裝素材</string>
+    <string name="craft_hide_3xxx">龍刻武裝</string>
+    <string name="craft_sort_major_order">(模式>星>屬性>種族)</string>
+    <string-array name="craft_common_keys_mode">
+        <item>@string/craft_1_key_pattern</item>
+        <item>@string/craft_2_key_seal</item>
+        <item>@string/craft_3_key_spell</item>
+        <item>@string/craft_4_key_amulet</item>
+        <item>@string/craft_5_key_jasper</item>
+        <item>@string/craft_6_key_blade</item>
+        <item>@string/craft_7_key_opal</item>
+        <item>@string/craft_8_key_chain</item>
+    </string-array>
+    <string-array name="craft_common_keys_attr">
+        <item>@string/craft_no_limit</item>
+
+        <item>@string/cards_attr_water</item>
+        <item>@string/cards_attr_fires</item>
+        <item>@string/cards_attr_earth</item>
+        <item>@string/cards_attr_light</item>
+        <item>@string/cards_attr_darks</item>
+    </string-array>
+    <string-array name="craft_common_keys_race">
+        <item>@string/craft_no_limit</item>
+        <item>@string/cards_race_god</item>
+        <item>@string/cards_race_demon</item>
+        <item>@string/cards_race_human</item>
+        <item>@string/cards_race_beast</item>
+        <item>@string/cards_race_dragon</item>
+        <item>@string/cards_race_elf</item>
+        <item>@string/cards_race_machina</item>
+        <item>@string/cards_race_evolve</item>
+        <item>@string/cards_race_level</item>
+    </string-array>
 
 
 
@@ -224,6 +298,10 @@
     <string name="about_mytoswiki">神魔數學家 公佈欄</string>
     <string name="about_thanks">神魔數學家團隊感謝召喚師的安裝。\n團隊會在此公布最近的程式動態喔。</string>
     <string name="about_author">團隊的話：</string>
+
+    <string name="stage_memo_title">神魔數學家 關卡小筆記</string>
+    <string name="stage_memo_detail">神魔數學家團隊會在此填上關卡的過關小攻略。\n提供給召喚師做參考。</string>
+    <string name="stage_memo_header">筆記內容：</string>
 
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。

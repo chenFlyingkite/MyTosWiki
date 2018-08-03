@@ -8,7 +8,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseCraft implements Parcelable {
+import flyingkite.log.Formattable;
+
+public abstract class BaseCraft implements Parcelable, Formattable {
     @SerializedName(CRS.idNorm)
     public String idNorm = ""; // %4d
     @SerializedName(CRS.name)
@@ -30,4 +32,9 @@ public abstract class BaseCraft implements Parcelable {
     public List<CraftSkill> craftSkill = new ArrayList<>();
 
     protected static final Gson gson = new Gson();
+
+    @Override
+    public String toString() {
+        return _fmt("#%s : %s★, %s", idNorm, rarity, mode);
+    }
 }

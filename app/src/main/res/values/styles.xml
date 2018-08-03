@@ -40,6 +40,9 @@
         <item name="android:paddingRight">@dimen/t5dp</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="blackText.t2">
+        <item name="android:padding">@dimen/t2dp</item>
+    </style>
 
     <!-- Borders of table -->
     <style name="cardRow">
@@ -157,6 +160,9 @@
         <item name="android:padding">@dimen/t5dp</item>
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
+    <style name="sortIcon.rect">
+        <item name="android:background">@drawable/bg_press_sky_rect</item>
+    </style>
     <style name="sortStarText" parent="sortIcon">
         <item name="android:textColor">#fff</item>
         <item name="android:shadowColor">#00a</item>
@@ -165,17 +171,27 @@
         <item name="android:shadowRadius">2</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/t30dp</item>
+        <item name="android:background">@drawable/bg_press_sky_rect</item>
     </style>
 
     <style name="sortRadio">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#fff</item>
-        <item name="android:background">@drawable/bg_press_sky</item>
+        <item name="android:background">@drawable/bg_press_sky</item> <!-- -->
+    </style>
+    <style name="sortRadio.rect">
+        <item name="android:background">@drawable/bg_press_sky_rect</item>
     </style>
     <style name="sortText" parent="sortRadio">
         <item name="android:padding">@dimen/t5dp</item>
         <item name="android:textSize">@dimen/t16dp</item>
+    </style>
+    <style name="sortText.rect">
+        <item name="android:background">@drawable/bg_press_sky_rect</item>
+    </style>
+    <style name="sortText2" parent="sortRadio">
+        <item name="android:textSize">@dimen/t12dp</item>
     </style>
 
     <style name="tosIcon">

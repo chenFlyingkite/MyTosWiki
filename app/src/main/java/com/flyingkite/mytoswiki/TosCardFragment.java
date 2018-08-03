@@ -63,11 +63,20 @@ public class TosCardFragment extends BaseFragment {
     private ViewGroup sortRunestone;
     // 特選
     private ViewGroup sortSpecial;
+    private View sortSpecialAddDetail;
+
     private CheckBox sortSpecialNo;
     private CheckBox sortSpecialFree;
     private CheckBox sortSpecialKeep;
     private CheckBox sortSpecialExplode;
     private CheckBox sortSpecialMoreCoin;
+    private CheckBox sortSpecialExtend;
+    private CheckBox sortSpecialAlsoActive;
+    private CheckBox sortSpecialAlsoLeader;
+    private CheckBox sortSpecialFix;
+    private CheckBox sortSpecialNoDefeat;
+    private CheckBox sortSpecialDamageLessActive;
+    private CheckBox sortSpecialDamageLessLeader;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -111,15 +120,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void initToolIcons() {
-        findViewById(R.id.tosGoTop).setOnClickListener((v) -> {
-            int index = 0;
-            cardLib.recyclerView.scrollToPosition(index);
-        });
-
-        findViewById(R.id.tosGoBottom).setOnClickListener((v) -> {
-            int index = cardLib.adapter.getItemCount() - 1;
-            cardLib.recyclerView.scrollToPosition(index);
-        });
+        initScrollTools(R.id.tosGoTop, R.id.tosGoBottom, cardLib.recyclerView);
 
         View tool = findViewById(R.id.tosTooBar);
         tool.setOnClickListener((v) -> {
@@ -194,7 +195,7 @@ public class TosCardFragment extends BaseFragment {
         });
     }
 
-    //region init sort menus and put onClickListeners
+    // init sort menus and put onClickListeners --------
     private void initSortMenu() {
         // Create MenuWindow
         Pair<View, PopupWindow> pair = createPopupWindow(R.layout.popup_tos_sort_card, (ViewGroup) getView());
@@ -249,11 +250,21 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void initSortBySpecial(View menu) {
+        sortSpecialAddDetail = menu.findViewById(R.id.sortSpecialAddDetail);
+        sortSpecialAddDetail.setOnClickListener(this::toggleSelectApply);
+
         sortSpecialNo = menu.findViewById(R.id.sortSpecialNo);
         sortSpecialFree = menu.findViewById(R.id.sortSpecialFreeMove);
         sortSpecialKeep = menu.findViewById(R.id.sortSpecialKeep);
         sortSpecialExplode = menu.findViewById(R.id.sortSpecialExplode);
         sortSpecialMoreCoin = menu.findViewById(R.id.sortSpecialMoreCoin);
+        sortSpecialExtend = menu.findViewById(R.id.sortSpecialExtend);
+        sortSpecialAlsoActive = menu.findViewById(R.id.sortSpecialAlsoActive);
+        sortSpecialAlsoLeader = menu.findViewById(R.id.sortSpecialAlsoLeader);
+        sortSpecialFix = menu.findViewById(R.id.sortSpecialFix);
+        sortSpecialNoDefeat = menu.findViewById(R.id.sortSpecialNoDefeat);
+        sortSpecialDamageLessActive = menu.findViewById(R.id.sortSpecialDamageLessActive);
+        sortSpecialDamageLessLeader = menu.findViewById(R.id.sortSpecialDamageLessLeader);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -263,9 +274,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
-        T vg = menu.findViewById(id);
-        setChildClick(vg, childClick);
-        return vg;
+        return setTargetChildChick(menu, id, childClick);
     }
 
     private void initDisplay(View menu) {
@@ -284,15 +293,15 @@ public class TosCardFragment extends BaseFragment {
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
-    //endregion
+    // --------
 
-    //region click listeners for sort menus
+    // click listeners for sort menus --------
     private void clickReset(View v) {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone};
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
-        sortCommon.check(R.id.sortCommonNo);
+        sortCommon.check(R.id.sortCommonNormId);
         sortCassandra.check(R.id.sortCassandraNo);
         setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
         setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
@@ -312,7 +321,7 @@ public class TosCardFragment extends BaseFragment {
         int id = v.getId();
         sortCassandra.check(id);
         if (id != R.id.sortCassandraNo) {
-            sortCommon.check(R.id.sortCommonNo);
+            sortCommon.check(R.id.sortCommonNormId);
         }
         sortCommon.setEnabled(id != R.id.sortCassandraNo);
 
@@ -320,7 +329,7 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickTurnRuneStones(View v) {
-        clickHide(v);
+        toggleSelectApply(v);
     }
 
     private void clickStar(View v) {
@@ -352,7 +361,7 @@ public class TosCardFragment extends BaseFragment {
     private void clickCommon(View v) {
         int id = v.getId();
         sortCommon.check(id);
-        if (id != R.id.sortCommonNo) {
+        if (id != R.id.sortCommonNormId) {
             sortCassandra.check(R.id.sortCassandraNo);
         }
         sortCassandra.setEnabled(id != R.id.sortCassandraNo);
@@ -361,6 +370,10 @@ public class TosCardFragment extends BaseFragment {
     }
 
     private void clickHide(View v) {
+        toggleSelectApply(v);
+    }
+
+    private void toggleSelectApply(View v) {
         v.setSelected(!v.isSelected());
         applySelection();
     }
@@ -369,9 +382,9 @@ public class TosCardFragment extends BaseFragment {
         setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
         applySelection();
     }
-    //endregion
+    // --------
 
-    //region Apply selection to adapter
+    // Apply selection to adapter --------
     private void applySelection() {
         // Attribute
         List<String> attrs = new ArrayList<>();
@@ -383,10 +396,10 @@ public class TosCardFragment extends BaseFragment {
         List<String> stars = new ArrayList<>();
         getSelectTags(sortStar, stars, true);
 
-        LogE("---------");
-        LogE("sel T = %s", attrs);
-        LogE("sel R = %s", races);
-        LogE("sel S = %s", stars);
+        LogE("-----Cards-----");
+        LogE("A = %s", attrs);
+        LogE("R = %s", races);
+        LogE("S = %s", stars);
 
         if (cardLib.adapter != null) {
             TosCondition cond = new TosCondition().attr(attrs).race(races).star(stars);
@@ -408,9 +421,9 @@ public class TosCardFragment extends BaseFragment {
         int id = cardSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
         clickDisplay(sortDisplay.findViewById(id));
     }
-    //endregion
+    // --------
 
-    //region Saving preference as Gson
+    // Saving preference as Gson --------
     private void toGsonHide() {
         cardSort.hideCard6xxx = sortHide.findViewById(R.id.sortHide6xxx).isSelected();
         cardSort.hideCard7xxx = sortHide.findViewById(R.id.sortHide7xxx).isSelected();
@@ -421,7 +434,7 @@ public class TosCardFragment extends BaseFragment {
             GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
         });
     }
-    //endregion
+    // --------
 
     @Override
     public void onPause() {
@@ -453,8 +466,9 @@ public class TosCardFragment extends BaseFragment {
         toolOwner = null;
     }
 
+    // Actual implementation of TosSelectCard --------
     private class TosSelectCard extends AllCards<TosCard> {
-        private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys);
+        private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys_race);
 
         private TosCondition select;
 
@@ -536,7 +550,7 @@ public class TosCardFragment extends BaseFragment {
         }
 
         private boolean selectForSpecial(TosCard c) {
-            String key = c.skillDesc1 + " & " + c.skillDesc2;
+            String key = activeSkill(c);
             boolean accept = true;
             if (!sortSpecialNo.isChecked()) {
                 if (sortSpecialFree.isChecked()) {
@@ -553,8 +567,46 @@ public class TosCardFragment extends BaseFragment {
                     key += " & " + c.skillLeaderDesc;
                     accept &= find(key, R.array.cards_morecoin_keys);
                 }
+                if (sortSpecialExtend.isChecked()) {
+                    accept &= find(key, R.array.cards_extend_keys);
+                }
+                if (sortSpecialAlsoActive.isChecked()) {
+                    accept &= find(key, R.array.cards_also_keys);
+                }
+                if (sortSpecialAlsoLeader.isChecked()) {
+                    key = leaderSkill(c);
+                    accept &= find(key, R.array.cards_also_keys);
+                }
+                if (sortSpecialFix.isChecked()) {
+                    accept &= find(key, R.array.cards_fix_keys);
+                }
+                if (sortSpecialNoDefeat.isChecked()) {
+                    accept &= find(key, R.array.cards_no_defeat_keys);
+                }
+                if (sortSpecialDamageLessActive.isChecked()) {
+                    accept &= find(key, R.array.cards_damage_less_keys);
+                }
+                if (sortSpecialDamageLessLeader.isChecked()) {
+                    key = leaderSkill(c);
+                    accept &= find(key, R.array.cards_damage_less_keys);
+                }
             }
             return accept;
+        }
+
+        private String leaderSkill(TosCard c) {
+            return joinKey(c.skillLeaderDesc, c);
+        }
+
+        private String activeSkill(TosCard c) {
+            return joinKey(c.skillDesc1 + " & " + c.skillDesc2, c);
+        }
+
+        private String joinKey(String key, TosCard c) {
+            if (sortSpecialAddDetail.isSelected()) {
+                key += " & " + c.cardDetails;
+            }
+            return key;
         }
 
         private boolean find(String key, @ArrayRes int dataId) {
@@ -659,7 +711,7 @@ public class TosCardFragment extends BaseFragment {
         private Comparator<Integer> getCommonComparator() {
             // Create comparator
             int id = sortCommon.getCheckedRadioButtonId();
-            if (id == RadioGroup.NO_ID || id == R.id.sortCommonNo) {
+            if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
                 return null;
             }
             return (o1, o2) -> {
@@ -787,8 +839,7 @@ public class TosCardFragment extends BaseFragment {
             }
         }
     }
-    //region Actual implementation of TosSelectCard
-    //endregion
+    // --------
 
     // The file of dialog setting
     private File getTosCardSortFile() {

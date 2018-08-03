@@ -118,7 +118,7 @@ public interface PageUtil extends Loggable, ViewUtil {
     }
 
     default String getTagName() {
-        return "Hi " + getClass().getSimpleName();
+        return "" + getClass().getSimpleName();
     }
 
     default void LogV(String msg, Object... param) {

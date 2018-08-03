@@ -3,11 +3,14 @@ package com.flyingkite.mytoswiki.dialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.PopupWindow;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.flyingkite.library.util.GsonUtil;
@@ -19,6 +22,7 @@ import com.flyingkite.mytoswiki.data.CraftSort;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.library.CraftAdapter;
+import com.flyingkite.mytoswiki.library.Misc;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
@@ -29,6 +33,7 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -49,10 +54,18 @@ public class CraftDialog extends BaseTosDialog {
     private TextView craftInfo;
     // 屬性 種族 星
     private ViewGroup sortMode;
-    private ViewGroup sortAttribute;
+    private ViewGroup sortAttr;
     private ViewGroup sortRace;
     private ViewGroup sortStar;
     private ViewGroup sortHide;
+    // 限制屬性種族
+    private ViewGroup sortLimit;
+    private CheckBox sortLimitAttr;
+    private CheckBox sortLimitRace;
+    // Common Sorting order
+    private RadioGroup sortCommon;
+    // Display card name
+    private RadioGroup sortDisplay;
 
     @Override
     protected int getLayoutId() {
@@ -189,7 +202,7 @@ public class CraftDialog extends BaseTosDialog {
         }
     };
 
-    //region Init sorting menus
+    // Init sorting menus --------
     private void initSortMenu() {
         sortMenu = findViewById(R.id.craftSortMenu);
 
@@ -207,9 +220,11 @@ public class CraftDialog extends BaseTosDialog {
         initSortByMode(menu);
         initSortByAttribute(menu);
         initSortByRace(menu);
+        initSortLimit(menu);
         initSortByStar(menu);
         initSortByHide(menu);
-
+        initSortByCommon(menu);
+        initDisplay(menu);
     }
 
     private void initSortReset(View menu) {
@@ -218,7 +233,7 @@ public class CraftDialog extends BaseTosDialog {
     }
 
     private void initSortByAttribute(View menu) {
-        sortAttribute = initSortOf(menu, R.id.sortAttributes, this::clickAttr);
+        sortAttr = initSortOf(menu, R.id.sortAttributes, this::clickAttr);
     }
 
     private void initSortByRace(View menu) {
@@ -233,8 +248,23 @@ public class CraftDialog extends BaseTosDialog {
         sortMode = initSortOf(menu, R.id.sortModes, this::clickMode);
     }
 
+    private void initSortLimit(View menu) {
+        sortLimitAttr = menu.findViewById(R.id.sortAllAttr);
+        sortLimitRace = menu.findViewById(R.id.sortAllRace);
+        sortLimit = initSortOf(menu, R.id.sortLimitList, this::clickLimit);
+    }
+
+    private void initSortByCommon(View menu) {
+        sortCommon = initSortOf(menu, R.id.sortCommonList, this::clickCommon);
+    }
+
     private void initSortByHide(View menu) {
         sortHide = initSortOf(menu, R.id.sortHide, this::clickHide);
+    }
+
+    private void initDisplay(View menu) {
+        sortDisplay = initSortOf(menu, R.id.sortDisplayList, this::clickDisplay);
+        sortDisplay.check(R.id.sortDisplayName);
     }
 
     private void initShareImage(View parent) {
@@ -246,11 +276,9 @@ public class CraftDialog extends BaseTosDialog {
     }
 
     private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
-        T vg = menu.findViewById(id);
-        setChildClick(vg, childClick);
-        return vg;
+        return setTargetChildChick(menu, id, childClick);
     }
-    //endregion
+    // --------
 
 //    private void addCraftFragment() {
 //        TosCraftFragment f = new TosCraftFragment();
@@ -266,13 +294,13 @@ public class CraftDialog extends BaseTosDialog {
 //        }
 //    }
 
-    //region click on sort items
+    // click on sort items  --------
     private void clickReset(View v) {
-        ViewGroup[] vgs = {sortMode, sortAttribute, sortRace, sortStar};
+        ViewGroup[] vgs = {sortMode, sortAttr, sortRace, sortStar};
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
-//        sortCommon.check(R.id.sortCommonNo);
+        sortCommon.check(R.id.sortCommonNormId);
 //        sortCassandra.check(R.id.sortCassandraNo);
 //        setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
 //        setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
@@ -285,7 +313,7 @@ public class CraftDialog extends BaseTosDialog {
     }
 
     private void clickAttr(View v) {
-        nonAllApply(v, sortAttribute);
+        nonAllApply(v, sortAttr);
     }
 
     private void clickRace(View v) {
@@ -300,9 +328,39 @@ public class CraftDialog extends BaseTosDialog {
         v.setSelected(!v.isSelected());
         applySelection();
     }
-    //endregion
 
-    //region
+    private void clickCommon(View v) {
+        int id = v.getId();
+        sortCommon.check(id);
+//        if (id != R.id.sortCommonNormId) {
+//            sortCassandra.check(R.id.sortCassandraNo);
+//        }
+//        sortCassandra.setEnabled(id != R.id.sortCassandraNo);
+
+        applySelection();
+    }
+
+    private void clickDisplay(View v) {
+        sortDisplay.check(v.getId());
+
+        int type = Misc.NT_NAME;
+        switch (v.getId()) {
+            case R.id.sortDisplayNormId:
+                type = Misc.NT_ID_NORM;
+                break;
+        }
+        if (craftLibrary.adapter != null) {
+            craftLibrary.adapter.setNameType(type);
+            craftLibrary.adapter.updateSelection();
+        }
+    }
+
+    private void clickLimit(View v) {
+        applySelection();
+    }
+    // --------
+
+    // Apply to adapter --------
     private void nonAllApply(View v, ViewGroup vg) {
         toggleSelection(v, vg);
 
@@ -315,7 +373,7 @@ public class CraftDialog extends BaseTosDialog {
         getSelectTags(sortMode, modes, true);
         // Attribute
         List<String> attrs = new ArrayList<>();
-        getSelectTags(sortAttribute, attrs, true);
+        getSelectTags(sortAttr, attrs, true);
         // Race
         List<String> races = new ArrayList<>();
         getSelectTags(sortRace, races, true);
@@ -334,25 +392,25 @@ public class CraftDialog extends BaseTosDialog {
             craftLibrary.adapter.setSelection(new TosSelectCraft(allCraft, cond));
         }
     }
-    //endregion
+    // --------
 
     private void updateHide() {
         sortHide.findViewById(R.id.sortHideCraft0xxx).setSelected(craftSort.hideCraft0xxx);
         sortHide.findViewById(R.id.sortHideCraft2xxx).setSelected(craftSort.hideCraft2xxx);
         sortHide.findViewById(R.id.sortHideCraft3xxx).setSelected(craftSort.hideCraft3xxx);
-        //int id = craftSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
-        //clickDisplay(sortDisplay.findViewById(id));
+        int id = craftSort.displayById ? R.id.sortDisplayNormId : R.id.sortDisplayName;
+        clickDisplay(sortDisplay.findViewById(id));
         if (craftLibrary.adapter != null) {
             craftLibrary.adapter.updateSelection();
         }
     }
 
-    //region Saving preference as Gson
+    // Saving preference as Gson ----
     private void toGsonHide() {
         craftSort.hideCraft0xxx = sortHide.findViewById(R.id.sortHideCraft0xxx).isSelected();
         craftSort.hideCraft2xxx = sortHide.findViewById(R.id.sortHideCraft2xxx).isSelected();
         craftSort.hideCraft3xxx = sortHide.findViewById(R.id.sortHideCraft3xxx).isSelected();
-        //craftSort.displayByName = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayName;
+        craftSort.displayById = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayNormId;
         sSingle.submit(() -> {
             GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(craftSort));
         });
@@ -361,10 +419,14 @@ public class CraftDialog extends BaseTosDialog {
     private File getTosCardSortFile() {
         return ShareHelper.extFilesFile("craftSort.txt");
     }
-    //endregion
+    // ------
 
     // Sort implementation of TosSelectCraft to adapter
     private class TosSelectCraft extends AllCards<BaseCraft> {
+        private final String[] commonMode = getResources().getStringArray(R.array.craft_common_keys_mode);
+        private final String[] commonAttr = getResources().getStringArray(R.array.craft_common_keys_attr);
+        private final String[] commonRace = getResources().getStringArray(R.array.craft_common_keys_race);
+        private final String noLimit = getString(R.string.craft_no_limit);
         private TosCondition select;
 
         public TosSelectCraft(List<BaseCraft> list, TosCondition condition) {
@@ -398,19 +460,125 @@ public class CraftDialog extends BaseTosDialog {
             boolean attr = true;
             if (c instanceof CraftsNormal) {
                 CraftsNormal cn = (CraftsNormal) c;
-                attr = "沒有限制".equals(cn.attrLimit) || find(cn.attrLimit, attrs);
-                race = "沒有限制".equals(cn.raceLimit) || find(cn.raceLimit, races);
+                // Attribute
+                attr = findNoLimit(cn.attrLimit, attrs, sortLimitAttr);
+                //Race
+                race = findNoLimit(cn.raceLimit, races, sortLimitRace);
             }
             return mode && attr && race && star;
         }
 
-        private boolean find(String key, List<String> data) {
-            return containsAt(key, data) >= 0;
+        @NonNull
+        @Override
+        public List<Integer> sort(@NonNull List<Integer> result) {
+            Comparator<Integer> cmp;
+            cmp = getCommonComparator();
+            if (cmp == null) {
+                //cmp = getCassandraComparator();
+            }
+
+            // Apply the comparator on result
+            if (cmp != null) {
+                Collections.sort(result, cmp);
+            }
+            return result;
         }
 
-        private int containsAt(String key, List<String> data) {
-            return flyingkite.tool.StringUtil.containsAt(key, data);
+        private Comparator<Integer> getCommonComparator() {
+            // Create comparator
+            int id = sortCommon.getCheckedRadioButtonId();
+            if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
+                return null;
+            }
+            return (o1, o2) -> {
+                boolean dsc = false;
+                BaseCraft c1 = data.get(o1);
+                BaseCraft c2 = data.get(o2);
+                long v1 = -1, v2 = -1;
+
+                switch (id) {
+                    case R.id.sortCommonMode:
+                        v1 = asCompareIndex(modeN(c1), starN(c1), attrN(c1), raceN(c1));
+                        v2 = asCompareIndex(modeN(c2), starN(c2), attrN(c2), raceN(c2));
+                        break;
+                    case R.id.sortCommonAttr:
+                        v1 = asCompareIndex(attrN(c1), modeN(c1), starN(c1), raceN(c1));
+                        v2 = asCompareIndex(attrN(c2), modeN(c2), starN(c2), raceN(c2));
+                        break;
+                    case R.id.sortCommonRace:
+                        v1 = asCompareIndex(raceN(c1), modeN(c1), starN(c1), attrN(c1));
+                        v2 = asCompareIndex(raceN(c2), modeN(c2), starN(c2), attrN(c2));
+                        break;
+                        /*
+                    case R.id.sortCommonMaxSum:
+                        v1 = c1.maxHP + c1.maxAttack + c1.maxRecovery;
+                        v2 = c2.maxHP + c2.maxAttack + c2.maxRecovery;
+                        break;
+                    case R.id.sortCommonRace:
+                        dsc = false;
+                        v1 = ListUtil.indexOf(commonRace, c1.race);
+                        v2 = ListUtil.indexOf(commonRace, c2.race);
+                        break;
+                        */
+                }
+                //logE("v1 = %s -> %s", v1, c1);
+                //logE("v2 = %s -> %s", v2, c2);
+
+                if (dsc) {
+                    return Long.compare(v2, v1);
+                } else {
+                    return Long.compare(v1, v2);
+                }
+            };
         }
+
+        //---- Normalize all the compare attribute to be int
+        private int asCompareIndex(int... order) {
+            int n = order.length;
+            int radix = 100;
+            int sum = 0;
+            for (int i = 0; i < n; i++) {
+                sum = sum * radix + order[i];
+            }
+            return sum;
+        }
+
+        private int modeN(BaseCraft c) {
+            return 1 + containsAt(c.mode, commonMode); // Make to fall in [0, len]
+        }
+
+        private int starN(BaseCraft c) {
+            return c.rarity;
+        }
+
+        private int attrN(BaseCraft c) {
+            String[] keys = commonAttr;
+            int a = keys.length + 1;
+            if (c instanceof CraftsNormal) {
+                CraftsNormal cn = (CraftsNormal) c;
+                a = containsAt(cn.attrLimit, keys);
+                // Not found in list
+                if (a < 0) {
+                    a = keys.length;
+                }
+            }
+            return a;
+        }
+
+        private int raceN(BaseCraft c) {
+            String[] keys = commonRace;
+            int a = keys.length + 1;
+            if (c instanceof CraftsNormal) {
+                CraftsNormal cn = (CraftsNormal) c;
+                a = containsAt(cn.raceLimit, keys);
+                // Not found in list
+                if (a < 0) {
+                    a = keys.length;
+                }
+            }
+            return a;
+        }
+        //------
 
         private boolean selectForShow(BaseCraft c) {
             int idNorm = Integer.parseInt(c.idNorm);
@@ -436,8 +604,29 @@ public class CraftDialog extends BaseTosDialog {
             }
             return accept;
         }
+
+        private boolean findNoLimit(String key, List<String> data, CheckBox box) {
+            boolean ans = find(key, data);
+            if (box.isChecked()) {
+                ans |= noLimit.equals(key); // = "沒有限制"
+            }
+            return ans;
+        }
+
+        private boolean find(String key, List<String> data) {
+            return containsAt(key, data) >= 0;
+        }
+
+        private int containsAt(String key, List<String> data) {
+            return flyingkite.tool.StringUtil.containsAt(key, data);
+        }
+
+        private int containsAt(String key, String[] data) {
+            return flyingkite.tool.StringUtil.containsAt(key, data);
+        }
+
     }
-    //endregion
+    // --------
 
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, CraftSort> {
         @Override

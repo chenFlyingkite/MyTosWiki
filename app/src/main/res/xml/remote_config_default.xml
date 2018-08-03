@@ -8,4 +8,12 @@
         <key>dialog_bulletin_message</key>
         <value>神魔數學家團隊感謝召喚師的安裝。</value>
     </entry>
+    <entry>
+        <key>dialog_stage_memo_use_html</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>dialog_stage_memo_content</key>
+        <value>神魔數學家 關卡小筆記。</value>
+    </entry>
 </defaultsMap>

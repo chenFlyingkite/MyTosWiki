@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="@dimen/t80dp"
-            android:background="#8000">
+            android:background="#a000">
 
             <!-- Reset & save -->
             <LinearLayout
@@ -183,12 +183,83 @@
                         android:tag="@string/cards_race_machina"
                         android:src="@drawable/inv_machina"/>
                 </GridLayout>
+
+                <TextView
+                    android:id="@+id/sortNoLimit"
+                    style="@style/sortTitle"
+                    android:text="@string/craft_limit"/>
+                <LinearLayout
+                    android:id="@+id/sortLimitList"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t10dp">
+                    <CheckBox
+                        android:id="@+id/sortAllAttr"
+                        style="@style/sortText"
+                        android:checked="true"
+                        android:text="@string/craft_limit_all_attr"/>
+
+                    <CheckBox
+                        android:id="@+id/sortAllRace"
+                        style="@style/sortText"
+                        android:checked="true"
+                        android:text="@string/craft_limit_all_race"/>
+                </LinearLayout>
             </LinearLayout>
+
+            <!-- Sort order-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/cards_common"/>
+
+                <TextView
+                    style="@style/sortText2"
+                    android:paddingLeft="@dimen/t10dp"
+                    android:text="@string/craft_sort_major_order"/>
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/sortCommonList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/sortCommonNormId"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_normId"/>
+                <RadioButton
+                    android:id="@+id/sortCommonMode"
+                    style="@style/sortRadio"
+                    android:text="@string/craft_mode"/>
+                <RadioButton
+                    android:id="@+id/sortCommonAttr"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_attr"/>
+                <RadioButton
+                    android:id="@+id/sortCommonRace"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_race"/>
+                <!--
+                <RadioButton
+                    android:id="@+id/sortCommonMaxSum"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_common_maxSum"/>
+                <RadioButton
+                    android:id="@+id/sortCommonRace"
+                    style="@style/sortText"
+                    android:text="@string/cards_common_race"/>
+                    -->
+            </RadioGroup>
 
             <!-- No show crafts -->
             <TextView
                 style="@style/sortTitle"
-                android:text="@string/cards_hide"/>
+                android:text="@string/craft_hide"/>
             <LinearLayout
                 android:id="@+id/sortHide"
                 android:layout_width="match_parent"
@@ -198,19 +269,37 @@
 
                 <TextView
                     android:id="@+id/sortHideCraft0xxx"
-                    style="@style/sortText"
-                    android:text="@string/cards_hide_craft_0xxx"/>
+                    style="@style/sortText.rect"
+                    android:text="@string/craft_hide_0xxx"/>
 
                 <TextView
                     android:id="@+id/sortHideCraft2xxx"
-                    style="@style/sortText"
-                    android:text="@string/cards_hide_craft_2xxx"/>
+                    style="@style/sortText.rect"
+                    android:text="@string/craft_hide_2xxx"/>
 
                 <TextView
                     android:id="@+id/sortHideCraft3xxx"
-                    style="@style/sortText"
-                    android:text="@string/cards_hide_craft_3xxx"/>
+                    style="@style/sortText.rect"
+                    android:text="@string/craft_hide_3xxx"/>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/sortDisplayTitle"
+                style="@style/sortTitle"
+                android:text="@string/cards_display"/>
+            <RadioGroup
+                android:id="@+id/sortDisplayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/sortDisplayNormId"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_normId"/>
+                <RadioButton
+                    android:id="@+id/sortDisplayName"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_name"/>
+            </RadioGroup>
 
 
             <ImageView

@@ -101,13 +101,12 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     @Override
     public void onBindViewHolder(@NonNull CraftVH holder, int position) {
         super.onBindViewHolder(holder, position);
-        BaseCraft c = null;
-        c = itemOf(position);
+        BaseCraft c = itemOf(position);
         String msg = null;
         if (selectedMessage != null && position < selectedMessage.size()) {
             msg = selectedMessage.get(position);
         }
-        holder.setCard(c, c.name, msg);
+        holder.setCard(c, name(c), msg);
     }
 
     @Override

@@ -13,6 +13,7 @@ import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
+import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
@@ -30,10 +31,11 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
             , R.drawable.logo_chrome
             , R.drawable.ic_send_black_48dp
+            , R.drawable.logo_craft_1
+            , R.mipmap.app_icon
+            , R.drawable.owl2
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
-            , R.mipmap.app_icon
-            , R.drawable.logo_craft_1
             , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
@@ -53,105 +55,6 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         initToolIcons();
         addTosFragment();
         showCardsLoading();
-    }
-
-    private void test() {
-//
-//
-//        log("+ card = %s", TosWiki.isLoaded_allCards());
-//        log("+ ame = %s", TosWiki.isLoaded_ameSkills());
-//        TosWiki.registerLoaded(new TosWiki.OnLoadState() {
-//            @Override
-//            public void onLoaded_allCards() {
-//                log("Reg : card");
-//            }
-//
-//            @Override
-//            public void onLoaded_ameSkills() {
-//                log("Reg : ame");
-//            }
-//
-//            @Override
-//            public void onLoaded_All() {
-//                log("Reg : all");
-//                onOK();
-//            }
-//        });
-//
-//        findViewById(R.id.mainTools).postDelayed(() -> {
-//            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
-//                @Override
-//                public void onLoaded_allCards() {
-//                    log("Reg1 : card");
-//                }
-//
-//                @Override
-//                public void onLoaded_ameSkills() {
-//                    log("Reg1 : ame");
-//                }
-//
-//                @Override
-//                public void onLoaded_All() {
-//                    log("Reg1 : all");
-//                }
-//            });
-//        }, 1000);
-//
-//
-//        findViewById(R.id.mainTools).postDelayed(() -> {
-//            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
-//                @Override
-//                public void onLoaded_allCards() {
-//                    log("Reg2 : card");
-//                }
-//
-//                @Override
-//                public void onLoaded_ameSkills() {
-//                    log("Reg2 : ame");
-//                }
-//
-//                @Override
-//                public void onLoaded_All() {
-//                    log("Reg2 : all");
-//                }
-//            });
-//        }, 2000);
-//        findViewById(R.id.mainTools).postDelayed(() -> {
-//            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
-//                @Override
-//                public void onLoaded_allCards() {
-//                    log("Reg7 : card");
-//                }
-//
-//                @Override
-//                public void onLoaded_ameSkills() {
-//                    log("Reg7 : ame");
-//                }
-//
-//                @Override
-//                public void onLoaded_All() {
-//                    log("Reg7 : all");
-//                }
-//            });
-//        }, 7000);
-//        findViewById(R.id.mainTools).postDelayed(() -> {
-//            TosWiki.registerLoaded(new TosWiki.OnLoadState() {
-//                @Override
-//                public void onLoaded_allCards() {
-//                    log("Reg12 : card");
-//                }
-//
-//                @Override
-//                public void onLoaded_ameSkills() {
-//                    log("Reg12 : ame");
-//                }
-//
-//                @Override
-//                public void onLoaded_All() {
-//                    log("Reg12 : all");
-//                }
-//            });
-//        }, 12000);
     }
 
     @Override
@@ -175,9 +78,6 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
         IconAdapter adapter = new IconAdapter();
         adapter.setDataList(tools);
         adapter.setItemListener(new IconAdapter.ItemListener() {
-//            public void onHello() {
-//
-//            }
 
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
@@ -205,6 +105,9 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         break;
                     case R.drawable.logo_craft_1:
                         new CraftDialog().show(getActivity());
+                        break;
+                    case R.drawable.owl2:
+                        new StageMemoDialog().show(getActivity());
                         break;
                 }
             }

@@ -12,12 +12,19 @@ public class CraftsArm extends BaseCraft {
     //-- For Arm
     @SerializedName(CRS.cardLimit)
     public List<String> cardLimit = new ArrayList<>();
+    @SerializedName(CRS.cardLimitName)
+    public List<String> cardLimitName = new ArrayList<>();
     @SerializedName(CRS.upHp)
     public String upHp = "";
     @SerializedName(CRS.upAttack)
     public String upAttack = "";
     @SerializedName(CRS.upRecovery)
     public String upRecovery = "";
+
+    @Override
+    public String toString() {
+        return _fmt("#%s : %s★, %s, %s, %s", idNorm, rarity, mode, cardLimit, cardLimitName);
+    }
 
     //-- For parcelable
 

@@ -51,6 +51,7 @@
 
                     <!-- Craft id & name -->
                     <LinearLayout
+                        android:id="@+id/craftMajorHeader"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/cardRow.blueV"
@@ -70,6 +71,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/craftMajor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/cardRow.greenV"
@@ -247,6 +249,10 @@
 
                         <include
                             android:id="@+id/craftSkillArm2"
+                            layout="@layout/view_craft_row_14"/>
+
+                        <include
+                            android:id="@+id/craftSkillArm3"
                             layout="@layout/view_craft_row_14"/>
 
                         <View

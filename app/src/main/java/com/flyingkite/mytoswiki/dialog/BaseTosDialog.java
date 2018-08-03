@@ -187,4 +187,18 @@ public class BaseTosDialog extends DialogFragment implements
 
     }
 
+    // We replace the "\n" in s again as "\n", Since remote config's value has \n
+    // And we directly setText it will expose "\n", not a new line, so we add here
+    protected String escapeNewLine(String s) {
+        String[] t = s.split("\\\\n");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < t.length; i++) {
+            if (i != 0) {
+                sb.append("\n");
+            }
+            sb.append(t[i]);
+        }
+        return sb.toString();
+    }
+
 }

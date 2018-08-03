@@ -11,4 +11,7 @@ public class CraftSort {
 
     @SerializedName("hideCraft3xxx")
     public boolean hideCraft3xxx;
+
+    @SerializedName("displayById")
+    public boolean displayById;
 }
