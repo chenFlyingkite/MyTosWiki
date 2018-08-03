@@ -77,6 +77,7 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortSpecialNoDefeat;
     private CheckBox sortSpecialDamageLessActive;
     private CheckBox sortSpecialDamageLessLeader;
+    private CheckBox sortSpecialDamageToHp;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -265,6 +266,7 @@ public class TosCardFragment extends BaseFragment {
         sortSpecialNoDefeat = menu.findViewById(R.id.sortSpecialNoDefeat);
         sortSpecialDamageLessActive = menu.findViewById(R.id.sortSpecialDamageLessActive);
         sortSpecialDamageLessLeader = menu.findViewById(R.id.sortSpecialDamageLessLeader);
+        sortSpecialDamageToHp = menu.findViewById(R.id.sortSpecialDamageToHp);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -589,6 +591,9 @@ public class TosCardFragment extends BaseFragment {
                 if (sortSpecialDamageLessLeader.isChecked()) {
                     key = leaderSkill(c);
                     accept &= find(key, R.array.cards_damage_less_keys);
+                }
+                if (sortSpecialDamageToHp.isChecked()) {
+                    accept &= find(key, R.array.cards_damage_to_hp_keys);
                 }
             }
             return accept;

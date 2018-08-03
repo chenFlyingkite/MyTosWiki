@@ -125,6 +125,8 @@
     <string name="cards_active_damage_less">主動技 - 傷害減少</string>
     <!-- Damage received -60% for 5 Rounds., #686 -->
     <string name="cards_leader_damage_less">隊長技 - 傷害減少</string>
+    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <string name="cards_damage_to_hp">傷害轉化為我方生命力</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -157,9 +159,22 @@
         <item>不會使你死亡</item>
     </string-array>
     <string-array name="cards_damage_less_keys">
+        <!-- #494 反擊減少100% -->
+        <item>反擊傷害減少</item>
+        <!-- #417 木龍使減傷-->
+        <item>所受傷害將會以龍類的數量而減少</item>
         <!-- #228 大聖減傷-->
-        <item>傷害減少</item>
         <item>所受傷害愈低</item>
+        <!-- #513 #602 #638 玄武，光機偶減傷-->
+        <item>所受傷害減少</item>
+        <!-- #686 #780 #882 #1293 解放水遊俠，路易斯，張飛減傷-->
+        <item>減少所受傷害</item>
+        <!-- #1347 #1369 #1796 機械族莉莎，小閻王減傷-->
+        <item>% 所受傷害</item>
+    </string-array>
+    <string-array name="cards_damage_to_hp_keys">
+        <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
+        <item>轉化為我方生命力</item>
     </string-array>
     <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_6xxx">動態造型</string>
