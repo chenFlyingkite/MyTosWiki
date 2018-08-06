@@ -228,6 +228,12 @@
         <item name="android:background">#888</item>
     </style>
 
+    <style name="divider_h2px">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
     <style name="divider_horizontal_1dp_ddd">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
