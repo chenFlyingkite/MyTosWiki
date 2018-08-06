@@ -120,13 +120,25 @@
     <!-- Coins obtain increase, https://towerofsaviors.wikia.com/wiki/1695 -->
     <string name="cards_fix">轉化為固定數量</string>
     <!-- The next damage received will not lead to your defeat., #686 -->
-    <string name="cards_no_defeat">不會使你死亡</string>
+    <string name="cards_no_defeat">根性 (不會使你死亡)</string>
     <!-- Damage received -60% for 5 Rounds., #686 -->
     <string name="cards_active_damage_less">主動技 - 傷害減少</string>
     <!-- Damage received -60% for 5 Rounds., #686 -->
     <string name="cards_leader_damage_less">隊長技 - 傷害減少</string>
     <!-- Damage received -60% for 5 Rounds., #686 -->
     <string name="cards_damage_to_hp">傷害轉化為我方生命力</string>
+    <!-- For 1 Round, Attribute Relation does not apply, #1096
+    Attribute Relation does not apply to Water attacks of the Team. #641 水埃
+     -->
+    <string name="cards_regardless_of_defense">破防 (無視防禦)</string>
+    <!-- For 1 Round, Attribute Relation does not apply, #1096
+    Attribute Relation does not apply to Water attacks of the Team. #641 水埃
+     -->
+    <string name="cards_regardless_of_attribute">無視屬性相剋</string>
+    <!-- Deal non-Attributive Damage as much as 125x , #0361, 巨蟹宮
+    For 1 Round, launch an extra non-Attributive Attack as much as  #1608, 天堂鳥
+     -->
+    <string name="cards_non_attribute">無屬性傷害</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -176,6 +188,36 @@
         <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
         <item>轉化為我方生命力</item>
     </string-array>
+    <string-array name="cards_regardless_of_defense_keys">
+        <!-- #0845,月想女神 月讀 -->
+        <item>無視全體敵人 50% 的防禦力</item>
+        <!-- #514, 白虎,狼人 -->
+        <item>無視全體敵人 75% 的防禦力</item>
+        <!-- #1702, 曹國舅 -->
+        <item>無視全體敵人 80% 的防禦力</item>
+        <!-- #0949, 熾焰之翼 ‧ 烏列爾, #1125,古鱗魔龍 -->
+        <item>無視全體敵人 90% 的防禦力</item>
+        <!-- #0227, 美猴王, #0600, #0604 機偶使者 木暗, #0861 千千 -->
+        <item>無視全體敵人的防禦力</item>
+        <!-- #0294, 通透的蛋 -->
+        <item>此傷害無視屬性及防禦力</item>
+        <!-- #0122, 木妹暗妹+火遊木遊+光暗異界龍,  -->
+        <item>此傷害無視防禦力</item>
+        <!-- #1762, 小傑-->
+        <item>自身攻擊無視敵人的防禦力</item>
+        <item>無視防禦力</item>
+    </string-array>
+    <string-array name="cards_regardless_of_attribute_keys">
+        <!-- #0294, 通透的蛋 -->
+        <item>此傷害無視屬性及防禦力</item>
+        <!-- #1122,翼火王龍 -->
+        <item>無視屬性相剋</item>
+    </string-array>
+    <string-array name="cards_non_attribute_keys">
+        <item>無屬性傷害</item>
+        <item>無屬性攻擊</item>
+    </string-array>
+
     <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_6xxx">動態造型</string>
     <string name="cards_hide_7xxx">討伐戰</string>

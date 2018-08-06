@@ -78,6 +78,9 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortSpecialDamageLessActive;
     private CheckBox sortSpecialDamageLessLeader;
     private CheckBox sortSpecialDamageToHp;
+    private CheckBox sortSpecialNonAttribute;
+    private CheckBox sortSpecialRegardlessDefense;
+    private CheckBox sortSpecialRegardlessAttribute;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -267,6 +270,9 @@ public class TosCardFragment extends BaseFragment {
         sortSpecialDamageLessActive = menu.findViewById(R.id.sortSpecialDamageLessActive);
         sortSpecialDamageLessLeader = menu.findViewById(R.id.sortSpecialDamageLessLeader);
         sortSpecialDamageToHp = menu.findViewById(R.id.sortSpecialDamageToHp);
+        sortSpecialNonAttribute = menu.findViewById(R.id.sortSpecialNonAttribute);
+        sortSpecialRegardlessDefense = menu.findViewById(R.id.sortSpecialRegardlessDefense);
+        sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -594,6 +600,15 @@ public class TosCardFragment extends BaseFragment {
                 }
                 if (sortSpecialDamageToHp.isChecked()) {
                     accept &= find(key, R.array.cards_damage_to_hp_keys);
+                }
+                if (sortSpecialNonAttribute.isChecked()) {
+                    accept &= find(key, R.array.cards_non_attribute_keys);
+                }
+                if (sortSpecialRegardlessDefense.isChecked()) {
+                    accept &= find(key, R.array.cards_regardless_of_defense_keys);
+                }
+                if (sortSpecialRegardlessAttribute.isChecked()) {
+                    accept &= find(key, R.array.cards_regardless_of_attribute_keys);
                 }
             }
             return accept;

@@ -351,6 +351,21 @@
                     android:id="@+id/sortSpecialDamageToHp"
                     style="@style/sortText"
                     android:text="@string/cards_damage_to_hp"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialNonAttribute"
+                    style="@style/sortText"
+                    android:text="@string/cards_non_attribute"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRegardlessDefense"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_defense"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRegardlessAttribute"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_attribute"/>
             </LinearLayout>
 
             <TextView
