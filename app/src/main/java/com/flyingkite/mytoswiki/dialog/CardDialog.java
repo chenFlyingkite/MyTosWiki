@@ -19,8 +19,10 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.mytoswiki.library.CardCombineAdapter;
 import com.flyingkite.mytoswiki.library.CardEvolveAdapter;
 import com.flyingkite.mytoswiki.library.CardLiteAdapter;
+import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 
 import java.text.NumberFormat;
@@ -64,6 +66,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     private ViewGroup cardVirTable;
     private Library<CardLiteAdapter> sameSkillLibrary;
     private Library<CardEvolveAdapter> evolveLibrary;
+    private Library<CardCombineAdapter> combineLibrary;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -154,6 +157,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         // Fill in same skill icons
         setSameSkills(card);
         setEvolve(card);
+        setCombine(card);
 
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
@@ -239,7 +243,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
 
         // Setup recycler
         RecyclerView rv = findViewById(R.id.cardSameActiveSkills);
-        // Fetch same cards
+        // Fetch cards
         List<TosCard> same = getCardsByIdNorms(c.sameSkills);
         // Creating library
         sameSkillLibrary = new Library<>(rv);
@@ -275,6 +279,31 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
         //rv.removeOnItemTouchListener(noIntercept);
         //rv.addOnItemTouchListener(noIntercept);
+    }
+
+    private void setCombine(TosCard c) {
+        if (c.combineFrom.size() == 0 || c.combineTo.size() == 0) {
+            findViewById(R.id.cardCombine).setVisibility(View.GONE);
+            return;
+        }
+
+        // Combine to card
+        TosCard tc = TosWiki.getCardByIdNorm(c.combineTo.get(0));
+        setSimpleCard(findViewById(R.id.cardCombineTo), tc);
+
+        // Setup recycler
+        RecyclerView rv = findViewById(R.id.cardCombineFrom);
+        combineLibrary = new Library<>(rv);
+        // Fetch cards
+        List<TosCard> combine = getCardsByIdNorms(c.combineFrom);
+        CardCombineAdapter a = new CardCombineAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return CardDialog.this.getFragmentManager();
+            }
+        };
+        a.setDataList(combine);
+        combineLibrary.setViewAdapter(a);
     }
 
     private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {

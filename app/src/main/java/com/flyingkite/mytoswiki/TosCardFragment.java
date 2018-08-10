@@ -92,6 +92,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortImproveVir;
     private CheckBox sortImproveTwo;
     private CheckBox sortImproveChg; // Skill change
+    private CheckBox sortImproveCom; // Combine cards
     // Hide cards
     private ViewGroup sortHide;
     // Display card name
@@ -185,6 +186,21 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         updateHide();
         applySelection();
     }
+
+    /*
+    private void testAllCardDialog() {
+        for (int i = 0; i < allCards.size(); i++) {
+            TosCard ci = allCards.get(i);
+            sSingle.submit(() -> {
+                Say.Log("+ #%s show %s", ci.idNorm, ci.name);
+                CardDialog d = showCardDialog(ci);
+                Say.sleepI(500);
+                Say.Log("- #%s hide %s", ci.idNorm, ci.name);
+                d.dismiss();
+            });
+        }
+    }
+    */
 
     private void initShareImage(View parent) {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
@@ -298,6 +314,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortImproveVir = menu.findViewById(R.id.sortImproveVirtualRebirth);
         sortImproveTwo = menu.findViewById(R.id.sortImproveTwoSkill);
         sortImproveChg = menu.findViewById(R.id.sortImproveSkillChange);
+        sortImproveCom = menu.findViewById(R.id.sortImproveCombine);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
@@ -665,6 +682,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortImproveChg.isChecked()) {
                     accept &= c.skillChange.size() > 0;
+                }
+                if (sortImproveCom.isChecked()) {
+                    accept &= c.combineFrom.size() > 0 && c.combineTo.size() > 0;
                 }
             }
             return accept;

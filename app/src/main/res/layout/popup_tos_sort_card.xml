@@ -445,6 +445,11 @@
                     android:id="@+id/sortImproveSkillChange"
                     style="@style/sortText"
                     android:text="@string/cards_improve_skill_change"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveCombine"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_combine"/>
             </LinearLayout>
 
             <TextView

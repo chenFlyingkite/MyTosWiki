@@ -30,7 +30,7 @@ public class CardLiteAdapter extends RVAdapter<TosCard, CardLiteAdapter.CardLVH,
     }
 
     public static class CardLVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView img;
+        protected ImageView img;
 
         public CardLVH(View v) {
             super(v);

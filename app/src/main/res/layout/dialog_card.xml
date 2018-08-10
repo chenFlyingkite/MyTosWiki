@@ -344,7 +344,7 @@
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
 
-                    <!-- Same skill list-->
+                    <!-- Evolution / Power Release / Virtual Rebirth list-->
                     <LinearLayout
                         android:id="@+id/cardEvolve"
                         android:layout_width="@dimen/t420dp"
@@ -365,6 +365,24 @@
                             android:id="@+id/cardEvolveRV"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Evolution / Power Release / Virtual Rebirth list-->
+                    <LinearLayout
+                        android:id="@+id/cardCombine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/t10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cardCombineHeader"
+                            style="@style/cardText.header"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_combine"/>
+
+                        <include
+                            layout="@layout/view_card_row_combine"/>
                     </LinearLayout>
 
                     <!-- Card info : Amelioration 昇華 -->
