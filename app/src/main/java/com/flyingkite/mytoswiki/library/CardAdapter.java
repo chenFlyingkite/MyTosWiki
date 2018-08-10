@@ -12,18 +12,17 @@ import android.widget.TextView;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVSelectAdapter;
-import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosSelection;
+import com.flyingkite.mytoswiki.util.GlideUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CardAdapter
         extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>
-        //extends RVAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>
 {
 
     public interface ItemListener extends RVSelectAdapter.ItemListener<TosCard, CardVH> {
@@ -116,8 +115,7 @@ public class CardAdapter
         Say.Log("click %s, %s", c.id, c.name);
     }
 
-    public static class CardVH extends RecyclerView.ViewHolder {
-        private TosCard card;
+    public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil {
         private ImageView thumb;
         private TextView text;
         private TextView message;
@@ -131,7 +129,6 @@ public class CardAdapter
 
         public void setCard(TosCard c, String name, String msg) {
             boolean hasMsg = msg != null;
-            card = c;
             text.setText(name);
             message.setText(msg);
             loadImage(thumb, c.icon);
@@ -146,7 +143,7 @@ public class CardAdapter
         }
 
         private void loadImage(ImageView v, String url) {
-            GlideApp.with(v.getContext()).load(url).centerCrop().placeholder(R.drawable.unknown_card).into(v);
+            loadCardToImageView(v, url);
         }
     }
 }

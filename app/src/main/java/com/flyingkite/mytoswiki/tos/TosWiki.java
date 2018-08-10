@@ -14,6 +14,7 @@ import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.util.TaskMonitor;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 
 public class TosWiki {
@@ -21,11 +22,13 @@ public class TosWiki {
     private static TosCard[] allCards;
     private static CraftsNormal[] normalCrafts;
     private static CraftsArm[] armCrafts;
+    private static HashMap<String, TosCard> allCardsByIdNorm = new HashMap<>();
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_NORMAL_CRAFTS = "Crafts";
     public static final String TAG_ARM_CRAFTS = "ArmCards";
-    public static final String[] TAG_ALL_TASKS = {TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS
+    public static final String[] TAG_ALL_TASKS = {
+            TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS
     };
 
     public static void init(Context ctx) {
@@ -36,6 +39,13 @@ public class TosWiki {
             t.tic();
             allCards = GsonUtil.loadAsset("cardList.json", TosCard[].class, ctx.getAssets());
             t.tac("%s cards loaded", len(allCards));
+
+            t.tic();
+            allCardsByIdNorm.clear();
+            for (TosCard c : allCards) {
+                allCardsByIdNorm.put(c.idNorm, c);
+            }
+            t.tac("%s in set OK", allCardsByIdNorm.size());
             monitorDB.notifyClientsState();
         });
 
@@ -60,6 +70,10 @@ public class TosWiki {
 
     public static TosCard[] allCards() {
         return copy(allCards);
+    }
+
+    public static TosCard getCardByIdNorm(String id) {
+        return allCardsByIdNorm.get(id);
     }
 
     public static CraftsNormal[] allNormalCrafts() {

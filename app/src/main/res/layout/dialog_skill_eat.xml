@@ -31,11 +31,7 @@
                     android:layout_centerHorizontal="true">
 
                     <ImageView
-                        android:layout_width="@dimen/t30dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/evo_arrow"/>
+                        style="@style/evoArrow" />
                 </LinearLayout>
 
                 <LinearLayout

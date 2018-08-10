@@ -378,6 +378,19 @@
                     android:id="@+id/sortSpecialRegardlessAttribute"
                     style="@style/sortText"
                     android:text="@string/cards_regardless_of_attribute"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialClearAllEffect"
+                    style="@style/sortText"
+                    android:text="@string/cards_clear_all_effect"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialStayUntil"
+                    style="@style/sortText"
+                    android:text="@string/cards_stay_until"/>
             </LinearLayout>
 
             <TextView

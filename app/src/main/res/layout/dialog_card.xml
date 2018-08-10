@@ -324,6 +324,49 @@
                         android:id="@+id/cardSkill_2"
                         layout="@layout/view_card_row_skill"/>
 
+                    <!-- Same skill list-->
+                    <LinearLayout
+                        android:id="@+id/cardSameSkill"
+                        android:layout_width="@dimen/t360dp"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/t10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cardSameSkillHeader"
+                            style="@style/cardText.header"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_skillSameActive_n"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/cardSameActiveSkills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- Same skill list-->
+                    <LinearLayout
+                        android:id="@+id/cardEvolve"
+                        android:layout_width="@dimen/t420dp"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/t10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cardEvolveHeader"
+                            style="@style/cardText.header"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_evolve_release"/>
+
+                        <include
+                            layout="@layout/view_card_row_evolve_header"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/cardEvolveRV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
                     <!-- Card info : Amelioration 昇華 -->
                     <LinearLayout
                         android:id="@+id/cardAmeliorationTable"

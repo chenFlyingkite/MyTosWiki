@@ -9,15 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.flyingkite.library.Say;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.library.widget.RVSelectAdapter;
-import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosSelection;
+import com.flyingkite.mytoswiki.util.GlideUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,10 +110,10 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
 
     @Override
     protected void onClickItem(BaseCraft c, CraftVH holder) {
-        Say.Log("click %s, %s", c.idNorm, c.name);
+        //Say.Log("click %s, %s", c.idNorm, c.name);
     }
 
-    public static class CraftVH extends RecyclerView.ViewHolder {
+    public static class CraftVH extends RecyclerView.ViewHolder implements GlideUtil {
         private ImageView thumb;
         private TextView text;
         private TextView message;
@@ -142,7 +141,7 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
         }
 
         private void loadImage(ImageView v, String url) {
-            GlideApp.with(v.getContext()).load(url).centerCrop().placeholder(R.drawable.unknown_craft).into(v);
+            loadCraftToImageView(v, url);
         }
     }
 }

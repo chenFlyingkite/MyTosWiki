@@ -3,6 +3,7 @@ package com.flyingkite.mytoswiki.dialog;
 import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -22,6 +23,7 @@ public class WebDialog extends BaseTosDialog {
     private List<Integer> toolsIds = Arrays.asList(R.drawable.ic_home_black_48dp
             , R.drawable.ic_arrow_back_black_48dp
             , R.drawable.ic_arrow_forward_black_48dp
+            , R.drawable.ic_refresh_black_48
             , R.drawable.ic_share_black_48dp
             , R.drawable.ic_clear_black_48dp
     );
@@ -29,6 +31,7 @@ public class WebDialog extends BaseTosDialog {
     public static final String BUNDLE_LINK = "WebDialog.WebLink";
     private static final String tosWikiHome = "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_Tower_of_Saviors_%E7%BB%B4%E5%9F%BA";
     private Library<IconAdapter> iconLibrary;
+    private SwipeRefreshLayout swipe;
     private WebView web;
     private ProgressBar progress;
     private String link = tosWikiHome;
@@ -40,11 +43,11 @@ public class WebDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
-        web = findViewById(R.id.wdWeb);
         progress = findViewById(R.id.wdProgress);
         parseBundle(getArguments());
         initToolBar();
         initWeb();
+        initSwipeRefresh();
     }
 
     private void parseBundle(Bundle b) {
@@ -92,6 +95,9 @@ public class WebDialog extends BaseTosDialog {
                     case R.drawable.ic_clear_black_48dp:
                         dismissAllowingStateLoss();
                         break;
+                    case R.drawable.ic_refresh_black_48:
+                        web.reload();
+                        break;
                 }
             }
         });
@@ -100,6 +106,7 @@ public class WebDialog extends BaseTosDialog {
     }
 
     private void initWeb() {
+        web = findViewById(R.id.wdWeb);
         WebSettings ws = web.getSettings();
         // Desktop mode web page
         ws.setUserAgentString("Mozilla/5.0");
@@ -114,6 +121,19 @@ public class WebDialog extends BaseTosDialog {
         web.setWebChromeClient(chromeClient);
         web.loadUrl(link);
     }
+
+    private void initSwipeRefresh() {
+        swipe = findViewById(R.id.wdRefresh);
+        swipe.setOnRefreshListener(refresher);
+    }
+
+    private SwipeRefreshLayout.OnRefreshListener refresher = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            web.reload();
+            swipe.setRefreshing(false);
+        }
+    };
 
     private WebChromeClient chromeClient = new WebChromeClient() {
         @Override

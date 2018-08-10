@@ -1,10 +1,12 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.annotation.SuppressLint;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -13,15 +15,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.flyingkite.mytoswiki.GlideApp;
+import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.data.tos.Skill;
+import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.mytoswiki.library.CardEvolveAdapter;
+import com.flyingkite.mytoswiki.library.CardLiteAdapter;
+import com.flyingkite.mytoswiki.util.TosPageUtil;
 
 import java.text.NumberFormat;
+import java.util.List;
 
 @SuppressLint("SetTextI18n")
-public class CardDialog extends BaseTosDialog {
+public class CardDialog extends BaseTosDialog implements TosPageUtil {
     public static final String TAG = "CardDialog";
     public static final String BUNDLE_CARD = "CardDialog.TosCard";
 
@@ -56,7 +62,8 @@ public class CardDialog extends BaseTosDialog {
     private ViewGroup cardAwkTable;
     private ViewGroup cardPowTable;
     private ViewGroup cardVirTable;
-
+    private Library<CardLiteAdapter> sameSkillLibrary;
+    private Library<CardEvolveAdapter> evolveLibrary;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -101,10 +108,10 @@ public class CardDialog extends BaseTosDialog {
 
         if (card == null) return;
 
-        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd);
-        GlideApp.with(getActivity()).load(card.icon).placeholder(R.drawable.unknown_card).into(cardIcon);
-        GlideApp.with(getActivity()).load(card.icon).placeholder(R.drawable.unknown_card).into(cardIcon2);
-        GlideApp.with(getActivity()).load(card.bigImage).placeholder(R.drawable.card_background).into(cardImage);
+        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader, R.id.cardSkill_1, R.id.cardSkill_2);
+        loadCardToImageView(cardIcon, card.icon);
+        loadCardToImageView(cardIcon2, card.icon);
+        loadLinkToImageView(cardImage, card.bigImage, getActivity(), R.drawable.card_background);
         cardIcon.setOnClickListener(this::shareImage);
         cardLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(card.wikiLink);
@@ -144,6 +151,9 @@ public class CardDialog extends BaseTosDialog {
         setSkillLeader(R.id.cardSkill_leader, card.skillLeaderName, card.skillLeaderDesc);
         setSkill(R.id.cardSkill_1, card.skillName1, card.skillCDMin1, card.skillCDMax1, card.skillDesc1);
         setSkill(R.id.cardSkill_2, card.skillName2, card.skillCDMin2, card.skillCDMax2, card.skillDesc2);
+        // Fill in same skill icons
+        setSameSkills(card);
+        setEvolve(card);
 
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
@@ -217,6 +227,56 @@ public class CardDialog extends BaseTosDialog {
         }
     }
 
+    private void setSameSkills(TosCard c) {
+        if (c.sameSkills.size() == 0) {
+            findViewById(R.id.cardSameSkill).setVisibility(View.GONE);
+            return;
+        }
+
+        // Header
+        TextView h = findViewById(R.id.cardSameSkillHeader);
+        h.setText(getString(R.string.cards_skillSameActive_n, "" + c.sameSkills.size()));
+
+        // Setup recycler
+        RecyclerView rv = findViewById(R.id.cardSameActiveSkills);
+        // Fetch same cards
+        List<TosCard> same = getCardsByIdNorms(c.sameSkills);
+        // Creating library
+        sameSkillLibrary = new Library<>(rv);
+        CardLiteAdapter a = new CardLiteAdapter();
+        a.setDataList(same);
+        a.setItemListener((tosCard, cardLVH, i) -> {
+            showCardDialog(tosCard);
+        });
+        sameSkillLibrary.setViewAdapter(a);
+        // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
+        rv.removeOnItemTouchListener(noIntercept);
+        rv.addOnItemTouchListener(noIntercept);
+    }
+
+    private void setEvolve(TosCard c) {
+        if (c.evolveInfo.size() == 0) {
+            findViewById(R.id.cardEvolve).setVisibility(View.GONE);
+            return;
+        }
+
+        // Setup recycler
+        RecyclerView rv = findViewById(R.id.cardEvolveRV);
+        evolveLibrary = new Library<>(rv, true);
+        CardEvolveAdapter a = new CardEvolveAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return CardDialog.this.getFragmentManager();
+            }
+        };
+        a.setDataList(c.evolveInfo);
+        evolveLibrary.setViewAdapter(a);
+        //rv.addItemDecoration(getRVDivider(getActivity(), true, getActivity().getResources().getDrawable(R.drawable.divider_h)));
+        // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
+        //rv.removeOnItemTouchListener(noIntercept);
+        //rv.addOnItemTouchListener(noIntercept);
+    }
+
     private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {
         setViewVisibility(tableId, has);
         if (has) {
@@ -238,13 +298,13 @@ public class CardDialog extends BaseTosDialog {
         ViewGroup vg = findViewById(R.id.cardAmeSkillChange);
         int n = card.skillChange.size();
         for (int i = 0; i < n; i++) {
-            Skill s = card.skillChange.get(i);
+            SkillLite s = card.skillChange.get(i);
             View v = createSkillRow(s, vg);
             vg.addView(v);
         }
     }
 
-    private View createSkillRow(Skill s, ViewGroup parent) {
+    private View createSkillRow(SkillLite s, ViewGroup parent) {
         boolean leader = s.isLeader();
         // Inflate row view
         int childId;

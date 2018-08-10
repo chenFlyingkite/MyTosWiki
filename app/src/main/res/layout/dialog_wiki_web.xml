@@ -19,10 +19,15 @@
         android:layout_alignBottom="@id/wdTools"
         tools:progress="50"/>
 
-    <WebView
-        android:id="@+id/wdWeb"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/wdRefresh"
         android:layout_below="@id/wdTools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/wdWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

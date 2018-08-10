@@ -2,15 +2,13 @@ package com.flyingkite.firebase;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.XmlRes;
-import android.util.Log;
 
 import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.log.Loggable;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
-
-import java.util.Locale;
 
 public class RemoteConfig {
     private static final String TAG = "RemoteConfig";
@@ -75,7 +73,18 @@ public class RemoteConfig {
         log("--- Config Values --- End");
     }
 
-    private static void log(String fmt, Object... params) {
-        Log.i(TAG, "" + String.format(Locale.US, fmt, params));
+    private static void log(String message) {
+        z.logI(message);
     }
+
+    private static void log(String fmt, Object... params) {
+        z.logI(fmt, params);
+    }
+
+    private static Loggable z = new Loggable() {
+        @Override
+        public String LTag() {
+            return TAG;
+        }
+    };
 }

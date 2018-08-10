@@ -1,6 +1,11 @@
 package com.flyingkite.mytoswiki.util;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Checkable;
@@ -10,6 +15,36 @@ import java.util.List;
 
 public interface ViewUtil {
 
+    RecyclerView.OnItemTouchListener noIntercept = new RecyclerView.OnItemTouchListener() {
+
+        @Override
+        public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+            int action = e.getAction();
+            switch (action) {
+                case MotionEvent.ACTION_MOVE:
+                    rv.getParent().requestDisallowInterceptTouchEvent(true);
+                    break;
+            }
+            return false;
+        }
+
+        @Override
+        public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+
+        }
+
+        @Override
+        public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+        }
+    };
+
+    default DividerItemDecoration getRVDivider(Context context, boolean vertical, Drawable drawable) {
+        int r = vertical ? DividerItemDecoration.VERTICAL : DividerItemDecoration.HORIZONTAL;
+        DividerItemDecoration d = new DividerItemDecoration(context, r);
+        d.setDrawable(drawable);
+        return d;
+    }
 
     default void setViewVisibility(View v, boolean show) {
         int vis = show ? View.VISIBLE : View.GONE;

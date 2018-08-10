@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/t50dp"
+    android:layout_height="@dimen/t50dp"
+    android:background="@drawable/bg_press_sky">
+
+    <ImageView
+        android:id="@+id/tiImg"
+        android:padding="@dimen/t2dp"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="100%"
+        android:src="@drawable/unknown_card"/>
+
+</android.support.percent.PercentRelativeLayout>

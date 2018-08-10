@@ -24,12 +24,18 @@ public class FeedbackDialog extends BaseTosDialog {
         super.onViewCreated(view, savedInstanceState);
         userContent = findViewById(R.id.feedback_content);
         send = findViewById(R.id.feedback_send);
+        dismissWhenClick(R.id.feedback_header);
         send.setOnClickListener((v) -> {
+            String t = userContent.getText().toString().trim();
+            if (t.length() == 0) {
+                return;
+            }
+
             try {
                 String s = null;
                 s.length();
             } catch (NullPointerException e) {
-                FeedbackException fe = new FeedbackException(userContent.getText());
+                FeedbackException fe = new FeedbackException(t);
                 App.showToast(R.string.feedback_thanks);
                 CrashReport.logException(fe);
                 dismissAllowingStateLoss();

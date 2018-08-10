@@ -21,7 +21,6 @@ import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
-import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.library.Misc;
@@ -29,6 +28,7 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
+import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
@@ -40,7 +40,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-public class TosCardFragment extends BaseFragment {
+public class TosCardFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardFragment";
     // Top Status bar
     private TextView tosInfo;
@@ -81,6 +81,8 @@ public class TosCardFragment extends BaseFragment {
     private CheckBox sortSpecialNonAttribute;
     private CheckBox sortSpecialRegardlessDefense;
     private CheckBox sortSpecialRegardlessAttribute;
+    private CheckBox sortSpecialClearAllEffect;
+    private CheckBox sortSpecialStayUntil;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -171,11 +173,7 @@ public class TosCardFragment extends BaseFragment {
         a.setItemListener(new CardAdapter.ItemListener() {
             @Override
             public void onClick(TosCard card, CardAdapter.CardVH cardVH, int position) {
-                CardDialog d = new CardDialog();
-                Bundle b = new Bundle();
-                b.putParcelable(CardDialog.BUNDLE_CARD, card);
-                d.setArguments(b);
-                d.show(getFragmentManager(), CardDialog.TAG);
+                showCardDialog(card);
             }
 
             @Override
@@ -273,6 +271,8 @@ public class TosCardFragment extends BaseFragment {
         sortSpecialNonAttribute = menu.findViewById(R.id.sortSpecialNonAttribute);
         sortSpecialRegardlessDefense = menu.findViewById(R.id.sortSpecialRegardlessDefense);
         sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
+        sortSpecialClearAllEffect = menu.findViewById(R.id.sortSpecialClearAllEffect);
+        sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -609,6 +609,12 @@ public class TosCardFragment extends BaseFragment {
                 }
                 if (sortSpecialRegardlessAttribute.isChecked()) {
                     accept &= find(key, R.array.cards_regardless_of_attribute_keys);
+                }
+                if (sortSpecialClearAllEffect.isChecked()) {
+                    accept &= find(key, R.array.cards_clear_all_effect_keys);
+                }
+                if (sortSpecialStayUntil.isChecked()) {
+                    accept &= find(key, R.array.cards_stay_until_keys);
                 }
             }
             return accept;

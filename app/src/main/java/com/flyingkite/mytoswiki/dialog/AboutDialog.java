@@ -26,6 +26,7 @@ public class AboutDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        dismissWhenClick(R.id.abd_header);
         bulletin = findViewById(R.id.abd_message);
         String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_BULLETIN_MESSAGE);
         bulletin.setText(Html.fromHtml(s));

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/itemIcon"
-        android:layout_width="@dimen/t50dp"
-        android:layout_height="@dimen/t50dp"
-        android:background="@drawable/bg_press_light_sky"
-        android:padding="@dimen/t2dp"/>
+        style="@style/cardIcon"/>
 
 </RelativeLayout>

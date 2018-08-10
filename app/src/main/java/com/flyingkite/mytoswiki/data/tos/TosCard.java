@@ -124,7 +124,7 @@ public class TosCard implements Parcelable {
     //---- Card Details, 卡片資訊
     //------------
 
-    /** Evolution to card idNorm */
+    /** Card info, have 組合技，隊長技 */
     @SerializedName(TC.cardDetails)
     public String cardDetails = "";
 
@@ -280,18 +280,8 @@ public class TosCard implements Parcelable {
     //---- Evolution, 卡片進化
     //------------
 
-    /** Evolution from card idNorm */
-    @SerializedName(TC.evolveFrom)
-    public String evolveFrom = "";
-
-    /** Evolution material card idNorm */
-    @SerializedName(TC.evolveNeed)
-    public List<String> evolveNeed = new ArrayList<>();
-
-    /** Evolution to card idNorm */
-    @SerializedName(TC.evolveTo)
-    public String evolveTo = "";
-
+    @SerializedName(TC.evolveInfo)
+    public List<Evolve> evolveInfo = new ArrayList<>();
 
     //------------
     //---- Skill change, 技能變更
@@ -299,7 +289,11 @@ public class TosCard implements Parcelable {
 
     /** Skill change contents */
     @SerializedName(TC.skillChange)
-    public List<Skill> skillChange = new ArrayList<>();
+    public List<SkillLite> skillChange = new ArrayList<>();
+
+    /** Skill eating cards, from cardDetail */
+    @SerializedName(TC.sameSkills)
+    public List<String> sameSkills = new ArrayList<>();
 
     //-- For parcelable
     private static final Gson gson = new Gson();

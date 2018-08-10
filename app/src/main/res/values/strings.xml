@@ -61,6 +61,12 @@
     <string name="cards_race_level">強化素材</string>
     <string name="cards_turn_runestone">轉化為X符石</string>
     <string name="cards_turn_into">轉化為</string>
+    <string name="cards_skillSameActive">相同主動技能卡片</string>
+    <string name="cards_skillSameActive_n">相同主動技能卡片 (共 %s 張)</string>
+    <string name="cards_evolve_release">進化 / 潛能解放 / 異空轉生  所需素材列表</string>
+    <string name="cards_source">來源</string>
+    <string name="cards_target">目標</string>
+    <string name="cards_need_material">需要素材</string>
 
     <string name="cards_runestone_water">水符石</string>
     <string name="cards_runestone_fires">火符石</string>
@@ -101,44 +107,51 @@
         <item>@string/cards_race_evolve</item>
         <item>@string/cards_race_level</item>
     </string-array>
-    <!-- Skill, https://towerofsaviors.wikia.com/wiki/1408 -->
     <string name="cards_special">技能特選</string>
     <string name="cards_special_add_detail">包括 隊伍技能，組合技能 (卡牌資訊)</string>
-    <!-- Unlimited movement, #1213 -->
+    <!-- #1213, 溫婉白蕾 妍, Unlimited movement -->
     <string name="cards_freemove">排珠</string>
-    <!-- Skill stays in play, #1408 -->
-    <string name="cards_keep">效果在卡片上</string>
-    <!-- Explode Runestones, #1297 -->
+    <!-- #1408, 雲陽, Skill stays in play until reactivation of the Skill or defeated -->
+    <string name="cards_keep">效果在卡片上 (死亡後消失)</string>
+    <!-- #1297, 周瑜, Explode Runestones -->
     <string name="cards_explode">引爆符石</string>
-    <!-- Coins obtain increase, #1695 -->
+    <!-- #1695, 福祿壽, Coins obtain increase -->
     <string name="cards_morecoin">獲得的金幣增加</string>
-    <!-- extend Runestone-moving time, #408, #1765, #961 -->
+    <!-- #0408, #1765, #961, extend Runestone-moving time, -->
     <string name="cards_extend_time">延長移動符石時間</string>
-    <!-- Runestones also possess the effect of Runestones, https://towerofsaviors.wikia.com/wiki/1695 -->
+    <!-- #1429, 伊邪那岐, Runestones also possess 50% effect of Runestones -->
     <string name="cards_active_also_possess">主動技 - 兼具</string>
     <string name="cards_leader_also_possess">隊長技 - 兼具</string>
-    <!-- Coins obtain increase, https://towerofsaviors.wikia.com/wiki/1695 -->
+    <!-- #1429, 伊邪那岐, Turn all Runestones into fixed numbers of Heart Runestones and Enchanted Earth Runestones -->
     <string name="cards_fix">轉化為固定數量</string>
-    <!-- The next damage received will not lead to your defeat., #686 -->
+    <!-- #0686, 水遊俠, The next damage received will not lead to your defeat -->
     <string name="cards_no_defeat">根性 (不會使你死亡)</string>
-    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <!-- #0686, 水遊俠, Damage received -60% for 5 Rounds.,  -->
     <string name="cards_active_damage_less">主動技 - 傷害減少</string>
-    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <!-- #1087, 大聖, The higher the HP, the less the Damage received, to the max -60% -->
     <string name="cards_leader_damage_less">隊長技 - 傷害減少</string>
-    <!-- Damage received -60% for 5 Rounds., #686 -->
+    <!-- #1478, Damage received will be converted to HP Recovery for 1 Round -->
     <string name="cards_damage_to_hp">傷害轉化為我方生命力</string>
-    <!-- For 1 Round, Attribute Relation does not apply, #1096
-    Attribute Relation does not apply to Water attacks of the Team. #641 水埃
+    <!-- #1087, 大聖, Damage will be dealt regardless of enemies' Defense for 3 Rounds
+         #0862, 陀螺千千, Damage will be dealt regardless of Enemies' Defense for 2 Rounds when Heart Runestones are dissolved
      -->
     <string name="cards_regardless_of_defense">破防 (無視防禦)</string>
-    <!-- For 1 Round, Attribute Relation does not apply, #1096
-    Attribute Relation does not apply to Water attacks of the Team. #641 水埃
+    <!-- #1096, 世界樹神 尤克特拉希爾, For 1 Round, Attribute Relation does not apply,
+         #0641, 水埃, Attribute Relation does not apply to Water attacks of the Team.
      -->
     <string name="cards_regardless_of_attribute">無視屬性相剋</string>
-    <!-- Deal non-Attributive Damage as much as 125x , #0361, 巨蟹宮
-    For 1 Round, launch an extra non-Attributive Attack as much as  #1608, 天堂鳥
+    <!-- #0361, 巨蟹宮, Deal non-Attributive Damage as much as 125x
+         #1608, 天堂鳥, For 1 Round, launch an extra non-Attributive Attack as much as
      -->
     <string name="cards_non_attribute">無屬性傷害</string>
+    <!-- #1492, 真田幸村, Clear all additional effects in play
+         #0951, 沙利葉, For 1 Round, Earth Attack 1.5; clear all additional effect(s) in play
+     -->
+    <string name="cards_clear_all_effect">消除所有附加效果</string>
+    <!-- #1537, 仙女座, Skill stays in play until not 3 or more Attributes of Runestones are dissolved in the Round
+         #1572, 草薙京, Skill stays in play until not a group of 6 or more Fire Runestones are dissolved
+     -->
+    <string name="cards_stay_until">效果持續至 [條件]</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -217,6 +230,13 @@
         <item>無屬性傷害</item>
         <item>無屬性攻擊</item>
     </string-array>
+    <string-array name="cards_clear_all_effect_keys">
+        <item>消除所有附加效果</item>
+    </string-array>
+    <string-array name="cards_stay_until_keys">
+        <item>效果持續至</item>
+    </string-array>
+
 
     <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_6xxx">動態造型</string>

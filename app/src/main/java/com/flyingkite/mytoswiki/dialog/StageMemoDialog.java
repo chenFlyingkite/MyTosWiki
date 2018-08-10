@@ -26,6 +26,7 @@ public class StageMemoDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        dismissWhenClick(R.id.smd_header);
         stageMemo = findViewById(R.id.smd_message);
         // Set share
         View stageShare = findViewById(R.id.smd_share);

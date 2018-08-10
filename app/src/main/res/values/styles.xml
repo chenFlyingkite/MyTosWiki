@@ -31,6 +31,26 @@
         <item name="android:textSize">@dimen/t14dp</item>
     </style>
 
+    <style name="commonIcon">
+        <item name="android:layout_width">@dimen/t50dp</item>
+        <item name="android:layout_height">@dimen/t50dp</item>
+    </style>
+
+    <style name="evoArrow">
+        <item name="android:layout_width">@dimen/t30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:src">@drawable/evo_arrow</item>
+    </style>
+
+    <style name="evoPlus">
+        <item name="android:layout_width">@dimen/t20dp</item>
+        <item name="android:layout_height">@dimen/t20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:src">@drawable/evo_plus</item>
+    </style>
+
     <style name="blackText">
         <item name="android:textSize">@dimen/t18dp</item>
         <item name="android:textColor">#000</item>
@@ -154,9 +174,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#fff</item>
     </style>
-    <style name="sortIcon">
-        <item name="android:layout_width">@dimen/t50dp</item>
-        <item name="android:layout_height">@dimen/t50dp</item>
+    <style name="sortIcon" parent="commonIcon">
         <item name="android:padding">@dimen/t5dp</item>
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
@@ -216,11 +234,15 @@
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
-    <style name="textsIcon">
-        <item name="android:layout_width">@dimen/t50dp</item>
-        <item name="android:layout_height">@dimen/t50dp</item>
+    <style name="textsIcon" parent="commonIcon">
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
+
+    <style name="cardIcon" parent="textsIcon">
+        <item name="android:padding">@dimen/t2dp</item>
+        <item name="android:src">@drawable/unknown_card</item>
+    </style>
+
 
     <style name="divider_horizontal">
         <item name="android:layout_width">match_parent</item>
@@ -331,6 +353,5 @@
         <item name="android:layout_width">@dimen/t70dp</item>
         <item name="android:layout_height">@dimen/t70dp</item>
     </style>
-
 
 </resources>
