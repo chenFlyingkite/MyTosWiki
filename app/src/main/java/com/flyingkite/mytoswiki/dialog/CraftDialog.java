@@ -13,6 +13,7 @@ import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.library.widget.Library;
@@ -75,6 +76,7 @@ public class CraftDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        logShowCraft();
 
         initClose();
         initSortMenu();
@@ -213,6 +215,7 @@ public class CraftDialog extends BaseTosDialog {
 
         sortMenu.setOnClickListener(v -> {
             sortWindow.showAsDropDown(v);
+            logSelectCraft();
         });
 
         initShareImage(menu);
@@ -225,6 +228,18 @@ public class CraftDialog extends BaseTosDialog {
         initSortByHide(menu);
         initSortByCommon(menu);
         initDisplay(menu);
+    }
+
+    private void logSelectCraft() {
+        //Map<String, String> m = new HashMap<>();
+        //String id = craft == null ? "--" : craft.idNorm;
+        //m.put("craft", id);
+        FabricAnswers.logSelectCraft(null);
+    }
+
+    private void logShowCraft() {
+        //Map<String, String> m = new HashMap<>();
+        FabricAnswers.logCraftDialog(null);
     }
 
     private void initSortReset(View menu) {

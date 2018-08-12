@@ -11,13 +11,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WebDialog extends BaseTosDialog {
     private List<Integer> toolsIds = Arrays.asList(R.drawable.ic_home_black_48dp
@@ -48,6 +51,13 @@ public class WebDialog extends BaseTosDialog {
         initToolBar();
         initWeb();
         initSwipeRefresh();
+        logEvent();
+    }
+
+    private void logEvent() {
+        Map<String, String> m = new HashMap<>();
+        m.put("link", link);
+        FabricAnswers.logWeb(m);
     }
 
     private void parseBundle(Bundle b) {

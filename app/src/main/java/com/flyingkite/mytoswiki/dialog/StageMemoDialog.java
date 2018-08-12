@@ -6,6 +6,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
 import com.flyingkite.mytoswiki.R;
@@ -26,6 +27,7 @@ public class StageMemoDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        FabricAnswers.logStageMemo(null);
         dismissWhenClick(R.id.smd_header);
         stageMemo = findViewById(R.id.smd_message);
         // Set share

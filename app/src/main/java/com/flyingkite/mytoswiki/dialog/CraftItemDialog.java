@@ -9,12 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftSkill;
 import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CraftItemDialog extends BaseTosDialog {
     public static final String BUNDLE_CRAFT = "CraftItemDialog.Craft";
@@ -42,6 +46,17 @@ public class CraftItemDialog extends BaseTosDialog {
         super.onFinishInflate(view, dialog);
         parseBundle(getArguments());
         initCraft(craft);
+        logCraft();
+    }
+
+    private void logCraft() {
+        Map<String, String> m = new HashMap<>();
+        String id = "--";
+        if (craft != null) {
+            id = craft.idNorm + " " + craft.name;
+        }
+        m.put("craft", id);
+        FabricAnswers.logCraft(m);
     }
 
     private void parseBundle(Bundle b) {

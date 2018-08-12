@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.MPChartUtil;
@@ -37,6 +38,8 @@ public class MonsterEatingDialog extends BaseTosDialog {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        FabricAnswers.logMonsterEat(null);
         parseBundle(getArguments());
         initChart();
     }

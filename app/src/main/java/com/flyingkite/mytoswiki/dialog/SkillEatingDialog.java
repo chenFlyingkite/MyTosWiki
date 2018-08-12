@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.GsonUtil;
@@ -64,6 +65,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
+        FabricAnswers.logSkillEat(null);
         initSpinners();
         initCard600();
         new LoadDataAsyncTask().executeOnExecutor(sSingle);

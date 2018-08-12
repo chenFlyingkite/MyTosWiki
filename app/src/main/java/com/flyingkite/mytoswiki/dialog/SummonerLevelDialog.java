@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.TosSummonerChart;
@@ -39,6 +40,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
+        FabricAnswers.logSummonerLevel(null);
         initTable();
         initScrollTools(R.id.sldGoTop, R.id.sldGoBottom, tableLibrary.recyclerView);
         initShortcuts();
@@ -48,17 +50,14 @@ public class SummonerLevelDialog extends BaseTosDialog {
 
     private void initTools() {
         View fx = findViewById(R.id.sldSave);
-        fx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean sel = !fx.isSelected();
-                fx.setSelected(sel);
-                int VIS = sel ? View.VISIBLE : View.GONE;
-                int vis = sel ? View.GONE : View.VISIBLE;
+        fx.setOnClickListener((v) -> {
+            boolean sel = !fx.isSelected();
+            fx.setSelected(sel);
+            int VIS = sel ? View.VISIBLE : View.GONE;
+            int vis = sel ? View.GONE : View.VISIBLE;
 
-                setVisibilities(VIS, R.id.sld_chart, R.id.sld_chartOptions);
-                setVisibilities(vis, R.id.sld_table, R.id.sld_shortcut);
-            }
+            setVisibilities(VIS, R.id.sld_chart, R.id.sld_chartOptions);
+            setVisibilities(vis, R.id.sld_table, R.id.sld_shortcut);
         });
     }
 

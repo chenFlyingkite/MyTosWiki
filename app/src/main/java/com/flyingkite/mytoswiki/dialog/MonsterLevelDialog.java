@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.MonsterLvAdapter;
@@ -28,6 +29,7 @@ public class MonsterLevelDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
+        FabricAnswers.logMonsterLevel(null);
         parseBundle(getArguments());
         initTable();
         initScrollTools(R.id.mldGoTop, R.id.mldGoBottom, tableLibrary.recyclerView);

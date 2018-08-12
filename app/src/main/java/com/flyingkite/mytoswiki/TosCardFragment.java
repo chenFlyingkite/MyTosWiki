@@ -16,6 +16,7 @@ import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
@@ -37,8 +38,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class TosCardFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardFragment";
@@ -222,6 +225,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         sortMenu.setOnClickListener(v -> {
             sortWindow.showAsDropDown(v);
+            logSelectCard();
         });
 
         initShareImage(menu);
@@ -783,6 +787,16 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                         v1 = c1.maxHP + c1.maxAttack + c1.maxRecovery;
                         v2 = c2.maxHP + c2.maxAttack + c2.maxRecovery;
                         break;
+                    case R.id.sortCommonSkillCDMax:
+                        dsc = false;
+                        v1 = normSkillCD(c1);
+                        v2 = normSkillCD(c2);
+                        break;
+                    case R.id.sortCommonSpace:
+                        dsc = false;
+                        v1 = c1.cost;
+                        v2 = c2.cost;
+                        break;
                     case R.id.sortCommonRace:
                         dsc = false;
                         v1 = ListUtil.indexOf(commonRace, c1.race);
@@ -796,6 +810,26 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     return Long.compare(v1, v2);
                 }
             };
+        }
+
+        private long normSkillCD(TosCard c) {
+            long norm;
+            final long radix = 100;
+            int c1 = c.skillCDMax1;
+            int c2 = c.skillCDMax2;
+            if (c1 == 0) { // No skills
+                norm = radix * radix;
+            } else if (c2 == 0) { // single skill
+                norm = c1 * radix;
+            } else { // two skills
+                // minCD * radix + maxCD
+                if (c1 < c2) {
+                    norm = c1 * radix + c2;
+                } else {
+                    norm = c2 * radix + c1;
+                }
+            }
+            return norm;
         }
 
         private void logCard(String prefix, TosCard c) {
@@ -862,6 +896,15 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     case R.id.sortCommonMaxSum:
                         msg = String.valueOf(c.maxHP + c.maxAttack + c.maxRecovery);
                         break;
+                    case R.id.sortCommonSkillCDMax:
+                        msg = "" + c.skillCDMax1;
+                        if (c.skillCDMax2 > 0) {
+                             msg += " & " + c.skillCDMax2;
+                        }
+                        break;
+                    case R.id.sortCommonSpace:
+                        msg = String.valueOf(c.cost);
+                        break;
                     case R.id.sortCommonRace:
                         String name = c.id;
                         if (cardLib.adapter != null) {
@@ -886,6 +929,13 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
     }
     // --------
+
+    private void logSelectCard() {
+        Map<String, String> m = new HashMap<>();
+        //String id = craft == null ? "--" : craft.idNorm;
+        //m.put("craft", id);
+        FabricAnswers.logSelectCard(null);
+    }
 
     // The file of dialog setting
     private File getTosCardSortFile() {

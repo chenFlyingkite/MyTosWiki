@@ -6,6 +6,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
 import com.flyingkite.mytoswiki.R;
@@ -30,5 +31,6 @@ public class AboutDialog extends BaseTosDialog {
         bulletin = findViewById(R.id.abd_message);
         String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_BULLETIN_MESSAGE);
         bulletin.setText(Html.fromHtml(s));
+        FabricAnswers.logBulletin(null);
     }
 }

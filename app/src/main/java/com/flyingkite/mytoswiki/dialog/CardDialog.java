@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
@@ -26,7 +27,9 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 
 import java.text.NumberFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @SuppressLint("SetTextI18n")
 public class CardDialog extends BaseTosDialog implements TosPageUtil {
@@ -73,6 +76,17 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         super.onViewCreated(view, savedInstanceState);
         parseBundle(getArguments());
         initCard();
+        logShowCard();
+    }
+
+    private void logShowCard() {
+        Map<String, String> m = new HashMap<>();
+        String id = "--";
+        if (card != null) {
+            id = card.idNorm + " " + card.name;
+        }
+        m.put("card", id);
+        FabricAnswers.logCard(m);
     }
 
     private void parseBundle(Bundle b) {

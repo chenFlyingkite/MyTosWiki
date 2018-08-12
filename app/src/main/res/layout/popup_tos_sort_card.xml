@@ -185,6 +185,14 @@
                     style="@style/sortRadio"
                     android:text="@string/cards_common_maxSum"/>
                 <RadioButton
+                    android:id="@+id/sortCommonSkillCDMax"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_common_skillCDMax"/>
+                <RadioButton
+                    android:id="@+id/sortCommonSpace"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_common_space"/>
+                <RadioButton
                     android:id="@+id/sortCommonRace"
                     style="@style/sortRadio"
                     android:text="@string/cards_common_race"/>

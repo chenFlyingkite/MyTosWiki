@@ -96,6 +96,8 @@
     <string name="cards_common_maxAttack">攻擊力</string>
     <string name="cards_common_macRecovery">回復力</string>
     <string name="cards_common_maxSum">三圍(生+攻+回)</string>
+    <string name="cards_common_skillCDMax">滿等 CD</string>
+    <string name="cards_common_space">空間</string>
     <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
     <string-array name="cards_common_keys_race">
         <item>@string/cards_race_god</item>
