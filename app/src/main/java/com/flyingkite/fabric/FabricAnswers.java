@@ -77,7 +77,7 @@ public class FabricAnswers {
         CustomEvent c = new CustomEvent(name);
         c = addAttr(c, attributes);
         Answers.getInstance().logCustom(c);
-        log("log %s", c);
+        //log("log %s", c);
     }
 
     private static CustomEvent addAttr(CustomEvent c, Map<String, String> attributes) {
