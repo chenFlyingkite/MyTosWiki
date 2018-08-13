@@ -256,14 +256,17 @@
     <string name="cards_improve_two_skill">雙主動技能</string>
     <string name="cards_improve_skill_change">昇華後變更技能</string>
     <string name="cards_improve_combine">可合體</string>
+    <string name="cards_improve_virtualRebirthChange">可異力轉換</string>
 
     <string name="cards_amelioration">昇華</string>
     <string name="cards_awakenRecall">極限突破</string>
     <string name="cards_powerRelease">潛能解放</string>
     <string name="cards_virtualRebirth">異空轉生</string>
+    <string name="cards_virtualRebirth_change">異力轉換</string>
 
     <!-- Crafts & Armed crafts -->
     <string name="craft_selection">%d / %d 個龍刻</string>
+    <string name="craft_arm_craft">武裝龍刻</string>
     <string name="craft_mode">模式</string>
     <string name="craft_charge">增加能量條件</string>
     <string name="craft_precondition">前提</string>

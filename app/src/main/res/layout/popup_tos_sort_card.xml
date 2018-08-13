@@ -422,9 +422,14 @@
                     style="@style/divider_h2px"/>
 
                 <CheckBox
-                    android:id="@+id/sortImproveAmelioration"
+                    android:id="@+id/sortImproveTwoSkill"
                     style="@style/sortText"
-                    android:text="@string/cards_improve_amelioration"/>
+                    android:text="@string/cards_improve_two_skill"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveCombine"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_combine"/>
 
                 <CheckBox
                     android:id="@+id/sortImproveAwakenRecall"
@@ -436,18 +441,14 @@
                     style="@style/sortText"
                     android:text="@string/cards_improve_powerRelease"/>
 
-                <CheckBox
-                    android:id="@+id/sortImproveVirtualRebirth"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_virtualRebirth"/>
 
                 <View
                     style="@style/divider_h2px"/>
 
                 <CheckBox
-                    android:id="@+id/sortImproveTwoSkill"
+                    android:id="@+id/sortImproveAmelioration"
                     style="@style/sortText"
-                    android:text="@string/cards_improve_two_skill"/>
+                    android:text="@string/cards_improve_amelioration"/>
 
                 <CheckBox
                     android:id="@+id/sortImproveSkillChange"
@@ -455,9 +456,14 @@
                     android:text="@string/cards_improve_skill_change"/>
 
                 <CheckBox
-                    android:id="@+id/sortImproveCombine"
+                    android:id="@+id/sortImproveVirtualRebirth"
                     style="@style/sortText"
-                    android:text="@string/cards_improve_combine"/>
+                    android:text="@string/cards_improve_virtualRebirth"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveVirtualRebirthChange"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_virtualRebirthChange"/>
             </LinearLayout>
 
             <TextView

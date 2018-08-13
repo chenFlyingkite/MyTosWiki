@@ -18,11 +18,13 @@ import android.widget.TextView;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.CardCombineAdapter;
 import com.flyingkite.mytoswiki.library.CardEvolveAdapter;
-import com.flyingkite.mytoswiki.library.CardLiteAdapter;
+import com.flyingkite.mytoswiki.library.CardTileAdapter;
+import com.flyingkite.mytoswiki.library.CraftTileAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 
@@ -67,9 +69,10 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     private ViewGroup cardAwkTable;
     private ViewGroup cardPowTable;
     private ViewGroup cardVirTable;
-    private Library<CardLiteAdapter> sameSkillLibrary;
+    private Library<CardTileAdapter> sameSkillLibrary;
     private Library<CardEvolveAdapter> evolveLibrary;
     private Library<CardCombineAdapter> combineLibrary;
+    private Library<CraftTileAdapter> armCraftLibrary;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -125,7 +128,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
 
         if (card == null) return;
 
-        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader, R.id.cardSkill_1, R.id.cardSkill_2);
+        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader);
         loadCardToImageView(cardIcon, card.icon);
         loadCardToImageView(cardIcon2, card.icon);
         loadLinkToImageView(cardImage, card.bigImage, getActivity(), R.drawable.card_background);
@@ -172,6 +175,8 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         setSameSkills(card);
         setEvolve(card);
         setCombine(card);
+        setRebirth(card);
+        setArmCraft(card);
 
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
@@ -261,11 +266,13 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         List<TosCard> same = getCardsByIdNorms(c.sameSkills);
         // Creating library
         sameSkillLibrary = new Library<>(rv);
-        CardLiteAdapter a = new CardLiteAdapter();
+        CardTileAdapter a = new CardTileAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return CardDialog.this.getFragmentManager();
+            }
+        };
         a.setDataList(same);
-        a.setItemListener((tosCard, cardLVH, i) -> {
-            showCardDialog(tosCard);
-        });
         sameSkillLibrary.setViewAdapter(a);
         // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
         rv.removeOnItemTouchListener(noIntercept);
@@ -318,6 +325,50 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         };
         a.setDataList(combine);
         combineLibrary.setViewAdapter(a);
+    }
+
+    private void setArmCraft(TosCard c) {
+        if (c.armCrafts.size() == 0) {
+            findViewById(R.id.cardArmCrafts).setVisibility(View.GONE);
+            return;
+        }
+
+        // Setup recycler
+        RecyclerView rv = findViewById(R.id.cardArmCraft);
+        armCraftLibrary = new Library<>(rv);
+        // Fetch cards
+        List<BaseCraft> arms = getCraftsByIdNorms(c.armCrafts);
+        CraftTileAdapter a = new CraftTileAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return CardDialog.this.getFragmentManager();
+            }
+        };
+        a.setDataList(arms);
+        armCraftLibrary.setViewAdapter(a);
+    }
+
+    private void setRebirth(TosCard c) {
+        if (c.rebirthFrom.length() == 0 && c.rebirthChange.length() == 0) {
+            findViewById(R.id.cardRebirth).setVisibility(View.GONE);
+            return;
+        }
+        setCardArrow(c, c.rebirthFrom, findViewById(R.id.cardRebirthFromContent));
+        setCardArrow(c, c.rebirthChange, findViewById(R.id.cardRebirthChangeContent));
+    }
+
+    private void setCardArrow(TosCard c, String fromCard, View parent) {
+        if (TextUtils.isEmpty(fromCard)) {
+            parent.setVisibility(View.GONE);
+            return;
+        }
+
+        parent.setVisibility(View.VISIBLE);
+        ImageView me = parent.findViewById(R.id.cardEvolveTo);
+        setSimpleCard(me, c);
+
+        ImageView from = parent.findViewById(R.id.cardEvolveFrom);
+        setSimpleCard(from, TosWiki.getCardByIdNorm(fromCard));
     }
 
     private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {

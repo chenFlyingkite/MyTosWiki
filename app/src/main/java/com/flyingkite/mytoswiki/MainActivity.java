@@ -34,6 +34,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_craft_1
             , R.mipmap.app_icon
             , R.drawable.owl2
+            , R.drawable.q1
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp

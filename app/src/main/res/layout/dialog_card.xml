@@ -367,7 +367,7 @@
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
 
-                    <!-- Evolution / Power Release / Virtual Rebirth list-->
+                    <!-- Combine list-->
                     <LinearLayout
                         android:id="@+id/cardCombine"
                         android:layout_width="wrap_content"
@@ -383,6 +383,70 @@
 
                         <include
                             layout="@layout/view_card_row_combine"/>
+                    </LinearLayout>
+
+                    <!-- Virtual Rebirth & change -->
+                    <LinearLayout
+                        android:id="@+id/cardRebirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/t10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cardRebirthFromContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/cardText.header"
+                                android:background="@drawable/bg_rect_skyblue"
+                                android:text="@string/cards_virtualRebirth"/>
+
+                            <include
+                                android:id="@+id/cardRebirthFrom"
+                                layout="@layout/view_card_row_rebirth"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cardRebirthChangeContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/cardText.header"
+                                android:background="@drawable/bg_rect_skyblue"
+                                android:text="@string/cards_virtualRebirth_change"/>
+
+                            <include
+                                android:id="@+id/cardRebirthChange"
+                                layout="@layout/view_card_row_rebirth"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Arm crafts -->
+
+                    <LinearLayout
+                        android:id="@+id/cardArmCrafts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/t10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/cardText.header"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/craft_arm_craft"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/cardArmCraft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/t50dp" />
+
                     </LinearLayout>
 
                     <!-- Card info : Amelioration 昇華 -->

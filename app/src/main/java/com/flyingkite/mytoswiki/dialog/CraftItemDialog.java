@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CraftItemDialog extends BaseTosDialog {
+    public static final String TAG = "CraftItemDialog";
     public static final String BUNDLE_CRAFT = "CraftItemDialog.Craft";
 
     // Views

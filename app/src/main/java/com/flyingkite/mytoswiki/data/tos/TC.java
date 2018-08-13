@@ -62,6 +62,9 @@ public class TC {
     public static final String combineTo = "combineTo";
     public static final String skillChange = "skillChange";
     public static final String sameSkills = "sameSkills";
+    public static final String rebirthFrom = "rebirthFrom";
+    public static final String rebirthChange = "rebirthChange";
+    public static final String armCrafts = "armCrafts";
 
     // Automation
 //    public static void g() {
@@ -85,7 +88,7 @@ public class TC {
 //                skillVirBattleName, skillVirBattleLink,
 //                evolveFrom, evolveNeed, evolveTo,
 //                combineFrom, combineTo,
-//                skillChange, sameSkills);
+//                skillChange, sameSkills, rebirthFrom, rebirthChange);
 //    }
 //
 //    private static void f(String... param) {

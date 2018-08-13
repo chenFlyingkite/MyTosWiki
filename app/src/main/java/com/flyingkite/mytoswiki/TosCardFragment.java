@@ -96,6 +96,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortImproveTwo;
     private CheckBox sortImproveChg; // Skill change
     private CheckBox sortImproveCom; // Combine cards
+    private CheckBox sortImproveVr2;
     // Hide cards
     private ViewGroup sortHide;
     // Display card name
@@ -319,6 +320,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortImproveTwo = menu.findViewById(R.id.sortImproveTwoSkill);
         sortImproveChg = menu.findViewById(R.id.sortImproveSkillChange);
         sortImproveCom = menu.findViewById(R.id.sortImproveCombine);
+        sortImproveVr2 = menu.findViewById(R.id.sortImproveVirtualRebirthChange);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
     }
@@ -689,6 +691,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortImproveCom.isChecked()) {
                     accept &= c.combineFrom.size() > 0 && c.combineTo.size() > 0;
+                }
+                if (sortImproveVr2.isChecked()) {
+                    accept &= c.rebirthChange.length() > 0;
                 }
             }
             return accept;

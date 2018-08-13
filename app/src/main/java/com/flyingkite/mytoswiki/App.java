@@ -13,6 +13,7 @@ import android.support.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.flyingkite.crashlytics.CrashReport;
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -44,6 +45,7 @@ public class App extends MultiDexApplication {
         CrashReport.init(this, DEBUG);
         FirebaseApp.initializeApp(this);
         RemoteConfig.init(DEBUG, R.xml.remote_config_default);
+        FabricAnswers.logAppOnCreate(null);
         TosWiki.init(this);
         //initCrashHandler();
     }

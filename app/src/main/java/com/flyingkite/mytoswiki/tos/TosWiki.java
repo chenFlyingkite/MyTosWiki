@@ -8,6 +8,7 @@ import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -23,6 +24,7 @@ public class TosWiki {
     private static CraftsNormal[] normalCrafts;
     private static CraftsArm[] armCrafts;
     private static HashMap<String, TosCard> allCardsByIdNorm = new HashMap<>();
+    private static HashMap<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_NORMAL_CRAFTS = "Crafts";
@@ -54,6 +56,11 @@ public class TosWiki {
             t.tic();
             normalCrafts = GsonUtil.loadAsset("crafts.json", CraftsNormal[].class, ctx.getAssets());
             t.tac("%s craft loaded, Norm", len(normalCrafts));
+
+            for (CraftsNormal c : normalCrafts) {
+                allCraftsByIdNorm.put(c.idNorm, c);
+            }
+            monitorDB.notifyClientsState();
         });
 
         p.submit(() -> {
@@ -61,6 +68,11 @@ public class TosWiki {
             t.tic();
             armCrafts = GsonUtil.loadAsset("armCrafts.json", CraftsArm[].class, ctx.getAssets());
             t.tac("%s craft loaded, Arm", len(armCrafts));
+
+            for (CraftsArm c : armCrafts) {
+                allCraftsByIdNorm.put(c.idNorm, c);
+            }
+            monitorDB.notifyClientsState();
         });
     }
 
@@ -74,6 +86,10 @@ public class TosWiki {
 
     public static TosCard getCardByIdNorm(String id) {
         return allCardsByIdNorm.get(id);
+    }
+
+    public static BaseCraft getCraftByIdNorm(String id) {
+        return allCraftsByIdNorm.get(id);
     }
 
     public static CraftsNormal[] allNormalCrafts() {

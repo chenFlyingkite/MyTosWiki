@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.flyingkite.library.log.Loggable;
+import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
+import com.flyingkite.mytoswiki.dialog.CraftItemDialog;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 
 import java.util.ArrayList;
@@ -34,6 +36,24 @@ public interface TosPageUtil extends Loggable, GlideUtil {
         showCardDialog(c);
     }
 
+    default CraftItemDialog showCraftDialog(BaseCraft craft) {
+        CraftItemDialog d = new CraftItemDialog();
+        Bundle b = new Bundle();
+        b.putParcelable(CraftItemDialog.BUNDLE_CRAFT, craft);
+        d.setArguments(b);
+        d.show(getFragmentManager(), CraftItemDialog.TAG);
+        return d;
+    }
+
+    default void showCraftDialog(String idNorm) {
+        BaseCraft c = TosWiki.getCraftByIdNorm(idNorm);
+        if (c == null) {
+            logW("craft %s not ready", idNorm);
+            return;
+        }
+        showCraftDialog(c);
+    }
+
     default void setSimpleCard(ImageView view, TosCard c) {
         loadCardToImageView(view, c.icon);
         view.setOnClickListener((v) -> {
@@ -46,6 +66,23 @@ public interface TosPageUtil extends Loggable, GlideUtil {
         for (int i = 0; i < idNorms.size(); i++) {
             String idNorm = idNorms.get(i);
             ans.add(TosWiki.getCardByIdNorm(idNorm));
+        }
+        return ans;
+    }
+
+
+    default void setSimpleCraft(ImageView view, BaseCraft c) {
+        loadCraftToImageView(view, c.icon.iconLink);
+        view.setOnClickListener((v) -> {
+            showCraftDialog(c);
+        });
+    }
+
+    default List<BaseCraft> getCraftsByIdNorms(List<String> idNorms) {
+        List<BaseCraft> ans = new ArrayList<>();
+        for (int i = 0; i < idNorms.size(); i++) {
+            String idNorm = idNorms.get(i);
+            ans.add(TosWiki.getCraftByIdNorm(idNorm));
         }
         return ans;
     }

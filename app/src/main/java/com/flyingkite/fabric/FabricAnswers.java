@@ -1,6 +1,8 @@
 package com.flyingkite.fabric;
 
 import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.AnswersEvent;
+import com.crashlytics.android.answers.ContentViewEvent;
 import com.crashlytics.android.answers.CustomEvent;
 import com.flyingkite.library.log.Loggable;
 
@@ -72,6 +74,15 @@ public class FabricAnswers {
     }
     //-- Tos Items
 
+    //-- App statistics
+    public static void logAppOnCreate(Map<String, String> attributes) {
+        ContentViewEvent c = new ContentViewEvent();
+        c.putContentName("App.OnCreate");
+        c = addAttr(c, attributes);
+
+        Answers.getInstance().logContentView(c);
+    }
+    //-- App statistics
 
     private static void logCustom(String name, Map<String, String> attributes) {
         CustomEvent c = new CustomEvent(name);
@@ -80,7 +91,7 @@ public class FabricAnswers {
         //log("log %s", c);
     }
 
-    private static CustomEvent addAttr(CustomEvent c, Map<String, String> attributes) {
+    private static <T extends AnswersEvent> T addAttr(T c, Map<String, String> attributes) {
         if (attributes != null) {
             for (String k : attributes.keySet()) {
                 String v = attributes.get(k);
