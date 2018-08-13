@@ -92,8 +92,16 @@ public class App extends MultiDexApplication {
         Toast.makeText(me, id, Toast.LENGTH_LONG).show();
     }
 
+    public static void showToastShort(@StringRes int id) {
+        Toast.makeText(me, id, Toast.LENGTH_SHORT).show();
+    }
+
     public static void showToast(String s) {
         Toast.makeText(me, s, Toast.LENGTH_LONG).show();
+    }
+
+    public static void showToastShort(String s) {
+        Toast.makeText(me, s, Toast.LENGTH_SHORT).show();
     }
 
     public static Uri getUriOfResource(@AnyRes int resId) {

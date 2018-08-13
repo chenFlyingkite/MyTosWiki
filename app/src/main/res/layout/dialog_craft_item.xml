@@ -33,8 +33,7 @@
 
                 <ImageView
                     android:id="@+id/craftShare"
-                    style="@style/card_icon"
-                    android:src="@drawable/ic_save_white_48dp"
+                    style="@style/card_icon.saveW"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/craftLink"/>
             </RelativeLayout>

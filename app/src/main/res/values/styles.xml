@@ -181,6 +181,9 @@
     <style name="sortIcon.rect">
         <item name="android:background">@drawable/bg_press_sky_rect</item>
     </style>
+    <style name="sortIcon.saveW">
+        <item name="android:src">@drawable/ic_save_white_48dp</item>
+    </style>
     <style name="sortStarText" parent="sortIcon">
         <item name="android:textColor">#fff</item>
         <item name="android:shadowColor">#00a</item>
@@ -309,6 +312,9 @@
     </style>
     <style name="card_icon.chrome">
         <item name="android:src">@drawable/logo_chrome</item>
+    </style>
+    <style name="card_icon.saveW">
+        <item name="android:src">@drawable/ic_save_white_48dp</item>
     </style>
 
     <style name="icon_t40">

@@ -27,8 +27,7 @@
 
                 <ImageView
                     android:id="@+id/tosSave"
-                    style="@style/sortIcon"
-                    android:src="@drawable/ic_save_white_48dp"/>
+                    style="@style/sortIcon.saveW"/>
             </LinearLayout>
 
             <TextView

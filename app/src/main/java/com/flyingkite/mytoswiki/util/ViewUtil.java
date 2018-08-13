@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Checkable;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,29 @@ public interface ViewUtil {
     default void setViewVisibility(View v, boolean show) {
         int vis = show ? View.VISIBLE : View.GONE;
         v.setVisibility(vis);
+    }
+
+    default void setVisibilityByChild(ViewGroup vg) {
+        int n = vg.getChildCount();
+        if (n == 0) return;
+
+        boolean show = false;
+        for (int i = 0; i < n && !show; i++) {
+            show = vg.getChildAt(i).getVisibility() == View.VISIBLE;
+        }
+
+        setViewVisibility(vg, show);
+    }
+
+    default <T extends RecyclerView.ViewHolder> void fillItemsLinearly(LinearLayout linear, RecyclerView.Adapter<T> adapter) {
+        linear.removeAllViews();
+        int n = adapter.getItemCount();
+        for (int i = 0; i < n; i++) {
+            T vg = adapter.onCreateViewHolder(linear, adapter.getItemViewType(i));
+            adapter.onBindViewHolder(vg, i);
+            linear.addView(vg.itemView);
+        }
+        linear.requestLayout();
     }
 
     default void setVisibilities(int vis, View... vs) {

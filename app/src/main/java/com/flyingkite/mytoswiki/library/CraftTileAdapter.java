@@ -27,10 +27,7 @@ public abstract class CraftTileAdapter extends CraftLiteAdapter implements TosPa
 
         @Override
         public void setCraft(BaseCraft c) {
-            super.setCraft(c);
-            img.setOnClickListener((v) -> {
-                showCraftDialog(c);
-            });
+            setSimpleCraft(img, c);
         }
     }
 }

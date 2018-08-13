@@ -27,10 +27,7 @@ public abstract class CardTileAdapter extends CardLiteAdapter implements TosPage
 
         @Override
         public void setCard(TosCard c) {
-            super.setCard(c);
-            img.setOnClickListener((v) -> {
-                showCardDialog(c);
-            });
+            setSimpleCard(img, c);
         }
     }
 }

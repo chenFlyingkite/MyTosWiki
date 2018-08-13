@@ -48,8 +48,7 @@
 
                 <ImageView
                     android:id="@+id/cardShare"
-                    style="@style/card_icon"
-                    android:src="@drawable/ic_save_white_48dp"/>
+                    style="@style/card_icon.saveW"/>
             </LinearLayout>
 
             <TextView
@@ -361,10 +360,11 @@
                         <include
                             layout="@layout/view_card_row_evolve_header"/>
 
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/cardEvolveRV"
+                        <LinearLayout
+                            android:id="@+id/cardEvolveLinear"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"/>
                     </LinearLayout>
 
                     <!-- Combine list-->
@@ -387,7 +387,7 @@
 
                     <!-- Virtual Rebirth & change -->
                     <LinearLayout
-                        android:id="@+id/cardRebirth"
+                        android:id="@+id/cardRebirthCraft"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/t10dp"
@@ -429,12 +429,10 @@
                     </LinearLayout>
 
                     <!-- Arm crafts -->
-
                     <LinearLayout
                         android:id="@+id/cardArmCrafts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="@dimen/t10dp"
                         android:orientation="vertical">
 
                         <TextView

@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
+import android.app.FragmentManager;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -38,7 +39,7 @@ public abstract class CardEvolveAdapter extends RVAdapter<Evolve, CardEvolveAdap
     public class EvolveVH extends RecyclerView.ViewHolder implements GlideUtil, ViewUtil {
         private ImageView from;
         private ImageView to;
-        private Library<CardLiteAdapter> needLibrary;
+        private Library<CardTileAdapter> needLibrary;
 
         public EvolveVH(View v) {
             super(v);
@@ -53,13 +54,18 @@ public abstract class CardEvolveAdapter extends RVAdapter<Evolve, CardEvolveAdap
             setSimpleCard(from, fc);
             setSimpleCard(to, tc);
             List<TosCard> needs = getCardsByIdNorms(ev.evolveNeed);
-            CardLiteAdapter a = new CardLiteAdapter();
+            CardTileAdapter a = new CardTileAdapter() {
+                @Override
+                public FragmentManager getFragmentManager() {
+                    return CardEvolveAdapter.this.getFragmentManager();
+                }
+            };
             a.setDataList(needs);
             a.setItemListener((tosCard, cardLVH, i) -> {
                 showCardDialog(tosCard);
             });
             needLibrary.setViewAdapter(a);
-            RecyclerView rv = needLibrary.recyclerView;
+            //RecyclerView rv = needLibrary.recyclerView;
             // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
             //rv.removeOnItemTouchListener(noIntercept);
             //rv.addOnItemTouchListener(noIntercept);

@@ -11,6 +11,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
 import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
+import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
@@ -34,9 +35,9 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_craft_1
             , R.mipmap.app_icon
             , R.drawable.owl2
-            , R.drawable.q1
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
+            , R.drawable.q1
             , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
@@ -109,6 +110,9 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         break;
                     case R.drawable.owl2:
                         new StageMemoDialog().show(getActivity());
+                        break;
+                    case R.drawable.q1:
+                        new HelpDialog().show(getActivity());
                         break;
                 }
             }

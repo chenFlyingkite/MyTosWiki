@@ -387,6 +387,8 @@
     <string name="stage_memo_detail">神魔數學家團隊會在此填上關卡的過關小攻略。\n提供給召喚師做參考。</string>
     <string name="stage_memo_header">筆記內容：</string>
 
+    <string name="help_title">神魔數學家 功能小提示</string>
+
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)

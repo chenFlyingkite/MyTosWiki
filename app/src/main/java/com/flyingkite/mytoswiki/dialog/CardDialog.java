@@ -177,6 +177,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         setCombine(card);
         setRebirth(card);
         setArmCraft(card);
+        setVisibilityByChild(findViewById(R.id.cardRebirthCraft));
 
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
@@ -251,7 +252,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setSameSkills(TosCard c) {
-        if (c.sameSkills.size() == 0) {
+        if (c.sameSkills.isEmpty()) {
             findViewById(R.id.cardSameSkill).setVisibility(View.GONE);
             return;
         }
@@ -275,19 +276,19 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         a.setDataList(same);
         sameSkillLibrary.setViewAdapter(a);
         // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
-        rv.removeOnItemTouchListener(noIntercept);
-        rv.addOnItemTouchListener(noIntercept);
+        if (same.size() > 7) { // since 8 items will directly out of the width
+            rv.removeOnItemTouchListener(noIntercept);
+            rv.addOnItemTouchListener(noIntercept);
+        }
     }
 
     private void setEvolve(TosCard c) {
-        if (c.evolveInfo.size() == 0) {
+        if (c.evolveInfo.isEmpty()) {
             findViewById(R.id.cardEvolve).setVisibility(View.GONE);
             return;
         }
 
         // Setup recycler
-        RecyclerView rv = findViewById(R.id.cardEvolveRV);
-        evolveLibrary = new Library<>(rv, true);
         CardEvolveAdapter a = new CardEvolveAdapter() {
             @Override
             public FragmentManager getFragmentManager() {
@@ -295,15 +296,12 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
             }
         };
         a.setDataList(c.evolveInfo);
-        evolveLibrary.setViewAdapter(a);
-        //rv.addItemDecoration(getRVDivider(getActivity(), true, getActivity().getResources().getDrawable(R.drawable.divider_h)));
-        // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
-        //rv.removeOnItemTouchListener(noIntercept);
-        //rv.addOnItemTouchListener(noIntercept);
+
+        fillItemsLinearly(findViewById(R.id.cardEvolveLinear), a);
     }
 
     private void setCombine(TosCard c) {
-        if (c.combineFrom.size() == 0 || c.combineTo.size() == 0) {
+        if (c.combineFrom.isEmpty() || c.combineTo.isEmpty()) {
             findViewById(R.id.cardCombine).setVisibility(View.GONE);
             return;
         }
@@ -328,7 +326,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setArmCraft(TosCard c) {
-        if (c.armCrafts.size() == 0) {
+        if (c.armCrafts.isEmpty()) {
             findViewById(R.id.cardArmCrafts).setVisibility(View.GONE);
             return;
         }
@@ -349,10 +347,6 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setRebirth(TosCard c) {
-        if (c.rebirthFrom.length() == 0 && c.rebirthChange.length() == 0) {
-            findViewById(R.id.cardRebirth).setVisibility(View.GONE);
-            return;
-        }
         setCardArrow(c, c.rebirthFrom, findViewById(R.id.cardRebirthFromContent));
         setCardArrow(c, c.rebirthChange, findViewById(R.id.cardRebirthChangeContent));
     }

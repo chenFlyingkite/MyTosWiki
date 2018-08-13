@@ -33,6 +33,10 @@ public class FabricAnswers {
         logCustom("Bulletin", attributes);
     }
 
+    public static void logHelp(Map<String, String> attributes) {
+        logCustom("Help", attributes);
+    }
+
     public static void logStageMemo(Map<String, String> attributes) {
         logCustom("StageMemo", attributes);
     }
