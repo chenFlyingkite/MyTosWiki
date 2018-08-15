@@ -70,7 +70,6 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     private ViewGroup cardPowTable;
     private ViewGroup cardVirTable;
     private Library<CardTileAdapter> sameSkillLibrary;
-    private Library<CardEvolveAdapter> evolveLibrary;
     private Library<CardCombineAdapter> combineLibrary;
     private Library<CraftTileAdapter> armCraftLibrary;
 
@@ -80,16 +79,6 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         parseBundle(getArguments());
         initCard();
         logShowCard();
-    }
-
-    private void logShowCard() {
-        Map<String, String> m = new HashMap<>();
-        String id = "--";
-        if (card != null) {
-            id = card.idNorm + " " + card.name;
-        }
-        m.put("card", id);
-        FabricAnswers.logCard(m);
     }
 
     private void parseBundle(Bundle b) {
@@ -129,15 +118,19 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         if (card == null) return;
 
         dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader);
-        loadCardToImageView(cardIcon, card.icon);
-        loadCardToImageView(cardIcon2, card.icon);
+        loadCardToImageView(cardIcon, card);
+        loadCardToImageView(cardIcon2, card);
         loadLinkToImageView(cardImage, card.bigImage, getActivity(), R.drawable.card_background);
-        cardIcon.setOnClickListener(this::shareImage);
+        cardIcon.setOnClickListener((v) -> {
+            shareImage(v);
+            logShare("icon");
+        });
         cardLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(card.wikiLink);
         });
         findViewById(R.id.cardShare).setOnClickListener((v) -> {
             shareImage(findViewById(R.id.cardContent));
+            logShare("table");
         });
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
 
@@ -466,4 +459,28 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         d.setArguments(b);
         d.show(getFragmentManager(), MonsterEatingDialog.TAG);
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logCard(m);
+    }
+
+    private void logShowCard() {
+        Map<String, String> m = new HashMap<>();
+        String id = "--";
+        if (card != null) {
+            id = card.idNorm + " " + card.name;
+        }
+        m.put("card", id);
+        FabricAnswers.logCard(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logCard(m);
+    }
+    //-- Events
 }

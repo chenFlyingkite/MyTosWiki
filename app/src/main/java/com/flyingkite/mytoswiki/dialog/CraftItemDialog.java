@@ -50,16 +50,6 @@ public class CraftItemDialog extends BaseTosDialog {
         logCraft();
     }
 
-    private void logCraft() {
-        Map<String, String> m = new HashMap<>();
-        String id = "--";
-        if (craft != null) {
-            id = craft.idNorm + " " + craft.name;
-        }
-        m.put("craft", id);
-        FabricAnswers.logCraft(m);
-    }
-
     private void parseBundle(Bundle b) {
         boolean hasCurve = b != null && b.containsKey(BUNDLE_CRAFT);
         if (hasCurve) {
@@ -91,7 +81,10 @@ public class CraftItemDialog extends BaseTosDialog {
 
         GlideApp.with(getActivity()).load(c.icon.iconLink).placeholder(R.drawable.unknown_craft).into(craftIcon);
         dismissWhenClick(R.id.craftTop, R.id.craftMark, R.id.craftEnd, R.id.craftMajor, R.id.craftMajorHeader);
-        craftIcon.setOnClickListener(this::shareImage);
+        craftIcon.setOnClickListener((v) -> {
+            shareImage(v);
+            logShare("table");
+        });
         craftLink.setOnClickListener((v) -> {
             viewLinkAsWebDialog(craft.link);
         });
@@ -192,4 +185,22 @@ public class CraftItemDialog extends BaseTosDialog {
         rcry.setText(sRe);
         setViewVisibility(parent, true);
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logCraft(m);
+    }
+
+    private void logCraft() {
+        Map<String, String> m = new HashMap<>();
+        String id = "--";
+        if (craft != null) {
+            id = craft.idNorm + " " + craft.name;
+        }
+        m.put("craft", id);
+        FabricAnswers.logCraft(m);
+    }
+    //-- Events
 }

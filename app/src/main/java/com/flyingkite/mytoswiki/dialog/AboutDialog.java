@@ -11,6 +11,9 @@ import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
 import com.flyingkite.mytoswiki.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class AboutDialog extends BaseTosDialog {
     @Override
     protected int getLayoutId() {
@@ -31,6 +34,20 @@ public class AboutDialog extends BaseTosDialog {
         bulletin = findViewById(R.id.abd_message);
         String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_BULLETIN_MESSAGE);
         bulletin.setText(Html.fromHtml(s));
-        FabricAnswers.logBulletin(null);
+        logImpression();
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logCraft(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logBulletin(m);
+    }
+    //-- Events
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="iconsNumber">
+        <item>@drawable/num_01</item>
+        <item>@drawable/num_02</item>
+        <item>@drawable/num_03</item>
+        <item>@drawable/num_04</item>
+        <item>@drawable/num_05</item>
+        <item>@drawable/num_06</item>
+        <item>@drawable/num_07</item>
+        <item>@drawable/num_08</item>
+        <item>@drawable/num_09</item>
+        <item>@drawable/num_10</item>
+        <item>@drawable/num_11</item>
+        <item>@drawable/num_12</item>
+        <item>@drawable/num_13</item>
+        <item>@drawable/num_14</item>
+        <item>@drawable/num_15</item>
+        <item>@drawable/num_16</item>
+        <item>@drawable/num_17</item>
+        <item>@drawable/num_18</item>
+        <item>@drawable/num_19</item>
+        <item>@drawable/num_20</item>
+        <item>@drawable/num_21</item>
+        <item>@drawable/num_22</item>
+        <item>@drawable/num_23</item>
+        <item>@drawable/num_24</item>
+        <item>@drawable/num_25</item>
+        <item>@drawable/num_26</item>
+        <item>@drawable/num_27</item>
+        <item>@drawable/num_28</item>
+        <item>@drawable/num_29</item>
+        <item>@drawable/num_30</item>
+    </integer-array>
+    <integer-array name="iconsNumberRed">
+        <item>@drawable/num_r_01</item>
+        <item>@drawable/num_r_02</item>
+        <item>@drawable/num_r_03</item>
+        <item>@drawable/num_r_04</item>
+        <item>@drawable/num_r_05</item>
+        <item>@drawable/num_r_06</item>
+        <item>@drawable/num_r_07</item>
+        <item>@drawable/num_r_08</item>
+        <item>@drawable/num_r_09</item>
+        <item>@drawable/num_r_10</item>
+        <item>@drawable/num_r_11</item>
+        <item>@drawable/num_r_12</item>
+        <item>@drawable/num_r_13</item>
+        <item>@drawable/num_r_14</item>
+        <item>@drawable/num_r_15</item>
+        <item>@drawable/num_r_16</item>
+        <item>@drawable/num_r_17</item>
+        <item>@drawable/num_r_18</item>
+        <item>@drawable/num_r_19</item>
+        <item>@drawable/num_r_20</item>
+        <item>@drawable/num_r_21</item>
+        <item>@drawable/num_r_22</item>
+        <item>@drawable/num_r_23</item>
+        <item>@drawable/num_r_24</item>
+        <item>@drawable/num_r_25</item>
+        <item>@drawable/num_r_26</item>
+        <item>@drawable/num_r_27</item>
+        <item>@drawable/num_r_28</item>
+        <item>@drawable/num_r_29</item>
+        <item>@drawable/num_r_30</item>
+    </integer-array>
+</resources>

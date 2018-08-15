@@ -38,7 +38,7 @@ public class CardLiteAdapter extends RVAdapter<TosCard, CardLiteAdapter.CardLVH,
         }
 
         public void setCard(TosCard c) {
-            loadCardToImageView(img, c.icon);
+            loadCardToImageView(img, c);
         }
     }
 }

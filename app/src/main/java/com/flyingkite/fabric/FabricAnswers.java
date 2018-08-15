@@ -4,6 +4,7 @@ import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.AnswersEvent;
 import com.crashlytics.android.answers.ContentViewEvent;
 import com.crashlytics.android.answers.CustomEvent;
+import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.library.log.Loggable;
 
 import java.util.Map;
@@ -59,7 +60,11 @@ public class FabricAnswers {
     //-- Tool bars
 
     //-- Tos Items
-    // Show up one craft
+    public static void logCardFragment(Map<String, String> attributes) {
+        logCustom("CardFragment", attributes);
+    }
+
+    // Show up one card
     public static void logCard(Map<String, String> attributes) {
         logCustom("Card", attributes);
     }
@@ -84,13 +89,25 @@ public class FabricAnswers {
         c.putContentName("App.OnCreate");
         c = addAttr(c, attributes);
 
+        c.putCustomAttribute("FCMToken", token());
         Answers.getInstance().logContentView(c);
     }
     //-- App statistics
+//    2018-08-14 12:19:57.921 E/Answers: Invalid user input detected
+//    java.lang.IllegalArgumentException: String is too long, truncating to 100 characters
+
+    private static String token() {
+        String s = CloudMessaging.getToken();
+        if (s.length() > 100) {
+            s = s.substring(0, 100);
+        }
+        return s;
+    }
 
     private static void logCustom(String name, Map<String, String> attributes) {
         CustomEvent c = new CustomEvent(name);
         c = addAttr(c, attributes);
+        c.putCustomAttribute("FCMToken", token());
         Answers.getInstance().logCustom(c);
         //log("log %s", c);
     }

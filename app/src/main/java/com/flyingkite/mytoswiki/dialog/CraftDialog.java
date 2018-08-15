@@ -35,8 +35,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CraftDialog extends BaseTosDialog {
@@ -76,7 +78,7 @@ public class CraftDialog extends BaseTosDialog {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        logShowCraft();
+        logImpression();
 
         initClose();
         initSortMenu();
@@ -112,13 +114,28 @@ public class CraftDialog extends BaseTosDialog {
         });
         craftLibrary.setViewAdapter(a);
         applySelection();
-
-        countSet(list);
+        //countSet();
     }
+
+    /*
+    private void testAllCraftDialog() {
+        for (int i = 0; i < allCraft.size(); i++) {
+            BaseCraft ci = allCraft.get(i);
+            sSingle.submit(() -> {
+                Say.Log("+ #%s show %s", ci.idNorm, ci.name);
+                CraftItemDialog d = showCraftDialog(ci);
+                Say.sleepI(500);
+                Say.Log("- #%s hide %s", ci.idNorm, ci.name);
+                d.dismiss();
+            });
+        }
+    }
+    */
 
     private void countSet(List<BaseCraft> list) {
         //noinspection PointlessBooleanExpression
         if (false == BuildConfig.DEBUG) return;
+
 
         Set<String> s = new HashSet<>();
         int n;
@@ -230,18 +247,6 @@ public class CraftDialog extends BaseTosDialog {
         initDisplay(menu);
     }
 
-    private void logSelectCraft() {
-        //Map<String, String> m = new HashMap<>();
-        //String id = craft == null ? "--" : craft.idNorm;
-        //m.put("craft", id);
-        FabricAnswers.logSelectCraft(null);
-    }
-
-    private void logShowCraft() {
-        //Map<String, String> m = new HashMap<>();
-        FabricAnswers.logCraftDialog(null);
-    }
-
     private void initSortReset(View menu) {
         sortReset = menu.findViewById(R.id.sortReset);
         sortReset.setOnClickListener(this::clickReset);
@@ -287,6 +292,7 @@ public class CraftDialog extends BaseTosDialog {
             View view = craftLibrary.recyclerView;
             String name = ShareHelper.cacheName("1.png");
             ShareHelper.shareImage(getActivity(), view, name);
+            logShare("library");
         });
     }
 
@@ -294,20 +300,6 @@ public class CraftDialog extends BaseTosDialog {
         return setTargetChildChick(menu, id, childClick);
     }
     // --------
-
-//    private void addCraftFragment() {
-//        TosCraftFragment f = new TosCraftFragment();
-//
-//        FragmentManager fm = null;//getFragmentManager();
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-//            fm = getChildFragmentManager();
-//            FragmentTransaction fx = fm.beginTransaction();
-//            fx.replace(R.id.craftFragment, f, TosCraftFragment.TAG);
-//            fx.commitAllowingStateLoss();
-//
-//            fm.executePendingTransactions();
-//        }
-//    }
 
     // click on sort items  --------
     private void clickReset(View v) {
@@ -661,4 +653,24 @@ public class CraftDialog extends BaseTosDialog {
             applySelection();
         }
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logCraftDialog(m);
+    }
+
+    private void logSelectCraft() {
+        Map<String, String> m = new HashMap<>();
+        m.put("craft", "1");
+        FabricAnswers.logSelectCraft(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logCraftDialog(m);
+    }
+    //-- Events
 }

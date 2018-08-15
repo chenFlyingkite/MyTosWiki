@@ -131,7 +131,7 @@ public class CardAdapter
             boolean hasMsg = msg != null;
             text.setText(name);
             message.setText(msg);
-            loadImage(thumb, c.icon);
+            loadCardToImageView(thumb, c);
             setVisible(text, !hasMsg);
             setVisible(message, hasMsg);
         }
@@ -140,10 +140,6 @@ public class CardAdapter
             if (v != null) {
                 v.setVisibility(visible ? View.VISIBLE : View.GONE);
             }
-        }
-
-        private void loadImage(ImageView v, String url) {
-            loadCardToImageView(v, url);
         }
     }
 }

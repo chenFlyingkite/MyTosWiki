@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.util.PageUtil;
+import com.flyingkite.mytoswiki.util.TosPageUtil;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -22,7 +23,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTosDialog extends DialogFragment implements
-        PageUtil,
+        PageUtil, TosPageUtil,
         DialogInterface.OnKeyListener,
         DialogInterface.OnShowListener {
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());

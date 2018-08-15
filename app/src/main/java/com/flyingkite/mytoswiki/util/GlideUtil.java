@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 public interface GlideUtil {
 
@@ -14,6 +15,19 @@ public interface GlideUtil {
 
     default void loadCardToImageView(ImageView img, String link) {
         loadLinkToImageView(img, link, img.getContext(), R.drawable.unknown_card);
+    }
+
+    default void loadCardToImageView(ImageView img, TosCard card) {
+        int h = R.drawable.unknown_card;
+        switch (card.attribute) {
+            case "水": h = R.drawable.empty_w; break;
+            case "火": h = R.drawable.empty_f; break;
+            case "木": h = R.drawable.empty_e; break;
+            case "光": h = R.drawable.empty_l; break;
+            case "暗": h = R.drawable.empty_d; break;
+        }
+
+        loadLinkToImageView(img, card.icon, img.getContext(), h);
     }
 
     default void loadLinkToImageView(ImageView img, String link, Context context, int holderId) {

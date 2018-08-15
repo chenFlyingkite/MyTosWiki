@@ -17,20 +17,25 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.GsonUtil;
+import com.flyingkite.library.widget.IconRVAdapter;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
+import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class SkillEatingDialog extends BaseTosDialog {
+public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
 
     @Override
     protected int getLayoutId() {
@@ -65,7 +70,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
-        FabricAnswers.logSkillEat(null);
+        logImpression();
         initSpinners();
         initCard600();
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
@@ -86,6 +91,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
             Say.Log("s = %s", shareText);
             shareString(shareText);
+            logShare("eat");
         });
 
         findViewById(R.id.skillShareTable).setOnClickListener((v) -> {
@@ -101,12 +107,18 @@ public class SkillEatingDialog extends BaseTosDialog {
             }
             Say.Log("s = %s", s);
             shareString(s.toString());
+            logShare("table");
         });
+
+        dismissWhenClick(R.id.selConcept);
+//        findViewById(R.id.skillEatLevel).setOnClickListener((v) -> {
+//            new SkillEatLevelDialog().show(getActivity());
+//        });
     }
 
     private void initCard600() {
         card600 = new Library<>(findViewById(R.id.skillCard600));
-        IconAdapter adapter = new IconAdapter() {
+        IconAdapter a = new IconAdapter() {
             @Override
             protected int holderLayout() {
                 return R.layout.view_small_image;
@@ -120,8 +132,15 @@ public class SkillEatingDialog extends BaseTosDialog {
         List<Integer> list = Arrays.asList(R.drawable.card_1709, R.drawable.card_1735
                 , R.drawable.card_1777, R.drawable.card_1801
         );
-        adapter.setDataList(list);
-        card600.setViewAdapter(adapter);
+        a.setDataList(list);
+        final List<TosCard> cards = getCardsByIdNorms(Arrays.asList("1709", "1735", "1777", "1801"));
+        a.setItemListener(new IconAdapter.ItemListener() {
+            @Override
+            public void onClick(Integer item, IconRVAdapter.IconVH vh, int position) {
+                showCardDialog(cards.get(position));
+            }
+        });
+        card600.setViewAdapter(a);
     }
 
     private void initTable() {
@@ -271,4 +290,18 @@ public class SkillEatingDialog extends BaseTosDialog {
             updateFromData();
         }
     }
+
+    //-- Events
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logSkillEat(m);
+    }
+
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logSkillEat(m);
+    }
+    //-- Events
 }

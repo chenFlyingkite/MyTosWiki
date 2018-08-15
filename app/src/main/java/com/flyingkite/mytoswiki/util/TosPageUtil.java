@@ -56,7 +56,7 @@ public interface TosPageUtil extends Loggable, GlideUtil {
     }
 
     default void setSimpleCard(ImageView view, TosCard c) {
-        loadCardToImageView(view, c.icon);
+        loadCardToImageView(view, c);
         view.setOnClickListener((v) -> {
             showCardDialog(c);
         });

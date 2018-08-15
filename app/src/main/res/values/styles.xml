@@ -28,7 +28,12 @@
     </style>
 
     <style name="common_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/t14dp</item>
+    </style>
+    <style name="common_text.white">
+        <item name="android:textColor">#fff</item>
     </style>
 
     <style name="commonIcon">
@@ -358,6 +363,28 @@
     <style name="square_t70">
         <item name="android:layout_width">@dimen/t70dp</item>
         <item name="android:layout_height">@dimen/t70dp</item>
+    </style>
+
+    <style name="number_icon">
+        <item name="android:layout_width">@dimen/t30dp</item>
+        <item name="android:layout_height">@dimen/t30dp</item>
+    </style>
+
+    <style name="skillLv_row">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/t5dp</item>
+        <item name="android:paddingRight">@dimen/t10dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="skillEatLvSample" parent="common_text.white">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">@dimen/t10dp</item>
+        <item name="android:paddingLeft">@dimen/t5dp</item>
+        <item name="android:textSize">@dimen/t12dp</item>
+        <item name="android:maxLines">50</item>
     </style>
 
 </resources>

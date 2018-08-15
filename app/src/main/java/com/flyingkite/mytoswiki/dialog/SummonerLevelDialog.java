@@ -26,7 +26,9 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SummonerLevelDialog extends BaseTosDialog {
     private Library<SummonLvAdapter> tableLibrary;
@@ -40,7 +42,7 @@ public class SummonerLevelDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
-        FabricAnswers.logSummonerLevel(null);
+        logImpression();
         initTable();
         initScrollTools(R.id.sldGoTop, R.id.sldGoBottom, tableLibrary.recyclerView);
         initShortcuts();
@@ -167,4 +169,18 @@ public class SummonerLevelDialog extends BaseTosDialog {
         mathChart.setData(data);
         mathChart.invalidate();
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logSummonerLevel(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logSummonerLevel(m);
+    }
+    //-- Events
 }

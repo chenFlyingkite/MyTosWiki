@@ -19,6 +19,8 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -54,7 +56,7 @@ public class TextEditorDialog {
     }
 
     private void onFinishInflate(View view, AlertDialog dialog) {
-        FabricAnswers.logTextEditor(null);
+        logImpression();
         newText = view.findViewById(R.id.tedNewString);
         mainText = view.findViewById(R.id.tedText);
         textRecycler = view.findViewById(R.id.tedRecycler);
@@ -67,6 +69,7 @@ public class TextEditorDialog {
             public void onClick(View v) {
                 String msg = txt.getText().toString();
                 ShareHelper.shareString(getActivity(), msg);
+                logShare("text");
             }
         });
 
@@ -189,4 +192,18 @@ public class TextEditorDialog {
             updateTextData();
         }
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logTextEditor(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logTextEditor(m);
+    }
+    //-- Events
 }

@@ -17,11 +17,13 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
+import com.flyingkite.library.Say;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.library.Misc;
@@ -214,6 +216,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             LogE("Save to %s", name);
 
             ShareHelper.shareImage(getActivity(), view, name);
+            logShare("library");
         });
     }
 
@@ -965,4 +968,23 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             applySelection();
         }
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logCardFragment(m);
+    }
+
+    private void logShowCard() {
+        Map<String, String> m = new HashMap<>();
+        FabricAnswers.logCardFragment(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logCardFragment(m);
+    }
+    //-- Events
 }

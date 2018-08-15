@@ -18,6 +18,9 @@ import android.widget.Toast;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 public interface PageUtil extends Loggable, ViewUtil {
 
     Activity getActivity();
@@ -110,6 +113,15 @@ public interface PageUtil extends Loggable, ViewUtil {
         }
 
         return getActivity().findViewById(id);
+    }
+
+    default String decodeURL(String s) {
+        try {
+            return URLDecoder.decode(s, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return s;
     }
 
     //-- Logging -- start

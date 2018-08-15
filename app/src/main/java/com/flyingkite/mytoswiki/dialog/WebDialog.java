@@ -51,13 +51,7 @@ public class WebDialog extends BaseTosDialog {
         initToolBar();
         initWeb();
         initSwipeRefresh();
-        logEvent();
-    }
-
-    private void logEvent() {
-        Map<String, String> m = new HashMap<>();
-        m.put("link", link);
-        FabricAnswers.logWeb(m);
+        logImpression();
     }
 
     private void parseBundle(Bundle b) {
@@ -101,6 +95,7 @@ public class WebDialog extends BaseTosDialog {
                         break;
                     case R.drawable.ic_share_black_48dp:
                         shareString(web.getUrl());
+                        logShare();
                         break;
                     case R.drawable.ic_clear_black_48dp:
                         dismissAllowingStateLoss();
@@ -173,4 +168,18 @@ public class WebDialog extends BaseTosDialog {
             return super.shouldOverrideUrlLoading(view, url);
         }
     };
+
+    //-- Event
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("link", decodeURL(link));
+        FabricAnswers.logWeb(m);
+    }
+
+    private void logShare() {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", decodeURL(web.getUrl()));
+        FabricAnswers.logWeb(m);
+    }
+    //-- Event
 }

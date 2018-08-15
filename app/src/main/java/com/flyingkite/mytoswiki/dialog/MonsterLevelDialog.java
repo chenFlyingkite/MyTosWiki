@@ -14,7 +14,9 @@ import com.flyingkite.mytoswiki.library.MonsterLvAdapter;
 import com.flyingkite.mytoswiki.library.TextAdapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MonsterLevelDialog extends BaseTosDialog {
     private Library<MonsterLvAdapter> tableLibrary;
@@ -29,7 +31,7 @@ public class MonsterLevelDialog extends BaseTosDialog {
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
-        FabricAnswers.logMonsterLevel(null);
+        logImpression();
         parseBundle(getArguments());
         initTable();
         initScrollTools(R.id.mldGoTop, R.id.mldGoBottom, tableLibrary.recyclerView);
@@ -86,4 +88,18 @@ public class MonsterLevelDialog extends BaseTosDialog {
         a.setExpCurve(curve);
         tableLibrary.setViewAdapter(a);
     }
+
+    //-- Events
+    private void logShare(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("share", type);
+        FabricAnswers.logMonsterLevel(m);
+    }
+
+    private void logImpression() {
+        Map<String, String> m = new HashMap<>();
+        m.put("impression", "1");
+        FabricAnswers.logMonsterLevel(m);
+    }
+    //-- Events
 }
