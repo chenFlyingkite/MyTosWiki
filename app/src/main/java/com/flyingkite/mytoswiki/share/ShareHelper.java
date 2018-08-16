@@ -183,6 +183,7 @@ public class ShareHelper {
             if (getW(activity) == null || getW(view) == null) return;
 
             w = new WaitingDialog.Builder(getW(activity), true)
+                    .message(getW(activity).getString(R.string.producing))
                     .onCancel((dialog) -> {
                         cancel(true);
                     }).buildAndShow();

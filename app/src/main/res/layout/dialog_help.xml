@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_round_darkgray">
@@ -22,26 +21,25 @@
 
             <TextView
                 style="@style/dialog_title"
-                android:textColor="#fff"
-                android:text="@string/help_title"/>
+                android:text="@string/help_title"
+                android:textColor="#fff" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/t10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/t10dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        style="@style/card_icon.chrome"/>
+                    <ImageView style="@style/card_icon.chrome" />
 
                     <TextView
                         style="@style/cardText"
-                        android:text="開啟網頁"/>
+                        android:text="開啟網頁" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -50,27 +48,29 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        style="@style/card_icon.saveW"/>
+                        style="@style/card_icon.saveW"
+                        android:background="#0000" />
 
                     <TextView
                         style="@style/cardText"
-                        android:text="另存圖片"/>
+                        android:background="#0000"
+                        android:text="另存圖片" />
                 </LinearLayout>
 
                 <TextView
                     style="@style/cardText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/yellow"
-                    android:text="黃色的字可以點擊"/>
+                    android:text="黃色的字可以點擊"
+                    android:textColor="@color/yellow" />
 
                 <TextView
                     android:id="@+id/help_blue"
                     style="@style/cardText"
-                    android:textColor="@color/skyBlue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="藍色的字可以點擊"/>
+                    android:text="藍色的字可以點擊"
+                    android:textColor="@color/skyBlue" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

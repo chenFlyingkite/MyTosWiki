@@ -268,193 +268,40 @@
                     android:padding="@dimen/t2dp"
                     android:columnCount="2">
 
-                    <!-- 3 = 1 + 1 x 4 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_03"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 4"/>
-                    </LinearLayout>
-
-                    <!-- 4 = 3 + 1 x 5 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_04"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_03"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 5"/>
-                    </LinearLayout>
-
-                    <!-- 5 = 4 + 1 x 5 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_05"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_04"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 5"/>
-                    </LinearLayout>
-                    <!-- 5 = 1 + 200 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_05"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/card_0617"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 1"/>
-                    </LinearLayout>
-                    <!-- 7 = 1 + 200 x 5 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_07"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_01"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/card_0617"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 5"/>
-                    </LinearLayout>
-                    <!-- 8 = 5 + 5 x 5 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_08"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_05"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_05"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 5"/>
-                    </LinearLayout>
-                    <!-- 12 = 10 + 10 x 1 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_12"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_10"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_10"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 1"/>
-                    </LinearLayout>
-                    <!-- 15 = 10 + 10 x 2 -->
-                    <LinearLayout
-                        style="@style/skillLv_row">
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_15"/>
-                        <ImageView
-                            style="@style/evoArrow"
-                            android:padding="@dimen/t2dp"
-                            android:scaleX="-1"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_10"/>
-                        <ImageView
-                            style="@style/evoPlus"
-                            android:padding="@dimen/t2dp"/>
-                        <ImageView
-                            style="@style/number_icon"
-                            android:src="@drawable/num_10"/>
-                        <TextView
-                            style="@style/common_text.white"
-                            android:text=" x 2"/>
-                    </LinearLayout>
+                    <include
+                        layout="@layout/view_skill_eat_030101x4"/>
+                    <include
+                        layout="@layout/view_skill_eat_040301x5"/>
+                    <include
+                        layout="@layout/view_skill_eat_050401x5"/>
+                    <include
+                        layout="@layout/view_skill_eat_0501a0x1"/>
+                    <include
+                        layout="@layout/view_skill_eat_0701a0x5"/>
+                    <include
+                        layout="@layout/view_skill_eat_080505x5"/>
+                    <include
+                        layout="@layout/view_skill_eat_121010x1"/>
+                    <include
+                        layout="@layout/view_skill_eat_151010x2"/>
                 </GridLayout>
+
+                <TextView
+                    style="@style/common_text.white"
+                    android:text="@string/skillLv_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t18dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/skillSample"
+                        style="@style/commonIcon"
+                        android:background="@drawable/bg_press_sky"
+                        android:src="@drawable/ic_list_white_48"/>
+
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

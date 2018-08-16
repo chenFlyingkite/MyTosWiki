@@ -17,6 +17,10 @@ public class FabricAnswers {
         logCustom("SkillEat", attributes);
     }
 
+    public static void logSkillEatSample(Map<String, String> attributes) {
+        logCustom("SkillEatSample", attributes);
+    }
+
     public static void logWeb(Map<String, String> attributes) {
         logCustom("Web", attributes);
     }

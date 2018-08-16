@@ -111,9 +111,9 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
         });
 
         dismissWhenClick(R.id.selConcept);
-//        findViewById(R.id.skillEatLevel).setOnClickListener((v) -> {
-//            new SkillEatLevelDialog().show(getActivity());
-//        });
+        findViewById(R.id.skillSample).setOnClickListener((v) -> {
+            new SkillEatSampleDialog().show(getActivity());
+        });
     }
 
     private void initCard600() {

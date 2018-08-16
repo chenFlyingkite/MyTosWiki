@@ -13,7 +13,7 @@ import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
-import com.flyingkite.mytoswiki.dialog.SkillEatLevelDialog;
+import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
             , R.drawable.logo_craft_1
             , R.mipmap.app_icon
             , R.drawable.owl2
-            //, R.drawable.card_1777
+            , R.drawable.card_1777
             , R.drawable.q1
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
@@ -117,7 +117,7 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         new HelpDialog().show(getActivity());
                         break;
                     case R.drawable.card_1777:
-                        new SkillEatLevelDialog().show(getActivity());
+                        new SkillEatSampleDialog().show(getActivity());
                         break;
                 }
             }

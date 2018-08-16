@@ -8,6 +8,7 @@
     <string name="share">分享</string>
     <string name="complete">已完成</string>
     <string name="loading">讀取中&#8230;</string>
+    <string name="producing">製作中&#8230;</string>
     <string name="progress">進度 %</string>
     <string name="table">表格</string>
     <string name="option">選項</string>
@@ -392,11 +393,34 @@
 
     <string name="help_title">神魔數學家 功能小提示</string>
 
-    <string name="skillLv_title">吃技等級建議表</string>
+    <string name="skillLv_title">詳細吃技方式</string>
     <string name="skillLv_concept">吃技概念</string>
-    <string name="skillLv_header">常用吃技等級 和 方式</string>
+    <string name="skillLv_header">常用吃技方式</string>
     <string name="skillLv_concept_detail">★一次吃5隻技能相同的卡片，至少提升技能1等級。
 \n★技5 = 技1 + 1 x 人面雛鳥 (#0617)\n★技7 = 技1 + 5 x 人面雛鳥 (#0617)\n★吃 人面大鳥(#0292) 提升技能1等級</string>
+    <string name="skillLv_sample_title">吃技範例</string>
+    <string name="skillLv_gemini_title">雙子座 (#0359) 練滿技到15，需要 3張 技10的 邪魔史萊姆 (#0333)。</string>
+    <string name="skillLv_gemini_01">★1 練一隻 小史萊姆 [暗史萊姆 #104] 從 技1 變成 技5，可吃小魔女 [小魔女莉莉絲 #0094] 或小史萊姆</string>
+    <string name="skillLv_gemini_02">★2 進化成 中史萊姆 [幽靈史萊姆 (#105)] 技5</string>
+    <string name="skillLv_gemini_03">★3 重複步驟 1 &amp; 2 直到練成 6隻 [技5 中史萊姆]</string>
+    <string name="skillLv_gemini_04">★4 練成 [技8 中史萊姆] (技8 = 技5 + 5 x 技5)</string>
+    <string name="skillLv_gemini_05">★5 連續吃 5隻 [技1 中史萊姆] 到技10 (技9 or 技10 = 技8 + 5 x 技1)</string>
+    <string name="skillLv_gemini_06">★6 進化 [技10 中史萊姆] 到 大史萊姆 [技10 邪魔史萊姆 (#0333)]</string>
+    <string name="skillLv_gemini_07">★7 重複步驟 3, 4, 5 &amp; 6 直到練成 3隻 [技10 大史萊姆]</string>
+    <string name="skillLv_gemini_08">★8 雙子座 吃 3隻 [技10 大史萊姆] 直接滿技</string>
+    <!-- athena? -->
+    <string name="skillLv_chessia_title">切西亞 (#1238) 練滿技到10，需要 1張 技10的 赤焰蜥蜴戰士 (#0079)。</string>
+    <string name="skillLv_chessia_01">★1~★4 練一隻 [技5 赤蜥蜴戰士 (#0078)]，可用小地精、小狼人吃技到技5</string>
+    <string name="skillLv_chessia_02">★5 進化成 中蜥蜴 [技5 赤焰蜥蜴戰士 (#0079)]</string>
+    <string name="skillLv_chessia_03">★6 連續吃 5隻 [技1 中蜥蜴] 直到練成 1隻 [技10 中蜥蜴]</string>
+    <string name="skillLv_chessia_04">★7 切西亞 吃 1隻 [技10 中蜥蜴] 直接滿技</string>
+    <string name="skillLv_azazel_title">阿撒茲勒 (#1101) 練滿技到12，需要 2張 技10的 寒霜龍 (#1112)。(切西亞練技方式 x 2)</string>
+    <string name="skillLv_azazel_01">★1~★4 練一隻 [技5 中史萊姆 (#0097)]</string>
+    <string name="skillLv_azazel_02">★5 [技1 寒霜幼龍 (#1111)] 吃 [技5 中史萊姆] 變成 技5</string>
+    <string name="skillLv_azazel_03">★6 連續吃 5隻 [技1 中史萊姆] 直到練成 1隻 [技10 寒霜幼龍]</string>
+    <string name="skillLv_azazel_04">★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]</string>
+    <string name="skillLv_azazel_05">★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]</string>
+    <string name="skillLv_azazel_06">★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
     <!--
      Texts of sample 1 too long so that it cut at 6
     <string name="skillLv_sample_0">好打的練技卡片 (史萊姆、地精、精靈、蜥蜴、小魔女、狼人)</string>

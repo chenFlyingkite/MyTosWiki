@@ -387,4 +387,17 @@
         <item name="android:maxLines">50</item>
     </style>
 
+    <style name="skill_sample_rule">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/t10dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="skill_sample_title" parent="common_text.white">
+        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:textSize">@dimen/t16dp</item>
+        <item name="android:background">@drawable/bg_rect_green</item>
+    </style>
+
 </resources>
