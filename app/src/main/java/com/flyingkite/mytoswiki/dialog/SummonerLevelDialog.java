@@ -177,6 +177,17 @@ public class SummonerLevelDialog extends BaseTosDialog {
         FabricAnswers.logSummonerLevel(m);
     }
 
+    @Override
+    public void onToolScrollToPosition(RecyclerView rv, int position) {
+        String s = position == 0 ? "Scroll Head" : "Scroll Tail";
+        logSummonerLevel(s);
+    }
+    private void logSummonerLevel(String act) {
+        Map<String, String> m = new HashMap<>();
+        m.put("action", act);
+        FabricAnswers.logSummonerLevel(m);
+    }
+
     private void logImpression() {
         Map<String, String> m = new HashMap<>();
         m.put("impression", "1");

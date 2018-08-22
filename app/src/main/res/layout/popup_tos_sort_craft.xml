@@ -23,8 +23,7 @@
 
                 <ImageView
                     android:id="@+id/sortReset"
-                    style="@style/sortIcon"
-                    android:src="@drawable/s_i049"/>
+                    style="@style/sortIcon.reset"/>
 
                 <ImageView
                     android:id="@+id/tosSave"
@@ -73,6 +72,10 @@
                     style="@style/sortIcon"
                     android:tag="@string/craft_8_key_chain"
                     android:src="@drawable/craft_008"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_9_key_bubble"
+                    android:src="@drawable/craft_009"/>
             </GridLayout>
 
             <!-- 123星 -->

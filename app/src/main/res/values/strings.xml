@@ -21,6 +21,9 @@
     <string name="or">或</string>
     <string name="advance">進階</string>
     <string name="related">相關</string>
+    <string name="n_cards">張卡片</string>
+    <string name="accept">接受</string>
+    <string name="reject">拒絕</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -159,6 +162,8 @@
          #1572, 草薙京, Skill stays in play until not a group of 6 or more Fire Runestones are dissolved
      -->
     <string name="cards_stay_until">效果持續至 [條件]</string>
+    <string name="cards_extra_attack">追打</string>
+    <string name="cards_black_white_original">將黑白符石變回原來色調</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -204,6 +209,14 @@
         <!-- #1347 #1369 #1796 機械族莉莎，小閻王減傷-->
         <item>% 所受傷害</item>
     </string-array>
+    <string-array name="cards_damage_less_leader_keys">
+        <!-- #41 水防龍 50%, 30%
+             #0785 共生霜言者 ‧ 妍希 20%
+             #1288 大喬與小喬 35%
+             #1380 天律善心 ‧ 泰芙努特 25%
+         -->
+        <item>傷害減少</item>
+    </string-array>
     <string-array name="cards_damage_to_hp_keys">
         <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
         <item>轉化為我方生命力</item>
@@ -242,6 +255,12 @@
     </string-array>
     <string-array name="cards_stay_until_keys">
         <item>效果持續至</item>
+    </string-array>
+    <string-array name="cards_extra_attack_keys">
+        <item>追打</item>
+    </string-array>
+    <string-array name="cards_black_white_original_keys">
+        <item>將黑白符石變回原來色調</item>
     </string-array>
 
 
@@ -292,6 +311,8 @@
     <string name="craft_7_opal">落影龍璃</string>
     <!-- #171, 同色相連 -->
     <string name="craft_8_chain">擴散龍結</string>
+    <!-- #246, 點該色有一對 -->
+    <string name="craft_9_bubble">鏡像龍丸</string>
     <!-- Keys -->
     <string name="craft_1_key_pattern">龍紋</string>
     <string name="craft_2_key_seal">龍印</string>
@@ -301,6 +322,7 @@
     <string name="craft_6_key_blade">龍刃</string>
     <string name="craft_7_key_opal">龍璃</string>
     <string name="craft_8_key_chain">龍結</string>
+    <string name="craft_9_key_bubble">龍丸</string>
     <string name="craft_no_limit">沒有限制</string>
     <string name="cards_craft_select">篩選一般龍刻</string>
     <string name="craft_attr">適用卡片屬性</string>
@@ -392,6 +414,10 @@
     <string name="stage_memo_header">筆記內容：</string>
 
     <string name="help_title">神魔數學家 功能小提示</string>
+    <string name="help_open_web">開啟網頁</string>
+    <string name="help_save_image">另存圖片</string>
+    <string name="help_card_long_press">長按顯示卡片</string>
+
 
     <string name="skillLv_title">詳細吃技方式</string>
     <string name="skillLv_concept">吃技概念</string>
@@ -421,31 +447,29 @@
     <string name="skillLv_azazel_04">★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_05">★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_06">★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
-    <!--
-     Texts of sample 1 too long so that it cut at 6
-    <string name="skillLv_sample_0">好打的練技卡片 (史萊姆、地精、精靈、蜥蜴、小魔女、狼人)</string>
-    <string name="skillLv_sample_1">例如 將 雙子座 (#0359) 練滿技到15，需要 3張 技10的 邪魔史萊姆 (#0333)。練法步驟：
-\n★1 練一隻 小史萊姆 [暗史萊姆 (#104)] 從 技1 變成 技5
-\n★2 進化成 中史萊姆 [幽靈史萊姆 (#105)] 技5
-\n★3 重複步驟 1 &amp; 2 直到練成 6隻 [技5 中史萊姆]
-\n★4 練成 [技8 中史萊姆] (技8 = 技5 + 5 x 技5)
-\n★5 連續吃 5隻 [技1 中史萊姆] 到技10 (技9 or 技10 = 技8 + 5 x 技1)
-\n★6 進化 [技10 中史萊姆] 到 大史萊姆 [技10 邪魔史萊姆 (#0333)]
-\n★7 重複步驟 3, 4, 5 &amp; 6 直到練成 3隻 [技10 大史萊姆]
-\n★8 雙子座 吃 3隻 [技10 大史萊姆] 直接滿技</string>
-    <string name="skillLv_sample_2">例如 將 切西亞(#1238) 練滿技到10，需要 1張 技10的 赤焰蜥蜴戰士 (#0079)。練法步驟：
-\n★1~★4 練一隻 [技5 赤蜥蜴戰士 (#0078)]，可用小地精、小狼人吃技到技5
-\n★5 進化成 中蜥蜴 [技5 赤焰蜥蜴戰士 (#0079)]
-\n★6 連續吃 5隻 [技1 中蜥蜴] 直到練成 1隻 [技10 中蜥蜴]
-\n★7 切西亞 吃 1隻 [技10 中蜥蜴] 直接滿技</string>
-    <string name="skillLv_sample_3">例如 將 水魔族始源 阿撒茲勒 (#1101) 練到滿技 技12，需要 2張 技10的 寒霜龍 (#1112)。練法步驟： (切西亞練技方式 x 2)
-\n★1~★4 練一隻 [技5 中史萊姆 (#0097)]
-\n★5 [技1 寒霜幼龍 (#1111)] 吃 [技5 中史萊姆] 變成 技5
-\n★6 連續吃 5隻 [技1 中史萊姆] 直到練成 1隻 [技10 寒霜幼龍]
-\n★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]
-\n★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]
-\n★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
--->
+
+    <string name="card_seal_title">封印卡抽卡模擬器</string>
+    <string name="card_seal_pure_intent">本模擬器僅使用隨機亂數和神魔公布之抽卡機率進行模擬。抽卡結果並不影響召喚師的神魔卡片。</string>
+    <string name="card_pools">卡池</string>
+    <string name="card_raised_probability">機率加倍</string>
+    <string name="card_preview">預覽卡片</string>
+    <string name="card_expect">期望值\n期望機率</string>
+    <string name="card_observe">樣本值\n樣本機率</string>
+    <string name="card_n_draw">總共 %d 抽，需 %d 個魔法石。</string>
+    <string name="card_expect_value">期望值</string>
+    <string name="card_observe_value">樣本值</string>
+    <string name="card_computer_draw">電腦代抽</string>
+    <string name="card_sample">結果</string>
+    <string name="card_charts">圖表</string>
+    <string name="card_summary">總結</string>
+    <string name="card_pearson_h0">H0：此樣本中已發生事件的次數分配會遵守指定的理論分配</string>
+    <string name="card_pearson_limit">如果個別欄位的期望次數太低，會使機率分配無法近似於卡方分配。\n一般要求：自由度 df &gt; 1時，期望次數小於5的欄位不多於總欄位的20%。</string>
+    <string name="card_series_seals">抽卡機系列</string>
+    <string name="card_series_sengoku_samurai">武者列魂</string>
+    <string name="card_series_hindu_gods">印度神</string>
+
+    <string name="tos_event_title">神魔之塔活動表</string>
+    <string name="tos_event_header">神魔之塔當前活動列表 : </string>
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)

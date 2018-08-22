@@ -109,7 +109,7 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     }
 
     @Override
-    protected void onClickItem(BaseCraft c, CraftVH holder) {
+    protected void onDidClickItem(BaseCraft c, CraftVH holder) {
         //Say.Log("click %s, %s", c.idNorm, c.name);
     }
 

@@ -89,9 +89,7 @@
 
                 <ImageView
                     android:id="@+id/sldChartReset"
-                    android:layout_width="@dimen/t40dp"
-                    android:layout_height="@dimen/t40dp"
-                    android:src="@drawable/s_i049"/>
+                    style="@style/icon_t40.reset"/>
 
                 <TextView
                     android:id="@+id/sldChartTitle"

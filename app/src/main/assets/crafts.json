@@ -8603,5 +8603,1487 @@
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7f/C245.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054551\u0026path-prefix\u003dzh",
       "iconKey": "C245.png"
     }
+  },
+  {
+    "rarity": 1,
+    "level": 1,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 10%"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0246",
+    "name": "虛之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/85/C246.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111921\u0026path-prefix\u003dzh",
+      "iconKey": "C246.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0247",
+    "name": "漩之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d4/C247.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111922\u0026path-prefix\u003dzh",
+      "iconKey": "C247.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0248",
+    "name": "煉之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c4/C248.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111923\u0026path-prefix\u003dzh",
+      "iconKey": "C248.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0249",
+    "name": "森之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/66/C249.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111923\u0026path-prefix\u003dzh",
+      "iconKey": "C249.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，光屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0250",
+    "name": "耀之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/21/C250.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111924\u0026path-prefix\u003dzh",
+      "iconKey": "C250.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，暗屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0251",
+    "name": "影之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2e/C251.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111924\u0026path-prefix\u003dzh",
+      "iconKey": "C251.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0252",
+    "name": "連之屏息龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b6/C252.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111925\u0026path-prefix\u003dzh",
+      "iconKey": "C252.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0253",
+    "name": "連之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2f/C253.png/revision/latest/scale-to-width-down/120?cb\u003d20180820113926\u0026path-prefix\u003dzh",
+      "iconKey": "C253.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 1 個火成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 25%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0254",
+    "name": "漩之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4a/C254.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111925\u0026path-prefix\u003dzh",
+      "iconKey": "C254.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 2 個火成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 25%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0255",
+    "name": "煉之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C255.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111926\u0026path-prefix\u003dzh",
+      "iconKey": "C255.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個火成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 25%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0256",
+    "name": "森之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e7/C256.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111927\u0026path-prefix\u003dzh",
+      "iconKey": "C256.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 4 個火成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，光屬性成員的攻擊力提升 25%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，回復 50% 生命力"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0257",
+    "name": "耀之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C257.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111927\u0026path-prefix\u003dzh",
+      "iconKey": "C257.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 5 個火成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，暗屬性成員的攻擊力提升 25%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0258",
+    "name": "影之狂暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C258.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111928\u0026path-prefix\u003dzh",
+      "iconKey": "C258.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於神族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0259",
+    "name": "連之越時龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ad/C259.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111928\u0026path-prefix\u003dzh",
+      "iconKey": "C259.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個魔族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0260",
+    "name": "虛之越時龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C260.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111929\u0026path-prefix\u003dzh",
+      "iconKey": "C260.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0261",
+    "name": "連之王暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C261.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111929\u0026path-prefix\u003dzh",
+      "iconKey": "C261.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0262",
+    "name": "虛之獸暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f2/C262.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111930\u0026path-prefix\u003dzh",
+      "iconKey": "C262.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0263",
+    "name": "連之龍暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/60/C263.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111930\u0026path-prefix\u003dzh",
+      "iconKey": "C263.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於妖精類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0264",
+    "name": "虛之妖暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4a/C264.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111931\u0026path-prefix\u003dzh",
+      "iconKey": "C264.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，機械族成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個機械族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0265",
+    "name": "連之機暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/39/C265.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111932\u0026path-prefix\u003dzh",
+      "iconKey": "C265.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 4 個機械族成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0266",
+    "name": "煉之機暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bf/C266.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111955\u0026path-prefix\u003dzh",
+      "iconKey": "C266.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為木符石"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0267",
+    "name": "森之機暴龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/68/C267.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111956\u0026path-prefix\u003dzh",
+      "iconKey": "C267.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0268",
+    "name": "漩之魔暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/11/C268.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111956\u0026path-prefix\u003dzh",
+      "iconKey": "C268.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，回復 50% 生命力"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0269",
+    "name": "漩之王暴龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f0/C269.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111957\u0026path-prefix\u003dzh",
+      "iconKey": "C269.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對單一敵人造成 35000 點水屬性傷害，此傷害無視防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，神族成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於神族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0270",
+    "name": "漩之神暴龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/95/C270.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111957\u0026path-prefix\u003dzh",
+      "iconKey": "C270.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避木屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 4 個妖精類成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於妖精類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0271",
+    "name": "漩之妖暴龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C271.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111958\u0026path-prefix\u003dzh",
+      "iconKey": "C271.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於妖精類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0272",
+    "name": "煉之妖暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C272.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111958\u0026path-prefix\u003dzh",
+      "iconKey": "C272.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個火成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，回復 50% 生命力"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0273",
+    "name": "煉之龍暴龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dc/C273.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111959\u0026path-prefix\u003dzh",
+      "iconKey": "C273.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，獸類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 4 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0274",
+    "name": "煉之獸暴龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C274.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111959\u0026path-prefix\u003dzh",
+      "iconKey": "C274.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對單一敵人造成 35000 點木屬性傷害，此傷害無視防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，獸類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0275",
+    "name": "森之獸暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/46/C275.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112000\u0026path-prefix\u003dzh",
+      "iconKey": "C275.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個木成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，神族成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於神族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0276",
+    "name": "森之神暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e4/C276.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112001\u0026path-prefix\u003dzh",
+      "iconKey": "C276.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0277",
+    "name": "森之王暴龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9c/C277.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112001\u0026path-prefix\u003dzh",
+      "iconKey": "C277.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個木成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為木符石"
+      }
+    ],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於妖精類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0278",
+    "name": "森之妖暴龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/17/C278.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112002\u0026path-prefix\u003dzh",
+      "iconKey": "C278.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個光成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為光符石"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0279",
+    "name": "耀之龍暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9d/C279.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112002\u0026path-prefix\u003dzh",
+      "iconKey": "C279.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，獸類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，完全回復生命力"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0280",
+    "name": "耀之獸暴龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/55/C280.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112003\u0026path-prefix\u003dzh",
+      "iconKey": "C280.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0281",
+    "name": "耀之魔暴龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C281.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112004\u0026path-prefix\u003dzh",
+      "iconKey": "C281.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對單一敵人造成 35000 點光屬性傷害，此傷害無視防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 4 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0282",
+    "name": "耀之王暴龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/15/C282.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112004\u0026path-prefix\u003dzh",
+      "iconKey": "C282.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避水屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 2"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於妖精類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0283",
+    "name": "影之妖暴龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9f/C283.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112005\u0026path-prefix\u003dzh",
+      "iconKey": "C283.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為暗符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，神族成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於神族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0284",
+    "name": "影之神暴龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fd/C284.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112005\u0026path-prefix\u003dzh",
+      "iconKey": "C284.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少所受傷害 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0285",
+    "name": "影之龍暴龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cc/C285.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112006\u0026path-prefix\u003dzh",
+      "iconKey": "C285.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，獸類成員的攻擊力提升 35%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為暗符石"
+      }
+    ],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0286",
+    "name": "影之獸暴龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/56/C286.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112013\u0026path-prefix\u003dzh",
+      "iconKey": "C286.png"
+    }
   }
 ]

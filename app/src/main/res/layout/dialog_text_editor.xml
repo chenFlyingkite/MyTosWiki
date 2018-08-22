@@ -88,8 +88,7 @@
 
             <ImageView
                 android:id="@+id/tedSave"
-                style="@style/textsIcon"
-                android:src="@drawable/ic_save_black_48dp"/>
+                style="@style/sortIcon.saveB"/>
 
             <ImageView
                 style="@style/textsIcon"

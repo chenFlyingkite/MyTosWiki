@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.flyingkite.library.Say;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
@@ -111,8 +110,8 @@ public class CardAdapter
     }
 
     @Override
-    protected void onClickItem(TosCard c, CardVH h) {
-        Say.Log("click %s, %s", c.id, c.name);
+    protected void onDidClickItem(TosCard c, CardVH holder) {
+        //Say.Log("click %s, %s", c.idNorm, c.name);
     }
 
     public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil {

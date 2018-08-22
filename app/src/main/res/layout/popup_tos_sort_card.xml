@@ -22,8 +22,7 @@
 
                 <ImageView
                     android:id="@+id/sortReset"
-                    style="@style/sortIcon"
-                    android:src="@drawable/s_i049"/>
+                    style="@style/sortIcon.reset"/>
 
                 <ImageView
                     android:id="@+id/tosSave"
@@ -372,6 +371,11 @@
                     style="@style/divider_h2px"/>
 
                 <CheckBox
+                    android:id="@+id/sortSpecialExtraAttack"
+                    style="@style/sortText"
+                    android:text="@string/cards_extra_attack"/>
+
+                <CheckBox
                     android:id="@+id/sortSpecialNonAttribute"
                     style="@style/sortText"
                     android:text="@string/cards_non_attribute"/>
@@ -386,18 +390,24 @@
                     style="@style/sortText"
                     android:text="@string/cards_regardless_of_attribute"/>
 
+                <View
+                    style="@style/divider_h2px"/>
+
                 <CheckBox
                     android:id="@+id/sortSpecialClearAllEffect"
                     style="@style/sortText"
                     android:text="@string/cards_clear_all_effect"/>
 
-                <View
-                    style="@style/divider_h2px"/>
-
                 <CheckBox
                     android:id="@+id/sortSpecialStayUntil"
                     style="@style/sortText"
                     android:text="@string/cards_stay_until"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialOriginalColor"
+                    style="@style/sortText"
+                    android:text="@string/cards_black_white_original"/>
+
             </LinearLayout>
 
             <TextView

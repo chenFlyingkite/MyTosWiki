@@ -17,6 +17,10 @@ public class FabricAnswers {
         logCustom("SkillEat", attributes);
     }
 
+    public static void logTosFragment(Map<String, String> attributes) {
+        logCustom("TosFragment", attributes);
+    }
+
     public static void logSkillEatSample(Map<String, String> attributes) {
         logCustom("SkillEatSample", attributes);
     }
@@ -44,6 +48,14 @@ public class FabricAnswers {
 
     public static void logStageMemo(Map<String, String> attributes) {
         logCustom("StageMemo", attributes);
+    }
+
+    public static void logCardSeal(Map<String, String> attributes) {
+        logCustom("SealDraw", attributes);
+    }
+
+    public static void logTosEventMemo(Map<String, String> attributes) {
+        logCustom("TosEventMemo", attributes);
     }
 
     public static void logSummonerLevel(Map<String, String> attributes) {
@@ -108,7 +120,7 @@ public class FabricAnswers {
         return s;
     }
 
-    private static void logCustom(String name, Map<String, String> attributes) {
+    public static void logCustom(String name, Map<String, String> attributes) {
         CustomEvent c = new CustomEvent(name);
         c = addAttr(c, attributes);
         c.putCustomAttribute("FCMToken", token());

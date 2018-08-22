@@ -27,6 +27,10 @@ public interface PageUtil extends Loggable, ViewUtil {
 
     View getView();
 
+    default void onToolScrollToPosition(RecyclerView rv, int position) {
+
+    }
+
     default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
         View w;
         w = findViewById(goTop);
@@ -34,6 +38,7 @@ public interface PageUtil extends Loggable, ViewUtil {
             w.setOnClickListener((v) -> {
                 if (recycler != null) {
                     recycler.scrollToPosition(0);
+                    onToolScrollToPosition(recycler, 0);
                 }
             });
         }
@@ -48,6 +53,7 @@ public interface PageUtil extends Loggable, ViewUtil {
                         end = a.getItemCount() - 1;
                     }
                     recycler.scrollToPosition(end);
+                    onToolScrollToPosition(recycler, end);
                 }
             });
         }

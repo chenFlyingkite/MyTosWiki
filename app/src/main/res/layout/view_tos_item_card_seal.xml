@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_press_sky">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/tisImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/tisImg"
+            android:padding="@dimen/t2dp"
+            app:layout_widthPercent="100%"
+            app:layout_aspectRatio="100%"
+            android:src="@drawable/card_gold"/>
+
+        <ImageView
+            android:id="@+id/tisImg2"
+            android:padding="@dimen/t2dp"
+            app:layout_widthPercent="70%"
+            app:layout_aspectRatio="100%"
+            android:src="@drawable/card_gold"
+            android:layout_centerInParent="true"
+            tools:visibility="visible"
+            android:visibility="gone"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView
+        android:id="@+id/tisText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/t14dp"
+        tools:text="1234"
+        android:gravity="center"
+        android:textColor="#000"
+        android:layout_below="@id/tisImages"/>
+
+
+</RelativeLayout>

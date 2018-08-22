@@ -336,6 +336,7 @@
     <dimen name="t400dp">457dp</dimen>
     <dimen name="t420dp">480dp</dimen>
     <dimen name="t430dp">491dp</dimen>
+    <dimen name="t500dp">571dp</dimen>
     <dimen name="t600dp">686dp</dimen>
 
     <dimen name="t8sp">9sp</dimen>

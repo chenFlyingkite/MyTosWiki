@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/cardRow.greenV">
+
+    <TextView
+        android:id="@+id/sealNumber"
+        style="@style/cardText.header.1"
+        android:layout_width="@dimen/t40dp"
+        android:text="#1"/>
+
+    <TextView
+        android:id="@+id/sealExpect"
+        style="@style/cardText.header.2"/>
+
+    <ImageView
+        android:id="@+id/sealActor"
+        style="@style/cardIcon"/>
+
+    <TextView
+        android:id="@+id/sealObserve"
+        style="@style/cardText.header.2"/>
+</LinearLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -115,10 +116,10 @@ public class CraftDialog extends BaseTosDialog {
         craftLibrary.setViewAdapter(a);
         applySelection();
         //countSet();
+        //testAllCraftDialog();
     }
 
-    /*
-    private void testAllCraftDialog() {
+    /*private void testAllCraftDialog() { //TODO : Hide me when release
         for (int i = 0; i < allCraft.size(); i++) {
             BaseCraft ci = allCraft.get(i);
             sSingle.submit(() -> {
@@ -129,8 +130,7 @@ public class CraftDialog extends BaseTosDialog {
                 d.dismiss();
             });
         }
-    }
-    */
+    }*/
 
     private void countSet(List<BaseCraft> list) {
         //noinspection PointlessBooleanExpression
@@ -297,7 +297,7 @@ public class CraftDialog extends BaseTosDialog {
     }
 
     private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
-        return setTargetChildChick(menu, id, childClick);
+        return setTargetChildClick(menu, id, childClick);
     }
     // --------
 
@@ -658,6 +658,18 @@ public class CraftDialog extends BaseTosDialog {
     private void logShare(String type) {
         Map<String, String> m = new HashMap<>();
         m.put("share", type);
+        FabricAnswers.logCraftDialog(m);
+    }
+
+    @Override
+    public void onToolScrollToPosition(RecyclerView rv, int position) {
+        String s = position == 0 ? "Scroll Head" : "Scroll Tail";
+        logCraftDialog(s);
+    }
+
+    private void logCraftDialog(String act) {
+        Map<String, String> m = new HashMap<>();
+        m.put("action", act);
         FabricAnswers.logCraftDialog(m);
     }
 

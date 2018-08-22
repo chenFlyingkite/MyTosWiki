@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/bg_round_darkgray">
+
+                <TextView
+                    android:id="@+id/csdTitle"
+                    style="@style/dialog_title.white"
+                    android:paddingLeft="@dimen/t5dp"
+                    android:layout_width="@dimen/t360dp"
+                    android:text="@string/card_seal_title"/>
+
+                <TextView
+                    android:id="@+id/csdHeader"
+                    style="@style/common_text.white"
+                    android:paddingLeft="@dimen/t5dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/t14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:text="@string/card_seal_pure_intent"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/t5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/common_text.white.seal.t16"
+                        android:text="@string/card_pools"/>
+
+                    <ImageView
+                        android:id="@+id/csdPoolReset"
+                        style="@style/sortIcon.reset.t40"/>
+
+                    <View
+                        android:layout_width="@dimen/t20dp"
+                        android:layout_height="match_parent"/>
+
+                    <CheckBox
+                        android:id="@+id/csdRaisedProbability"
+                        style="@style/seal_text"
+                        android:text="@string/card_raised_probability"/>
+
+                    <View
+                        android:layout_width="@dimen/t20dp"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/csdPoolGoTop"
+                        style="@style/tosGoTopW.t40"/>
+
+                    <ImageView
+                        android:id="@+id/csdPoolGoBottom"
+                        style="@style/tosGoBottomW.t40"/>
+
+                    <CheckBox
+                        android:id="@+id/csdPeekCard"
+                        style="@style/seal_text"
+                        android:text="@string/card_preview"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/csdCardPool"
+                        android:layout_width="@dimen/t360dp"
+                        android:layout_height="@dimen/t300dp"
+                        android:scrollbars="vertical"
+                        android:background="@color/grayd"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/sortTitle"
+                            android:text="@string/card_series_seals"/>
+
+                        <RadioGroup
+                            android:id="@+id/csdCardSeries"
+                            android:layout_width="@dimen/t200dp"
+                            android:paddingLeft="@dimen/t10dp"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/csdSeriesHinduGods"
+                                style="@style/sortRadio"
+                                android:text="@string/card_series_hindu_gods"/>
+
+                            <RadioButton
+                                android:id="@+id/csdSeriesSengokuSamurai"
+                                style="@style/sortRadio"
+                                android:text="@string/card_series_sengoku_samurai"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t5dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/csdAutoDraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_computer_draw"/>
+
+                    <EditText
+                        android:id="@+id/csdAutoDrawEN"
+                        style="@style/cardText.item.2"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="10"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:hint="整數" />
+
+                    <Spinner
+                        android:id="@+id/csdAutoDrawN"
+                        style="@style/sed_spinner"
+                        android:layout_width="@dimen/t150dp"
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
+
+                    <TextView
+                        style="@style/sortTitle"
+                        android:text="@string/n_cards"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_horizontal_1dp_ddd"
+                    android:background="@color/colorPrimary"/>
+
+                <RelativeLayout
+                    android:paddingLeft="@dimen/t5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- Left tools -->
+                    <LinearLayout
+                        android:id="@+id/csdTableTool"
+                        android:layout_width="@dimen/t240dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/common_text.white.seal.t16"
+                            android:text="@string/card_sample"/>
+
+                        <ImageView
+                            android:id="@+id/csdTableReset"
+                            style="@style/sortIcon.reset.t40"/>
+
+                        <ImageView
+                            android:id="@+id/csdShare"
+                            style="@style/sortIcon.shareW.t40"
+                            tools:visibility="visible"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/csdSave"
+                            style="@style/sortIcon.saveW.t40" />
+                    </LinearLayout>
+
+                    <!-- Right tools -->
+                    <LinearLayout
+                        android:id="@+id/csdChartTool"
+                        android:layout_toEndOf="@id/csdTableTool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/common_text.white.seal.t16"
+                            android:text="@string/card_charts"/>
+
+                        <ImageView
+                            android:id="@+id/csdChartResetZoom"
+                            style="@style/sortIcon.reset.t40"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/csdContents"
+                        android:layout_below="@id/csdTableTool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray4"
+                        android:orientation="horizontal">
+
+                        <!-- Left table -->
+                        <LinearLayout
+                            android:id="@+id/csdTableContent"
+                            android:layout_width="@dimen/t240dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/csdDrawN"
+                                style="@style/common_text.white.seal.t16"
+                                android:text="@string/card_n_draw"/>
+
+                            <include
+                                android:id="@+id/csdTableHeader"
+                                layout="@layout/view_seal_row"/>
+
+                            <LinearLayout
+                                android:id="@+id/csdCardTable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"/>
+
+                        <!-- Right table -->
+                        <LinearLayout
+                            android:id="@+id/csdChartContent"
+                            android:layout_width="@dimen/t360dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/common_text.white.seal.t16"
+                                android:text="@string/card_summary"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/csdPearsonH0"
+                                    style="@style/common_text.white.seal"
+                                    android:padding="@dimen/t5dp"
+                                    android:textSize="@dimen/t24dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/yellow"
+                                    android:text="@string/accept"/>
+
+                                <TextView
+                                    style="@style/common_text.white.seal"
+                                    android:text="@string/card_pearson_h0"/>
+
+                            </LinearLayout>
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/csdChart"
+                                android:layout_width="@dimen/t360dp"
+                                android:layout_height="@dimen/t360dp"/>
+
+                            <TextView
+                                android:id="@+id/csdPearsonLimit"
+                                style="@style/common_text.white.seal"
+                                android:textSize="@dimen/t14dp"
+                                android:paddingLeft="@dimen/t5dp"
+                                android:text="@string/card_pearson_limit"/>
+
+                            <TextView
+                                android:id="@+id/csdPearsonChi"
+                                style="@style/common_text.white.seal.t16"
+                                android:text="@string/card_summary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/toswiki"
+                    style="@style/toswiki_style"
+                    android:layout_width="@dimen/t360dp"/>
+
+                <View
+                    android:id="@+id/empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/t50dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+</LinearLayout>

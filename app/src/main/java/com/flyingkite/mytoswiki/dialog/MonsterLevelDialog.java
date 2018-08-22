@@ -96,6 +96,17 @@ public class MonsterLevelDialog extends BaseTosDialog {
         FabricAnswers.logMonsterLevel(m);
     }
 
+    @Override
+    public void onToolScrollToPosition(RecyclerView rv, int position) {
+        String s = position == 0 ? "Scroll Head" : "Scroll Tail";
+        logMonsterLevel(s);
+    }
+    private void logMonsterLevel(String act) {
+        Map<String, String> m = new HashMap<>();
+        m.put("action", act);
+        FabricAnswers.logMonsterLevel(m);
+    }
+
     private void logImpression() {
         Map<String, String> m = new HashMap<>();
         m.put("impression", "1");

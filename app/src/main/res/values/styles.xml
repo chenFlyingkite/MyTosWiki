@@ -35,6 +35,9 @@
     <style name="common_text.white">
         <item name="android:textColor">#fff</item>
     </style>
+    <style name="common_text.black">
+        <item name="android:textColor">#000</item>
+    </style>
 
     <style name="commonIcon">
         <item name="android:layout_width">@dimen/t50dp</item>
@@ -189,6 +192,30 @@
     <style name="sortIcon.saveW">
         <item name="android:src">@drawable/ic_save_white_48dp</item>
     </style>
+    <style name="sortIcon.saveB">
+        <item name="android:src">@drawable/ic_save_black_48dp</item>
+    </style>
+    <style name="sortIcon.saveW.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+    <style name="sortIcon.shareW">
+        <item name="android:src">@drawable/ic_share_white_48dp</item>
+    </style>
+    <style name="sortIcon.shareB">
+        <item name="android:src">@drawable/ic_share_black_48dp</item>
+    </style>
+    <style name="sortIcon.shareW.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+    <style name="sortIcon.reset">
+        <item name="android:src">@drawable/s_i049</item>
+    </style>
+    <style name="sortIcon.reset.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
     <style name="sortStarText" parent="sortIcon">
         <item name="android:textColor">#fff</item>
         <item name="android:shadowColor">#00a</item>
@@ -204,6 +231,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/t16dp</item>
         <item name="android:background">@drawable/bg_press_sky</item> <!-- -->
     </style>
     <style name="sortRadio.rect">
@@ -211,7 +239,6 @@
     </style>
     <style name="sortText" parent="sortRadio">
         <item name="android:padding">@dimen/t5dp</item>
-        <item name="android:textSize">@dimen/t16dp</item>
     </style>
     <style name="sortText.rect">
         <item name="android:background">@drawable/bg_press_sky_rect</item>
@@ -226,20 +253,36 @@
         <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
-    <style name="tosGoTop">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:rotation">270</item>
+    <style name="tosGo" parent="tosIcon">
         <item name="android:src">@drawable/ic_skip_next_black_48dp</item>
-        <item name="android:background">@drawable/bg_press_sky</item>
     </style>
 
-    <style name="tosGoBottom">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="tosGo.W">
+        <item name="android:src">@drawable/ic_skip_next_white_48dp</item>
+    </style>
+
+    <style name="tosGoTop" parent="tosGo">
+        <item name="android:rotation">270</item>
+    </style>
+
+    <style name="tosGoBottom" parent="tosGo">
         <item name="android:rotation">90</item>
-        <item name="android:src">@drawable/ic_skip_next_black_48dp</item>
-        <item name="android:background">@drawable/bg_press_sky</item>
+    </style>
+
+    <style name="tosGoTopW" parent="tosGo.W">
+        <item name="android:rotation">270</item>
+    </style>
+    <style name="tosGoTopW.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+
+    <style name="tosGoBottomW" parent="tosGo.W">
+        <item name="android:rotation">90</item>
+    </style>
+    <style name="tosGoBottomW.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
     </style>
 
     <style name="textsIcon" parent="commonIcon">
@@ -308,6 +351,10 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="dialog_title.white">
+        <item name="android:textColor">#fff</item>
+    </style>
+
     <style name="card_icon">
         <item name="android:layout_width">@dimen/t40dp</item>
         <item name="android:layout_height">@dimen/t40dp</item>
@@ -325,6 +372,9 @@
     <style name="icon_t40">
         <item name="android:layout_width">@dimen/t40dp</item>
         <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+    <style name="icon_t40.reset">
+        <item name="android:src">@drawable/s_i049</item>
     </style>
 
     <!-- Skill eat -->
@@ -398,6 +448,21 @@
         <item name="android:padding">@dimen/t5dp</item>
         <item name="android:textSize">@dimen/t16dp</item>
         <item name="android:background">@drawable/bg_rect_green</item>
+    </style>
+
+    <style name="common_text.white.seal">
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="common_text.white.seal.t16">
+        <item name="android:textSize">@dimen/t16dp</item>
+    </style>
+
+    <style name="seal_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
 </resources>

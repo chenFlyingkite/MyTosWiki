@@ -70,7 +70,11 @@ public class ShareHelper {
     public static void sendUriIntent(@NonNull Context context, Uri uri, String type) {
         Intent it = new Intent(Intent.ACTION_SEND);
         it.putExtra(Intent.EXTRA_STREAM, uri);
-        it.setType(type);
+        it.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        //it.setClipData(ClipData.newRawUri("", uri));
+        //it.setData(uri);
+        //it.setType(type);
+        it.setDataAndType(uri, type);
         try {
             context.startActivity(it);
         } catch (ActivityNotFoundException e) {

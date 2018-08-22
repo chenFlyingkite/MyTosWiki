@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/dialog_title"
+                android:text="@string/tos_event_title"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/smd_share"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ted_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/blackText.t2"
+                        android:text="@string/tos_event_header"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ted_share"
+                        style="@style/sortIcon.shareB"/>
+
+                    <ImageView
+                        android:id="@+id/ted_web"
+                        style="@style/card_icon.chrome"
+                        android:layout_width="@dimen/t50dp"
+                        android:layout_height="@dimen/t50dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                style="@style/divider_horizontal"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/tedEventImage"
+                android:layout_width="@dimen/t360dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                tools:src="@drawable/toswiki_wordmark"/>
+
+            <TextView
+                android:id="@+id/ted_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/blackText.t2"
+                tools:text="@string/stage_memo_header"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -46,7 +46,7 @@ public class SelectableAdapter extends RVAdapter<String, SelectableAdapter.Selec
     }
 
     @Override
-    protected void onClickItem(String item, SelectableVH vh) {
+    protected void onDidClickItem(String item, SelectableVH vh) {
         int pos = vh.getAdapterPosition();
         if (selected == pos) {
             selected = NO_POS;

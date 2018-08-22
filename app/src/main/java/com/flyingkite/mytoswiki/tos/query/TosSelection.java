@@ -24,6 +24,8 @@ public interface TosSelection<T> {
             T c = data.get(i);
             if (onSelect(c)) {
                 index.add(i);
+            } else {
+                index.size();
             }
         }
         return index;

@@ -17,13 +17,11 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.Say;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
-import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.library.Misc;
@@ -44,6 +42,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import flyingkite.tool.StringUtil;
 
 public class TosCardFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardFragment";
@@ -88,6 +88,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialRegardlessAttribute;
     private CheckBox sortSpecialClearAllEffect;
     private CheckBox sortSpecialStayUntil;
+    private CheckBox sortSpecialExtraAttack;
+    private CheckBox sortSpecialOriginalColor;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -140,6 +142,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             v.setSelected(!v.isSelected());
             if (toolOwner != null) {
                 toolOwner.setToolsVisible(v.isSelected());
+                logTosFragmentEvent(v.isSelected() ? "showTool" : "hideTool");
             }
         });
         boolean sel = false;
@@ -147,6 +150,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             sel = toolOwner.isToolsVisible();
         }
         tool.setSelected(sel);
+    }
+
+    @Override
+    public void onToolScrollToPosition(RecyclerView rv, int position) {
+        String s = position == 0 ? "Scroll Head" : "Scroll Tail";
+        logTosFragmentEvent(s);
     }
 
     private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
@@ -191,10 +200,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         cardLib.setViewAdapter(a);
         updateHide();
         applySelection();
+        //testAllCardDialog();
     }
 
-    /*
-    private void testAllCardDialog() {
+    /*private void testAllCardDialog() { //TODO : Hide me when release
         for (int i = 0; i < allCards.size(); i++) {
             TosCard ci = allCards.get(i);
             sSingle.submit(() -> {
@@ -205,8 +214,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 d.dismiss();
             });
         }
-    }
-    */
+    }*/
 
     private void initShareImage(View parent) {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
@@ -297,6 +305,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
         sortSpecialClearAllEffect = menu.findViewById(R.id.sortSpecialClearAllEffect);
         sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
+        sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
+        sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -306,7 +316,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
-        return setTargetChildChick(menu, id, childClick);
+        return setTargetChildClick(menu, id, childClick);
     }
 
     private void initDisplay(View menu) {
@@ -622,7 +632,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialDamageLessLeader.isChecked()) {
                     key = leaderSkill(c);
-                    accept &= find(key, R.array.cards_damage_less_keys);
+                    accept &= find(key, R.array.cards_damage_less_leader_keys);
                 }
                 if (sortSpecialDamageToHp.isChecked()) {
                     accept &= find(key, R.array.cards_damage_to_hp_keys);
@@ -641,6 +651,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialStayUntil.isChecked()) {
                     accept &= find(key, R.array.cards_stay_until_keys);
+                }
+                if (sortSpecialExtraAttack.isChecked()) {
+                    accept &= find(key, R.array.cards_extra_attack_keys);
+                }
+                if (sortSpecialOriginalColor.isChecked()) {
+                    accept &= find(key, R.array.cards_black_white_original_keys);
                 }
             }
             return accept;
@@ -666,8 +682,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return find(key, data);
         }
 
-        private boolean find(String key, String[] data) { // TODO : Fix me
-            return flyingkite.tool.StringUtil.containsAt(key, data) >= 0;
+        private boolean find(String key, String[] data) {
+            return StringUtil.containsAt(key, data) >= 0;
         }
 
         private boolean selectForImprove(TosCard c) {
@@ -973,6 +989,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private void logShare(String type) {
         Map<String, String> m = new HashMap<>();
         m.put("share", type);
+        FabricAnswers.logCardFragment(m);
+    }
+
+    private void logTosFragmentEvent(String act) {
+        Map<String, String> m = new HashMap<>();
+        m.put("action", act);
         FabricAnswers.logCardFragment(m);
     }
 

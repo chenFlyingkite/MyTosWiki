@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_round_darkgray">
@@ -31,33 +31,57 @@
                 android:padding="@dimen/t10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView style="@style/card_icon.chrome" />
-
-                    <TextView
-                        style="@style/cardText"
-                        android:text="開啟網頁" />
-                </LinearLayout>
-
-                <LinearLayout
+                    android:id="@+id/help_web"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <ImageView
-                        style="@style/card_icon.saveW"
-                        android:background="#0000" />
+                        style="@style/card_icon.chrome" />
 
                     <TextView
                         style="@style/cardText"
-                        android:background="#0000"
-                        android:text="另存圖片" />
+                        android:text="@string/help_open_web" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/help_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/card_icon.saveW"/>
+
+                    <TextView
+                        style="@style/cardText"
+                        android:text="@string/help_save_image" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/help_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/help_card_icon"
+                        style="@style/cardIcon"
+                        android:src="@drawable/card_1777"/>
+
+                    <TextView
+                        style="@style/cardText"
+                        android:text="@string/help_card_long_press" />
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/help_select"
+                    style="@style/sortText.rect"
+                    android:textSize="@dimen/t20dp"
+                    android:text="淺藍色框可選擇" />
+
+                <TextView
+                    android:id="@+id/help_yellow_text"
                     style="@style/cardText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -65,7 +89,7 @@
                     android:textColor="@color/yellow" />
 
                 <TextView
-                    android:id="@+id/help_blue"
+                    android:id="@+id/help_blue_text"
                     style="@style/cardText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

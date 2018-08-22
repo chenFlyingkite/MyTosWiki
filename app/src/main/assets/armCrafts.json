@@ -5908,5 +5908,37 @@
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/50/C3180.png/revision/latest/scale-to-width-down/120?cb\u003d20180801104343\u0026path-prefix\u003dzh",
       "iconKey": "C3180.png"
     }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 1.2 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7002",
+    "name": "幻之弦琴龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E5%B9%BB%E4%B9%8B%E5%BC%A6%E7%90%B4%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d4/C7002.png/revision/latest/scale-to-width-down/120?cb\u003d20180821084834\u0026path-prefix\u003dzh",
+      "iconKey": "C7002.png"
+    }
   }
 ]

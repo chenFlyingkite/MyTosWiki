@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:auto="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center">
 
     <LinearLayout
@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/mldSave"
-                style="@style/tosIcon"
-                android:src="@drawable/ic_save_black_48dp"
+                style="@style/sortIcon.saveB"
+                tools:visibility="visible"
                 android:visibility="gone"/>
 
             <ImageView
@@ -41,6 +41,7 @@
                 android:id="@+id/mldSortMenu"
                 style="@style/tosIcon"
                 android:src="@drawable/ic_sort_black_48dp"
+                tools:visibility="visible"
                 android:visibility="gone"/>
 
             <TextView

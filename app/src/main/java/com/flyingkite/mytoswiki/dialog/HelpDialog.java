@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.tos.TosWiki;
 
 public class HelpDialog extends BaseTosDialog {
     @Override
@@ -25,7 +26,27 @@ public class HelpDialog extends BaseTosDialog {
         super.onViewCreated(view, savedInstanceState);
         dismissWhenClick(R.id.help_main);
         FabricAnswers.logHelp(null);
-        underline(findViewById(R.id.help_blue));
+        underline(findViewById(R.id.help_blue_text));
+        init();
+    }
+
+    private void init() {
+        findViewById(R.id.help_web).setOnClickListener((v) -> {
+            new WebDialog().show(getActivity());
+        });
+        findViewById(R.id.help_save).setOnClickListener((v) -> {
+            shareImage(v);
+        });
+        setSimpleCard(findViewById(R.id.help_card_icon), TosWiki.getCardByIdNorm("1777"));
+        findViewById(R.id.help_select).setOnClickListener((v) -> {
+            v.setSelected(!v.isSelected());
+        });
+        findViewById(R.id.help_yellow_text).setOnClickListener((v) -> {
+            showToast("已點擊黃色字");
+        });
+        findViewById(R.id.help_blue_text).setOnClickListener((v) -> {
+            showToast("已點擊藍色字");
+        });
     }
 
     private void underline(TextView t) {

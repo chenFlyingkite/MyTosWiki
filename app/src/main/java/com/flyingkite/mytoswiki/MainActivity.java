@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
+import com.flyingkite.mytoswiki.dialog.CardSealDialog;
 import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
@@ -17,6 +18,7 @@ import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
+import com.flyingkite.mytoswiki.dialog.TosEventDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -32,12 +34,14 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
     // https://developer.android.com/training/multiscreen/screendensities
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
             , R.drawable.logo_chrome
-            , R.drawable.ic_send_black_48dp
+            , R.drawable.tos_app
             , R.drawable.logo_craft_1
             , R.mipmap.app_icon
             , R.drawable.owl2
+            , R.drawable.shop_card
             , R.drawable.card_1777
             , R.drawable.q1
+            , R.drawable.ic_send_black_48dp
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
             , R.drawable.ic_description_black_48dp
@@ -118,6 +122,12 @@ public class MainActivity extends BaseActivity implements TosCardFragment.ToolBa
                         break;
                     case R.drawable.card_1777:
                         new SkillEatSampleDialog().show(getActivity());
+                        break;
+                    case R.drawable.shop_card:
+                        new CardSealDialog().show(getActivity());
+                        break;
+                    case R.drawable.tos_app:
+                        new TosEventDialog().show(getActivity());
                         break;
                 }
             }
