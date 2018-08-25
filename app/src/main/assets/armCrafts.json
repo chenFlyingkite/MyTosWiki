@@ -4252,7 +4252,7 @@
   {
     "rarity": 2,
     "level": 2,
-    "mode": "轉動龍印",
+    "mode": "連鎖龍紋",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
@@ -4974,7 +4974,7 @@
   {
     "rarity": 2,
     "level": 2,
-    "mode": "映照龍符",
+    "mode": "落影龍璃",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
       {

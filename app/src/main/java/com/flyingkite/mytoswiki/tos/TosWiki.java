@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
@@ -85,11 +86,27 @@ public class TosWiki {
     }
 
     public static TosCard getCardByIdNorm(String id) {
-        return allCardsByIdNorm.get(id);
+        TosCard c = allCardsByIdNorm.get(id);
+        if (c == null) {
+            try {
+                throw new NullPointerException("Card null : " + id);
+            } catch (NullPointerException npe) {
+                CrashReport.logException(npe);
+            }
+        }
+        return c;
     }
 
     public static BaseCraft getCraftByIdNorm(String id) {
-        return allCraftsByIdNorm.get(id);
+        BaseCraft c = allCraftsByIdNorm.get(id);
+        if (c == null) {
+            try {
+                throw new NullPointerException("Craft null : " + id);
+            } catch (NullPointerException npe) {
+                CrashReport.logException(npe);
+            }
+        }
+        return c;
     }
 
     public static CraftsNormal[] allNormalCrafts() {

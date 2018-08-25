@@ -19,6 +19,12 @@ public interface GlideUtil {
 
     default void loadCardToImageView(ImageView img, TosCard card) {
         int h = R.drawable.unknown_card;
+
+        if (card == null) {
+            img.setImageResource(h);
+            return;
+        }
+
         switch (card.attribute) {
             case "水": h = R.drawable.empty_w; break;
             case "火": h = R.drawable.empty_f; break;

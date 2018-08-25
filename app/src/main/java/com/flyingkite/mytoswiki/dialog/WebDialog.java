@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
+import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
@@ -170,15 +171,25 @@ public class WebDialog extends BaseTosDialog {
     };
 
     //-- Event
+
+    private String liteLink(String link) {
+        String s = decodeURL(link);
+        int x = s.lastIndexOf("/");
+        if (MathUtil.isInRange(x, 0, s.length() - 1)) {
+            return s.substring(x + 1);
+        } else {
+            return s;
+        }
+    }
     private void logImpression() {
         Map<String, String> m = new HashMap<>();
-        m.put("link", decodeURL(link));
+        m.put("link", liteLink(link));
         FabricAnswers.logWeb(m);
     }
 
     private void logShare() {
         Map<String, String> m = new HashMap<>();
-        m.put("share", decodeURL(web.getUrl()));
+        m.put("share", liteLink(web.getUrl()));
         FabricAnswers.logWeb(m);
     }
     //-- Event
