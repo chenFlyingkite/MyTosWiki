@@ -89,7 +89,7 @@ public class TosWiki {
         TosCard c = allCardsByIdNorm.get(id);
         if (c == null) {
             try {
-                throw new NullPointerException("Card null : " + id);
+                throw new NullPointerException("Card null : " + id + ", map = " + allCardsByIdNorm.size() + ", all = " + getAllCardsCount());
             } catch (NullPointerException npe) {
                 CrashReport.logException(npe);
             }
