@@ -151,8 +151,8 @@ dependencies {
     //api 'com.github.User:Repo:Tag'
     //api "com.github.chenFlyingkite:MyAndroid:d956d567f9"
     //api "com.github.chenFlyingkite:MyAndroid:5a667c037a"
-    //api "com.github.chenFlyingkite:MyAndroid:a2292b8784"
-    api "com.github.chenFlyingkite:MyAndroid:b936e2a031"
+    api "com.github.chenFlyingkite:MyAndroid:7cb4b371dc"
+    //api "com.github.chenFlyingkite:MyAndroid:b936e2a031"
     //api "com.github.chenFlyingkite:MyAndroid:c1d44477e1"
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
@@ -165,6 +165,10 @@ dependencies {
 //    def roomVersion = "1.1.1"
 //    api "android.arch.persistence.room:runtime:$roomVersion"
 //    kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+    // ViewModel for data passing through fragment & activity, Not using v4 fragment...
+    //api "android.arch.lifecycle:viewmodel:1.1.1"
+    //api "android.arch.lifecycle:extensions:1.1.1"
 
 
     // Glide for Image cache library.

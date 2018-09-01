@@ -9,14 +9,21 @@ import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.mytoswiki.dialog.OnAction;
+import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.util.TaskMonitor;
+import com.google.gson.Gson;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 
 public class TosWiki {
@@ -26,12 +33,15 @@ public class TosWiki {
     private static CraftsArm[] armCrafts;
     private static HashMap<String, TosCard> allCardsByIdNorm = new HashMap<>();
     private static HashMap<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
+    private static CardFavor cardFavor;
+    private static List<OnAction> favorActions = new ArrayList<>();
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_NORMAL_CRAFTS = "Crafts";
     public static final String TAG_ARM_CRAFTS = "ArmCards";
+    public static final String TAG_CARD_FAVOR = "CardFavor";
     public static final String[] TAG_ALL_TASKS = {
-            TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS
+            TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR
     };
 
     public static void init(Context ctx) {
@@ -53,7 +63,7 @@ public class TosWiki {
         });
 
         p.submit(() -> {
-            TicTac2.v t = new TicTac2.v();
+            TicTac2 t = new TicTac2.v();
             t.tic();
             normalCrafts = GsonUtil.loadAsset("crafts.json", CraftsNormal[].class, ctx.getAssets());
             t.tac("%s craft loaded, Norm", len(normalCrafts));
@@ -65,7 +75,7 @@ public class TosWiki {
         });
 
         p.submit(() -> {
-            TicTac2.v t = new TicTac2.v();
+            TicTac2 t = new TicTac2.v();
             t.tic();
             armCrafts = GsonUtil.loadAsset("armCrafts.json", CraftsArm[].class, ctx.getAssets());
             t.tac("%s craft loaded, Arm", len(armCrafts));
@@ -75,6 +85,51 @@ public class TosWiki {
             }
             monitorDB.notifyClientsState();
         });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2();
+            t.tic();
+            File f = getTosCardFavorFile();
+            if (f.exists()) {
+                cardFavor = GsonUtil.loadFile(f, CardFavor.class);
+            }
+            if (cardFavor == null) {
+                cardFavor = new CardFavor();
+            }
+            t.tac("%s cards favored", cardFavor.favors.size());
+            monitorDB.notifyClientsState();
+        });
+    }
+
+    public static CardFavor getCardFavor() {
+        return cardFavor;
+    }
+
+    public static void saveCardFavor() {
+        GsonUtil.writeFile(getTosCardFavorFile(), new Gson().toJson(cardFavor));
+    }
+
+    public static void saveCardFavor(CardFavor cf) {
+        GsonUtil.writeFile(getTosCardFavorFile(), new Gson().toJson(cf));
+    }
+
+    public static void joinFavorAction(@NonNull OnAction action) {
+        favorActions.add(action);
+        notifyFavor();
+    }
+
+    public static void notifyFavor() {
+        for (OnAction a : favorActions) {
+            a.onChanged();
+        }
+    }
+
+    public static void leftFavorAction(@NonNull OnAction action) {
+        favorActions.remove(action);
+    }
+
+    private static File getTosCardFavorFile() {
+        return ShareHelper.extFilesFile("cardFavor.txt");
     }
 
     public static int getAllCardsCount() {
@@ -130,6 +185,7 @@ public class TosWiki {
                 case TAG_ARM_CRAFTS: return armCrafts != null;
                 case TAG_NORMAL_CRAFTS: return normalCrafts != null;
                 case TAG_ALL_CARDS: return allCards != null;
+                case TAG_CARD_FAVOR: return cardFavor != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:
                     throw new NullPointerException(taskCount() + " tasks but did not define done for " + index);

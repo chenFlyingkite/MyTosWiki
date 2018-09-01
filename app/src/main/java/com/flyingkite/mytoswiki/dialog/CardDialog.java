@@ -132,6 +132,15 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
             shareImage(findViewById(R.id.cardContent));
             logShare("table");
         });
+        View favor = findViewById(R.id.cardFavor);
+        favor.setOnClickListener((v) -> {
+            v.setSelected(!v.isSelected());
+
+            boolean add = v.isSelected();
+            TosWiki.getCardFavor().addOrRemove(add, card.idNorm);
+            TosWiki.notifyFavor();
+        });
+        favor.setSelected(TosWiki.getCardFavor().exist(card.idNorm));
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
 
         cardIdNorm.setText(card.idNorm + "");

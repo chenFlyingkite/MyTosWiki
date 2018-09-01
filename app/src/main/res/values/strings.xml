@@ -475,7 +475,7 @@
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)
 若 N >= 2 且卡片攻擊力 = A, 則當次攻擊 = A * (0.25 + 0.25 * N + 0.15 * S + 0.3 * R)</string>
     <string name="asd">Combo 總數 = 1 + N => 倍率 = 1 + 0.25 N</string>
-    <string name="asdf">5 組 9 Combo => 5 * 3 = 15 倍，2 組 5 combo => 2 * 2 = 4 倍</string>
+    <string name="asdf">5 組 9 Combo => 5 * 3 = 15 倍，4 組 7 combo => 4 * 2.5 = 10 倍，2 組 5 combo => 2 * 2 = 4 倍</string>
     <!--
     全版強化差距 : S = N, R = 0
      0.25 + 0.4N        1 + 1.6N

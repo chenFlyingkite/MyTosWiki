@@ -71,7 +71,7 @@
                 android:layout_width="@dimen/t360dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                tools:src="@drawable/toswiki_wordmark"/>
+                tools:src="@drawable/toswiki_mark2"/>
 
             <TextView
                 android:id="@+id/ted_message"

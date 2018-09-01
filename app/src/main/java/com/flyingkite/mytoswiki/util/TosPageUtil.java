@@ -69,12 +69,14 @@ public interface TosPageUtil extends Loggable, GlideUtil {
     default List<TosCard> getCardsByIdNorms(List<String> idNorms) {
         List<TosCard> ans = new ArrayList<>();
         for (int i = 0; i < idNorms.size(); i++) {
-            String idNorm = idNorms.get(i);
-            ans.add(TosWiki.getCardByIdNorm(idNorm));
+            String id = idNorms.get(i);
+            TosCard c = TosWiki.getCardByIdNorm(id);
+            if (c != null) {
+                ans.add(c);
+            }
         }
         return ans;
     }
-
 
     default void setSimpleCraft(ImageView view, BaseCraft c) {
         loadCraftToImageView(view, c.icon.iconLink);

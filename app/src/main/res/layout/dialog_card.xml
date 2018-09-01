@@ -49,6 +49,11 @@
                 <ImageView
                     android:id="@+id/cardShare"
                     style="@style/card_icon.saveW"/>
+
+                <ImageView
+                    android:id="@+id/cardFavor"
+                    style="@style/card_icon.favorW"
+                    android:background="@drawable/bg_press_sky_rect"/>
             </LinearLayout>
 
             <TextView

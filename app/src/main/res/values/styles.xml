@@ -368,6 +368,9 @@
     <style name="card_icon.saveW">
         <item name="android:src">@drawable/ic_save_white_48dp</item>
     </style>
+    <style name="card_icon.favorW">
+        <item name="android:src">@drawable/ic_favorite_border_white_48</item>
+    </style>
 
     <style name="icon_t40">
         <item name="android:layout_width">@dimen/t40dp</item>
@@ -407,7 +410,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/t48dp</item>
         <item name="android:adjustViewBounds">true</item>
-        <item name="android:src">@drawable/toswiki_wordmark</item>
+        <item name="android:src">@drawable/toswiki_mark2</item>
     </style>
 
     <style name="square_t70">

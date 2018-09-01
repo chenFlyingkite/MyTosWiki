@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +22,15 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
+import com.flyingkite.library.widget.Library;
+import com.flyingkite.library.widget.SimpleItemTouchHelper;
+import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
+import com.flyingkite.mytoswiki.dialog.OnAction;
 import com.flyingkite.mytoswiki.library.CardAdapter;
 import com.flyingkite.mytoswiki.library.CardLibrary;
+import com.flyingkite.mytoswiki.library.CardTileAdapter;
 import com.flyingkite.mytoswiki.library.Misc;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -52,6 +59,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     // Main library
     private RecyclerView cardsRecycler;
     private CardLibrary cardLib;
+    // Favorite library
+    private View favorBox;
+    private RecyclerView favorRecycler;
+    private Library<CardTileAdapter> favorLib;
     // Popup Menus
     private View sortMenu;
     private PopupWindow sortWindow;
@@ -106,8 +117,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     // Display card name
     private RadioGroup sortDisplay;
 
-
     private CardSort cardSort = new CardSort();
+    private CardFavor cardFavor = new CardFavor();
+    private boolean cardReady;
 
     // Major components
     private List<TosCard> allCards;
@@ -124,8 +136,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         tosInfo = findViewById(R.id.tosInfo);
 
         cardsRecycler = findViewById(R.id.tosRecycler);
-        cardLib = new CardLibrary(cardsRecycler);
+        favorBox = findViewById(R.id.tosFavorBox);
+        favorRecycler = findViewById(R.id.tosFavorites);
+
         sortMenu = findViewById(R.id.tosSortMenu);
+        initCardLibrary();
         initSortMenu();
         initToolIcons();
 
@@ -134,15 +149,22 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         TosWiki.attendDatabaseTasks(onCardsReady);
     }
 
+    private void initCardLibrary() {
+        cardLib = new CardLibrary(cardsRecycler);
+    }
+
     private void initToolIcons() {
         initScrollTools(R.id.tosGoTop, R.id.tosGoBottom, cardLib.recyclerView);
 
-        View tool = findViewById(R.id.tosTooBar);
+        // Setup tool bar
+        View tool = findViewById(R.id.tosToolBar);
         tool.setOnClickListener((v) -> {
             v.setSelected(!v.isSelected());
+
+            boolean s = v.isSelected();
             if (toolOwner != null) {
-                toolOwner.setToolsVisible(v.isSelected());
-                logTosFragmentEvent(v.isSelected() ? "showTool" : "hideTool");
+                toolOwner.setToolsVisible(s);
+                logAction(s ? "showTool" : "hideTool");
             }
         });
         boolean sel = false;
@@ -150,12 +172,92 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             sel = toolOwner.isToolsVisible();
         }
         tool.setSelected(sel);
+
+        // Setup favorite
+        View favor = findViewById(R.id.tosFavor);
+        favor.setOnClickListener((v) -> {
+            v.setSelected(!v.isSelected());
+            boolean s = v.isSelected();
+
+            favorBox.setVisibility(s ? View.VISIBLE : View.GONE);
+            logAction(s ? "showFavor" : "hideFavor");
+        });
+        favor.setSelected(true);
     }
+
+    private void initFavorLib() {
+        cardFavor = TosWiki.getCardFavor();
+
+        if (favorLib == null) {
+            favorLib = new Library<>(favorRecycler);
+        }
+        CardTileAdapter a = new CardTileAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return TosCardFragment.this.getFragmentManager();
+            }
+        };
+        final List<TosCard> favorCards = getCardsByIdNorms(cardFavor.favors);
+        a.setDataList(favorCards);
+        favorLib.setViewAdapter(a);
+
+        if (helper != null) {
+            helper.getHelper().attachToRecyclerView(null);
+        }
+        helper = new SimpleItemTouchHelper(a
+                , ItemTouchHelper.LEFT | ItemTouchHelper. RIGHT
+                , ItemTouchHelper.UP | ItemTouchHelper.DOWN) {
+            @Override
+            public List getList() {
+                return favorCards;
+            }
+
+            @Override
+            protected ItemTouchHelper.SimpleCallback initCallback(int dragDirs, int swipeDirs) {
+                return new HelperCallback(dragDirs, swipeDirs) {
+                    @Override
+                    public void onMoved(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, int fromPos, RecyclerView.ViewHolder target, int toPos, int x, int y) {
+                        super.onMoved(recyclerView, viewHolder, fromPos, target, toPos, x, y);
+                        save();
+                    }
+
+                    @Override
+                    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                        super.onSwiped(viewHolder, direction);
+                        save();
+                    }
+
+                    private void save() {
+                        cardFavor.favors = idNorms(favorCards);
+                        toGsonFavor();
+                    }
+
+                    private List<String> idNorms(List<TosCard> list) {
+                        List<String> a = new ArrayList<>();
+                        for (TosCard c : list) {
+                            a.add(c.idNorm);
+                        }
+                        return a;
+                    }
+                };
+            }
+        };
+        helper.getHelper().attachToRecyclerView(favorLib.recyclerView);
+    }
+
+    private SimpleItemTouchHelper helper;
+
+    private OnAction favorAction = new OnAction() {
+        @Override
+        public void onChanged() {
+            initFavorLib();
+        }
+    };
 
     @Override
     public void onToolScrollToPosition(RecyclerView rv, int position) {
         String s = position == 0 ? "Scroll Head" : "Scroll Tail";
-        logTosFragmentEvent(s);
+        logAction(s);
     }
 
     private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
@@ -163,7 +265,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         public void onTaskDone(int index, String tag) {
             runOnUiThread(() -> {
                 if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
+                    cardReady = true;
                     onCardsReady(TosWiki.allCards());
+                    TosWiki.joinFavorAction(favorAction);
                 }
                 log("#%s (%s) is done", index, tag);
             });
@@ -480,12 +584,19 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
         });
     }
+
+    private void toGsonFavor() {
+        sSingle.submit(() -> {
+            TosWiki.saveCardFavor(cardFavor);
+        });
+    }
     // --------
 
     @Override
     public void onPause() {
         super.onPause();
         toGsonHide();
+        toGsonFavor();
     }
 
     @Override
@@ -994,7 +1105,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         FabricAnswers.logCardFragment(m);
     }
 
-    private void logTosFragmentEvent(String act) {
+    private void logAction(String act) {
         Map<String, String> m = new HashMap<>();
         m.put("action", act);
         FabricAnswers.logCardFragment(m);

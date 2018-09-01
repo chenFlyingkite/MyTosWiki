@@ -19,22 +19,38 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/tosTooBar"
+                android:id="@+id/tosFavor"
                 style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
+                android:src="@drawable/ic_favorite_border_black_48"
+                android:background="@drawable/bg_press_sky_rect"/>
+
+            <ImageView
+                android:id="@+id/tosToolBar"
+                style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
                 android:src="@drawable/ic_open_in_browser_black_48dp"
                 android:background="@drawable/bg_press_sky_rect"/>
 
             <ImageView
                 android:id="@+id/tosGoTop"
-                style="@style/tosGoTop"/>
+                style="@style/tosGoTop"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
 
             <ImageView
                 android:id="@+id/tosGoBottom"
-                style="@style/tosGoBottom"/>
+                style="@style/tosGoBottom"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
 
             <ImageView
                 android:id="@+id/tosSortMenu"
                 style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
                 android:src="@drawable/ic_sort_black_48dp"/>
 
         </LinearLayout>
@@ -49,9 +65,30 @@
             tools:text="@string/cards_selection"/>
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/tosFavorBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/card_icon.favorW"
+            android:layout_width="@dimen/t20dp"
+            android:layout_height="@dimen/t20dp"
+            android:background="@color/green"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tosFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t50dp"
+            android:scrollbars="horizontal"/>
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tosRecycler"
         android:layout_below="@id/tosTopBar"
+        android:layout_above="@id/tosFavorBox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
@@ -59,7 +96,6 @@
         app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
         app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
         app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
-        app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb">
-    </android.support.v7.widget.RecyclerView>
+        app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
 
 </RelativeLayout>
