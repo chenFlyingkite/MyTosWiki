@@ -85,11 +85,12 @@ public class CardSealDialog extends BaseTosDialog {
         dismissWhenClick(R.id.csdTitle, R.id.csdHeader, R.id.toswiki, R.id.empty
                 , R.id.csdPearsonChi, R.id.csdPearsonLimit
         );
+        initViews();
         initSeries();
         initPools();
         initTable();
         initChart();
-        initPearsonChi();
+        setupPearsonChi();
     }
 
     private void parseBundle(Bundle b) {
@@ -114,6 +115,22 @@ public class CardSealDialog extends BaseTosDialog {
         } else {
             return super.onBackPressed();
         }
+    }
+
+    private void initViews() {
+        series = findViewById(R.id.csdCardSeries);
+        save = findViewById(R.id.csdSave);
+        share = findViewById(R.id.csdShare);
+        resetPool = findViewById(R.id.csdPoolReset);
+        sealDrawn = findViewById(R.id.csdDrawN);
+        sealTable = findViewById(R.id.csdCardTable);
+        resetTable = findViewById(R.id.csdTableReset);
+        raised = findViewById(R.id.csdRaisedProbability);
+        peekCard = findViewById(R.id.csdPeekCard);
+        autoDraw = findViewById(R.id.csdAutoDraw);
+        chart = findViewById(R.id.csdChart);
+        pearsonChi = findViewById(R.id.csdPearsonChi);
+        pearsonH0 = findViewById(R.id.csdPearsonH0);
     }
 
     private void initPools() {
@@ -141,24 +158,19 @@ public class CardSealDialog extends BaseTosDialog {
         cardPoolLibrary.setViewAdapter(a);
 
         // Init icons
-        save = findViewById(R.id.csdSave);
-        share = findViewById(R.id.csdShare);
         save.setOnClickListener((v) -> {
             logShare("save");
             shareImage(findViewById(R.id.csdContents));
         });
 
         // Actions on pool
-        resetPool = findViewById(R.id.csdPoolReset);
         resetPool.setOnClickListener((v) -> {
             resetPool();
         });
-        raised = findViewById(R.id.csdRaisedProbability);
         raised.setOnClickListener((v) -> {
             resetPool();
             logAction("Raise:" + Say.ox(raised.isChecked()));
         });
-        peekCard = findViewById(R.id.csdPeekCard);
         peekCard.setOnClickListener((v) -> {
             boolean chk = peekCard.isChecked();
             a.setPeekCard(chk);
@@ -170,7 +182,6 @@ public class CardSealDialog extends BaseTosDialog {
         // Auto draw
         TextView en = findViewById(R.id.csdAutoDrawEN);
         autoDrawN = makeSpin(R.id.csdAutoDrawN, 1, 1000);
-        autoDraw = findViewById(R.id.csdAutoDraw);
 
         autoDraw.setOnClickListener((v) -> {
             String src = "10";
@@ -193,7 +204,6 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     private void initSeries() {
-        series = findViewById(R.id.csdCardSeries);
         int id = R.id.csdSeriesHinduGods;
         if (seals == null) {
             seals = new HinduGods();
@@ -257,9 +267,6 @@ public class CardSealDialog extends BaseTosDialog {
     };
 
     private void initTable() {
-        sealDrawn = findViewById(R.id.csdDrawN);
-        sealTable = findViewById(R.id.csdCardTable);
-        resetTable = findViewById(R.id.csdTableReset);
         resetTable.setOnClickListener((v) -> {
             logAction("Reset:Table");
             seals.normalSample.clearSample();
@@ -290,7 +297,7 @@ public class CardSealDialog extends BaseTosDialog {
 
         // Update chart & pearson
         initChart();
-        initPearsonChi();
+        setupPearsonChi();
     }
 
     private void initTableHeader() {
@@ -307,7 +314,6 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     private void initChart() {
-        chart = findViewById(R.id.csdChart);
         findViewById(R.id.csdChartResetZoom).setOnClickListener((v) -> {
             chart.fitScreen();
         });
@@ -337,13 +343,6 @@ public class CardSealDialog extends BaseTosDialog {
         chart.invalidate();
     }
 
-    private void initPearsonChi() {
-        pearsonChi = findViewById(R.id.csdPearsonChi);
-        pearsonH0 = findViewById(R.id.csdPearsonH0);
-
-        setupPearsonChi();
-    }
-
     @SuppressLint("SetTextI18n")
     private void setupPearsonChi() {
         SealSample ss = getWorkingSample();
@@ -353,6 +352,7 @@ public class CardSealDialog extends BaseTosDialog {
             pearson = ChiSquarePearson.acceptH0(ss, ChiSquareTable._100);
         }
         pearsonH0.setText(pearson ? R.string.accept : R.string.reject);
+        updateLuck(pearson);
 
         String s = _fmt("pearson accept = %s, ss = %s", pearson, ss);
         pearsonChi.setText(s);
@@ -367,6 +367,11 @@ public class CardSealDialog extends BaseTosDialog {
         pearsonChi.setText(s);
         logI("pearson accept = %s\nsample = %s", pearson, ss);
         logI("%s", s);
+    }
+
+    private void updateLuck(boolean accept) {
+        findViewById(R.id.csdCardLuckNormal).setSelected(accept);
+        findViewById(R.id.csdCardLuckAbnormal).setSelected(!accept);
     }
 
     private void setDesc(String s) {

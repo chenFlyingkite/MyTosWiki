@@ -236,8 +236,26 @@
                                 android:id="@+id/csdCardTable"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                            </LinearLayout>
+                                android:orientation="vertical"/>
+
+                            <TextView
+                                style="@style/common_text.white.seal.t16"
+                                android:text="@string/card_luck"/>
+
+                            <TextView
+                                android:id="@+id/csdCardLuckNormal"
+                                style="@style/common_text.white.seal.t16"
+                                android:drawableLeft="@drawable/icon_yes_no"
+                                android:drawablePadding="@dimen/t5dp"
+                                android:text="@string/card_luck_normal"/>
+
+                            <TextView
+                                android:id="@+id/csdCardLuckAbnormal"
+                                style="@style/common_text.white.seal.t16"
+                                android:drawableLeft="@drawable/icon_yes_no"
+                                android:drawablePadding="@dimen/t5dp"
+                                android:text="@string/card_luck_abnormal"/>
+
                         </LinearLayout>
 
                         <View

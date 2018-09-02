@@ -462,6 +462,9 @@
     <string name="card_sample">結果</string>
     <string name="card_charts">圖表</string>
     <string name="card_summary">總結</string>
+    <string name="card_luck">本次抽卡運氣</string>
+    <string name="card_luck_normal">符合預期</string>
+    <string name="card_luck_abnormal">偏歐洲 (低機率卡片比預期多)\n或非洲 (高機率卡片比預期多)</string>
     <string name="card_pearson_h0">H0：此樣本中已發生事件的次數分配會遵守指定的理論分配</string>
     <string name="card_pearson_limit">如果個別欄位的期望次數太低，會使機率分配無法近似於卡方分配。\n一般要求：自由度 df &gt; 1時，期望次數小於5的欄位不多於總欄位的20%。</string>
     <string name="card_series_seals">抽卡機系列</string>
