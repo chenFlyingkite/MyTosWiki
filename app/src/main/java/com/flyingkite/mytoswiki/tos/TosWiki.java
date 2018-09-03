@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.flyingkite.crashlytics.CrashReport;
+import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
 public class TosWiki {
@@ -96,6 +98,7 @@ public class TosWiki {
             if (cardFavor == null) {
                 cardFavor = new CardFavor();
             }
+            logFavorite(cardFavor);
             t.tac("%s cards favored", cardFavor.favors.size());
             monitorDB.notifyClientsState();
         });
@@ -204,6 +207,17 @@ public class TosWiki {
     public static void attendDatabaseTasks(@NonNull TaskMonitor.OnTaskState listener) {
         monitorDB.registerClient(listener);
     }
+
+
+
+    //-- Events
+    private static void logFavorite(CardFavor f) {
+        Map<String, String> m = new HashMap<>();
+        String card = String.valueOf(f == null ? 0 : f.favors.size());
+        m.put("card", card);
+        FabricAnswers.logFavorite(m);
+    }
+    //-- Events
 
     private static <T> int len(T[] a) {
         return a == null ? 0 : a.length;

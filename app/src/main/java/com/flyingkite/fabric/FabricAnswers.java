@@ -73,6 +73,10 @@ public class FabricAnswers {
     public static void logTextEditor(Map<String, String> attributes) {
         logCustom("TextEditor", attributes);
     }
+
+    public static void logFavorite(Map<String, String> attributes) {
+        logCustom("Favorite", attributes);
+    }
     //-- Tool bars
 
     //-- Tos Items
