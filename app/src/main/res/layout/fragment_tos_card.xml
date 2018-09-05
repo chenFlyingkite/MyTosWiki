@@ -70,7 +70,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:visibility="visible"
+        android:visibility="gone">
 
         <ImageView
             style="@style/card_icon.favorW"
