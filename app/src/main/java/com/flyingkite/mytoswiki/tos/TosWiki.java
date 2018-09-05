@@ -143,7 +143,11 @@ public class TosWiki {
         TosCard c = allCardsByIdNorm.get(id);
         if (c == null) {
             try {
-                throw new NullPointerException("Card null : " + id + ", map = " + allCardsByIdNorm.size() + ", all = " + getAllCardsCount());
+                String s = z._fmt("Card null: %s, map = %s, all = %s",
+                        id, allCardsByIdNorm.size(), len(allCards));
+                if (!allCardsByIdNorm.isEmpty()) {
+                    throw new NullPointerException(s);
+                }
             } catch (NullPointerException npe) {
                 CrashReport.logException(npe);
             }
@@ -155,7 +159,11 @@ public class TosWiki {
         BaseCraft c = allCraftsByIdNorm.get(id);
         if (c == null) {
             try {
-                throw new NullPointerException("Craft null : " + id);
+                String s = z._fmt("Craft null: %s, map = %s, normal = %s, arm = %s",
+                        id, allCraftsByIdNorm.size(), len(normalCrafts), len(armCrafts));
+                if (!allCraftsByIdNorm.isEmpty()) {
+                    throw new NullPointerException(s);
+                }
             } catch (NullPointerException npe) {
                 CrashReport.logException(npe);
             }
