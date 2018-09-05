@@ -108,10 +108,6 @@ public class TosWiki {
         return cardFavor;
     }
 
-    public static void saveCardFavor() {
-        GsonUtil.writeFile(getTosCardFavorFile(), new Gson().toJson(cardFavor));
-    }
-
     public static void saveCardFavor(CardFavor cf) {
         GsonUtil.writeFile(getTosCardFavorFile(), new Gson().toJson(cf));
     }

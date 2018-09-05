@@ -263,25 +263,25 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
-            runOnUiThread(() -> {
-                if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
-                    cardReady = true;
-                    onCardsReady(TosWiki.allCards());
-                    TosWiki.joinFavorAction(favorAction);
-                }
-                log("#%s (%s) is done", index, tag);
-            });
+            log("#%s (%s) is done", index, tag);
         }
 
         @Override
         public void onAllTaskDone() {
             log("All task OK");
+            runOnUiThread(() -> {
+                cardReady = true;
+                onCardsReady(TosWiki.allCards());
+                TosWiki.joinFavorAction(favorAction);
+            });
         }
     };
 
     @Override
     public void log(String message) {
-        //Log.v(LTag(), message);
+        if (BuildConfig.DEBUG) {
+            logI(message);
+        }
     }
 
     private void onCardsReady(TosCard[] cards) {

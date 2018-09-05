@@ -28,13 +28,13 @@ public class CrashReport {
         t.tic();
         // https://docs.fabric.io/android/crashlytics/build-tools.html#disable-crashlytics-for-debug-builds
         // Set up Crashlytics, disabled for debug builds
-        CrashlyticsCore core = new CrashlyticsCore.Builder().disabled(debug).build();
-        Crashlytics kit = new Crashlytics.Builder().core(core).build();
+        CrashlyticsCore core = new CrashlyticsCore.Builder().disabled(debug).build(); // 10ms
+        Crashlytics kit = new Crashlytics.Builder().core(core).build(); // 10ms
 
         // Initialize Fabric with the debug-disabled crashlytics.
-        Fabric.with(context, kit);
+        Fabric.with(context, kit); // 50ms
 
-        logDeviceInfo(context);
+        logDeviceInfo(context); // 50ms
         t.tac("%s init OK", TAG);
     }
 
@@ -71,8 +71,7 @@ public class CrashReport {
 
         setValue("CPU_HW", parseCpuHardwareInfo());
 
-        logMemory(context);
-        logGLES(context);
+        logMemoryAndGLES(context);
     }
 
     private static String parseCpuHardwareInfo() {
@@ -86,17 +85,17 @@ public class CrashReport {
         return null;
     }
 
-    private static void logMemory(Context context) {
+    private static void logMemoryAndGLES(Context context) {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        if (am == null) return;
+
         ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(memInfo);
 
         setValue("Max_Hw_Mem", StringUtil.formatByte(memInfo.totalMem));
         setValue("Max_Vm_Mem", StringUtil.formatByte(Runtime.getRuntime().maxMemory()));
-    }
 
-    private static void logGLES(Context context) {
-        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        // GLES
         setValue("GL_ES_Ver", Integer.toString(am.getDeviceConfigurationInfo().reqGlEsVersion, 16));
     }
 
