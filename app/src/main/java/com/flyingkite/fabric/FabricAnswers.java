@@ -6,6 +6,7 @@ import com.crashlytics.android.answers.ContentViewEvent;
 import com.crashlytics.android.answers.CustomEvent;
 import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.library.log.Loggable;
+import com.flyingkite.mytoswiki.BuildConfig;
 
 import java.util.Map;
 
@@ -129,7 +130,9 @@ public class FabricAnswers {
         c = addAttr(c, attributes);
         c.putCustomAttribute("FCMToken", token());
         Answers.getInstance().logCustom(c);
-        //log("log %s", c);
+        if (BuildConfig.DEBUG) {
+            log("log %s", c);
+        }
     }
 
     private static <T extends AnswersEvent> T addAttr(T c, Map<String, String> attributes) {

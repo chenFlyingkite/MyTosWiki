@@ -164,6 +164,10 @@
     <string name="cards_stay_until">效果持續至 [條件]</string>
     <string name="cards_extra_attack">追打</string>
     <string name="cards_black_white_original">將黑白符石變回原來色調</string>
+    <!-- #1327, 伊莉莎白, Restore all Runestones to normal state
+         #1765, 酷拉皮卡, restore all Runestones to normal state upon Skill activation
+    -->
+    <string name="cards_restore_runestone_normal">將場上的符石變回原始模樣</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -261,6 +265,9 @@
     </string-array>
     <string-array name="cards_black_white_original_keys">
         <item>將黑白符石變回原來色調</item>
+    </string-array>
+    <string-array name="cards_restore_runestone_normal_keys">
+        <item>將場上的符石變回原始模樣</item>
     </string-array>
 
 

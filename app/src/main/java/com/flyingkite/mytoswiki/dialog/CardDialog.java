@@ -139,6 +139,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
             boolean add = v.isSelected();
             TosWiki.getCardFavor().addOrRemove(add, card.idNorm);
             TosWiki.notifyFavor();
+            logFavorite(add, card.idNorm);
         });
         favor.setSelected(TosWiki.getCardFavor().exist(card.idNorm));
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
@@ -484,6 +485,13 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         }
         m.put("card", id);
         FabricAnswers.logCard(m);
+    }
+
+    private void logFavorite(boolean add, String idNorm) {
+        Map<String, String> m = new HashMap<>();
+        String key = add ? "add" : "remove";
+        m.put(key, idNorm);
+        FabricAnswers.logFavorite(m);
     }
 
     private void logImpression() {

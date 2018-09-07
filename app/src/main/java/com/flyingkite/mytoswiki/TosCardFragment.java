@@ -101,6 +101,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialStayUntil;
     private CheckBox sortSpecialExtraAttack;
     private CheckBox sortSpecialOriginalColor;
+    private CheckBox sortSpecialRestoreNormal;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -413,6 +414,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
         sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
         sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
+        sortSpecialRestoreNormal = menu.findViewById(R.id.sortSpecialRestoreNormal);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -771,6 +773,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialOriginalColor.isChecked()) {
                     accept &= find(key, R.array.cards_black_white_original_keys);
                 }
+                if (sortSpecialRestoreNormal.isChecked()) {
+                    accept &= find(key, R.array.cards_restore_runestone_normal_keys);
+                }
             }
             return accept;
         }
@@ -849,12 +854,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         @Override
         public List<String> getMessages(List<Integer> result) {
-            List<String> messages;
-            messages = getCommonMessages(result);
-            if (messages == null) {
-                messages = getCassandraMessages(result);
+            List<String> msgs;
+            msgs = getCommonMessages(result);
+            if (msgs == null) {
+                msgs = getCassandraMessages(result);
             }
-            return messages;
+            return msgs;
         }
 
         private Comparator<Integer> getCassandraComparator() {
