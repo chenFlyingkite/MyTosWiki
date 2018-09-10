@@ -392,11 +392,28 @@
 
                     <!-- Virtual Rebirth & change -->
                     <LinearLayout
-                        android:id="@+id/cardRebirthCraft"
+                        android:id="@+id/cardChange"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/t10dp"
                         android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/cardSwitchContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/cardText.header"
+                                android:background="@drawable/bg_rect_skyblue"
+                                android:text="@string/cards_switch"/>
+
+                            <include
+                                android:id="@+id/cardSwitch"
+                                layout="@layout/view_card_row_rebirth"/>
+
+                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/cardRebirthFromContent"

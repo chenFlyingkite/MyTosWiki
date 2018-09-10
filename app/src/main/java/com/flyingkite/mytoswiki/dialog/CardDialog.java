@@ -139,7 +139,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
             boolean add = v.isSelected();
             TosWiki.getCardFavor().addOrRemove(add, card.idNorm);
             TosWiki.notifyFavor();
-            logFavorite(add, card.idNorm);
+            logFavorite(add, card.idNorm + " " + card.name);
         });
         favor.setSelected(TosWiki.getCardFavor().exist(card.idNorm));
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
@@ -180,7 +180,8 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         setCombine(card);
         setRebirth(card);
         setArmCraft(card);
-        setVisibilityByChild(findViewById(R.id.cardRebirthCraft));
+        setSwitching(card);
+        setVisibilityByChild(findViewById(R.id.cardChange));
 
         // Fill in Amelioration, I, II, III, IV
         setImproves(card.skillAmeCost1 > 0, R.id.cardAmeliorationTable, this::setAmeLink);
@@ -350,22 +351,42 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setRebirth(TosCard c) {
-        setCardArrow(c, c.rebirthFrom, findViewById(R.id.cardRebirthFromContent));
-        setCardArrow(c, c.rebirthChange, findViewById(R.id.cardRebirthChangeContent));
+        setCardArrowFrom(c, c.rebirthFrom, findViewById(R.id.cardRebirthFromContent));
+        setCardArrowFrom(c, c.rebirthChange, findViewById(R.id.cardRebirthChangeContent));
     }
 
-    private void setCardArrow(TosCard c, String fromCard, View parent) {
+    private void setSwitching(TosCard c) {
+        setCardArrowTo(c, c.switchChange, findViewById(R.id.cardSwitchContent));
+    }
+
+    private void setCardArrowFrom(TosCard c, String fromCard, View parent) {
+        setCardArrow(c, fromCard, parent, false);
+    }
+
+    private void setCardArrowTo(TosCard c, String fromCard, View parent) {
+        setCardArrow(c, fromCard, parent, true);
+    }
+
+    private void setCardArrow(TosCard c, String fromCard, View parent, boolean reverse) {
         if (TextUtils.isEmpty(fromCard)) {
             parent.setVisibility(View.GONE);
             return;
         }
 
+        TosCard toC = c;
+        TosCard fmC = TosWiki.getCardByIdNorm(fromCard);
+        if (reverse) {
+            TosCard t = toC;
+            toC = fmC;
+            fmC = t;
+        }
+
         parent.setVisibility(View.VISIBLE);
-        ImageView me = parent.findViewById(R.id.cardEvolveTo);
-        setSimpleCard(me, c);
+        ImageView to = parent.findViewById(R.id.cardEvolveTo);
+        setSimpleCard(to, toC);
 
         ImageView from = parent.findViewById(R.id.cardEvolveFrom);
-        setSimpleCard(from, TosWiki.getCardByIdNorm(fromCard));
+        setSimpleCard(from, fmC);
     }
 
     private void setImproves(boolean has, @IdRes int tableId, Runnable runIfExist) {
@@ -487,10 +508,10 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         FabricAnswers.logCard(m);
     }
 
-    private void logFavorite(boolean add, String idNorm) {
+    private void logFavorite(boolean add, String value) {
         Map<String, String> m = new HashMap<>();
         String key = add ? "add" : "remove";
-        m.put(key, idNorm);
+        m.put(key, value);
         FabricAnswers.logFavorite(m);
     }
 

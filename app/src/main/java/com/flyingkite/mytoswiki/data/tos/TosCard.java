@@ -180,6 +180,10 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.skillCDMax2)
     public int skillCDMax2;
 
+    /** Switching cards, 變身, like "明鏡之諜 ‧ 冰花"  #1166 -> #1167 */
+    @SerializedName(TC.switchChange)
+    public String switchChange = "";
+
     //------------
     //---- Amelioration Skill, 昇華技能
     //------------
