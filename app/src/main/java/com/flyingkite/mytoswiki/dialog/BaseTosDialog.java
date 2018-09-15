@@ -148,14 +148,6 @@ public class BaseTosDialog extends DialogFragment implements
         shareImage(v, name);
     }
 
-    protected void viewLinkAsWebDialog(String link) {
-        WebDialog d = new WebDialog();
-        Bundle b = new Bundle();
-        b.putString(WebDialog.BUNDLE_LINK, link);
-        d.setArguments(b);
-        d.show(getActivity());
-    }
-
     public void show(Activity activity) {
         log("show %s", sig());
         show(activity.getFragmentManager(), sig());

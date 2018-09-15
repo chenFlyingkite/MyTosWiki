@@ -3,6 +3,7 @@ package com.flyingkite.mytoswiki.util;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.dialog.WebDialog;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -25,10 +27,20 @@ public interface PageUtil extends Loggable, ViewUtil {
 
     Activity getActivity();
 
-    View getView();
+    default View getView() {
+        return null;
+    };
 
     default void onToolScrollToPosition(RecyclerView rv, int position) {
 
+    }
+
+    default void viewLinkAsWebDialog(String link) {
+        WebDialog d = new WebDialog();
+        Bundle b = new Bundle();
+        b.putString(WebDialog.BUNDLE_LINK, link);
+        d.setArguments(b);
+        d.show(getActivity());
     }
 
     default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {

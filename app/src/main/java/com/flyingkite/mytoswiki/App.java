@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.StrictMode;
 import android.support.annotation.AnyRes;
 import android.support.annotation.ColorRes;
+import android.support.annotation.DimenRes;
 import android.support.annotation.StringRes;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
@@ -115,7 +116,15 @@ public class App extends MultiDexApplication {
                 + '/' + r.getResourceEntryName(resId));
     }
 
-    public static int getColoar(@ColorRes int id) {
+    public static int getColorF(@ColorRes int id) {
         return me.getResources().getColor(id);
+    }
+
+    public static float getDimensionF(@DimenRes int id) {
+        return me.getResources().getDimension(id);
+    }
+
+    public static float getDimensionPixelSizeF(@DimenRes int id) {
+        return me.getResources().getDimensionPixelSize(id);
     }
 }

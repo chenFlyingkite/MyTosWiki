@@ -95,14 +95,6 @@ public class CommonDialog extends BaseTosDialog {
         });
     }
 
-    private void setTextOrHide(TextView view, CharSequence cs) {
-        if (TextUtils.isEmpty(cs)) {
-            view.setVisibility(View.GONE);
-        } else {
-            view.setText(cs);
-        }
-    }
-
     private void setTextIfExist(TextView view, CharSequence cs) {
         if (!TextUtils.isEmpty(cs)) {
             view.setText(cs);

@@ -5,11 +5,13 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.IdRes;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Checkable;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -179,6 +181,15 @@ public interface ViewUtil {
         // If no children is added, add all the child tags
         if (addAllIfEmpty && !added) {
             result.addAll(all);
+        }
+    }
+
+    default void setTextOrHide(TextView t, CharSequence cs) {
+        if (TextUtils.isEmpty(cs)) {
+            t.setVisibility(View.GONE);
+        } else {
+            t.setVisibility(View.VISIBLE);
+            t.setText(cs);
         }
     }
     //-- View helpers --
