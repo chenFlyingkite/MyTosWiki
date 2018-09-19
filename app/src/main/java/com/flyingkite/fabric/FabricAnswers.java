@@ -78,6 +78,14 @@ public class FabricAnswers {
     public static void logFavorite(Map<String, String> attributes) {
         logCustom("Favorite", attributes);
     }
+
+    public static void logMainStage(Map<String, String> attributes) {
+        logCustom("MainStage", attributes);
+    }
+
+    public static void logDailyStage(Map<String, String> attributes) {
+        logCustom("DailyStage", attributes);
+    }
     //-- Tool bars
 
     //-- Tos Items

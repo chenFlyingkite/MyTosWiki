@@ -9,6 +9,8 @@
     <TextView
         android:id="@+id/stageGroupTitle"
         style="@style/cardText"
+        android:textColor="#fff"
+        android:textStyle="bold"
         android:textSize="@dimen/t20dp"
         tools:text="第十封印"/>
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_darkgray">
+
+                <TextView
+                    android:id="@+id/dds_header_battle"
+                    android:text="@string/cards_battleName"
+                    style="@style/cardText.item.6"/>
+
+                <LinearLayout
+                    android:id="@+id/dds_stages"
+                    android:layout_below="@id/dds_header_battle"
+                    android:layout_width="@dimen/cardText6"
+                    android:layout_height="wrap_content"
+                    android:showDividers="middle|beginning"
+                    android:divider="@drawable/divider_skyblue_t2"
+                    tools:layout_height="@dimen/t20dp"
+                    tools:background="@color/skyBlue"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/dds_days"
+                    android:layout_alignTop="@id/dds_header_battle"
+                    android:layout_toRightOf="@id/dds_stages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_width="@dimen/t200dp"
+                    tools:layout_height="@dimen/t20dp"
+                    tools:background="@color/yellow"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+    </ScrollView>
+</LinearLayout>

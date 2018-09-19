@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -23,7 +24,12 @@ public class StageAdapter extends RVAdapter<Stage, StageAdapter.StageVH, StageAd
     @NonNull
     @Override
     public StageVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new StageVH(inflateView(parent, R.layout.view_stage_row));
+        return new StageVH(inflateView(parent, holderLayoutId()));
+    }
+
+    @LayoutRes
+    public int holderLayoutId() {
+        return R.layout.view_stage_row;
     }
 
     @Override
