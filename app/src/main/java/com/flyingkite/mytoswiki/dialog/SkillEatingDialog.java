@@ -21,7 +21,6 @@ import com.flyingkite.library.widget.IconRVAdapter;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
-import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
@@ -133,7 +132,7 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
                 , R.drawable.card_1777, R.drawable.card_1801
         );
         a.setDataList(list);
-        final List<TosCard> cards = getCardsByIdNorms(Arrays.asList("1709", "1735", "1777", "1801"));
+        final List<String> cards = Arrays.asList("1709", "1735", "1777", "1801");
         a.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(Integer item, IconRVAdapter.IconVH vh, int position) {
