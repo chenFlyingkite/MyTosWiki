@@ -310,7 +310,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         //testAllCardDialog();
     }
 
-    /*private void testAllCardDialog() { //TODO : Hide me when release
+    /*
+    private void testAllCardDialog() { //TODO : Hide me when release
         for (int i = 0; i < allCards.size(); i++) {
             TosCard ci = allCards.get(i);
             sSingle.submit(() -> {
@@ -321,7 +322,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 d.dismiss();
             });
         }
-    }*/
+    }
+    */
 
     private void initShareImage(View parent) {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
@@ -815,7 +817,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= !c.skillAwkName.isEmpty();
                 }
                 if (sortImprovePow.isChecked()) {
-                    accept &= !c.skillPowBattleName.isEmpty();
+                    accept &= c.skillPowBattle.size() > 0;
                 }
                 if (sortImproveVir.isChecked()) {
                     accept &= !c.skillVirBattleName.isEmpty();

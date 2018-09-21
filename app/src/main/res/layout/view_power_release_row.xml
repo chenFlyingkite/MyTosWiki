@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/cardRow.greenV">
+
+    <TextView
+        android:id="@+id/cardPowBattleHeader"
+        style="@style/cardText.header.2"
+        android:background="@drawable/bg_rect_skyblue"
+        android:text="@string/cards_battleName"/>
+
+    <TextView
+        android:id="@+id/cardPowBattleName"
+        style="@style/cardText.item.6"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/skyBlue"
+        android:background="@drawable/bg_press_light_sky"
+        tools:text="@string/cards_battleName"/>
+
+    <ImageView
+        android:id="@+id/cardPowBattleLink"
+        style="@style/card_icon.chrome"/>
+</LinearLayout>

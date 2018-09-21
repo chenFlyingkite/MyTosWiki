@@ -14,39 +14,75 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:background="@drawable/bg_round_darkgray">
-
                 <TextView
-                    android:id="@+id/dds_header_battle"
-                    android:text="@string/cards_battleName"
-                    style="@style/cardText.item.6"/>
-
-                <LinearLayout
-                    android:id="@+id/dds_stages"
-                    android:layout_below="@id/dds_header_battle"
+                    android:id="@+id/dds_title"
+                    style="@style/dialog_title.white"
                     android:layout_width="@dimen/cardText6"
-                    android:layout_height="wrap_content"
-                    android:showDividers="middle|beginning"
-                    android:divider="@drawable/divider_skyblue_t2"
-                    tools:layout_height="@dimen/t20dp"
-                    tools:background="@color/skyBlue"
-                    android:orientation="vertical"/>
+                    android:text="@string/daily_stage"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/dds_header_battle"
+                        android:text="@string/cards_battleName"
+                        style="@style/cardText.item.6"/>
+
+                    <LinearLayout
+                        android:id="@+id/dds_stages"
+                        android:layout_below="@id/dds_header_battle"
+                        android:layout_width="@dimen/cardText6"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle|beginning"
+                        android:divider="@drawable/divider_skyblue_t2"
+                        tools:layout_height="@dimen/t20dp"
+                        tools:background="@color/skyBlue"
+                        android:orientation="vertical"/>
+
+                    <LinearLayout
+                        android:id="@+id/dds_days"
+                        android:layout_alignTop="@id/dds_header_battle"
+                        android:layout_toRightOf="@id/dds_stages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:layout_width="@dimen/t200dp"
+                        tools:layout_height="@dimen/t20dp"
+                        tools:background="@color/yellow"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/dds_days"
-                    android:layout_alignTop="@id/dds_header_battle"
-                    android:layout_toRightOf="@id/dds_stages"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:layout_width="@dimen/t200dp"
-                    tools:layout_height="@dimen/t20dp"
-                    tools:background="@color/yellow"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="@dimen/t25dp"
+                        android:layout_height="@dimen/t25dp"
+                        android:padding="@dimen/t5dp"
+                        android:src="@drawable/yes"/>
+                    <TextView
+                        style="@style/dialog_title.white"
+                        android:text="@string/stage_open"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/t25dp"
+                        android:layout_height="@dimen/t25dp"
+                        android:padding="@dimen/t5dp"
+                        android:layout_marginLeft="@dimen/t25dp"
+                        android:src="@drawable/no"/>
+                    <TextView
+                        style="@style/dialog_title.white"
+                        android:text="@string/stage_close"/>
+
                 </LinearLayout>
-            </RelativeLayout>
+            </LinearLayout>
         </HorizontalScrollView>
 
     </ScrollView>

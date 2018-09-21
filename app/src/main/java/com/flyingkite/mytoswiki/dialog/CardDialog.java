@@ -19,6 +19,7 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
+import com.flyingkite.mytoswiki.data.tos.NameLink;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.CardCombineAdapter;
@@ -193,7 +194,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
         setImproves(!TextUtils.isEmpty(card.skillAwkName), R.id.cardAwakenRecallTable, this::setAwkLink);
 
         // Fill in Power Release
-        setImproves(!TextUtils.isEmpty(card.skillPowBattleName), R.id.cardPowerReleaseTable, this::setPowLink);
+        setImproves(card.skillPowBattle.size() > 0, R.id.cardPowerReleaseTable, this::setPowLink);
 
         // Fill in Virtual Rebirth
         setImproves(!TextUtils.isEmpty(card.skillVirBattleName), R.id.cardVirtualRebirthTable, this::setVirLink);
@@ -443,7 +444,22 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setPowLink() {
-        setLink(R.id.cardPowBattleName, R.id.cardPowBattleLink, card.skillPowBattleName, card.skillPowBattleLink);
+        int[] ids = {R.id.cardPowRel1, R.id.cardPowRel2};
+        View[] vs = new View[ids.length];
+        // Hide all items
+        for (int i = 0; i < ids.length; i++) {
+            vs[i] = findViewById(ids[i]);
+            vs[i].setVisibility(View.GONE);
+        }
+        // Show up it
+        for (int i = 0; i < card.skillPowBattle.size(); i++) {
+            View v = vs[i];
+            v.setVisibility(View.VISIBLE);
+            NameLink ni = card.skillPowBattle.get(i);
+            TextView ti = v.findViewById(R.id.cardPowBattleName);
+            View li = v.findViewById(R.id.cardPowBattleLink);
+            setLink(ti, li, ni.name, ni.link);
+        }
     }
 
     private void setVirLink() {
@@ -456,8 +472,11 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
     }
 
     private void setLink(@IdRes int nameId, @IdRes int linkId, String bname, String blink) {
-        TextView t;
-        t = findViewById(nameId);
+        setLink(findViewById(nameId), findViewById(linkId), bname, blink);
+    }
+
+    private void setLink(TextView nameView, View linkView, String bname, String blink) {
+        TextView t = nameView;
         CharSequence cs = Html.fromHtml("<u>" + bname + "</u>");
         t.setText(cs);
         View.OnClickListener clk = (v) -> {
@@ -465,7 +484,7 @@ public class CardDialog extends BaseTosDialog implements TosPageUtil {
             viewLinkAsWebDialog(blink);
         };
         t.setOnClickListener(clk);
-        findViewById(linkId).setOnClickListener(clk);
+        linkView.setOnClickListener(clk);
     }
 
     private void setAmelioration(@IdRes int id, @DrawableRes int ameLv, int scost, String sdesc) {

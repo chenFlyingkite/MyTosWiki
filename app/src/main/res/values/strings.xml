@@ -482,6 +482,11 @@
     <string name="tos_event_title">神魔之塔活動表</string>
     <string name="tos_event_header">神魔之塔當前活動列表 : </string>
 
+    <string name="daily_stage">每日關卡</string>
+    <string name="main_stage">主線任務</string>
+    <string name="stage_open">開放中</string>
+    <string name="stage_close">未開放</string>
+
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)
 若 N >= 2 且卡片攻擊力 = A, 則當次攻擊 = A * (0.25 + 0.25 * N + 0.15 * S + 0.3 * R)</string>
