@@ -455,6 +455,8 @@
     <string name="skillLv_azazel_04">★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_05">★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_06">★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
+    <string name="skillLv_special_01_title">僅用 14張 卡片吃到技6的方式</string>
+    <string name="skillLv_special_01_01">★1 技4 (餘回合0) = 技1 + 5 x 技1\n★2 技4 (餘回合30) = 技4 (餘回合0) + 3 x 技1\n★3 技6 = 技4 (餘回合30) + 5 x 技1</string>
 
     <string name="card_seal_title">封印卡抽卡模擬器</string>
     <string name="card_seal_pure_intent">本模擬器僅使用隨機亂數和神魔公布之抽卡機率進行模擬。抽卡結果並不影響召喚師的神魔卡片。</string>

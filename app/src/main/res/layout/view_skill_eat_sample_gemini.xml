@@ -15,10 +15,24 @@
             android:orientation="vertical"
             android:background="@color/gray4">
 
+            <!-- Special way -->
+            <TextView
+                style="@style/skill_sample_title"
+                android:text="@string/skillLv_special_01_title"/>
+
+            <TextView
+                style="@style/common_text.white"
+                android:text="@string/skillLv_special_01_01"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t20dp"/>
+
+            <!-- Gemini -->
             <TextView
                 style="@style/skill_sample_title"
                 android:text="@string/skillLv_gemini_title"/>
-            <!-- Gemini -->
+
             <TextView
                 style="@style/common_text.white"
                 android:text="@string/skillLv_gemini_01"/>
