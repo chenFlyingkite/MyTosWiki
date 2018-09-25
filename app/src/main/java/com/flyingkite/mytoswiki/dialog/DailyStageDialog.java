@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki.dialog;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -74,14 +75,14 @@ public class DailyStageDialog extends BaseTosDialog {
             List<Character> hour = toCharList(time.open.toCharArray());
             a.setDataList(hour);
             fillItemsLinearly(open, a);
-            if (i % 2 == 0) {
-                int color = App.getColorF(R.color.colorPrimaryDark);
-                if (i == today) {
-                    color = App.getColorF(R.color.gray6);
-                }
-                column.setBackgroundColor(color);
-                //column.setBackgroundColor(Color.CYAN);
+            int color = Color.TRANSPARENT;
+            if (i % 2 == 0) { // even number
+                 color = App.getColorF(R.color.colorPrimaryDark);
             }
+            if (i == today) {
+                color = App.getColorF(R.color.gray6);
+            }
+            column.setBackgroundColor(color);
             table.addView(column);
         }
     }
@@ -152,7 +153,6 @@ public class DailyStageDialog extends BaseTosDialog {
         Date d = new Date();
         today = (d.getDay() + 6) % 7;
     }
-
 
     //-- Events
     private void logImpression() {
