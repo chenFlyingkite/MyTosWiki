@@ -62,6 +62,7 @@ public class MainActivity extends BaseActivity implements
     }
 
     private WaitingDialog waiting;
+    private boolean isDestroyed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,12 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        isDestroyed = true;
     }
 
     private void addTosFragment() {
@@ -176,6 +183,9 @@ public class MainActivity extends BaseActivity implements
     private TaskMonitor.OnTaskState onDatabaseState = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
+            log("#%s (%s) is done", index, tag);
+            if (isFinishing() || isDestroyed) return;
+
             runOnUiThread(() -> {
                 if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
 
@@ -186,7 +196,6 @@ public class MainActivity extends BaseActivity implements
                         waiting = null;
                     }
                 }
-                log("#%s (%s) is done", index, tag);
             });
         }
 
