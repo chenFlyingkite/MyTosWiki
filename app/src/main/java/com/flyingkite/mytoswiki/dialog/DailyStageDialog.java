@@ -134,15 +134,15 @@ public class DailyStageDialog extends BaseTosDialog {
     }
 
     private void initOpenHour() {
-        final String[] time = {"一", "二", "三", "四", "五", "六", "日"};
+        final String[] time = {"日", "一", "二", "三", "四", "五", "六"};
         final String[] hour = {
+                "000001110",
                 "111100000",
                 "100010000",
                 "010001100",
                 "001000010",
                 "000011000",
                 "000100011",
-                "000001110",
         };
         for (int i = 0; i < time.length; i++) {
             OpenTime t = new OpenTime();
@@ -151,7 +151,7 @@ public class DailyStageDialog extends BaseTosDialog {
             openHours.add(t);
         }
         Date d = new Date();
-        today = (d.getDay() + 6) % 7;
+        today = d.getDay() % 7;
     }
 
     //-- Events

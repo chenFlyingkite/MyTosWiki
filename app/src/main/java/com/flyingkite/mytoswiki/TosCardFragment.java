@@ -299,7 +299,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
             @Override
             public void onFiltered(int selected, int total) {
-                if (isDetached()) return;
+                if (getActivity() == null) return;
 
                 tosInfo.setText(getString(R.string.cards_selection, selected, total));
             }

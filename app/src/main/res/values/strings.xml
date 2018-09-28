@@ -24,6 +24,7 @@
     <string name="n_cards">張卡片</string>
     <string name="accept">接受</string>
     <string name="reject">拒絕</string>
+    <string name="today">今天</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>

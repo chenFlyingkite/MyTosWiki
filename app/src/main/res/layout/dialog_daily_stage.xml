@@ -81,6 +81,13 @@
                         style="@style/dialog_title.white"
                         android:text="@string/stage_close"/>
 
+                    <TextView
+                        style="@style/dialog_title.white"
+                        android:layout_marginLeft="@dimen/t25dp"
+                        android:padding="@dimen/t2dp"
+                        android:background="@color/gray6"
+                        android:text="@string/today"/>
+
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
