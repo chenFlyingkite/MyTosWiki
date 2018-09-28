@@ -66,15 +66,15 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.2"
 
     flavorDimensions "default"
 
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode
         versionName MyBuildInfo.versionName
@@ -124,7 +124,7 @@ android {
 // https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa
 // https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration#variant_aware
 dependencies {
-    def supportLibVer = "27.1.1"
+    def supportLibVer = "28.0.0"
 
     api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.android.support:multidex:1.0.3'
