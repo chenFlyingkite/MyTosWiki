@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/smallImage"
+        android:id="@+id/itemIcon"
         style="@style/icon_t40"
         tools:src="@drawable/card_1777" />
 

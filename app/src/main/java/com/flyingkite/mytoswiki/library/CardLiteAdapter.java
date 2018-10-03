@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -20,7 +21,12 @@ public class CardLiteAdapter extends RVAdapter<TosCard, CardLiteAdapter.CardLVH,
     @NonNull
     @Override
     public CardLVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CardLVH(inflateView(parent, R.layout.view_simple_icon));
+        return new CardLVH(inflateView(parent, getItemLayout()));
+    }
+
+    @LayoutRes
+    public int getItemLayout() {
+        return R.layout.view_simple_icon;
     }
 
     @Override

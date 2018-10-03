@@ -1,6 +1,8 @@
 package com.flyingkite.mytoswiki.dialog;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.support.annotation.IdRes;
@@ -17,11 +19,10 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.widget.IconRVAdapter;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
-import com.flyingkite.mytoswiki.library.IconAdapter;
+import com.flyingkite.mytoswiki.library.CardTileAdapter;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
@@ -54,7 +55,7 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
     private TextView needRnd;
     private CheckBox use600;
     private TextView eatCard;
-    private Library<IconAdapter> card600;
+    private Library<CardTileAdapter> card600;
 
     private static final int[] ROUNDS_SUM = {0
             // LV  1 ~  5, diff = 16, 19, 50, 75
@@ -117,28 +118,19 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
 
     private void initCard600() {
         card600 = new Library<>(findViewById(R.id.skillCard600));
-        IconAdapter a = new IconAdapter() {
+        CardTileAdapter a = new CardTileAdapter() {
             @Override
-            protected int holderLayout() {
-                return R.layout.view_small_image;
+            public FragmentManager getFragmentManager() {
+                return getActivity().getFragmentManager();
             }
 
             @Override
-            protected int itemId() {
-                return R.id.smallImage;
+            public int getItemLayout() {
+                return R.layout.view_small_image;
             }
         };
-        List<Integer> list = Arrays.asList(R.drawable.card_1709, R.drawable.card_1735
-                , R.drawable.card_1777, R.drawable.card_1801
-        );
-        a.setDataList(list);
-        final List<String> cards = Arrays.asList("1709", "1735", "1777", "1801");
-        a.setItemListener(new IconAdapter.ItemListener() {
-            @Override
-            public void onClick(Integer item, IconRVAdapter.IconVH vh, int position) {
-                showCardDialog(cards.get(position));
-            }
-        });
+        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897");
+        a.setDataList(getCardsByIdNorms(c600));
         card600.setViewAdapter(a);
     }
 
@@ -213,6 +205,7 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
         }
     };
 
+    @SuppressLint("SetTextI18n")
     private void computeEatCard() {
         int lvFrom = Integer.parseInt(fromSpin.getSelectedItem().toString());
         int pgs = Integer.parseInt(pgsSpin.getSelectedItem().toString());
@@ -265,6 +258,7 @@ public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
         return ShareHelper.extFilesFile("skillEat.txt");
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
         private TicTac2 clk = new TicTac2();
         @Override
