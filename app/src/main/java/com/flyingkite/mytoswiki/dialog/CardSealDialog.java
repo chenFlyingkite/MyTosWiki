@@ -154,6 +154,8 @@ public class CardSealDialog extends BaseTosDialog {
         a.setItemListener(new SealCardAdapter.ItemListener() {
             @Override
             public void onClick(TosCard card, SealCardAdapter.SCardVH vh, int position) {
+                if (card == null) return;
+
                 if (vh.isDrawn()) {
 
                 } else {

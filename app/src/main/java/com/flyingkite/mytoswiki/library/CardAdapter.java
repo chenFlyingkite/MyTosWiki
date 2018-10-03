@@ -55,6 +55,7 @@ public class CardAdapter
                 selection = s == null ? new AllCards<>(dataList) : s;
                 if (isCancelled()) return null;
                 _indices = selection.query();
+                if (isCancelled()) return null;
                 _msg = selection.getMessages(_indices);
                 return null;
             }
