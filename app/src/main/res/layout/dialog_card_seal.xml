@@ -108,6 +108,12 @@
                             android:layout_width="@dimen/t200dp"
                             android:paddingLeft="@dimen/t10dp"
                             android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/csdSeriesKonoSubarashi"
+                                style="@style/sortRadio"
+                                android:text="@string/card_series_kono_subarashi"/>
+
                             <RadioButton
                                 android:id="@+id/csdSeriesHinduGods"
                                 style="@style/sortRadio"

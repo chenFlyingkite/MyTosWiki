@@ -413,6 +413,14 @@
                     style="@style/sortText"
                     android:text="@string/cards_restore_runestone_normal"/>
 
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_drop_rate_transfer"/>
+
             </LinearLayout>
 
             <TextView

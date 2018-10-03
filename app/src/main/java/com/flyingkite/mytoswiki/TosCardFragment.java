@@ -102,6 +102,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialExtraAttack;
     private CheckBox sortSpecialOriginalColor;
     private CheckBox sortSpecialRestoreNormal;
+    private CheckBox sortSpecialRestoreDropRateTransfer;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -315,10 +316,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         for (int i = 0; i < allCards.size(); i++) {
             TosCard ci = allCards.get(i);
             sSingle.submit(() -> {
-                Say.Log("+ #%s show %s", ci.idNorm, ci.name);
+                logE("+ #%s show %s", ci.idNorm, ci.name);
                 CardDialog d = showCardDialog(ci);
                 Say.sleepI(500);
-                Say.Log("- #%s hide %s", ci.idNorm, ci.name);
+                logE("- #%s hide %s", ci.idNorm, ci.name);
                 d.dismiss();
             });
         }
@@ -417,6 +418,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
         sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
         sortSpecialRestoreNormal = menu.findViewById(R.id.sortSpecialRestoreNormal);
+        sortSpecialRestoreDropRateTransfer = menu.findViewById(R.id.sortSpecialRestoreDropRateTransfer);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -777,6 +779,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialRestoreNormal.isChecked()) {
                     accept &= find(key, R.array.cards_restore_runestone_normal_keys);
+                }
+                if (sortSpecialRestoreDropRateTransfer.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_drop_rate_transfer_keys);
                 }
             }
             return accept;

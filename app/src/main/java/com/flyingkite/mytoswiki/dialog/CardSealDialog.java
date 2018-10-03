@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -24,6 +25,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
+import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -56,6 +58,14 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     public static final String BUNDLE_SEAL = "BUNDLE_SEAL";
+    private static List<Pair<Integer,BaseSeal>> sealOrder = new ArrayList<>();
+
+    static {
+        sealOrder.clear();
+        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,  new KonoSubarashi()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,      new HinduGods()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai, new SengokuSamurai()));
+    }
 
     private BaseSeal seals;
 
@@ -95,7 +105,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     private void parseBundle(Bundle b) {
         if (b == null) {
-            seals = new HinduGods();
+            seals = sealOrder.get(0).second;
         } else {
             seals = b.getParcelable(BUNDLE_SEAL);
         }
@@ -203,18 +213,38 @@ public class CardSealDialog extends BaseTosDialog {
         });
     }
 
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null) {
+            // Clear all the selections
+            checkSeries();
+            raised.setChecked(false);
+            peekCard.setChecked(false);
+        }
+    }
+
     private void initSeries() {
-        int id = R.id.csdSeriesHinduGods;
-        if (seals == null) {
-            seals = new HinduGods();
-        } else {
-            if (seals instanceof SengokuSamurai) {
-                id = R.id.csdSeriesSengokuSamurai;
+        checkSeries();
+        setChildClick(series, this::clickSeries);
+    }
+
+    private void checkSeries() {
+        int idAt = -1;
+        if (seals != null) {
+            for (int i = 0; i < sealOrder.size(); i++) {
+                BaseSeal s1 = seals;
+                BaseSeal s2 = sealOrder.get(i).second;
+                if (s1.getClass().equals(s2.getClass())) {
+                    idAt = i;
+                }
             }
         }
+        if (idAt < 0) {
+            idAt = 0;
+        }
+        int id = sealOrder.get(idAt).first;
         series.check(id);
-
-        setChildClick(series, this::clickSeries);
     }
 
     private void clickSeries(View v) {
@@ -222,13 +252,17 @@ public class CardSealDialog extends BaseTosDialog {
         series.check(id);
         switch (id) {
             default:
-            case R.id.csdSeriesSengokuSamurai:
-                seals = new SengokuSamurai();
-                logAction("Series:SengokuSamurai");
+            case R.id.csdSeriesKonoSubarashi:
+                seals = new KonoSubarashi();
+                logAction("Series:KonoSubarashi");
                 break;
             case R.id.csdSeriesHinduGods:
                 seals = new HinduGods();
                 logAction("Series:HinduGods");
+                break;
+            case R.id.csdSeriesSengokuSamurai:
+                seals = new SengokuSamurai();
+                logAction("Series:SengokuSamurai");
                 break;
         }
         resetPool();
