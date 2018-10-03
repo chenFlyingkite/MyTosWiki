@@ -79,6 +79,8 @@ public interface TosPageUtil extends Loggable, GlideUtil {
     }
 
     default void setSimpleCraft(ImageView view, BaseCraft c) {
+        if (c == null) return;
+
         loadCraftToImageView(view, c.icon.iconLink);
         view.setOnClickListener((v) -> {
             showCraftDialog(c);
@@ -93,7 +95,10 @@ public interface TosPageUtil extends Loggable, GlideUtil {
         List<BaseCraft> ans = new ArrayList<>();
         for (int i = 0; i < idNorms.size(); i++) {
             String idNorm = idNorms.get(i);
-            ans.add(TosWiki.getCraftByIdNorm(idNorm));
+            BaseCraft c = TosWiki.getCraftByIdNorm(idNorm);
+            if (c != null) {
+                ans.add(c);
+            }
         }
         return ans;
     }
