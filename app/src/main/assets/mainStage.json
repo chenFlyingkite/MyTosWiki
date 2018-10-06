@@ -6,6 +6,36 @@
         "group": "",
         "stages": [
           {
+            "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%B2%BE%E9%A0%8C%E5%94%B1%E9%9D%88%E9%AD%82%E7%9A%84%E6%AD%8C%E8%AC%A0",
+            "name": "妖精頌唱靈魂的歌謠",
+            "icon": "1869"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E5%8C%96%E6%88%90%E6%94%BB%E6%93%8A%E7%9A%84%E6%88%B0%E6%AD%8C",
+            "name": "化成攻擊的戰歌",
+            "icon": "1621"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%88%9B%E7%84%B6%E8%80%8C%E6%AD%A2%E7%9A%84%E9%A0%8C%E6%AD%8C",
+            "name": "戛然而止的頌歌",
+            "icon": "1619"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E9%A3%84%E7%9B%AA%E7%9A%84%E6%A8%82%E7%AC%A6",
+            "name": "飄盪的樂符",
+            "icon": "1461"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%83%B3%E6%9C%9B%E4%B8%AD%E7%9A%84%E6%85%B6%E5%85%B8%E7%87%AD%E5%85%89",
+            "name": "想望中的慶典燭光",
+            "icon": "1390"
+          }
+        ]
+      },
+      {
+        "group": "",
+        "stages": [
+          {
             "link": "http://zh.tos.wikia.com/wiki/%E8%A2%AB%E5%9B%9A%E7%A6%81%E7%9A%84%E6%AE%BA%E7%8D%B8",
             "name": "被囚禁的殺獸",
             "icon": "1870"

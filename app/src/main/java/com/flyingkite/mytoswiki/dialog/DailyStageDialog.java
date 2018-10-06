@@ -117,11 +117,27 @@ public class DailyStageDialog extends BaseTosDialog {
                 "http://zh.tos.wikia.com/wiki/%E9%9D%88%E9%AD%82%E4%B9%8B%E6%97%A5",
                 // 貪婪之日
                 "http://zh.tos.wikia.com/wiki/%E8%B2%AA%E5%A9%AA%E4%B9%8B%E6%97%A5",
+                // 捕捉靈魂石 ‧ 水
+                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%B0%B4",
+                // 捕捉靈魂石 ‧ 火
+                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E7%81%AB",
+                // 捕捉靈魂石 ‧ 木
+                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9C%A8",
+                // 捕捉靈魂石 ‧ 光
+                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E5%85%89",
+                // 捕捉靈魂石 ‧ 暗
+                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9A%97",
         };
         final String[] icons = {"0266", "0269", "0263", "0387", "0256",
-                "0605", "0669", "0576", "0665"};
+                // xx之日
+                "0605", "0669", "0576", "0665",
+                // 靈魂石
+                "0426", "0427", "0428", "0398", "0291"
+        };
         final String[] names = {"魔劍降臨之日", "狩獵珍獸之日", "尋找水晶之日", "魔物巢穴之日", "元素魂魄之日",
-                "龍刻之日", "黃金之日", "靈魂之日", "貪婪之日"};
+                "龍刻之日", "黃金之日", "靈魂之日", "貪婪之日",
+                "捕捉靈魂石 ‧ 水", "捕捉靈魂石 ‧ 火", "捕捉靈魂石 ‧ 木", "捕捉靈魂石 ‧ 光", "捕捉靈魂石 ‧ 暗",
+        };
 
         daily.clear();
         for (int i = 0; i < icons.length; i++) {
@@ -136,13 +152,14 @@ public class DailyStageDialog extends BaseTosDialog {
     private void initOpenHour() {
         final String[] time = {"日", "一", "二", "三", "四", "五", "六"};
         final String[] hour = {
-                "000001110",
-                "111100000",
-                "100010000",
-                "010001100",
-                "001000010",
-                "000011000",
-                "000100011",
+                // 0~9 = xx之日, 10~14 = 捕捉靈魂石
+                "00000111000011",
+                "11110000010000",
+                "10001000001000",
+                "01000110000100",
+                "00100001000010",
+                "00001100000001",
+                "00010001111100",
         };
         for (int i = 0; i < time.length; i++) {
             OpenTime t = new OpenTime();
