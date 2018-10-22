@@ -1,7 +1,9 @@
 package com.flyingkite.mytoswiki;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -81,6 +83,17 @@ public class BaseFragment extends Fragment implements PageUtil {
     @Override
     public void log(String message) {
         Log.w(LTag(), message);
+    }
+
+    public boolean isActivityGone() {
+        Activity act = getActivity();
+        if (act == null || act.isFinishing()) return true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            if (act.isDestroyed()) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
