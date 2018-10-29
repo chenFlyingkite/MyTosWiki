@@ -71,6 +71,8 @@ public class SealCardAdapter extends RVSelectAdapter<TosCard, SealCardAdapter.SC
         }
 
         private void showCard(TosCard c, boolean show) {
+            if (c == null) return;
+
             int id = R.drawable.card_gold;
             if (show) {
                 //loadCardToImageView(img, c);

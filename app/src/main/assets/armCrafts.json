@@ -6132,5 +6132,229 @@
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b0/C7007.png/revision/latest/scale-to-width-down/120?cb\u003d20180918103402\u0026path-prefix\u003dzh",
       "iconKey": "C7007.png"
     }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7036",
+    "name": "骷髏魔號龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b9/C7036.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151620\u0026path-prefix\u003dzh",
+      "iconKey": "C7036.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7037",
+    "name": "骷髏魔號龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/98/C7037.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151621\u0026path-prefix\u003dzh",
+      "iconKey": "C7037.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7038",
+    "name": "骷髏魔號龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C7038.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151622\u0026path-prefix\u003dzh",
+      "iconKey": "C7038.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7039",
+    "name": "骷髏魔號龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/57/C7039.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
+      "iconKey": "C7039.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7040",
+    "name": "骷髏魔號龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/69/C7040.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
+      "iconKey": "C7040.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7041",
+    "name": "骷髏魔號龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/74/C7041.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
+      "iconKey": "C7041.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於魔族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "0",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "7042",
+    "name": "骷髏魔號龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%AA%B7%E9%AB%8F%E9%AD%94%E8%99%9F%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2c/C7042.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
+      "iconKey": "C7042.png"
+    }
   }
 ]
