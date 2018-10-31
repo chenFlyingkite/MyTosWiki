@@ -25,8 +25,8 @@ def googlePlayVersion = "9.8.0"
 boolean createPlayApk = false
 
 task MyBuildInfo {
-    ext.versionCode = 21
-    ext.versionName = "1.0.0.20"
+    ext.versionCode = 22
+    ext.versionName = "1.0.0.21"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }
