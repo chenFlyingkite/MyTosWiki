@@ -1104,6 +1104,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         @Override
         protected void onPostExecute(CardSort data) {
+            if (getActivity() == null) return;
+
             cardSort = data != null ? data : new CardSort();
             updateHide();
             applySelection();

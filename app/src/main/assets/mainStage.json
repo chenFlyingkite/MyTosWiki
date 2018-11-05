@@ -3,7 +3,37 @@
     "title": "第十封印",
     "substages": [
       {
-        "group": "",
+        "group": "永恒之牢",
+        "stages": [
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%86%90%E6%84%9B%E5%9B%9A%E5%BE%92%E7%9A%84%E5%AE%88%E8%AD%B7%E4%B9%8B%E9%BE%8D",
+            "name": "憐愛囚徒的守護之龍",
+            "icon": "1868"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E7%84%A1%E6%B3%95%E9%98%BB%E6%AD%A2%E7%9A%84%E6%9C%80%E5%A3%9E%E8%A1%8C%E5%8B%95",
+            "name": "無法阻止的最壞行動",
+            "icon": "1652"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E7%AA%81%E5%85%80%E7%9A%84%E7%95%B0%E7%AB%AF",
+            "name": "突兀的異端",
+            "icon": "1394"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E7%9C%BE%E7%94%9F%E5%9C%98%E7%B5%90%E4%B8%80%E8%87%B4",
+            "name": "眾生團結一致",
+            "icon": "1393"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%98%94%E6%97%A5%E7%9A%84%E5%96%9C%E6%82%85%E4%B9%8B%E7%81%AB",
+            "name": "昔日的喜悅之火",
+            "icon": "1549"
+          }
+        ]
+      },
+      {
+        "group": "祭祀遺址",
         "stages": [
           {
             "link": "http://zh.tos.wikia.com/wiki/%E5%A6%96%E7%B2%BE%E9%A0%8C%E5%94%B1%E9%9D%88%E9%AD%82%E7%9A%84%E6%AD%8C%E8%AC%A0",
@@ -33,7 +63,7 @@
         ]
       },
       {
-        "group": "",
+        "group": "殺戮戰窟",
         "stages": [
           {
             "link": "http://zh.tos.wikia.com/wiki/%E8%A2%AB%E5%9B%9A%E7%A6%81%E7%9A%84%E6%AE%BA%E7%8D%B8",
