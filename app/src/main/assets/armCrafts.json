@@ -11,6 +11,7 @@
         "detail": "沒有技能"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -38,6 +39,7 @@
         "detail": "沒有技能"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -65,6 +67,7 @@
         "detail": "沒有技能"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -92,6 +95,7 @@
         "detail": "沒有技能"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -119,6 +123,7 @@
         "detail": "沒有技能"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -140,6 +145,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -180,6 +197,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -216,6 +245,18 @@
     "mode": "破碎龍咒",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -256,6 +297,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -292,6 +345,18 @@
     "mode": "落影龍璃",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -332,6 +397,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -368,6 +445,18 @@
     "mode": "轉動龍印",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -408,6 +497,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -444,6 +545,18 @@
     "mode": "映照龍符",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -484,6 +597,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -520,6 +645,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -560,6 +697,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -596,6 +745,18 @@
     "mode": "破碎龍咒",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -636,6 +797,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -672,6 +845,18 @@
     "mode": "落影龍璃",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -712,6 +897,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -748,6 +945,18 @@
     "mode": "轉動龍印",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -788,6 +997,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -824,6 +1045,18 @@
     "mode": "映照龍符",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -864,6 +1097,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -900,6 +1145,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -940,6 +1197,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -976,6 +1245,18 @@
     "mode": "破碎龍咒",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1016,6 +1297,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "自身主動技能 CD 減少 1"
       },
@@ -1052,6 +1345,18 @@
     "mode": "落影龍璃",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 50%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1092,6 +1397,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1128,6 +1445,18 @@
     "mode": "轉動龍印",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1168,6 +1497,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1204,6 +1545,18 @@
     "mode": "映照龍符",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1244,6 +1597,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1280,6 +1645,18 @@
     "mode": "連鎖龍紋",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1320,6 +1697,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1356,6 +1745,18 @@
     "mode": "破碎龍咒",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1396,6 +1797,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1432,6 +1845,18 @@
     "mode": "落影龍璃",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1472,6 +1897,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1508,6 +1945,18 @@
     "mode": "轉動龍印",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1548,6 +1997,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1584,6 +2045,18 @@
     "mode": "映照龍符",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1624,6 +2097,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1660,6 +2145,18 @@
     "mode": "連鎖龍紋",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1700,6 +2197,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1736,6 +2245,18 @@
     "mode": "破碎龍咒",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1776,6 +2297,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1812,6 +2345,18 @@
     "mode": "落影龍璃",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1852,6 +2397,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -1888,6 +2445,18 @@
     "mode": "轉動龍印",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -1928,13 +2497,25 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
       {
         "level": 2,
         "score": 0,
-        "detail": "消除一組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
+        "detail": "消除 1 組 6 粒或以上的暗符石，龍類攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -1964,6 +2545,18 @@
     "mode": "映照龍符",
     "charge": "連擊 (Combo) 達 4 或以上",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2004,6 +2597,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個龍類成員的技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，龍類成員的攻擊力提升 25%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 3"
       },
@@ -2042,6 +2647,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 10% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2053,7 +2675,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -2085,6 +2707,23 @@
     "mode": "轉動龍印",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 10% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2132,6 +2771,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 10% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2175,6 +2831,23 @@
     "mode": "映照龍符",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 10% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2222,6 +2895,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，龍類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵方所受傷害的 10% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2265,6 +2955,23 @@
     "mode": "連鎖龍紋",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，火屬性成員以 150% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2312,6 +3019,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，火屬性成員以 150% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2355,6 +3079,23 @@
     "mode": "破碎龍咒",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，火屬性成員以 150% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2402,6 +3143,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，火屬性成員以 150% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2445,6 +3203,23 @@
     "mode": "落影龍璃",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，火屬性成員以 150% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2492,6 +3267,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2535,6 +3327,23 @@
     "mode": "轉動龍印",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2582,6 +3391,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2625,6 +3451,23 @@
     "mode": "映照龍符",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2672,6 +3515,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，獸類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2715,6 +3575,23 @@
     "mode": "連鎖龍紋",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，迴避暗屬性敵人的攻擊"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2762,6 +3639,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，迴避暗屬性敵人的攻擊"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2805,6 +3699,23 @@
     "mode": "破碎龍咒",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，迴避暗屬性敵人的攻擊"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2852,6 +3763,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，迴避暗屬性敵人的攻擊"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2895,6 +3823,23 @@
     "mode": "落影龍璃",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，神族成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，迴避暗屬性敵人的攻擊"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -2942,6 +3887,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2953,7 +3915,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -2987,6 +3949,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -2998,7 +3977,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -3032,6 +4011,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -3043,7 +4039,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -3077,6 +4073,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -3088,7 +4101,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -3122,6 +4135,23 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，妖精類成員的攻擊力提升 100%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個妖精類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -3133,7 +4163,7 @@
       {
         "level": 3,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15%"
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -3165,6 +4195,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3203,6 +4245,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
       },
@@ -3237,6 +4291,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3275,6 +4341,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的水符石，神族攻擊力提升 1.2 倍"
       },
@@ -3309,6 +4387,18 @@
     "mode": "落影龍璃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3347,6 +4437,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
       },
@@ -3381,6 +4483,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3419,6 +4533,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
       },
@@ -3453,6 +4579,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3491,6 +4629,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的火符石，神族攻擊力提升 1.2 倍"
       },
@@ -3525,6 +4675,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3563,6 +4725,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
       },
@@ -3597,6 +4771,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3635,6 +4821,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的木符石，神族攻擊力提升 1.2 倍"
       },
@@ -3669,6 +4867,18 @@
     "mode": "落影龍璃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3707,6 +4917,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
       },
@@ -3741,6 +4963,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3779,6 +5013,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
       },
@@ -3813,6 +5059,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3851,6 +5109,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的光符石，神族攻擊力提升 1.2 倍"
       },
@@ -3885,6 +5155,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3923,6 +5205,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
       },
@@ -3957,6 +5251,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -3995,6 +5301,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
       },
@@ -4031,6 +5349,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍回復力提升 200%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 5 粒或以上的暗符石，神族攻擊力提升 1.2 倍"
       },
@@ -4065,6 +5395,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4105,6 +5447,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4141,6 +5495,18 @@
     "mode": "破碎龍咒",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4181,13 +5547,25 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
       },
       {
         "level": 2,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -4219,13 +5597,25 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "木屬性傷害減少 10% (此技能效果不能疊加)"
       },
       {
         "level": 2,
         "score": 0,
-        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15 倍"
       }
     ],
     "attrLimit": "",
@@ -4255,6 +5645,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4295,6 +5697,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4331,6 +5745,18 @@
     "mode": "破碎龍咒",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4371,6 +5797,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4407,6 +5845,18 @@
     "mode": "落影龍璃",
     "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4447,6 +5897,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4483,6 +5945,18 @@
     "mode": "轉動龍印",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4523,6 +5997,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4559,6 +6045,18 @@
     "mode": "映照龍符",
     "charge": "消除木符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4599,6 +6097,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "火屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4635,6 +6145,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4675,6 +6197,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4711,6 +6245,18 @@
     "mode": "破碎龍咒",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4751,6 +6297,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "暗屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4787,6 +6345,18 @@
     "mode": "落影龍璃",
     "charge": "消除光符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4827,6 +6397,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4863,6 +6445,18 @@
     "mode": "轉動龍印",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4903,6 +6497,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -4939,6 +6545,18 @@
     "mode": "映照龍符",
     "charge": "消除暗符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -4979,6 +6597,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "光屬性傷害減少 10% (此技能效果不能疊加)"
       },
@@ -5017,6 +6647,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5051,6 +6693,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5089,6 +6743,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5123,6 +6789,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5161,6 +6839,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5195,6 +6885,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5233,6 +6935,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5267,6 +6981,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5305,6 +7031,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5339,6 +7077,18 @@
     "mode": "落影龍璃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5377,6 +7127,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5411,6 +7173,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5449,6 +7223,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5483,6 +7269,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5521,6 +7319,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5555,6 +7365,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5593,6 +7415,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5627,6 +7461,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5665,6 +7511,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5699,6 +7557,18 @@
     "mode": "落影龍璃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5737,6 +7607,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5771,6 +7653,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5809,6 +7703,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5843,6 +7749,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5881,6 +7799,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，減少 80% 所受傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 35%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "延長移動符石時間 1 秒"
       },
@@ -5917,6 +7847,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 1"
       },
@@ -5947,6 +7889,18 @@
     "mode": "轉動龍印",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -5981,6 +7935,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 1"
       },
@@ -6011,6 +7977,18 @@
     "mode": "映照龍符",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -6045,6 +8023,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 1"
       },
@@ -6075,6 +8065,18 @@
     "mode": "裂空龍刃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -6109,6 +8111,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 15000 點生命力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "進入關卡後，自身主動技能 CD 減少 1"
       },
@@ -6139,6 +8153,18 @@
     "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -6173,6 +8199,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
       },
@@ -6203,6 +8241,18 @@
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -6237,6 +8287,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
       },
@@ -6267,6 +8329,18 @@
     "mode": "落影龍璃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,
@@ -6301,6 +8375,18 @@
     "craftSkill": [
       {
         "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
         "score": 0,
         "detail": "消除 1 組 3 粒或以上的心符石，魔族攻擊力提升 1.1 倍"
       },
@@ -6331,6 +8417,18 @@
     "mode": "鏡像龍丸",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，魔族成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 4 個魔族成員的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
       {
         "level": 1,
         "score": 0,

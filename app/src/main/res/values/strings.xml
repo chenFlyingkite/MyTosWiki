@@ -48,6 +48,7 @@
     <string name="cards_skillActive">主動技</string>
     <string name="cards_skillLeader">隊長技</string>
     <string name="cards_skillDesc">效果</string>
+    <string name="cards_skillDesc2">附加技能效果</string>
     <string name="cards_skillMin">初始 CD</string>
     <string name="cards_skillMax">滿等 CD</string>
     <string name="cards_battleName">關卡名稱</string>

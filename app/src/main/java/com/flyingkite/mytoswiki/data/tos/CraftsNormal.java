@@ -6,11 +6,6 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 public class CraftsNormal extends BaseCraft {
-    //-- For Common
-    @SerializedName(CRS.attrLimit)
-    public String attrLimit = "";
-    @SerializedName(CRS.raceLimit)
-    public String raceLimit = "";
 
     @Override
     public String toString() {

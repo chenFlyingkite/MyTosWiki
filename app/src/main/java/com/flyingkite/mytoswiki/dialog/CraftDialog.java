@@ -119,18 +119,20 @@ public class CraftDialog extends BaseTosDialog {
         //testAllCraftDialog();
     }
 
-    /*private void testAllCraftDialog() { //TODO : Hide me when release
+    /*
+    private void testAllCraftDialog() { // TODO : Hide me when release
         for (int i = 0; i < allCraft.size(); i++) {
             BaseCraft ci = allCraft.get(i);
             sSingle.submit(() -> {
-                Say.Log("+ #%s show %s", ci.idNorm, ci.name);
+                logE("+ #%s show %s", ci.idNorm, ci.name);
                 CraftItemDialog d = showCraftDialog(ci);
                 Say.sleepI(500);
-                Say.Log("- #%s hide %s", ci.idNorm, ci.name);
+                logE("- #%s hide %s", ci.idNorm, ci.name);
                 d.dismiss();
             });
         }
-    }*/
+    }
+    */
 
     private void countSet(List<BaseCraft> list) {
         //noinspection PointlessBooleanExpression

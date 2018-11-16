@@ -271,6 +271,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         @Override
         public void onAllTaskDone() {
             log("All task OK");
+            if (isActivityGone()) {
+                return;
+            }
+
             runOnUiThread(() -> {
                 cardReady = true;
                 onCardsReady(TosWiki.allCards());

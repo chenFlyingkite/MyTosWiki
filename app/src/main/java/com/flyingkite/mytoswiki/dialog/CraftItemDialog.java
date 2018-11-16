@@ -18,6 +18,7 @@ import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CraftItemDialog extends BaseTosDialog {
@@ -61,14 +62,12 @@ public class CraftItemDialog extends BaseTosDialog {
     private void initCraft(BaseCraft c) {
         craftIcon = findViewById(R.id.craftIcon);
         craftLink = findViewById(R.id.craftLink);
-
         craftIdNorm = findViewById(R.id.craftIdNorm);
         craftMode = findViewById(R.id.craftMode);
         craftName = findViewById(R.id.craftName);
         craftRarity = findViewById(R.id.craftRarity);
         craftLevel = findViewById(R.id.craftLevel);
         craftCharge = findViewById(R.id.craftCharge);
-
 
         if (c == null) return;
         CraftsNormal normal = null;
@@ -96,13 +95,12 @@ public class CraftItemDialog extends BaseTosDialog {
         craftRarity.setText(c.rarity + "★");
         craftLevel.setText(c.level + "");
         craftCharge.setText(c.charge);
+
+        setPreCondition(R.id.craftAttributeLimit, getString(R.string.cards_attr), c.attrLimit);
+        setPreCondition(R.id.craftRaceLimit, getString(R.string.cards_race), c.raceLimit);
         if (normal != null) {
-            setPreCondition(R.id.craftAttributeLimit, getString(R.string.cards_attr), normal.attrLimit);
-            setPreCondition(R.id.craftRaceLimit, getString(R.string.cards_race), normal.raceLimit);
             setViewVisibility(R.id.craftCardLimit, false);
         } else if (arm != null) {
-            setViewVisibility(R.id.craftAttributeLimit, false);
-            setViewVisibility(R.id.craftRaceLimit, false);
             // Join card limit as #ID name
             int n = Math.min(arm.cardLimit.size(), arm.cardLimitName.size());
             StringBuilder sb = new StringBuilder();
@@ -113,37 +111,59 @@ public class CraftItemDialog extends BaseTosDialog {
                 sb.append(arm.cardLimit.get(i)).append(" ").append(arm.cardLimitName.get(i));
             }
             setPreCondition(R.id.craftCardLimit, getString(R.string.cards_normId), sb.toString());
+
+            boolean allGone = isAllVisibilitiesOf(View.GONE, R.id.craftAttributeLimit, R.id.craftRaceLimit, R.id.craftCardLimit);
+            if (allGone) {
+                setViewVisibility(findViewById(R.id.craftPrecond), false);
+            }
         }
 
         if (normal != null) {
             // Set normal skill
             setViewVisibility(R.id.craftSkillNormal, true);
             int[] ids = {R.id.craftSkill1, R.id.craftSkill2, R.id.craftSkill3};
-            setVisibilities(View.GONE, ids);
-            for (int i = 0; i < c.craftSkill.size(); i++) {
-                CraftSkill cs = c.craftSkill.get(i);
-                setEffect(ids[i], cs.level + "", cs.detail, cs.score + "");
-            }
+            setCraftEffectRow(ids, c.craftSkill);
             // Set arm skill
             setViewVisibility(R.id.craftSkillArms, false);
         } else if (arm != null) {
+            int[] ids;
             // Set normal skill
             setViewVisibility(R.id.craftSkillNormal, false);
             // Set arm skill
             setViewVisibility(R.id.craftSkillArms, true);
-            int[] ids = {R.id.craftSkillArm1, R.id.craftSkillArm2, R.id.craftSkillArm3};
-            setVisibilities(View.GONE, ids);
-            for (int i = 0; i < c.craftSkill.size(); i++) {
-                CraftSkill cs = c.craftSkill.get(i);
-                setEffectArm(ids[i], cs.level + "", cs.detail);
-            }
+            ids = new int[]{R.id.craftSkillArm1, R.id.craftSkillArm2, R.id.craftSkillArm3};
+            setCraftEffectRow(ids, c.craftSkill);
+            // Set extra skill
+            ids = new int[]{R.id.craftSkillExtra1, R.id.craftSkillExtra2, R.id.craftSkillExtra3};
+            setCraftEffectRow(ids, c.extraSkill);
+            setViewVisibility(R.id.craftSkillExtraTitle, c.extraSkill.size() != 0);
             // Set Arm bonus up
             setBonusUp(R.id.craftArmUp, arm.upHp, arm.upAttack, arm.upRecovery);
 
+            if (arm.hasNoUp()) {
+                setVisibilities(View.GONE, R.id.craftArmUpTitle, R.id.craftArmUp);
+            }
         }
+    }
 
+    private void setCraftEffectRow(int[] rowIds, List<CraftSkill> skills) {
+        int n = skills == null ? 0 : skills.size();
+        setVisibilities(View.GONE, rowIds);
+        for (int i = 0; i < n; i++) {
+            CraftSkill cs = skills.get(i);
+            setEffect(rowIds[i], cs.level + "", cs.detail, cs.score + "");
+        }
+    }
 
-
+    @Deprecated
+    private void setCraftArmRow(int headerId, int[] rowIds, List<CraftSkill> skills) {
+        int n = skills == null ? 0 : skills.size();
+        setVisibilities(View.GONE, rowIds);
+        for (int i = 0; i < n; i++) {
+            CraftSkill cs = skills.get(i);
+            setEffectArm(rowIds[i], cs.level + "", cs.detail);
+        }
+        setViewVisibility(headerId, n != 0);
     }
 
     private void setPreCondition(int parent, String sLim, String sDet) {

@@ -3,6 +3,7 @@ package com.flyingkite.mytoswiki.util;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
@@ -115,6 +116,18 @@ public interface PageUtil extends Loggable, ViewUtil {
         }
     }
 
+    default boolean isAllVisibilitiesOf(int vis, int... ids) {
+        for (int i : ids) {
+            View v = findViewById(i);
+            if (v != null) {
+                if (v.getVisibility() != vis) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     default void setOnClickListeners(View.OnClickListener lis, @IdRes int... ids) {
         for (int i : ids) {
             findViewById(i).setOnClickListener(lis);
@@ -140,6 +153,17 @@ public interface PageUtil extends Loggable, ViewUtil {
             e.printStackTrace();
         }
         return s;
+    }
+
+    default boolean isActivityGone() {
+        Activity act = getActivity();
+        if (act == null || act.isFinishing()) return true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            if (act.isDestroyed()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     //-- Logging -- start

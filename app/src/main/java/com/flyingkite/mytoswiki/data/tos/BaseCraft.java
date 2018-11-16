@@ -30,6 +30,14 @@ public abstract class BaseCraft implements Parcelable, Formattable {
     public String charge = "";
     @SerializedName(CRS.craftSkill)
     public List<CraftSkill> craftSkill = new ArrayList<>();
+    @SerializedName(CRS.extraSkill)
+    public List<CraftSkill> extraSkill = new ArrayList<>();
+
+    //-- For Common
+    @SerializedName(CRS.attrLimit)
+    public String attrLimit = "";
+    @SerializedName(CRS.raceLimit)
+    public String raceLimit = "";
 
     protected static final Gson gson = new Gson();
 

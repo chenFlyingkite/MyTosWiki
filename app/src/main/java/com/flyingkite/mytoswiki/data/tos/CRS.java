@@ -31,5 +31,6 @@ public class CRS {
     public static final String mode = "mode";
     public static final String charge = "charge";
     public static final String craftSkill = "craftSkill";
+    public static final String extraSkill = "extraSkill";
 
 }

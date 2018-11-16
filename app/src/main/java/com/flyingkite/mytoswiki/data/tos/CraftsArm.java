@@ -26,6 +26,10 @@ public class CraftsArm extends BaseCraft {
         return _fmt("#%s : %s★, %s, %s, %s", idNorm, rarity, mode, cardLimit, cardLimitName);
     }
 
+    public boolean hasNoUp() {
+        return upHp.isEmpty() && upAttack.isEmpty() && upRecovery.isEmpty();
+    }
+
     //-- For parcelable
 
     public static final Parcelable.Creator<CraftsArm> CREATOR = new Parcelable.Creator<CraftsArm>() {

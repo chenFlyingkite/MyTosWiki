@@ -43,6 +43,10 @@ public class MainStageDialog extends BaseTosDialog {
     private TaskMonitor.OnTaskState onStagesReady = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
+            if (isActivityGone()) {
+                return;
+            }
+
             if (TosWiki.TAG_MAIN_STAGE.equals(tag)) {
                 mainStages = TosWiki.getMainStages();
                 initStages();

@@ -11,6 +11,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -38,6 +39,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -65,6 +67,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -97,6 +100,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -129,6 +133,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -161,6 +166,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -193,6 +199,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -225,6 +232,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -262,6 +270,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -299,6 +308,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -336,6 +346,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -373,6 +384,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -410,6 +422,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -447,6 +460,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -479,6 +493,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -511,6 +526,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -538,6 +554,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -570,6 +587,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -602,6 +620,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -634,6 +653,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -666,6 +686,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -698,6 +719,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -730,6 +752,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -767,6 +790,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -804,6 +828,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -841,6 +866,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -878,6 +904,7 @@
         "detail": "1 回合內，敵方所受傷害的 3% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -915,6 +942,7 @@
         "detail": "1 回合內，敵方所受傷害的 3% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -947,6 +975,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -979,6 +1008,7 @@
         "detail": "1 回合內，回復 80% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -1016,6 +1046,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1048,6 +1079,7 @@
         "detail": "1 回合內，回復 80% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -1080,6 +1112,7 @@
         "detail": "1 回合內，回復 80% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -1112,6 +1145,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -1139,6 +1173,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1171,6 +1206,7 @@
         "detail": "1 回合內，人類成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1203,6 +1239,7 @@
         "detail": "1 回合內，獸類成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -1235,6 +1272,7 @@
         "detail": "1 回合內，神族成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1267,6 +1305,7 @@
         "detail": "1 回合內，龍類成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -1299,6 +1338,7 @@
         "detail": "1 回合內，妖精類成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -1331,6 +1371,7 @@
         "detail": "1 回合內，魔族成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -1363,6 +1404,7 @@
         "detail": "延遲火屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1395,6 +1437,7 @@
         "detail": "延遲木屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1427,6 +1470,7 @@
         "detail": "延遲水屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1459,6 +1503,7 @@
         "detail": "延遲暗屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1491,6 +1536,7 @@
         "detail": "延遲光屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1528,6 +1574,7 @@
         "detail": "1 回合內，水屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1565,6 +1612,7 @@
         "detail": "1 回合內，火屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1602,6 +1650,7 @@
         "detail": "1 回合內，木屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1639,6 +1688,7 @@
         "detail": "1 回合內，光屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1676,6 +1726,7 @@
         "detail": "1 回合內，暗屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -1713,6 +1764,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1750,6 +1802,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1787,6 +1840,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1824,6 +1878,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1861,6 +1916,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1898,6 +1954,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -1925,6 +1982,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1957,6 +2015,7 @@
         "detail": "1 回合內，水屬性成員對水屬性敵人的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -1989,6 +2048,7 @@
         "detail": "1 回合內，火屬性成員對火屬性敵人的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2021,6 +2081,7 @@
         "detail": "1 回合內，木屬性成員對木屬性敵人的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2053,6 +2114,7 @@
         "detail": "1 回合內，光屬性成員對光屬性敵人的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2085,6 +2147,7 @@
         "detail": "1 回合內，暗屬性成員對暗屬性敵人的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2122,6 +2185,7 @@
         "detail": "隨機 2 個神族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -2154,6 +2218,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2186,6 +2251,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2218,6 +2284,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2250,6 +2317,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2282,6 +2350,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2319,6 +2388,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -2356,6 +2426,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -2393,6 +2464,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -2430,6 +2502,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -2467,6 +2540,7 @@
         "detail": "1 回合內，敵方所受傷害的 3% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -2494,6 +2568,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2526,6 +2601,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2558,6 +2634,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2590,6 +2667,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2622,6 +2700,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2654,6 +2733,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2691,6 +2771,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -2728,6 +2809,7 @@
         "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -2765,6 +2847,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2802,6 +2885,7 @@
         "detail": "隨機 2 個人類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -2834,6 +2918,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2866,6 +2951,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2898,6 +2984,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2930,6 +3017,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2962,6 +3050,7 @@
         "detail": "1 回合內，回復 100% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -2999,6 +3088,7 @@
         "detail": "隨機 2 個龍類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -3036,6 +3126,7 @@
         "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -3073,6 +3164,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 15%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -3110,6 +3202,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -3147,6 +3240,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3184,6 +3278,7 @@
         "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -3216,6 +3311,7 @@
         "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3248,6 +3344,7 @@
         "detail": "完成龍刻脈動後，將場上的水符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3280,6 +3377,7 @@
         "detail": "完成龍刻脈動後，將場上的火符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3312,6 +3410,7 @@
         "detail": "完成龍刻脈動後，將場上的暗符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3344,6 +3443,7 @@
         "detail": "完成龍刻脈動後，將場上的光符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3381,6 +3481,7 @@
         "detail": "1 回合內，隊伍攻擊力及回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -3418,6 +3519,7 @@
         "detail": "1 回合內，攻擊力提升 20%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -3455,6 +3557,7 @@
         "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -3492,6 +3595,7 @@
         "detail": "隨機 2 個魔族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -3529,6 +3633,7 @@
         "detail": "隨機 2 個魔族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -3566,6 +3671,7 @@
         "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -3603,6 +3709,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -3640,6 +3747,7 @@
         "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -3677,6 +3785,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -3714,6 +3823,7 @@
         "detail": "1 回合內，妖精類成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -3751,6 +3861,7 @@
         "detail": "隨機 3 個人類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -3778,6 +3889,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3810,6 +3922,7 @@
         "detail": "延遲火屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3842,6 +3955,7 @@
         "detail": "延遲木屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3874,6 +3988,7 @@
         "detail": "延遲水屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3906,6 +4021,7 @@
         "detail": "延遲暗屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3938,6 +4054,7 @@
         "detail": "延遲光屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -3975,6 +4092,7 @@
         "detail": "隨機 2 個神族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -4012,6 +4130,7 @@
         "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4049,6 +4168,7 @@
         "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -4086,6 +4206,7 @@
         "detail": "1 回合內，回復 12000 點生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4123,6 +4244,7 @@
         "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4160,6 +4282,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -4197,6 +4320,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4234,6 +4358,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4271,6 +4396,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4308,6 +4434,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4345,6 +4472,7 @@
         "detail": "1 回合內，火屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4382,6 +4510,7 @@
         "detail": "1 回合內，木屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4419,6 +4548,7 @@
         "detail": "1 回合內，攻擊力提升 20%，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4456,6 +4586,7 @@
         "detail": "1 回合內，水屬性成員的攻擊力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4493,6 +4624,7 @@
         "detail": "1 回合內，火屬性成員以 20% 的攻擊力追打火屬性攻擊 1 次"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4530,6 +4662,7 @@
         "detail": "完成龍刻脈動後，將場上的木符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -4567,6 +4700,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -4604,6 +4738,7 @@
         "detail": "1 回合內，龍類成員的攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -4641,6 +4776,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -4678,6 +4814,7 @@
         "detail": "1 回合內，40% 的攻擊傷害無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4715,6 +4852,7 @@
         "detail": "1 回合內，對單一敵人造成 35000 點暗屬性傷害，此傷害無視防禦力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -4752,6 +4890,7 @@
         "detail": "1 回合內，40% 的攻擊傷害無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4789,6 +4928,7 @@
         "detail": "1 回合內，魔族成員的攻擊力提升 40%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -4826,6 +4966,7 @@
         "detail": "1 回合內，回復 90% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -4863,6 +5004,7 @@
         "detail": "1 回合內，回復 90% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -4900,6 +5042,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -4937,6 +5080,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -4974,6 +5118,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -5011,6 +5156,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5048,6 +5194,7 @@
         "detail": "延遲全體敵人行動 2 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5085,6 +5232,7 @@
         "detail": "隨機 4 個神族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -5122,6 +5270,7 @@
         "detail": "1 回合內，隊伍攻擊力及回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -5159,6 +5308,7 @@
         "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為水符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5196,6 +5346,7 @@
         "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為火符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5233,6 +5384,7 @@
         "detail": "隨機 3 個龍類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5270,6 +5422,7 @@
         "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為光符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5307,6 +5460,7 @@
         "detail": "隨機 3 個魔族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5344,6 +5498,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -5381,6 +5536,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -5418,6 +5574,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -5455,6 +5612,7 @@
         "detail": "隨機 3 個妖精類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -5492,6 +5650,7 @@
         "detail": "隨機 3 個獸類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -5529,6 +5688,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -5566,6 +5726,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為火符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -5603,6 +5764,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5640,6 +5802,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -5677,6 +5840,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -5714,6 +5878,7 @@
         "detail": "1 回合內，40% 的攻擊傷害無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -5751,6 +5916,7 @@
         "detail": "1 回合內，人類成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -5788,6 +5954,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為光符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -5825,6 +5992,7 @@
         "detail": "1 回合內，獸類成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -5862,6 +6030,7 @@
         "detail": "1 回合內，妖精類成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -5899,6 +6068,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -5926,6 +6096,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5958,6 +6129,7 @@
         "detail": "1 回合內，減少所受傷害 80%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -5990,6 +6162,7 @@
         "detail": "1 回合內，隊伍回復力提升 60%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6027,6 +6200,7 @@
         "detail": "1 回合內，神族成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -6064,6 +6238,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6096,6 +6271,7 @@
         "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6133,6 +6309,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6170,6 +6347,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -6197,6 +6375,7 @@
         "detail": "1 回合內，隊伍攻擊力及回復力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6224,6 +6403,7 @@
         "detail": "1 回合內，人類成員的攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6256,6 +6436,7 @@
         "detail": "隨機 3 個水成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6288,6 +6469,7 @@
         "detail": "隨機 3 個火成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6320,6 +6502,7 @@
         "detail": "隨機 3 個木成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6357,6 +6540,7 @@
         "detail": "1 回合內，40% 的攻擊傷害無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6394,6 +6578,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -6431,6 +6616,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6468,6 +6654,7 @@
         "detail": "1 回合內，獸類成員的攻擊力提升 50%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -6505,6 +6692,7 @@
         "detail": "隨機 4 個神族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -6542,6 +6730,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為火符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -6579,6 +6768,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6616,6 +6806,7 @@
         "detail": "隨機 3 個水成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6653,6 +6844,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6690,6 +6882,7 @@
         "detail": "隨機 3 個火成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6727,6 +6920,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6764,6 +6958,7 @@
         "detail": "隨機 3 個木成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6801,6 +6996,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6838,6 +7034,7 @@
         "detail": "隨機 3 個光成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6875,6 +7072,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6912,6 +7110,7 @@
         "detail": "隨機 3 個暗成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6949,6 +7148,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -6986,6 +7186,7 @@
         "detail": "1 回合內，人類成員的攻擊力提升 40%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -7023,6 +7224,7 @@
         "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -7060,6 +7262,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7097,6 +7300,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -7134,6 +7338,7 @@
         "detail": "1 回合內，神族成員的攻擊力提升 40%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -7171,6 +7376,7 @@
         "detail": "1 回合內，魔族成員的攻擊力提升 40%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -7208,6 +7414,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7245,6 +7452,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7282,6 +7490,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7319,6 +7528,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7356,6 +7566,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為心符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -7393,6 +7604,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7430,6 +7642,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7467,6 +7680,7 @@
         "detail": "隨機 3 個水成員的技能 CD 減少 1"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7504,6 +7718,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7541,6 +7756,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7578,6 +7794,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7615,6 +7832,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7652,6 +7870,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7689,6 +7908,7 @@
         "detail": "隨機 3 個火成員的技能 CD 減少 1"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7726,6 +7946,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7763,6 +7984,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7800,6 +8022,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7837,6 +8060,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7869,6 +8093,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 25%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7906,6 +8131,7 @@
         "detail": "隨機 3 個木成員的技能 CD 減少 1"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7943,6 +8169,7 @@
         "detail": "隨機 3 個光成員的技能 CD 減少 1"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -7980,6 +8207,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8017,6 +8245,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8054,6 +8283,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8091,6 +8321,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8128,6 +8359,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8165,6 +8397,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8202,6 +8435,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8239,6 +8473,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8276,6 +8511,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8303,6 +8539,7 @@
         "detail": "1 回合內，機械族成員的攻擊力提升 20%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8335,6 +8572,7 @@
         "detail": "延遲暗屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8367,6 +8605,7 @@
         "detail": "延遲光屬性敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8404,6 +8643,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8441,6 +8681,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8478,6 +8719,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8515,6 +8757,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8552,6 +8795,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8589,6 +8833,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -8616,6 +8861,7 @@
         "detail": "1 回合內，隊伍攻擊力提升 10%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8648,6 +8894,7 @@
         "detail": "1 回合內，隊伍回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8680,6 +8927,7 @@
         "detail": "1 回合內，隊伍回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8712,6 +8960,7 @@
         "detail": "1 回合內，隊伍回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8744,6 +8993,7 @@
         "detail": "1 回合內，隊伍回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8776,6 +9026,7 @@
         "detail": "1 回合內，隊伍回復力提升 30%"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8813,6 +9064,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8850,6 +9102,7 @@
         "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8887,6 +9140,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8924,6 +9178,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8961,6 +9216,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -8998,6 +9254,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -9035,6 +9292,7 @@
         "detail": "1 回合內，敵方所受傷害的 3% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "沒有限制",
     "cardLimit": [],
@@ -9072,6 +9330,7 @@
         "detail": "1 回合內，對全體敵人造成 100000 點無屬性傷害"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -9109,6 +9368,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -9146,6 +9406,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -9183,6 +9444,7 @@
         "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -9220,6 +9482,7 @@
         "detail": "1 回合內，所有成員無視屬性相剋"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -9257,6 +9520,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -9294,6 +9558,7 @@
         "detail": "1 回合內，無視指定形狀盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "沒有限制",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -9331,6 +9596,7 @@
         "detail": "隨機 4 個機械族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -9368,6 +9634,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為木符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於機械族成員",
     "cardLimit": [],
@@ -9405,6 +9672,7 @@
         "detail": "隨機 4 個魔族成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -9442,6 +9710,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -9479,6 +9748,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -9516,6 +9786,7 @@
         "detail": "隨機 4 個妖精類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於水屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -9553,6 +9824,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -9590,6 +9862,7 @@
         "detail": "1 回合內，回復 50% 生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -9627,6 +9900,7 @@
         "detail": "隨機 4 個獸類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於火屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -9664,6 +9938,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -9701,6 +9976,7 @@
         "detail": "1 回合內，所受傷害不會使你死亡"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -9738,6 +10014,7 @@
         "detail": "1 回合內，敵方所受傷害的 5% 轉化為我方生命力，最大為生命力等值的50% (傷害轉化效果不能疊加，並不計算主動及隊長技傷害)"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -9775,6 +10052,7 @@
         "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為木符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於木屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -9812,6 +10090,7 @@
         "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為光符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -9849,6 +10128,7 @@
         "detail": "1 回合內，完全回復生命力"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
@@ -9886,6 +10166,7 @@
         "detail": "1 回合內，無視攻前盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於魔族成員",
     "cardLimit": [],
@@ -9923,6 +10204,7 @@
         "detail": "隨機 4 個人類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於光屬性成員",
     "raceLimit": "適用於人類成員",
     "cardLimit": [],
@@ -9960,6 +10242,7 @@
         "detail": "隨機 3 個妖精類成員的技能 CD 減少 2"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於妖精類成員",
     "cardLimit": [],
@@ -9997,6 +10280,7 @@
         "detail": "1 回合內，無視五屬盾"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於神族成員",
     "cardLimit": [],
@@ -10034,6 +10318,7 @@
         "detail": "延遲全體敵人行動 1 回合"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於龍類成員",
     "cardLimit": [],
@@ -10071,6 +10356,7 @@
         "detail": "完成龍刻脈動後，隨機把 3 直行的符石轉化為暗符石"
       }
     ],
+    "extraSkill": [],
     "attrLimit": "適用於暗屬性成員",
     "raceLimit": "適用於獸類成員",
     "cardLimit": [],
