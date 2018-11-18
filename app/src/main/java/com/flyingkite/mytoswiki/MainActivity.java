@@ -19,6 +19,7 @@ import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
+import com.flyingkite.mytoswiki.dialog.StaminaDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.TosEventDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
@@ -47,6 +48,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.shop_card
             , R.drawable.card_1777
             , R.drawable.q1
+            , R.drawable.gift_stamina
             , R.mipmap.app_icon
             , R.drawable.ic_send_black_48dp
             , R.drawable.logo_craft_1
@@ -149,6 +151,9 @@ public class MainActivity extends BaseActivity implements
                         break;
                     case R.drawable.tos_vestige:
                         new DailyStageDialog().show(getActivity());
+                        break;
+                    case R.drawable.gift_stamina:
+                        new StaminaDialog().show(getActivity());
                         break;
                 }
             }

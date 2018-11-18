@@ -25,7 +25,6 @@ import com.flyingkite.mytoswiki.data.SkillEat;
 import com.flyingkite.mytoswiki.library.CardTileAdapter;
 import com.flyingkite.mytoswiki.library.selectable.SelectableAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
-import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -35,7 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SkillEatingDialog extends BaseTosDialog implements TosPageUtil {
+public class SkillEatingDialog extends BaseTosDialog {
 
     @Override
     protected int getLayoutId() {

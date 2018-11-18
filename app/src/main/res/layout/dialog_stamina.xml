@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff">
+
+            <TextView
+                style="@style/dialog_title"
+                android:text="@string/stamina_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/greenText"
+                android:text="@string/stamina_rule"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/staminaNow"
+                style="@style/blackText"
+                android:text="@string/current_time"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/staminaArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/t40dp"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        style="@style/evoArrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/staminaArrow"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/sed_round_text"
+                            android:text="@string/stamina_source"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/staminaSource"
+                            style="@style/sed_spinner"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/staminaArrow"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/sed_round_text"
+                            android:text="@string/stamina_target"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/staminaTarget"
+                            style="@style/sed_spinner"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/sdShare"
+                        style="@style/sortIcon.shareB"/>
+
+                    <TextView
+                        android:id="@+id/sdStaminaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/greenText"
+                        android:text="@string/stamina_desc"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                style="@style/divider_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/dialog_title.white"
+                    android:padding="@dimen/t2dp"
+                    android:background="@color/orange"
+                    android:text="@string/stamina_source"/>
+
+                <TextView
+                    style="@style/dialog_title.white"
+                    android:layout_marginLeft="@dimen/t10dp"
+                    android:padding="@dimen/t2dp"
+                    android:background="@color/green"
+                    android:text="@string/stamina_target"/>
+
+                <TextView
+                    style="@style/dialog_title.white"
+                    android:layout_marginLeft="@dimen/t10dp"
+                    android:padding="@dimen/t2dp"
+                    android:background="@color/skyBlue"
+                    android:text="@string/dateLine"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sdStaminaTable"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/t400dp"
+                android:scrollbars="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

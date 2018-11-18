@@ -27,7 +27,6 @@ import com.flyingkite.mytoswiki.library.CardEvolveAdapter;
 import com.flyingkite.mytoswiki.library.CardTileAdapter;
 import com.flyingkite.mytoswiki.library.CraftTileAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.mytoswiki.util.TosPageUtil;
 
 import java.text.NumberFormat;
 import java.util.HashMap;
@@ -35,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressLint("SetTextI18n")
-public class CardDialog extends BaseTosDialog implements TosPageUtil {
+public class CardDialog extends BaseTosDialog {
     public static final String TAG = "CardDialog";
     public static final String BUNDLE_CARD = "CardDialog.TosCard";
 

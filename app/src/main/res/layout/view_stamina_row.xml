@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_press_light_sky">
+
+    <TextView
+        android:id="@+id/sdStamina"
+        android:layout_width="@dimen/cardText1"
+        android:layout_height="wrap_content"
+        style="@style/blackText.t2"
+        android:gravity="center"
+        android:text="@string/stamina"/>
+
+    <TextView
+        android:id="@+id/sdTime2"
+        style="@style/blackText.t2"
+        android:text="🌛"/>
+
+    <TextView
+        android:id="@+id/sdDateTime"
+        style="@style/blackText.t2"
+        android:gravity="center"
+        android:layout_width="@dimen/cardText5"
+        android:text="@string/date"/>
+
+</LinearLayout>

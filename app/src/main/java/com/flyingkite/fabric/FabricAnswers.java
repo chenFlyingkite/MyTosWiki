@@ -86,6 +86,10 @@ public class FabricAnswers {
     public static void logDailyStage(Map<String, String> attributes) {
         logCustom("DailyStage", attributes);
     }
+
+    public static void logStamina(Map<String, String> attributes) {
+        logCustom("Stamina", attributes);
+    }
     //-- Tool bars
 
     //-- Tos Items
