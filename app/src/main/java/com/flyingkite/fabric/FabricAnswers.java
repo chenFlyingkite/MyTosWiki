@@ -83,6 +83,10 @@ public class FabricAnswers {
         logCustom("MainStage", attributes);
     }
 
+    public static void logRelicStage(Map<String, String> attributes) {
+        logCustom("RelicStage", attributes);
+    }
+
     public static void logDailyStage(Map<String, String> attributes) {
         logCustom("DailyStage", attributes);
     }

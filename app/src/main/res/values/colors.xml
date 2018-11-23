@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="transparent">#0000</color>
-    <color name="gray3a">#3a3a3a</color>
-    <color name="gray4">#444</color>
-    <color name="gray6">#666</color>
-    <color name="gray8">#888</color>
-    <color name="grayd">#ddd</color>
+    <color name="grey3a">#3a3a3a</color>
+    <color name="grey4">#444</color>
+    <color name="grey6">#666</color>
+    <color name="grey8">#888</color>
+    <color name="greyd">#ddd</color>
     <color name="skyBlue">#00A2FF</color>
     <color name="skyBlue2">#2000A2FF</color>
     <color name="skyBlue4">#4000A2FF</color>

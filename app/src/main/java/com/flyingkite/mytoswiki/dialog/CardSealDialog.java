@@ -26,6 +26,7 @@ import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
+import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -62,9 +63,10 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
-        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,  new KonoSubarashi()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,      new HinduGods()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai, new SengokuSamurai()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves, new MasterCathieves()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,   new KonoSubarashi()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,       new HinduGods()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai,  new SengokuSamurai()));
     }
 
     private BaseSeal seals;
@@ -92,9 +94,7 @@ public class CardSealDialog extends BaseTosDialog {
         logImpression();
 
         parseBundle(getArguments());
-        dismissWhenClick(R.id.csdTitle, R.id.csdHeader, R.id.toswiki, R.id.empty
-                , R.id.csdPearsonChi, R.id.csdPearsonLimit
-        );
+        dismissWhenClick(R.id.csdTitle, R.id.csdHeader, R.id.toswiki, R.id.empty);
         initViews();
         initSeries();
         initPools();
@@ -252,21 +252,18 @@ public class CardSealDialog extends BaseTosDialog {
     private void clickSeries(View v) {
         int id = v.getId();
         series.check(id);
-        switch (id) {
-            default:
-            case R.id.csdSeriesKonoSubarashi:
-                seals = new KonoSubarashi();
-                logAction("Series:KonoSubarashi");
-                break;
-            case R.id.csdSeriesHinduGods:
-                seals = new HinduGods();
-                logAction("Series:HinduGods");
-                break;
-            case R.id.csdSeriesSengokuSamurai:
-                seals = new SengokuSamurai();
-                logAction("Series:SengokuSamurai");
-                break;
+        int sealId = 0;
+        Pair<Integer,BaseSeal> p;
+        for (int i = 0; i < sealOrder.size(); i++) {
+            p = sealOrder.get(i);
+            if (p.first == id) {
+                sealId = i;
+            }
         }
+        // Log the actions
+        p = sealOrder.get(sealId);
+        seals = p.second;
+        logAction("Series:" + p.second.LTag());
         resetPool();
         setupTable();
     }

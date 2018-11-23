@@ -80,7 +80,7 @@ public class DailyStageDialog extends BaseTosDialog {
                  color = App.getColorF(R.color.colorPrimaryDark);
             }
             if (i == today) {
-                color = App.getColorF(R.color.gray6);
+                color = App.getColorF(R.color.grey6);
             }
             column.setBackgroundColor(color);
             table.addView(column);

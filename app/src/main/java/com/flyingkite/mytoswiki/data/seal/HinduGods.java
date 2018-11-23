@@ -4,7 +4,6 @@ import android.os.Parcel;
 
 public class HinduGods extends BaseSeal {
 
-    // SengokuSamurai, seal name = Shogun Emblems // TODO : Name
     public HinduGods() {
         String[][] table = {
                 // idNorm, normal p, raised p (probability in thousand)

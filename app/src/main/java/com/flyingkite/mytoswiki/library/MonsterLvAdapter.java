@@ -68,7 +68,7 @@ public class MonsterLvAdapter extends RecyclerView.Adapter<MonsterLvAdapter.Mons
 
     @Override
     public void onBindViewHolder(MonsterLvVH vh, int position) {
-        int bg = R.color.gray8;
+        int bg = R.color.grey8;
         if (position <= 2) {
             vh.setStrings(header);
         } else {

@@ -398,7 +398,7 @@
     <style name="common_base.button">
         <item name="android:background">@drawable/bg_press_gray4</item>
         <item name="android:textSize">@dimen/t16dp</item>
-        <item name="android:textColor">@color/text_sky</item>
+        <item name="android:textColor">@color/sky_aqua</item>
     </style>
 
     <style name="card_sort_active">

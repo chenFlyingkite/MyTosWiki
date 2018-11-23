@@ -16,6 +16,7 @@ import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MainStageDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
+import com.flyingkite.mytoswiki.dialog.RelicStageDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
@@ -44,11 +45,12 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.tos_app
             , R.drawable.tos_vestige
             , R.drawable.tos_enochian
-            , R.drawable.owl2
+            , R.drawable.tos_lost_relic_pass
             , R.drawable.shop_card
             , R.drawable.card_1777
             , R.drawable.q1
             , R.drawable.gift_stamina
+            , R.drawable.owl2
             , R.mipmap.app_icon
             , R.drawable.ic_send_black_48dp
             , R.drawable.logo_craft_1
@@ -154,6 +156,9 @@ public class MainActivity extends BaseActivity implements
                         break;
                     case R.drawable.gift_stamina:
                         new StaminaDialog().show(getActivity());
+                        break;
+                    case R.drawable.tos_lost_relic_pass:
+                        new RelicStageDialog().show(getActivity());
                         break;
                 }
             }

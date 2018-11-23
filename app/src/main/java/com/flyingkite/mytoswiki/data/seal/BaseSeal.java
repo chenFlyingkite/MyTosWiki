@@ -3,10 +3,12 @@ package com.flyingkite.mytoswiki.data.seal;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.flyingkite.library.log.Loggable;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseSeal implements Parcelable {
+public class BaseSeal implements Parcelable, Loggable {
     public SealSample normalSample; // normal probability
     public SealSample raisedSample; // raised probability
 

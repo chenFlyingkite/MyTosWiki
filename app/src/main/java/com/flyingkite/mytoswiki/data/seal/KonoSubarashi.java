@@ -4,7 +4,6 @@ import android.os.Parcel;
 
 public class KonoSubarashi extends BaseSeal {
 
-    // KonoSubarashi, seal name =
     public KonoSubarashi() {
         String[][] table = {
                 // idNorm, normal p, raised p (probability in thousand)

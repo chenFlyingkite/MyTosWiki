@@ -48,7 +48,7 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
 
     @Override
     public void onBindViewHolder(SummonLvVH vh, int position) {
-        int bg = R.color.gray8;
+        int bg = R.color.grey8;
         if (position == 0) {
             vh.setStrings(header);
         } else {

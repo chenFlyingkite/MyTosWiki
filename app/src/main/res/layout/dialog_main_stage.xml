@@ -13,6 +13,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/msd_title"
             style="@style/dialog_title.white"
             android:text="@string/main_stage"/>
 

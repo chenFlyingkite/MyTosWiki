@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/cardText"
-        android:textColor="@color/text_sky_white"
+        android:textColor="@color/sky_yellow"
         tools:text="123456"/>
 
 </LinearLayout>

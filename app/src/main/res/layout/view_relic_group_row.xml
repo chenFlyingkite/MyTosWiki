@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="@dimen/t350dp"
+    android:paddingRight="@dimen/t10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/relicGroupTitle"
+        style="@style/cardText"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="@dimen/t20dp"
+        android:background="@drawable/bg_rect_skyblue"
+        tools:text="遠古遺跡"/>
+
+    <View
+        android:id="@+id/relicLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/t5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/skyBlue"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/relicGroupItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relicGroupTitle"
+        android:layout_above="@id/relicLine"/>
+
+
+</RelativeLayout>

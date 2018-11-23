@@ -496,6 +496,7 @@
     <string name="card_series_sengoku_samurai">武者列魂</string>
     <string name="card_series_hindu_gods">印度神</string>
     <string name="card_series_kono_subarashi">美好世界</string>
+    <string name="card_series_master_cathieves">神貓大盜</string>
 
     <string name="tos_event_title">神魔之塔活動表</string>
     <string name="tos_event_header">神魔之塔當前活動列表 : </string>
@@ -511,6 +512,8 @@
     <string name="stamina_target">目標體力</string>
     <string name="stamina_rule">每8分鐘回復體力1點</string>
     <string name="stamina_desc">現有體力 %s (%s)\n目標體力 %s (%s)</string>
+
+    <string name="lost_relic_pass_title">遺跡特許</string>
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)

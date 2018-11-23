@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@drawable/bg_press_gray4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/stageIcon"
+        android:layout_width="@dimen/t50dp"
+        android:layout_height="@dimen/t50dp"
+        tools:src="@mipmap/app_icon"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/t12dp"
+            android:layout_height="@dimen/t12dp"
+            android:layout_gravity="center"
+            android:src="@drawable/coin"/>
+
+        <TextView
+            android:id="@+id/stagePrice"
+            android:layout_width="@dimen/t30dp"
+            android:layout_height="wrap_content"
+            style="@style/cardText"
+            android:textSize="@dimen/t14dp"
+            android:textColor="@color/grey_white"
+            tools:text="20萬"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/stageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/cardText"
+        android:textColor="@color/sky_yellow"
+        tools:text="123\n456"/>
+
+</LinearLayout>
