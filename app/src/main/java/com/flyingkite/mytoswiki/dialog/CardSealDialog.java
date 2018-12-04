@@ -263,7 +263,7 @@ public class CardSealDialog extends BaseTosDialog {
         // Log the actions
         p = sealOrder.get(sealId);
         seals = p.second;
-        logAction("Series:" + p.second.LTag());
+        logAction("Series:" + p.second.name());
         resetPool();
         setupTable();
     }

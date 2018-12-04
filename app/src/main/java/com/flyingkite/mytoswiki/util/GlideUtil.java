@@ -13,9 +13,9 @@ public interface GlideUtil {
         loadLinkToImageView(img, link, img.getContext(), R.drawable.unknown_craft);
     }
 
-    default void loadCardToImageView(ImageView img, String link) {
-        loadLinkToImageView(img, link, img.getContext(), R.drawable.unknown_card);
-    }
+//    default void loadCardToImageView(ImageView img, String link) {
+//        loadLinkToImageView(img, link, img.getContext(), R.drawable.unknown_card);
+//    }
 
     default void loadCardToImageView(ImageView img, TosCard card) {
         int h = R.drawable.unknown_card;

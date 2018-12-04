@@ -14,6 +14,7 @@ import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.stage.MainStage;
 import com.flyingkite.mytoswiki.data.stage.RelicStage;
+import com.flyingkite.mytoswiki.data.stage.StageGroup;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftsArm;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
@@ -42,6 +43,7 @@ public class TosWiki {
     private static CardFavor cardFavor;
     private static MainStage[] mainStages;
     private static RelicStage[][] relicStages;
+    private static StageGroup[] storyStages;
     // Observers
     private static List<OnAction> favorActions = new ArrayList<>();
     // Tags for Task monitor
@@ -51,9 +53,10 @@ public class TosWiki {
     public static final String TAG_CARD_FAVOR = "CardFavor";
     public static final String TAG_MAIN_STAGE = "MainStage";
     public static final String TAG_RELIC_PASS = "RelicPass";
+    public static final String TAG_STORY_STAGE = "StoryStage";
     public static final String[] TAG_ALL_TASKS = {
             TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR,
-            TAG_MAIN_STAGE, TAG_RELIC_PASS
+            TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE
     };
 
     public static void init(Context ctx) {
@@ -129,6 +132,14 @@ public class TosWiki {
             t.tac("%s relic stages loaded", relicStages.length);
             monitorDB.notifyClientsState();
         });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2.v();
+            t.tic();
+            storyStages = GsonUtil.loadAsset("storyStage.json", StageGroup[].class, am);
+            t.tac("%s story stages loaded", storyStages.length);
+            monitorDB.notifyClientsState();
+        });
     }
 
     public static MainStage[] getMainStages() {
@@ -137,6 +148,10 @@ public class TosWiki {
 
     public static RelicStage[][] getRelicStage() {
         return relicStages;
+    }
+
+    public static StageGroup[] getStoryStages() {
+        return storyStages;
     }
 
     public static CardFavor getCardFavor() {
@@ -230,6 +245,7 @@ public class TosWiki {
                 case TAG_CARD_FAVOR: return cardFavor != null;
                 case TAG_MAIN_STAGE: return mainStages != null;
                 case TAG_RELIC_PASS: return relicStages != null;
+                case TAG_STORY_STAGE: return storyStages != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:
                     throw new NullPointerException(taskCount() + " tasks but did not define done for " + index);

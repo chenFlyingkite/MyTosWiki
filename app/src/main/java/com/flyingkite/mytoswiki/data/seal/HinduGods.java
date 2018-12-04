@@ -22,4 +22,8 @@ public class HinduGods extends BaseSeal {
     protected HinduGods(Parcel in) {
         super(in);
     }
+
+    public String name() {
+        return "HinduGods";
+    }
 }

@@ -22,4 +22,8 @@ public class KonoSubarashi extends BaseSeal {
     protected KonoSubarashi(Parcel in) {
         super(in);
     }
+
+    public String name() {
+        return "KonoSubarashi";
+    }
 }

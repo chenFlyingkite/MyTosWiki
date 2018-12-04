@@ -29,6 +29,7 @@
     <string name="date">日期</string>
     <string name="time">時間</string>
     <string name="dateLine">換日線</string>
+    <string name="unknown_card">未知卡片</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -514,6 +515,7 @@
     <string name="stamina_desc">現有體力 %s (%s)\n目標體力 %s (%s)</string>
 
     <string name="lost_relic_pass_title">遺跡特許</string>
+    <string name="story_stage">旅人的記憶</string>
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)

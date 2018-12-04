@@ -17,6 +17,10 @@ public class BaseSeal implements Parcelable, Loggable {
     public BaseSeal() {
     }
 
+    public String name() {
+        return "BaseSeal";
+    }
+
     /**
      * Create by table, like
      *

@@ -6,6 +6,7 @@ import android.widget.ImageView;
 
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.App;
+import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
@@ -61,7 +62,11 @@ public interface TosPageUtil extends Loggable, GlideUtil {
             showCardDialog(c);
         });
         view.setOnLongClickListener((v) -> {
-            App.showToastShort("#" + c.idNorm + " " + c.name);
+            if (c == null) {
+                App.showToastShort(R.string.unknown_card);
+            } else {
+                App.showToastShort("#" + c.idNorm + " " + c.name);
+            }
             return true;
         });
     }

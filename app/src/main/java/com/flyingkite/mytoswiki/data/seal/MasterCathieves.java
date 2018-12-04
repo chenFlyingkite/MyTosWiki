@@ -22,4 +22,8 @@ public class MasterCathieves extends BaseSeal {
     protected MasterCathieves(Parcel in) {
         super(in);
     }
+
+    public String name() {
+        return "MasterCathieves";
+    }
 }

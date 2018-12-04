@@ -23,4 +23,8 @@ public class SengokuSamurai extends BaseSeal {
     protected SengokuSamurai(Parcel in) {
         super(in);
     }
+
+    public String name() {
+        return "SengokuSamurai";
+    }
 }

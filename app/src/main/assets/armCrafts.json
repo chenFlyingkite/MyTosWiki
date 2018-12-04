@@ -7843,6 +7843,1756 @@
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3241",
+    "name": "龍首戰戈龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C3241.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080454\u0026path-prefix\u003dzh",
+      "iconKey": "C3241.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3242",
+    "name": "龍首戰戈龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a2/C3242.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080454\u0026path-prefix\u003dzh",
+      "iconKey": "C3242.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3243",
+    "name": "龍首戰戈龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a1/C3243.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080454\u0026path-prefix\u003dzh",
+      "iconKey": "C3243.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3244",
+    "name": "龍首戰戈龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C3244.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3244.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3245",
+    "name": "龍首戰戈龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e6/C3245.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3245.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3246",
+    "name": "龍首戰戈龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8f/C3246.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3246.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，水屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0511",
+      "1831"
+    ],
+    "cardLimitName": [
+      "乾坎天帝 ‧ 青龍",
+      "靛藍械獸 ‧ 青龍"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3247",
+    "name": "龍首戰戈龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E9%A6%96%E6%88%B0%E6%88%88%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9d/C3247.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3247.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3248",
+    "name": "赤翼法杖龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C3248.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3248.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3249",
+    "name": "赤翼法杖龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/75/C3249.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3249.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3250",
+    "name": "赤翼法杖龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C3250.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3250.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3251",
+    "name": "赤翼法杖龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f7/C3251.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3251.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3252",
+    "name": "赤翼法杖龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c5/C3252.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3252.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3253",
+    "name": "赤翼法杖龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2d/C3253.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080455\u0026path-prefix\u003dzh",
+      "iconKey": "C3253.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，火屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0512",
+      "1832"
+    ],
+    "cardLimitName": [
+      "坎艮神鳥 ‧ 朱雀",
+      "彤心械獸 ‧ 朱雀"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3254",
+    "name": "赤翼法杖龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E7%BF%BC%E6%B3%95%E6%9D%96%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8f/C3254.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3254.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3255",
+    "name": "玄獸武刃龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/17/C3255.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3255.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3256",
+    "name": "玄獸武刃龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/30/C3256.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3256.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3257",
+    "name": "玄獸武刃龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/34/C3257.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3257.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3258",
+    "name": "玄獸武刃龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c6/C3258.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3258.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3259",
+    "name": "玄獸武刃龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C3259.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3259.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3260",
+    "name": "玄獸武刃龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fd/C3260.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080456\u0026path-prefix\u003dzh",
+      "iconKey": "C3260.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，木屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0513",
+      "1833"
+    ],
+    "cardLimitName": [
+      "震巽靈帝 ‧ 玄武",
+      "綠沈械獸 ‧ 玄武"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3261",
+    "name": "玄獸武刃龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%8E%84%E7%8D%B8%E6%AD%A6%E5%88%83%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cc/C3261.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080615\u0026path-prefix\u003dzh",
+      "iconKey": "C3261.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3262",
+    "name": "白虎牙刀龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ab/C3262.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080615\u0026path-prefix\u003dzh",
+      "iconKey": "C3262.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3263",
+    "name": "白虎牙刀龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/32/C3263.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080615\u0026path-prefix\u003dzh",
+      "iconKey": "C3263.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3264",
+    "name": "白虎牙刀龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/76/C3264.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3264.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3265",
+    "name": "白虎牙刀龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/af/C3265.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3265.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3266",
+    "name": "白虎牙刀龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C3266.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3266.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3267",
+    "name": "白虎牙刀龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4f/C3267.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3267.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，光屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0514",
+      "1834"
+    ],
+    "cardLimitName": [
+      "离坤獸皇 ‧ 白虎",
+      "鋅光械獸 ‧ 白虎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3268",
+    "name": "白虎牙刀龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E8%99%8E%E7%89%99%E5%88%80%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/49/C3268.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3268.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3269",
+    "name": "餮影重錘龍紋",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f7/C3269.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3269.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3270",
+    "name": "餮影重錘龍印",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/06/C3270.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3270.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3271",
+    "name": "餮影重錘龍咒",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C3271.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3271.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3272",
+    "name": "餮影重錘龍符",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9c/C3272.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3272.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3273",
+    "name": "餮影重錘龍璃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a7/C3273.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080616\u0026path-prefix\u003dzh",
+      "iconKey": "C3273.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3274",
+    "name": "餮影重錘龍刃",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fb/C3274.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080617\u0026path-prefix\u003dzh",
+      "iconKey": "C3274.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，暗屬性攻擊力提升 1.15倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0515",
+      "1835"
+    ],
+    "cardLimitName": [
+      "兌中邪帝 ‧ 饕餮",
+      "墨蓮械獸 ‧ 饕餮"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3275",
+    "name": "餮影重錘龍丸",
+    "link": "http://zh.tos.wikia.com/wiki/%E9%A4%AE%E5%BD%B1%E9%87%8D%E9%8C%98%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C3275.png/revision/latest/scale-to-width-down/120?cb\u003d20181203080617\u0026path-prefix\u003dzh",
+      "iconKey": "C3275.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
