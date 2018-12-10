@@ -6,6 +6,14 @@ buildscript {
         google()
         jcenter()
 
+        //-- Fix for build error
+        //Could not find com.google.gms:google-services:4.1.0.
+        //Searched in the following locations:
+        //  - https://dl.google.com/dl/android/maven2/com/google/gms/google-services/4.1.0/google-services-4.1.0.pom
+        maven {
+            url 'https://dl.bintray.com/android/android-tools'
+        }
+        //-- Fix end
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
