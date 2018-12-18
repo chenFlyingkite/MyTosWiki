@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.CraftSkill;
@@ -78,7 +77,7 @@ public class CraftItemDialog extends BaseTosDialog {
             arm = (CraftsArm) c;
         }
 
-        GlideApp.with(getActivity()).load(c.icon.iconLink).placeholder(R.drawable.unknown_craft).into(craftIcon);
+        loadCraftToImageView(craftIcon, c.icon.iconLink);
         dismissWhenClick(R.id.craftTop, R.id.craftMark, R.id.craftEnd, R.id.craftMajor, R.id.craftMajorHeader);
         craftIcon.setOnClickListener((v) -> {
             shareImage(v);

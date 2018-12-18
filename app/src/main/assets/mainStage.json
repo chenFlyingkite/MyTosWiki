@@ -6,6 +6,36 @@
         "group": "永恒之牢",
         "stages": [
           {
+            "link": "http://zh.tos.wikia.com/wiki/%E7%B2%89%E7%A2%8E%E9%87%8D%E7%94%9F%E8%80%85%E7%9A%84%E6%86%8E%E6%81%A8",
+            "name": "粉碎重生者的憎恨",
+            "icon": "1871"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E4%B8%8D%E6%93%87%E6%89%8B%E6%AE%B5%E5%9C%B0%E6%90%B6%E5%A5%AA",
+            "name": "不擇手段地搶奪",
+            "icon": "1723"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E7%95%B0%E7%AB%AF%E8%80%85%E7%9A%84%E4%BE%86%E6%AD%B7",
+            "name": "異端者的來歷",
+            "icon": "1722"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%A9%9F%E6%A2%B0%E6%97%8F%E7%9A%84%E7%94%9F%E5%AD%98%E6%84%8F%E7%BE%A9",
+            "name": "機械族的生存意義",
+            "icon": "1721"
+          },
+          {
+            "link": "http://zh.tos.wikia.com/wiki/%E6%8E%A2%E9%80%B2%E9%81%99%E5%8F%A4%E7%9A%84%E6%96%87%E6%98%8E%E4%B9%8B%E5%9F%8E",
+            "name": "探進遙古的文明之城",
+            "icon": "1724"
+          }
+        ]
+      },
+      {
+        "group": "永恒之牢",
+        "stages": [
+          {
             "link": "http://zh.tos.wikia.com/wiki/%E6%86%90%E6%84%9B%E5%9B%9A%E5%BE%92%E7%9A%84%E5%AE%88%E8%AD%B7%E4%B9%8B%E9%BE%8D",
             "name": "憐愛囚徒的守護之龍",
             "icon": "1868"
