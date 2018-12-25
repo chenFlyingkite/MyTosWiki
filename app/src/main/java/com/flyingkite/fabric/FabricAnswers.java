@@ -79,6 +79,10 @@ public class FabricAnswers {
         logCustom("Favorite", attributes);
     }
 
+    public static void logRealmStage(Map<String, String> attributes) {
+        logCustom("RealmStage", attributes);
+    }
+
     public static void logMainStage(Map<String, String> attributes) {
         logCustom("MainStage", attributes);
     }

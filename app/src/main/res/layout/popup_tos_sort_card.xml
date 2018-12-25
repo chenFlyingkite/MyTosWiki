@@ -463,7 +463,6 @@
                     style="@style/sortText"
                     android:text="@string/cards_improve_powerRelease"/>
 
-
                 <View
                     style="@style/divider_h2px"/>
 
@@ -486,6 +485,14 @@
                     android:id="@+id/sortImproveVirtualRebirthChange"
                     style="@style/sortText"
                     android:text="@string/cards_improve_virtualRebirthChange"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveSwitch"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_switch"/>
             </LinearLayout>
 
             <TextView

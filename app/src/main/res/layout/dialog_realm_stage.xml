@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_round_darkgray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/zsd_void1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/void1"
+                style="@style/icon_t40"/>
+
+            <ImageView
+                android:src="@drawable/void1"
+                style="@style/icon_t40"/>
+
+            <ImageView
+                android:src="@drawable/void1"
+                style="@style/icon_t40"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zsd_void2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/void2"
+                style="@style/icon_t40"/>
+
+            <ImageView
+                android:src="@drawable/void2"
+                style="@style/icon_t40"/>
+
+            <ImageView
+                android:src="@drawable/void2"
+                style="@style/icon_t40"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/zsd_title"
+            style="@style/dialog_title.white"
+            android:layout_centerInParent="true"
+            android:text="@string/realm_stage"
+            android:layout_toRightOf="@id/zsd_void1"
+            android:layout_toLeftOf="@id/zsd_void2"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="@dimen/t230dp"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:background="@drawable/bg_rect_skyblue">
+
+                <LinearLayout
+                    android:id="@+id/zsd_hero_stages"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="@dimen/t340dp"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:background="@drawable/bg_rect_red">
+
+                <LinearLayout
+                    android:id="@+id/zsd_iron_stages"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</LinearLayout>

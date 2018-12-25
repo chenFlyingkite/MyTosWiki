@@ -44,6 +44,7 @@ public class TosWiki {
     private static MainStage[] mainStages;
     private static RelicStage[][] relicStages;
     private static StageGroup[] storyStages;
+    private static MainStage[] realmStages;
     // Observers
     private static List<OnAction> favorActions = new ArrayList<>();
     // Tags for Task monitor
@@ -54,9 +55,10 @@ public class TosWiki {
     public static final String TAG_MAIN_STAGE = "MainStage";
     public static final String TAG_RELIC_PASS = "RelicPass";
     public static final String TAG_STORY_STAGE = "StoryStage";
+    public static final String TAG_REALM_STAGE = "RealmStage";
     public static final String[] TAG_ALL_TASKS = {
             TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR,
-            TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE
+            TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE, TAG_REALM_STAGE
     };
 
     public static void init(Context ctx) {
@@ -140,6 +142,18 @@ public class TosWiki {
             t.tac("%s story stages loaded", storyStages.length);
             monitorDB.notifyClientsState();
         });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2.v();
+            t.tic();
+            realmStages = GsonUtil.loadAsset("voidRealm.json", MainStage[].class, am);
+            t.tac("%s realm stages loaded", realmStages.length);
+            monitorDB.notifyClientsState();
+        });
+    }
+
+    public static MainStage[] getRealmStages() {
+        return realmStages;
     }
 
     public static MainStage[] getMainStages() {
@@ -246,6 +260,7 @@ public class TosWiki {
                 case TAG_MAIN_STAGE: return mainStages != null;
                 case TAG_RELIC_PASS: return relicStages != null;
                 case TAG_STORY_STAGE: return storyStages != null;
+                case TAG_REALM_STAGE: return realmStages != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:
                     throw new NullPointerException(taskCount() + " tasks but did not define done for " + index);
