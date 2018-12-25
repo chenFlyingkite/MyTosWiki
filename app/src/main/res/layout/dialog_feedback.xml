@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/blackText"
+                android:autoLink="all"
                 android:text="@string/feedback_author"/>
 
             <HorizontalScrollView

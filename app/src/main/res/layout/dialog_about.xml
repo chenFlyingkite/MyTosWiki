@@ -44,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/blackText.t2"
+                android:autoLink="all"
                 android:text="@string/about_thanks"/>
         </LinearLayout>
     </ScrollView>
