@@ -252,6 +252,8 @@
         <item>此傷害無視防禦力</item>
         <!-- #1762, 小傑-->
         <item>自身攻擊無視敵人的防禦力</item>
+        <!-- #1575, 八神庵-->
+        <item>將全體敵人的攻擊力及防禦力減至 0</item>
         <item>無視防禦力</item>
     </string-array>
     <string-array name="cards_regardless_of_attribute_keys">
@@ -499,6 +501,7 @@
     <string name="card_series_hindu_gods">印度神</string>
     <string name="card_series_kono_subarashi">美好世界</string>
     <string name="card_series_master_cathieves">神貓大盜</string>
+    <string name="card_series_fairy_tail">Fairy Tail</string>
 
     <string name="tos_event_title">神魔之塔活動表</string>
     <string name="tos_event_header">神魔之塔當前活動列表 : </string>

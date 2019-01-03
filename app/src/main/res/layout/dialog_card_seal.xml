@@ -110,6 +110,11 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/csdSeriesFairyTail"
+                                style="@style/sortRadio"
+                                android:text="@string/card_series_fairy_tail"/>
+
+                            <RadioButton
                                 android:id="@+id/csdSeriesMasterCathieves"
                                 style="@style/sortRadio"
                                 android:text="@string/card_series_master_cathieves"/>
@@ -153,7 +158,7 @@
                         android:text="10"
                         android:textColor="@color/green"
                         android:textColorHint="@color/green"
-                        android:hint="整數" />
+                        android:hint="整數"/>
 
                     <Spinner
                         android:id="@+id/csdAutoDrawN"
@@ -179,7 +184,7 @@
                     <!-- Left tools -->
                     <LinearLayout
                         android:id="@+id/csdTableTool"
-                        android:layout_width="@dimen/t240dp"
+                        android:layout_width="@dimen/t290dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -230,7 +235,7 @@
                         <!-- Left table -->
                         <LinearLayout
                             android:id="@+id/csdTableContent"
-                            android:layout_width="@dimen/t240dp"
+                            android:layout_width="@dimen/t290dp"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 

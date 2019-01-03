@@ -24,6 +24,7 @@ import com.flyingkite.library.Say;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
+import com.flyingkite.mytoswiki.data.seal.FairyTail;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
@@ -63,6 +64,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
+        sealOrder.add(new Pair<>(R.id.csdSeriesFairyTail,       new FairyTail()));
         sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves, new MasterCathieves()));
         sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,   new KonoSubarashi()));
         sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,       new HinduGods()));
@@ -319,6 +321,23 @@ public class CardSealDialog extends BaseTosDialog {
                 return CardSealDialog.this.getFragmentManager();
             }
         };
+        a.setItemListener(new SealDataRowAdapter.ItemListener() {
+            @Override
+            public void onItemStep(int position, int step) {
+                SealSample ss = getWorkingSample();
+                int cid = position;
+                if (ss.observe[cid] + step < 0) return; // omit if negative
+
+                ss.observe[cid] += step;
+                ss.evalObservePdf();
+                setupTable();
+            }
+
+            @Override
+            public void onClick(BaseSeal baseSeal, SealDataRowAdapter.SealRowVH sealRowVH, int i) {
+
+            }
+        });
         a.setSeal(seals);
         a.setRaised(raised.isChecked());
         sealTable.removeAllViews();
@@ -343,6 +362,10 @@ public class CardSealDialog extends BaseTosDialog {
         t = vg.findViewById(R.id.sealObserve);
         t.setText(getString(R.string.card_observe));
         ImageView i = vg.findViewById(R.id.sealActor);
+        i.setImageResource(0);
+        i = vg.findViewById(R.id.sealPlus);
+        i.setImageResource(0);
+        i = vg.findViewById(R.id.sealMinus);
         i.setImageResource(0);
     }
 

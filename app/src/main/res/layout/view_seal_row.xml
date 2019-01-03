@@ -5,12 +5,13 @@
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    style="@style/cardRow.greenV">
+    style="@style/cardRow.greenV"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/sealNumber"
         style="@style/cardText.header.1"
-        android:layout_width="@dimen/t40dp"
+        android:layout_width="@dimen/t25dp"
         android:text="#1"/>
 
     <TextView
@@ -24,4 +25,20 @@
     <TextView
         android:id="@+id/sealObserve"
         style="@style/cardText.header.2"/>
+
+    <ImageView
+        android:id="@+id/sealMinus"
+        style="@style/number_icon"
+        android:layout_height="match_parent"
+        android:padding="@dimen/t2dp"
+        android:background="@drawable/bg_press_alpha4"
+        android:src="@drawable/minus"/>
+
+    <ImageView
+        android:id="@+id/sealPlus"
+        style="@style/number_icon"
+        android:layout_height="match_parent"
+        android:padding="@dimen/t2dp"
+        android:background="@drawable/bg_press_alpha4"
+        android:src="@drawable/plus"/>
 </LinearLayout>

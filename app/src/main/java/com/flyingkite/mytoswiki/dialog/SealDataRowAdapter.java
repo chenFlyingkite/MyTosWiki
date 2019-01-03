@@ -19,7 +19,7 @@ import flyingkite.math.Math2;
 public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRowAdapter.SealRowVH, SealDataRowAdapter.ItemListener> implements TosPageUtil {
 
     public interface ItemListener extends RVAdapter.ItemListener<BaseSeal, SealRowVH> {
-
+        void onItemStep(int position, int step);
     }
 
     private BaseSeal seal;
@@ -40,7 +40,7 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
     }
 
     @Override
-    public void onBindViewHolder(SealRowVH vh, int position) {
+    public void onBindViewHolder(@NonNull SealRowVH vh, int position) {
         super.onBindViewHolder(vh, position);
         //noinspection UnnecessaryLocalVariable
         final int i = position;
@@ -50,6 +50,16 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
         vh.expect.setText(_fmt("%.1f\n%.2f %%", ss.pdf[i] * n, ss.pdf[i] * 100));
         vh.observe.setText(_fmt("%s\n%.2f %%", ss.observe[i], ss.observePdf[i] * 100));
         setSimpleCard(vh.actor, TosWiki.getCardByIdNorm(seal.sealCards.get(position)));
+        vh.plus.setOnClickListener((v) -> {
+            if (onItem != null) {
+                onItem.onItemStep(i, 1);
+            }
+        });
+        vh.minus.setOnClickListener((v) -> {
+            if (onItem != null) {
+                onItem.onItemStep(i, -1);
+            }
+        });
     }
 
     @Override
@@ -62,6 +72,8 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
         private TextView expect;
         private ImageView actor;
         private TextView observe;
+        private ImageView plus;
+        private ImageView minus;
 
         public SealRowVH(View v) {
             super(v);
@@ -69,6 +81,8 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
             expect = v.findViewById(R.id.sealExpect);
             actor = v.findViewById(R.id.sealActor);
             observe = v.findViewById(R.id.sealObserve);
+            plus = v.findViewById(R.id.sealPlus);
+            minus = v.findViewById(R.id.sealMinus);
         }
     }
 }
