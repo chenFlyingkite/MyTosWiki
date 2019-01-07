@@ -340,9 +340,9 @@
                     android:text="@string/cards_leader_also_possess"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialFix"
+                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
                     style="@style/sortText"
-                    android:text="@string/cards_fix"/>
+                    android:text="@string/cards_runestone_drop_rate_transfer"/>
 
                 <View
                     style="@style/divider_h2px"/>
@@ -417,9 +417,34 @@
                     style="@style/divider_h2px"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
+                    android:id="@+id/sortSpecialFix"
                     style="@style/sortText"
-                    android:text="@string/cards_runestone_drop_rate_transfer"/>
+                    android:text="@string/cards_fix"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreIntoEnchanted"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_into_enchanted"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreAllAttrRandom"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_all_attr_random"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreAllIntoRandom"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_all_into_random"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreAllInto"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_all_into"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRestoreAllIntoEnchanted"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_all_into_enchanted"/>
 
             </LinearLayout>
 

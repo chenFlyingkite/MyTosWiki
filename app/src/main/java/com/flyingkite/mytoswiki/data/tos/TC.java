@@ -65,6 +65,7 @@ public class TC {
     public static final String rebirthChange = "rebirthChange";
     public static final String armCrafts = "armCrafts";
     public static final String switchChange = "switchChange";
+    public static final String skillCDMaxAme = "skillCDMaxAme";
 
 
     // Automation

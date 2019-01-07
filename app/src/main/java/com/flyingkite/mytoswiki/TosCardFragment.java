@@ -64,7 +64,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private RecyclerView favorRecycler;
     private Library<CardTileAdapter> favorLib;
     // Popup Menus
-    private View sortMenu;
+    private View menuEntry;
     private PopupWindow sortWindow;
     // Popup Menu tool bar
     private View sortReset;
@@ -103,6 +103,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialOriginalColor;
     private CheckBox sortSpecialRestoreNormal;
     private CheckBox sortSpecialRestoreDropRateTransfer;
+    private CheckBox sortSpecialRestoreIntoEnchanted;
+    private CheckBox sortSpecialRestoreAllAttrRandom;
+    private CheckBox sortSpecialRestoreAllIntoRandom;
+    private CheckBox sortSpecialRestoreAllInto;
+    private CheckBox sortSpecialRestoreAllIntoEnchanted;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -122,7 +127,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private CardSort cardSort = new CardSort();
     private CardFavor cardFavor = new CardFavor();
-    private boolean cardReady;
 
     // Major components
     private List<TosCard> allCards;
@@ -142,7 +146,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         favorBox = findViewById(R.id.tosFavorBox);
         favorRecycler = findViewById(R.id.tosFavorites);
 
-        sortMenu = findViewById(R.id.tosSortMenu);
+        menuEntry = findViewById(R.id.tosSortMenu);
         initCardLibrary();
         initSortMenu();
         initToolIcons();
@@ -277,7 +281,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             }
 
             runOnUiThread(() -> {
-                cardReady = true;
                 onCardsReady(TosWiki.allCards());
                 TosWiki.joinFavorAction(favorAction);
             });
@@ -350,7 +353,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortWindow = pair.second;
         View menu = pair.first;
 
-        sortMenu.setOnClickListener(v -> {
+        menuEntry.setOnClickListener(v -> {
             sortWindow.showAsDropDown(v);
             logSelectCard();
         });
@@ -410,7 +413,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialExtend = menu.findViewById(R.id.sortSpecialExtend);
         sortSpecialAlsoActive = menu.findViewById(R.id.sortSpecialAlsoActive);
         sortSpecialAlsoLeader = menu.findViewById(R.id.sortSpecialAlsoLeader);
-        sortSpecialFix = menu.findViewById(R.id.sortSpecialFix);
+        sortSpecialRestoreDropRateTransfer = menu.findViewById(R.id.sortSpecialRestoreDropRateTransfer);
         sortSpecialNoDefeat = menu.findViewById(R.id.sortSpecialNoDefeat);
         sortSpecialDamageLessActive = menu.findViewById(R.id.sortSpecialDamageLessActive);
         sortSpecialDamageLessLeader = menu.findViewById(R.id.sortSpecialDamageLessLeader);
@@ -423,7 +426,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
         sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
         sortSpecialRestoreNormal = menu.findViewById(R.id.sortSpecialRestoreNormal);
-        sortSpecialRestoreDropRateTransfer = menu.findViewById(R.id.sortSpecialRestoreDropRateTransfer);
+        sortSpecialFix = menu.findViewById(R.id.sortSpecialFix);
+        sortSpecialRestoreIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreIntoEnchanted);
+        sortSpecialRestoreAllAttrRandom = menu.findViewById(R.id.sortSpecialRestoreAllAttrRandom);
+        sortSpecialRestoreAllIntoRandom = menu.findViewById(R.id.sortSpecialRestoreAllIntoRandom);
+        sortSpecialRestoreAllInto = menu.findViewById(R.id.sortSpecialRestoreAllInto);
+        sortSpecialRestoreAllIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreAllIntoEnchanted);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -722,6 +730,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             String key = activeSkill(c);
             boolean accept = true;
             if (!sortSpecialNo.isChecked()) {
+                //Though repeat, but fast.....
                 if (sortSpecialFree.isChecked()) {
                     //noinspection ConstantConditions
                     accept &= find(key, R.array.cards_freemove_keys);
@@ -746,8 +755,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     key = leaderSkill(c);
                     accept &= find(key, R.array.cards_also_keys);
                 }
-                if (sortSpecialFix.isChecked()) {
-                    accept &= find(key, R.array.cards_fix_keys);
+                if (sortSpecialRestoreDropRateTransfer.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_drop_rate_transfer_keys);
                 }
                 if (sortSpecialNoDefeat.isChecked()) {
                     accept &= find(key, R.array.cards_no_defeat_keys);
@@ -786,8 +795,23 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialRestoreNormal.isChecked()) {
                     accept &= find(key, R.array.cards_restore_runestone_normal_keys);
                 }
-                if (sortSpecialRestoreDropRateTransfer.isChecked()) {
-                    accept &= find(key, R.array.cards_runestone_drop_rate_transfer_keys);
+                if (sortSpecialFix.isChecked()) {
+                    accept &= find(key, R.array.cards_fix_keys);
+                }
+                if (sortSpecialRestoreIntoEnchanted.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_into_enchanted_keys);
+                }
+                if (sortSpecialRestoreAllAttrRandom.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_all_attr_random_keys);
+                }
+                if (sortSpecialRestoreAllIntoRandom.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_all_into_random_keys);
+                }
+                if (sortSpecialRestoreAllInto.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_all_into_keys);
+                }
+                if (sortSpecialRestoreAllIntoEnchanted.isChecked()) {
+                    accept &= find(key, R.array.cards_runestone_all_into_enchanted_keys);
                 }
             }
             return accept;
@@ -973,7 +997,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         private long normSkillCD(TosCard c) {
             long norm;
             final long radix = 100;
-            int c1 = c.skillCDMax1;
+            int c1 = c.skillCDMaxAme; // consider Amelioration, not max1
             int c2 = c.skillCDMax2;
             if (c1 == 0) { // No skills
                 norm = radix * radix;
@@ -1055,7 +1079,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                         msg = String.valueOf(c.maxHP + c.maxAttack + c.maxRecovery);
                         break;
                     case R.id.sortCommonSkillCDMax:
-                        msg = "" + c.skillCDMax1;
+                        msg = "" + c.skillCDMaxAme;
+                        if (c.skillCDMax1 != c.skillCDMaxAme) {
+                            msg += "^";
+                        }
                         if (c.skillCDMax2 > 0) {
                              msg += " & " + c.skillCDMax2;
                         }

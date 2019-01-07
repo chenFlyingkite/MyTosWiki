@@ -11,6 +11,7 @@ import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
+import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.stage.MainStage;
 import com.flyingkite.mytoswiki.data.stage.RelicStage;
@@ -70,6 +71,7 @@ public class TosWiki {
             t.tic();
             allCards = GsonUtil.loadAsset("cardList.json", TosCard[].class, am);
             t.tac("%s cards loaded", len(allCards));
+            //checkCards();
 
             t.tic();
             allCardsByIdNorm.clear();
@@ -290,6 +292,46 @@ public class TosWiki {
         FabricAnswers.logFavorite(m);
     }
     //-- Events
+
+    private static void checkCards() {
+        if (!BuildConfig.DEBUG) return;
+        String key;
+
+        Map<String, Integer> a = new HashMap<>();
+        Map<String, Integer> r = new HashMap<>();
+        Map<String, Integer> x = new HashMap<>();
+        for (TosCard c : allCards) {
+            // Count attr
+            key = c.attribute;
+            if (a.get(key) == null) {
+                a.put(key, 1);
+            } else {
+                int n = a.get(key);
+                a.put(key, n+1);
+            }
+
+            // Count race
+            key = c.race;
+            if (r.get(key) == null) {
+                r.put(key, 1);
+            } else {
+                int n = r.get(key);
+                r.put(key, n+1);
+            }
+
+            // Count rarity
+            key = c.rarity + "";
+            if (x.get(key) == null) {
+                x.put(key, 1);
+            } else {
+                int n = x.get(key);
+                x.put(key, n+1);
+            }
+        }
+        z.logE("attr   -> %s", a);
+        z.logE("race   -> %s", r);
+        z.logE("rarity -> %s", x);
+    }
 
     private static <T> int len(T[] a) {
         return a == null ? 0 : a.length;

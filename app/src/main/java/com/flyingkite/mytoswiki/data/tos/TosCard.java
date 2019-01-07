@@ -140,6 +140,11 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.skillLeaderDesc)
     public String skillLeaderDesc = "";
 
+    // Only 127 cards has amelioration benefit
+    /** Active skill CD max = skillCDMax1 + amelioration, see #1261 拉法葉爾 */
+    @SerializedName(TC.skillCDMaxAme)
+    public int skillCDMaxAme;
+
     //------------
     //---- Active Skill 1, 主動技能1
     //------------

@@ -110,7 +110,7 @@
     <string name="cards_common_maxAttack">攻擊力</string>
     <string name="cards_common_macRecovery">回復力</string>
     <string name="cards_common_maxSum">三圍(生+攻+回)</string>
-    <string name="cards_common_skillCDMax">滿等 CD</string>
+    <string name="cards_common_skillCDMax">滿等 CD (^昇華全滿)</string>
     <string name="cards_common_space">空間</string>
     <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
     <string-array name="cards_common_keys_race">
@@ -136,11 +136,10 @@
     <string name="cards_morecoin">獲得的金幣增加</string>
     <!-- #0408, #1765, #961, extend Runestone-moving time, -->
     <string name="cards_extend_time">延長移動符石時間</string>
+    <string name="cards_runestone_drop_rate_transfer">符石掉落機率降至 [機率]</string>
     <!-- #1429, 伊邪那岐, Runestones also possess 50% effect of Runestones -->
     <string name="cards_active_also_possess">主動技 - 兼具</string>
     <string name="cards_leader_also_possess">隊長技 - 兼具</string>
-    <!-- #1429, 伊邪那岐, Turn all Runestones into fixed numbers of Heart Runestones and Enchanted Earth Runestones -->
-    <string name="cards_fix">轉化為固定數量</string>
     <!-- #0686, 水遊俠, The next damage received will not lead to your defeat -->
     <string name="cards_no_defeat">根性 (不會使你死亡)</string>
     <!-- #0686, 水遊俠, Damage received -60% for 5 Rounds.,  -->
@@ -175,7 +174,13 @@
          #1765, 酷拉皮卡, restore all Runestones to normal state upon Skill activation
     -->
     <string name="cards_restore_runestone_normal">將場上的符石變回原始模樣</string>
-    <string name="cards_runestone_drop_rate_transfer">符石掉落機率降至</string>
+    <!-- #1429, 伊邪那岐, Turn all Runestones into fixed numbers of Heart Runestones and Enchanted Earth Runestones -->
+    <string name="cards_fix">[符石]轉化為___固定數量</string>
+    <string name="cards_runestone_into_enchanted">[符石]轉化為___強化符石</string>
+    <string name="cards_runestone_all_attr_random">所有符石__隨機轉換__[屬性]</string>
+    <string name="cards_runestone_all_into_random">所有符石__隨機轉化__[符石]</string>
+    <string name="cards_runestone_all_into">所有符石轉化為__[符石]</string>
+    <string name="cards_runestone_all_into_enchanted">所有符石轉化為__強化符石</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -271,6 +276,8 @@
     </string-array>
     <string-array name="cards_stay_until_keys">
         <item>效果持續至</item>
+        <!-- #1208,錢夫人  #0734,土蜘蛛 -->
+        <item>直至受到敵人攻擊為止</item>
     </string-array>
     <string-array name="cards_extra_attack_keys">
         <item>追打</item>
@@ -286,6 +293,21 @@
         <item>掉落率降至</item>
         <!-- #0401, 聖言歌姬 ‧ 妍 -->
         <item>掉落機率降至</item>
+    </string-array>
+    <string-array name="cards_runestone_into_enchanted_keys">
+        <item>轉化為強化符石</item>
+    </string-array>
+    <string-array name="cards_runestone_all_attr_random_keys">
+        <item>所有符石隨機轉換</item>
+    </string-array>
+    <string-array name="cards_runestone_all_into_random_keys">
+        <item>所有符石隨機轉化</item>
+    </string-array>
+    <string-array name="cards_runestone_all_into_keys">
+        <item>所有符石轉化為</item>
+    </string-array>
+    <string-array name="cards_runestone_all_into_enchanted_keys">
+        <item>所有符石轉化為強化符石</item>
     </string-array>
 
 
