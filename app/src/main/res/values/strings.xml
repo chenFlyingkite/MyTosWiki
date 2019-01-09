@@ -168,6 +168,7 @@
          #1572, 草薙京, Skill stays in play until not a group of 6 or more Fire Runestones are dissolved
      -->
     <string name="cards_stay_until">效果持續至 [條件]</string>
+    <string name="cards_stay_until_if">[效果] 直至 [條件]</string>
     <string name="cards_extra_attack">追打</string>
     <string name="cards_black_white_original">將黑白符石變回原來色調</string>
     <!-- #1327, 伊莉莎白, Restore all Runestones to normal state
@@ -276,8 +277,20 @@
     </string-array>
     <string-array name="cards_stay_until_keys">
         <item>效果持續至</item>
+    </string-array>
+    <string-array name="cards_stay_until_if_keys">
+        <!-- #0792,皮亞沙 -->
+        <item>直至沒有消除</item>
+        <!-- #1038,多多 -->
+        <item>直至消除</item>
+        <!-- #1073,巴爾德爾 ‧ 克利夫 -->
+        <item>直至連擊</item>
         <!-- #1208,錢夫人  #0734,土蜘蛛 -->
         <item>直至受到敵人攻擊為止</item>
+        <!-- #1455,千刃騎士 ‧ 蘭斯洛特 -->
+        <item>直至自身沒有發動攻擊</item>
+        <!-- #1726,不可能性現翼 ‧ 莫比烏斯 -->
+        <item>直至場上</item>
     </string-array>
     <string-array name="cards_extra_attack_keys">
         <item>追打</item>

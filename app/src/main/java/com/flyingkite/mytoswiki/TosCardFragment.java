@@ -99,6 +99,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialRegardlessAttribute;
     private CheckBox sortSpecialClearAllEffect;
     private CheckBox sortSpecialStayUntil;
+    private CheckBox sortSpecialStayUntilIf;
     private CheckBox sortSpecialExtraAttack;
     private CheckBox sortSpecialOriginalColor;
     private CheckBox sortSpecialRestoreNormal;
@@ -423,6 +424,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
         sortSpecialClearAllEffect = menu.findViewById(R.id.sortSpecialClearAllEffect);
         sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
+        sortSpecialStayUntilIf = menu.findViewById(R.id.sortSpecialStayUntilIf);
         sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
         sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
         sortSpecialRestoreNormal = menu.findViewById(R.id.sortSpecialRestoreNormal);
@@ -785,6 +787,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialStayUntil.isChecked()) {
                     accept &= find(key, R.array.cards_stay_until_keys);
+                }
+                if (sortSpecialStayUntilIf.isChecked()) {
+                    accept &= find(key, R.array.cards_stay_until_if_keys);
                 }
                 if (sortSpecialExtraAttack.isChecked()) {
                     accept &= find(key, R.array.cards_extra_attack_keys);

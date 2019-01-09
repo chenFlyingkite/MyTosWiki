@@ -404,6 +404,11 @@
                     android:text="@string/cards_stay_until"/>
 
                 <CheckBox
+                    android:id="@+id/sortSpecialStayUntilIf"
+                    style="@style/sortText"
+                    android:text="@string/cards_stay_until_if"/>
+
+                <CheckBox
                     android:id="@+id/sortSpecialOriginalColor"
                     style="@style/sortText"
                     android:text="@string/cards_black_white_original"/>
