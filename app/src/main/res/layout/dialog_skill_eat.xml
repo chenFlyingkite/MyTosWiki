@@ -268,6 +268,15 @@
 
                 <TextView
                     style="@style/common_text.white"
+                    android:text="@string/skillLv_eat600to10"
+                    android:textSize="@dimen/t16dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/t20dp"/>
+
+                <TextView
+                    style="@style/common_text.white"
                     android:text="@string/skillLv_title"
                     android:textStyle="bold"
                     android:textSize="@dimen/t18dp"/>

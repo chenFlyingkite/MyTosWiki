@@ -484,6 +484,7 @@
     <string name="skillLv_title">詳細吃技方式</string>
     <string name="skillLv_concept">吃技概念</string>
     <string name="skillLv_header">常用吃技方式</string>
+    <string name="skillLv_eat600to10">★Lv1 + 2200回合 (吃11雛鳥 或 2雛鳥+3x技600)\n + 60回合(出場) + 5x技600(吃5隻升技一等)</string>
     <string name="skillLv_concept_detail">★一次吃5隻技能相同的卡片，至少提升技能1等級。
 \n★技5 = 技1 + 1 x 人面雛鳥 (#0617)\n★技7 = 技1 + 5 x 人面雛鳥 (#0617)\n★吃 人面大鳥(#0292) 提升技能1等級</string>
     <string name="skillLv_sample_title">吃技範例</string>
