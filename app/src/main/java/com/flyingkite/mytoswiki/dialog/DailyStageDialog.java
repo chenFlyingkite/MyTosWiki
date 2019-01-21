@@ -42,6 +42,7 @@ public class DailyStageDialog extends BaseTosDialog {
         initOpenHour();
 
         fillStages();
+        dismissWhenClick(R.id.dds_title, R.id.dds_desc);
     }
 
     private void fillStages() {
