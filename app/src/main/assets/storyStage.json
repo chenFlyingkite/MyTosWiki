@@ -3,32 +3,32 @@
     "group": "黃道十二宮上篇",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E8%99%95%E5%A5%B3%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E8%99%95%E5%A5%B3%E5%AE%AE",
         "name": "耀之處女宮",
         "icon": "0821"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%85%89%E4%B9%8B%E7%8D%85%E5%AD%90%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%85%89%E4%B9%8B%E7%8D%85%E5%AD%90%E5%AE%AE",
         "name": "光之獅子宮",
         "icon": "0820"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%B9%BD%E4%B9%8B%E5%B7%A8%E8%9F%B9%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%B9%BD%E4%B9%8B%E5%B7%A8%E8%9F%B9%E5%AE%AE",
         "name": "幽之巨蟹宮",
         "icon": "0819"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%97%87%E4%B9%8B%E9%9B%99%E5%AD%90%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%97%87%E4%B9%8B%E9%9B%99%E5%AD%90%E5%AE%AE",
         "name": "闇之雙子宮",
         "icon": "0818"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%82%8E%E4%B9%8B%E9%87%91%E7%89%9B%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%82%8E%E4%B9%8B%E9%87%91%E7%89%9B%E5%AE%AE",
         "name": "炎之金牛宮",
         "icon": "0817"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E4%B9%8B%E7%99%BD%E7%BE%8A%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%B5%A4%E4%B9%8B%E7%99%BD%E7%BE%8A%E5%AE%AE",
         "name": "赤之白羊宮",
         "icon": "0816"
       }
@@ -38,32 +38,32 @@
     "group": "黃道十二宮下篇",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%B5%B7%E4%B9%8B%E9%9B%99%E9%AD%9A%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%B5%B7%E4%B9%8B%E9%9B%99%E9%AD%9A%E5%AE%AE",
         "name": "海之雙魚宮",
         "icon": "0827"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%B8%85%E4%B9%8B%E6%B0%B4%E7%93%B6%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%B8%85%E4%B9%8B%E6%B0%B4%E7%93%B6%E5%AE%AE",
         "name": "清之水瓶宮",
         "icon": "0826"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%BF%A0%E4%B9%8B%E5%B1%B1%E7%BE%8A%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%BF%A0%E4%B9%8B%E5%B1%B1%E7%BE%8A%E5%AE%AE",
         "name": "翠之山羊宮",
         "icon": "0825"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E4%BA%BA%E9%A6%AC%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E4%BA%BA%E9%A6%AC%E5%AE%AE",
         "name": "森之人馬宮",
         "icon": "0824"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%AF%92%E4%B9%8B%E5%A4%A9%E8%A0%8D%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%AF%92%E4%B9%8B%E5%A4%A9%E8%A0%8D%E5%AE%AE",
         "name": "毒之天蠍宮",
         "icon": "0823"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%BE%A9%E4%B9%8B%E5%A4%A9%E7%A7%A4%E5%AE%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%BE%A9%E4%B9%8B%E5%A4%A9%E7%A7%A4%E5%AE%AE",
         "name": "義之天秤宮",
         "icon": "0822"
       }
@@ -73,27 +73,27 @@
     "group": "封神仙境",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%8C%A0%E5%85%89%E5%9C%93%E8%A6%BA%E5%AF%BA",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%8C%A0%E5%85%89%E5%9C%93%E8%A6%BA%E5%AF%BA",
         "name": "錠光圓覺寺",
         "icon": "1042"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%9B%B7%E7%BD%A1%E4%BB%99%E9%81%93%E8%A7%80",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%9B%B7%E7%BD%A1%E4%BB%99%E9%81%93%E8%A7%80",
         "name": "雷罡仙道觀",
         "icon": "1045"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E8%87%BA%E5%A4%AA%E5%85%AC%E5%BB%9F",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E8%87%BA%E5%A4%AA%E5%85%AC%E5%BB%9F",
         "name": "神臺太公廟",
         "icon": "1044"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%A4%A9%E5%B0%8A%E5%A4%AA%E5%B8%AB%E5%BA%A7",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E5%B0%8A%E5%A4%AA%E5%B8%AB%E5%BA%A7",
         "name": "天尊太師座",
         "icon": "1041"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%B8%85%E6%BA%90%E4%BA%8C%E9%83%8E%E5%BA%AD",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%B8%85%E6%BA%90%E4%BA%8C%E9%83%8E%E5%BA%AD",
         "name": "清源二郎庭",
         "icon": "1043"
       }
@@ -103,27 +103,27 @@
     "group": "斯特靈要塞",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%AD%B8%E5%A3%AB%E7%9A%84%E8%AD%98%E8%A6%8B%E4%B9%8B%E5%BF%83",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%AD%B8%E5%A3%AB%E7%9A%84%E8%AD%98%E8%A6%8B%E4%B9%8B%E5%BF%83",
         "name": "學士的識見之心",
         "icon": "0660"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%8D%8A%E5%81%B6%E7%9A%84%E9%AC%B1%E6%82%B6%E4%B9%8B%E5%BF%83",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%8D%8A%E5%81%B6%E7%9A%84%E9%AC%B1%E6%82%B6%E4%B9%8B%E5%BF%83",
         "name": "半偶的鬱悶之心",
         "icon": "0659"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%82%80%E5%84%A1%E7%9A%84%E6%83%85%E6%84%9F%E4%B9%8B%E5%BF%83",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%82%80%E5%84%A1%E7%9A%84%E6%83%85%E6%84%9F%E4%B9%8B%E5%BF%83",
         "name": "傀儡的情感之心",
         "icon": "0658"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%AD%B8%E8%80%85%E7%9A%84%E6%8E%A2%E6%B1%82%E4%B9%8B%E5%BF%83",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%AD%B8%E8%80%85%E7%9A%84%E6%8E%A2%E6%B1%82%E4%B9%8B%E5%BF%83",
         "name": "學者的探求之心",
         "icon": "0657"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%A9%9F%E5%81%B6%E7%9A%84%E5%AE%88%E8%AD%B7%E4%B9%8B%E5%BF%83",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%A9%9F%E5%81%B6%E7%9A%84%E5%AE%88%E8%AD%B7%E4%B9%8B%E5%BF%83",
         "name": "機偶的守護之心",
         "icon": "0656"
       }
@@ -133,27 +133,27 @@
     "group": "青木原古閣",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E7%8D%84%E7%9A%84%E7%81%AB",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E7%8D%84%E7%9A%84%E7%81%AB",
         "name": "煉獄的火",
         "icon": "1127"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%8C%AF%E5%90%91%E7%9A%84%E9%A2%A8",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%8C%AF%E5%90%91%E7%9A%84%E9%A2%A8",
         "name": "錯向的風",
         "icon": "1128"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%AE%88%E5%80%99%E7%9A%84%E5%BD%B1",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%AE%88%E5%80%99%E7%9A%84%E5%BD%B1",
         "name": "守候的影",
         "icon": "1130"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%AD%A4%E5%AF%82%E7%9A%84%E9%9B%AA",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%AD%A4%E5%AF%82%E7%9A%84%E9%9B%AA",
         "name": "孤寂的雪",
         "icon": "1126"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%B8%8C%E6%9C%9B%E7%9A%84%E5%85%89",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%B8%8C%E6%9C%9B%E7%9A%84%E5%85%89",
         "name": "希望的光",
         "icon": "1129"
       }
@@ -163,27 +163,27 @@
     "group": "聖地阿斯嘉特",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E4%B8%8D%E8%B5%A6%E4%B9%8B%E6%B7%9A",
+        "link": "https://tos.fandom.com/zh/wiki/%E4%B8%8D%E8%B5%A6%E4%B9%8B%E6%B7%9A",
         "name": "不赦之淚",
         "icon": "1065"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%93%A6%E7%88%BE%E5%93%88%E6%8B%89%E5%9C%8B%E9%9B%99%E7%8E%8B",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%93%A6%E7%88%BE%E5%93%88%E6%8B%89%E5%9C%8B%E9%9B%99%E7%8E%8B",
         "name": "瓦爾哈拉國雙王",
         "icon": "1063"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%82%BC%E9%9D%88%E7%9A%84%E8%80%83%E5%8F%A4%E5%AD%B8%E8%80%85",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%82%BC%E9%9D%88%E7%9A%84%E8%80%83%E5%8F%A4%E5%AD%B8%E8%80%85",
         "name": "悼靈的考古學者",
         "icon": "1061"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%81%96%E5%9C%B0%E5%AE%88%E8%AD%B7%E7%A5%9E",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E5%9C%B0%E5%AE%88%E8%AD%B7%E7%A5%9E",
         "name": "聖地守護神",
         "icon": "1059"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E5%BC%97%E7%88%BE%E5%85%8B%E8%8C%83%E6%A0%BC%E5%A5%B3%E7%9A%87",
+        "link": "https://tos.fandom.com/zh/wiki/%E5%BC%97%E7%88%BE%E5%85%8B%E8%8C%83%E6%A0%BC%E5%A5%B3%E7%9A%87",
         "name": "弗爾克范格女皇",
         "icon": "1057"
       }
@@ -193,27 +193,27 @@
     "group": "獵人秘社遺址",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%B5%A4%E9%BE%8D%E7%9A%84%E7%A7%98%E6%9E%9C",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%B5%A4%E9%BE%8D%E7%9A%84%E7%A7%98%E6%9E%9C",
         "name": "赤龍的秘果",
         "icon": "1230"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%BA%92%E9%BA%9F%E7%9A%84%E9%8A%85%E5%B9%A3",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%BA%92%E9%BA%9F%E7%9A%84%E9%8A%85%E5%B9%A3",
         "name": "麒麟的銅幣",
         "icon": "1228"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%8D%A8%E8%A7%92%E9%A6%AC%E7%9A%84%E5%8E%9A%E7%A6%AE",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E8%A7%92%E9%A6%AC%E7%9A%84%E5%8E%9A%E7%A6%AE",
         "name": "獨角馬的厚禮",
         "icon": "1226"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%8A%AC%E7%A5%9E%E7%9A%84%E9%88%B4%E9%90%BA",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%8A%AC%E7%A5%9E%E7%9A%84%E9%88%B4%E9%90%BA",
         "name": "犬神的鈴鐺",
         "icon": "1224"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%9B%9E%E8%9D%93%E7%9A%84%E6%B0%B4%E8%B7%A1",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%9B%9E%E8%9D%93%E7%9A%84%E6%B0%B4%E8%B7%A1",
         "name": "蛞蝓的水跡",
         "icon": "1222"
       }
@@ -223,27 +223,27 @@
     "group": "天竺之巔",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%B2%99%E5%83%A7%E4%B9%8B%E9%86%89",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%B2%99%E5%83%A7%E4%B9%8B%E9%86%89",
         "name": "沙僧之醉",
         "icon": "1666"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%87%91%E8%A7%92%E8%88%87%E9%8A%80%E8%A7%92%E4%B9%8B%E6%82%B2",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%87%91%E8%A7%92%E8%88%87%E9%8A%80%E8%A7%92%E4%B9%8B%E6%82%B2",
         "name": "金角與銀角之悲",
         "icon": "1667"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%B1%AC%E5%85%AB%E6%88%92%E4%B9%8B%E6%88%80",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%B1%AC%E5%85%AB%E6%88%92%E4%B9%8B%E6%88%80",
         "name": "豬八戒之戀",
         "icon": "1668"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%99%BD%E9%AA%A8%E7%B2%BE%E4%B9%8B%E5%96%84",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%99%BD%E9%AA%A8%E7%B2%BE%E4%B9%8B%E5%96%84",
         "name": "白骨精之善",
         "icon": "1669"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%9C%98%E8%9B%9B%E7%B2%BE%E4%B9%8B%E7%97%B4",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%9C%98%E8%9B%9B%E7%B2%BE%E4%B9%8B%E7%97%B4",
         "name": "蜘蛛精之痴",
         "icon": "1670"
       }
@@ -253,27 +253,27 @@
     "group": "尼河權杖記傳",
     "stages": [
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E7%B4%94%E7%99%BD%E8%89%B2%E7%9A%84%E5%A9%9A%E7%B4%84",
+        "link": "https://tos.fandom.com/zh/wiki/%E7%B4%94%E7%99%BD%E8%89%B2%E7%9A%84%E5%A9%9A%E7%B4%84",
         "name": "純白色的婚約",
         "icon": "1916"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E6%8E%A7%E5%88%B6%E4%B9%8B%E6%84%9B",
+        "link": "https://tos.fandom.com/zh/wiki/%E6%8E%A7%E5%88%B6%E4%B9%8B%E6%84%9B",
         "name": "控制之愛",
         "icon": "1917"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E8%8B%A6%E5%BF%83%E6%89%80%E5%BE%97%E7%9A%84%E8%A6%8B%E8%AD%89",
+        "link": "https://tos.fandom.com/zh/wiki/%E8%8B%A6%E5%BF%83%E6%89%80%E5%BE%97%E7%9A%84%E8%A6%8B%E8%AD%89",
         "name": "苦心所得的見證",
         "icon": "1918"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%9A%BC%E9%B3%A5%E5%AE%88%E8%AD%B7%E7%A5%9E",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%9A%BC%E9%B3%A5%E5%AE%88%E8%AD%B7%E7%A5%9E",
         "name": "隼鳥守護神",
         "icon": "1919"
       },
       {
-        "link": "http://zh.tos.wikia.com/wiki/%E9%B3%A5%E8%AA%9E%E7%9A%84%E6%83%85%E6%AD%8C",
+        "link": "https://tos.fandom.com/zh/wiki/%E9%B3%A5%E8%AA%9E%E7%9A%84%E6%83%85%E6%AD%8C",
         "name": "鳥語的情歌",
         "icon": "1920"
       }

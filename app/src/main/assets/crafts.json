@@ -21,7 +21,7 @@
     "upRecovery": "",
     "idNorm": "0001",
     "name": "虛之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5c/C01.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001906\u0026path-prefix\u003dzh",
       "iconKey": "C01.png"
@@ -49,7 +49,7 @@
     "upRecovery": "",
     "idNorm": "0002",
     "name": "虛之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7b/C02.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001906\u0026path-prefix\u003dzh",
       "iconKey": "C02.png"
@@ -77,7 +77,7 @@
     "upRecovery": "",
     "idNorm": "0003",
     "name": "虛之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ea/C03.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001906\u0026path-prefix\u003dzh",
       "iconKey": "C03.png"
@@ -110,7 +110,7 @@
     "upRecovery": "",
     "idNorm": "0004",
     "name": "漩之屏息龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b5/C04.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001907\u0026path-prefix\u003dzh",
       "iconKey": "C04.png"
@@ -143,7 +143,7 @@
     "upRecovery": "",
     "idNorm": "0005",
     "name": "煉之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ae/C05.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001907\u0026path-prefix\u003dzh",
       "iconKey": "C05.png"
@@ -176,7 +176,7 @@
     "upRecovery": "",
     "idNorm": "0006",
     "name": "森之屏息龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1f/C06.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001907\u0026path-prefix\u003dzh",
       "iconKey": "C06.png"
@@ -209,7 +209,7 @@
     "upRecovery": "",
     "idNorm": "0007",
     "name": "耀之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/70/C07.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001908\u0026path-prefix\u003dzh",
       "iconKey": "C07.png"
@@ -242,7 +242,7 @@
     "upRecovery": "",
     "idNorm": "0008",
     "name": "影之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C08.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001908\u0026path-prefix\u003dzh",
       "iconKey": "C08.png"
@@ -280,7 +280,7 @@
     "upRecovery": "",
     "idNorm": "0009",
     "name": "連之愈時龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e3/C09.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001908\u0026path-prefix\u003dzh",
       "iconKey": "C09.png"
@@ -318,7 +318,7 @@
     "upRecovery": "",
     "idNorm": "0010",
     "name": "祈之圖騰龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/45/C10.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001909\u0026path-prefix\u003dzh",
       "iconKey": "C10.png"
@@ -356,7 +356,7 @@
     "upRecovery": "",
     "idNorm": "0011",
     "name": "攻之原色龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/94/C11.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001909\u0026path-prefix\u003dzh",
       "iconKey": "C11.png"
@@ -394,7 +394,7 @@
     "upRecovery": "",
     "idNorm": "0012",
     "name": "祈之衝鋒龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3c/C12.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001909\u0026path-prefix\u003dzh",
       "iconKey": "C12.png"
@@ -432,7 +432,7 @@
     "upRecovery": "",
     "idNorm": "0013",
     "name": "抵之愈時龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c2/C13.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001909\u0026path-prefix\u003dzh",
       "iconKey": "C13.png"
@@ -470,7 +470,7 @@
     "upRecovery": "",
     "idNorm": "0014",
     "name": "攻之愈時龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E6%84%88%E6%99%82%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e9/C14.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001910\u0026path-prefix\u003dzh",
       "iconKey": "C14.png"
@@ -503,7 +503,7 @@
     "upRecovery": "",
     "idNorm": "0015",
     "name": "攻之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/78/C15.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001910\u0026path-prefix\u003dzh",
       "iconKey": "C15.png"
@@ -536,7 +536,7 @@
     "upRecovery": "",
     "idNorm": "0016",
     "name": "攻之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/74/C16.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001910\u0026path-prefix\u003dzh",
       "iconKey": "C16.png"
@@ -564,7 +564,7 @@
     "upRecovery": "",
     "idNorm": "0017",
     "name": "抵之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/38/C17.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001911\u0026path-prefix\u003dzh",
       "iconKey": "C17.png"
@@ -597,7 +597,7 @@
     "upRecovery": "",
     "idNorm": "0018",
     "name": "攻之鐵壁龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/70/C18.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001911\u0026path-prefix\u003dzh",
       "iconKey": "C18.png"
@@ -630,7 +630,7 @@
     "upRecovery": "",
     "idNorm": "0019",
     "name": "攻之炮擊龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3a/C19.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001911\u0026path-prefix\u003dzh",
       "iconKey": "C19.png"
@@ -663,7 +663,7 @@
     "upRecovery": "",
     "idNorm": "0020",
     "name": "連之鐵壁龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a5/C20.png/revision/latest/scale-to-width-down/120?cb\u003d20150402001911\u0026path-prefix\u003dzh",
       "iconKey": "C20.png"
@@ -696,7 +696,7 @@
     "upRecovery": "",
     "idNorm": "0021",
     "name": "抵之炮擊龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/15/C21.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002017\u0026path-prefix\u003dzh",
       "iconKey": "C21.png"
@@ -729,7 +729,7 @@
     "upRecovery": "",
     "idNorm": "0022",
     "name": "祈之炮擊龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/98/C22.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002018\u0026path-prefix\u003dzh",
       "iconKey": "C22.png"
@@ -762,7 +762,7 @@
     "upRecovery": "",
     "idNorm": "0023",
     "name": "連之炮擊龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bf/C23.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002018\u0026path-prefix\u003dzh",
       "iconKey": "C23.png"
@@ -800,7 +800,7 @@
     "upRecovery": "",
     "idNorm": "0024",
     "name": "漩之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C24.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002018\u0026path-prefix\u003dzh",
       "iconKey": "C24.png"
@@ -838,7 +838,7 @@
     "upRecovery": "",
     "idNorm": "0025",
     "name": "煉之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bb/C25.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002019\u0026path-prefix\u003dzh",
       "iconKey": "C25.png"
@@ -876,7 +876,7 @@
     "upRecovery": "",
     "idNorm": "0026",
     "name": "森之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e2/C26.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002019\u0026path-prefix\u003dzh",
       "iconKey": "C26.png"
@@ -914,7 +914,7 @@
     "upRecovery": "",
     "idNorm": "0027",
     "name": "耀之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C27.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002020\u0026path-prefix\u003dzh",
       "iconKey": "C27.png"
@@ -952,7 +952,7 @@
     "upRecovery": "",
     "idNorm": "0028",
     "name": "影之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ee/C28.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002020\u0026path-prefix\u003dzh",
       "iconKey": "C28.png"
@@ -985,7 +985,7 @@
     "upRecovery": "",
     "idNorm": "0029",
     "name": "祈之鐵壁龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d4/C29.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002021\u0026path-prefix\u003dzh",
       "iconKey": "C29.png"
@@ -1018,7 +1018,7 @@
     "upRecovery": "",
     "idNorm": "0030",
     "name": "抵之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3a/C30.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002021\u0026path-prefix\u003dzh",
       "iconKey": "C30.png"
@@ -1056,7 +1056,7 @@
     "upRecovery": "",
     "idNorm": "0031",
     "name": "攻之屏息龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/91/C155.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021450\u0026path-prefix\u003dzh",
       "iconKey": "C31.png"
@@ -1089,7 +1089,7 @@
     "upRecovery": "",
     "idNorm": "0032",
     "name": "連之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C32.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002021\u0026path-prefix\u003dzh",
       "iconKey": "C32.png"
@@ -1122,7 +1122,7 @@
     "upRecovery": "",
     "idNorm": "0033",
     "name": "祈之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/53/C33.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002022\u0026path-prefix\u003dzh",
       "iconKey": "C33.png"
@@ -1155,7 +1155,7 @@
     "upRecovery": "",
     "idNorm": "0034",
     "name": "連之鐵壁龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9e/C34.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002022\u0026path-prefix\u003dzh",
       "iconKey": "C34.png"
@@ -1183,7 +1183,7 @@
     "upRecovery": "",
     "idNorm": "0035",
     "name": "祈之狂暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/44/C35.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002022\u0026path-prefix\u003dzh",
       "iconKey": "C35.png"
@@ -1216,7 +1216,7 @@
     "upRecovery": "",
     "idNorm": "0036",
     "name": "連之王暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6d/C36.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002022\u0026path-prefix\u003dzh",
       "iconKey": "C36.png"
@@ -1249,7 +1249,7 @@
     "upRecovery": "",
     "idNorm": "0037",
     "name": "攻之獸暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4a/C37.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002023\u0026path-prefix\u003dzh",
       "iconKey": "C37.png"
@@ -1282,7 +1282,7 @@
     "upRecovery": "",
     "idNorm": "0038",
     "name": "連之神暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3f/C38.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002023\u0026path-prefix\u003dzh",
       "iconKey": "C38.png"
@@ -1315,7 +1315,7 @@
     "upRecovery": "",
     "idNorm": "0039",
     "name": "連之龍暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2f/C39.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002023\u0026path-prefix\u003dzh",
       "iconKey": "C39.png"
@@ -1348,7 +1348,7 @@
     "upRecovery": "",
     "idNorm": "0040",
     "name": "抵之妖暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b6/C40.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002023\u0026path-prefix\u003dzh",
       "iconKey": "C40.png"
@@ -1381,7 +1381,7 @@
     "upRecovery": "",
     "idNorm": "0041",
     "name": "攻之魔暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C41.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002109\u0026path-prefix\u003dzh",
       "iconKey": "C41.png"
@@ -1414,7 +1414,7 @@
     "upRecovery": "",
     "idNorm": "0042",
     "name": "漩之威嚇龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/62/C42.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002109\u0026path-prefix\u003dzh",
       "iconKey": "C42.png"
@@ -1447,7 +1447,7 @@
     "upRecovery": "",
     "idNorm": "0043",
     "name": "煉之威嚇龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b7/C43.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002110\u0026path-prefix\u003dzh",
       "iconKey": "C43.png"
@@ -1480,7 +1480,7 @@
     "upRecovery": "",
     "idNorm": "0044",
     "name": "森之威嚇龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/83/C44.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002110\u0026path-prefix\u003dzh",
       "iconKey": "C44.png"
@@ -1513,7 +1513,7 @@
     "upRecovery": "",
     "idNorm": "0045",
     "name": "耀之威嚇龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/87/C45.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002110\u0026path-prefix\u003dzh",
       "iconKey": "C45.png"
@@ -1546,7 +1546,7 @@
     "upRecovery": "",
     "idNorm": "0046",
     "name": "影之威嚇龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6f/C46.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002110\u0026path-prefix\u003dzh",
       "iconKey": "C46.png"
@@ -1584,7 +1584,7 @@
     "upRecovery": "",
     "idNorm": "0047",
     "name": "攻之原色龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1a/C47.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002111\u0026path-prefix\u003dzh",
       "iconKey": "C47.png"
@@ -1622,7 +1622,7 @@
     "upRecovery": "",
     "idNorm": "0048",
     "name": "攻之圖騰龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a9/C48.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002111\u0026path-prefix\u003dzh",
       "iconKey": "C48.png"
@@ -1660,7 +1660,7 @@
     "upRecovery": "",
     "idNorm": "0049",
     "name": "連之衝鋒龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/64/C49.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002111\u0026path-prefix\u003dzh",
       "iconKey": "C49.png"
@@ -1698,7 +1698,7 @@
     "upRecovery": "",
     "idNorm": "0050",
     "name": "攻之王暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C50.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002111\u0026path-prefix\u003dzh",
       "iconKey": "C50.png"
@@ -1736,7 +1736,7 @@
     "upRecovery": "",
     "idNorm": "0051",
     "name": "連之屏息龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0b/C51.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002112\u0026path-prefix\u003dzh",
       "iconKey": "C51.png"
@@ -1774,7 +1774,7 @@
     "upRecovery": "",
     "idNorm": "0052",
     "name": "漩之絕境龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/94/C52.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002112\u0026path-prefix\u003dzh",
       "iconKey": "C52.png"
@@ -1812,7 +1812,7 @@
     "upRecovery": "",
     "idNorm": "0053",
     "name": "煉之絕境龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a4/C53.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002112\u0026path-prefix\u003dzh",
       "iconKey": "C53.png"
@@ -1850,7 +1850,7 @@
     "upRecovery": "",
     "idNorm": "0054",
     "name": "森之絕境龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%B5%95%E5%A2%83%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C54.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002113\u0026path-prefix\u003dzh",
       "iconKey": "C54.png"
@@ -1888,7 +1888,7 @@
     "upRecovery": "",
     "idNorm": "0055",
     "name": "耀之鐵壁龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/03/C55.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002113\u0026path-prefix\u003dzh",
       "iconKey": "C55.png"
@@ -1926,7 +1926,7 @@
     "upRecovery": "",
     "idNorm": "0056",
     "name": "影之鐵壁龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9f/C56.png/revision/latest/scale-to-width-down/120?cb\u003d20150402002113\u0026path-prefix\u003dzh",
       "iconKey": "C56.png"
@@ -1964,7 +1964,7 @@
     "upRecovery": "",
     "idNorm": "0057",
     "name": "攻之狂暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C57.png/revision/latest/scale-to-width-down/120?cb\u003d20160111113601\u0026path-prefix\u003dzh",
       "iconKey": "C57.png"
@@ -1992,7 +1992,7 @@
     "upRecovery": "",
     "idNorm": "0058",
     "name": "虛之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/28/C58.png/revision/latest/scale-to-width-down/120?cb\u003d20150509160510\u0026path-prefix\u003dzh",
       "iconKey": "C58.png"
@@ -2025,7 +2025,7 @@
     "upRecovery": "",
     "idNorm": "0059",
     "name": "漩之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f3/C59.png/revision/latest/scale-to-width-down/120?cb\u003d20150524004449\u0026path-prefix\u003dzh",
       "iconKey": "C59.png"
@@ -2058,7 +2058,7 @@
     "upRecovery": "",
     "idNorm": "0060",
     "name": "煉之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/81/C60.png/revision/latest/scale-to-width-down/120?cb\u003d20150509142315\u0026path-prefix\u003dzh",
       "iconKey": "C60.png"
@@ -2091,7 +2091,7 @@
     "upRecovery": "",
     "idNorm": "0061",
     "name": "森之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/95/C61.png/revision/latest/scale-to-width-down/120?cb\u003d20150518183108\u0026path-prefix\u003dzh",
       "iconKey": "C61.png"
@@ -2124,7 +2124,7 @@
     "upRecovery": "",
     "idNorm": "0062",
     "name": "耀之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C62.png/revision/latest/scale-to-width-down/120?cb\u003d20150524012255\u0026path-prefix\u003dzh",
       "iconKey": "C62.png"
@@ -2157,7 +2157,7 @@
     "upRecovery": "",
     "idNorm": "0063",
     "name": "影之狂暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0b/C63.png/revision/latest/scale-to-width-down/120?cb\u003d20150530173548\u0026path-prefix\u003dzh",
       "iconKey": "C63.png"
@@ -2195,7 +2195,7 @@
     "upRecovery": "",
     "idNorm": "0064",
     "name": "連之越時龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/82/C64.png/revision/latest/scale-to-width-down/120?cb\u003d20150604163234\u0026path-prefix\u003dzh",
       "iconKey": "C64.png"
@@ -2228,7 +2228,7 @@
     "upRecovery": "",
     "idNorm": "0065",
     "name": "漩之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c9/C65.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072221\u0026path-prefix\u003dzh",
       "iconKey": "C65.png"
@@ -2261,7 +2261,7 @@
     "upRecovery": "",
     "idNorm": "0066",
     "name": "煉之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C66.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072529\u0026path-prefix\u003dzh",
       "iconKey": "C66.png"
@@ -2294,7 +2294,7 @@
     "upRecovery": "",
     "idNorm": "0067",
     "name": "森之屏息龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a7/C67.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072222\u0026path-prefix\u003dzh",
       "iconKey": "C67.png"
@@ -2327,7 +2327,7 @@
     "upRecovery": "",
     "idNorm": "0068",
     "name": "耀之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/17/C68.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072222\u0026path-prefix\u003dzh",
       "iconKey": "C68.png"
@@ -2360,7 +2360,7 @@
     "upRecovery": "",
     "idNorm": "0069",
     "name": "影之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/86/C69.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072222\u0026path-prefix\u003dzh",
       "iconKey": "C69.png"
@@ -2398,7 +2398,7 @@
     "upRecovery": "",
     "idNorm": "0070",
     "name": "漩之神療龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%A5%9E%E7%99%82%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%A5%9E%E7%99%82%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7f/C70.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072222\u0026path-prefix\u003dzh",
       "iconKey": "C70.png"
@@ -2436,7 +2436,7 @@
     "upRecovery": "",
     "idNorm": "0071",
     "name": "森之魔暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7f/C71.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072223\u0026path-prefix\u003dzh",
       "iconKey": "C71.png"
@@ -2474,7 +2474,7 @@
     "upRecovery": "",
     "idNorm": "0072",
     "name": "虛之獸暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/38/C72.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072223\u0026path-prefix\u003dzh",
       "iconKey": "C72.png"
@@ -2512,7 +2512,7 @@
     "upRecovery": "",
     "idNorm": "0073",
     "name": "虛之衝鋒龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e8/C73.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072223\u0026path-prefix\u003dzh",
       "iconKey": "C73.png"
@@ -2550,7 +2550,7 @@
     "upRecovery": "",
     "idNorm": "0074",
     "name": "煉之魔暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/be/C74.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072224\u0026path-prefix\u003dzh",
       "iconKey": "C74.png"
@@ -2578,7 +2578,7 @@
     "upRecovery": "",
     "idNorm": "0075",
     "name": "虛之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C75.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072224\u0026path-prefix\u003dzh",
       "iconKey": "C75.png"
@@ -2611,7 +2611,7 @@
     "upRecovery": "",
     "idNorm": "0076",
     "name": "森之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C76.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072224\u0026path-prefix\u003dzh",
       "iconKey": "C76.png"
@@ -2644,7 +2644,7 @@
     "upRecovery": "",
     "idNorm": "0077",
     "name": "漩之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/31/C77.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072225\u0026path-prefix\u003dzh",
       "iconKey": "C77.png"
@@ -2677,7 +2677,7 @@
     "upRecovery": "",
     "idNorm": "0078",
     "name": "耀之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/05/C78.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072225\u0026path-prefix\u003dzh",
       "iconKey": "C78.png"
@@ -2710,7 +2710,7 @@
     "upRecovery": "",
     "idNorm": "0079",
     "name": "煉之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bf/C79.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072225\u0026path-prefix\u003dzh",
       "iconKey": "C79.png"
@@ -2743,7 +2743,7 @@
     "upRecovery": "",
     "idNorm": "0080",
     "name": "影之狂暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dd/C80.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072225\u0026path-prefix\u003dzh",
       "iconKey": "C80.png"
@@ -2781,7 +2781,7 @@
     "upRecovery": "",
     "idNorm": "0081",
     "name": "漩之魔障龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E9%AD%94%E9%9A%9C%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E9%AD%94%E9%9A%9C%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/13/C81.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072226\u0026path-prefix\u003dzh",
       "iconKey": "C81.png"
@@ -2819,7 +2819,7 @@
     "upRecovery": "",
     "idNorm": "0082",
     "name": "祈之妖療龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/92/C82.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072226\u0026path-prefix\u003dzh",
       "iconKey": "C82.png"
@@ -2857,7 +2857,7 @@
     "upRecovery": "",
     "idNorm": "0083",
     "name": "耀之玲瓏龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/05/C83.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072226\u0026path-prefix\u003dzh",
       "iconKey": "C83.png"
@@ -2895,7 +2895,7 @@
     "upRecovery": "",
     "idNorm": "0084",
     "name": "連之越時龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/db/C84.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072240\u0026path-prefix\u003dzh",
       "iconKey": "C84.png"
@@ -2928,7 +2928,7 @@
     "upRecovery": "",
     "idNorm": "0085",
     "name": "漩之復生龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a6/C85.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025054\u0026path-prefix\u003dzh",
       "iconKey": "C85.png"
@@ -2961,7 +2961,7 @@
     "upRecovery": "",
     "idNorm": "0086",
     "name": "煉之復生龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3b/C86.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025054\u0026path-prefix\u003dzh",
       "iconKey": "C86.png"
@@ -2994,7 +2994,7 @@
     "upRecovery": "",
     "idNorm": "0087",
     "name": "森之復生龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/69/C87.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025055\u0026path-prefix\u003dzh",
       "iconKey": "C87.png"
@@ -3027,7 +3027,7 @@
     "upRecovery": "",
     "idNorm": "0088",
     "name": "耀之復生龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e4/C88.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025055\u0026path-prefix\u003dzh",
       "iconKey": "C88.png"
@@ -3060,7 +3060,7 @@
     "upRecovery": "",
     "idNorm": "0089",
     "name": "影之復生龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e7/C89.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025055\u0026path-prefix\u003dzh",
       "iconKey": "C89.png"
@@ -3098,7 +3098,7 @@
     "upRecovery": "",
     "idNorm": "0090",
     "name": "祈之龍療龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%A5%88%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%A5%88%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/87/C90.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025056\u0026path-prefix\u003dzh",
       "iconKey": "C90.png"
@@ -3136,7 +3136,7 @@
     "upRecovery": "",
     "idNorm": "0091",
     "name": "連之王療龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E7%99%82%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E7%99%82%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C91.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025056\u0026path-prefix\u003dzh",
       "iconKey": "C91.png"
@@ -3174,7 +3174,7 @@
     "upRecovery": "",
     "idNorm": "0092",
     "name": "煉之越時龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bb/C92.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025056\u0026path-prefix\u003dzh",
       "iconKey": "C92.png"
@@ -3212,7 +3212,7 @@
     "upRecovery": "",
     "idNorm": "0093",
     "name": "連之魔暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c4/C93.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025056\u0026path-prefix\u003dzh",
       "iconKey": "C93.png"
@@ -3250,7 +3250,7 @@
     "upRecovery": "",
     "idNorm": "0094",
     "name": "連之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/85/C94.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025057\u0026path-prefix\u003dzh",
       "iconKey": "C94.png"
@@ -3288,7 +3288,7 @@
     "upRecovery": "",
     "idNorm": "0095",
     "name": "攻之復生龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2e/C95.png/revision/latest/scale-to-width-down/120?cb\u003d20150827025057\u0026path-prefix\u003dzh",
       "iconKey": "C95.png"
@@ -3321,7 +3321,7 @@
     "upRecovery": "",
     "idNorm": "0096",
     "name": "漩之幻變龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/69/C96.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071630\u0026path-prefix\u003dzh",
       "iconKey": "C96.png"
@@ -3354,7 +3354,7 @@
     "upRecovery": "",
     "idNorm": "0097",
     "name": "煉之幻變龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/19/C97.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071553\u0026path-prefix\u003dzh",
       "iconKey": "C97.png"
@@ -3387,7 +3387,7 @@
     "upRecovery": "",
     "idNorm": "0098",
     "name": "森之幻變龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a1/C98.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071552\u0026path-prefix\u003dzh",
       "iconKey": "C98.png"
@@ -3420,7 +3420,7 @@
     "upRecovery": "",
     "idNorm": "0099",
     "name": "耀之幻變龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/73/C99.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071552\u0026path-prefix\u003dzh",
       "iconKey": "C99.png"
@@ -3453,7 +3453,7 @@
     "upRecovery": "",
     "idNorm": "0100",
     "name": "影之幻變龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c0/C100.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071630\u0026path-prefix\u003dzh",
       "iconKey": "C100.png"
@@ -3491,7 +3491,7 @@
     "upRecovery": "",
     "idNorm": "0101",
     "name": "煉之原色龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/78/C101.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071552\u0026path-prefix\u003dzh",
       "iconKey": "C101.png"
@@ -3529,7 +3529,7 @@
     "upRecovery": "",
     "idNorm": "0102",
     "name": "連之神療龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E7%99%82%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E7%99%82%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dd/C102.png/revision/latest/scale-to-width-down/120?cb\u003d20151006071551\u0026path-prefix\u003dzh",
       "iconKey": "C102.png"
@@ -3567,7 +3567,7 @@
     "upRecovery": "",
     "idNorm": "0103",
     "name": "攻之嗜血龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/68/C103.png/revision/latest/scale-to-width-down/120?cb\u003d20151120184032\u0026path-prefix\u003dzh",
       "iconKey": "C103.png"
@@ -3605,7 +3605,7 @@
     "upRecovery": "",
     "idNorm": "0104",
     "name": "耀之嗜血龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dc/C104.png/revision/latest/scale-to-width-down/120?cb\u003d20151120184032\u0026path-prefix\u003dzh",
       "iconKey": "C104.png"
@@ -3643,7 +3643,7 @@
     "upRecovery": "",
     "idNorm": "0105",
     "name": "影之嗜血龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7b/C105.png/revision/latest/scale-to-width-down/120?cb\u003d20151120184033\u0026path-prefix\u003dzh",
       "iconKey": "C105.png"
@@ -3681,7 +3681,7 @@
     "upRecovery": "",
     "idNorm": "0106",
     "name": "森之龍療龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e3/C106.png/revision/latest/scale-to-width-down/120?cb\u003d20151120184033\u0026path-prefix\u003dzh",
       "iconKey": "C106.png"
@@ -3719,7 +3719,7 @@
     "upRecovery": "",
     "idNorm": "0107",
     "name": "連之龍療龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E7%99%82%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7e/C107.png/revision/latest/scale-to-width-down/120?cb\u003d20151120184033\u0026path-prefix\u003dzh",
       "iconKey": "C107.png"
@@ -3757,7 +3757,7 @@
     "upRecovery": "",
     "idNorm": "0108",
     "name": "虛之魔暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/76/C108.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235335\u0026path-prefix\u003dzh",
       "iconKey": "C108.png"
@@ -3795,7 +3795,7 @@
     "upRecovery": "",
     "idNorm": "0109",
     "name": "攻之神暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ab/C109.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235143\u0026path-prefix\u003dzh",
       "iconKey": "C109.png"
@@ -3833,7 +3833,7 @@
     "upRecovery": "",
     "idNorm": "0110",
     "name": "連之直流龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2d/C110.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235144\u0026path-prefix\u003dzh",
       "iconKey": "C110.png"
@@ -3871,7 +3871,7 @@
     "upRecovery": "",
     "idNorm": "0111",
     "name": "連之王暴龍玉",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%8E%89",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%8E%89",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b7/C111.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235144\u0026path-prefix\u003dzh",
       "iconKey": "C111.png"
@@ -3899,7 +3899,7 @@
     "upRecovery": "",
     "idNorm": "0112",
     "name": "虛之狂暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C112.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235144\u0026path-prefix\u003dzh",
       "iconKey": "C112.png"
@@ -3932,7 +3932,7 @@
     "upRecovery": "",
     "idNorm": "0113",
     "name": "漩之威嚇龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/13/C113.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235144\u0026path-prefix\u003dzh",
       "iconKey": "C113.png"
@@ -3965,7 +3965,7 @@
     "upRecovery": "",
     "idNorm": "0114",
     "name": "煉之威嚇龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C114.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235145\u0026path-prefix\u003dzh",
       "iconKey": "C114.png"
@@ -3998,7 +3998,7 @@
     "upRecovery": "",
     "idNorm": "0115",
     "name": "森之威嚇龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C115.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235145\u0026path-prefix\u003dzh",
       "iconKey": "C115.png"
@@ -4031,7 +4031,7 @@
     "upRecovery": "",
     "idNorm": "0116",
     "name": "耀之威嚇龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/32/C116.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235145\u0026path-prefix\u003dzh",
       "iconKey": "C116.png"
@@ -4064,7 +4064,7 @@
     "upRecovery": "",
     "idNorm": "0117",
     "name": "影之威嚇龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C117.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235146\u0026path-prefix\u003dzh",
       "iconKey": "C117.png"
@@ -4102,7 +4102,7 @@
     "upRecovery": "",
     "idNorm": "0118",
     "name": "連之玲瓏龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c9/C118.png/revision/latest/scale-to-width-down/120?cb\u003d20160125235146\u0026path-prefix\u003dzh",
       "iconKey": "C118.png"
@@ -4140,7 +4140,7 @@
     "upRecovery": "",
     "idNorm": "0119",
     "name": "連之屏息龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/76/C119.png/revision/latest/scale-to-width-down/120?cb\u003d20160316115829\u0026path-prefix\u003dzh",
       "iconKey": "C119.png"
@@ -4178,7 +4178,7 @@
     "upRecovery": "",
     "idNorm": "0120",
     "name": "虛之魔暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C120.png/revision/latest/scale-to-width-down/120?cb\u003d20160401060756\u0026path-prefix\u003dzh",
       "iconKey": "C120.png"
@@ -4216,7 +4216,7 @@
     "upRecovery": "",
     "idNorm": "0121",
     "name": "影之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C121.png/revision/latest/scale-to-width-down/120?cb\u003d20160401060757\u0026path-prefix\u003dzh",
       "iconKey": "C121.png"
@@ -4254,7 +4254,7 @@
     "upRecovery": "",
     "idNorm": "0122",
     "name": "漩之圖騰龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d1/C122.png/revision/latest/scale-to-width-down/120?cb\u003d20160401060757\u0026path-prefix\u003dzh",
       "iconKey": "C122.png"
@@ -4292,7 +4292,7 @@
     "upRecovery": "",
     "idNorm": "0123",
     "name": "攻之魔暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3d/C123.png/revision/latest/scale-to-width-down/120?cb\u003d20160401060834\u0026path-prefix\u003dzh",
       "iconKey": "C123.png"
@@ -4330,7 +4330,7 @@
     "upRecovery": "",
     "idNorm": "0124",
     "name": "森之狂暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/83/C124.png/revision/latest/scale-to-width-down/120?cb\u003d20160503181100\u0026path-prefix\u003dzh",
       "iconKey": "C124.png"
@@ -4368,7 +4368,7 @@
     "upRecovery": "",
     "idNorm": "0125",
     "name": "煉之狂暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/26/C125.png/revision/latest/scale-to-width-down/120?cb\u003d20160503181100\u0026path-prefix\u003dzh",
       "iconKey": "C125.png"
@@ -4406,7 +4406,7 @@
     "upRecovery": "",
     "idNorm": "0126",
     "name": "耀之威嚇龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/13/C126.png/revision/latest/scale-to-width-down/120?cb\u003d20160503181101\u0026path-prefix\u003dzh",
       "iconKey": "C126.png"
@@ -4444,7 +4444,7 @@
     "upRecovery": "",
     "idNorm": "0127",
     "name": "耀之圖騰龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a7/C127.png/revision/latest/scale-to-width-down/120?cb\u003d20160627210208\u0026path-prefix\u003dzh",
       "iconKey": "C127.png"
@@ -4482,7 +4482,7 @@
     "upRecovery": "",
     "idNorm": "0128",
     "name": "煉之加冕龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%8A%A0%E5%86%95%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%8A%A0%E5%86%95%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1c/C128.png/revision/latest/scale-to-width-down/120?cb\u003d20160627210209\u0026path-prefix\u003dzh",
       "iconKey": "C128.png"
@@ -4520,7 +4520,7 @@
     "upRecovery": "",
     "idNorm": "0129",
     "name": "森之加冕龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%8A%A0%E5%86%95%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%8A%A0%E5%86%95%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C129.png/revision/latest/scale-to-width-down/120?cb\u003d20160627210210\u0026path-prefix\u003dzh",
       "iconKey": "C129.png"
@@ -4558,7 +4558,7 @@
     "upRecovery": "",
     "idNorm": "0130",
     "name": "虛之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bb/C130.png/revision/latest/scale-to-width-down/120?cb\u003d20160808142249\u0026path-prefix\u003dzh",
       "iconKey": "C130.png"
@@ -4596,7 +4596,7 @@
     "upRecovery": "",
     "idNorm": "0131",
     "name": "漩之破甲龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%A0%B4%E7%94%B2%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%A0%B4%E7%94%B2%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c6/C131.png/revision/latest/scale-to-width-down/120?cb\u003d20160808142250\u0026path-prefix\u003dzh",
       "iconKey": "C131.png"
@@ -4634,7 +4634,7 @@
     "upRecovery": "",
     "idNorm": "0132",
     "name": "煉之狂暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C132.png/revision/latest/scale-to-width-down/120?cb\u003d20160808142250\u0026path-prefix\u003dzh",
       "iconKey": "C132.png"
@@ -4672,7 +4672,7 @@
     "upRecovery": "",
     "idNorm": "0133",
     "name": "虛之妖療龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6c/C133.png/revision/latest/scale-to-width-down/120?cb\u003d20160808142251\u0026path-prefix\u003dzh",
       "iconKey": "C133.png"
@@ -4710,7 +4710,7 @@
     "upRecovery": "",
     "idNorm": "0134",
     "name": "連之神盾龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E7%9B%BE%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E7%9B%BE%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ae/C134.png/revision/latest/scale-to-width-down/120?cb\u003d20160808142251\u0026path-prefix\u003dzh",
       "iconKey": "C134.png"
@@ -4748,7 +4748,7 @@
     "upRecovery": "",
     "idNorm": "0135",
     "name": "虛之越時龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/79/C135.png/revision/latest/scale-to-width-down/120?cb\u003d20160919202548\u0026path-prefix\u003dzh",
       "iconKey": "C135.png"
@@ -4786,7 +4786,7 @@
     "upRecovery": "",
     "idNorm": "0136",
     "name": "虛之圖騰龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%9C%96%E9%A8%B0%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/05/C136.png/revision/latest/scale-to-width-down/120?cb\u003d20160919202557\u0026path-prefix\u003dzh",
       "iconKey": "C136.png"
@@ -4824,7 +4824,7 @@
     "upRecovery": "",
     "idNorm": "0137",
     "name": "攻之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C137.png/revision/latest/scale-to-width-down/120?cb\u003d20160919202548\u0026path-prefix\u003dzh",
       "iconKey": "C137.png"
@@ -4862,7 +4862,7 @@
     "upRecovery": "",
     "idNorm": "0138",
     "name": "影之王暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/26/C138.png/revision/latest/scale-to-width-down/120?cb\u003d20160919202549\u0026path-prefix\u003dzh",
       "iconKey": "C138.png"
@@ -4900,7 +4900,7 @@
     "upRecovery": "",
     "idNorm": "0139",
     "name": "森之玲瓏龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/90/C139.png/revision/latest/scale-to-width-down/120?cb\u003d20160919202549\u0026path-prefix\u003dzh",
       "iconKey": "C139.png"
@@ -4938,7 +4938,7 @@
     "upRecovery": "",
     "idNorm": "0140",
     "name": "影之衝鋒龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E8%A1%9D%E9%8B%92%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C140.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224839\u0026path-prefix\u003dzh",
       "iconKey": "C140.png"
@@ -4976,7 +4976,7 @@
     "upRecovery": "",
     "idNorm": "0141",
     "name": "森之魔暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ec/C141.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224840\u0026path-prefix\u003dzh",
       "iconKey": "C141.png"
@@ -5014,7 +5014,7 @@
     "upRecovery": "",
     "idNorm": "0142",
     "name": "耀之王暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/07/C142.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224840\u0026path-prefix\u003dzh",
       "iconKey": "C142.png"
@@ -5052,7 +5052,7 @@
     "upRecovery": "",
     "idNorm": "0143",
     "name": "虛之妖暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1e/C143.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224841\u0026path-prefix\u003dzh",
       "iconKey": "C143.png"
@@ -5090,7 +5090,7 @@
     "upRecovery": "",
     "idNorm": "0144",
     "name": "攻之屏息龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/eb/C144.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224842\u0026path-prefix\u003dzh",
       "iconKey": "C144.png"
@@ -5128,7 +5128,7 @@
     "upRecovery": "",
     "idNorm": "0145",
     "name": "煉之魔暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/66/C145.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224842\u0026path-prefix\u003dzh",
       "iconKey": "C145.png"
@@ -5166,7 +5166,7 @@
     "upRecovery": "",
     "idNorm": "0146",
     "name": "影之直流龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/74/C146.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224843\u0026path-prefix\u003dzh",
       "iconKey": "C146.png"
@@ -5204,7 +5204,7 @@
     "upRecovery": "",
     "idNorm": "0147",
     "name": "攻之狂暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0d/C147.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224856\u0026path-prefix\u003dzh",
       "iconKey": "C147.png"
@@ -5242,7 +5242,7 @@
     "upRecovery": "",
     "idNorm": "0148",
     "name": "虛之復生龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%BE%A9%E7%94%9F%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/df/C148.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224856\u0026path-prefix\u003dzh",
       "iconKey": "C148.png"
@@ -5280,7 +5280,7 @@
     "upRecovery": "",
     "idNorm": "0149",
     "name": "連之越時龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8d/C149.png/revision/latest/scale-to-width-down/120?cb\u003d20170109224843\u0026path-prefix\u003dzh",
       "iconKey": "C149.png"
@@ -5318,7 +5318,7 @@
     "upRecovery": "",
     "idNorm": "0150",
     "name": "漩之邃矚龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C150.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021525\u0026path-prefix\u003dzh",
       "iconKey": "C150.png"
@@ -5356,7 +5356,7 @@
     "upRecovery": "",
     "idNorm": "0151",
     "name": "煉之邃矚龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7b/C151.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021526\u0026path-prefix\u003dzh",
       "iconKey": "C151.png"
@@ -5394,7 +5394,7 @@
     "upRecovery": "",
     "idNorm": "0152",
     "name": "森之邃矚龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b7/C152.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021526\u0026path-prefix\u003dzh",
       "iconKey": "C152.png"
@@ -5432,7 +5432,7 @@
     "upRecovery": "",
     "idNorm": "0153",
     "name": "耀之靈巧龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C153.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021449\u0026path-prefix\u003dzh",
       "iconKey": "C153.png"
@@ -5470,7 +5470,7 @@
     "upRecovery": "",
     "idNorm": "0154",
     "name": "影之靈巧龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c8/C154.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021450\u0026path-prefix\u003dzh",
       "iconKey": "C154.png"
@@ -5508,7 +5508,7 @@
     "upRecovery": "",
     "idNorm": "0155",
     "name": "攻之屏息龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/91/C155.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021450\u0026path-prefix\u003dzh",
       "iconKey": "C155.png"
@@ -5546,7 +5546,7 @@
     "upRecovery": "",
     "idNorm": "0156",
     "name": "連之神暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6e/C156.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021526\u0026path-prefix\u003dzh",
       "iconKey": "C156.png"
@@ -5584,7 +5584,7 @@
     "upRecovery": "",
     "idNorm": "0157",
     "name": "攻之魔暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/37/C157.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021451\u0026path-prefix\u003dzh",
       "iconKey": "C157.png"
@@ -5622,7 +5622,7 @@
     "upRecovery": "",
     "idNorm": "0158",
     "name": "虛之妖療龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E7%99%82%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a9/C158.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021451\u0026path-prefix\u003dzh",
       "iconKey": "C158.png"
@@ -5660,7 +5660,7 @@
     "upRecovery": "",
     "idNorm": "0159",
     "name": "連之獸暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0f/C159.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021527\u0026path-prefix\u003dzh",
       "iconKey": "C159.png"
@@ -5698,7 +5698,7 @@
     "upRecovery": "",
     "idNorm": "0160",
     "name": "虛之龍暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3c/C160.png/revision/latest/scale-to-width-down/120?cb\u003d20170207021451\u0026path-prefix\u003dzh",
       "iconKey": "C160.png"
@@ -5736,7 +5736,7 @@
     "upRecovery": "",
     "idNorm": "0161",
     "name": "煉之王暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/df/C161.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222827\u0026path-prefix\u003dzh",
       "iconKey": "C161.png"
@@ -5774,7 +5774,7 @@
     "upRecovery": "",
     "idNorm": "0162",
     "name": "虛之屏息龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cd/C162.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222840\u0026path-prefix\u003dzh",
       "iconKey": "C162.png"
@@ -5812,7 +5812,7 @@
     "upRecovery": "",
     "idNorm": "0163",
     "name": "連之越時龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C163.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222827\u0026path-prefix\u003dzh",
       "iconKey": "C163.png"
@@ -5850,7 +5850,7 @@
     "upRecovery": "",
     "idNorm": "0164",
     "name": "攻之魔暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C164.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222828\u0026path-prefix\u003dzh",
       "iconKey": "C164.png"
@@ -5888,7 +5888,7 @@
     "upRecovery": "",
     "idNorm": "0165",
     "name": "森之神暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/90/C165.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222828\u0026path-prefix\u003dzh",
       "iconKey": "C165.png"
@@ -5926,7 +5926,7 @@
     "upRecovery": "",
     "idNorm": "0166",
     "name": "攻之越時龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a1/C166.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222829\u0026path-prefix\u003dzh",
       "iconKey": "C166.png"
@@ -5964,7 +5964,7 @@
     "upRecovery": "",
     "idNorm": "0167",
     "name": "耀之龍暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e2/C167.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222829\u0026path-prefix\u003dzh",
       "iconKey": "C167.png"
@@ -6002,7 +6002,7 @@
     "upRecovery": "",
     "idNorm": "0168",
     "name": "連之邃矚龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%82%83%E7%9F%9A%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/87/C168.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222829\u0026path-prefix\u003dzh",
       "iconKey": "C168.png"
@@ -6040,7 +6040,7 @@
     "upRecovery": "",
     "idNorm": "0169",
     "name": "影之鐵壁龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/66/C169.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222830\u0026path-prefix\u003dzh",
       "iconKey": "C169.png"
@@ -6078,7 +6078,7 @@
     "upRecovery": "",
     "idNorm": "0170",
     "name": "漩之獸暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/47/C170.png/revision/latest/scale-to-width-down/120?cb\u003d20170508222830\u0026path-prefix\u003dzh",
       "iconKey": "C170.png"
@@ -6106,7 +6106,7 @@
     "upRecovery": "",
     "idNorm": "0171",
     "name": "虛之狂暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/70/C171.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054233\u0026path-prefix\u003dzh",
       "iconKey": "C171.png"
@@ -6139,7 +6139,7 @@
     "upRecovery": "",
     "idNorm": "0172",
     "name": "攻之鐵壁龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C172.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054233\u0026path-prefix\u003dzh",
       "iconKey": "C172.png"
@@ -6172,7 +6172,7 @@
     "upRecovery": "",
     "idNorm": "0173",
     "name": "虛之屏息龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/30/C173.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054247\u0026path-prefix\u003dzh",
       "iconKey": "C173.png"
@@ -6210,7 +6210,7 @@
     "upRecovery": "",
     "idNorm": "0174",
     "name": "攻之神暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0c/C174.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054234\u0026path-prefix\u003dzh",
       "iconKey": "C174.png"
@@ -6248,7 +6248,7 @@
     "upRecovery": "",
     "idNorm": "0175",
     "name": "漩之狂暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/11/C175.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054234\u0026path-prefix\u003dzh",
       "iconKey": "C175.png"
@@ -6281,7 +6281,7 @@
     "upRecovery": "",
     "idNorm": "0176",
     "name": "連之炮擊龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/70/C176.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054248\u0026path-prefix\u003dzh",
       "iconKey": "C176.png"
@@ -6319,7 +6319,7 @@
     "upRecovery": "",
     "idNorm": "0177",
     "name": "耀之狂暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C177.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054235\u0026path-prefix\u003dzh",
       "iconKey": "C177.png"
@@ -6357,7 +6357,7 @@
     "upRecovery": "",
     "idNorm": "0178",
     "name": "連之魔暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/83/C178.png/revision/latest/scale-to-width-down/120?cb\u003d20170604054235\u0026path-prefix\u003dzh",
       "iconKey": "C178.png"
@@ -6385,7 +6385,7 @@
     "upRecovery": "",
     "idNorm": "0179",
     "name": "攻之玲瓏龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/64/C179.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200924\u0026path-prefix\u003dzh",
       "iconKey": "C179.png"
@@ -6413,7 +6413,7 @@
     "upRecovery": "",
     "idNorm": "0180",
     "name": "連之王暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C180.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200925\u0026path-prefix\u003dzh",
       "iconKey": "C180.png"
@@ -6446,7 +6446,7 @@
     "upRecovery": "",
     "idNorm": "0181",
     "name": "漩之越時龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C181.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200925\u0026path-prefix\u003dzh",
       "iconKey": "C181.png"
@@ -6479,7 +6479,7 @@
     "upRecovery": "",
     "idNorm": "0182",
     "name": "煉之越時龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c1/C182.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200925\u0026path-prefix\u003dzh",
       "iconKey": "C182.png"
@@ -6512,7 +6512,7 @@
     "upRecovery": "",
     "idNorm": "0183",
     "name": "森之越時龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a6/C183.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200926\u0026path-prefix\u003dzh",
       "iconKey": "C183.png"
@@ -6550,7 +6550,7 @@
     "upRecovery": "",
     "idNorm": "0184",
     "name": "影之王暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f7/C184.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200642\u0026path-prefix\u003dzh",
       "iconKey": "C184.png"
@@ -6588,7 +6588,7 @@
     "upRecovery": "",
     "idNorm": "0185",
     "name": "攻之魔暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e8/C185.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200643\u0026path-prefix\u003dzh",
       "iconKey": "C185.png"
@@ -6626,7 +6626,7 @@
     "upRecovery": "",
     "idNorm": "0186",
     "name": "耀之直流龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3b/C186.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200926\u0026path-prefix\u003dzh",
       "iconKey": "C186.png"
@@ -6664,7 +6664,7 @@
     "upRecovery": "",
     "idNorm": "0187",
     "name": "連之幻變龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6a/C187.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200644\u0026path-prefix\u003dzh",
       "iconKey": "C187.png"
@@ -6702,7 +6702,7 @@
     "upRecovery": "",
     "idNorm": "0188",
     "name": "連之神暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f9/C188.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200645\u0026path-prefix\u003dzh",
       "iconKey": "C188.png"
@@ -6740,7 +6740,7 @@
     "upRecovery": "",
     "idNorm": "0189",
     "name": "虛之鐵壁龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1f/C189.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200645\u0026path-prefix\u003dzh",
       "iconKey": "C189.png"
@@ -6778,7 +6778,7 @@
     "upRecovery": "",
     "idNorm": "0190",
     "name": "漩之王暴龍刃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%88%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/ba/C190.png/revision/latest/scale-to-width-down/120?cb\u003d20170620200645\u0026path-prefix\u003dzh",
       "iconKey": "C190.png"
@@ -6816,7 +6816,7 @@
     "upRecovery": "",
     "idNorm": "0191",
     "name": "漩之幻變龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/67/C191.png/revision/latest/scale-to-width-down/120?cb\u003d20171027100958\u0026path-prefix\u003dzh",
       "iconKey": "C191.png"
@@ -6854,7 +6854,7 @@
     "upRecovery": "",
     "idNorm": "0192",
     "name": "漩之直流龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/76/C192.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101020\u0026path-prefix\u003dzh",
       "iconKey": "C192.png"
@@ -6892,7 +6892,7 @@
     "upRecovery": "",
     "idNorm": "0193",
     "name": "煉之狂暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/35/C193.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101020\u0026path-prefix\u003dzh",
       "iconKey": "C193.png"
@@ -6930,7 +6930,7 @@
     "upRecovery": "",
     "idNorm": "0194",
     "name": "煉之直流龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d8/C194.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101020\u0026path-prefix\u003dzh",
       "iconKey": "C194.png"
@@ -6968,7 +6968,7 @@
     "upRecovery": "",
     "idNorm": "0195",
     "name": "森之幻變龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/20/C195.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101021\u0026path-prefix\u003dzh",
       "iconKey": "C195.png"
@@ -7006,7 +7006,7 @@
     "upRecovery": "",
     "idNorm": "0196",
     "name": "森之直流龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e1/C196.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101021\u0026path-prefix\u003dzh",
       "iconKey": "C196.png"
@@ -7044,7 +7044,7 @@
     "upRecovery": "",
     "idNorm": "0197",
     "name": "耀之幻變龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1f/C197.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101021\u0026path-prefix\u003dzh",
       "iconKey": "C197.png"
@@ -7082,7 +7082,7 @@
     "upRecovery": "",
     "idNorm": "0198",
     "name": "耀之直流龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C198.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101022\u0026path-prefix\u003dzh",
       "iconKey": "C198.png"
@@ -7120,7 +7120,7 @@
     "upRecovery": "",
     "idNorm": "0199",
     "name": "影之越時龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5a/C199.png/revision/latest/scale-to-width-down/120?cb\u003d20171027100959\u0026path-prefix\u003dzh",
       "iconKey": "C199.png"
@@ -7158,7 +7158,7 @@
     "upRecovery": "",
     "idNorm": "0200",
     "name": "影之直流龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/18/C200.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101022\u0026path-prefix\u003dzh",
       "iconKey": "C200.png"
@@ -7196,7 +7196,7 @@
     "upRecovery": "",
     "idNorm": "0201",
     "name": "虛之原色龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%8E%9F%E8%89%B2%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/13/C201.png/revision/latest/scale-to-width-down/120?cb\u003d20171027100959\u0026path-prefix\u003dzh",
       "iconKey": "C201.png"
@@ -7234,7 +7234,7 @@
     "upRecovery": "",
     "idNorm": "0202",
     "name": "攻之獸暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/99/C202.png/revision/latest/scale-to-width-down/120?cb\u003d20171027100959\u0026path-prefix\u003dzh",
       "iconKey": "C202.png"
@@ -7272,7 +7272,7 @@
     "upRecovery": "",
     "idNorm": "0203",
     "name": "虛之妖暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/54/C203.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101000\u0026path-prefix\u003dzh",
       "iconKey": "C203.png"
@@ -7310,7 +7310,7 @@
     "upRecovery": "",
     "idNorm": "0204",
     "name": "虛之龍暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/63/C204.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101000\u0026path-prefix\u003dzh",
       "iconKey": "C204.png"
@@ -7348,7 +7348,7 @@
     "upRecovery": "",
     "idNorm": "0205",
     "name": "虛之越時龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dd/C205.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101001\u0026path-prefix\u003dzh",
       "iconKey": "C205.png"
@@ -7386,7 +7386,7 @@
     "upRecovery": "",
     "idNorm": "0206",
     "name": "虛之直流龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e1/C206.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101001\u0026path-prefix\u003dzh",
       "iconKey": "C206.png"
@@ -7424,7 +7424,7 @@
     "upRecovery": "",
     "idNorm": "0207",
     "name": "連之妖暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ae/C207.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101001\u0026path-prefix\u003dzh",
       "iconKey": "C207.png"
@@ -7462,7 +7462,7 @@
     "upRecovery": "",
     "idNorm": "0208",
     "name": "攻之妖暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e5/C208.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101002\u0026path-prefix\u003dzh",
       "iconKey": "C208.png"
@@ -7500,7 +7500,7 @@
     "upRecovery": "",
     "idNorm": "0209",
     "name": "抵之越時龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%8A%B5%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%8A%B5%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C209.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101022\u0026path-prefix\u003dzh",
       "iconKey": "C209.png"
@@ -7538,7 +7538,7 @@
     "upRecovery": "",
     "idNorm": "0210",
     "name": "虛之越時龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/da/C210.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101002\u0026path-prefix\u003dzh",
       "iconKey": "C210.png"
@@ -7576,7 +7576,7 @@
     "upRecovery": "",
     "idNorm": "0211",
     "name": "虛之妖暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/51/C211.png/revision/latest/scale-to-width-down/120?cb\u003d20171027101014\u0026path-prefix\u003dzh",
       "iconKey": "C211.png"
@@ -7614,7 +7614,7 @@
     "upRecovery": "",
     "idNorm": "0212",
     "name": "漩之重炮龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3f/C212.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054520\u0026path-prefix\u003dzh",
       "iconKey": "C212.png"
@@ -7652,7 +7652,7 @@
     "upRecovery": "",
     "idNorm": "0213",
     "name": "漩之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bb/C213.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054534\u0026path-prefix\u003dzh",
       "iconKey": "C213.png"
@@ -7690,7 +7690,7 @@
     "upRecovery": "",
     "idNorm": "0214",
     "name": "漩之幻變龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/80/C214.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054535\u0026path-prefix\u003dzh",
       "iconKey": "C214.png"
@@ -7728,7 +7728,7 @@
     "upRecovery": "",
     "idNorm": "0215",
     "name": "漩之狂暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c9/C215.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054536\u0026path-prefix\u003dzh",
       "iconKey": "C215.png"
@@ -7766,7 +7766,7 @@
     "upRecovery": "",
     "idNorm": "0216",
     "name": "漩之嗜血龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/40/C216.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054521\u0026path-prefix\u003dzh",
       "iconKey": "C216.png"
@@ -7804,7 +7804,7 @@
     "upRecovery": "",
     "idNorm": "0217",
     "name": "煉之嗜血龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fc/C217.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054522\u0026path-prefix\u003dzh",
       "iconKey": "C217.png"
@@ -7842,7 +7842,7 @@
     "upRecovery": "",
     "idNorm": "0218",
     "name": "煉之重炮龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4c/C218.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054522\u0026path-prefix\u003dzh",
       "iconKey": "C218.png"
@@ -7880,7 +7880,7 @@
     "upRecovery": "",
     "idNorm": "0219",
     "name": "煉之幻變龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/51/C219.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054536\u0026path-prefix\u003dzh",
       "iconKey": "C219.png"
@@ -7918,7 +7918,7 @@
     "upRecovery": "",
     "idNorm": "0220",
     "name": "煉之幻變龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B9%BB%E8%AE%8A%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d9/C220.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054537\u0026path-prefix\u003dzh",
       "iconKey": "C220.png"
@@ -7956,7 +7956,7 @@
     "upRecovery": "",
     "idNorm": "0221",
     "name": "煉之炮擊龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C221.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054537\u0026path-prefix\u003dzh",
       "iconKey": "C221.png"
@@ -7994,7 +7994,7 @@
     "upRecovery": "",
     "idNorm": "0222",
     "name": "森之狂暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/89/C222.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054538\u0026path-prefix\u003dzh",
       "iconKey": "C222.png"
@@ -8032,7 +8032,7 @@
     "upRecovery": "",
     "idNorm": "0223",
     "name": "森之嗜血龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/27/C223.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054523\u0026path-prefix\u003dzh",
       "iconKey": "C223.png"
@@ -8070,7 +8070,7 @@
     "upRecovery": "",
     "idNorm": "0224",
     "name": "森之重炮龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c4/C224.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054523\u0026path-prefix\u003dzh",
       "iconKey": "C224.png"
@@ -8103,7 +8103,7 @@
     "upRecovery": "",
     "idNorm": "0225",
     "name": "森之屏息龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a7/C67.png/revision/latest/scale-to-width-down/120?cb\u003d20150721072222\u0026path-prefix\u003dzh",
       "iconKey": "C225.png"
@@ -8141,7 +8141,7 @@
     "upRecovery": "",
     "idNorm": "0226",
     "name": "森之鐵壁龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/59/C226.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054539\u0026path-prefix\u003dzh",
       "iconKey": "C226.png"
@@ -8179,7 +8179,7 @@
     "upRecovery": "",
     "idNorm": "0227",
     "name": "耀之鐵壁龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%90%B5%E5%A3%81%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d0/C227.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054540\u0026path-prefix\u003dzh",
       "iconKey": "C227.png"
@@ -8217,7 +8217,7 @@
     "upRecovery": "",
     "idNorm": "0228",
     "name": "耀之炮擊龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C228.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054540\u0026path-prefix\u003dzh",
       "iconKey": "C228.png"
@@ -8255,7 +8255,7 @@
     "upRecovery": "",
     "idNorm": "0229",
     "name": "耀之嗜血龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%97%9C%E8%A1%80%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/52/C229.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054524\u0026path-prefix\u003dzh",
       "iconKey": "C229.png"
@@ -8293,7 +8293,7 @@
     "upRecovery": "",
     "idNorm": "0230",
     "name": "耀之重炮龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7e/C230.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054525\u0026path-prefix\u003dzh",
       "iconKey": "C230.png"
@@ -8331,7 +8331,7 @@
     "upRecovery": "",
     "idNorm": "0231",
     "name": "耀之屏息龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bc/C231.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054541\u0026path-prefix\u003dzh",
       "iconKey": "C231.png"
@@ -8369,7 +8369,7 @@
     "upRecovery": "",
     "idNorm": "0232",
     "name": "影之屏息龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ae/C232.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054611\u0026path-prefix\u003dzh",
       "iconKey": "C232.png"
@@ -8407,7 +8407,7 @@
     "upRecovery": "",
     "idNorm": "0233",
     "name": "影之屏息龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3a/C233.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054612\u0026path-prefix\u003dzh",
       "iconKey": "C233.png"
@@ -8445,7 +8445,7 @@
     "upRecovery": "",
     "idNorm": "0234",
     "name": "影之炮擊龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C234.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054613\u0026path-prefix\u003dzh",
       "iconKey": "C234.png"
@@ -8483,7 +8483,7 @@
     "upRecovery": "",
     "idNorm": "0235",
     "name": "影之破甲龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%A0%B4%E7%94%B2%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%A0%B4%E7%94%B2%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8b/C235.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054613\u0026path-prefix\u003dzh",
       "iconKey": "C235.png"
@@ -8521,7 +8521,7 @@
     "upRecovery": "",
     "idNorm": "0236",
     "name": "影之重炮龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E9%87%8D%E7%82%AE%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2c/C236.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054546\u0026path-prefix\u003dzh",
       "iconKey": "C236.png"
@@ -8549,7 +8549,7 @@
     "upRecovery": "",
     "idNorm": "0237",
     "name": "攻之機暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C237.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054547\u0026path-prefix\u003dzh",
       "iconKey": "C237.png"
@@ -8582,7 +8582,7 @@
     "upRecovery": "",
     "idNorm": "0238",
     "name": "連之威嚇龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cb/C238.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054547\u0026path-prefix\u003dzh",
       "iconKey": "C238.png"
@@ -8615,7 +8615,7 @@
     "upRecovery": "",
     "idNorm": "0239",
     "name": "連之狂暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C239.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054614\u0026path-prefix\u003dzh",
       "iconKey": "C239.png"
@@ -8653,7 +8653,7 @@
     "upRecovery": "",
     "idNorm": "0240",
     "name": "虛之機暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C240.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054548\u0026path-prefix\u003dzh",
       "iconKey": "C240.png"
@@ -8691,7 +8691,7 @@
     "upRecovery": "",
     "idNorm": "0241",
     "name": "攻之機暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/75/C241.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054549\u0026path-prefix\u003dzh",
       "iconKey": "C241.png"
@@ -8729,7 +8729,7 @@
     "upRecovery": "",
     "idNorm": "0242",
     "name": "連之機暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0a/C242.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054549\u0026path-prefix\u003dzh",
       "iconKey": "C242.png"
@@ -8767,7 +8767,7 @@
     "upRecovery": "",
     "idNorm": "0243",
     "name": "虛之機暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/69/C243.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054550\u0026path-prefix\u003dzh",
       "iconKey": "C243.png"
@@ -8805,7 +8805,7 @@
     "upRecovery": "",
     "idNorm": "0244",
     "name": "攻之機暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b8/C244.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054550\u0026path-prefix\u003dzh",
       "iconKey": "C244.png"
@@ -8843,7 +8843,7 @@
     "upRecovery": "",
     "idNorm": "0245",
     "name": "連之機暴龍結",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B5%90",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E7%B5%90",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7f/C245.png/revision/latest/scale-to-width-down/120?cb\u003d20180530054551\u0026path-prefix\u003dzh",
       "iconKey": "C245.png"
@@ -8871,7 +8871,7 @@
     "upRecovery": "",
     "idNorm": "0246",
     "name": "虛之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/85/C246.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111921\u0026path-prefix\u003dzh",
       "iconKey": "C246.png"
@@ -8904,7 +8904,7 @@
     "upRecovery": "",
     "idNorm": "0247",
     "name": "漩之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d4/C247.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111922\u0026path-prefix\u003dzh",
       "iconKey": "C247.png"
@@ -8937,7 +8937,7 @@
     "upRecovery": "",
     "idNorm": "0248",
     "name": "煉之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c4/C248.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111923\u0026path-prefix\u003dzh",
       "iconKey": "C248.png"
@@ -8970,7 +8970,7 @@
     "upRecovery": "",
     "idNorm": "0249",
     "name": "森之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/66/C249.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111923\u0026path-prefix\u003dzh",
       "iconKey": "C249.png"
@@ -9003,7 +9003,7 @@
     "upRecovery": "",
     "idNorm": "0250",
     "name": "耀之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/21/C250.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111924\u0026path-prefix\u003dzh",
       "iconKey": "C250.png"
@@ -9036,7 +9036,7 @@
     "upRecovery": "",
     "idNorm": "0251",
     "name": "影之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2e/C251.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111924\u0026path-prefix\u003dzh",
       "iconKey": "C251.png"
@@ -9074,7 +9074,7 @@
     "upRecovery": "",
     "idNorm": "0252",
     "name": "連之屏息龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b6/C252.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111925\u0026path-prefix\u003dzh",
       "iconKey": "C252.png"
@@ -9112,7 +9112,7 @@
     "upRecovery": "",
     "idNorm": "0253",
     "name": "連之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2f/C253.png/revision/latest/scale-to-width-down/120?cb\u003d20180820113926\u0026path-prefix\u003dzh",
       "iconKey": "C253.png"
@@ -9150,7 +9150,7 @@
     "upRecovery": "",
     "idNorm": "0254",
     "name": "漩之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4a/C254.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111925\u0026path-prefix\u003dzh",
       "iconKey": "C254.png"
@@ -9188,7 +9188,7 @@
     "upRecovery": "",
     "idNorm": "0255",
     "name": "煉之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C255.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111926\u0026path-prefix\u003dzh",
       "iconKey": "C255.png"
@@ -9226,7 +9226,7 @@
     "upRecovery": "",
     "idNorm": "0256",
     "name": "森之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e7/C256.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111927\u0026path-prefix\u003dzh",
       "iconKey": "C256.png"
@@ -9264,7 +9264,7 @@
     "upRecovery": "",
     "idNorm": "0257",
     "name": "耀之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C257.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111927\u0026path-prefix\u003dzh",
       "iconKey": "C257.png"
@@ -9302,7 +9302,7 @@
     "upRecovery": "",
     "idNorm": "0258",
     "name": "影之狂暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/77/C258.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111928\u0026path-prefix\u003dzh",
       "iconKey": "C258.png"
@@ -9340,7 +9340,7 @@
     "upRecovery": "",
     "idNorm": "0259",
     "name": "連之越時龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ad/C259.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111928\u0026path-prefix\u003dzh",
       "iconKey": "C259.png"
@@ -9378,7 +9378,7 @@
     "upRecovery": "",
     "idNorm": "0260",
     "name": "虛之越時龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C260.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111929\u0026path-prefix\u003dzh",
       "iconKey": "C260.png"
@@ -9416,7 +9416,7 @@
     "upRecovery": "",
     "idNorm": "0261",
     "name": "連之王暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C261.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111929\u0026path-prefix\u003dzh",
       "iconKey": "C261.png"
@@ -9454,7 +9454,7 @@
     "upRecovery": "",
     "idNorm": "0262",
     "name": "虛之獸暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f2/C262.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111930\u0026path-prefix\u003dzh",
       "iconKey": "C262.png"
@@ -9492,7 +9492,7 @@
     "upRecovery": "",
     "idNorm": "0263",
     "name": "連之龍暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/60/C263.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111930\u0026path-prefix\u003dzh",
       "iconKey": "C263.png"
@@ -9530,7 +9530,7 @@
     "upRecovery": "",
     "idNorm": "0264",
     "name": "虛之妖暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4a/C264.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111931\u0026path-prefix\u003dzh",
       "iconKey": "C264.png"
@@ -9568,7 +9568,7 @@
     "upRecovery": "",
     "idNorm": "0265",
     "name": "連之機暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%A3%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/39/C265.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111932\u0026path-prefix\u003dzh",
       "iconKey": "C265.png"
@@ -9606,7 +9606,7 @@
     "upRecovery": "",
     "idNorm": "0266",
     "name": "煉之機暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bf/C266.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111955\u0026path-prefix\u003dzh",
       "iconKey": "C266.png"
@@ -9644,7 +9644,7 @@
     "upRecovery": "",
     "idNorm": "0267",
     "name": "森之機暴龍丸",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E4%B8%B8",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/68/C267.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111956\u0026path-prefix\u003dzh",
       "iconKey": "C267.png"
@@ -9682,7 +9682,7 @@
     "upRecovery": "",
     "idNorm": "0268",
     "name": "漩之魔暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/11/C268.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111956\u0026path-prefix\u003dzh",
       "iconKey": "C268.png"
@@ -9720,7 +9720,7 @@
     "upRecovery": "",
     "idNorm": "0269",
     "name": "漩之王暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f0/C269.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111957\u0026path-prefix\u003dzh",
       "iconKey": "C269.png"
@@ -9758,7 +9758,7 @@
     "upRecovery": "",
     "idNorm": "0270",
     "name": "漩之神暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/95/C270.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111957\u0026path-prefix\u003dzh",
       "iconKey": "C270.png"
@@ -9796,7 +9796,7 @@
     "upRecovery": "",
     "idNorm": "0271",
     "name": "漩之妖暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%BC%A9%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C271.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111958\u0026path-prefix\u003dzh",
       "iconKey": "C271.png"
@@ -9834,7 +9834,7 @@
     "upRecovery": "",
     "idNorm": "0272",
     "name": "煉之妖暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C272.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111958\u0026path-prefix\u003dzh",
       "iconKey": "C272.png"
@@ -9872,7 +9872,7 @@
     "upRecovery": "",
     "idNorm": "0273",
     "name": "煉之龍暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dc/C273.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111959\u0026path-prefix\u003dzh",
       "iconKey": "C273.png"
@@ -9910,7 +9910,7 @@
     "upRecovery": "",
     "idNorm": "0274",
     "name": "煉之獸暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E7%85%89%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C274.png/revision/latest/scale-to-width-down/120?cb\u003d20180820111959\u0026path-prefix\u003dzh",
       "iconKey": "C274.png"
@@ -9948,7 +9948,7 @@
     "upRecovery": "",
     "idNorm": "0275",
     "name": "森之獸暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/46/C275.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112000\u0026path-prefix\u003dzh",
       "iconKey": "C275.png"
@@ -9986,7 +9986,7 @@
     "upRecovery": "",
     "idNorm": "0276",
     "name": "森之神暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e4/C276.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112001\u0026path-prefix\u003dzh",
       "iconKey": "C276.png"
@@ -10024,7 +10024,7 @@
     "upRecovery": "",
     "idNorm": "0277",
     "name": "森之王暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9c/C277.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112001\u0026path-prefix\u003dzh",
       "iconKey": "C277.png"
@@ -10062,7 +10062,7 @@
     "upRecovery": "",
     "idNorm": "0278",
     "name": "森之妖暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E6%A3%AE%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/17/C278.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112002\u0026path-prefix\u003dzh",
       "iconKey": "C278.png"
@@ -10100,7 +10100,7 @@
     "upRecovery": "",
     "idNorm": "0279",
     "name": "耀之龍暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9d/C279.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112002\u0026path-prefix\u003dzh",
       "iconKey": "C279.png"
@@ -10138,7 +10138,7 @@
     "upRecovery": "",
     "idNorm": "0280",
     "name": "耀之獸暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/55/C280.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112003\u0026path-prefix\u003dzh",
       "iconKey": "C280.png"
@@ -10176,7 +10176,7 @@
     "upRecovery": "",
     "idNorm": "0281",
     "name": "耀之魔暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E9%AD%94%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C281.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112004\u0026path-prefix\u003dzh",
       "iconKey": "C281.png"
@@ -10214,7 +10214,7 @@
     "upRecovery": "",
     "idNorm": "0282",
     "name": "耀之王暴龍符",
-    "link": "http://zh.tos.wikia.com/wiki/%E8%80%80%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%AC%A6",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8E%8B%E6%9A%B4%E9%BE%8D%E7%AC%A6",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/15/C282.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112004\u0026path-prefix\u003dzh",
       "iconKey": "C282.png"
@@ -10252,7 +10252,7 @@
     "upRecovery": "",
     "idNorm": "0283",
     "name": "影之妖暴龍紋",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%A6%96%E6%9A%B4%E9%BE%8D%E7%B4%8B",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9f/C283.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112005\u0026path-prefix\u003dzh",
       "iconKey": "C283.png"
@@ -10290,7 +10290,7 @@
     "upRecovery": "",
     "idNorm": "0284",
     "name": "影之神暴龍咒",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%92%92",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%A5%9E%E6%9A%B4%E9%BE%8D%E5%92%92",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fd/C284.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112005\u0026path-prefix\u003dzh",
       "iconKey": "C284.png"
@@ -10328,7 +10328,7 @@
     "upRecovery": "",
     "idNorm": "0285",
     "name": "影之龍暴龍印",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E9%BE%8D%E6%9A%B4%E9%BE%8D%E5%8D%B0",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/cc/C285.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112006\u0026path-prefix\u003dzh",
       "iconKey": "C285.png"
@@ -10366,7 +10366,7 @@
     "upRecovery": "",
     "idNorm": "0286",
     "name": "影之獸暴龍璃",
-    "link": "http://zh.tos.wikia.com/wiki/%E5%BD%B1%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8D%B8%E6%9A%B4%E9%BE%8D%E7%92%83",
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/56/C286.png/revision/latest/scale-to-width-down/120?cb\u003d20180820112013\u0026path-prefix\u003dzh",
       "iconKey": "C286.png"

@@ -109,6 +109,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialRestoreAllIntoRandom;
     private CheckBox sortSpecialRestoreAllInto;
     private CheckBox sortSpecialRestoreAllIntoEnchanted;
+    private CheckBox sortSpecialDodge;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -434,6 +435,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRestoreAllIntoRandom = menu.findViewById(R.id.sortSpecialRestoreAllIntoRandom);
         sortSpecialRestoreAllInto = menu.findViewById(R.id.sortSpecialRestoreAllInto);
         sortSpecialRestoreAllIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreAllIntoEnchanted);
+        sortSpecialDodge = menu.findViewById(R.id.sortSpecialDodge);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -817,6 +819,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialRestoreAllIntoEnchanted.isChecked()) {
                     accept &= find(key, R.array.cards_runestone_all_into_enchanted_keys);
+                }
+                if (sortSpecialDodge.isChecked()) {
+                    accept &= find(key, R.array.cards_dodge_keys);
                 }
             }
             return accept;

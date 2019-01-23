@@ -367,6 +367,11 @@
                     style="@style/sortText"
                     android:text="@string/cards_damage_to_hp"/>
 
+                <CheckBox
+                    android:id="@+id/sortSpecialDodge"
+                    style="@style/sortText"
+                    android:text="@string/cards_dodge"/>
+
                 <View
                     style="@style/divider_h2px"/>
 

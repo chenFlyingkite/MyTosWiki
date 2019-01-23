@@ -148,6 +148,8 @@
     <string name="cards_leader_damage_less">隊長技 - 傷害減少</string>
     <!-- #1478, Damage received will be converted to HP Recovery for 1 Round -->
     <string name="cards_damage_to_hp">傷害轉化為我方生命力</string>
+    <!-- #1512, 傲笑紅塵, Dodge all attacks of enemies in the next Round. -->
+    <string name="cards_dodge">迴避 [敵人傷害]</string>
     <!-- #1087, 大聖, Damage will be dealt regardless of enemies' Defense for 3 Rounds
          #0862, 陀螺千千, Damage will be dealt regardless of Enemies' Defense for 2 Rounds when Heart Runestones are dissolved
      -->
@@ -258,8 +260,8 @@
         <item>此傷害無視防禦力</item>
         <!-- #1762, 小傑-->
         <item>自身攻擊無視敵人的防禦力</item>
-        <!-- #1575, 八神庵-->
-        <item>將全體敵人的攻擊力及防禦力減至 0</item>
+        <!-- #1575, 八神庵  #1965, 瑟雷夫-->
+        <item>防禦力減至 0</item>
         <item>無視防禦力</item>
     </string-array>
     <string-array name="cards_regardless_of_attribute_keys">
@@ -321,6 +323,10 @@
     </string-array>
     <string-array name="cards_runestone_all_into_enchanted_keys">
         <item>所有符石轉化為強化符石</item>
+    </string-array>
+    <string-array name="cards_dodge_keys">
+        <!-- #1512 #1766 -->
+        <item>迴避</item>
     </string-array>
 
 
