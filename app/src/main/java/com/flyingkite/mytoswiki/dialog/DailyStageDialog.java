@@ -101,33 +101,33 @@ public class DailyStageDialog extends BaseTosDialog {
     private void initDailyStage() {
         final String[] links = {
                 // 魔劍降臨之日
-                "http://zh.tos.wikia.com/wiki/%E9%AD%94%E5%8A%8D%E9%99%8D%E8%87%A8%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E9%AD%94%E5%8A%8D%E9%99%8D%E8%87%A8%E4%B9%8B%E6%97%A5",
                 // 狩獵珍獸之日
-                "http://zh.tos.wikia.com/wiki/%E7%8B%A9%E7%8D%B5%E7%8F%8D%E7%8D%B8%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E7%8B%A9%E7%8D%B5%E7%8F%8D%E7%8D%B8%E4%B9%8B%E6%97%A5",
                 // 尋找水晶之日
-                "http://zh.tos.wikia.com/wiki/%E5%B0%8B%E6%89%BE%E6%B0%B4%E6%99%B6%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E5%B0%8B%E6%89%BE%E6%B0%B4%E6%99%B6%E4%B9%8B%E6%97%A5",
                 // 魔物巢穴之日
-                "http://zh.tos.wikia.com/wiki/%E9%AD%94%E7%89%A9%E5%B7%A2%E7%A9%B4%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E9%AD%94%E7%89%A9%E5%B7%A2%E7%A9%B4%E4%B9%8B%E6%97%A5",
                 // 元素魂魄之日
-                "http://zh.tos.wikia.com/wiki/%E5%85%83%E7%B4%A0%E9%AD%82%E9%AD%84%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E5%85%83%E7%B4%A0%E9%AD%82%E9%AD%84%E4%B9%8B%E6%97%A5",
                 // 龍刻之日
-                "http://zh.tos.wikia.com/wiki/%E9%BE%8D%E5%88%BB%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E9%BE%8D%E5%88%BB%E4%B9%8B%E6%97%A5",
                 // 黃金之日
-                "http://zh.tos.wikia.com/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E6%97%A5",
                 // 靈魂之日
-                "http://zh.tos.wikia.com/wiki/%E9%9D%88%E9%AD%82%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E9%9D%88%E9%AD%82%E4%B9%8B%E6%97%A5",
                 // 貪婪之日
-                "http://zh.tos.wikia.com/wiki/%E8%B2%AA%E5%A9%AA%E4%B9%8B%E6%97%A5",
+                "https://tos.fandom.com/zh/wiki/%E8%B2%AA%E5%A9%AA%E4%B9%8B%E6%97%A5",
                 // 捕捉靈魂石 ‧ 水
-                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%B0%B4",
+                "https://tos.fandom.com/zh/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%B0%B4",
                 // 捕捉靈魂石 ‧ 火
-                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E7%81%AB",
+                "https://tos.fandom.com/zh/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E7%81%AB",
                 // 捕捉靈魂石 ‧ 木
-                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9C%A8",
+                "https://tos.fandom.com/zh/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9C%A8",
                 // 捕捉靈魂石 ‧ 光
-                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E5%85%89",
+                "https://tos.fandom.com/zh/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E5%85%89",
                 // 捕捉靈魂石 ‧ 暗
-                "http://zh.tos.wikia.com/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9A%97",
+                "https://tos.fandom.com/zh/wiki/%E6%8D%95%E6%8D%89%E9%9D%88%E9%AD%82%E7%9F%B3_%E2%80%A7_%E6%9A%97",
         };
         final String[] icons = {"0266", "0269", "0263", "0387", "0256",
                 // xx之日

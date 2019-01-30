@@ -174,6 +174,7 @@ public class MainActivity extends BaseActivity implements
             }
         });
         iconLibrary.setViewAdapter(adapter);
+        updateTools(new AppPref().getShowAppTool());
     }
 
     public Activity getActivity() {
@@ -185,9 +186,14 @@ public class MainActivity extends BaseActivity implements
         return getWindow().getDecorView();
     }
 
+    private void updateTools(boolean visible) {
+        iconLibrary.recyclerView.setVisibility(visible ? View.VISIBLE : View.GONE);
+    }
+
     @Override
     public void setToolsVisible(boolean visible) {
-        iconLibrary.recyclerView.setVisibility(visible ? View.VISIBLE : View.GONE);
+        updateTools(visible);
+        new AppPref().setShowAppTool(visible);
     }
 
     @Override

@@ -95,6 +95,25 @@
                     android:layout_height="wrap_content"
                     android:text="藍色的字可以點擊"
                     android:textColor="@color/skyBlue" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/card_icon.favorW"
+                        android:layout_width="@dimen/t20dp"
+                        android:layout_height="@dimen/t20dp"
+                        android:background="@color/green"/>
+
+                    <TextView
+                        style="@style/cardText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="移除:輕觸卡片上下滑動\n重排:長按卡片左右移動"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

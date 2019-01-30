@@ -33,7 +33,8 @@ public class WebDialog extends BaseTosDialog {
     );
 
     public static final String BUNDLE_LINK = "WebDialog.WebLink";
-    private static final String tosWikiHome = "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_Tower_of_Saviors_%E7%BB%B4%E5%9F%BA";
+    private static final String tosWikiHome = "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_%E7%B9%81%E4%B8%AD%E7%B6%AD%E5%9F%BA";
+    //private static final String tosWikiHome = "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_Tower_of_Saviors_%E7%BB%B4%E5%9F%BA";
     private Library<IconAdapter> iconLibrary;
     private SwipeRefreshLayout swipe;
     private WebView web;

@@ -185,13 +185,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         // Setup favorite
         View favor = findViewById(R.id.tosFavor);
         favor.setOnClickListener((v) -> {
-            v.setSelected(!v.isSelected());
-            boolean s = v.isSelected();
-
-            favorBox.setVisibility(s ? View.VISIBLE : View.GONE);
+            boolean s = !v.isSelected();
+            updateFavor(s);
+            new AppPref().setShowFavorite(s);
             logAction(s ? "showFavor" : "hideFavor");
         });
-        //favor.setSelected(true);
+        updateFavor(new AppPref().getShowFavorite());
+    }
+
+    private void updateFavor(boolean b) {
+        View favor = findViewById(R.id.tosFavor);
+        favor.setSelected(b);
+        favorBox.setVisibility(b ? View.VISIBLE : View.GONE);
     }
 
     private void initFavorLib() {
