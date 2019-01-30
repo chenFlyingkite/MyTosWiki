@@ -110,6 +110,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialRestoreAllInto;
     private CheckBox sortSpecialRestoreAllIntoEnchanted;
     private CheckBox sortSpecialDodge;
+    private CheckBox sortSpecialOneDealDamage;
+    private CheckBox sortSpecialOneDealDamageElement;
+    private CheckBox sortSpecialAllDealDamage;
+    private CheckBox sortSpecialAllDealDamageElement;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -441,6 +445,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRestoreAllInto = menu.findViewById(R.id.sortSpecialRestoreAllInto);
         sortSpecialRestoreAllIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreAllIntoEnchanted);
         sortSpecialDodge = menu.findViewById(R.id.sortSpecialDodge);
+        sortSpecialOneDealDamage = menu.findViewById(R.id.sortSpecialOneDealDamage);
+        sortSpecialOneDealDamageElement = menu.findViewById(R.id.sortSpecialOneDealDamageElement);
+        sortSpecialAllDealDamage = menu.findViewById(R.id.sortSpecialAllDealDamage);
+        sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -739,6 +747,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             String key = activeSkill(c);
             boolean accept = true;
             if (!sortSpecialNo.isChecked()) {
+                boolean element = c.race.matches(getString(R.string.cards_race_level) + "|" + getString(R.string.cards_race_evolve));
                 //Though repeat, but fast.....
                 if (sortSpecialFree.isChecked()) {
                     //noinspection ConstantConditions
@@ -827,6 +836,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialDodge.isChecked()) {
                     accept &= find(key, R.array.cards_dodge_keys);
+                }
+                if (sortSpecialOneDealDamage.isChecked()) {
+                    accept &= !element & find(key, R.array.cards_one_deal_damage_keys);
+                }
+                if (sortSpecialOneDealDamageElement.isChecked()) {
+                    accept &= element && find(key, R.array.cards_one_deal_damage_keys);
+                }
+                if (sortSpecialAllDealDamage.isChecked()) {
+                    accept &= !element & find(key, R.array.cards_all_deal_damage_keys);
+                }
+                if (sortSpecialAllDealDamageElement.isChecked()) {
+                    accept &= element && find(key, R.array.cards_all_deal_damage_keys);
                 }
             }
             return accept;

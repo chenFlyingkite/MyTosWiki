@@ -456,6 +456,28 @@
                     style="@style/sortText"
                     android:text="@string/cards_runestone_all_into_enchanted"/>
 
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialOneDealDamage"
+                    style="@style/sortText"
+                    android:text="@string/cards_one_deal_damage"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialOneDealDamageElement"
+                    style="@style/sortText"
+                    android:text="@string/cards_one_deal_damage_element"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAllDealDamage"
+                    style="@style/sortText"
+                    android:text="@string/cards_all_deal_damage"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAllDealDamageElement"
+                    style="@style/sortText"
+                    android:text="@string/cards_all_deal_damage_element"/>
             </LinearLayout>
 
             <TextView

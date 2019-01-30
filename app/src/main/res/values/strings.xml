@@ -184,6 +184,10 @@
     <string name="cards_runestone_all_into_random">所有符石__隨機轉化__[符石]</string>
     <string name="cards_runestone_all_into">所有符石轉化為__[符石]</string>
     <string name="cards_runestone_all_into_enchanted">所有符石轉化為__強化符石</string>
+    <string name="cards_one_deal_damage">單體直傷 (一般種族)</string>
+    <string name="cards_one_deal_damage_element">單體直傷 (僅限素材)</string>
+    <string name="cards_all_deal_damage">_全體直傷 (一般種族)</string>
+    <string name="cards_all_deal_damage_element">_全體直傷 (僅限素材)</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -327,6 +331,18 @@
     <string-array name="cards_dodge_keys">
         <!-- #1512 #1766 -->
         <item>迴避</item>
+    </string-array>
+    <string-array name="cards_one_deal_damage_keys">
+        <!-- 火木遊俠, 光暗異界龍 -->
+        <item>對單一敵人造成</item>
+    </string-array>
+    <string-array name="cards_all_deal_damage_keys">
+        <!-- 主角 埃及神 -->
+        <item>造成敵全體</item>
+        <!-- 解放埃及神 -->
+        <item>造成敵方全體</item>
+        <item>對敵方全體造成</item>
+        <item>對全體敵人造成</item>
     </string-array>
 
 
@@ -563,6 +579,12 @@
     <string name="lost_relic_pass_title">遺跡特許</string>
     <string name="story_stage">旅人的記憶</string>
     <string name="realm_stage">虛影世界</string>
+
+    <string name="a1">第二屆武術大會 猿真
+卡還OK可以打一張
+露西隊超好過關
+隊長副隊長 : 星靈魔導士 ‧ 露西 (#1955)
+隊員 : 傑拉爾(#1963), 艾爾莎(#1958), 梅比斯(#1971), 酷拉皮卡(#1764)</string>
 
     <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)
