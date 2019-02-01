@@ -327,6 +327,8 @@
     </string-array>
     <string-array name="cards_runestone_all_into_enchanted_keys">
         <item>所有符石轉化為強化符石</item>
+        <!-- #1393 銅丸 -->
+        <item>所有符石轉化為龍族強化符石</item>
     </string-array>
     <string-array name="cards_dodge_keys">
         <!-- #1512 #1766 -->

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.data.tos.NameLink;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
@@ -141,7 +142,9 @@ public class CardDialog extends BaseTosDialog {
             TosWiki.notifyFavor();
             logFavorite(add, card.idNorm + " " + card.name);
         });
-        favor.setSelected(TosWiki.getCardFavor().exist(card.idNorm));
+        CardFavor c = TosWiki.getCardFavor();
+        boolean sel = c != null && c.exist(card.idNorm);
+        favor.setSelected(sel);
         setOnClickListeners(this::showMonsterEatDialog, R.id.cardMu, R.id.cardTu, R.id.cardMuLv, R.id.cardTuLv);
 
         cardIdNorm.setText(card.idNorm + "");
