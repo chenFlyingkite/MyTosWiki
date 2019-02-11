@@ -25,6 +25,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
+import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
@@ -64,11 +65,12 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
-        sealOrder.add(new Pair<>(R.id.csdSeriesFairyTail,       new FairyTail()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves, new MasterCathieves()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,   new KonoSubarashi()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,       new HinduGods()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai,  new SengokuSamurai()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesGiftedScientists, new GiftedScientists()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesFairyTail,        new FairyTail()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves,  new MasterCathieves()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,    new KonoSubarashi()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,        new HinduGods()));
+        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai,   new SengokuSamurai()));
     }
 
     private BaseSeal seals;

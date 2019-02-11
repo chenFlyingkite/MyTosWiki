@@ -110,6 +110,11 @@
                             android:layout_height="wrap_content">
 
                             <RadioButton
+                                android:id="@+id/csdSeriesGiftedScientists"
+                                style="@style/sortRadio"
+                                android:text="@string/card_series_gifted_scientists"/>
+
+                            <RadioButton
                                 android:id="@+id/csdSeriesFairyTail"
                                 style="@style/sortRadio"
                                 android:text="@string/card_series_fairy_tail"/>

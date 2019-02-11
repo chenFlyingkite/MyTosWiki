@@ -82,6 +82,19 @@
     <string name="cards_target">目標</string>
     <string name="cards_need_material">需要素材</string>
     <string name="cards_combine">卡片合體</string>
+    <string name="cards_race_runestone">種族符石</string>
+    <string name="cards_race_stone_god">神族</string>
+    <string name="cards_race_stone_demon">魔族</string>
+    <string name="cards_race_stone_human">人族</string>
+    <string name="cards_race_stone_beast">獸族</string>
+    <string name="cards_race_stone_dragon">龍族</string>
+    <string name="cards_race_stone_elf">妖族</string>
+    <string name="cards_race_stone_machina">機械族</string>
+    <string name="cards_add_leader">包括 隊長技</string>
+    <string name="cards_add_detail">包括 隊伍/組合技能 (卡牌資訊)</string>
+    <string name="cards_race_stone_sample">例如搜尋 : (水|火)(神族|妖族)(|強化)符石</string>
+    <string name="cards_runestone_race">符石種族</string>
+    <string name="cards_runestone_attr">符石屬性</string>
 
     <string name="cards_runestone_water">水符石</string>
     <string name="cards_runestone_fires">火符石</string>
@@ -101,16 +114,16 @@
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
-    <string name="cards_common">常用排序</string>
+    <string name="cards_common">常用排序 (^ = 滿昇華)</string>
     <string name="cards_HP">生命力</string>
     <string name="cards_Attack">攻擊力</string>
     <string name="cards_Recovery">回復力</string>
     <string name="cards_Sum">三圍</string>
-    <string name="cards_common_maxHP">生命力</string>
-    <string name="cards_common_maxAttack">攻擊力</string>
-    <string name="cards_common_macRecovery">回復力</string>
-    <string name="cards_common_maxSum">三圍(生+攻+回)</string>
-    <string name="cards_common_skillCDMax">滿等 CD (^昇華全滿)</string>
+    <string name="cards_common_maxHP">生命力 (^)</string>
+    <string name="cards_common_maxAttack">攻擊力 (^)</string>
+    <string name="cards_common_macRecovery">回復力 (^)</string>
+    <string name="cards_common_maxSum">三圍(生+攻+回) (^)</string>
+    <string name="cards_common_skillCDMax">滿等 CD (^)</string>
     <string name="cards_common_space">空間</string>
     <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
     <string-array name="cards_common_keys_race">
@@ -217,6 +230,8 @@
     <string-array name="cards_fix_keys">
         <!-- #1094 #1224 #1279 #1585 固定位置 #1439 瑪雅引爆-->
         <item>轉化為固定數量</item>
+        <!-- #1983 秦始皇 -->
+        <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
     <string-array name="cards_no_defeat_keys">
         <item>不會使你死亡</item>
@@ -242,12 +257,15 @@
              #1380 天律善心 ‧ 泰芙努特 25%
          -->
         <item>傷害減少</item>
+        <!-- #2006 愛因斯坦 -->
+        <item>% 所受傷害</item>
     </string-array>
     <string-array name="cards_damage_to_hp_keys">
         <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
         <item>轉化為我方生命力</item>
     </string-array>
     <string-array name="cards_regardless_of_defense_keys">
+        <item>無視防禦力</item>
         <!-- #0845,月想女神 月讀 -->
         <item>無視全體敵人 50% 的防禦力</item>
         <!-- #514, 白虎,狼人 -->
@@ -266,7 +284,6 @@
         <item>自身攻擊無視敵人的防禦力</item>
         <!-- #1575, 八神庵  #1965, 瑟雷夫-->
         <item>防禦力減至 0</item>
-        <item>無視防禦力</item>
     </string-array>
     <string-array name="cards_regardless_of_attribute_keys">
         <!-- #0294, 通透的蛋 -->
@@ -315,6 +332,8 @@
     </string-array>
     <string-array name="cards_runestone_into_enchanted_keys">
         <item>轉化為強化符石</item>
+        <!-- #1983 秦始皇 -->
+        <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
     <string-array name="cards_runestone_all_attr_random_keys">
         <item>所有符石隨機轉換</item>
@@ -324,11 +343,15 @@
     </string-array>
     <string-array name="cards_runestone_all_into_keys">
         <item>所有符石轉化為</item>
+        <!-- #1983 秦始皇 -->
+        <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
     <string-array name="cards_runestone_all_into_enchanted_keys">
         <item>所有符石轉化為強化符石</item>
         <!-- #1393 銅丸 -->
         <item>所有符石轉化為龍族強化符石</item>
+        <!-- #1983 秦始皇 -->
+        <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
     <string-array name="cards_dodge_keys">
         <!-- #1512 #1766 -->
@@ -562,6 +585,8 @@
     <string name="card_series_kono_subarashi">美好世界</string>
     <string name="card_series_master_cathieves">神貓大盜</string>
     <string name="card_series_fairy_tail">Fairy Tail</string>
+    <string name="card_series_gifted_scientists">科研敍論</string>
+
 
     <string name="tos_event_title">神魔之塔活動表</string>
     <string name="tos_event_header">神魔之塔當前活動列表 : </string>

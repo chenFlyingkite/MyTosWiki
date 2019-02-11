@@ -20,6 +20,7 @@ public interface TosSelection<T> {
     default List<Integer> select() {
         List<T> data = ListUtil.nonNull(from());
         List<Integer> index = new ArrayList<>();
+        onPrepare();
         for (int i = 0; i < data.size(); i++) {
             T c = data.get(i);
             if (onSelect(c)) {
@@ -29,6 +30,10 @@ public interface TosSelection<T> {
             }
         }
         return index;
+    }
+
+    default void onPrepare() {
+
     }
 
     default boolean onSelect(T c) {

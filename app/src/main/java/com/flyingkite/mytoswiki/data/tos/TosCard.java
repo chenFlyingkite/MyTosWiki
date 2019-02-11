@@ -78,6 +78,22 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.maxRecovery)
     public long maxRecovery;
 
+    //------------
+    //---- Amelioration benefit, 昇華提升能力
+    //---- on HP, Attack, Recovery, Skill CD
+    //------------
+    /** Ame + Max Heath point, like 129 */
+    @SerializedName(TC.maxHPAme)
+    public long maxHPAme;
+
+    /** Ame + Max Attack, like 71 */
+    @SerializedName(TC.maxAttackAme)
+    public long maxAttackAme;
+
+    /** Ame + Max Recovery, like 24 */
+    @SerializedName(TC.maxRecoveryAme)
+    public long maxRecoveryAme;
+
     /** Min Heath point, like 86 */
     @SerializedName(TC.minHP)
     public long minHP;
@@ -140,7 +156,6 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.skillLeaderDesc)
     public String skillLeaderDesc = "";
 
-    // Only 127 cards has amelioration benefit
     /** Active skill CD max = skillCDMax1 + amelioration, see #1261 拉法葉爾 */
     @SerializedName(TC.skillCDMaxAme)
     public int skillCDMaxAme;
@@ -339,7 +354,29 @@ public class TosCard implements Parcelable {
     }
     //-- For parcelable - End
 
-    // Replace RegEx "public" to "@ColumnInfo\n    public"
+    public boolean ameAddHP() {
+        return maxHPAme > maxHP;
+    }
+
+    public boolean ameAddAttack() {
+        return maxAttackAme > maxAttack;
+    }
+
+    public boolean ameAddRecovery() {
+        return maxRecoveryAme > maxRecovery;
+    }
+
+    public boolean ameAddAll() {
+        return ameAddHP() || ameAddAttack() || ameAddRecovery();
+    }
+
+    public String skillsDesc() {
+        return skillDesc1 + " & " + skillDesc2;
+    }
+
+    public boolean ameMinusCD() {
+        return skillCDMaxAme < skillCDMax1;
+    }
 
     @Override
     public String toString() {

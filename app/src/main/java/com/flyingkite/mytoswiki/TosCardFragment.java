@@ -49,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import flyingkite.tool.StringUtil;
 
@@ -77,6 +78,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private RadioGroup sortCassandra;
     // 轉化符石
     private ViewGroup sortRunestone;
+    // 種族符石
+    private ViewGroup sortRaceStoneAttr;
+    private ViewGroup sortRaceStoneRace;
+    private View sortRaceStoneAddDetail;
+    private View sortRaceStoneAddLeader;
     // 特選
     private ViewGroup sortSpecial;
     private View sortSpecialAddDetail;
@@ -156,6 +162,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initCardLibrary();
         initSortMenu();
         initToolIcons();
+        resetMenu();
 
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
@@ -373,6 +380,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initSortReset(menu);
         initSortByAttribute(menu);
         initSortByRace(menu);
+        initSortByRaceRuneStones(menu);
         initSortByCassandra(menu);
         initSortByTurnRuneStones(menu);
         initSortByStar(menu);
@@ -394,6 +402,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private void initSortByRace(View menu) {
         sortRace = initSortOf(menu, R.id.sortRaces, this::clickRace);
+    }
+
+    private void initSortByRaceRuneStones(View menu) {
+        sortRaceStoneAddDetail = menu.findViewById(R.id.sortRaceStoneAddDetail);
+        sortRaceStoneAddLeader = menu.findViewById(R.id.sortRaceStoneAddLeader);
+        sortRaceStoneAddDetail.setOnClickListener(this::clickRaceRuneStones);
+        sortRaceStoneAddLeader.setOnClickListener(this::clickRaceRuneStones);
+        sortRaceStoneAddDetail.setSelected(true);
+        sortRaceStoneAddLeader.setSelected(true);
+
+        sortRaceStoneAttr = initSortOf(menu, R.id.sortRaceStoneAttr, this::clickRaceRuneStones);
+        sortRaceStoneRace = initSortOf(menu, R.id.sortRaceStoneRace, this::clickRaceRuneStones);
     }
 
     private void initSortByCassandra(View menu) {
@@ -482,9 +502,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
     // --------
 
-    // click listeners for sort menus --------
-    private void clickReset(View v) {
-        ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone};
+    private void resetMenu() {
+        ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone, sortRaceStoneAttr, sortRaceStoneRace};
         for (ViewGroup vg : vgs) {
             setAllChildrenSelected(vg, false);
         }
@@ -492,7 +511,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortCassandra.check(R.id.sortCassandraNo);
         setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
         setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
+    }
 
+    // click listeners for sort menus --------
+    private void clickReset(View v) {
+        resetMenu();
         applySelection();
     }
 
@@ -502,6 +525,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private void clickRace(View v) {
         nonAllApply(v, sortRace);
+    }
+
+    private void clickRaceRuneStones(View v) {
+        v.setSelected(!v.isSelected());
+        applySelection();
     }
 
     private void clickCassandra(View v) {
@@ -671,6 +699,73 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             select = condition;
         }
 
+        private boolean[] selectForShow = new boolean[4];
+        private String[] turnStoneKey = new String[0];
+
+        // Find a good regex for 種族符石
+        // Comma is for #1693 關師傅
+        private Pattern raceStoneRegex1;
+        private Pattern raceStoneRegex2 = Pattern.compile("自身種族符石");
+        private Pattern raceStoneRegex3;
+
+        @Override
+        public void onPrepare() {
+            prepareShow();
+            prepareTurnRunestones();
+            prepareRaceStones();
+        }
+
+        private void prepareShow() {
+            selectForShow = new boolean[4];
+            ViewGroup vg = sortHide;
+            int n = vg.getChildCount();
+            int m = 0;
+            for (int i = 0; i < n; i++) {
+                View v = vg.getChildAt(i);
+                if (v.isSelected()) {
+                    switch (v.getId()) {
+                        case R.id.sortHide6xxx: m = 0; break;
+                        case R.id.sortHide7xxx: m = 1; break;
+                        case R.id.sortHide8xxx: m = 2; break;
+                        case R.id.sortHide9xxx: m = 3; break;
+                    }
+                }
+                selectForShow[m] = v.isSelected();
+            }
+        }
+
+        private void prepareTurnRunestones() {
+            List<String> stones = new ArrayList<>();
+            getSelectTags(sortRunestone, stones, false);
+            int n = stones.size();
+            turnStoneKey = new String[n];
+            for (int i = 0; i < n; i++) {
+                turnStoneKey[i] = getString(R.string.cards_turn_into) + "" + stones.get(i);
+            }
+        }
+
+        private void prepareRaceStones() {
+            List<String> attr = new ArrayList<>();
+            getSelectTags(sortRaceStoneAttr, attr, false);
+            List<String> race = new ArrayList<>();
+            getSelectTags(sortRaceStoneRace, race, false);
+            if (attr.isEmpty() && race.isEmpty()) {
+                raceStoneRegex1 = null;
+                raceStoneRegex3 = null;
+                return;
+            }
+            race.add("種族");
+
+            String attrs = toRegex(attr);
+            String races = toRegex(race);
+
+            String regex = attrs + races + "(|強化)符石";
+            raceStoneRegex1 = Pattern.compile(regex);
+
+            String raceK = races.replace("族", "");
+            raceStoneRegex3 = Pattern.compile(raceK);
+        }
+
         @Override
         public String typeName() {
             return "TosCard";
@@ -680,9 +775,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         public boolean onSelect(TosCard c){
             return selectForBasic(c)
                     && selectForTurnRunestones(c)
+                    && selectForRaceRunestones(c)
+                    && selectForImprove(c)
                     && selectForSpecial(c)
                     && selectForShow(c)
-                    && selectForImprove(c)
             ;
         }
 
@@ -699,46 +795,66 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             // Still fail for 轉化為固定數量及位置 & X及Y符石轉化為強化符石
             // like, 洛可可(1169) & 龍葵(0900) & 1772 (尼特羅)
             // Runestones keys as st
-            List<String> stones = new ArrayList<>();
-            getSelectTags(sortRunestone, stones, false);
-            int n = stones.size();
-            if (n == 0) {
+            if (turnStoneKey.length == 0) {
                 return true;
             } else {
-                String[] st = new String[n];
-                for (int i = 0; i < n; i++) {
-                    st[i] = getString(R.string.cards_turn_into) + "" + stones.get(i);
-                }
-
-                String key = c.skillDesc1 + " & " + c.skillDesc2;
-                return find(key, st);
+                String key = c.skillsDesc();
+                return find(key, turnStoneKey);
             }
+        }
+
+        private boolean selectForRaceRunestones(TosCard c) {
+            if (raceStoneRegex1 == null) {
+                return true;
+            }
+
+            String key = c.skillsDesc() + " & " + c.skillAwkName;
+            if (sortRaceStoneAddLeader.isSelected()) {
+                key += " & " + c.skillLeaderDesc;
+            }
+            if (sortRaceStoneAddDetail.isSelected()) {
+                key += " & " + c.cardDetails;
+            }
+
+            boolean b = raceStoneRegex1.matcher(key).find();
+
+            // Find 自身種族符石
+            boolean z = raceStoneRegex2.matcher(key).find();
+            if (z) {
+                b |= raceStoneRegex3.matcher(c.race).find();
+            }
+            return b;
+        }
+
+        private String toRegex(List<String> keys) {
+            if (keys.isEmpty()) return "";
+
+            StringBuilder s = new StringBuilder("(");
+            for (int i = 0; i < keys.size(); i++) {
+                if (i > 0) {
+                    s.append("|");
+                }
+                s.append(keys.get(i));
+            }
+            s.append(")");
+            return s.toString();
         }
 
         private boolean selectForShow(TosCard c) {
             int idNorm = Integer.parseInt(c.idNorm);
             boolean accept = true;
-
-            ViewGroup vg = sortHide;
-            int n = vg.getChildCount();
-            for (int i = 0; i < n; i++) {
-                View v = vg.getChildAt(i);
-                if (v.isSelected()) {
-                    switch (v.getId()) {
-                        case R.id.sortHide6xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
-                            break;
-                        case R.id.sortHide7xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 7000, 8000);
-                            break;
-                        case R.id.sortHide8xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
-                            break;
-                        case R.id.sortHide9xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 9000, 10000);
-                            break;
-                    }
-                }
+            if (selectForShow[0]) {
+                //noinspection ConstantConditions
+                accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
+            }
+            if (selectForShow[1]) {
+                accept &= !MathUtil.isInRange(idNorm, 7000, 8000);
+            }
+            if (selectForShow[2]) {
+                accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
+            }
+            if (selectForShow[3]) {
+                accept &= !MathUtil.isInRange(idNorm, 9000, 10000);
             }
             return accept;
         }
@@ -858,7 +974,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private String activeSkill(TosCard c) {
-            return joinKey(c.skillDesc1 + " & " + c.skillDesc2, c);
+            return joinKey(c.skillsDesc(), c);
         }
 
         private String joinKey(String key, TosCard c) {
@@ -906,7 +1022,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= c.rebirthChange.length() > 0;
                 }
                 if (sortImproveSwt.isChecked()) {
-                    accept &= (c.skillDesc1 + " & " + c.skillDesc2).contains("變身");
+                    accept &= c.skillsDesc().contains("變身");
                 }
             }
             return accept;
@@ -990,20 +1106,20 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
                 switch (id) {
                     case R.id.sortCommonMaxHP:
-                        v1 = c1.maxHP;
-                        v2 = c2.maxHP;
+                        v1 = c1.maxHPAme;
+                        v2 = c2.maxHPAme;
                         break;
                     case R.id.sortCommonMaxAttack:
-                        v1 = c1.maxAttack;
-                        v2 = c2.maxAttack;
+                        v1 = c1.maxAttackAme;
+                        v2 = c2.maxAttackAme;
                         break;
                     case R.id.sortCommonMaxRecovery:
-                        v1 = c1.maxRecovery;
-                        v2 = c2.maxRecovery;
+                        v1 = c1.maxRecoveryAme;
+                        v2 = c2.maxRecoveryAme;
                         break;
                     case R.id.sortCommonMaxSum:
-                        v1 = c1.maxHP + c1.maxAttack + c1.maxRecovery;
-                        v2 = c2.maxHP + c2.maxAttack + c2.maxRecovery;
+                        v1 = c1.maxHPAme + c1.maxAttackAme + c1.maxRecoveryAme;
+                        v2 = c2.maxHPAme + c2.maxAttackAme + c2.maxRecoveryAme;
                         break;
                     case R.id.sortCommonSkillCDMax:
                         dsc = false;
@@ -1103,20 +1219,32 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 msg = null;
                 switch (id) {
                     case R.id.sortCommonMaxHP:
-                        msg = String.valueOf(c.maxHP);
+                        msg = String.valueOf(c.maxHPAme);
+                        if (c.ameAddHP()) {
+                            msg += "^";
+                        }
                         break;
                     case R.id.sortCommonMaxAttack:
-                        msg = String.valueOf(c.maxAttack);
+                        msg = String.valueOf(c.maxAttackAme);
+                        if (c.ameAddAttack()) {
+                            msg += "^";
+                        }
                         break;
                     case R.id.sortCommonMaxRecovery:
-                        msg = String.valueOf(c.maxRecovery);
+                        msg = String.valueOf(c.maxRecoveryAme);
+                        if (c.ameAddRecovery()) {
+                            msg += "^";
+                        }
                         break;
                     case R.id.sortCommonMaxSum:
-                        msg = String.valueOf(c.maxHP + c.maxAttack + c.maxRecovery);
+                        msg = String.valueOf(c.maxHPAme + c.maxAttackAme + c.maxRecoveryAme);
+                        if (c.ameAddAll()) {
+                            msg += "^";
+                        }
                         break;
                     case R.id.sortCommonSkillCDMax:
                         msg = "" + c.skillCDMaxAme;
-                        if (c.skillCDMax1 != c.skillCDMaxAme) {
+                        if (c.ameMinusCD()) {
                             msg += "^";
                         }
                         if (c.skillCDMax2 > 0) {

@@ -30,7 +30,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/sortAttrTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_attr"/>
             <LinearLayout
@@ -62,7 +61,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/sortRaceTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_race"/>
             <GridLayout
@@ -195,6 +193,99 @@
                     style="@style/sortRadio"
                     android:text="@string/cards_common_race"/>
             </RadioGroup>
+
+            <TextView
+                android:id="@+id/sortAttrRaceTitle"
+                style="@style/sortTitle"
+                android:text="@string/cards_race_runestone"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/t20dp">
+                <TextView
+                    style="@style/sortText2"
+                    android:text="@string/cards_race_stone_sample"/>
+                <TextView
+                    android:id="@+id/sortRaceStoneAddDetail"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_add_detail"/>
+                <TextView
+                    android:id="@+id/sortRaceStoneAddLeader"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_add_leader"/>
+
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/cards_runestone_attr"/>
+                <LinearLayout
+                    android:id="@+id/sortRaceStoneAttr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_water"
+                        android:src="@drawable/rune_water"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_fires"
+                        android:src="@drawable/rune_fire"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_earth"
+                        android:src="@drawable/rune_earth"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_light"
+                        android:src="@drawable/rune_light"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_attr_darks"
+                        android:src="@drawable/rune_dark"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/cards_runestone_race"/>
+                <GridLayout
+                    android:id="@+id/sortRaceStoneRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="5">
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_god"
+                        android:src="@drawable/s_i079"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_demon"
+                        android:src="@drawable/s_i080"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_human"
+                        android:src="@drawable/s_i081"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_beast"
+                        android:src="@drawable/s_i082"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_dragon"
+                        android:src="@drawable/s_i083"/>
+
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_elf"
+                        android:src="@drawable/s_i084"/>
+                    <ImageView
+                        style="@style/sortIcon"
+                        android:tag="@string/cards_race_stone_machina"
+                        android:src="@drawable/s_i085"/>
+                </GridLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/sortCassandraTitle"
@@ -465,14 +556,14 @@
                     android:text="@string/cards_one_deal_damage"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialOneDealDamageElement"
-                    style="@style/sortText"
-                    android:text="@string/cards_one_deal_damage_element"/>
-
-                <CheckBox
                     android:id="@+id/sortSpecialAllDealDamage"
                     style="@style/sortText"
                     android:text="@string/cards_all_deal_damage"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialOneDealDamageElement"
+                    style="@style/sortText"
+                    android:text="@string/cards_one_deal_damage_element"/>
 
                 <CheckBox
                     android:id="@+id/sortSpecialAllDealDamageElement"

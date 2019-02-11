@@ -121,8 +121,14 @@ public interface ViewUtil {
 
         int vid = clicked.getId();
         Checkable c;
-        if (vid != noId) { // If select something, uncheck no
+        if (vid != noId) {
+            // uncheck no first since select other
             setViewCheck(false, noView);
+            boolean non = isAllAsChecked(parent, false);
+            // check no if all unchecked
+            if (non) {
+                setViewCheck(true, noView);
+            }
         } else {
             // selected no, uncheck all others except no
             for (int i = 0; i < n; i++) {
@@ -130,6 +136,24 @@ public interface ViewUtil {
             }
             setViewCheck(true, noView);
         }
+    }
+
+    default boolean isAllAsChecked(ViewGroup vg, boolean checked) {
+        if (vg == null) return false;
+
+        int n = vg.getChildCount();
+        View v;
+        Checkable c;
+        for (int i = 0; i < n; i++) {
+            v = vg.getChildAt(i);
+            if (v instanceof Checkable) {
+                c = (Checkable) v;
+                if (c.isChecked() != checked) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     default void toggleSelection(View v, ViewGroup vg) {

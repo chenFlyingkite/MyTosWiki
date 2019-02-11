@@ -66,6 +66,9 @@ public class TC {
     public static final String armCrafts = "armCrafts";
     public static final String switchChange = "switchChange";
     public static final String skillCDMaxAme = "skillCDMaxAme";
+    public static final String maxHPAme = "maxHPAme";
+    public static final String maxAttackAme = "maxAttackAme";
+    public static final String maxRecoveryAme = "maxRecoveryAme";
 
 
     // Automation
