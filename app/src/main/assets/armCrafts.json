@@ -142,6 +142,62 @@
   {
     "rarity": 2,
     "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2011",
+    "name": "銀刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%8A%80%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C2011.png/revision/latest/scale-to-width-down/120?cb\u003d20190213155412\u0026path-prefix\u003dzh",
+      "iconKey": "C2011.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "沒有技能"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "2012",
+    "name": "銀丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%8A%80%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/12/C2012.png/revision/latest/scale-to-width-down/120?cb\u003d20190213155413\u0026path-prefix\u003dzh",
+      "iconKey": "C2012.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
     "mode": "連鎖龍紋",
     "charge": "消除水符石 (只計算首批消除的符石)",
     "craftSkill": [

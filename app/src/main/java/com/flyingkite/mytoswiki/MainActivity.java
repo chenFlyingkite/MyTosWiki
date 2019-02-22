@@ -12,6 +12,7 @@ import com.flyingkite.mytoswiki.dialog.AboutDialog;
 import com.flyingkite.mytoswiki.dialog.CardSealDialog;
 import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.DailyStageDialog;
+import com.flyingkite.mytoswiki.dialog.FarmPoolDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MainStageDialog;
@@ -53,6 +54,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.tos_story
             , R.drawable.gift_stamina
             , R.drawable.card_1777
+            , R.drawable.card_0096
             , R.drawable.q1
             , R.drawable.owl2
             , R.mipmap.app_icon
@@ -70,7 +72,6 @@ public class MainActivity extends BaseActivity implements
     }
 
     private WaitingDialog waiting;
-    private boolean isDestroyed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,12 +86,6 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        isDestroyed = true;
     }
 
     private void addTosFragment() {
@@ -170,6 +165,9 @@ public class MainActivity extends BaseActivity implements
                     case R.drawable.tos_void_realm:
                         new RealmStageDialog().show(getActivity());
                         break;
+                    case R.drawable.card_0096:
+                        new FarmPoolDialog().show(getActivity());
+                        break;
                 }
             }
         });
@@ -177,6 +175,7 @@ public class MainActivity extends BaseActivity implements
         updateTools(new AppPref().getShowAppTool());
     }
 
+    @Override
     public Activity getActivity() {
         return this;
     }
@@ -210,7 +209,7 @@ public class MainActivity extends BaseActivity implements
         @Override
         public void onTaskDone(int index, String tag) {
             log("#%s (%s) is done", index, tag);
-            if (isFinishing() || isDestroyed) return;
+            if (isActivityGone()) return;
 
             runOnUiThread(() -> {
                 if (TosWiki.TAG_ALL_CARDS.equals(tag)) {

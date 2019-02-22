@@ -47,7 +47,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -705,8 +704,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         // Find a good regex for 種族符石
         // Comma is for #1693 關師傅
         private Pattern raceStoneRegex1;
-        private Pattern raceStoneRegex2 = Pattern.compile("自身種族符石");
-        private Pattern raceStoneRegex3;
+        private Pattern raceStoneRegex2;
+        private Pattern raceStoneRegexSp = Pattern.compile("自身種族符石");
 
         @Override
         public void onPrepare() {
@@ -751,7 +750,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             getSelectTags(sortRaceStoneRace, race, false);
             if (attr.isEmpty() && race.isEmpty()) {
                 raceStoneRegex1 = null;
-                raceStoneRegex3 = null;
+                raceStoneRegex2 = null;
                 return;
             }
             race.add("種族");
@@ -762,8 +761,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             String regex = attrs + races + "(|強化)符石";
             raceStoneRegex1 = Pattern.compile(regex);
 
-            String raceK = races.replace("族", "");
-            raceStoneRegex3 = Pattern.compile(raceK);
+            race.remove("種族");
+            String raceK = toRegex(race).replace("族", "");
+            raceStoneRegex2 = Pattern.compile(raceK);
+            logE("(R1, R2) = %s   %s", raceStoneRegex1, raceStoneRegex2);
         }
 
         @Override
@@ -818,12 +819,33 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
             boolean b = raceStoneRegex1.matcher(key).find();
 
-            // Find 自身種族符石
-            boolean z = raceStoneRegex2.matcher(key).find();
-            if (z) {
-                b |= raceStoneRegex3.matcher(c.race).find();
-            }
+            // Find 自身種族符石, special
+            b = selectRaceRuneStoneSpecial(b, key, c);
+//            boolean z = raceStoneRegexSp.matcher(key).find();
+//            if (z) {
+//                b |= raceStoneRegex2.matcher(c.race).find();
+//            }
             return b;
+        }
+
+        private boolean selectRaceRuneStoneSpecial(boolean value, String key, TosCard c) {
+            boolean ans = value;
+            int idNorm = Integer.parseInt(c.idNorm);
+            //boolean noSel = !sortRaceStoneAddLeader.isSelected() && !sortRaceStoneAddDetail.isSelected();
+            switch (idNorm) {
+                case 1624: // God & elf, 絲堤
+                    ans = raceStoneRegex2.matcher("神妖精").find();
+                    break;
+                case 1661: case 1662: case 1663: case 1664: case 1665: // 修道仙妖
+                    ans = raceStoneRegex2.matcher("妖精").find();
+                    break;
+                //case 1982: // 唐三藏
+                case 2013: // 愛迪生
+                case 2021: //妮可
+                    ans = true;
+                    break;
+            }
+            return ans;
         }
 
         private String toRegex(List<String> keys) {
@@ -1187,8 +1209,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
                         double atk = c.maxAttack + c.maxRecovery * 3.5;
-                        msg = String.format(Locale.US, "%.1f", atk);
-                        message.add(msg);
+                        message.add(_fmt("%.1f", atk));
                     }
                     break;
                 case R.id.sortCassandraRatio:
@@ -1196,8 +1217,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
                         double atk = 1 + c.maxRecovery * 3.5 / c.maxAttack;
-                        msg = String.format(Locale.US, "%.2f", atk);
-                        message.add(msg);
+                        message.add(_fmt("%.2f", atk));
                     }
                     break;
                 default:

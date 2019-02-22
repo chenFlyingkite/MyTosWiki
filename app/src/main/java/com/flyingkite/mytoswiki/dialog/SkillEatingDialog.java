@@ -102,7 +102,7 @@ public class SkillEatingDialog extends BaseTosDialog {
                 String s0 = tableData.get(3 * i);
                 String s1 = tableData.get(3 * i + 1);
                 String s2 = tableData.get(3 * i + 2);
-                s.append(String.format(java.util.Locale.US, "%7s | %7s | %7s\n", s0, s1, s2));
+                s.append(_fmt("%7s | %7s | %7s\n", s0, s1, s2));
             }
             Say.Log("s = %s", s);
             shareString(s.toString());

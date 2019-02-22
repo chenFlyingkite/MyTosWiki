@@ -173,6 +173,21 @@
                 <include
                     layout="@layout/view_skill_eat_121010x1"/>
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t20dp"/>
+
+            <TextView
+                style="@style/skill_sample_title"
+                android:background="@drawable/bg_rect_gray8"
+                android:textColor="@color/grey8"
+                android:text="@string/skillLv_special_x1_title"/>
+
+            <TextView
+                style="@style/common_text.white"
+                android:textColor="@color/grey8"
+                android:text="@string/skillLv_special_x1_01"/>
         </LinearLayout>
     </HorizontalScrollView>
 </ScrollView>

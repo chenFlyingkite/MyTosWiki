@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/grey4">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/dialog_title.white"
+                android:text="@string/farm_pool_title"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/fpdShare"
+                    style="@style/sortIcon.shareW"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+                <LinearLayout
+                    android:id="@+id/fpdTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/fpdShare"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/whiteText.t2"
+                        android:text="@string/farm_pool_detail"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/whiteText.t2"
+                        android:text="@string/farm_pool_header"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                style="@style/divider_horizontal"/>
+
+            <TextView
+                android:id="@+id/fpdDetail"
+                style="@style/whiteText.t2"
+                android:text="@string/farm_pool_title"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

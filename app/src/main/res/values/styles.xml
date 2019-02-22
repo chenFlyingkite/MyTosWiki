@@ -74,6 +74,17 @@
         <item name="android:padding">@dimen/t2dp</item>
     </style>
 
+    <style name="whiteText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="whiteText.t2">
+        <item name="android:padding">@dimen/t2dp</item>
+        <item name="android:autoLink">web</item>
+    </style>
+
     <!-- Borders of table -->
     <style name="cardRow">
         <item name="android:showDividers">middle</item>

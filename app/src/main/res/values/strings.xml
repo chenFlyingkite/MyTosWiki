@@ -148,7 +148,7 @@
     <!-- #1695, 福祿壽, Coins obtain increase -->
     <string name="cards_morecoin">獲得的金幣增加</string>
     <!-- #0408, #1765, #961, extend Runestone-moving time, -->
-    <string name="cards_extend_time">延長移動符石時間</string>
+    <string name="cards_extend_time">移動符石時間 (延長/減少)</string>
     <string name="cards_runestone_drop_rate_transfer">符石掉落機率降至 [機率]</string>
     <!-- #1429, 伊邪那岐, Runestones also possess 50% effect of Runestones -->
     <string name="cards_active_also_possess">主動技 - 兼具</string>
@@ -217,8 +217,7 @@
         <item>戰鬥中所獲得的金幣增加</item>
     </string-array>
     <string-array name="cards_extend_keys">
-        <item>延長移動符石時間</item>
-        <item>移動符石時間延長</item>
+        <item>移動符石時間</item>
     </string-array>
     <string-array name="cards_also_keys">
         <!-- #433 #223 #898 #906 #981 兼具隊長技能-->
@@ -533,7 +532,7 @@
     <string name="skillLv_header">常用吃技方式</string>
     <string name="skillLv_eat600to10">★Lv1 + 2200回合 (吃11雛鳥 或 2雛鳥+3x技600)\n + 60回合(出場) + 5x技600(吃5隻升技一等)</string>
     <string name="skillLv_concept_detail">★一次吃5隻技能相同的卡片，至少提升技能1等級。
-\n★技5 = 技1 + 1 x 人面雛鳥 (#0617)\n★技7 = 技1 + 5 x 人面雛鳥 (#0617)\n★吃 人面大鳥(#0292) 提升技能1等級</string>
+\n★技5 = 技1 + 1 x 人面雛鳥 (#0617)\n★技7 = 技1 + 5 x 人面雛鳥 (#0617)\n★吃 人面大鳥(#0292) 提升技能1等級\n★吃 技1 (餘回合 0) => 視為增加 10 回合，非 0 回合</string>
     <string name="skillLv_sample_title">吃技範例</string>
     <string name="skillLv_gemini_title">雙子座 (#0359) 練滿技到15，需要 3張 技10的 邪魔史萊姆 (#0333)。</string>
     <string name="skillLv_gemini_01">★1 練一隻 小史萊姆 [暗史萊姆 #104] 從 技1 變成 技5，可吃小魔女 [小魔女莉莉絲 #0094] 或小史萊姆</string>
@@ -557,8 +556,10 @@
     <string name="skillLv_azazel_04">★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_05">★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]</string>
     <string name="skillLv_azazel_06">★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
-    <string name="skillLv_special_01_title">僅用 14張 卡片吃到技6的方式</string>
-    <string name="skillLv_special_01_01">★1 技4 (餘回合0) = 技1 + 5 x 技1\n★2 技4 (餘回合30) = 技4 (餘回合0) + 3 x 技1\n★3 技6 = 技4 (餘回合30) + 5 x 技1</string>
+    <string name="skillLv_special_x1_title">僅用 14張 卡片吃到技6的方式 (舊版，請轉用 11張卡片吃到技6)</string>
+    <string name="skillLv_special_x1_01">★1 技4 (餘回合0) = 技1 + 5 x 技1\n★2 技4 (餘回合30) = 技4 (餘回合0) + 3 x 技1\n★3 技6 = 技4 (餘回合30) + 5 x 技1</string>
+    <string name="skillLv_special_01_title">僅用 11張 卡片吃到技6的方式</string>
+    <string name="skillLv_special_01_01">★1 技1 = 技1 + 10 x 技1</string>
 
     <string name="card_seal_title">封印卡抽卡模擬器</string>
     <string name="card_seal_pure_intent">本模擬器僅使用隨機亂數和神魔公布之抽卡機率進行模擬。抽卡結果並不影響召喚師的神魔卡片。</string>
@@ -606,6 +607,23 @@
     <string name="lost_relic_pass_title">遺跡特許</string>
     <string name="story_stage">旅人的記憶</string>
     <string name="realm_stage">虛影世界</string>
+
+    <string name="farm_pool_title">肥料卡池小筆記</string>
+    <string name="farm_pool_detail">收集肥料的小攻略。提供給召喚師做參考。</string>
+    <string name="farm_pool_header">筆記內容：</string>
+
+    <string name="farm_pool_tip">O★魂魄系列 :\n  1、2、3、4級魂魄各別打第1、2、3、4封印關卡系列
+\n\nO★一封 : 最後一關 => 1階卡片\n地精、史萊姆、小魔女。\nhttps://tos.fandom.com/zh/wiki/冰之亡靈塔
+\n\n-★二封 : 最後一關 => 1階卡片\n地精、精靈、蜥蜴。\nhttps://tos.fandom.com/zh/wiki/深海的龍殿
+\n\nO★三封 : 最後一關 => 1階卡片\n狼人、精靈、蜥蜴。\nhttps://tos.fandom.com/zh/wiki/冰川上飄溜的精靈
+\n\nO★四封 : 最後一關 => 2階卡片\n地精、精靈、蜥蜴、小魔女。\nhttps://tos.fandom.com/zh/wiki/水下的伏兵
+\n\nO★五封 : 最後一關 => 2階卡片\n狼人、精靈、蜥蜴、小魔女。\nhttps://tos.fandom.com/zh/wiki/極度深淵
+\n-----------
+\n堆肥好方法:\n卡片: (依貢獻經驗高至低排序)\n肥料: \n2★木小魔女(#0090), 2★花精靈(#0070)
+\n飼料 :\n1★木史萊姆(#0100), 1★翠蜥蜴戰士(#0080), 1★森林地精(#0060)
+\n\n堆肥法:\n  2★花精靈(Lv5)\n= 2★花精靈(Lv2) + 1★森林地精(Lv2)\n= 2★花精靈(Lv2) + 1★翠蜥蜴戰士(Lv2)
+\n\n  2★木小魔女(Lv7)\n= 2★木小魔女(Lv1) + 2★花精靈(Lv5)
+\n\n  2★木小魔女(Lv5)\n= 2★小魔女(Lv1) + 1★木史萊姆(Lv1), 1★森林地精(Lv1)\n\n</string>
 
     <string name="a1">第二屆武術大會 猿真
 卡還OK可以打一張

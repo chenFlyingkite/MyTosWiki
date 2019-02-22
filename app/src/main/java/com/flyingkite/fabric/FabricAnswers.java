@@ -51,6 +51,10 @@ public class FabricAnswers {
         logCustom("StageMemo", attributes);
     }
 
+    public static void logFarmPool(Map<String, String> attributes) {
+        logCustom("FarmPool", attributes);
+    }
+
     public static void logCardSeal(Map<String, String> attributes) {
         logCustom("SealDraw", attributes);
     }
