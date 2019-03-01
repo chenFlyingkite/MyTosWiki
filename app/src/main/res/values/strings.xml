@@ -625,6 +625,16 @@
 \n\n  2★木小魔女(Lv7)\n= 2★木小魔女(Lv1) + 2★花精靈(Lv5)
 \n\n  2★木小魔女(Lv5)\n= 2★小魔女(Lv1) + 1★木史萊姆(Lv1), 1★森林地精(Lv1)\n\n</string>
 
+    <string name="runestone_editor_title">轉珠版面設計小工具</string>
+
+    <string name="free_move_title">詳細排珠方式</string>
+    <string name="free_move_concept">排珠小說明</string>
+    <string name="free_move_detail">★排珠時候也可考慮卡片的昇華劍
+\n★排 3x3 時可使用直(橫)行的 (3, 3, 3)\n★若直行消除5個，或是橫行消除6個\n => 該行可換位置到其他直(橫)行
+\n★符石的個數僅計算取3的餘數\n => (例如 17火 + 13水 = (2, 1) )</string>
+
+
+
     <string name="a1">第二屆武術大會 猿真
 卡還OK可以打一張
 露西隊超好過關

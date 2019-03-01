@@ -14,6 +14,7 @@ import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.DailyStageDialog;
 import com.flyingkite.mytoswiki.dialog.FarmPoolDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
+import com.flyingkite.mytoswiki.dialog.FreeMoveSampleDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MainStageDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity implements
     // https://developer.android.com/training/multiscreen/screendensities
     private List<Integer> tools = Arrays.asList(R.drawable.card_0617
             , R.drawable.logo_chrome
+            //, R.drawable.rune_water
             , R.drawable.tos_app
             , R.drawable.tos_vestige
             , R.drawable.tos_enochian
@@ -55,6 +57,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.gift_stamina
             , R.drawable.card_1777
             , R.drawable.card_0096
+            , R.drawable.card_1089
             , R.drawable.q1
             , R.drawable.owl2
             , R.mipmap.app_icon
@@ -167,6 +170,11 @@ public class MainActivity extends BaseActivity implements
                         break;
                     case R.drawable.card_0096:
                         new FarmPoolDialog().show(getActivity());
+                        break;
+                    //case R.drawable.rune_water:
+                        //new RunestoneEditorDialog().show(getActivity());
+                    case R.drawable.card_1089:
+                        new FreeMoveSampleDialog().show(getActivity());
                         break;
                 }
             }

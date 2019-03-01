@@ -343,7 +343,7 @@ public class CardSealDialog extends BaseTosDialog {
         a.setSeal(seals);
         a.setRaised(raised.isChecked());
         sealTable.removeAllViews();
-        fillItemsLinearly(sealTable, a);
+        fillItems(sealTable, a);
 
         // Update drawn N
         int n = Math2.sum(getWorkingSample().observe);

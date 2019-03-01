@@ -87,7 +87,7 @@ public class ShareHelper {
     }
 
     public static void shareImage(@NonNull Activity context, View view, String filename, int width, int height) {
-        SaveViewToBitmapTask task = new SaveViewToBitmapTask(context, view, filename){
+        SaveViewToBitmapTask task = new SaveViewToBitmapTask(context, view, filename) {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
@@ -95,6 +95,8 @@ public class ShareHelper {
                 MediaScannerConnection.scanFile(context, new String[]{filename}, null,
                         (path, uri) -> {
                             LogV("Scanned %s\n  as -> %s", path, uri);
+                            //Uri u2 = FileProvider.getUriForFile(context, context.getPackageName(), new File(filename));
+                            //sendUriIntent(context, u2, "image/png");
                             sendUriIntent(context, uri, "image/png");
                         });
             }

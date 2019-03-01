@@ -304,7 +304,7 @@ public class CardDialog extends BaseTosDialog {
         };
         a.setDataList(c.evolveInfo);
 
-        fillItemsLinearly(findViewById(R.id.cardEvolveLinear), a);
+        fillItems(findViewById(R.id.cardEvolveLinear), a);
     }
 
     private void setCombine(TosCard c) {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/stone"
+        android:layout_width="@dimen/t50dp"
+        android:layout_height="@dimen/t50dp"
+        android:padding="2dp"
+        tools:src="@drawable/stone_w"
+        android:background="@color/brown1"/>
+
+</RelativeLayout>

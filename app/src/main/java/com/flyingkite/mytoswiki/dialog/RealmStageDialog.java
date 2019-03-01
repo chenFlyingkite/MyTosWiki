@@ -72,7 +72,7 @@ public class RealmStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 0, 4)));
-        fillItemsLinearly(heroStages, a);
+        fillItems(heroStages, a);
     }
 
     private void initIronStages() {
@@ -85,7 +85,7 @@ public class RealmStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 4, 7)));
-        fillItemsLinearly(ironStages, a);
+        fillItems(ironStages, a);
     }
 
     private void clickToShareSelf(ViewGroup vg) {

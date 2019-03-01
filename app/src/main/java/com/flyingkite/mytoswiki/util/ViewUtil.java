@@ -10,7 +10,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Checkable;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -66,7 +65,7 @@ public interface ViewUtil {
         setViewVisibility(vg, show);
     }
 
-    default <T extends RecyclerView.ViewHolder> void fillItemsLinearly(LinearLayout linear, RecyclerView.Adapter<T> adapter) {
+    default <T extends RecyclerView.ViewHolder> void fillItems(ViewGroup linear, RecyclerView.Adapter<T> adapter) {
         linear.removeAllViews();
         int n = adapter.getItemCount();
         for (int i = 0; i < n; i++) {

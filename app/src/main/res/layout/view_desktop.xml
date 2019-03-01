@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey4">
+
+    <ImageView
+        android:id="@+id/deskShare"
+        style="@style/sortIcon.shareW"/>
+
+    <TextView
+        android:id="@+id/deskTitle"
+        style="@style/common_text.white"
+        android:paddingLeft="@dimen/t5dp"
+        android:layout_toRightOf="@id/deskShare"
+        tools:text="@string/detail"/>
+
+    <GridLayout
+        android:id="@+id/deskDesktop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_width="@dimen/t100dp"
+        tools:layout_height="@dimen/t100dp"
+        android:layout_below="@id/deskShare"
+        android:columnCount="6"/>
+</RelativeLayout>

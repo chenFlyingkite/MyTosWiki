@@ -61,7 +61,7 @@ public class StoryStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(Arrays.asList(storyStages));
-        fillItemsLinearly(stageList, a);
+        fillItems(stageList, a);
     }
 
 

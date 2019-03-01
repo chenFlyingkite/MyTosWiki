@@ -130,6 +130,10 @@ public class FabricAnswers {
     public static void logSelectCraft(Map<String, String> attributes) {
         logCustom("SelectCraft", attributes);
     }
+
+    public static void logRunestone(Map<String, String> attributes) {
+        logCustom("Runestone", attributes);
+    }
     //-- Tos Items
 
     //-- App statistics

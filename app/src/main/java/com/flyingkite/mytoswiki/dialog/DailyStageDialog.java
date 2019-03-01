@@ -56,7 +56,7 @@ public class DailyStageDialog extends BaseTosDialog {
         a.setItemListener((stage, stageVH, position) -> {
             viewLinkAsWebDialog(stage.link);
         });
-        fillItemsLinearly(findViewById(R.id.dds_stages), a);
+        fillItems(findViewById(R.id.dds_stages), a);
         fillOpenTime();
     }
 
@@ -75,7 +75,7 @@ public class DailyStageDialog extends BaseTosDialog {
             OpenColumnAdapter a = new OpenColumnAdapter();
             List<Character> hour = toCharList(time.open.toCharArray());
             a.setDataList(hour);
-            fillItemsLinearly(open, a);
+            fillItems(open, a);
             int color = Color.TRANSPARENT;
             if (i % 2 == 0) { // even number
                  color = App.getColorF(R.color.colorPrimaryDark);

@@ -62,7 +62,7 @@ public class MainStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(Arrays.asList(mainStages));
-        fillItemsLinearly(stageList, a);
+        fillItems(stageList, a);
     }
 
 

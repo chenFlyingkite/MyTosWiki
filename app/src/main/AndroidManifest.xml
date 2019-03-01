@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.flyingkite.mytoswiki">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_icon"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="userPortrait"
@@ -43,6 +45,18 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c382263cc8a843375abf3fda888980bb01ac48f0" />
+
+        <!--
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        -->
     </application>
 
 </manifest>

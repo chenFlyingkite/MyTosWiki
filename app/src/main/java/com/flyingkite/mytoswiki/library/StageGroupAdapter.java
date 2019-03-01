@@ -58,7 +58,7 @@ public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroup
             a.setItemListener((stage, stageVH, position) -> {
                 viewLinkAsWebDialog(stage.link);
             });
-            fillItemsLinearly(items, a);
+            fillItems(items, a);
         }
     }
 }
