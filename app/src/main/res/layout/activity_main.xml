@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -24,9 +25,62 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/cardPagers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/mainTools">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/cardTabBig"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t20dp"
+                app:tabIndicatorHeight="@dimen/t2dp"
+                app:tabIndicatorColor="@color/green"
+                app:tabSelectedTextColor="@color/green"
+                app:tabRippleColor="@color/skyBlue2"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/cardTabLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t3dp"
+                app:tabIndicatorHeight="@dimen/t2dp"
+                app:tabIndicatorColor="@color/green"
+                app:tabSelectedTextColor="@color/green"
+                app:tabPaddingTop="@dimen/t25dp"
+                app:tabRippleColor="@color/skyBlue2"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/cardPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <!-- Not good looking
+        <android.support.v4.view.ViewPager
+            android:id="@+id/cardPager2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_weight="1">
+
+            <android.support.v4.view.PagerTitleStrip
+                android:id="@+id/cardTStrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v4.view.PagerTitleStrip>
+        </android.support.v4.view.ViewPager>
+        -->
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/cardFragment"
-        android:layout_below="@id/mainTools"
+        android:layout_below="@id/cardPagers"
         android:layout_above="@id/mainBottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

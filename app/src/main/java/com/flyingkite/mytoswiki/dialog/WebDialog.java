@@ -1,6 +1,7 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,29 +18,33 @@ import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
+import com.flyingkite.mytoswiki.util.ShareUtil;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WebDialog extends BaseTosDialog {
-    private List<Integer> toolsIds = Arrays.asList(R.drawable.ic_home_black_48dp
-            , R.drawable.ic_arrow_back_black_48dp
-            , R.drawable.ic_arrow_forward_black_48dp
-            , R.drawable.ic_refresh_black_48
-            , R.drawable.ic_share_black_48dp
-            , R.drawable.ic_clear_black_48dp
-    );
+public class WebDialog extends BaseTosDialog implements ShareUtil {
+    public static final String TAG = "WebDialog";
 
     public static final String BUNDLE_LINK = "WebDialog.WebLink";
-    private static final String tosWikiHome = "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_%E7%B9%81%E4%B8%AD%E7%B6%AD%E5%9F%BA";
+    public static final String BUNDLE_PIN = "WebDialog.pin";
+    public static final String tosWikiHome = "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_%E7%B9%81%E4%B8%AD%E7%B6%AD%E5%9F%BA";
     //private static final String tosWikiHome = "http://zh.tos.wikia.com/wiki/%E7%A5%9E%E9%AD%94%E4%B9%8B%E5%A1%94_Tower_of_Saviors_%E7%BB%B4%E5%9F%BA";
+
     private Library<IconAdapter> iconLibrary;
     private SwipeRefreshLayout swipe;
     private WebView web;
     private ProgressBar progress;
     private String link = tosWikiHome;
+    private boolean pinned = false;
+    private OnWebAction onWeb;
+
+    public interface OnWebAction {
+        default void onBrowse(String link) {}
+        default void onPin(String link, int position) {}
+    }
 
     @Override
     protected int getLayoutId() {
@@ -53,14 +58,17 @@ public class WebDialog extends BaseTosDialog {
         initToolBar();
         initWeb();
         initSwipeRefresh();
-        logImpression();
+        if (pinned) {
+        } else {
+            logImpression();
+        }
     }
 
     private void parseBundle(Bundle b) {
-        boolean hasLink = b != null && b.containsKey(BUNDLE_LINK);
-        if (!hasLink) return;
+        if (b == null) return;
 
-        link = b.getString(BUNDLE_LINK);
+        link = b.getString(BUNDLE_LINK, link);
+        pinned = b.getBoolean(BUNDLE_PIN, pinned);
     }
 
     @Override
@@ -73,11 +81,28 @@ public class WebDialog extends BaseTosDialog {
         }
     }
 
+    private List<Integer> getToolsIds() {
+        List<Integer> ids = new ArrayList<>();
+        ids.add(R.drawable.ic_home_black_48dp);
+        ids.add(R.drawable.ic_arrow_back_black_48dp);
+        ids.add(R.drawable.ic_arrow_forward_black_48dp);
+        ids.add(R.drawable.ic_refresh_black_48);
+        ids.add(R.drawable.ic_share_black_48dp);
+        if (pinned) {
+        } else {
+            ids.add(R.drawable.ic_clear_black_48dp);
+            ids.add(R.drawable.ic_filter_1_black);
+            ids.add(R.drawable.ic_filter_2_black);
+            ids.add(R.drawable.ic_filter_3_black);
+        }
+        return ids;
+    }
+
     private void initToolBar() {
         iconLibrary = new Library<>(findViewById(R.id.wdTools));
         IconAdapter adapter = new IconAdapter();
         adapter.setAutoScroll(true);
-        adapter.setDataList(toolsIds);
+        adapter.setDataList(getToolsIds());
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
@@ -105,6 +130,21 @@ public class WebDialog extends BaseTosDialog {
                     case R.drawable.ic_refresh_black_48:
                         web.reload();
                         break;
+                    case R.drawable.ic_filter_1_black:
+                        if (onWeb != null) {
+                            onWeb.onPin(web.getUrl(), 1);
+                        }
+                        break;
+                    case R.drawable.ic_filter_2_black:
+                        if (onWeb != null) {
+                            onWeb.onPin(web.getUrl(), 2);
+                        }
+                        break;
+                    case R.drawable.ic_filter_3_black:
+                        if (onWeb != null) {
+                            onWeb.onPin(web.getUrl(), 3);
+                        }
+                        break;
                 }
             }
         });
@@ -127,6 +167,12 @@ public class WebDialog extends BaseTosDialog {
         web.setWebViewClient(client);
         web.setWebChromeClient(chromeClient);
         web.loadUrl(link);
+    }
+
+    public void loadUrl(String newLink) {
+        if (web != null) {
+            web.loadUrl(newLink);
+        }
     }
 
     private void initSwipeRefresh() {
@@ -170,6 +216,20 @@ public class WebDialog extends BaseTosDialog {
             return super.shouldOverrideUrlLoading(view, url);
         }
     };
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnWebAction) {
+            onWeb = (OnWebAction) context;
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        onWeb = null;
+    }
 
     //-- Event
 

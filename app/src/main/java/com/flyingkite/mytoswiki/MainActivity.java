@@ -1,14 +1,22 @@
 package com.flyingkite.mytoswiki;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.flyingkite.library.widget.Library;
+import com.flyingkite.mytoswiki.data.WebPin;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
+import com.flyingkite.mytoswiki.dialog.BaseTosDialog;
 import com.flyingkite.mytoswiki.dialog.CardSealDialog;
 import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.DailyStageDialog;
@@ -31,15 +39,18 @@ import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.PageUtil;
+import com.flyingkite.util.PGAdapter;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.TextEditorDialog;
 import com.flyingkite.util.WaitingDialog;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends BaseActivity implements
         TosCardFragment.ToolBarOwner,
+        WebDialog.OnWebAction,
         PageUtil
 {
     // Provide alternative bitmaps
@@ -68,6 +79,8 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
+    private ViewPager cardPager;
+    private List<String> homePagerTags = new ArrayList<>();
 
     @Override
     public void log(String message) {
@@ -77,13 +90,120 @@ public class MainActivity extends BaseActivity implements
     private WaitingDialog waiting;
 
     @Override
+    public void onBackPressed() {
+        if (onBackCardPager()) {
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    private boolean onBackCardPager() {
+        int page = cardPager.getCurrentItem();
+        if (page > 0) {
+            Fragment f = findFragmentByTag(homePagerTags.get(page));
+            if (f instanceof BaseTosDialog) {
+                BaseTosDialog b = (BaseTosDialog) f;
+                if (b.onBackPressed()) {
+                    return true;
+                } else {
+                    cardPager.setCurrentItem(0);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initToolIcons();
-        addTosFragment();
+        //addTosFragment();
         showCardsLoading();
+    }
+
+    private void initPager() {
+        cardPager = findViewById(R.id.cardPager);
+        ViewPager p = cardPager;
+        boolean atLeast17 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
+
+        PGAdapter<String> pga = new PGAdapter<String>() {
+            @Override
+            public int pageLayoutId(ViewGroup parent, int position) {
+                return R.layout.view_box;
+            }
+
+            @Override
+            public void onCreateView(View v, int position) {
+                int id = R.id.layoutBox;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                    id = View.generateViewId();
+                }
+
+                Bundle b = new Bundle();
+                Fragment f;
+                FragmentManager fm = getFragmentManager();
+
+                v.setId(id);
+                switch (position) {
+                    case 0:
+                        TosCardFragment fg = new TosCardFragment();
+                        f = fg;
+                        break;
+                    default:
+                        WebDialog d = new WebDialog();
+                        f = d;
+                        b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
+                        b.putBoolean(WebDialog.BUNDLE_PIN, true);
+                }
+
+                f.setArguments(b);
+                fm.beginTransaction().replace(id, f, itemOf(position)).commitAllowingStateLoss();
+                fm.executePendingTransactions();
+            }
+
+            @Nullable
+            @Override
+            public CharSequence getPageTitle(int position) {
+                switch (position) {
+                    case 0:
+                        return getString(R.string.card);
+                    default:
+                        return getString(R.string.web) + " " + position;
+                }
+            }
+        };
+        List<String> data = homePagerTags;
+        data.add(TosCardFragment.TAG);
+        if (atLeast17) {
+            data.add(WebDialog.TAG + "_1");
+            data.add(WebDialog.TAG + "_2");
+            data.add(WebDialog.TAG + "_3");
+        }
+        pga.setDataList(data);
+        p.setAdapter(pga);
+        p.setOffscreenPageLimit(data.size()); // keep all items
+
+        TabLayout t;
+        t = findViewById(R.id.cardTabBig);
+        t.setupWithViewPager(p); // Major tab
+
+        t = findViewById(R.id.cardTabLine);
+        t.setupWithViewPager(p); // Thin tab
+    }
+
+    @Override
+    public void onPin(String link, int position) {
+        Fragment f = findFragmentByTag(WebDialog.TAG + "_" + position);
+        if (f instanceof WebDialog) {
+            WebDialog w = (WebDialog) f;
+            w.loadUrl(link);
+            showToast(getString(R.string.web_pinned) + " " + position + " : " + decodeURL(link));
+            webPin.set(position, link);
+            TosWiki.saveWebPin(webPin);
+        }
     }
 
     @Override
@@ -195,6 +315,7 @@ public class MainActivity extends BaseActivity implements
 
     private void updateTools(boolean visible) {
         iconLibrary.recyclerView.setVisibility(visible ? View.VISIBLE : View.GONE);
+        setViewVisibility(findViewById(R.id.cardTabBig), visible);
     }
 
     @Override
@@ -213,6 +334,8 @@ public class MainActivity extends BaseActivity implements
         TosWiki.attendDatabaseTasks(onDatabaseState);
     }
 
+    private WebPin webPin = new WebPin();
+
     private TaskMonitor.OnTaskState onDatabaseState = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
@@ -220,14 +343,17 @@ public class MainActivity extends BaseActivity implements
             if (isActivityGone()) return;
 
             runOnUiThread(() -> {
-                if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
-
+                if (TosWiki.TAG_WEB_PIN.equals(tag)) {
+                    webPin = TosWiki.getWebPin();
+                } else if (TosWiki.TAG_ALL_CARDS.equals(tag)) {
                     int n = TosWiki.getAllCardsCount();
                     showToast(R.string.cards_read, n);
                     if (waiting != null) {
                         waiting.dismiss();
                         waiting = null;
                     }
+
+                    initPager();
                 }
             });
         }

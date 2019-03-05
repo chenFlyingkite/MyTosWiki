@@ -30,6 +30,8 @@
     <string name="time">時間</string>
     <string name="dateLine">換日線</string>
     <string name="unknown_card">未知卡片</string>
+    <string name="card">卡片</string>
+    <string name="web">網頁</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -634,6 +636,7 @@
 \n★符石的個數僅計算取3的餘數\n => (例如 17火 + 13水 = (2, 1) )</string>
 
 
+    <string name="web_pinned">已釘選網頁</string>
 
     <string name="a1">第二屆武術大會 猿真
 卡還OK可以打一張

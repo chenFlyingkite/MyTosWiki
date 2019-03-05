@@ -47,7 +47,7 @@ public class ShareHelper {
         shareString(context, msg, context.getString(R.string.share_to));
     }
 
-    public static void shareString(@NonNull Context context, String msg, String chooser) {
+    public static void shareString(@NonNull Context context, String msg, CharSequence chooser) {
         Intent it = new Intent(Intent.ACTION_SEND);
         it.putExtra(Intent.EXTRA_TEXT, msg);
         it.setType("text/plain");

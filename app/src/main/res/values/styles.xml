@@ -108,6 +108,10 @@
         <item name="android:paddingLeft">@dimen/t5dp</item>
         <item name="android:paddingRight">@dimen/t5dp</item>
     </style>
+    <style name="cardText.w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="cardText.header">
         <item name="android:textSize">@dimen/t15dp</item>
     </style>

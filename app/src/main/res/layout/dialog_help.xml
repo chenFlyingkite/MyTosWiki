@@ -82,17 +82,13 @@
 
                 <TextView
                     android:id="@+id/help_yellow_text"
-                    style="@style/cardText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/cardText.w"
                     android:text="黃色的字可以點擊"
                     android:textColor="@color/yellow" />
 
                 <TextView
                     android:id="@+id/help_blue_text"
-                    style="@style/cardText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/cardText.w"
                     android:text="藍色的字可以點擊"
                     android:textColor="@color/skyBlue" />
 
@@ -109,10 +105,34 @@
                         android:background="@color/green"/>
 
                     <TextView
-                        style="@style/cardText"
+                        style="@style/cardText.w"
+                        android:text="移除:輕觸卡片上下滑動\n重排:長按卡片左右移動"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="移除:輕觸卡片上下滑動\n重排:長按卡片左右移動"/>
+                        android:orientation="horizontal">
+                        <ImageView
+                            style="@style/icon_t40"
+                            android:src="@drawable/ic_filter_1_white"/>
+                        <ImageView
+                            style="@style/icon_t40"
+                            android:src="@drawable/ic_filter_2_white"/>
+                        <ImageView
+                            style="@style/icon_t40"
+                            android:src="@drawable/ic_filter_3_white"/>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/cardText.w"
+                        android:text="點選 [1] [2] [3] 可釘選網頁至首頁"/>
+
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

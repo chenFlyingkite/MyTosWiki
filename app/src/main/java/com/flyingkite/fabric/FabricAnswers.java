@@ -83,6 +83,10 @@ public class FabricAnswers {
         logCustom("Favorite", attributes);
     }
 
+    public static void logWebPin(Map<String, String> attributes) {
+        logCustom("WebPin", attributes);
+    }
+
     public static void logRealmStage(Map<String, String> attributes) {
         logCustom("RealmStage", attributes);
     }

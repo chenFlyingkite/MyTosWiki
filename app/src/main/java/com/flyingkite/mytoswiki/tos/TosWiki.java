@@ -13,6 +13,7 @@ import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.data.CardFavor;
+import com.flyingkite.mytoswiki.data.WebPin;
 import com.flyingkite.mytoswiki.data.stage.MainStage;
 import com.flyingkite.mytoswiki.data.stage.RelicStage;
 import com.flyingkite.mytoswiki.data.stage.StageGroup;
@@ -22,6 +23,7 @@ import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.OnAction;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+import com.flyingkite.mytoswiki.util.UrlUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
@@ -42,6 +44,7 @@ public class TosWiki {
     private static HashMap<String, TosCard> allCardsByIdNorm = new HashMap<>();
     private static HashMap<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
     private static CardFavor cardFavor;
+    private static WebPin webPin;
     private static MainStage[] mainStages;
     private static RelicStage[][] relicStages;
     private static StageGroup[] storyStages;
@@ -57,9 +60,11 @@ public class TosWiki {
     public static final String TAG_RELIC_PASS = "RelicPass";
     public static final String TAG_STORY_STAGE = "StoryStage";
     public static final String TAG_REALM_STAGE = "RealmStage";
+    public static final String TAG_WEB_PIN = "WebPin";
     public static final String[] TAG_ALL_TASKS = {
             TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR,
-            TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE, TAG_REALM_STAGE
+            TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE, TAG_REALM_STAGE,
+            TAG_WEB_PIN
     };
 
     public static void init(Context ctx) {
@@ -130,7 +135,7 @@ public class TosWiki {
         });
 
         p.submit(() -> {
-            TicTac2 t = new TicTac2();
+            TicTac2 t = new TicTac2.v();
             t.tic();
             relicStages = GsonUtil.loadAsset("relicPass.json", RelicStage[][].class, am);
             t.tac("%s relic stages loaded", relicStages.length);
@@ -150,6 +155,21 @@ public class TosWiki {
             t.tic();
             realmStages = GsonUtil.loadAsset("voidRealm.json", MainStage[].class, am);
             t.tac("%s realm stages loaded", realmStages.length);
+            monitorDB.notifyClientsState();
+        });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2.v();
+            t.tic();
+            File f = getWebPinFile();
+            if (f.exists()) {
+                webPin = GsonUtil.loadFile(f, WebPin.class);
+            }
+            if (webPin == null) {
+                webPin = new WebPin();
+            }
+            logWebPin(webPin);
+            t.tac("web pinned as\n%s", webPin);
             monitorDB.notifyClientsState();
         });
     }
@@ -191,6 +211,18 @@ public class TosWiki {
 
     public static void leftFavorAction(@NonNull OnAction action) {
         favorActions.remove(action);
+    }
+
+    private static File getWebPinFile() {
+        return ShareHelper.extFilesFile("webPin.txt");
+    }
+
+    public static WebPin getWebPin() {
+        return webPin;
+    }
+
+    public static void saveWebPin(WebPin w) {
+        GsonUtil.writeFile(getWebPinFile(), new Gson().toJson(w));
     }
 
     private static File getTosCardFavorFile() {
@@ -263,6 +295,7 @@ public class TosWiki {
                 case TAG_RELIC_PASS: return relicStages != null;
                 case TAG_STORY_STAGE: return storyStages != null;
                 case TAG_REALM_STAGE: return realmStages != null;
+                case TAG_WEB_PIN: return webPin != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:
                     throw new NullPointerException(taskCount() + " tasks but did not define done for " + index);
@@ -291,6 +324,15 @@ public class TosWiki {
         m.put("card", card);
         FabricAnswers.logFavorite(m);
     }
+
+    private static void logWebPin(WebPin w) {
+        Map<String, String> m = new HashMap<>();
+        m.put("w1", UrlUtil.decodeURL(w.web1));
+        m.put("w2", UrlUtil.decodeURL(w.web2));
+        m.put("w3", UrlUtil.decodeURL(w.web3));
+        FabricAnswers.logWebPin(m);
+    }
+
     //-- Events
 
     private static void checkCards() {

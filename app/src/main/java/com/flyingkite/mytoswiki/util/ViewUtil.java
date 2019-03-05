@@ -49,6 +49,8 @@ public interface ViewUtil {
     }
 
     default void setViewVisibility(View v, boolean show) {
+        if (v == null) return;
+
         int vis = show ? View.VISIBLE : View.GONE;
         v.setVisibility(vis);
     }

@@ -21,9 +21,6 @@ import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-
 public interface PageUtil extends Loggable, ViewUtil {
 
     Activity getActivity();
@@ -147,12 +144,7 @@ public interface PageUtil extends Loggable, ViewUtil {
     }
 
     default String decodeURL(String s) {
-        try {
-            return URLDecoder.decode(s, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return s;
+        return UrlUtil.decodeURL(s);
     }
 
     default boolean isActivityGone() {
