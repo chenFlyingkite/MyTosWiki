@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="5">
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_god"
+        android:src="@drawable/inv_god"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_demon"
+        android:src="@drawable/inv_fiend"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_human"
+        android:src="@drawable/inv_human"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_beast"
+        android:src="@drawable/inv_beast"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_dragon"
+        android:src="@drawable/inv_dragon"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_elf"
+        android:src="@drawable/inv_elf"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_race_machina"
+        android:src="@drawable/inv_machina"/>
+</GridLayout>

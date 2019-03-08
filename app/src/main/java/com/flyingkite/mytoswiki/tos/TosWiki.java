@@ -327,9 +327,9 @@ public class TosWiki {
 
     private static void logWebPin(WebPin w) {
         Map<String, String> m = new HashMap<>();
-        m.put("w1", UrlUtil.decodeURL(w.web1));
-        m.put("w2", UrlUtil.decodeURL(w.web2));
-        m.put("w3", UrlUtil.decodeURL(w.web3));
+        m.put("w1", UrlUtil.liteLink(w.web1));
+        m.put("w2", UrlUtil.liteLink(w.web2));
+        m.put("w3", UrlUtil.liteLink(w.web3));
         FabricAnswers.logWebPin(m);
     }
 

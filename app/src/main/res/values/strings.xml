@@ -445,6 +445,8 @@
     <string name="craft_hide_2xxx">龍刻武裝素材</string>
     <string name="craft_hide_3xxx">龍刻武裝</string>
     <string name="craft_sort_major_order">(模式>星>屬性>種族)</string>
+    <string name="craft_card_sample">例如搜尋 : (水|火|神族|人類|)</string>
+    <string name="craft_stone_sample">例如搜尋 : 轉化為(水|水強化|火|火強化|) 符石</string>
     <string-array name="craft_common_keys_mode">
         <item>@string/craft_1_key_pattern</item>
         <item>@string/craft_2_key_seal</item>
@@ -476,7 +478,85 @@
         <item>@string/cards_race_evolve</item>
         <item>@string/cards_race_level</item>
     </string-array>
+    <string name="craft_attack_increase">攻擊力提升</string>
+    <string name="craft_recovery_increase">回復力提升</string>
+    <string name="craft_cd_decrease">技能 CD 減少</string>
+    <string name="craft_hp_add">回復生命力</string>
+    <string name="craft_regard_puzzle">無視指定形狀盾</string>
+    <string name="craft_regard_all_attr">無視五屬盾</string>
+    <string name="craft_regard_attack_first">無視攻前盾</string>
+    <string name="craft_damage_less">減少所受傷害</string>
+    <string name="craft_all_deal_damage">對全體敵人造成 X 點無屬性傷害</string>
+    <string name="craft_one_deal_damage">對單一敵人造成 X 點 Y 屬性傷害</string>
+    <string name="craft_delay_cd">延遲 敵人行動 X 回合</string>
+    <string name="craft_single_to_full">單體攻擊轉化為全體攻擊</string>
+    <string-array name="craft_attack_increase_keys">
+        <item>攻擊力提升</item>
+    </string-array>
+    <string-array name="craft_recovery_increase_keys">
+        <item>回復力提升</item>
+    </string-array>
+    <string-array name="craft_cd_decrease_keys">
+        <item>技能 CD 減少</item>
+    </string-array>
+    <string-array name="craft_regardless_of_attribute_keys">
+        <item>無視屬性相剋</item>
+    </string-array>
+    <string-array name="craft_hp_add_keys">
+        <item>完全回復生命力</item>
+        <item>回復 100% 生命力</item>
+        <item>回復 90% 生命力</item>
+        <item>回復 80% 生命力</item>
+        <item>回復 75% 生命力</item>
+        <item>回復 65% 生命力</item>
+        <item>回復 60% 生命力</item>
+        <item>回復 50% 生命力</item>
+        <item>回復 12000 點生命力</item>
+        <item>回復 8000 點生命力</item>
+    </string-array>
+    <string-array name="craft_regard_puzzle_keys">
+        <item>無視指定形狀盾</item>
+    </string-array>
+    <string-array name="craft_regard_all_attr_keys">
+        <item>無視五屬盾</item>
+    </string-array>
+    <string-array name="craft_regard_attack_first_keys">
+        <item>無視攻前盾</item>
+    </string-array>
+    <string-array name="craft_damage_less_keys">
+        <item>減少所受傷害</item>
+        <item>減少 80% 所受傷害</item>
+    </string-array>
+    <string-array name="craft_all_deal_damage_keys">
+        <item>對全體敵人造成</item>
+    </string-array>
+    <string-array name="craft_one_deal_damage_keys">
+        <item>對單一敵人造成</item>
+    </string-array>
+    <string-array name="craft_dodge_keys">
+        <item>迴避</item>
+    </string-array>
+    <string-array name="craft_damage_to_hp_keys">
+        <item>轉化為我方生命力</item>
+    </string-array>
+    <string-array name="craft_delay_cd_keys">
+        <!-- 全體 / 火屬性  敵人行動 -->
+        <item>延遲</item>
+    </string-array>
+    <string-array name="craft_single_to_full_keys">
+        <item>單體攻擊轉化為全體攻擊</item>
+    </string-array>
+    <string-array name="craft_regardless_of_defense_keys">
+        <item>敵人防禦力下降</item>
+        <item>此傷害無視防禦力</item>
+    </string-array>
+    <string-array name="craft_turn_runestone_keys">
+        <item>符石轉化為</item>
+    </string-array>
 
+    <!-- omit
+    1 回合內，以所受傷害 30 倍對敵方全體進行無屬性反擊
+    -->
 
 
     <string name="texts_tools">文字區域</string>

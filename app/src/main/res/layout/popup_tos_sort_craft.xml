@@ -116,75 +116,20 @@
                 <TextView
                     style="@style/sortTitle"
                     android:text="@string/craft_attr"/>
-                <LinearLayout
-                    android:id="@+id/sortAttributes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_water"
-                        android:src="@drawable/inv_water"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_fires"
-                        android:src="@drawable/inv_fire"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_earth"
-                        android:src="@drawable/inv_earth"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_light"
-                        android:src="@drawable/inv_light"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_darks"
-                        android:src="@drawable/inv_dark"/>
-                </LinearLayout>
+                <include
+                    android:id="@+id/sortAttributes"
+                    layout="@layout/grid_attr"/>
 
                 <!-- 種族 -->
                 <TextView
                     android:id="@+id/sortRaceTitle"
                     style="@style/sortTitle"
                     android:text="@string/craft_race"/>
-                <GridLayout
+
+                <include
                     android:id="@+id/sortRaces"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:columnCount="5">
-
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_god"
-                        android:src="@drawable/inv_god"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_demon"
-                        android:src="@drawable/inv_fiend"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_human"
-                        android:src="@drawable/inv_human"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_beast"
-                        android:src="@drawable/inv_beast"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_dragon"
-                        android:src="@drawable/inv_dragon"/>
-
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_elf"
-                        android:src="@drawable/inv_elf"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_machina"
-                        android:src="@drawable/inv_machina"/>
-                </GridLayout>
+                    layout="@layout/grid_race"/>
 
                 <TextView
                     android:id="@+id/sortNoLimit"
@@ -207,6 +152,194 @@
                         style="@style/sortText"
                         android:checked="true"
                         android:text="@string/craft_limit_all_race"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Select skills -->
+            <TextView
+                style="@style/sortTitle"
+                android:text="@string/cards_special"/>
+
+            <LinearLayout
+                android:id="@+id/sortSpecialList"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/t20dp">
+                <CheckBox
+                    android:id="@+id/sortSpecialNo"
+                    style="@style/sortText"
+                    android:text="@string/cards_no"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardlessDefense"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_defense"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardlessAttr"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_attribute"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardPuzzle"
+                    style="@style/sortText"
+                    android:text="@string/craft_regard_puzzle"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardAllAttr"
+                    style="@style/sortText"
+                    android:text="@string/craft_regard_all_attr"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardAttackFirst"
+                    style="@style/sortText"
+                    android:text="@string/craft_regard_attack_first"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortRegardDamageLess"
+                    style="@style/sortText"
+                    android:text="@string/craft_damage_less"/>
+
+                <CheckBox
+                    android:id="@+id/sortNoDefeat"
+                    style="@style/sortText"
+                    android:text="@string/cards_no_defeat"/>
+
+                <CheckBox
+                    android:id="@+id/sortDodge"
+                    style="@style/sortText"
+                    android:text="@string/cards_dodge"/>
+
+                <CheckBox
+                    android:id="@+id/sortDamageToHp"
+                    style="@style/sortText"
+                    android:text="@string/cards_damage_to_hp"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortAllDealDamage"
+                    style="@style/sortText"
+                    android:text="@string/craft_all_deal_damage"/>
+
+                <CheckBox
+                    android:id="@+id/sortOneDealDamage"
+                    style="@style/sortText"
+                    android:text="@string/craft_one_deal_damage"/>
+
+                <CheckBox
+                    android:id="@+id/sortExtraAttack"
+                    style="@style/sortText"
+                    android:text="@string/cards_extra_attack"/>
+
+                <CheckBox
+                    android:id="@+id/sortDelayCD"
+                    style="@style/sortText"
+                    android:text="@string/craft_delay_cd"/>
+
+                <CheckBox
+                    android:id="@+id/sortSingleToFull"
+                    style="@style/sortText"
+                    android:text="@string/craft_single_to_full"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortRecoveryInc"
+                    style="@style/sortText"
+                    android:text="@string/craft_recovery_increase"/>
+
+                <CheckBox
+                    android:id="@+id/sortHpAdd"
+                    style="@style/sortText"
+                    android:text="@string/craft_hp_add"/>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortAttackInc"
+                    style="@style/sortText"
+                    android:text="@string/craft_attack_increase"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/sortText2"
+                            android:text="@string/craft_card_sample"/>
+                        <TextView
+                            style="@style/sortText2"
+                            android:paddingLeft="@dimen/t10dp"
+                            android:text="@string/craft_attack_increase"/>
+                    </LinearLayout>
+                    <include
+                        android:id="@+id/sortAttackIncCard"
+                        layout="@layout/grid_attr_race"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortColdDownDec"
+                    style="@style/sortText"
+                    android:text="@string/craft_cd_decrease"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/sortText2"
+                            android:text="@string/craft_card_sample"/>
+                        <TextView
+                            style="@style/sortText2"
+                            android:paddingLeft="@dimen/t10dp"
+                            android:text="@string/craft_cd_decrease"/>
+                    </LinearLayout>
+                    <include
+                        android:id="@+id/sortColdDownDecCard"
+                        layout="@layout/grid_attr_race"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortRunestone"
+                    style="@style/sortText"
+                    android:text="@string/cards_turn_runestone"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/sortText2"
+                        android:text="@string/craft_stone_sample"/>
+
+                    <include
+                        android:id="@+id/sortRunestoneItem"
+                        layout="@layout/grid_stone_attr"/>
                 </LinearLayout>
             </LinearLayout>
 

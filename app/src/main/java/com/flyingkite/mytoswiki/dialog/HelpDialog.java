@@ -39,7 +39,7 @@ public class HelpDialog extends BaseTosDialog {
         });
         setSimpleCard(findViewById(R.id.help_card_icon), TosWiki.getCardByIdNorm("1777"));
         findViewById(R.id.help_select).setOnClickListener((v) -> {
-            v.setSelected(!v.isSelected());
+            toggleSelected(v);
         });
         findViewById(R.id.help_yellow_text).setOnClickListener((v) -> {
             showToast("已點擊黃色字");

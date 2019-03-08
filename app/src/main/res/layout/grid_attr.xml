@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_attr_water"
+        android:src="@drawable/inv_water"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_attr_fires"
+        android:src="@drawable/inv_fire"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_attr_earth"
+        android:src="@drawable/inv_earth"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_attr_light"
+        android:src="@drawable/inv_light"/>
+
+    <ImageView
+        style="@style/sortIcon"
+        android:tag="@string/cards_attr_darks"
+        android:src="@drawable/inv_dark"/>
+</LinearLayout>

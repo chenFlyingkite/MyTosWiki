@@ -55,6 +55,11 @@ public interface ViewUtil {
         v.setVisibility(vis);
     }
 
+    default void toggleSelected(View v) {
+        if (v == null) return;
+        v.setSelected(!v.isSelected());
+    }
+
     default void setVisibilityByChild(ViewGroup vg) {
         int n = vg.getChildCount();
         if (n == 0) return;
@@ -94,6 +99,16 @@ public interface ViewUtil {
         }
     }
 
+    default void setCheckChildClick(ViewGroup vg, View.OnClickListener clk) {
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View w = vg.getChildAt(i);
+            if (w instanceof Checkable) {
+                w.setOnClickListener(clk);
+            }
+        }
+    }
+
     default void setViewCheck(boolean check, View v) {
         Checkable c;
         if (v instanceof Checkable) {
@@ -105,6 +120,12 @@ public interface ViewUtil {
     default <T extends ViewGroup> T setTargetChildClick(View parent, @IdRes int targetId, View.OnClickListener childClick) {
         T vg = parent.findViewById(targetId);
         setChildClick(vg, childClick);
+        return vg;
+    }
+
+    default <T extends ViewGroup> T setTargetCheckChildClick(View parent, @IdRes int targetId, View.OnClickListener childClick) {
+        T vg = parent.findViewById(targetId);
+        setCheckChildClick(vg, childClick);
         return vg;
     }
 
@@ -121,7 +142,6 @@ public interface ViewUtil {
         }
 
         int vid = clicked.getId();
-        Checkable c;
         if (vid != noId) {
             // uncheck no first since select other
             setViewCheck(false, noView);
@@ -157,15 +177,19 @@ public interface ViewUtil {
         return true;
     }
 
-    default void toggleSelection(View v, ViewGroup vg) {
-        v.setSelected(!v.isSelected());
+    default void toggleAndClearIfAll(View v, ViewGroup vg) {
+        toggleSelected(v);
+        clearIfAllSelected(vg);
+    }
+
+    default void clearIfAllSelected(ViewGroup vg) {
         // Deselect all if all selected
         if (isAllAsSelected(vg, true)) {
-            setAllChildrenSelected(vg, false);
+            setAllChildSelected(vg, false);
         }
     }
 
-    default void setAllChildrenSelected(ViewGroup vg, boolean sel) {
+    default void setAllChildSelected(ViewGroup vg, boolean sel) {
         if (vg == null) return;
 
         int n = vg.getChildCount();
@@ -174,6 +198,50 @@ public interface ViewUtil {
         }
     }
 
+    /**
+     * Set parent as checked if any child is selected
+     */
+    default void checkParentIfSelectAnyItem(ViewGroup items, Checkable parent, Checkable noView) {
+        // select parent if any child selected
+        boolean any = isAnyAsSelected(items, true);
+        if (any) {
+            if (parent != null) {
+                parent.setChecked(true);
+            }
+            if (noView != null) {
+                noView.setChecked(false);
+            }
+        }
+    }
+
+    default void clearChildIfParentUnchecked(ViewGroup items, Checkable parent) {
+        if (parent != null) {
+            if (!parent.isChecked()) {
+                setAllChildSelected(items, false);
+            }
+        }
+    }
+
+    /**
+     * @return true if ANY child's isSelected() == selected,
+     *         false otherwise
+     */
+    default boolean isAnyAsSelected(ViewGroup vg, boolean selected) {
+        if (vg == null) return false;
+
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            if (vg.getChildAt(i).isSelected() == selected) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @return true if ALL children's isSelected() == selected,
+     *         false otherwise
+     */
     default boolean isAllAsSelected(ViewGroup vg, boolean selected) {
         if (vg == null) return false;
 
@@ -210,6 +278,8 @@ public interface ViewUtil {
     }
 
     default void setTextOrHide(TextView t, CharSequence cs) {
+        if (t == null) return;
+
         if (TextUtils.isEmpty(cs)) {
             t.setVisibility(View.GONE);
         } else {

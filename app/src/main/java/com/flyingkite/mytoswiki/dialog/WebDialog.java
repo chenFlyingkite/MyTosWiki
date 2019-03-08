@@ -14,11 +14,11 @@ import android.widget.ProgressBar;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
-import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.util.ShareUtil;
+import com.flyingkite.mytoswiki.util.UrlUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -234,14 +234,9 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
     //-- Event
 
     private String liteLink(String link) {
-        String s = decodeURL(link);
-        int x = s.lastIndexOf("/");
-        if (MathUtil.isInRange(x, 0, s.length() - 1)) {
-            return s.substring(x + 1);
-        } else {
-            return s;
-        }
+        return UrlUtil.liteLink(link);
     }
+
     private void logImpression() {
         Map<String, String> m = new HashMap<>();
         m.put("link", liteLink(link));

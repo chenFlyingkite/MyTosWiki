@@ -135,7 +135,7 @@ public class CardDialog extends BaseTosDialog {
         });
         View favor = findViewById(R.id.cardFavor);
         favor.setOnClickListener((v) -> {
-            v.setSelected(!v.isSelected());
+            toggleSelected(v);
 
             boolean add = v.isSelected();
             TosWiki.getCardFavor().addOrRemove(add, card.idNorm);

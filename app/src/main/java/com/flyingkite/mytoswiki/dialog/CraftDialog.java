@@ -2,6 +2,7 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.ArrayRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,6 +23,7 @@ import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.CraftSort;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
+import com.flyingkite.mytoswiki.data.tos.CraftSkill;
 import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.library.CraftAdapter;
 import com.flyingkite.mytoswiki.library.Misc;
@@ -29,6 +31,7 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
+import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
@@ -41,6 +44,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
+
+import flyingkite.tool.StringUtil;
 
 public class CraftDialog extends BaseTosDialog {
     private Library<CraftAdapter> craftLibrary;
@@ -66,6 +72,32 @@ public class CraftDialog extends BaseTosDialog {
     private ViewGroup sortLimit;
     private CheckBox sortLimitAttr;
     private CheckBox sortLimitRace;
+    // 技能
+    private ViewGroup sortSpecialList;
+    private CheckBox sortSpecialNo;
+    private CheckBox sortRecoveryInc;
+    private CheckBox sortRegardlessAttr;
+    private CheckBox sortHpAdd;
+    private CheckBox sortRegardPuzzle;
+    private CheckBox sortRegardAllAttr;
+    private CheckBox sortRegardAttackFirst;
+    private CheckBox sortRegardDamageLess;
+    private CheckBox sortAllDealDamage;
+    private CheckBox sortOneDealDamage;
+    private CheckBox sortDodge;
+    private CheckBox sortDamageToHp;
+    private CheckBox sortDelayCD;
+    private CheckBox sortSingleToFull;
+    private CheckBox sortNoDefeat;
+    private CheckBox sortRegardlessDefense;
+    private CheckBox sortExtraAttack;
+
+    private CheckBox sortAttackInc;
+    private ViewGroup sortAttackIncCard;
+    private CheckBox sortColdDownDec;
+    private ViewGroup sortColdDownDecCard;
+    private CheckBox sortRunestone;
+    private ViewGroup sortRunestoneItem;
     // Common Sorting order
     private RadioGroup sortCommon;
     // Display card name
@@ -83,6 +115,8 @@ public class CraftDialog extends BaseTosDialog {
 
         initClose();
         initSortMenu();
+        resetMenu();
+
         initScrollTools(R.id.craftGoTop, R.id.craftGoBottom, findViewById(R.id.craftRecycler));
 
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
@@ -240,12 +274,13 @@ public class CraftDialog extends BaseTosDialog {
         initShareImage(menu);
         initSortReset(menu);
         initSortByMode(menu);
+        initSortByStar(menu);
         initSortByAttribute(menu);
         initSortByRace(menu);
         initSortLimit(menu);
-        initSortByStar(menu);
-        initSortByHide(menu);
+        initSortBySpecial(menu);
         initSortByCommon(menu);
+        initSortByHide(menu);
         initDisplay(menu);
     }
 
@@ -278,6 +313,7 @@ public class CraftDialog extends BaseTosDialog {
 
     private void initSortByCommon(View menu) {
         sortCommon = initSortOf(menu, R.id.sortCommonList, this::clickCommon);
+        sortCommon.check(R.id.sortCommonNormId);
     }
 
     private void initSortByHide(View menu) {
@@ -289,13 +325,45 @@ public class CraftDialog extends BaseTosDialog {
         sortDisplay.check(R.id.sortDisplayName);
     }
 
+    private void initSortBySpecial(View menu) {
+        sortSpecialNo = menu.findViewById(R.id.sortSpecialNo);
+        sortRegardlessAttr = menu.findViewById(R.id.sortRegardlessAttr);
+        sortAttackInc = menu.findViewById(R.id.sortAttackInc);
+        sortRecoveryInc = menu.findViewById(R.id.sortRecoveryInc);
+        sortColdDownDec = menu.findViewById(R.id.sortColdDownDec);
+        sortHpAdd = menu.findViewById(R.id.sortHpAdd);
+        sortRegardPuzzle = menu.findViewById(R.id.sortRegardPuzzle);
+        sortRegardAllAttr = menu.findViewById(R.id.sortRegardAllAttr);
+        sortRegardAttackFirst = menu.findViewById(R.id.sortRegardAttackFirst);
+        sortRegardDamageLess = menu.findViewById(R.id.sortRegardDamageLess);
+        sortAllDealDamage = menu.findViewById(R.id.sortAllDealDamage);
+        sortOneDealDamage = menu.findViewById(R.id.sortOneDealDamage);
+        sortDodge = menu.findViewById(R.id.sortDodge);
+        sortDamageToHp = menu.findViewById(R.id.sortDamageToHp);
+        sortDelayCD = menu.findViewById(R.id.sortDelayCD);
+        sortSingleToFull = menu.findViewById(R.id.sortSingleToFull);
+        sortNoDefeat = menu.findViewById(R.id.sortNoDefeat);
+        sortRegardlessDefense = menu.findViewById(R.id.sortRegardlessDefense);
+        sortRunestone = menu.findViewById(R.id.sortRunestone);
+        sortExtraAttack = menu.findViewById(R.id.sortExtraAttack);
+
+        sortAttackIncCard = initSortOf(menu, R.id.sortAttackIncCard, this::clickAttackInc);
+        sortColdDownDecCard = initSortOf(menu, R.id.sortColdDownDecCard, this::clickColdDownDec);
+        sortRunestoneItem = initSortOf(menu, R.id.sortRunestoneItem, this::clickStoneItem);
+        sortSpecialList = initSortCheckOf(menu, R.id.sortSpecialList, this::clickSpecial);
+    }
+
     private void initShareImage(View parent) {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
             View view = craftLibrary.recyclerView;
             String name = ShareHelper.cacheName("1.png");
-            ShareHelper.shareImage(getActivity(), view, name);
+            shareImage(view, name);
             logShare("library");
         });
+    }
+
+    private <T extends ViewGroup> T initSortCheckOf(View menu, @IdRes int id, View.OnClickListener childClick) {
+        return setTargetCheckChildClick(menu, id, childClick);
     }
 
     private <T extends ViewGroup> T initSortOf(View menu, @IdRes int id, View.OnClickListener childClick) {
@@ -303,17 +371,18 @@ public class CraftDialog extends BaseTosDialog {
     }
     // --------
 
-    // click on sort items  --------
-    private void clickReset(View v) {
+    private void resetMenu() {
         ViewGroup[] vgs = {sortMode, sortAttr, sortRace, sortStar};
         for (ViewGroup vg : vgs) {
-            setAllChildrenSelected(vg, false);
+            setAllChildSelected(vg, false);
         }
         sortCommon.check(R.id.sortCommonNormId);
-//        sortCassandra.check(R.id.sortCassandraNo);
-//        setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
-//        setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
+        checkSpecialView(sortSpecialNo);
+    }
 
+    // click on sort items  --------
+    private void clickReset(View v) {
+        resetMenu();
         applySelection();
     }
 
@@ -334,17 +403,44 @@ public class CraftDialog extends BaseTosDialog {
     }
 
     private void clickHide(View v) {
-        v.setSelected(!v.isSelected());
+        toggleSelected(v);
+        applySelection();
+    }
+
+    private void checkSpecialView(View v) {
+        setCheckedIncludeNo(v, R.id.sortSpecialNo, sortSpecialList);
+        clearChildIfParentUnchecked(sortAttackIncCard, sortAttackInc);
+        clearChildIfParentUnchecked(sortColdDownDecCard, sortColdDownDec);
+        clearChildIfParentUnchecked(sortRunestoneItem, sortRunestone);
+    }
+
+    private void clickSpecial(View v) {
+        checkSpecialView(v);
+
+        applySelection();
+    }
+
+    private void clickAttackInc(View v) {
+        toggleSelected(v);
+        checkParentIfSelectAnyItem(sortAttackIncCard, sortAttackInc, sortSpecialNo);
+        applySelection();
+    }
+
+    private void clickColdDownDec(View v) {
+        toggleSelected(v);
+        checkParentIfSelectAnyItem(sortColdDownDecCard, sortColdDownDec, sortSpecialNo);
+        applySelection();
+    }
+
+    private void clickStoneItem(View v) {
+        toggleSelected(v);
+        checkParentIfSelectAnyItem(sortRunestoneItem, sortRunestone, sortSpecialNo);
         applySelection();
     }
 
     private void clickCommon(View v) {
         int id = v.getId();
         sortCommon.check(id);
-//        if (id != R.id.sortCommonNormId) {
-//            sortCassandra.check(R.id.sortCassandraNo);
-//        }
-//        sortCassandra.setEnabled(id != R.id.sortCassandraNo);
 
         applySelection();
     }
@@ -371,7 +467,7 @@ public class CraftDialog extends BaseTosDialog {
 
     // Apply to adapter --------
     private void nonAllApply(View v, ViewGroup vg) {
-        toggleSelection(v, vg);
+        toggleAndClearIfAll(v, vg);
 
         applySelection();
     }
@@ -437,10 +533,64 @@ public class CraftDialog extends BaseTosDialog {
         private final String[] commonRace = getResources().getStringArray(R.array.craft_common_keys_race);
         private final String noLimit = getString(R.string.craft_no_limit);
         private TosCondition select;
+        private Pattern attackIncRegex;
+        private Pattern coldDownDecRegex;
+        private Pattern runestoneRegex;
 
         public TosSelectCraft(List<BaseCraft> list, TosCondition condition) {
             super(list);
             select = condition;
+        }
+
+        @Override
+        public void onPrepare() {
+            List<String> card = new ArrayList<>();
+            // attack increase
+            card.clear();
+            if (sortAttackInc.isChecked()) {
+                getSelectTags(sortAttackIncCard, card, false);
+                String r = sortAttackInc.getText().toString();
+                if (!card.isEmpty()) {
+                    card = addAttr(card);
+                    r = RegexUtil.toRegexOr(card) + "成員的" + r;
+                }
+                attackIncRegex = Pattern.compile(r);
+            } else {
+                attackIncRegex = null;
+            }
+
+            // Cold down decrease
+            card.clear();
+            if (sortColdDownDec.isChecked()) {
+                String r = sortColdDownDec.getText().toString();
+                getSelectTags(sortColdDownDecCard, card, false);
+                if (!card.isEmpty()) {
+                    card = addAttr(card);
+                    r = RegexUtil.toRegexOr(card) + "成員的" + r;
+                }
+                coldDownDecRegex = Pattern.compile(r);
+            } else {
+                coldDownDecRegex = null;
+            }
+
+            // turn into runestone
+            card.clear();
+            if (sortRunestone.isChecked()) {
+                //String r = sortColdDownDec.getText().toString();
+                getSelectTags(sortRunestoneItem, card, false);
+                String r = "符石轉化為";
+                if (!card.isEmpty()) {
+                    card = addEnchanted(card);
+                    r = r + RegexUtil.toRegexOr(card) + "符石";
+                }
+                runestoneRegex = Pattern.compile(r);
+            } else {
+                runestoneRegex = null;
+            }
+
+            logE("FindCraft A %s", attackIncRegex);
+            logE("FindCraft C %s", coldDownDecRegex);
+            logE("FindCraft R %s", runestoneRegex);
         }
 
         @Override
@@ -452,7 +602,116 @@ public class CraftDialog extends BaseTosDialog {
         public boolean onSelect(BaseCraft c) {
             return selectForBasic(c)
                     && selectForShow(c)
+                    && selectForSpecial(c)
             ;
+        }
+
+        private boolean selectForSpecial(BaseCraft c) {
+            String key = keyOfSpecial(c);
+            boolean accept = true;
+            if (!sortSpecialNo.isChecked()) {
+                if (sortRegardlessAttr.isChecked()) {
+                    accept &= find(key, R.array.craft_regardless_of_attribute_keys);
+                }
+                if (sortAttackInc.isChecked()) {
+                    accept &= findRegexKey(key, R.array.craft_attack_increase_keys, attackIncRegex);
+                }
+                if (sortRecoveryInc.isChecked()) {
+                    accept &= find(key, R.array.craft_recovery_increase_keys);
+                }
+                if (sortColdDownDec.isChecked()) {
+                    accept &= findRegexKey(key, R.array.craft_cd_decrease_keys, coldDownDecRegex);
+                }
+                if (sortHpAdd.isChecked()) {
+                    accept &= find(key, R.array.craft_hp_add_keys);
+                }
+                if (sortRegardPuzzle.isChecked()) {
+                    accept &= find(key, R.array.craft_regard_puzzle_keys);
+                }
+                if (sortRegardAllAttr.isChecked()) {
+                    accept &= find(key, R.array.craft_regard_all_attr_keys);
+                }
+                if (sortRegardAttackFirst.isChecked()) {
+                    accept &= find(key, R.array.craft_regard_attack_first_keys);
+                }
+                if (sortRegardDamageLess.isChecked()) {
+                    accept &= find(key, R.array.craft_damage_less_keys);
+                }
+                if (sortAllDealDamage.isChecked()) {
+                    accept &= find(key, R.array.craft_all_deal_damage_keys);
+                }
+                if (sortOneDealDamage.isChecked()) {
+                    accept &= find(key, R.array.craft_one_deal_damage_keys);
+                }
+                if (sortExtraAttack.isChecked()) {
+                    accept &= find(key, R.array.cards_extra_attack_keys);
+                }
+                if (sortDodge.isChecked()) {
+                    accept &= find(key, R.array.craft_dodge_keys);
+                }
+                if (sortDamageToHp.isChecked()) {
+                    accept &= find(key, R.array.craft_damage_to_hp_keys);
+                }
+                if (sortDelayCD.isChecked()) {
+                    accept &= find(key, R.array.craft_delay_cd_keys);
+                }
+                if (sortSingleToFull.isChecked()) {
+                    accept &= find(key, R.array.craft_single_to_full_keys);
+                }
+                if (sortNoDefeat.isChecked()) {
+                    accept &= find(key, R.array.cards_no_defeat_keys);
+                }
+                if (sortRegardlessDefense.isChecked()) {
+                    accept &= find(key, R.array.craft_regardless_of_defense_keys);
+                }
+                if (sortRunestone.isChecked()) {
+                    accept &= findRegexKey(key, R.array.craft_turn_runestone_keys, runestoneRegex);
+                }
+            }
+
+            return accept;
+        }
+
+        private boolean findRegexKey(String key, @ArrayRes int dataId, Pattern regex) {
+            if (regex != null) {
+                return regex.matcher(key).find();
+            } else {
+                return find(key, dataId);
+            }
+        }
+
+        private String keyOfSpecial(BaseCraft c) {
+            StringBuilder s = new StringBuilder();
+            for (CraftSkill cs : c.craftSkill) {
+                if (s.length() > 0) {
+                    s.append(" & ");
+                }
+                s.append(cs.detail);
+            }
+            return s.toString();
+        }
+
+        private List<String> addAttr(List<String> list) {
+            List<String> all = new ArrayList<>(list);
+            for (int i = 0; i < list.size(); i++) {
+                String s = list.get(i);
+                if (s.matches("(水|火|木|光|暗)")) {
+                    all.add(i, s + "屬性");
+                }
+            }
+            return all;
+        }
+
+        // Similar with addAttr
+        private List<String> addEnchanted(List<String> list) {
+            List<String> all = new ArrayList<>(list);
+            for (int i = 0; i < list.size(); i++) {
+                String s = list.get(i);
+                if (s.matches("(水|火|木|光|暗|心)")) {
+                    all.add(i, s + "強化");
+                }
+            }
+            return all;
         }
 
         private boolean selectForBasic(BaseCraft c) {
@@ -539,6 +798,15 @@ public class CraftDialog extends BaseTosDialog {
                     return Long.compare(v1, v2);
                 }
             };
+        }
+
+        private boolean find(String key, @ArrayRes int dataId) {
+            String[] data = getResources().getStringArray(dataId);
+            return find(key, data);
+        }
+
+        private boolean find(String key, String[] data) {
+            return StringUtil.containsAt(key, data) >= 0;
         }
 
         //---- Normalize all the compare attribute to be int

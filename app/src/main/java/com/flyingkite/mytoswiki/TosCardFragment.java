@@ -36,6 +36,7 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
+import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
@@ -178,7 +179,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         // Setup tool bar
         View tool = findViewById(R.id.tosToolBar);
         tool.setOnClickListener((v) -> {
-            v.setSelected(!v.isSelected());
+            toggleSelected(v);
 
             boolean s = v.isSelected();
             if (toolOwner != null) {
@@ -504,7 +505,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private void resetMenu() {
         ViewGroup[] vgs = {sortAttributes, sortRace, sortStar, sortRunestone, sortRaceStoneAttr, sortRaceStoneRace};
         for (ViewGroup vg : vgs) {
-            setAllChildrenSelected(vg, false);
+            setAllChildSelected(vg, false);
         }
         sortCommon.check(R.id.sortCommonNormId);
         sortCassandra.check(R.id.sortCassandraNo);
@@ -527,7 +528,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void clickRaceRuneStones(View v) {
-        v.setSelected(!v.isSelected());
+        toggleSelected(v);
         applySelection();
     }
 
@@ -552,7 +553,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private void clickSpecial(View v) {
         setCheckedIncludeNo(v, R.id.sortSpecialNo, sortSpecial);
-
         applySelection();
     }
 
@@ -588,7 +588,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void toggleSelectApply(View v) {
-        v.setSelected(!v.isSelected());
+        toggleSelected(v);
         applySelection();
     }
 
@@ -622,7 +622,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void nonAllApply(View v, ViewGroup vg) {
-        toggleSelection(v, vg);
+        toggleAndClearIfAll(v, vg);
 
         applySelection();
     }
@@ -849,17 +849,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private String toRegex(List<String> keys) {
-            if (keys.isEmpty()) return "";
-
-            StringBuilder s = new StringBuilder("(");
-            for (int i = 0; i < keys.size(); i++) {
-                if (i > 0) {
-                    s.append("|");
-                }
-                s.append(keys.get(i));
-            }
-            s.append(")");
-            return s.toString();
+            return RegexUtil.toRegexOr(keys);
         }
 
         private boolean selectForShow(TosCard c) {
