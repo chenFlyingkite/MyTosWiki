@@ -37,7 +37,7 @@ public class RunestoneAdapter extends RVAdapter<Character, RunestoneAdapter.Rune
         int r = Math.max(row, 2); // at least 2
         vh.setStone(c);
         int pos = position + position / r % 2;
-        vh.stone.setBackgroundColor(App.getColorF(bgColors[pos % bgColors.length]));
+        vh.stone.setBackgroundColor(App.res().getColor(bgColors[pos % bgColors.length]));
     }
 
     public static class RunestoneVH extends RecyclerView.ViewHolder {

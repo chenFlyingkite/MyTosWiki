@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -80,39 +79,10 @@ public class MainActivity extends BaseActivity implements
     );
     private Library<IconAdapter> iconLibrary;
     private ViewPager cardPager;
+    private boolean pagerOK = false;
     private List<String> homePagerTags = new ArrayList<>();
 
-    @Override
-    public void log(String message) {
-        Log.e(LTag(), message);
-    }
-
     private WaitingDialog waiting;
-
-    @Override
-    public void onBackPressed() {
-        if (onBackCardPager()) {
-            return;
-        }
-        super.onBackPressed();
-    }
-
-    private boolean onBackCardPager() {
-        int page = cardPager.getCurrentItem();
-        if (page > 0) {
-            Fragment f = findFragmentByTag(homePagerTags.get(page));
-            if (f instanceof BaseTosDialog) {
-                BaseTosDialog b = (BaseTosDialog) f;
-                if (b.onBackPressed()) {
-                    return true;
-                } else {
-                    cardPager.setCurrentItem(0);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,9 +92,12 @@ public class MainActivity extends BaseActivity implements
         initToolIcons();
         //addTosFragment();
         showCardsLoading();
+        TosWiki.attendDatabaseTasks(onDatabaseState);
     }
 
     private void initPager() {
+        if (pagerOK) return;
+        pagerOK = true;
         cardPager = findViewById(R.id.cardPager);
         ViewPager p = cardPager;
         boolean atLeast17 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
@@ -209,6 +182,32 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (onBackCardPager()) {
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    private boolean onBackCardPager() {
+        int page = cardPager.getCurrentItem();
+        if (page > 0) {
+            Fragment f = findFragmentByTag(homePagerTags.get(page));
+            if (f instanceof BaseTosDialog) {
+                BaseTosDialog b = (BaseTosDialog) f;
+                if (b.onBackPressed()) {
+                    return true;
+                } else {
+                    cardPager.setCurrentItem(0);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private void addTosFragment() {
@@ -331,7 +330,6 @@ public class MainActivity extends BaseActivity implements
 
     private void showCardsLoading() {
         waiting = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
-        TosWiki.attendDatabaseTasks(onDatabaseState);
     }
 
     private WebPin webPin = new WebPin();
@@ -339,7 +337,7 @@ public class MainActivity extends BaseActivity implements
     private TaskMonitor.OnTaskState onDatabaseState = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
-            log("#%s (%s) is done", index, tag);
+            logI("#%s (%s) is done", index, tag);
             if (isActivityGone()) return;
 
             runOnUiThread(() -> {
@@ -360,7 +358,7 @@ public class MainActivity extends BaseActivity implements
 
         @Override
         public void onAllTaskDone() {
-            log("All done");
+            logI("All done");
         }
     };
 }

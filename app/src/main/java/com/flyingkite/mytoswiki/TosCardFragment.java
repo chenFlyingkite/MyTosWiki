@@ -315,7 +315,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private void onCardsReady(TosCard[] cards) {
         allCards = Arrays.asList(cards);
         int n = allCards.size();
-        tosInfo.setText(getString(R.string.cards_selection, n, n));
+        tosInfo.setText(App.res().getString(R.string.cards_selection, n, n));
         CardAdapter a = new CardAdapter();
         a.setDataList(allCards);
         a.setItemListener(new CardAdapter.ItemListener() {

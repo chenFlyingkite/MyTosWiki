@@ -106,7 +106,7 @@ public class App extends MultiDexApplication {
     }
 
     public static Uri getUriOfResource(@AnyRes int resId) {
-        return getUriOfResource(me.getResources(), resId);
+        return getUriOfResource(res(), resId);
     }
 
     public static Uri getUriOfResource(Resources r, @AnyRes int resId) {
@@ -116,15 +116,7 @@ public class App extends MultiDexApplication {
                 + '/' + r.getResourceEntryName(resId));
     }
 
-    public static int getColorF(@ColorRes int id) {
-        return me.getResources().getColor(id);
-    }
-
-    public static float getDimensionF(@DimenRes int id) {
-        return me.getResources().getDimension(id);
-    }
-
-    public static float getDimensionPixelSizeF(@DimenRes int id) {
-        return me.getResources().getDimensionPixelSize(id);
+    public static Resources res() {
+        return me.getResources();
     }
 }

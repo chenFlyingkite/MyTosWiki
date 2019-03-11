@@ -78,10 +78,10 @@ public class DailyStageDialog extends BaseTosDialog {
             fillItems(open, a);
             int color = Color.TRANSPARENT;
             if (i % 2 == 0) { // even number
-                 color = App.getColorF(R.color.colorPrimaryDark);
+                color = App.res().getColor(R.color.colorPrimaryDark);
             }
             if (i == today) {
-                color = App.getColorF(R.color.grey6);
+                color = App.res().getColor(R.color.grey6);
             }
             column.setBackgroundColor(color);
             table.addView(column);

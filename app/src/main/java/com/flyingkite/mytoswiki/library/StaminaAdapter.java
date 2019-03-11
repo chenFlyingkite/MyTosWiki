@@ -69,11 +69,11 @@ public class StaminaAdapter extends RVAdapter<String, StaminaAdapter.StaminaVH, 
             // Set text color
             int tColor = Color.WHITE;
             if (p == hlIndex) { // Target stamina
-                tColor = App.getColorF(R.color.green);
+                tColor = App.res().getColor(R.color.green);
             } else if (position == 1) { // 1st one
-                tColor = App.getColorF(R.color.orange);
+                tColor = App.res().getColor(R.color.orange);
             } else if (d.getHours() < 1 && d.getMinutes() < 31) { // date line
-                tColor = App.getColorF(R.color.skyBlue);
+                tColor = App.res().getColor(R.color.skyBlue);
             }
             vh.itemView.setBackgroundColor(tColor);
 

@@ -45,7 +45,7 @@ public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroup
         }
 
         public void setStageGroup(StageGroup s) {
-            int green = App.getColorF(R.color.green);
+            int green = App.res().getColor(R.color.green);
             setTextOrHide(title, s.group);
             title.setGravity(Gravity.LEFT);
             title.setTextColor(green);
