@@ -689,7 +689,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     // Actual implementation of TosSelectCard --------
     private class TosSelectCard extends AllCards<TosCard> {
-        private final String[] commonRace = getResources().getStringArray(R.array.cards_common_keys_race);
+        private final String[] commonRace = App.res().getStringArray(R.array.cards_common_keys_race);
 
         private TosCondition select;
 
@@ -997,7 +997,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private boolean find(String key, @ArrayRes int dataId) {
-            String[] data = getResources().getStringArray(dataId);
+            String[] data = App.res().getStringArray(dataId);
             return find(key, data);
         }
 
