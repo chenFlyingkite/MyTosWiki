@@ -514,6 +514,11 @@
                     style="@style/sortText"
                     android:text="@string/cards_restore_runestone_normal"/>
 
+                <CheckBox
+                    android:id="@+id/sortSpecialTurnEnemyAttr"
+                    style="@style/sortText"
+                    android:text="@string/cards_turn_enemy_attr"/>
+
                 <View
                     style="@style/divider_h2px"/>
 

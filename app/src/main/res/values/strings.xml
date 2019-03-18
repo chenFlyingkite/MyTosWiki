@@ -203,6 +203,7 @@
     <string name="cards_one_deal_damage_element">單體直傷 (僅限素材)</string>
     <string name="cards_all_deal_damage">_全體直傷 (一般種族)</string>
     <string name="cards_all_deal_damage_element">_全體直傷 (僅限素材)</string>
+    <string name="cards_turn_enemy_attr">敵方全體轉為 X 屬性</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -369,6 +370,9 @@
         <item>造成敵方全體</item>
         <item>對敵方全體造成</item>
         <item>對全體敵人造成</item>
+    </string-array>
+    <string-array name="cards_turn_enemy_attr_keys">
+        <item>敵方全體轉為</item>
     </string-array>
 
 
