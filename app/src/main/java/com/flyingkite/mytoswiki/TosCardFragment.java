@@ -720,18 +720,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             selectForShow = new boolean[4];
             ViewGroup vg = sortHide;
             int n = vg.getChildCount();
-            int m = 0;
             for (int i = 0; i < n; i++) {
+                int m = -1;
                 View v = vg.getChildAt(i);
-                if (v.isSelected()) {
-                    switch (v.getId()) {
-                        case R.id.sortHide6xxx: m = 0; break;
-                        case R.id.sortHide7xxx: m = 1; break;
-                        case R.id.sortHide8xxx: m = 2; break;
-                        case R.id.sortHide9xxx: m = 3; break;
-                    }
+                switch (v.getId()) {
+                    case R.id.sortHide6xxx: m = 0; break;
+                    case R.id.sortHide7xxx: m = 1; break;
+                    case R.id.sortHide8xxx: m = 2; break;
+                    case R.id.sortHide9xxx: m = 3; break;
                 }
-                selectForShow[m] = v.isSelected();
+                if (MathUtil.isInRange(m, 0, selectForShow.length)) {
+                    selectForShow[m] = v.isSelected();
+                }
             }
         }
 
