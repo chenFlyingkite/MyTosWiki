@@ -94,53 +94,63 @@
                         android:scrollbars="vertical"
                         android:background="@color/greyd"/>
 
-                    <LinearLayout
+                    <ScrollView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent">
 
-                        <TextView
-                            style="@style/sortTitle"
-                            android:text="@string/card_series_seals"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <RadioGroup
-                            android:id="@+id/csdCardSeries"
-                            android:layout_width="@dimen/t200dp"
-                            android:paddingLeft="@dimen/t10dp"
-                            android:layout_height="wrap_content">
+                            <TextView
+                                style="@style/sortTitle"
+                                android:text="@string/card_series_seals"/>
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesGiftedScientists"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_gifted_scientists"/>
+                            <RadioGroup
+                                android:id="@+id/csdCardSeries"
+                                android:layout_width="@dimen/t200dp"
+                                android:paddingLeft="@dimen/t10dp"
+                                android:layout_height="wrap_content">
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesFairyTail"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_fairy_tail"/>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesUnearthlyCharm"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_unearthly_charm"/>
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesMasterCathieves"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_master_cathieves"/>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesGiftedScientists"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_gifted_scientists"/>
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesKonoSubarashi"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_kono_subarashi"/>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesFairyTail"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_fairy_tail"/>
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesHinduGods"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_hindu_gods"/>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesMasterCathieves"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_master_cathieves"/>
 
-                            <RadioButton
-                                android:id="@+id/csdSeriesSengokuSamurai"
-                                style="@style/sortRadio"
-                                android:text="@string/card_series_sengoku_samurai"/>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesKonoSubarashi"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_kono_subarashi"/>
 
-                        </RadioGroup>
-                    </LinearLayout>
+                                <RadioButton
+                                    android:id="@+id/csdSeriesHinduGods"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_hindu_gods"/>
+
+                                <RadioButton
+                                    android:id="@+id/csdSeriesSengokuSamurai"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_sengoku_samurai"/>
+
+                            </RadioGroup>
+                        </LinearLayout>
+                    </ScrollView>
                 </LinearLayout>
 
                 <LinearLayout

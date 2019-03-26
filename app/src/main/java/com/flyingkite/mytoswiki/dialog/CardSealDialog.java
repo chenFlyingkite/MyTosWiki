@@ -31,6 +31,7 @@ import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
+import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.SealCardAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -65,6 +66,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
+        sealOrder.add(new Pair<>(R.id.csdSeriesUnearthlyCharm,   new UnearthlyCharm()));
         sealOrder.add(new Pair<>(R.id.csdSeriesGiftedScientists, new GiftedScientists()));
         sealOrder.add(new Pair<>(R.id.csdSeriesFairyTail,        new FairyTail()));
         sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves,  new MasterCathieves()));
