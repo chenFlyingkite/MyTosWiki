@@ -151,11 +151,11 @@
                         android:text="@string/skill_eat600"
                         android:textSize="@dimen/t15dp"/>
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/skillCard600"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    </android.support.v7.widget.RecyclerView>
+                    </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -198,7 +198,7 @@
             <View
                 style="@style/divider_horizontal"/>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/skillTable"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/t200dp"

@@ -1,6 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

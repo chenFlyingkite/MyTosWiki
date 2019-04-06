@@ -80,14 +80,14 @@
             android:layout_height="@dimen/t20dp"
             android:background="@color/green"/>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tosFavorites"
             android:layout_width="match_parent"
             android:layout_height="@dimen/t50dp"
             android:scrollbars="horizontal"/>
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tosRecycler"
         android:layout_below="@id/tosTopBar"
         android:layout_above="@id/tosFavorBox"

@@ -25,7 +25,7 @@
     <ImageView
         style="@style/evoPlus"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cardEvolveNeed"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/t50dp"/>

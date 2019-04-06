@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.percent.PercentRelativeLayout
+            <androidx.percentlayout.widget.PercentRelativeLayout
                 android:id="@+id/cardImages"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -36,7 +36,7 @@
                     android:src="@drawable/unknown_card"
                     tools:background="#aa0" />
 
-            </android.support.percent.PercentRelativeLayout>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -342,7 +342,7 @@
                             android:background="@drawable/bg_rect_skyblue"
                             android:text="@string/cards_skillSameActive_n"/>
 
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/cardSameActiveSkills"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -462,7 +462,7 @@
                             android:background="@drawable/bg_rect_skyblue"
                             android:text="@string/craft_arm_craft"/>
 
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/cardArmCraft"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/t50dp" />

@@ -1,7 +1,7 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.flyingkite.fabric.FabricAnswers;

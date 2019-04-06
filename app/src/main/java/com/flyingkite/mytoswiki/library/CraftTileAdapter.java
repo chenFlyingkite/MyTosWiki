@@ -1,6 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 

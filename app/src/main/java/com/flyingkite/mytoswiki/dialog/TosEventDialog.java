@@ -1,7 +1,6 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
@@ -13,6 +12,8 @@ import com.flyingkite.mytoswiki.R;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class TosEventDialog extends BaseTosDialog {
     @Override
@@ -44,10 +45,8 @@ public class TosEventDialog extends BaseTosDialog {
         // Set web, hide since it will have ERR_SPDY_PROTOCAL_ERROR
         View web = findViewById(R.id.ted_web);
         web.setOnClickListener((v) -> {
-            logE(decodeURL(eventPage));
-            viewLinkAsWebDialog(decodeURL(eventPage));
-            //shareString(eventMemo.getText().toString());
-            //logShare("text");
+            String tosMain = "https://towerofsaviors.com";
+            viewLinkAsWebDialog(tosMain);
         });
         eventPage = RemoteConfig.getString(RemoteConfigKey.DIALOG_TOS_EVENT_WEB);
         String image = RemoteConfig.getString(RemoteConfigKey.DIALOG_TOS_EVENT_BANNER);

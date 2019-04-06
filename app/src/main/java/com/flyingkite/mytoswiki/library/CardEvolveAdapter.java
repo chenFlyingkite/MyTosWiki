@@ -1,8 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
 import android.app.FragmentManager;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -18,6 +16,9 @@ import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.mytoswiki.util.ViewUtil;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class CardEvolveAdapter extends RVAdapter<Evolve, CardEvolveAdapter.EvolveVH, CardEvolveAdapter.ItemListener> implements TosPageUtil {
     public interface ItemListener extends RVAdapter.ItemListener<Evolve, EvolveVH> {
@@ -61,8 +62,11 @@ public abstract class CardEvolveAdapter extends RVAdapter<Evolve, CardEvolveAdap
                 }
             };
             a.setDataList(needs);
-            a.setItemListener((tosCard, cardLVH, i) -> {
-                showCardDialog(tosCard);
+            a.setItemListener(new CardTileAdapter.ItemListener() {
+                @Override
+                public void onClick(TosCard card, CardLiteAdapter.CardLVH vh, int position) {
+                    showCardDialog(card);
+                }
             });
             needLibrary.setViewAdapter(a);
             //RecyclerView rv = needLibrary.recyclerView;

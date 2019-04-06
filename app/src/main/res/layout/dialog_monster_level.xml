@@ -73,7 +73,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/cards_expCurve"/>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mldShortcuts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/t320dp">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mld_recycler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

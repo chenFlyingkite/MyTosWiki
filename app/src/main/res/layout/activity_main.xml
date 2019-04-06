@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -19,7 +19,7 @@
         android:visibility="gone"
         android:layout_alignParentBottom="true">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/mainStages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.widget.TabLayout
+            <com.google.android.material.tabs.TabLayout
                 android:id="@+id/cardTabBig"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/t20dp"
@@ -46,7 +46,7 @@
                 app:tabSelectedTextColor="@color/green"
                 app:tabRippleColor="@color/skyBlue2"/>
 
-            <android.support.design.widget.TabLayout
+            <com.google.android.material.tabs.TabLayout
                 android:id="@+id/cardTabLine"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/t3dp"
@@ -55,7 +55,7 @@
                 app:tabSelectedTextColor="@color/green"
                 app:tabPaddingTop="@dimen/t25dp"
                 app:tabRippleColor="@color/skyBlue2"/>
-            <android.support.v4.view.ViewPager
+            <androidx.viewpager.widget.ViewPager
                 android:id="@+id/cardPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

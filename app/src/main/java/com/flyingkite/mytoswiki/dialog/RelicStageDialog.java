@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +18,8 @@ import com.flyingkite.util.TaskMonitor;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class RelicStageDialog extends BaseTosDialog {
     private LinearLayout stageList;
@@ -81,8 +82,11 @@ public class RelicStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(Arrays.asList(stages));
-        a.setItemListener((relicStage, relicVH, position) -> {
-            viewLinkAsWebDialog(relicStage.link);
+        a.setItemListener(new RelicStageAdapter.ItemListener() {
+            @Override
+            public void onClick(RelicStage item, RelicStageAdapter.RelicVH holder, int position) {
+                viewLinkAsWebDialog(item.link);
+            }
         });
         b.setViewAdapter(a);
         parent.addView(v);

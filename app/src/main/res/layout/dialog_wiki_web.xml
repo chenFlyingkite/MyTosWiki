@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/wdTools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -19,7 +19,7 @@
         android:layout_alignBottom="@id/wdTools"
         tools:progress="50"/>
 
-    <android.support.v4.widget.SwipeRefreshLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/wdRefresh"
         android:layout_below="@id/wdTools"
         android:layout_width="match_parent"
@@ -28,6 +28,6 @@
             android:id="@+id/wdWeb"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </android.support.v4.widget.SwipeRefreshLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

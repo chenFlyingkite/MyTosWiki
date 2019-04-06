@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +21,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class DailyStageDialog extends BaseTosDialog {
 
@@ -53,8 +54,11 @@ public class DailyStageDialog extends BaseTosDialog {
             }
         };
         a.setDataList(daily);
-        a.setItemListener((stage, stageVH, position) -> {
-            viewLinkAsWebDialog(stage.link);
+        a.setItemListener(new StageAdapter.ItemListener() {
+            @Override
+            public void onClick(Stage stage, StageAdapter.StageVH vh, int position) {
+                viewLinkAsWebDialog(stage.link);
+            }
         });
         fillItems(findViewById(R.id.dds_stages), a);
         fillOpenTime();

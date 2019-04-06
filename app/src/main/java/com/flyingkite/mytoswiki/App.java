@@ -5,12 +5,12 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.StrictMode;
-import android.support.annotation.AnyRes;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DimenRes;
-import android.support.annotation.StringRes;
-import android.support.multidex.MultiDex;
-import android.support.multidex.MultiDexApplication;
+import androidx.annotation.AnyRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DimenRes;
+import androidx.annotation.StringRes;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.flyingkite.crashlytics.CrashReport;

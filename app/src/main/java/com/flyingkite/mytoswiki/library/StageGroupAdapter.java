@@ -1,7 +1,5 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +9,13 @@ import android.widget.TextView;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.data.stage.Stage;
 import com.flyingkite.mytoswiki.data.stage.StageGroup;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ViewUtil;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroupAdapter.StageGVH, StageGroupAdapter.ItemLisntener> implements PageUtil {
     public interface ItemLisntener extends RVAdapter.ItemListener<StageGroup, StageGVH> {
@@ -55,8 +57,11 @@ public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroup
 
             StageAdapter a = new StageAdapter();
             a.setDataList(s.stages);
-            a.setItemListener((stage, stageVH, position) -> {
-                viewLinkAsWebDialog(stage.link);
+            a.setItemListener(new StageAdapter.ItemListener() {
+                @Override
+                public void onClick(Stage stage, StageAdapter.StageVH holder, int position) {
+                    viewLinkAsWebDialog(stage.link);
+                }
             });
             fillItems(items, a);
         }

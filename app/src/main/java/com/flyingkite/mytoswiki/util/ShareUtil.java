@@ -1,7 +1,7 @@
 package com.flyingkite.mytoswiki.util;
 
 import android.app.Activity;
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.view.View;
 
 import com.flyingkite.mytoswiki.R;

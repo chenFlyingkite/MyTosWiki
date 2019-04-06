@@ -1,6 +1,6 @@
 package com.flyingkite.mytoswiki.tos.query;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.flyingkite.library.TicTac2;

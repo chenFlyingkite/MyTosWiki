@@ -4,12 +4,6 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.ArrayRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +45,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import androidx.annotation.ArrayRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
 
 public class TosCardFragment extends BaseFragment implements TosPageUtil {
@@ -755,7 +755,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 raceStoneRegex2 = null;
                 return;
             }
-            race.add("種族");
+            //race.add("種族");
 
             String attrs = toRegex(attr);
             String races = toRegex(race);
@@ -763,7 +763,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             String regex = attrs + races + "(|強化)符石";
             raceStoneRegex1 = Pattern.compile(regex);
 
-            race.remove("種族");
+            //race.remove("種族");
             String raceK = toRegex(race).replace("族", "");
             raceStoneRegex2 = Pattern.compile(raceK);
             logE("(R1, R2) = %s   %s", raceStoneRegex1, raceStoneRegex2);
@@ -843,7 +843,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     break;
                 //case 1982: // 唐三藏
                 case 2013: // 愛迪生
-                case 2021: //妮可
+                case 2021: // 妮可
                     ans = true;
                     break;
             }

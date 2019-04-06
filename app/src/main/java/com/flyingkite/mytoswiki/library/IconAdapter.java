@@ -1,7 +1,7 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
 
 import com.flyingkite.library.widget.IconRVAdapter;
 import com.flyingkite.mytoswiki.R;

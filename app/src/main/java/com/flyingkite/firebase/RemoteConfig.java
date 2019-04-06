@@ -1,7 +1,7 @@
 package com.flyingkite.firebase;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.XmlRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.XmlRes;
 
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
