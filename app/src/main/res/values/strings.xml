@@ -65,6 +65,12 @@
     <string name="cards_attr_light">光</string>
     <string name="cards_attr_darks">暗</string>
     <string name="cards_attr_heart">心</string>
+    <string name="cards_attr_water_enchanted">水強化</string>
+    <string name="cards_attr_fires_enchanted">火強化</string>
+    <string name="cards_attr_earth_enchanted">木強化</string>
+    <string name="cards_attr_light_enchanted">光強化</string>
+    <string name="cards_attr_darks_enchanted">暗強化</string>
+    <string name="cards_attr_heart_enchanted">心強化</string>
     <string name="cards_race">種族</string>
     <string name="cards_race_god">神族</string>
     <string name="cards_race_demon">魔族</string>
@@ -77,6 +83,7 @@
     <string name="cards_race_level">強化素材</string>
     <string name="cards_turn_runestone">轉化為X符石</string>
     <string name="cards_turn_into">轉化為</string>
+    <string name="cards_turn_into2">轉化</string>
     <string name="cards_skillSameActive">相同主動技能卡片</string>
     <string name="cards_skillSameActive_n">相同主動技能卡片 (共 %s 張)</string>
     <string name="cards_evolve_release">進化 / 潛能解放 / 異空轉生  所需素材列表</string>
@@ -93,8 +100,10 @@
     <string name="cards_race_stone_elf">妖族</string>
     <string name="cards_race_stone_machina">機械族</string>
     <string name="cards_add_leader">包括 隊長技</string>
+    <string name="cards_add_detail2">包括 卡牌資訊</string>
     <string name="cards_add_detail">包括 隊伍/組合技能 (卡牌資訊)</string>
     <string name="cards_race_stone_sample">例如搜尋 : (水|火)(神族|妖族)(|強化)符石</string>
+    <string name="cards_runestone">符石</string>
     <string name="cards_runestone_race">符石種族</string>
     <string name="cards_runestone_attr">符石屬性</string>
 
@@ -111,7 +120,7 @@
     <string name="cards_runestone_light_enchanted">光強化符石</string>
     <string name="cards_runestone_darks_enchanted">暗強化符石</string>
     <string name="cards_runestone_heart_enchanted">心強化符石</string>
-    <string name="cards_Cassandra">卡珊德拉(水巫)技能: 滿等卡\n3.5x回復力+攻擊力</string>
+    <string name="cards_Cassandra">卡珊德拉(水巫)技能: 滿等卡\n3.5x回復力+攻擊力 (露西比較好用 #1955)</string>
     <string name="cards_no">無</string>
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
@@ -204,6 +213,7 @@
     <string name="cards_all_deal_damage">_全體直傷 (一般種族)</string>
     <string name="cards_all_deal_damage_element">_全體直傷 (僅限素材)</string>
     <string name="cards_turn_enemy_attr">敵方全體轉為 X 屬性</string>
+    <string name="cards_delay">延遲 敵人行動</string>
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -373,6 +383,9 @@
     </string-array>
     <string-array name="cards_turn_enemy_attr_keys">
         <item>敵方全體轉為</item>
+    </string-array>
+    <string-array name="cards_delay_keys">
+        <item>延遲</item>
     </string-array>
 
 

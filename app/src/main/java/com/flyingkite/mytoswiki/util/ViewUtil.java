@@ -2,9 +2,6 @@ package com.flyingkite.mytoswiki.util;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.IdRes;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,6 +11,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.IdRes;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.RecyclerView;
+import kotlin.jvm.functions.Function1;
 
 public interface ViewUtil {
 
@@ -254,7 +256,7 @@ public interface ViewUtil {
         return true;
     }
 
-    default void getSelectTags(ViewGroup vg, List<String> result, boolean addAllIfEmpty) {
+    default void getTagsWhen(Function1<View, Boolean> fn, ViewGroup vg, List<String> result, boolean addAllIfEmpty) {
         if (result == null) {
             result = new ArrayList<>();
         }
@@ -265,7 +267,7 @@ public interface ViewUtil {
         for (int i = 0; i < n; i++) {
             View w = vg.getChildAt(i);
             String tag = w.getTag().toString();
-            if (w.isSelected()) {
+            if (fn.invoke(w)) {
                 added = true;
                 result.add(tag);
             }
@@ -275,6 +277,10 @@ public interface ViewUtil {
         if (addAllIfEmpty && !added) {
             result.addAll(all);
         }
+    }
+
+    default void getSelectTags(ViewGroup vg, List<String> result, boolean addAllIfEmpty) {
+        getTagsWhen(View::isSelected, vg, result, addAllIfEmpty);
     }
 
     default void setTextOrHide(TextView t, CharSequence cs) {

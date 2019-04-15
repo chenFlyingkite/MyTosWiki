@@ -121,6 +121,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialAllDealDamage;
     private CheckBox sortSpecialAllDealDamageElement;
     private CheckBox sortSpecialTurnEnemyAttr;
+    private CheckBox sortSpecialDelay;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -471,6 +472,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialAllDealDamage = menu.findViewById(R.id.sortSpecialAllDealDamage);
         sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
+        sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -701,13 +703,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private boolean[] selectForShow = new boolean[4];
-        private String[] turnStoneKey = new String[0];
+        private Pattern turnStoneRegex;
 
         // Find a good regex for 種族符石
         // Comma is for #1693 關師傅
         private Pattern raceStoneRegex1;
         private Pattern raceStoneRegex2;
-        private Pattern raceStoneRegexSp = Pattern.compile("自身種族符石");
 
         @Override
         public void onPrepare() {
@@ -739,10 +740,20 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             List<String> stones = new ArrayList<>();
             getSelectTags(sortRunestone, stones, false);
             int n = stones.size();
-            turnStoneKey = new String[n];
-            for (int i = 0; i < n; i++) {
-                turnStoneKey[i] = getString(R.string.cards_turn_into) + "" + stones.get(i);
+            if (n == 0) {
+                turnStoneRegex = null;
+                return;
             }
+
+            // 轉化(|為)(光|光強化)(|神族|魔族|人族|獸族|龍族|妖族|機械族)符石
+            List<String> allRace = getRaces();
+            allRace.add(0, ""); // No specified race
+            String r = getString(R.string.cards_turn_into2) + "(|為)"
+                    + RegexUtil.toRegexOr(stones)
+                    + RegexUtil.toRegexOr(allRace)
+                    + getString(R.string.cards_runestone);
+            turnStoneRegex = Pattern.compile(r);
+            logE("(T) = %s", turnStoneRegex);
         }
 
         private void prepareRaceStones() {
@@ -755,18 +766,23 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 raceStoneRegex2 = null;
                 return;
             }
-            //race.add("種族");
 
+            // (火|光)(人族|獸族)(|強化)符石
             String attrs = toRegex(attr);
             String races = toRegex(race);
 
             String regex = attrs + races + "(|強化)符石";
             raceStoneRegex1 = Pattern.compile(regex);
 
-            //race.remove("種族");
             String raceK = toRegex(race).replace("族", "");
             raceStoneRegex2 = Pattern.compile(raceK);
             logE("(R1, R2) = %s   %s", raceStoneRegex1, raceStoneRegex2);
+        }
+
+        private List<String> getRaces() {
+            List<String> race = new ArrayList<>();
+            getTagsWhen((w) -> true, sortRaceStoneRace, race, false);
+            return race;
         }
 
         @Override
@@ -798,11 +814,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             // Still fail for 轉化為固定數量及位置 & X及Y符石轉化為強化符石
             // like, 洛可可(1169) & 龍葵(0900) & 1772 (尼特羅)
             // Runestones keys as st
-            if (turnStoneKey.length == 0) {
+            if (turnStoneRegex == null) {
                 return true;
             } else {
                 String key = c.skillsDesc();
-                return find(key, turnStoneKey);
+                return turnStoneRegex.matcher(key).find();
             }
         }
 
@@ -981,6 +997,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialTurnEnemyAttr.isChecked()) {
                     accept &= find(key, R.array.cards_turn_enemy_attr_keys);
+                }
+                if (sortSpecialDelay.isChecked()) {
+                    accept &= find(key, R.array.cards_delay_keys);
                 }
             }
             return accept;
