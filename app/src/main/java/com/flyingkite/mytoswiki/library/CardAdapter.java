@@ -2,8 +2,6 @@ package com.flyingkite.mytoswiki.library;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,6 +17,9 @@ import com.flyingkite.mytoswiki.util.GlideUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CardAdapter
         extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>

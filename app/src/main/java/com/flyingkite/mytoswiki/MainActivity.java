@@ -6,9 +6,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
+import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -42,10 +40,14 @@ import com.flyingkite.util.PGAdapter;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.TextEditorDialog;
 import com.flyingkite.util.WaitingDialog;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends BaseActivity implements
         TosCardFragment.ToolBarOwner,
@@ -120,16 +122,19 @@ public class MainActivity extends BaseActivity implements
                 FragmentManager fm = getFragmentManager();
 
                 v.setId(id);
-                switch (position) {
-                    case 0:
+                if (isWeb(position)) {
+                    WebDialog d = new WebDialog();
+                    f = d;
+                    b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
+                    b.putBoolean(WebDialog.BUNDLE_PIN, true);
+                } else {
+                    if (position == 0) {
                         TosCardFragment fg = new TosCardFragment();
                         f = fg;
-                        break;
-                    default:
-                        WebDialog d = new WebDialog();
-                        f = d;
-                        b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
-                        b.putBoolean(WebDialog.BUNDLE_PIN, true);
+                    } else {
+                        TosCardMyFragment g = new TosCardMyFragment();
+                        f = g;
+                    }
                 }
 
                 f.setArguments(b);
@@ -140,12 +145,17 @@ public class MainActivity extends BaseActivity implements
             @Nullable
             @Override
             public CharSequence getPageTitle(int position) {
-                switch (position) {
-                    case 0:
-                        return getString(R.string.card);
-                    default:
-                        return getString(R.string.web) + " " + position;
+                boolean w = isWeb(position);
+                if (w) {
+                    return getString(R.string.web) + " " + position;
+                } else {
+                    return getString(R.string.card);
                 }
+            }
+
+            private boolean isWeb(int pos) {
+                String tag = itemOf(pos);
+                return tag.contains(WebDialog.TAG);
             }
         };
         List<String> data = homePagerTags;
@@ -155,9 +165,11 @@ public class MainActivity extends BaseActivity implements
             data.add(WebDialog.TAG + "_2");
             data.add(WebDialog.TAG + "_3");
         }
+        //data.add(TosCardMyFragment.TAG);
         pga.setDataList(data);
         p.setAdapter(pga);
         p.setOffscreenPageLimit(data.size()); // keep all items
+        //p.setCurrentItem(4);
 
         TabLayout t;
         t = findViewById(R.id.cardTabBig);
@@ -182,6 +194,33 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+        f();
+    }
+
+    private void f() {
+        logE("Data dir = %s", Environment.getDataDirectory());
+        logE("DL Cache = %s", Environment.getDownloadCacheDirectory());
+        logE("ExtSto   = %s", Environment.getExternalStorageDirectory());
+        logE("Root dir = %s", Environment.getRootDirectory());
+        logE("fileList");
+        z(fileList());
+
+        logE("ExtCache = %s", getExternalCacheDir());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            z(getExternalCacheDirs());
+        }
+        logE("getExternalMediaDirs = ");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            z(getExternalMediaDirs());
+        }
+    }
+
+    private <T> void z(T[] a) {
+        if (a == null) return;
+        logE("%s items", a.length);
+        for (int i = 0; i < a.length; i++) {
+            logE("#%02d : %s", i, a[i]);
+        }
     }
 
 
@@ -201,11 +240,10 @@ public class MainActivity extends BaseActivity implements
                 BaseTosDialog b = (BaseTosDialog) f;
                 if (b.onBackPressed()) {
                     return true;
-                } else {
-                    cardPager.setCurrentItem(0);
-                    return true;
                 }
             }
+            cardPager.setCurrentItem(0);
+            return true;
         }
         return false;
     }

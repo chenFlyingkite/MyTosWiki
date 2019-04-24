@@ -83,7 +83,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tosFavorites"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/t50dp"
+            android:layout_height="@dimen/t150dp"
             android:scrollbars="horizontal"/>
     </LinearLayout>
 

@@ -32,6 +32,10 @@
     <string name="unknown_card">未知卡片</string>
     <string name="card">卡片</string>
     <string name="web">網頁</string>
+    <string name="uid">UID</string>
+    <string name="enterUid">請輸入 UID</string>
+    <string name="noNetwork">沒有網路</string>
+    <string name="how_to_use">使用說明</string>
 
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
@@ -390,6 +394,8 @@
 
 
     <string name="cards_hide">不顯示卡片</string>
+    <string name="cards_hide_farm">肥料系列</string>
+    <string name="cards_hide_nonfarm">非肥料系列</string>
     <string name="cards_hide_6xxx">動態造型</string>
     <string name="cards_hide_7xxx">討伐戰</string>
     <string name="cards_hide_8xxx">迪士尼，存音石</string>
@@ -733,8 +739,53 @@
 \n★排 3x3 時可使用直(橫)行的 (3, 3, 3)\n★若直行消除5個，或是橫行消除6個\n => 該行可換位置到其他直(橫)行
 \n★符石的個數僅計算取3的餘數\n => (例如 17火 + 13水 = (2, 1) )</string>
 
-
     <string name="web_pinned">已釘選網頁</string>
+    <string name="how_to_use_pack">1. 拜訪「神魔之塔健檢中心」網站\n
+https://review.towerofsaviors.com\n\n
+2. 登入你的 UID 和 活動驗證碼\n
+3. 點擊「公開」讓頁面可以取用你的神魔之塔背包資料\n
+4. 回到這個頁面輸入你的UID，便可檢視卡匣內容</string>
+
+    <string-array name="series">Android 機械人, B.Duck, BIGBANG元素師, FAIRY TAIL, 七十二柱魔神, 七原罪, 三國, 三國 ‧ 貳, 三國小兵, 三教頂峰, 不死英雄, 中國神, 中國神幻化, 中國神煉化, 中國神獸, 主角, 仙劍列傳, 仙劍靈傑, 仙劍靈獸, 修羅場, 修道仙妖, 修驗道式神, 傳世神器, 傳教士, 八仙, 八仙素材, 公會任務, 公會戰, 列王之爭, 創塔者們, 劍靈, 動能兵, 化物器獸, 北域巨人, 北域遺族, 北域霸獸, 北歐神, 北歐神幻化, 北歐神煉化, 協助者, 印度神, 古希臘神, 古蹟源龍, 可口羊駝, 史萊姆, 吉祥物, 命運女神, 圓桌騎士, 地獄魔王, 地精, 埃及皇權, 埃及神, 埃及神幻化, 埃及神煉化, 塔之魔神, 墮天, 夢幻聖物, 大和, 大富翁, 大富翁 ‧ 神明, 大蛇的眷屬, 天竺, 奇想典故, 奧羅茲遺族, 女王之塔, 女王之塔(系列), 妖女, 妖嬈花夢, 妖魔傾城, 存音石, 宇宙序章, 寧芙, 封王, 封神演義, 巨像, 巨型蟾蜍, 巨神兵, 巫女, 巴比倫主神, 巴比倫主神幻化, 巴比倫主神煉化, 巴比倫神明, 布袋小偶, 希冀, 希臘妖獸, 希臘神, 希臘神像, 希臘神幻化, 希臘神煉化, 幻境惡棍, 幽☆遊☆白書, 強力武裝, 強化素材, 忠誠侍童, 怪物彈珠, 怪物彈珠 ‧ 英雄, 慶節精靈, 憶念, 戰慄級, 戰鬥魔導士, 拳皇, 新手夥伴, 新革童話, 旅人的夥伴, 星詠之歌姬, 果實精靈, 機偶使者, 機偶合體, 機偶夥伴, 機械城的守護者, 機械小兵, 機械獸, 機械神兵, 機龍, 武者烈魂, 武術大會參賽者, 武術大賽, 武魂附體, 死亡騎士, 死物附靈, 毛毛三姐弟, 海上霸者, 潛能解放素材, 無名勇士, 狼人, 獵人×獵人, 獸伴, 王的護衛, 玩具精靈, 珍饈美點, 畫緣相遇, 異世界生物, 異界龍, 異神使徒, 異空轉生素材, 瘋頭, 百鬼夜行 ‧ 妖魅, 百鬼夜行 ‧ 怪譚, 百鬼夜行 ‧ 惡鬼, 碎羽墮落者, 神界守衛, 神話創世, 神貓大盜, 神魔員工, 科學少女, 科學與哲理, 科研敍論, 究極北歐神, 究極融煉素材, 童話仙蹤, 競技場, 笨小魔, 粉碎亂鬥, 粉碎狂熱, 精靈, 約誓之翼, 素材, 美好世界, 美好異想, 耀脈星芒, 聖酒女武神, 自然德魯依, 艾克希特, 英靈地精, 英靈女孩, 荒誕精靈, 蜥蜴戰士, 街頭流氓, 西方魔獸, 要塞兵團, 討伐戰, 誓約之花, 諸界看守者, 豐腴珍獸, 貓公爵傭兵團, 財迷塵世, 超獸魔神, 軒轅仙獸, 軒轅列傳, 追擊始源, 逐願邪星, 進化素材, 遊俠, 遠古的恐懼, 遠古神龍, 遠洋的旅人, 遠洋的英雄, 部落精獸, 都市傳說, 金屬生命, 鋼鐵神獸, 鐵皮部隊, 防龍, 隱士支配者, 霹靂布袋戲, 靈殿狛犬, 靈獸役使, 靈界獸, 靈魂精髓, 革新英雄, 願望果園精靈, 風格樂團, 高手隱士, 鬼魅奸佞, 魔像, 魔境住民, 魔境入侵者, 魔境造物, 魔導之眾, 魔幻嘍囉, 魔幼龍, 魔族始源, 魔族賢者, 魔法女孩, 魔變凶龍, 鮮紅恩典, 鮮紅恩典幻化, 鮮紅恩典煉化, 黃道十二宮, 黑鐵學徒, 龍僕, 龍牙棋
+
+        <item>單體攻擊轉化為全體攻擊</item>
+        <item>單體攻擊轉化為全體攻擊</item>
+        <item>單體攻擊轉化為全體攻擊</item>
+    </string-array>
+    <string-array name="seriesOfFarm">
+        <item>地精</item>
+        <item>精靈</item>
+        <item>蜥蜴戰士</item>
+        <item>魔法女孩</item>
+        <item>史萊姆</item>
+        <item>狼人</item>
+        <item>進化素材</item>
+        <item>強化素材</item>
+        <item>希臘神像</item>
+        <!--
+        <item>黃道十二宮</item> // For 星靈
+        -->
+        <item>旅人的夥伴</item>
+        <item>龍牙棋</item>
+        <item>修道仙妖</item>
+        <item>異神使徒</item>
+        <item>風格樂團</item>
+        <item>要塞兵團</item>
+        <item>百鬼夜行 ‧ 怪譚</item>
+        <item>希臘妖獸</item>
+        <item>軒轅仙獸</item>
+        <item>神界守衛</item>
+        <item>鐵皮部隊</item>
+        <item>仙劍靈獸</item>
+        <item>傳教士</item>
+        <item>笨小魔</item>
+        <item>魔幼龍</item>
+        <item>寧芙</item>
+        <item>三國小兵</item>
+        <item>無名勇士</item>
+        <item>布袋小偶</item>
+        <item>街頭流氓</item>
+    </string-array>
 
     <string name="a1">第二屆武術大會 猿真
 卡還OK可以打一張

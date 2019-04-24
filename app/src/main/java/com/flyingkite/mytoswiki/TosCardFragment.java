@@ -75,6 +75,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private ViewGroup sortStar;
     // Common Sorting order
     private RadioGroup sortCommon;
+    // 水巫
     private RadioGroup sortCassandra;
     // 轉化符石
     private ViewGroup sortRunestone;
@@ -216,7 +217,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         cardFavor = TosWiki.getCardFavor();
 
         if (favorLib == null) {
-            favorLib = new Library<>(favorRecycler);
+            favorLib = new Library<>(favorRecycler, -3);
         }
         CardTileAdapter a = new CardTileAdapter() {
             @Override
@@ -232,8 +233,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             helper.getHelper().attachToRecyclerView(null);
         }
         helper = new SimpleItemTouchHelper(a
-                , ItemTouchHelper.LEFT | ItemTouchHelper. RIGHT
-                , ItemTouchHelper.UP | ItemTouchHelper.DOWN) {
+                , ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+                | ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0
+        ) {
             @Override
             public List getList() {
                 return favorCards;
@@ -300,7 +302,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
 
-            runOnUiThread(() -> {
+            getActivity().runOnUiThread(() -> {
                 onCardsReady(TosWiki.allCards());
                 TosWiki.joinFavorAction(favorAction);
             });

@@ -3,6 +3,8 @@ package com.flyingkite.mytoswiki;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.StrictMode;
 import androidx.annotation.AnyRes;
@@ -118,5 +120,13 @@ public class App extends MultiDexApplication {
 
     public static Resources res() {
         return me.getResources();
+    }
+
+    public static boolean isNetworkConnected() {
+        if (me == null) return false;
+
+        ConnectivityManager c = (ConnectivityManager) me.getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo n = c.getActiveNetworkInfo();
+        return n != null && n.isConnected();
     }
 }

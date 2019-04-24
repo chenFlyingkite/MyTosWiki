@@ -1,25 +1,29 @@
 package com.flyingkite.mytoswiki.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.IdRes;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.recyclerview.widget.RecyclerView;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 public interface PageUtil extends Loggable, ViewUtil {
 
@@ -69,14 +73,14 @@ public interface PageUtil extends Loggable, ViewUtil {
         }
     }
 
-    default void runOnUiThread(Runnable r) {
-        Activity a = getActivity();
-        if (a == null) {
-            ThreadUtil.runOnUiThread(r);
-        } else {
-            a.runOnUiThread(r);
-        }
-    }
+//    default void runOnUiThread(Runnable r) {
+//        Activity a = getActivity();
+//        if (a == null) {
+//            ThreadUtil.runOnUiThread(r);
+//        } else {
+//            a.runOnUiThread(r);
+//        }
+//    }
 
     /**
      * @return pair of inflated menu view & popup window
@@ -156,6 +160,24 @@ public interface PageUtil extends Loggable, ViewUtil {
             }
         }
         return false;
+    }
+
+    // https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard
+    default void showKeyBoard(boolean show, View view) {
+        if (getActivity() == null) return;
+
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            if (show) {
+                imm.showSoftInput(view, 0);
+            } else {
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+        }
+    }
+
+    default void setMovementMethod(TextView t) {
+        t.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     //-- Logging -- start

@@ -3,16 +3,12 @@ package com.flyingkite.mytoswiki.dialog;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import androidx.annotation.IdRes;
-import androidx.annotation.Nullable;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.util.PageUtil;
@@ -23,6 +19,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
 
 public class BaseTosDialog extends DialogFragment implements
         PageUtil, TosPageUtil, ShareUtil,
@@ -194,18 +193,6 @@ public class BaseTosDialog extends DialogFragment implements
             sb.append(t[i]);
         }
         return sb.toString();
-    }
-
-    // https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard
-    public void showKeyBoard(boolean show, View view) {
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm != null) {
-            if (show) {
-                imm.showSoftInput(view, 0);
-            } else {
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-            }
-        }
     }
 
 }

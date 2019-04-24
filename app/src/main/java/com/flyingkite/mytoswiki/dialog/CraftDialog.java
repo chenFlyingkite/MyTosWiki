@@ -2,11 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.annotation.ArrayRes;
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +41,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import androidx.annotation.ArrayRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
 
 public class CraftDialog extends BaseTosDialog {
@@ -229,6 +229,8 @@ public class CraftDialog extends BaseTosDialog {
         private boolean armOK = false;
         @Override
         public void onTaskDone(int index, String tag) {
+            if (isActivityGone()) return;
+
             switch (tag) {
                 case TosWiki.TAG_ARM_CRAFTS:
                     armOK = true;
@@ -238,7 +240,7 @@ public class CraftDialog extends BaseTosDialog {
                     break;
             }
             if (armOK && normalOK) {
-                runOnUiThread(() -> {
+                getActivity().runOnUiThread(() -> {
                     BaseCraft[] arm = TosWiki.allArmCrafts();
                     BaseCraft[] normal = TosWiki.allNormalCrafts();
                     List<BaseCraft> li = new ArrayList<>();

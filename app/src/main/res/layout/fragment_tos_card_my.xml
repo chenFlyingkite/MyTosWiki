@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tosTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey3a">
+
+        <LinearLayout
+            android:id="@+id/tosUidBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sortTitle"
+                android:text="@string/uid"/>
+
+            <EditText
+                android:id="@+id/tosMyUid"
+                android:layout_width="@dimen/t120dp"
+                android:layout_height="wrap_content"
+                style="@style/sortTitle"
+                android:textColor="@color/yellow"
+                android:textColorHint="@color/greyd"
+                android:inputType="number"
+                android:hint="@string/enterUid"
+                android:text="199215954"/>
+
+            <ImageView
+                android:id="@+id/tosLoad"
+                style="@style/tosGoBottomW.t40"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tosTools"
+            android:layout_below="@id/tosUidBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/tosFavor"
+                style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
+                android:src="@drawable/ic_favorite_border_black_48"
+                android:background="@drawable/bg_press_sky_rect"/>
+
+            <ImageView
+                android:id="@+id/tosToolBar"
+                style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
+                android:src="@drawable/ic_open_in_browser_black_48dp"
+                android:background="@drawable/bg_press_sky_rect"/>
+
+            <ImageView
+                android:id="@+id/tosGoTop"
+                style="@style/tosGoTop"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
+
+            <ImageView
+                android:id="@+id/tosGoBottom"
+                style="@style/tosGoBottom"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
+
+            <ImageView
+                android:id="@+id/tosSortMenu"
+                style="@style/tosIcon"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"
+                android:src="@drawable/ic_sort_black_48dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tosInfo"
+            android:layout_below="@id/tosUidBox"
+            style="@style/common_text"
+            android:textColor="@color/grey_white"
+            android:layout_centerVertical="true"
+            tools:text="@string/cards_selection"/>
+    </RelativeLayout>
+
+    <!-- Remove me -->
+    <LinearLayout
+        android:id="@+id/tosFavorBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <ImageView
+            style="@style/card_icon.favorW"
+            android:layout_width="@dimen/t20dp"
+            android:layout_height="@dimen/t20dp"
+            android:background="@color/green"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tosFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t50dp"
+            android:scrollbars="horizontal"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tosRecycler"
+        android:layout_below="@id/tosTopBar"
+        android:layout_above="@id/tosFavorBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        app:fastScrollEnabled="true"
+        app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
+        app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
+        app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
+        app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
+</RelativeLayout>

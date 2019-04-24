@@ -372,6 +372,14 @@
         <item name="android:textColor">#fff</item>
     </style>
 
+    <style name="dialog_title2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t20dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="card_icon">
         <item name="android:layout_width">@dimen/t40dp</item>
         <item name="android:layout_height">@dimen/t40dp</item>

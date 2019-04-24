@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.tos;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import androidx.annotation.NonNull;
 import android.util.Log;
 
 import com.flyingkite.crashlytics.CrashReport;
@@ -34,6 +33,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
+
+import androidx.annotation.NonNull;
 
 public class TosWiki {
     private TosWiki() {}
@@ -312,7 +313,10 @@ public class TosWiki {
     // attend & absent
     // retain & remove
     public static void attendDatabaseTasks(@NonNull TaskMonitor.OnTaskState listener) {
-        monitorDB.registerClient(listener);
+        ExecutorService p = ThreadUtil.cachedThreadPool;
+        p.submit(() -> {
+            monitorDB.registerClient(listener);
+        });
     }
 
 
