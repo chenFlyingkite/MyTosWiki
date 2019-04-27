@@ -709,8 +709,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         // Find a good regex for 種族符石
         // Comma is for #1693 關師傅
-        private Pattern raceStoneRegex1;
-        private Pattern raceStoneRegex2;
+        private Pattern raceStoneRegex;
+        private Pattern raceStoneRegexAttr;
+        private Pattern raceStoneRegexRace;
 
         @Override
         public void onPrepare() {
@@ -764,8 +765,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             List<String> race = new ArrayList<>();
             getSelectTags(sortRaceStoneRace, race, false);
             if (attr.isEmpty() && race.isEmpty()) {
-                raceStoneRegex1 = null;
-                raceStoneRegex2 = null;
+                raceStoneRegex = null;
+                raceStoneRegexAttr = null;
+                raceStoneRegexRace = null;
                 return;
             }
 
@@ -774,11 +776,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             String races = toRegex(race);
 
             String regex = attrs + races + "(|強化)符石";
-            raceStoneRegex1 = Pattern.compile(regex);
+            raceStoneRegex = Pattern.compile(regex);
 
-            String raceK = toRegex(race).replace("族", "");
-            raceStoneRegex2 = Pattern.compile(raceK);
-            logE("(R1, R2) = %s   %s", raceStoneRegex1, raceStoneRegex2);
+            String raceK = races.replace("族", "");
+            raceStoneRegexRace = Pattern.compile(raceK);
+            raceStoneRegexAttr = Pattern.compile(attrs);
+            logE("(All, Attr, Race) = %s  %s   %s", raceStoneRegex, raceStoneRegexAttr, raceStoneRegexRace);
         }
 
         private List<String> getRaces() {
@@ -825,7 +828,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private boolean selectForRaceRunestones(TosCard c) {
-            if (raceStoneRegex1 == null) {
+            if (raceStoneRegex == null) {
                 return true;
             }
 
@@ -837,14 +840,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 key += " & " + c.cardDetails;
             }
 
-            boolean b = raceStoneRegex1.matcher(key).find();
+            boolean b = raceStoneRegex.matcher(key).find();
 
             // Find 自身種族符石, special
             b = selectRaceRuneStoneSpecial(b, key, c);
-//            boolean z = raceStoneRegexSp.matcher(key).find();
-//            if (z) {
-//                b |= raceStoneRegex2.matcher(c.race).find();
-//            }
             return b;
         }
 
@@ -853,16 +852,21 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             int idNorm = Integer.parseInt(c.idNorm);
             //boolean noSel = !sortRaceStoneAddLeader.isSelected() && !sortRaceStoneAddDetail.isSelected();
             switch (idNorm) {
-                case 1624: // God & elf, 絲堤
-                    ans = raceStoneRegex2.matcher("神妖精").find();
+                case 1624: // 絲堤
+                    ans = raceStoneRegexRace.matcher("神妖精").find();
                     break;
                 case 1661: case 1662: case 1663: case 1664: case 1665: // 修道仙妖
-                    ans = raceStoneRegex2.matcher("妖精").find();
+                    ans = raceStoneRegexRace.matcher("妖精").find();
                     break;
                 //case 1982: // 唐三藏
                 case 2013: // 愛迪生
                 case 2021: // 妮可
                     ans = true;
+                    break;
+                case 2081: // 艾莉亞
+                    boolean a = raceStoneRegexAttr.matcher("水火木").find();
+                    boolean r = raceStoneRegexRace.matcher("人").find();
+                    ans = a && r;
                     break;
             }
             return ans;

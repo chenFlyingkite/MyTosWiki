@@ -27,6 +27,7 @@ public class CraftItemDialog extends BaseTosDialog {
     // Views
     private ImageView craftIcon;
     private View craftLink;
+    private View craftShare;
     private TextView craftIdNorm;
     private TextView craftMode;
     private TextView craftName;
@@ -61,6 +62,7 @@ public class CraftItemDialog extends BaseTosDialog {
     private void initCraft(BaseCraft c) {
         craftIcon = findViewById(R.id.craftIcon);
         craftLink = findViewById(R.id.craftLink);
+        craftShare = findViewById(R.id.craftShare);
         craftIdNorm = findViewById(R.id.craftIdNorm);
         craftMode = findViewById(R.id.craftMode);
         craftName = findViewById(R.id.craftName);
@@ -81,6 +83,10 @@ public class CraftItemDialog extends BaseTosDialog {
         dismissWhenClick(R.id.craftTop, R.id.craftMark, R.id.craftEnd, R.id.craftMajor, R.id.craftMajorHeader);
         craftIcon.setOnClickListener((v) -> {
             shareImage(v);
+            logShare("icon");
+        });
+        craftShare.setOnClickListener((v) -> {
+            shareImage(findViewById(R.id.craftInfo));
             logShare("table");
         });
         craftLink.setOnClickListener((v) -> {
