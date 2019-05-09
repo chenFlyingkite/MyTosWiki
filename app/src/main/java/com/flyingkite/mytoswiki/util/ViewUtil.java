@@ -293,5 +293,19 @@ public interface ViewUtil {
             t.setText(cs);
         }
     }
+
+    default View findChildTag(ViewGroup vg, Object tag) {
+        if (vg == null) return null;
+
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View v = vg.getChildAt(i);
+            Object vt = v.getTag();
+            if (tag.equals(vt)) {
+                return v;
+            }
+        }
+        return null;
+    }
     //-- View helpers --
 }

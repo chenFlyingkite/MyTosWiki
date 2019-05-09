@@ -72,5 +72,16 @@ public class AppPref extends BasePreference implements Loggable {
     public void setUserTosInventory(String s) {
         putString(KEY_UserTosInventory, s);
     }
+
+    // User uid of pack
+    private static final String KEY_CardsSearchText = "CardsSearchText";
+
+    public String getCardsSearchText() {
+        return getString(KEY_CardsSearchText, "");
+    }
+
+    public void setCardsSearchText(String s) {
+        putString(KEY_CardsSearchText, s);
+    }
     //----
 }

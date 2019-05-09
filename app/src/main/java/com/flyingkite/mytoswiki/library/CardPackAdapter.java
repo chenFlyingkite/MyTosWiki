@@ -23,6 +23,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+@Deprecated
 public class CardPackAdapter extends RVSelectAdapter<PackCard, CardPackAdapter.PCardVH, CardPackAdapter.ItemListener> {
 
     public interface ItemListener extends RVSelectAdapter.ItemListener<PackCard, PCardVH> {

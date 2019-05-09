@@ -9,8 +9,6 @@ import android.graphics.Canvas;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 
@@ -35,13 +33,15 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 /**
  * <a href="https://developer.android.com/training/sharing/send">
  *     https://developer.android.com/training/sharing/send
  *     </a>
  */
 public class ShareHelper {
-    private ShareHelper() {}
 
     public static void shareString(@NonNull Context context, String msg) {
         shareString(context, msg, context.getString(R.string.share_to));
@@ -223,9 +223,11 @@ public class ShareHelper {
             if (isCancelled()) return null;
 
             // 4. Scale bitmap
-            Bitmap bmp = Bitmap.createScaledBitmap(bitmap, width, height, false);
-            bitmap.recycle();
-            bitmap = bmp;
+            if (vw.getWidth() != width || vw.getHeight() != height) {
+                Bitmap bmp = Bitmap.createScaledBitmap(bitmap, width, height, false);
+                bitmap.recycle();
+                bitmap = bmp;
+            }
 
             // 5. [~1kms] Writing bitmap to file
             FileOutputStream fos = null;

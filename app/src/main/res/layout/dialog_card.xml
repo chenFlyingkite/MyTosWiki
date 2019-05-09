@@ -275,6 +275,9 @@
                     <include
                         android:id="@+id/cardHpMax"
                         layout="@layout/view_card_hp"/>
+                    <include
+                        android:id="@+id/cardHpAllMax"
+                        layout="@layout/view_card_hp2"/>
 
                     <!-- Card basic info : skill -->
                     <LinearLayout

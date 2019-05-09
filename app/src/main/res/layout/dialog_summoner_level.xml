@@ -127,11 +127,18 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
+                <!--
                 <io.github.kexanie.library.MathView
                     android:id="@+id/sldMath"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     auto:text="@string/math_summoner_level"/>
+                -->
+                <TextView
+                    android:id="@+id/sldMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_summoner_level"/>
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/sldMathChart"

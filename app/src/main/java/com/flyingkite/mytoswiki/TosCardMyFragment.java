@@ -1,25 +1,34 @@
 package com.flyingkite.mytoswiki;
 
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Pair;
+import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.flyingkite.fabric.FabricAnswers;
+import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.log.Loggable;
+import com.flyingkite.library.preference.BasePreference;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
+import com.flyingkite.mytoswiki.data.PackSort;
 import com.flyingkite.mytoswiki.data.pack.PackCard;
+import com.flyingkite.mytoswiki.data.pack.PackInfoCard;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CommonDialog;
 import com.flyingkite.mytoswiki.dialog.UsePackDialog;
-import com.flyingkite.mytoswiki.library.CardAdapter;
-import com.flyingkite.mytoswiki.library.CardPackAdapter;
+import com.flyingkite.mytoswiki.library.CardPackInfoAdapter;
 import com.flyingkite.mytoswiki.library.Misc;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -31,6 +40,7 @@ import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
+import com.google.gson.Gson;
 
 import org.jsoup.nodes.Document;
 
@@ -38,8 +48,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.regex.Pattern;
 
@@ -50,14 +63,18 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
 
-public class TosCardMyFragment extends BaseFragment implements TosPageUtil, JsoupUtil, TosCardUtil {
+public class TosCardMyFragment extends BaseFragment implements TosPageUtil, JsoupUtil {
     public static final String TAG = "TosCardMyFragment";
     public static final String TOS_REVIEW = "https://review.towerofsaviors.com/";
 
     private RecyclerView cardsRecycler;
     private TextView tosInfo;
+    private TextView tosInfo2;
     private TextView uidText;
     private View uidLoad;
+    private View tosUsage;
+    private TextView loading;
+    private View howToUse;
     // Popup Menus
     private View menuEntry;
     private PopupWindow sortWindow;
@@ -69,6 +86,17 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
     private ViewGroup sortStar;
     // Common Sorting order
     private RadioGroup sortCommon;
+    // 特選
+    private ViewGroup sortSpecial;
+    //private View sortSpecialFast;
+    private View sortFastSkill;
+
+    private CheckBox sortSpecialNo;
+    private CheckBox sortSpecialSkillEatable2;
+    private CheckBox sortSpecialSkillEatable3;
+    private CheckBox sortSpecialSkillEatable4;
+    private CheckBox sortSpecialSkillNotMax;
+    private CheckBox sortSpecialSkillEnough;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -81,17 +109,23 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
     private CheckBox sortImproveCom; // Combine cards
     private CheckBox sortImproveVr2;
     private CheckBox sortImproveSwt;
+    private CheckBox sortImproveDmx;
     // Hide cards
     private ViewGroup sortHide;
     // Display card name
     private RadioGroup sortDisplay;
 
     //private Library<CardAdapter> cardLib;
-    private Library<CardPackAdapter> cardLib;
+    //private Library<CardPackAdapter> cardLib;
+    private Library<CardPackInfoAdapter> cardLib;
+
     private List<TosCard> myBag = new ArrayList<>();
     private List<PackCard> myPack = new ArrayList<>();
+    private Map<String, PackInfoCard> myInfoPack = new TreeMap<>();
     private boolean showHint;
     private WaitingDialog waiting;
+    private TosCardFragment.ToolBarOwner toolOwner;
+    //private PackSort packSort = new PackSort();
 
     @Override
     protected int getPageLayoutId() {
@@ -103,20 +137,11 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         super.onViewCreated(view, savedInstanceState);
 
         cardsRecycler = findViewById(R.id.tosRecycler);
-        tosInfo = findViewById(R.id.tosInfo);
-        uidText = findViewById(R.id.tosMyUid);
-        uidLoad = findViewById(R.id.tosLoad);
-        menuEntry = findViewById(R.id.tosSortMenu);
         initSortMenu();
         initToolIcons();
-        tosInfo.setOnClickListener((v) -> {
-            AppPref p = new AppPref();
-            p.setUserTosInventory("");
-            p.setUserUid("");
-            showToast("Cleared");
-        });
 
         cardLib = new Library<>(cardsRecycler, 5);
+        //new LoadDataAsyncTask().executeOnExecutor(sSingle);
         TosWiki.attendDatabaseTasks(onCardsReady);
     }
 
@@ -127,6 +152,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         sortWindow = pair.second;
         View menu = pair.first;
 
+        menuEntry = findViewById(R.id.tosSortMenu);
         menuEntry.setOnClickListener(v -> {
             sortWindow.showAsDropDown(v);
             //logSelectCard();
@@ -140,31 +166,74 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         initSortByCommon(menu);
         initSortByHide(menu);
         initDisplay(menu);
+        initSortBySpecial(menu);
         initSortByImprove(menu);
     }
 
     private void initToolIcons() {
+        tosInfo = findViewById(R.id.tosInfo);
+        tosInfo2 = findViewById(R.id.tosInfo2);
+        uidText = findViewById(R.id.tosMyUid);
+        uidLoad = findViewById(R.id.tosLoad);
+        tosUsage = findViewById(R.id.tosUsage);
+        tosUsage.setOnClickListener((v) -> {
+            logHowToUse();
+            new UsePackDialog().show(getActivity());
+        });
+        loading = findViewById(R.id.tosLoading);
+        howToUse = findViewById(R.id.tosHow);
+        howToUse.setOnClickListener((v) -> {
+            tosUsage.callOnClick();
+        });
+        View clr = findViewById(R.id.tosClear);
+        clr.setOnClickListener((v) -> {
+            logClear();
+            AppPref p = new AppPref();
+            uidText.setText("");
+            p.setUserTosInventory("");
+            p.setUserUid("");
+            showToast(getString(R.string.cleared));
+        });
+
         AppPref p = new AppPref();
         uidText.setText(p.getUserUid());
 
         initScrollTools(R.id.tosGoTop, R.id.tosGoBottom, cardsRecycler);
         uidLoad.setOnClickListener((v) -> {
             showKeyBoard(false, v);
-            ThreadUtil.runOnWorkerThread(() -> {
-                showHint = true;
-                String uid = uidText.getText().toString();
-                if (TextUtils.isEmpty(uid)) {
-                    new CommonDialog().message(getString(R.string.enterUid)).show(getActivity());
-                    return;
-                }
+            showHint = true;
+            String uid = uid();
+            if (TextUtils.isEmpty(uid)) {
+                new CommonDialog().message(getString(R.string.enterUid)).show(getActivity());
+                return;
+            }
 
-                if (!App.isNetworkConnected()) {
-                    new CommonDialog().message(getString(R.string.noNetwork)).show(getActivity());
-                    return;
-                }
-                loadPack();
-            });
+            if (!App.isNetworkConnected()) {
+                new CommonDialog().message(getString(R.string.noNetwork)).show(getActivity());
+                return;
+            }
+            logDownload(uid);
+            loadMyPack();
         });
+
+        // Setup tool bar
+        View tool = findViewById(R.id.tosToolBar);
+        tool.setOnClickListener((v) -> {
+            toggleSelected(v);
+
+            boolean s = v.isSelected();
+            if (toolOwner != null) {
+                toolOwner.setToolsVisible(s);
+                logAction(s ? "showTool" : "hideTool");
+            }
+            setViewVisibility(findViewById(R.id.tosUidBox), s);
+        });
+        boolean sel = false;
+        if (toolOwner != null) {
+            sel = toolOwner.isToolsVisible();
+        }
+        tool.setSelected(sel);
+
     }
 
     //----
@@ -176,7 +245,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             String name = ShareHelper.cacheName("1.png");
 
             ShareHelper.shareImage(getActivity(), view, name);
-            //logShare("library"); // TODO
+            logMenu("shareLibrary"); // TODO
         });
     }
 
@@ -221,8 +290,66 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         sortImproveCom = menu.findViewById(R.id.sortImproveCombine);
         sortImproveVr2 = menu.findViewById(R.id.sortImproveVirtualRebirthChange);
         sortImproveSwt = menu.findViewById(R.id.sortImproveSwitch);
+        sortImproveDmx = menu.findViewById(R.id.sortImproveDualMaxAdd);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
+    }
+
+    private void initSortBySpecial(View menu) {
+        sortSpecialNo = menu.findViewById(R.id.sortSpecialNo);
+        sortSpecialSkillEatable2 = menu.findViewById(R.id.sortSpecialSkillEatable2);
+        sortSpecialSkillEatable3 = menu.findViewById(R.id.sortSpecialSkillEatable3);
+        sortSpecialSkillEatable4 = menu.findViewById(R.id.sortSpecialSkillEatable4);
+        sortSpecialSkillNotMax = menu.findViewById(R.id.sortSpecialSkillNotMax);
+        sortSpecialSkillEnough = menu.findViewById(R.id.sortSpecialSkillEnough);
+//        sortSpecialMoreCoin = menu.findViewById(R.id.sortSpecialMoreCoin);
+//        sortSpecialExtend = menu.findViewById(R.id.sortSpecialExtend);
+//        sortSpecialAlsoActive = menu.findViewById(R.id.sortSpecialAlsoActive);
+//        sortSpecialAlsoLeader = menu.findViewById(R.id.sortSpecialAlsoLeader);
+//        sortSpecialRestoreDropRateTransfer = menu.findViewById(R.id.sortSpecialRestoreDropRateTransfer);
+//        sortSpecialNoDefeat = menu.findViewById(R.id.sortSpecialNoDefeat);
+//        sortSpecialDamageLessActive = menu.findViewById(R.id.sortSpecialDamageLessActive);
+//        sortSpecialDamageLessLeader = menu.findViewById(R.id.sortSpecialDamageLessLeader);
+//        sortSpecialDamageToHp = menu.findViewById(R.id.sortSpecialDamageToHp);
+//        sortSpecialNonAttribute = menu.findViewById(R.id.sortSpecialNonAttribute);
+//        sortSpecialRegardlessDefense = menu.findViewById(R.id.sortSpecialRegardlessDefense);
+//        sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
+//        sortSpecialClearAllEffect = menu.findViewById(R.id.sortSpecialClearAllEffect);
+//        sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
+//        sortSpecialStayUntilIf = menu.findViewById(R.id.sortSpecialStayUntilIf);
+//        sortSpecialExtraAttack = menu.findViewById(R.id.sortSpecialExtraAttack);
+//        sortSpecialOriginalColor = menu.findViewById(R.id.sortSpecialOriginalColor);
+//        sortSpecialRestoreNormal = menu.findViewById(R.id.sortSpecialRestoreNormal);
+//        sortSpecialFix = menu.findViewById(R.id.sortSpecialFix);
+//        sortSpecialRestoreIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreIntoEnchanted);
+//        sortSpecialRestoreAllAttrRandom = menu.findViewById(R.id.sortSpecialRestoreAllAttrRandom);
+//        sortSpecialRestoreAllIntoRandom = menu.findViewById(R.id.sortSpecialRestoreAllIntoRandom);
+//        sortSpecialRestoreAllInto = menu.findViewById(R.id.sortSpecialRestoreAllInto);
+//        sortSpecialRestoreAllIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreAllIntoEnchanted);
+//        sortSpecialDodge = menu.findViewById(R.id.sortSpecialDodge);
+//        sortSpecialOneDealDamage = menu.findViewById(R.id.sortSpecialOneDealDamage);
+//        sortSpecialOneDealDamageElement = menu.findViewById(R.id.sortSpecialOneDealDamageElement);
+//        sortSpecialAllDealDamage = menu.findViewById(R.id.sortSpecialAllDealDamage);
+//        sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
+//        sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
+//        sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
+
+        sortFastSkill = menu.findViewById(R.id.sortFastSkill);
+        sortFastSkill.setOnClickListener((v) -> {
+            logMenu("5 星可練技卡");
+            // Find 5 star and click
+            View target = findChildTag(sortStar, "5");
+            if (target != null) {
+                target.setSelected(true);
+            }
+
+            sortSpecialSkillEatable4.setChecked(true);
+            sortSpecialSkillNotMax.setChecked(true);
+            sortSpecialSkillEnough.setChecked(true);
+            setCheckedIncludeNo(sortSpecialSkillEnough, R.id.sortSpecialNo, sortSpecial);
+            applySelection();
+        });
+        sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
 
 
@@ -237,6 +364,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             setAllChildSelected(vg, false);
         }
         sortCommon.check(R.id.sortCommonNormId);
+        setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
         setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
     }
 
@@ -265,6 +393,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         switch (v.getId()) {
             case R.id.sortDisplayName:
                 type = Misc.NT_NAME;
+                break;
+            case R.id.sortDisplayNone:
+                type = Misc.NT_NONE;
                 break;
         }
         if (cardLib.adapter != null) {
@@ -295,6 +426,11 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         applySelection();
     }
 
+    private void clickSpecial(View v) {
+        setCheckedIncludeNo(v, R.id.sortSpecialNo, sortSpecial);
+        applySelection();
+    }
+
     // Apply selection to adapter --------
     private void applySelection() {
         // Attribute
@@ -314,7 +450,10 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
 
         if (cardLib.adapter != null) {
             TosCondition cond = new TosCondition().attr(attrs).race(races).star(stars);
-            cardLib.adapter.setSelection(new TosSelectCard(myPack, cond));
+
+            List<PackInfoCard> list = new ArrayList<>(myInfoPack.values());
+            //cardLib.adapter.setSelection(new TosSelectCard(myPack, cond));
+            cardLib.adapter.setSelection(new TosSelectCard(list, cond));
         }
     }
 
@@ -323,103 +462,144 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
 
         applySelection();
     }
+
+    private void updateHide() {
+        PackSort p = new MyPackPref().getPref();
+
+        sortHide.findViewById(R.id.sortHideEmpty ).setSelected(p.ownExist);
+        sortHide.findViewById(R.id.sortHideFarm  ).setSelected(p.farm);
+        sortHide.findViewById(R.id.sortHideNormal).setSelected(p.normal);
+        sortHide.findViewById(R.id.sortHide7xxx  ).setSelected(p.tauFa);
+        sortHide.findViewById(R.id.sortHide8xxx  ).setSelected(p.disney);
+        sortHide.findViewById(R.id.sortHide9xxx  ).setSelected(p.demon72);
+
+        int k = (int) MathUtil.makeInRange(p.display, 0, sortDisplay.getChildCount());
+        clickDisplay(sortDisplay.getChildAt(k));
+    }
+    // --------
+
+    // Saving preference as Gson --------
+    private void toGsonHide() {
+        PackSort p = new PackSort();
+        p.ownExist = sortHide.findViewById(R.id.sortHideEmpty ).isSelected();
+        p.farm     = sortHide.findViewById(R.id.sortHideFarm  ).isSelected();
+        p.normal   = sortHide.findViewById(R.id.sortHideNormal).isSelected();
+        p.tauFa    = sortHide.findViewById(R.id.sortHide7xxx  ).isSelected();
+        p.disney   = sortHide.findViewById(R.id.sortHide8xxx  ).isSelected();
+        p.demon72  = sortHide.findViewById(R.id.sortHide9xxx  ).isSelected();
+
+        p.display = findCheckedIndex(sortDisplay);
+        new MyPackPref().setPref(p);
+    }
     //----
+
+    private int findCheckedIndex(ViewGroup vg) {
+        int n = vg.getChildCount();
+        for (int i = 0; i < n; i++) {
+            View v = vg.getChildAt(i);
+            if (v instanceof Checkable) {
+                Checkable r = (Checkable) v;
+                if (r.isChecked()) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
 
     @Override
     public void onPause() {
         super.onPause();
+        toGsonHide();
 
         if (uidText != null) {
-            String uid = uidText.getText().toString();
+            String uid = uid();
             // Save to preference
             AppPref p = new AppPref();
             p.setUserUid(uid);
         }
     }
 
+    @Override
+    public void onToolScrollToPosition(RecyclerView rv, int position) {
+        String s = position == 0 ? "Scroll Head" : "Scroll Tail";
+        logAction(s);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof TosCardFragment.ToolBarOwner) {
+            toolOwner = (TosCardFragment.ToolBarOwner) context;
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        toolOwner = null;
+    }
+
     private void showUsage() {
         if (showHint) {
             new UsePackDialog().show(getActivity());
+        } else {
+            howToUse.setVisibility(View.VISIBLE);
         }
     }
 
-    private void loadPack() {
-        loadMyPack(uidText.getText().toString());
+    private void loadMyPack() {
+        loadPack(uid());
     }
 
-    private void loadMyPack(String uid) {
-        AppPref p = new AppPref();
+    private String uid() {
+        return uidText.getText().toString();
+    }
 
-        showCardsLoading();
-        Document doc = getDocument(TOS_REVIEW + uid);
-        String data = doc.toString();
-        logE("data = %s", data);
-        String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");
-        // Load last time if not found
-        if (TextUtils.isEmpty(inventory)) {
-            inventory = p.getUserTosInventory();
-        }
-
-        // User did not provide
-        if (TextUtils.isEmpty(inventory)) {
-            hideCardsLoading();
-            showUsage();
-            return;
-        }
-
-        // Save data to preference
-        p.setUserUid(uid);
-        p.setUserTosInventory(inventory);
-
-        inventory(inventory);
-
-
-        getActivity().runOnUiThread(() -> {
-            hideCardsLoading();
-            CardAdapter a = new CardAdapter(); // TODO
-            a.setDataList(myBag);
-            CardPackAdapter b = new CardPackAdapter();
-            b.setDataList(myPack);
-            b.setItemListener(new CardPackAdapter.ItemListener() {
-                @Override
-                public void onFiltered(int selected, int total) {
-                    tosInfo.setText(App.res().getString(R.string.cards_selection, selected, total));
-                }
-
-                @Override
-                public void onClick(PackCard item, CardPackAdapter.PCardVH holder, int position) {
-                    logE("item = %s", item.source);
-                    showCardDialog(TosWiki.getCardByIdNorm(item.idNorm));
-                }
-            });
-            cardLib.setViewAdapter(b);
-
-            int n = myBag.size();
-            n = myPack.size();
-            tosInfo.setText(App.res().getString(R.string.cards_selection, n, n));
-
-            if (showHint) {
-                showToast(R.string.cards_read, n);
-            }
-        });
+    private void loadPack(String uid) {
+        new LoadPackTask(uid).executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     private void inventory(String inventory) {
-        logE("inventory_str  = \n%s\n", inventory);
+        //logE("inventory_str  = \n%s\n", inventory);
         String[] invs = inventory.split(",");
-        //print(invs);
         myBag.clear();
         myPack.clear();
+        myInfoPack.clear();
+        TosCard[] all = TosWiki.allCards();
+        for (int i = 0; i < all.length; i++) {
+            // Make PackInfoCard from TosCard
+            TosCard d = all[i];
+            if (TosCardUtil.isInBag(d)) {
+                PackInfoCard c = PackInfoCard.from(d);
+                myInfoPack.put(d.idNorm, c);
+            }
+        }
+
         for (int i = 0; i < invs.length; i++) {
-            myPack.add(parseCard(invs[i]));
+            PackCard p = TosCardUtil.parseCard(invs[i]);
+            myPack.add(TosCardUtil.parseCard(invs[i]));
             String[] a = invs[i].split("[|]");
-            myBag.add(TosWiki.getCardByIdNorm(idNorm(a[1])));
-            int x = Integer.parseInt(a[7]);
-            if (x != 0) {
-                logE("QWE x = %s", x);
+            myBag.add(TosWiki.getCardByIdNorm(TosCardUtil.idNorm(a[1])));
+
+            PackInfoCard q = myInfoPack.get(p.idNorm);
+            if (q != null) {
+                q.packs.add(p);
             }
         }
         logE("\n\n");
+
+        if (false) { // TODO print
+            logE("---- PackInfoCard ----- %s items", myInfoPack.size());
+            List<PackInfoCard> p = new ArrayList<>(myInfoPack.values());
+            for (int i = 0; i < p.size(); i++) {
+                PackInfoCard pi = p.get(i);
+                String name = TosWiki.getCardByIdNorm(pi.idNorm).name;
+                logE("#%04d : %s %-20s -> %s", i, pi.idNorm, name, pi);
+            }
+            logE("---------");
+        }
+
         //statistics("inventory", invs);
     }
 
@@ -455,7 +635,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                 }
             }
 
-            String idNorm = idNorm(di[1]);
+            String idNorm = TosCardUtil.idNorm(di[1]);
             int slv = Integer.parseInt(di[4]);
 //            TosCard c = allCards.get(idNorm);
 //            // can train
@@ -476,22 +656,29 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
     }
 
     private void showCardsLoading() {
-        if (isActivityGone() || !showHint) return;
+        if (isActivityGone()) return;
 
-        getActivity().runOnUiThread(() -> {
+        uidLoad.setEnabled(false);
+        if (showHint) {
             waiting = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
-        });
+        } else {
+            loading.setVisibility(View.VISIBLE);
+        }
+
     }
 
     private void hideCardsLoading() {
-        if (isActivityGone() || !showHint) return;
+        if (isActivityGone()) return;
 
-        getActivity().runOnUiThread(() -> {
+        uidLoad.setEnabled(true);
+        if (showHint) {
             if (waiting != null) {
                 waiting.dismiss();
                 waiting = null;
             }
-        });
+        } else {
+            loading.setVisibility(View.GONE);
+        }
     }
 
     private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
@@ -507,23 +694,56 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                 return;
             }
 
-            loadPack();
+            updateHide();
+            loadMyPack();
         }
     };
 
+    //-- Events
+    private void logMenu(String type) {
+        Map<String, String> m = new HashMap<>();
+        m.put("menu", type);
+        FabricAnswers.logMyPack(m);
+    }
+
+    private void logClear() {
+        Map<String, String> m = new HashMap<>();
+        m.put("clear", "1");
+        FabricAnswers.logMyPack(m);
+    }
+
+    private void logAction(String act) {
+        Map<String, String> m = new HashMap<>();
+        m.put("action", act);
+        FabricAnswers.logMyPack(m);
+    }
+
+    private void logDownload(String id) {
+        Map<String, String> m = new HashMap<>();
+        m.put("DownloadUid", id);
+        FabricAnswers.logMyPack(m);
+    }
+
+    private void logHowToUse() {
+        Map<String, String> m = new HashMap<>();
+        m.put("HowToUse", "1");
+        FabricAnswers.logMyPack(m);
+    }
+    //-- Events
+
 
     // Actual implementation of TosSelectCard --------
-    private class TosSelectCard extends AllCards<PackCard> {
+    private class TosSelectCard extends AllCards<PackInfoCard> {
         private final String[] commonRace = App.res().getStringArray(R.array.cards_common_keys_race);
 
         private TosCondition select;
 
-        public TosSelectCard(List<PackCard> source, TosCondition condition) {
+        public TosSelectCard(List<PackInfoCard> source, TosCondition condition) {
             super(source);
             select = condition;
         }
 
-        private boolean[] selectForShow = new boolean[4];
+        private SparseBooleanArray selectForShow = new SparseBooleanArray();
         private Pattern farmSeries;
         private Pattern turnStoneRegex;
 
@@ -543,24 +763,23 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             String farmKey = RegexUtil.toRegexOr(Arrays.asList(App.res().getStringArray(R.array.seriesOfFarm)));
             farmSeries = Pattern.compile(farmKey);
 
-            selectForShow = new boolean[6];
+            selectForShow.clear();
             ViewGroup vg = sortHide;
             int n = vg.getChildCount();
             for (int i = 0; i < n; i++) {
                 int m = -1;
                 View v = vg.getChildAt(i);
                 switch (v.getId()) {
-                    case R.id.sortHide6xxx: m = 0; break;
-                    case R.id.sortHide7xxx: m = 1; break;
-                    case R.id.sortHide8xxx: m = 2; break;
-                    case R.id.sortHide9xxx: m = 3; break;
-                    case R.id.sortHideFarm: m = 4; break;
-                    case R.id.sortHideNonFarm: m = 5; break;
+                    case R.id.sortHideEmpty:   m = 0; break;
+                    case R.id.sortHideFarm:    m = 1; break;
+                    case R.id.sortHideNormal: m = 2; break;
+                    case R.id.sortHide7xxx:    m = 3; break;
+                    case R.id.sortHide8xxx:    m = 4; break;
+                    case R.id.sortHide9xxx:    m = 5; break;
                 }
-                if (MathUtil.isInRange(m, 0, selectForShow.length)) {
-                    selectForShow[m] = v.isSelected();
-                }
+                selectForShow.put(m, v.isSelected());
             }
+            logE("prepared show as %s", selectForShow);
         }
 //
 //        private void prepareTurnRunestones() {
@@ -618,14 +837,14 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         }
 
         @Override
-        public boolean onSelect(PackCard p) {
+        public boolean onSelect(PackInfoCard p) {
             TosCard c = TosWiki.getCardByIdNorm(p.idNorm);
             return selectForBasic(c)
                     //&& selectForTurnRunestones(c)
                     //&& selectForRaceRunestones(c)
                     && selectForImprove(c)
-                    //&& selectForSpecial(c)
-                    && selectForShow(c)
+                    && selectForSpecial(c, p)
+                    && selectForShow(c, p)
                     ;
         }
 
@@ -698,47 +917,85 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
 //            return RegexUtil.toRegexOr(keys);
 //        }
 
-        private boolean selectForShow(TosCard c) {
-            int idNorm = Integer.parseInt(c.idNorm);
+        private boolean selectForShow(TosCard c, PackInfoCard p) {
             boolean accept = true;
-            if (selectForShow[0]) {
+
+            if (selectForShow.get(0)) {
                 //noinspection ConstantConditions
-                accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
+                accept &= p.packs.size() > 0;
             }
-            if (selectForShow[1]) {
-                accept &= !MathUtil.isInRange(idNorm, 7000, 8000);
+            if (selectForShow.get(1)) {
+                accept &= isFarm(c);
             }
-            if (selectForShow[2]) {
-                accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
+            if (selectForShow.get(2)) {
+                accept &= !isFarm(c);
             }
-            if (selectForShow[3]) {
-                accept &= !MathUtil.isInRange(idNorm, 9000, 10000);
+            if (selectForShow.get(3)) {
+                accept &= !TosCardUtil.isTauFa(c);
             }
-            if (selectForShow[4]) {
-                accept &= farmSeries.matcher(c.series).find();//!MathUtil.isInRange(idNorm, 9000, 10000);
+            if (selectForShow.get(4)) {
+                accept &= !TosCardUtil.isDisney(c);
             }
-            if (selectForShow[5]) {
-                accept &= !farmSeries.matcher(c.series).find();//!MathUtil.isInRange(idNorm, 9000, 10000);
+            if (selectForShow.get(5)) {
+                accept &= !TosCardUtil.is72Demon(c);
             }
             return accept;
         }
-//
-//        private boolean selectForSpecial(TosCard c) {
-//            String key = activeSkill(c);
-//            boolean accept = true;
-//            if (!sortSpecialNo.isChecked()) {
-//                boolean element = c.race.matches(getString(R.string.cards_race_level) + "|" + getString(R.string.cards_race_evolve));
-//                //Though repeat, but fast.....
-//                if (sortSpecialFree.isChecked()) {
-//                    //noinspection ConstantConditions
-//                    accept &= find(key, R.array.cards_freemove_keys);
-//                }
-//                if (sortSpecialKeep.isChecked()) {
-//                    accept &= find(key, R.array.cards_keep_keys);
-//                }
-//                if (sortSpecialExplode.isChecked()) {
-//                    accept &= find(key, R.array.cards_explode_keys);
-//                }
+
+        private boolean isFarm(TosCard c) {
+            boolean a = farmSeries.matcher(c.series).matches();
+            boolean b = c.rarity <= 4;
+            return a && b;
+        }
+
+
+        private boolean selectForSpecial(TosCard c, PackInfoCard p) {
+            boolean accept = true;
+            if (!sortSpecialNo.isChecked()) {
+                //Though repeat, but fast.....
+                if (sortSpecialSkillEatable2.isChecked()) {
+                    //noinspection ConstantConditions
+                    accept &= c.sameSkills.size() >= 2;
+                }
+                if (sortSpecialSkillEatable3.isChecked()) {
+                    accept &= c.sameSkills.size() >= 3;
+                }
+                if (sortSpecialSkillEatable4.isChecked()) {
+                    accept &= c.sameSkills.size() >= 4;
+                }
+                if (sortSpecialSkillNotMax.isChecked()) {
+                    boolean yes = false;
+                    int n = p.packs.size();
+                    for (int i = 0; i < n && !yes; i++) {
+                        PackCard q = p.packs.get(i);
+                        if (q.skillLv < c.skillCDMax1) {
+                            yes = true;
+                        }
+                    }
+
+                    accept &= yes;//find(key, R.array.cards_keep_keys);
+                }
+                if (sortSpecialSkillEnough.isChecked()) {
+                    boolean yes = false;
+                    int n = 0;
+                    for (int i = 0; i < c.sameSkills.size() && !yes; i++) {
+                        String id = c.sameSkills.get(i);
+                        PackInfoCard q = myInfoPack.get(id);
+                        if (q != null) {
+                            TosCard qi = TosWiki.getCardByIdNorm(q.idNorm);
+                            if (qi != null && qi.rarity <= 4) {
+                                n += q.packs.size();
+                            }
+                        }
+                        if (n >= 5) {
+                            yes = true;
+                        }
+                    }
+                    accept &= yes;//find(key, R.array.cards_explode_keys);
+                    if (accept) {
+                        logE("Yes eat %s\n%s", p, TosCardUtil.strCard(c));
+                    }
+                }
 //                if (sortSpecialMoreCoin.isChecked()) {
 //                    key += " & " + c.skillLeaderDesc;
 //                    accept &= find(key, R.array.cards_morecoin_keys);
@@ -835,9 +1092,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
 //                if (sortSpecialDelay.isChecked()) {
 //                    accept &= find(key, R.array.cards_delay_keys);
 //                }
-//            }
-//            return accept;
-//        }
+            }
+            return accept;
+        }
 //
 //        private String leaderSkill(TosCard c) {
 //            return joinKey(c.skillLeaderDesc, c);
@@ -893,6 +1150,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                 }
                 if (sortImproveSwt.isChecked()) {
                     accept &= c.skillsDesc().contains("變身");
+                }
+                if (sortImproveDmx.isChecked()) {
+                    accept &= c.maxAddAll();
                 }
             }
             return accept;
@@ -970,8 +1230,8 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             }
             return (o1, o2) -> {
                 boolean dsc = true;
-                PackCard p1 = data.get(o1);
-                PackCard p2 = data.get(o2);
+                PackInfoCard p1 = data.get(o1);
+                PackInfoCard p2 = data.get(o2);
                 TosCard c1 = TosWiki.getCardByIdNorm(p1.idNorm);
                 TosCard c2 = TosWiki.getCardByIdNorm(p2.idNorm);
                 long v1 = -1, v2 = -1;
@@ -1007,6 +1267,10 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                         dsc = false;
                         v1 = ListUtil.indexOf(commonRace, c1.race);
                         v2 = ListUtil.indexOf(commonRace, c2.race);
+                        break;
+                    case R.id.sortCommonOwnCount:
+                        v1 = p1.packs.size();
+                        v2 = p2.packs.size();
                         break;
                 }
 
@@ -1078,7 +1342,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
 
         private List<String> getCommonMessages(List<Integer> result) {
             List<String> message = new ArrayList<>();
-            PackCard p;
+            PackInfoCard p;
             TosCard c;
             String msg;
             // Create Message
@@ -1150,5 +1414,135 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         }
     }
     // --------
+    private class LoadPackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+
+        private String uid = "";
+        private AppPref pref = new AppPref();
+        private long tic;
+
+        public LoadPackTask(String id) {
+            uid = id;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            showCardsLoading();
+            tic = System.currentTimeMillis();
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+            if (TextUtils.isEmpty(uid)) {
+                return false;
+            }
+
+            String link = TOS_REVIEW + uid;
+            logE("fetch %s", link);
+            TicTac2 t = new TicTac2();
+            t.tic();
+            Document doc = getDocument(TOS_REVIEW + uid);
+            t.tac("fetched");
+            String data = doc.toString();
+
+            String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");
+            // Load last time if not found
+            if (TextUtils.isEmpty(inventory)) {
+                inventory = pref.getUserTosInventory();
+            }
+
+            // User did not provide
+            if (TextUtils.isEmpty(inventory)) {
+                return false; // fail
+            }
+
+            // Save data to preference
+            pref.setUserUid(uid);
+            pref.setUserTosInventory(inventory);
+
+            inventory(inventory);
+            return true;
+        }
+
+        private void logTime() {
+            long tac = System.currentTimeMillis();
+            String t = StringUtil.MMSSFFF(tac - tic);
+            String s = getString(R.string.cards_pack_ok, t + "s");
+            App.showToastShort(s);
+            logE(s);
+        }
+
+        @Override
+        protected void onPostExecute(Boolean ok) {
+            if (isActivityGone()) return;
+
+            logTime();
+            hideCardsLoading();
+            if (ok) {
+                CardPackInfoAdapter d = new CardPackInfoAdapter();
+                List<PackInfoCard> list = new ArrayList<>(myInfoPack.values());
+                d.setDataList(list);
+                d.setItemListener(new CardPackInfoAdapter.ItemListener() {
+                    @Override
+                    public void onFiltered(int selected, int total) {
+                        tosInfo.setText(App.res().getString(R.string.cards_selection_kind, selected, total));
+                    }
+
+                    @Override
+                    public void onFilteredAll(int selected, int total) {
+                        tosInfo2.setText(App.res().getString(R.string.cards_selection, selected, total));
+                    }
+
+                    @Override
+                    public void onClick(PackInfoCard item, CardPackInfoAdapter.PCardVH holder, int position) {
+                        logE("item = %s %s", item.idNorm, item.name);
+                        showCardDialog(TosWiki.getCardByIdNorm(item.idNorm));
+                    }
+                });
+
+                cardLib.setViewAdapter(d);
+
+                int n = myInfoPack.size();
+                tosInfo.setText(App.res().getString(R.string.cards_selection_kind, n, n));
+                int n2 = 0;
+                for (int i = 0; i < list.size(); i++) {
+                    n2 += list.get(i).packs.size();
+                }
+                tosInfo2.setText(App.res().getString(R.string.cards_selection, n2, n2));
+
+                if (showHint) {
+                    showToast(R.string.cards_read, n);
+                }
+
+                howToUse.setVisibility(View.GONE);
+            } else {
+                showUsage();
+            }
+            applySelection();
+        }
+    }
+
+    private class MyPackPref extends BasePreference {
+        public MyPackPref() {
+            super(App.me, "MyPackPref");
+        }
+
+        private final Gson gson = new Gson();
+
+        private static final String pref = "pref";
+        public void setPref(PackSort src) {
+            String s = gson.toJson(src);
+            //logE(">> set pack.Pref = %s", s);
+            edit().putString(pref, s).apply();
+        }
+        public PackSort getPref() {
+            String s = getString(pref, "");
+            //logE("<< get pack.Pref = %s", s);
+            PackSort p = gson.fromJson(s, PackSort.class);
+            if (p == null) {
+                p = new PackSort();
+            }
+            return p;
+        }
+    }
 
 }

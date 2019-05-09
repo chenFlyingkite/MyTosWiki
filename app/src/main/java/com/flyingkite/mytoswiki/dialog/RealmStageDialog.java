@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -17,6 +16,8 @@ import com.flyingkite.util.TaskMonitor;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class RealmStageDialog extends BaseTosDialog {
     private LinearLayout heroStages;
@@ -52,7 +53,9 @@ public class RealmStageDialog extends BaseTosDialog {
 
             if (TosWiki.TAG_MAIN_STAGE.equals(tag)) {
                 realmStages = TosWiki.getRealmStages();
-                initStages();
+                getActivity().runOnUiThread(() -> {
+                    initStages();
+                });
             }
         }
     };

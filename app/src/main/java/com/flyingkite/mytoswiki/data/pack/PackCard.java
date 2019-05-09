@@ -1,5 +1,7 @@
 package com.flyingkite.mytoswiki.data.pack;
 
+import com.flyingkite.mytoswiki.util.TosCardUtil;
+
 public class PackCard {
     public int index;
 
@@ -26,5 +28,9 @@ public class PackCard {
     public int normalSkillCd;
 
     public String source;
+
+    public PackCard copy() {
+        return TosCardUtil.parseCard(source);
+    }
 
 }

@@ -53,7 +53,9 @@ public class RelicStageDialog extends BaseTosDialog {
 
             if (TosWiki.TAG_RELIC_PASS.equals(tag)) {
                 relicStages = TosWiki.getRelicStage();
-                initStages();
+                getActivity().runOnUiThread(() -> {
+                    initStages();
+                });
             }
         }
     };

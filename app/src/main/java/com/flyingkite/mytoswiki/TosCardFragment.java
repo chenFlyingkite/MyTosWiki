@@ -20,6 +20,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.library.widget.SimpleItemTouchHelper;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.CardSort;
+import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.OnAction;
 import com.flyingkite.mytoswiki.library.CardAdapter;
@@ -31,6 +32,7 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.RegexUtil;
+import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
@@ -135,10 +137,23 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortImproveCom; // Combine cards
     private CheckBox sortImproveVr2;
     private CheckBox sortImproveSwt;
+    private CheckBox sortImproveDmx;
     // Hide cards
     private ViewGroup sortHide;
     // Display card name
     private RadioGroup sortDisplay;
+    // Search
+    private CheckBox search;
+    private CheckBox searchRegex;
+    private View searchApply;
+    private TextView searchText;
+    private View searchClear;
+    private CheckBox searchRangeName;
+    private CheckBox searchRangeSeries;
+    private CheckBox searchRangeSkillActive;
+    private CheckBox searchRangeSkillLeader;
+    private CheckBox searchRangeDetail;
+
 
     private CardSort cardSort = new CardSort();
     private CardFavor cardFavor = new CardFavor();
@@ -217,7 +232,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         cardFavor = TosWiki.getCardFavor();
 
         if (favorLib == null) {
-            favorLib = new Library<>(favorRecycler, -3);
+            favorLib = new Library<>(favorRecycler, -1);
         }
         CardTileAdapter a = new CardTileAdapter() {
             @Override
@@ -234,7 +249,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
         helper = new SimpleItemTouchHelper(a
                 , ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
-                | ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0
+                , ItemTouchHelper.UP | ItemTouchHelper.DOWN
+//                , ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
+//                | ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0
         ) {
             @Override
             public List getList() {
@@ -393,6 +410,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initSortByHide(menu);
         initDisplay(menu);
         initSortByImprove(menu);
+        initSortBySearch(menu);
     }
 
     private void initSortReset(View menu) {
@@ -503,8 +521,36 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortImproveCom = menu.findViewById(R.id.sortImproveCombine);
         sortImproveVr2 = menu.findViewById(R.id.sortImproveVirtualRebirthChange);
         sortImproveSwt = menu.findViewById(R.id.sortImproveSwitch);
+        sortImproveDmx = menu.findViewById(R.id.sortImproveDualMaxAdd);
 
         sortImprove = initSortOf(menu, R.id.sortImprove, this::clickImprove);
+    }
+
+    private void initSortBySearch(View menu) {
+        search = menu.findViewById(R.id.sortSearchUse);
+        searchRegex = menu.findViewById(R.id.sortSearchRegex);
+        searchApply = menu.findViewById(R.id.sortSearch);
+        searchText = menu.findViewById(R.id.sortSearchText);
+        searchClear = menu.findViewById(R.id.sortSearchClear);
+        searchRangeName = menu.findViewById(R.id.sortSearchName);
+        searchRangeSeries = menu.findViewById(R.id.sortSearchSeries);
+        searchRangeSkillActive = menu.findViewById(R.id.sortSearchSkillActive);
+        searchRangeSkillLeader = menu.findViewById(R.id.sortSearchSkillLeader);
+        searchRangeDetail = menu.findViewById(R.id.sortSearchDetails);
+
+        searchClear.setOnClickListener((v) -> {
+            searchText.setText("");
+            clickSearch(v);
+        });
+        searchApply.setOnClickListener((v) -> {
+            search.setChecked(true);
+            clickSearch(v);
+        });
+
+        View[] vs = {search, searchRegex, searchRangeName, searchRangeSeries, searchRangeSkillActive, searchRangeSkillLeader, searchRangeDetail};
+        for (View v : vs) {
+            v.setOnClickListener(this::clickSearch);
+        }
     }
     // --------
 
@@ -517,6 +563,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortCassandra.check(R.id.sortCassandraNo);
         setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
         setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
+        search.setChecked(false);
     }
 
     // click listeners for sort menus --------
@@ -602,6 +649,14 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
         applySelection();
     }
+
+    private void clickSearch(View v) { // TODO
+        //setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
+
+        String s = searchText.getText().toString();
+        new AppPref().setCardsSearchText(s);
+        applySelection();
+    }
     // --------
 
     // Apply selection to adapter --------
@@ -631,6 +686,13 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         toggleAndClearIfAll(v, vg);
 
         applySelection();
+    }
+
+    private void updateFromPref() {
+        AppPref p = new AppPref();
+        if (searchText != null) {
+            searchText.setText(p.getCardsSearchText());
+        }
     }
 
     private void updateHide() {
@@ -803,6 +865,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     && selectForImprove(c)
                     && selectForSpecial(c)
                     && selectForShow(c)
+                    && selectForSearch(c)
             ;
         }
 
@@ -872,25 +935,69 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return ans;
         }
 
+        private boolean selectForSearch(TosCard c) {
+            if (!search.isChecked()) return true;
+
+            List<String> keys = new ArrayList<>();
+            if (searchRangeName.isChecked()) {
+                keys.add(c.name);
+            }
+            if (searchRangeSeries.isChecked()) {
+                keys.add(c.series);
+            }
+            if (searchRangeSkillActive.isChecked()) {
+                keys.add(c.skillName1);
+                keys.add(c.skillDesc1);
+                keys.add(c.skillName2);
+                keys.add(c.skillDesc2);
+                keys.add(c.skillAwkName);
+                if (c.skillChange.size() > 0) {
+                    for (SkillLite s : c.skillChange) {
+                        keys.add(s.name);
+                        keys.add(s.effect);
+                    }
+                }
+            }
+            if (searchRangeSkillLeader.isChecked()) {
+                keys.add(c.skillLeaderName);
+                keys.add(c.skillLeaderDesc);
+            }
+            if (searchRangeDetail.isChecked()) {
+                keys.add(c.cardDetails);
+            }
+            String key = RegexUtil.join("", "", "   ", keys);
+
+            // Use text or regex to apply search
+            String target = searchText.getText().toString();
+            target = target.replaceAll("[ \n]", "");
+            boolean res;
+            if (searchRegex.isChecked()) {
+                Pattern p = Pattern.compile(target);
+                res = p.matcher(key).find();
+            } else {
+                res = key.contains(target);
+            }
+            return res;
+        }
+
         private String toRegex(List<String> keys) {
             return RegexUtil.toRegexOr(keys);
         }
 
         private boolean selectForShow(TosCard c) {
-            int idNorm = Integer.parseInt(c.idNorm);
             boolean accept = true;
             if (selectForShow[0]) {
                 //noinspection ConstantConditions
-                accept &= !MathUtil.isInRange(idNorm, 6000, 7000);
+                accept &= !TosCardUtil.isSkin(c);
             }
             if (selectForShow[1]) {
-                accept &= !MathUtil.isInRange(idNorm, 7000, 8000);
+                accept &= !TosCardUtil.isTauFa(c);
             }
             if (selectForShow[2]) {
-                accept &= !MathUtil.isInRange(idNorm, 8000, 9000);
+                accept &= !(TosCardUtil.isDisney(c) || TosCardUtil.isTunestone(c));
             }
             if (selectForShow[3]) {
-                accept &= !MathUtil.isInRange(idNorm, 9000, 10000);
+                accept &= !TosCardUtil.is72Demon(c);
             }
             return accept;
         }
@@ -1065,6 +1172,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortImproveSwt.isChecked()) {
                     accept &= c.skillsDesc().contains("變身");
+                }
+                if (sortImproveDmx.isChecked()) {
+                    accept &= c.maxAddAll();
                 }
             }
             return accept;
@@ -1259,27 +1369,39 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 msg = null;
                 switch (id) {
                     case R.id.sortCommonMaxHP:
-                        msg = String.valueOf(c.maxHPAme);
+                        msg = String.valueOf(c.maxHp());
                         if (c.ameAddHP()) {
                             msg += "^";
                         }
+                        if (c.maxAddHp()) {
+                            msg += "#";
+                        }
                         break;
                     case R.id.sortCommonMaxAttack:
-                        msg = String.valueOf(c.maxAttackAme);
+                        msg = String.valueOf(c.maxAttack());
                         if (c.ameAddAttack()) {
                             msg += "^";
                         }
+                        if (c.maxAddAttack()) {
+                            msg += "#";
+                        }
                         break;
                     case R.id.sortCommonMaxRecovery:
-                        msg = String.valueOf(c.maxRecoveryAme);
+                        msg = String.valueOf(c.maxRecovery());
                         if (c.ameAddRecovery()) {
                             msg += "^";
                         }
+                        if (c.maxAddRecovery()) {
+                            msg += "#";
+                        }
                         break;
                     case R.id.sortCommonMaxSum:
-                        msg = String.valueOf(c.maxHPAme + c.maxAttackAme + c.maxRecoveryAme);
+                        msg = String.valueOf(c.maxHAR());
                         if (c.ameAddAll()) {
                             msg += "^";
+                        }
+                        if (c.maxAddAll()) {
+                            msg += "#";
                         }
                         break;
                     case R.id.sortCommonSkillCDMax:
@@ -1336,7 +1458,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         protected CardSort doInBackground(Void... voids) {
             File f = getTosCardSortFile();
             if (f.exists()) {
-                return GsonUtil.loadFile(getTosCardSortFile(), CardSort.class);
+                return GsonUtil.loadFile(f, CardSort.class);
             } else {
                 return null;
             }
@@ -1348,6 +1470,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
             cardSort = data != null ? data : new CardSort();
             updateHide();
+            updateFromPref();
             applySelection();
         }
     }

@@ -6,7 +6,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -46,7 +45,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends BaseActivity implements
@@ -103,61 +101,6 @@ public class MainActivity extends BaseActivity implements
         cardPager = findViewById(R.id.cardPager);
         ViewPager p = cardPager;
         boolean atLeast17 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
-
-        PGAdapter<String> pga = new PGAdapter<String>() {
-            @Override
-            public int pageLayoutId(ViewGroup parent, int position) {
-                return R.layout.view_box;
-            }
-
-            @Override
-            public void onCreateView(View v, int position) {
-                int id = R.id.layoutBox;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    id = View.generateViewId();
-                }
-
-                Bundle b = new Bundle();
-                Fragment f;
-                FragmentManager fm = getFragmentManager();
-
-                v.setId(id);
-                if (isWeb(position)) {
-                    WebDialog d = new WebDialog();
-                    f = d;
-                    b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
-                    b.putBoolean(WebDialog.BUNDLE_PIN, true);
-                } else {
-                    if (position == 0) {
-                        TosCardFragment fg = new TosCardFragment();
-                        f = fg;
-                    } else {
-                        TosCardMyFragment g = new TosCardMyFragment();
-                        f = g;
-                    }
-                }
-
-                f.setArguments(b);
-                fm.beginTransaction().replace(id, f, itemOf(position)).commitAllowingStateLoss();
-                fm.executePendingTransactions();
-            }
-
-            @Nullable
-            @Override
-            public CharSequence getPageTitle(int position) {
-                boolean w = isWeb(position);
-                if (w) {
-                    return getString(R.string.web) + " " + position;
-                } else {
-                    return getString(R.string.card);
-                }
-            }
-
-            private boolean isWeb(int pos) {
-                String tag = itemOf(pos);
-                return tag.contains(WebDialog.TAG);
-            }
-        };
         List<String> data = homePagerTags;
         data.add(TosCardFragment.TAG);
         if (atLeast17) {
@@ -165,11 +108,11 @@ public class MainActivity extends BaseActivity implements
             data.add(WebDialog.TAG + "_2");
             data.add(WebDialog.TAG + "_3");
         }
-        //data.add(TosCardMyFragment.TAG);
-        pga.setDataList(data);
-        p.setAdapter(pga);
+        data.add(TosCardMyFragment.TAG);
+        pagerAdapter.setDataList(data);
+
+        p.setAdapter(pagerAdapter);
         p.setOffscreenPageLimit(data.size()); // keep all items
-        //p.setCurrentItem(4);
 
         TabLayout t;
         t = findViewById(R.id.cardTabBig);
@@ -178,6 +121,60 @@ public class MainActivity extends BaseActivity implements
         t = findViewById(R.id.cardTabLine);
         t.setupWithViewPager(p); // Thin tab
     }
+
+    private PGAdapter<String> pagerAdapter = new PGAdapter<String>() {
+        @Override
+        public int pageLayoutId(ViewGroup parent, int position) {
+            return R.layout.view_box;
+        }
+
+        @Override
+        public void onCreateView(View v, int position) {
+            int id = R.id.layoutBox;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                id = View.generateViewId();
+            }
+
+            Bundle b = new Bundle();
+            Fragment f;
+            FragmentManager fm = getFragmentManager();
+
+            v.setId(id);
+            if (isWeb(position)) {
+                WebDialog d = new WebDialog();
+                f = d;
+                b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
+                b.putBoolean(WebDialog.BUNDLE_PIN, true);
+            } else {
+                if (position == 0) {
+                    TosCardFragment fg = new TosCardFragment();
+                    f = fg;
+                } else {
+                    TosCardMyFragment g = new TosCardMyFragment();
+                    f = g;
+                }
+            }
+
+            f.setArguments(b);
+            fm.beginTransaction().replace(id, f, itemOf(position)).commitAllowingStateLoss();
+            fm.executePendingTransactions();
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            boolean w = isWeb(position);
+            if (w) {
+                return getString(R.string.web) + " " + position;
+            } else {
+                return getString(R.string.card);
+            }
+        }
+
+        private boolean isWeb(int pos) {
+            String tag = itemOf(pos);
+            return tag.contains(WebDialog.TAG);
+        }
+    };
 
     @Override
     public void onPin(String link, int position) {
@@ -194,35 +191,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        f();
     }
-
-    private void f() {
-        logE("Data dir = %s", Environment.getDataDirectory());
-        logE("DL Cache = %s", Environment.getDownloadCacheDirectory());
-        logE("ExtSto   = %s", Environment.getExternalStorageDirectory());
-        logE("Root dir = %s", Environment.getRootDirectory());
-        logE("fileList");
-        z(fileList());
-
-        logE("ExtCache = %s", getExternalCacheDir());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            z(getExternalCacheDirs());
-        }
-        logE("getExternalMediaDirs = ");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            z(getExternalMediaDirs());
-        }
-    }
-
-    private <T> void z(T[] a) {
-        if (a == null) return;
-        logE("%s items", a.length);
-        for (int i = 0; i < a.length; i++) {
-            logE("#%02d : %s", i, a[i]);
-        }
-    }
-
 
     @Override
     public void onBackPressed() {

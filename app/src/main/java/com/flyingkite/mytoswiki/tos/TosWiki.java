@@ -42,8 +42,8 @@ public class TosWiki {
     private static TosCard[] allCards;
     private static CraftsNormal[] normalCrafts;
     private static CraftsArm[] armCrafts;
-    private static HashMap<String, TosCard> allCardsByIdNorm = new HashMap<>();
-    private static HashMap<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
+    private static Map<String, TosCard> allCardsByIdNorm = new HashMap<>();
+    private static Map<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
     private static CardFavor cardFavor;
     private static WebPin webPin;
     private static MainStage[] mainStages;

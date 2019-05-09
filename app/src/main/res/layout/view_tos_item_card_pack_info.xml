@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_press_sky">
+
+    <ImageView
+        android:id="@+id/tiImg"
+        android:padding="@dimen/t2dp"
+        app:layout_widthPercent="100%"
+        android:src="@drawable/unknown_card"
+        app:layout_aspectRatio="100%"/>
+
+    <LinearLayout
+        android:id="@+id/tiTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tiImg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tiRefine"
+            android:layout_width="@dimen/t20dp"
+            android:layout_height="@dimen/t20dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:src="@drawable/refine5"/>
+
+        <TextView
+            android:id="@+id/tiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/t14dp"
+            android:paddingLeft="@dimen/t5dp"
+            android:paddingRight="@dimen/t5dp"
+            tools:text="1234"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tiMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/t14dp"
+        tools:text="Message"
+        android:textColor="@color/skyBlue"
+        android:gravity="center"
+        android:layout_below="@id/tiTextBox"/>
+
+    <LinearLayout
+        android:layout_below="@id/tiMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tiCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"/>
+    </LinearLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

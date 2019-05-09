@@ -103,6 +103,8 @@ public class CraftDialog extends BaseTosDialog {
     // Display card name
     private RadioGroup sortDisplay;
 
+    private RecyclerView recycler;
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_craft;
@@ -116,8 +118,9 @@ public class CraftDialog extends BaseTosDialog {
         initClose();
         initSortMenu();
         resetMenu();
-
-        initScrollTools(R.id.craftGoTop, R.id.craftGoBottom, findViewById(R.id.craftRecycler));
+        recycler = findViewById(R.id.craftRecycler);
+        craftLibrary = new Library<>(recycler, 5);
+        initScrollTools(R.id.craftGoTop, R.id.craftGoBottom, recycler);
 
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
         TosWiki.attendDatabaseTasks(onCraftsReady);
@@ -128,12 +131,14 @@ public class CraftDialog extends BaseTosDialog {
         int n = list.size();
         craftInfo = findViewById(R.id.craftInfo);
         craftInfo.setText(getString(R.string.craft_selection, n, n));
-        craftLibrary = new Library<>(findViewById(R.id.craftRecycler), 5);
+        craftLibrary = new Library<>(recycler, 5);
         CraftAdapter a = new CraftAdapter();
         a.setDataList(list);
         a.setItemListener(new CraftAdapter.ItemListener() {
             @Override
             public void onFiltered(int selected, int total) {
+                if (isDetached()) return;
+
                 craftInfo.setText(getString(R.string.craft_selection, selected, n));
             }
 

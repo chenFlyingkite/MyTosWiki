@@ -191,6 +191,12 @@
         <item name="android:background">@drawable/bg_button_round</item>
     </style>
 
+    <style name="gray_button.2">
+        <item name="android:padding">@dimen/t5dp</item>
+        <item name="android:background">@drawable/bg_button_round</item>
+
+    </style>
+
     <!-- Sort menu -->
     <style name="sortTitle">
         <item name="android:layout_width">wrap_content</item>
@@ -259,6 +265,9 @@
     </style>
     <style name="sortText.rect">
         <item name="android:background">@drawable/bg_press_sky_rect</item>
+    </style>
+    <style name="sortText.solid">
+        <item name="android:background">@drawable/bg_press_aqua</item>
     </style>
     <style name="sortText2" parent="sortRadio">
         <item name="android:textSize">@dimen/t12dp</item>

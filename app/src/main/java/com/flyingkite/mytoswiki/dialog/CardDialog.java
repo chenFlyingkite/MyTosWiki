@@ -3,10 +3,6 @@ package com.flyingkite.mytoswiki.dialog;
 import android.annotation.SuppressLint;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.IdRes;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -33,6 +29,11 @@ import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 @SuppressLint("SetTextI18n")
 public class CardDialog extends BaseTosDialog {
@@ -172,6 +173,13 @@ public class CardDialog extends BaseTosDialog {
         // Fill in HP
         setHp(R.id.cardHpMin, "1", card.minHP, card.minAttack, card.minRecovery);
         setHp(R.id.cardHpMax, "" + card.LvMax, card.maxHP, card.maxAttack, card.maxRecovery);
+        if (card.maxAddAll()) {
+            setHp2(R.id.cardHpAllMax, getString(R.string.cards_dual_max_2)
+                    , card.allMaxAddHp, card.allMaxAddAttack, card.allMaxAddRecovery
+                    , card.maxHP, card.maxAttack, card.maxRecovery);
+        } else {
+            findViewById(R.id.cardHpAllMax).setVisibility(View.GONE);
+        }
 
         // Fill in leader & main skills
         setSkillLeader(R.id.cardSkill_leader, card.skillLeaderName, card.skillLeaderDesc);
@@ -217,6 +225,32 @@ public class CardDialog extends BaseTosDialog {
         ak.setText("" + attack);
         rc.setText("" + recovery);
         sm.setText("" + (hps + attack + recovery));
+    }
+
+    private void setHp2(@IdRes int id, String level, long hpAdd, long attackAdd, long recoveryAdd, long hps, long attack, long recovery) {
+        View vg = findViewById(id);
+        TextView lv = vg.findViewById(R.id.cardHpLevel);
+        TextView hP = vg.findViewById(R.id.cardHpHp);
+        TextView aK = vg.findViewById(R.id.cardHpAttack);
+        TextView rC = vg.findViewById(R.id.cardHpRecovery);
+        TextView sM = vg.findViewById(R.id.cardHpSum);
+        TextView hp = vg.findViewById(R.id.cardHpHpSmall);
+        TextView ak = vg.findViewById(R.id.cardHpAttackSmall);
+        TextView rc = vg.findViewById(R.id.cardHpRecoverySmall);
+        TextView sm = vg.findViewById(R.id.cardHpSumSmall);
+        lv.setText(level);
+        long endHps = hpAdd + hps;
+        long endAtk = attackAdd + attack;
+        long endRcv = recoveryAdd + recovery;
+        long endSum = endHps + endAtk + endRcv;
+        hP.setText("" + endHps);
+        aK.setText("" + endAtk);
+        rC.setText("" + endRcv);
+        sM.setText("" + endSum);
+        hp.setText("+ " + hpAdd);
+        ak.setText("+ " + attackAdd);
+        rc.setText("+ " + recoveryAdd);
+        sm.setText("+ " + (hpAdd + attackAdd + recoveryAdd));
     }
 
     private void setSkillLeader(int id, String sname, String sdesc) {

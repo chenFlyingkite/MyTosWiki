@@ -93,10 +93,17 @@
                 android:layout_height="wrap_content"/>
         </HorizontalScrollView>
 
+        <!--
         <io.github.kexanie.library.MathView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             auto:text="@string/math_monster_level"/>
+        -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_monster_level"/>
     </LinearLayout>
 
 </RelativeLayout>

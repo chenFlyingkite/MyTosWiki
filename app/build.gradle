@@ -25,8 +25,8 @@ def googlePlayVersion = "9.8.0"
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 47
-    ext.versionName = "1.0.0.46"
+    ext.versionCode = 48
+    ext.versionName = "1.0.0.47"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }
@@ -177,7 +177,7 @@ dependencies {
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.
     // https://github.com/kexanie/MathView
-    api 'io.github.kexanie.library:MathView:0.0.6'
+    //api 'io.github.kexanie.library:MathView:0.0.6'
 
     // Drawing the Charts like Excel in Android
     api 'com.github.PhilJay:MPAndroidChart:v3.0.3'

@@ -26,6 +26,9 @@ public class TC {
     public static final String perLvExpSacrifice = "perLvExpSacrifice";
     public static final String maxMUPerLevel = "maxMUPerLevel";
     public static final String maxTUAllLevel = "maxTUAllLevel";
+    public static final String allMaxAddHp = "allMaxAddHp";
+    public static final String allMaxAddAttack = "allMaxAddAttack";
+    public static final String allMaxAddRecovery = "allMaxAddRecovery";
     public static final String cardDetails = "cardDetails";
     public static final String skillName1 = "skillName1";
     public static final String skillDesc1 = "skillDesc1";

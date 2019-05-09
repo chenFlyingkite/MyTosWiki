@@ -36,7 +36,17 @@
     <string name="enterUid">請輸入 UID</string>
     <string name="noNetwork">沒有網路</string>
     <string name="how_to_use">使用說明</string>
+    <string name="use">使用</string>
+    <string name="noUse">不使用</string>
+    <string name="search">搜尋</string>
+    <string name="enterText">請輸入文字</string>
+    <string name="searchRange">搜尋範圍</string>
+    <string name="useSearch">使用搜尋</string>
+    <string name="clear">清除</string>
+    <string name="cleared">已清除完成</string>
 
+    <string name="cards_n_card">%d 張</string>
+    <string name="cards_selection_kind">%d / %d 種卡片</string>
     <string name="cards_selection">%d / %d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
     <string name="cards_normId">編號</string>
@@ -110,6 +120,10 @@
     <string name="cards_runestone">符石</string>
     <string name="cards_runestone_race">符石種族</string>
     <string name="cards_runestone_attr">符石屬性</string>
+    <string name="cards_details">卡牌資訊</string>
+    <string name="cards_pack">我的背包</string>
+    <string name="cards_pack_ok">背包讀取完成 %s</string>
+
 
     <string name="cards_runestone_water">水符石</string>
     <string name="cards_runestone_fires">火符石</string>
@@ -129,18 +143,19 @@
     <string name="cards_Cassandra_attack">攻擊力</string>
     <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
-    <string name="cards_common">常用排序 (^ = 滿昇華)</string>
+    <string name="cards_common">常用排序 (^ = 滿昇華, # = 滿等滿技)</string>
     <string name="cards_HP">生命力</string>
     <string name="cards_Attack">攻擊力</string>
     <string name="cards_Recovery">回復力</string>
     <string name="cards_Sum">三圍</string>
-    <string name="cards_common_maxHP">生命力 (^)</string>
-    <string name="cards_common_maxAttack">攻擊力 (^)</string>
-    <string name="cards_common_macRecovery">回復力 (^)</string>
-    <string name="cards_common_maxSum">三圍(生+攻+回) (^)</string>
+    <string name="cards_common_maxHP">生命力 (^#)</string>
+    <string name="cards_common_maxAttack">攻擊力 (^#)</string>
+    <string name="cards_common_macRecovery">回復力 (^#)</string>
+    <string name="cards_common_maxSum">三圍(生+攻+回) (^#)</string>
     <string name="cards_common_skillCDMax">滿等 CD (^)</string>
     <string name="cards_common_space">空間</string>
     <string name="cards_common_race">種族(神>魔>人>獸>龍>妖>機>進>強)</string>
+    <string name="cards_common_own_count">擁有張數</string>
     <string-array name="cards_common_keys_race">
         <item>@string/cards_race_god</item>
         <item>@string/cards_race_demon</item>
@@ -392,14 +407,24 @@
         <item>延遲</item>
     </string-array>
 
-
+    <string name="cards_hide2">顯示卡片設定</string>
     <string name="cards_hide">不顯示卡片</string>
+    <string name="cards_hide_farm2">僅選 1~4 星肥料卡，排除一般卡</string>
+    <string name="cards_hide_nonfarm2">僅選一般卡，排除 1~4 星肥料卡</string>
+    <string name="cards_hide_empty">僅選 擁有數 > 0</string>
+    <string name="cards_hide_804x_no">隱藏 迪士尼</string>
+    <string name="cards_hide_7xxx_no">隱藏 討伐戰</string>
+    <string name="cards_hide_9xxx_no">隱藏 72柱神</string>
     <string name="cards_hide_farm">肥料系列</string>
     <string name="cards_hide_nonfarm">非肥料系列</string>
     <string name="cards_hide_6xxx">動態造型</string>
     <string name="cards_hide_7xxx">討伐戰</string>
     <string name="cards_hide_8xxx">迪士尼，存音石</string>
     <string name="cards_hide_9xxx">72柱神</string>
+    <string name="cards_hide_6xxx_2">隱藏 動態造型</string>
+    <string name="cards_hide_7xxx_2">隱藏 討伐戰</string>
+    <string name="cards_hide_8xxx_2">隱藏 迪士尼，存音石</string>
+    <string name="cards_hide_9xxx_2">隱藏 72柱神</string>
     <string name="cards_display">顯示名稱</string>
     <string name="cards_improve">卡片提升能力</string>
     <string name="cards_improve_no">無限制</string>
@@ -412,6 +437,10 @@
     <string name="cards_improve_combine">可合體</string>
     <string name="cards_improve_virtualRebirthChange">可異力轉換</string>
     <string name="cards_improve_switch">可變身</string>
+    <string name="cards_improve_dualMaxAdd">滿等滿技提升三圍</string>
+    <string name="cards_search">卡片搜尋</string>
+    <string name="cards_dual_max">滿等滿技</string>
+    <string name="cards_dual_max_2">滿等\n滿技</string>
 
     <string name="cards_switch">變身</string>
     <string name="cards_amelioration">昇華</string>
@@ -419,6 +448,17 @@
     <string name="cards_powerRelease">潛能解放</string>
     <string name="cards_virtualRebirth">異空轉生</string>
     <string name="cards_virtualRebirth_change">異力轉換</string>
+
+    <string name="cards_filter">卡片特選</string>
+    <string name="cards_filter_fast">快速選擇</string>
+    <string name="cards_filter_skill">5 星可練技卡</string>
+    <string name="cards_special_skill_eatable">可練技</string>
+    <string name="cards_special_skill_eatable2">可練技 (同技能 >= 2 張)</string>
+    <string name="cards_special_skill_eatable3">可練技 (同技能 >= 3 張)</string>
+    <string name="cards_special_skill_eatable4">可練技 (同技能 >= 4 張)</string>
+    <string name="cards_special_skill_not_max">未滿技</string>
+    <string name="cards_special_skill_enough">有卡可吃滿技</string>
+    <string name="cards_special_skill_enough_detail">(4 星或以下練技卡 >= 5 張)</string>
 
     <!-- Crafts & Armed crafts -->
     <string name="craft_selection">%d / %d 個龍刻</string>
@@ -609,6 +649,8 @@
      -->
     <string name="math_summoner_level">Let \\(n\\) = level, then \\(ExpSum = \\Theta(n^3)\\)</string>
     <string name="math_monster_level">Let \\(n\\) = level, \\(A\\) = exp curve, then \\(ExpSum = \\lceil A ({n - 1 \\over 98})^2 \\rceil \\)</string>
+    <string name="text_summoner_level">Let n = level, then ExpSum = Theta(n^3)</string>
+    <string name="text_monster_level">Let n = level, A = exp curve, t = (n - 1) / 98, then ExpSum = Math.ceil( A * t ^ 2 )</string>
 
     <string name="feedback_title">許願池 與 傳送意見回饋</string>
     <string name="feedback_author">☆首先，神魔數學家團隊感謝召喚師的安裝。\n(其實團隊只有作者一人 T_T)\n\n
@@ -693,6 +735,7 @@
     <string name="card_series_fairy_tail">Fairy Tail</string>
     <string name="card_series_gifted_scientists">科研敍論</string>
     <string name="card_series_unearthly_charm">妖魔傾城</string>
+    <string name="card_series_saint_seiya">聖鬥士星矢</string>
 
 
     <string name="tos_event_title">神魔之塔活動表</string>
@@ -740,11 +783,18 @@
 \n★符石的個數僅計算取3的餘數\n => (例如 17火 + 13水 = (2, 1) )</string>
 
     <string name="web_pinned">已釘選網頁</string>
-    <string name="how_to_use_pack">1. 拜訪「神魔之塔健檢中心」網站\n
-https://review.towerofsaviors.com\n\n
+    <string name="how_to_use_pack">資料更新方式\n
+1. 拜訪「神魔之塔健檢中心」網站\n
+https://review.towerofsaviors.com\n
 2. 登入你的 UID 和 活動驗證碼\n
 3. 點擊「公開」讓頁面可以取用你的神魔之塔背包資料\n
-4. 回到這個頁面輸入你的UID，便可檢視卡匣內容</string>
+(註 : 若「已公開」，請將公開關閉後再重新打開)\n
+4. 回到這個頁面輸入你的UID，便可檢視卡匣內容\n\n
+~~~ 程式/資料 參照表 ~~~\n
+~~~ Reference ~~~\n
+[1] 神魔之塔卡匣檢視器 (感謝大大 yuh926323)\n
+https://heavenro.info/tos\n
+\n\n謝謝收看 m(_ _)m</string>
 
     <string-array name="series">Android 機械人, B.Duck, BIGBANG元素師, FAIRY TAIL, 七十二柱魔神, 七原罪, 三國, 三國 ‧ 貳, 三國小兵, 三教頂峰, 不死英雄, 中國神, 中國神幻化, 中國神煉化, 中國神獸, 主角, 仙劍列傳, 仙劍靈傑, 仙劍靈獸, 修羅場, 修道仙妖, 修驗道式神, 傳世神器, 傳教士, 八仙, 八仙素材, 公會任務, 公會戰, 列王之爭, 創塔者們, 劍靈, 動能兵, 化物器獸, 北域巨人, 北域遺族, 北域霸獸, 北歐神, 北歐神幻化, 北歐神煉化, 協助者, 印度神, 古希臘神, 古蹟源龍, 可口羊駝, 史萊姆, 吉祥物, 命運女神, 圓桌騎士, 地獄魔王, 地精, 埃及皇權, 埃及神, 埃及神幻化, 埃及神煉化, 塔之魔神, 墮天, 夢幻聖物, 大和, 大富翁, 大富翁 ‧ 神明, 大蛇的眷屬, 天竺, 奇想典故, 奧羅茲遺族, 女王之塔, 女王之塔(系列), 妖女, 妖嬈花夢, 妖魔傾城, 存音石, 宇宙序章, 寧芙, 封王, 封神演義, 巨像, 巨型蟾蜍, 巨神兵, 巫女, 巴比倫主神, 巴比倫主神幻化, 巴比倫主神煉化, 巴比倫神明, 布袋小偶, 希冀, 希臘妖獸, 希臘神, 希臘神像, 希臘神幻化, 希臘神煉化, 幻境惡棍, 幽☆遊☆白書, 強力武裝, 強化素材, 忠誠侍童, 怪物彈珠, 怪物彈珠 ‧ 英雄, 慶節精靈, 憶念, 戰慄級, 戰鬥魔導士, 拳皇, 新手夥伴, 新革童話, 旅人的夥伴, 星詠之歌姬, 果實精靈, 機偶使者, 機偶合體, 機偶夥伴, 機械城的守護者, 機械小兵, 機械獸, 機械神兵, 機龍, 武者烈魂, 武術大會參賽者, 武術大賽, 武魂附體, 死亡騎士, 死物附靈, 毛毛三姐弟, 海上霸者, 潛能解放素材, 無名勇士, 狼人, 獵人×獵人, 獸伴, 王的護衛, 玩具精靈, 珍饈美點, 畫緣相遇, 異世界生物, 異界龍, 異神使徒, 異空轉生素材, 瘋頭, 百鬼夜行 ‧ 妖魅, 百鬼夜行 ‧ 怪譚, 百鬼夜行 ‧ 惡鬼, 碎羽墮落者, 神界守衛, 神話創世, 神貓大盜, 神魔員工, 科學少女, 科學與哲理, 科研敍論, 究極北歐神, 究極融煉素材, 童話仙蹤, 競技場, 笨小魔, 粉碎亂鬥, 粉碎狂熱, 精靈, 約誓之翼, 素材, 美好世界, 美好異想, 耀脈星芒, 聖酒女武神, 自然德魯依, 艾克希特, 英靈地精, 英靈女孩, 荒誕精靈, 蜥蜴戰士, 街頭流氓, 西方魔獸, 要塞兵團, 討伐戰, 誓約之花, 諸界看守者, 豐腴珍獸, 貓公爵傭兵團, 財迷塵世, 超獸魔神, 軒轅仙獸, 軒轅列傳, 追擊始源, 逐願邪星, 進化素材, 遊俠, 遠古的恐懼, 遠古神龍, 遠洋的旅人, 遠洋的英雄, 部落精獸, 都市傳說, 金屬生命, 鋼鐵神獸, 鐵皮部隊, 防龍, 隱士支配者, 霹靂布袋戲, 靈殿狛犬, 靈獸役使, 靈界獸, 靈魂精髓, 革新英雄, 願望果園精靈, 風格樂團, 高手隱士, 鬼魅奸佞, 魔像, 魔境住民, 魔境入侵者, 魔境造物, 魔導之眾, 魔幻嘍囉, 魔幼龍, 魔族始源, 魔族賢者, 魔法女孩, 魔變凶龍, 鮮紅恩典, 鮮紅恩典幻化, 鮮紅恩典煉化, 黃道十二宮, 黑鐵學徒, 龍僕, 龍牙棋
 

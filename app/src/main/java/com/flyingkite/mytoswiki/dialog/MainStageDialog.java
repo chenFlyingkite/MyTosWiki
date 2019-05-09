@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -16,6 +15,8 @@ import com.flyingkite.util.TaskMonitor;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class MainStageDialog extends BaseTosDialog {
     private LinearLayout stageList;
@@ -49,7 +50,9 @@ public class MainStageDialog extends BaseTosDialog {
 
             if (TosWiki.TAG_MAIN_STAGE.equals(tag)) {
                 mainStages = TosWiki.getMainStages();
-                initStages();
+                getActivity().runOnUiThread(() -> {
+                    initStages();
+                });
             }
         }
     };

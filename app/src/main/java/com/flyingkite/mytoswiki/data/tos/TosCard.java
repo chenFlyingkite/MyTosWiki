@@ -136,6 +136,24 @@ public class TosCard implements Parcelable {
     @SerializedName(TC.maxTUAllLevel)
     public int maxTUAllLevel;
 
+    /**
+     * Add on HP if LV = 99, skill = max
+     */
+    @SerializedName(TC.allMaxAddHp)
+    public int allMaxAddHp;
+
+    /**
+     * Add on Attack if LV = 99, skill = max
+     */
+    @SerializedName(TC.allMaxAddAttack)
+    public int allMaxAddAttack;
+
+    /**
+     * Add on Recovery if LV = 99, skill = max
+     */
+    @SerializedName(TC.allMaxAddRecovery)
+    public int allMaxAddRecovery;
+
     //------------
     //---- Card Details, 卡片資訊
     //------------
@@ -376,6 +394,38 @@ public class TosCard implements Parcelable {
 
     public boolean ameMinusCD() {
         return skillCDMaxAme < skillCDMax1;
+    }
+
+    public boolean maxAddHp() {
+        return allMaxAddHp > 0;
+    }
+
+    public boolean maxAddAttack() {
+        return allMaxAddAttack > 0;
+    }
+
+    public boolean maxAddRecovery() {
+        return allMaxAddRecovery > 0;
+    }
+
+    public boolean maxAddAll() {
+        return maxAddHp() || maxAddAttack() || maxAddRecovery();
+    }
+
+    public long maxHp() {
+        return maxHPAme + allMaxAddHp;
+    }
+
+    public long maxAttack() {
+        return maxAttackAme + allMaxAddAttack;
+    }
+
+    public long maxRecovery() {
+        return maxRecoveryAme + allMaxAddRecovery;
+    }
+
+    public long maxHAR() {
+        return maxHp() + maxAttack() + maxRecovery();
     }
 
     @Override

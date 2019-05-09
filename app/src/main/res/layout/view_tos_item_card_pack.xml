@@ -51,4 +51,11 @@
         android:gravity="center"
         android:layout_below="@id/tiTextBox"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
 </androidx.percentlayout.widget.PercentRelativeLayout>

@@ -114,6 +114,11 @@
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
+                                    android:id="@+id/csdSeriesSaintSeiya"
+                                    style="@style/sortRadio"
+                                    android:text="@string/card_series_saint_seiya"/>
+
+                                <RadioButton
                                     android:id="@+id/csdSeriesUnearthlyCharm"
                                     style="@style/sortRadio"
                                     android:text="@string/card_series_unearthly_charm"/>

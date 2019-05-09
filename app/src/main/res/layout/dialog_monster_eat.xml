@@ -144,12 +144,21 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!--
                 <io.github.kexanie.library.MathView
                     android:id="@+id/medMath"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
                     auto:text="@string/math_summoner_level"/>
+                -->
+
+                <TextView
+                    android:id="@+id/medMath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/text_summoner_level"/>
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/medMathChart"

@@ -117,6 +117,10 @@ public class FabricAnswers {
         logCustom("CardFragment", attributes);
     }
 
+    public static void logMyPack(Map<String, String> attributes) {
+        logCustom("MyPack", attributes);
+    }
+
     // Show up one card
     public static void logCard(Map<String, String> attributes) {
         logCustom("Card", attributes);
@@ -148,6 +152,9 @@ public class FabricAnswers {
 
         c.putCustomAttribute("FCMToken", token());
         Answers.getInstance().logContentView(c);
+        if (BuildConfig.DEBUG) {
+            log("log %s", c);
+        }
     }
     //-- App statistics
 //    2018-08-14 12:19:57.921 E/Answers: Invalid user input detected

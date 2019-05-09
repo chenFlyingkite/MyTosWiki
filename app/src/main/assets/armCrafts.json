@@ -9646,6 +9646,2106 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3311",
+    "name": "獅子座黃金聖衣龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fe/C3311.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024830\u0026path-prefix\u003dzh",
+      "iconKey": "C3311.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3312",
+    "name": "獅子座黃金聖衣龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1c/C3312.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024830\u0026path-prefix\u003dzh",
+      "iconKey": "C3312.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3313",
+    "name": "獅子座黃金聖衣龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2a/C3313.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024829\u0026path-prefix\u003dzh",
+      "iconKey": "C3313.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3314",
+    "name": "獅子座黃金聖衣龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e8/C3314.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024828\u0026path-prefix\u003dzh",
+      "iconKey": "C3314.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3315",
+    "name": "獅子座黃金聖衣龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2c/C3315.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024828\u0026path-prefix\u003dzh",
+      "iconKey": "C3315.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3316",
+    "name": "獅子座黃金聖衣龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C3316.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024828\u0026path-prefix\u003dzh",
+      "iconKey": "C3316.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "火屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2103",
+      "2104"
+    ],
+    "cardLimitName": [
+      "鳳凰座 ‧ 一輝",
+      "黃金獅子座 ‧ 一輝"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3317",
+    "name": "獅子座黃金聖衣龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%85%E5%AD%90%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a2/C3317.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024827\u0026path-prefix\u003dzh",
+      "iconKey": "C3317.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3318",
+    "name": "處女座黃金聖衣龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1f/C3318.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024827\u0026path-prefix\u003dzh",
+      "iconKey": "C3318.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3319",
+    "name": "處女座黃金聖衣龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0b/C3319.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024826\u0026path-prefix\u003dzh",
+      "iconKey": "C3319.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3320",
+    "name": "處女座黃金聖衣龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/14/C3320.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024826\u0026path-prefix\u003dzh",
+      "iconKey": "C3320.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3321",
+    "name": "處女座黃金聖衣龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/30/C3321.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024825\u0026path-prefix\u003dzh",
+      "iconKey": "C3321.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3322",
+    "name": "處女座黃金聖衣龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3a/C3322.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024825\u0026path-prefix\u003dzh",
+      "iconKey": "C3322.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3323",
+    "name": "處女座黃金聖衣龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/25/C3323.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024824\u0026path-prefix\u003dzh",
+      "iconKey": "C3323.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 20000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "暗屬性傷害減少 5% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2109",
+      "2110"
+    ],
+    "cardLimitName": [
+      "仙女座 ‧ 瞬",
+      "黃金處女座 ‧ 瞬"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3324",
+    "name": "處女座黃金聖衣龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%99%95%E5%A5%B3%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bd/C3324.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024824\u0026path-prefix\u003dzh",
+      "iconKey": "C3324.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3325",
+    "name": "天秤座黃金聖衣龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/69/C3325.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024823\u0026path-prefix\u003dzh",
+      "iconKey": "C3325.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3326",
+    "name": "天秤座黃金聖衣龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/64/C3326.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024823\u0026path-prefix\u003dzh",
+      "iconKey": "C3326.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3327",
+    "name": "天秤座黃金聖衣龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C3327.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024822\u0026path-prefix\u003dzh",
+      "iconKey": "C3327.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3328",
+    "name": "天秤座黃金聖衣龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6f/C3328.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024811\u0026path-prefix\u003dzh",
+      "iconKey": "C3328.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3329",
+    "name": "天秤座黃金聖衣龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/df/C3329.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024810\u0026path-prefix\u003dzh",
+      "iconKey": "C3329.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3330",
+    "name": "天秤座黃金聖衣龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/88/C3330.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024810\u0026path-prefix\u003dzh",
+      "iconKey": "C3330.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除木符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除木及心符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2105",
+      "2106"
+    ],
+    "cardLimitName": [
+      "天龍座 ‧ 紫龍",
+      "黃金天秤座 ‧ 紫龍"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3331",
+    "name": "天秤座黃金聖衣龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%A7%A4%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c1/C3331.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024809\u0026path-prefix\u003dzh",
+      "iconKey": "C3331.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3332",
+    "name": "射手座黃金聖衣龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/26/C3332.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024809\u0026path-prefix\u003dzh",
+      "iconKey": "C3332.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3333",
+    "name": "射手座黃金聖衣龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9c/C3333.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024808\u0026path-prefix\u003dzh",
+      "iconKey": "C3333.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3334",
+    "name": "射手座黃金聖衣龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/19/C3334.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024808\u0026path-prefix\u003dzh",
+      "iconKey": "C3334.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3335",
+    "name": "射手座黃金聖衣龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/37/C3335.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024807\u0026path-prefix\u003dzh",
+      "iconKey": "C3335.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3336",
+    "name": "射手座黃金聖衣龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b5/C3336.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024807\u0026path-prefix\u003dzh",
+      "iconKey": "C3336.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3337",
+    "name": "射手座黃金聖衣龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/89/C3337.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024806\u0026path-prefix\u003dzh",
+      "iconKey": "C3337.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上符石，自身攻擊力提升 2.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2107",
+      "2108"
+    ],
+    "cardLimitName": [
+      "天馬座 ‧ 星矢",
+      "黃金射手座 ‧ 星矢"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3338",
+    "name": "射手座黃金聖衣龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%B0%84%E6%89%8B%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b7/C3338.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024806\u0026path-prefix\u003dzh",
+      "iconKey": "C3338.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3339",
+    "name": "水瓶座黃金聖衣龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d6/C3339.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024806\u0026path-prefix\u003dzh",
+      "iconKey": "C3339.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3340",
+    "name": "水瓶座黃金聖衣龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/85/C3340.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024805\u0026path-prefix\u003dzh",
+      "iconKey": "C3340.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3341",
+    "name": "水瓶座黃金聖衣龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/19/C3341.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024805\u0026path-prefix\u003dzh",
+      "iconKey": "C3341.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3342",
+    "name": "水瓶座黃金聖衣龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/21/C3342.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024804\u0026path-prefix\u003dzh",
+      "iconKey": "C3342.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3343",
+    "name": "水瓶座黃金聖衣龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/84/C3343.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024804\u0026path-prefix\u003dzh",
+      "iconKey": "C3343.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3344",
+    "name": "水瓶座黃金聖衣龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4c/C3344.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024803\u0026path-prefix\u003dzh",
+      "iconKey": "C3344.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除水符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，75% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "水屬性傷害減少 10% (此技能效果不能疊加)"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2101",
+      "2102"
+    ],
+    "cardLimitName": [
+      "天鵝座 ‧ 冰河",
+      "黃金水瓶座 ‧ 冰河"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3345",
+    "name": "水瓶座黃金聖衣龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E7%93%B6%E5%BA%A7%E9%BB%83%E9%87%91%E8%81%96%E8%A1%A3%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1e/C3345.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024803\u0026path-prefix\u003dzh",
+      "iconKey": "C3345.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",

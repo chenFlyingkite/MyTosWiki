@@ -7,26 +7,66 @@
     android:padding="@dimen/t5dp"
     android:background="@drawable/bg_round_darkgray">
 
-    <TextView
-        android:id="@+id/cmd_title"
+    <LinearLayout
+        android:id="@+id/cmd_titleBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/dialog_title2"
-        android:text="@string/how_to_use"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/cmd_message"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/dialog_title2"
+            android:text="@string/cards_pack"/>
+
+
+        <TextView
+            android:id="@+id/cmd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/dialog_title2"
+            android:text="@string/how_to_use"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/cmd_messageBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/whiteText.t2"
-        android:paddingTop="@dimen/t10dp"
-        android:layout_below="@id/cmd_title"
-        android:text="@string/how_to_use_pack"/>
+        android:layout_height="@dimen/t400dp"
+        android:layout_below="@id/cmd_titleBox">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider_skyblue"
+            android:showDividers="middle"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/cmd_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/whiteText.t2"
+                android:paddingTop="@dimen/t10dp"
+                android:text="http://"/>
 
+            <TextView
+                android:id="@+id/cmd_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/whiteText.t2"
+                android:paddingTop="@dimen/t10dp"
+                android:text="@string/how_to_use_pack"/>
+
+            <View
+                android:background="@color/green"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cmd_message"
+        android:layout_below="@id/cmd_messageBox"
         android:gravity="right"
         android:orientation="horizontal">
 

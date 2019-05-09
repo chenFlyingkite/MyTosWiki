@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/cardRow.greenV"
+    tools:background="#8000"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/cardHpSumSmall"
+            style="@style/cardText.item.2"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/t15dp"
+            tools:text="+3456"/>
+
+        <TextView
+            android:id="@+id/cardHpSum"
+            style="@style/cardText.item.2"
+            android:textColor="@color/yellow"
+            tools:text="@string/cards_Sum"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/cardHpHpSmall"
+            style="@style/cardText.item.2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/t15dp"
+            tools:text="+3456"/>
+        <TextView
+            android:id="@+id/cardHpHp"
+            style="@style/cardText.item.2"
+            tools:text="@string/cards_HP"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/cardHpAttackSmall"
+            style="@style/cardText.item.2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/t15dp"
+            tools:text="+3456"/>
+        <TextView
+            android:id="@+id/cardHpAttack"
+            style="@style/cardText.item.2"
+            tools:text="@string/cards_Attack"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/cardHpRecoverySmall"
+            style="@style/cardText.item.2"
+            android:textColor="@color/green"
+            android:textSize="@dimen/t15dp"
+            tools:text="+3456"/>
+        <TextView
+            android:id="@+id/cardHpRecovery"
+            style="@style/cardText.item.2"
+            tools:text="@string/cards_Recovery"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/cardHpLevel"
+            style="@style/cardText.item.2"
+            tools:text="@string/cards_min"/>
+    </LinearLayout>
+</LinearLayout>

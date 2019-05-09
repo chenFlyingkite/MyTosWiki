@@ -30,127 +30,48 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/sortSpecialFast"
+                style="@style/sortTitle"
+                android:text="@string/cards_filter"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sortFastSkill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/cards_filter_skill"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
                 style="@style/sortTitle"
                 android:text="@string/cards_attr"/>
-            <LinearLayout
+            <include
                 android:id="@+id/sortAttributes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_water"
-                    android:src="@drawable/inv_water"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_fires"
-                    android:src="@drawable/inv_fire"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_earth"
-                    android:src="@drawable/inv_earth"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_light"
-                    android:src="@drawable/inv_light"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_darks"
-                    android:src="@drawable/inv_dark"/>
-            </LinearLayout>
+                layout="@layout/grid_attr"/>
 
             <TextView
                 style="@style/sortTitle"
                 android:text="@string/cards_race"/>
-            <GridLayout
+            <include
                 android:id="@+id/sortRaces"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="5">
-
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_god"
-                    android:src="@drawable/inv_god"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_demon"
-                    android:src="@drawable/inv_fiend"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_human"
-                    android:src="@drawable/inv_human"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_beast"
-                    android:src="@drawable/inv_beast"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_dragon"
-                    android:src="@drawable/inv_dragon"/>
-
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_elf"
-                    android:src="@drawable/inv_elf"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_machina"
-                    android:src="@drawable/inv_machina"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_evolve"
-                    android:src="@drawable/inv_evolve"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_race_level"
-                    android:src="@drawable/inv_level"/>
-            </GridLayout>
+                layout="@layout/grid_race_all"/>
 
             <TextView
                 android:id="@+id/sortStarTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_star"/>
-            <GridLayout
+            <include
                 android:id="@+id/sortStar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="4">
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="1"
-                    android:text="1"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="2"
-                    android:text="2"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="3"
-                    android:text="3"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="4"
-                    android:text="4"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="5"
-                    android:text="5"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="6"
-                    android:text="6"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="7"
-                    android:text="7"/>
-                <TextView
-                    style="@style/sortStarText"
-                    android:tag="8"
-                    android:text="8"/>
-
-            </GridLayout>
+                layout="@layout/grid_star_8"/>
 
             <TextView
                 android:id="@+id/sortCommonTitle"
@@ -192,6 +113,10 @@
                     android:id="@+id/sortCommonRace"
                     style="@style/sortRadio"
                     android:text="@string/cards_common_race"/>
+                <RadioButton
+                    android:id="@+id/sortCommonOwnCount"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_common_own_count"/>
             </RadioGroup>
 
             <!--
@@ -388,15 +313,24 @@
                     style="@style/sortRadio"
                     android:text="@string/cards_Cassandra_attack_ratio"/>
             </RadioGroup>
+            -->
 
-            <TextView
-                android:id="@+id/sortSpecialTitle"
-                style="@style/sortTitle"
-                android:text="@string/cards_special"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sortSpecialTitle"
+                    style="@style/sortTitle"
+                    android:text="@string/cards_filter"/>
+            </LinearLayout>
+            <!--
             <TextView
                 android:id="@+id/sortSpecialAddDetail"
                 style="@style/sortText.rect"
                 android:text="@string/cards_special_add_detail"/>
+            -->
             <LinearLayout
                 android:id="@+id/sortSpecialList"
                 android:orientation="vertical"
@@ -406,26 +340,43 @@
                 <CheckBox
                     android:id="@+id/sortSpecialNo"
                     style="@style/sortText"
+                    android:checked="true"
                     android:text="@string/cards_no"/>
 
                 <View
                     style="@style/divider_h2px"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialFreeMove"
+                    android:id="@+id/sortSpecialSkillEatable2"
                     style="@style/sortText"
-                    android:text="@string/cards_freemove"/>
+                    android:text="@string/cards_special_skill_eatable2"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialKeep"
+                    android:id="@+id/sortSpecialSkillEatable3"
                     style="@style/sortText"
-                    android:text="@string/cards_keep"/>
+                    android:text="@string/cards_special_skill_eatable3"/>
 
                 <CheckBox
-                    android:id="@+id/sortSpecialExplode"
+                    android:id="@+id/sortSpecialSkillEatable4"
                     style="@style/sortText"
-                    android:text="@string/cards_explode"/>
+                    android:text="@string/cards_special_skill_eatable4"/>
 
+                <CheckBox
+                    android:id="@+id/sortSpecialSkillNotMax"
+                    style="@style/sortText"
+                    android:text="@string/cards_special_skill_not_max"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialSkillEnough"
+                    style="@style/sortText"
+                    android:text="@string/cards_special_skill_enough"/>
+
+                <TextView
+                    android:paddingLeft="@dimen/t40dp"
+                    style="@style/sortText2"
+                    android:text="@string/cards_special_skill_enough_detail"/>
+
+                <!--
                 <CheckBox
                     android:id="@+id/sortSpecialMoreCoin"
                     style="@style/sortText"
@@ -598,8 +549,9 @@
                     android:id="@+id/sortSpecialAllDealDamageElement"
                     style="@style/sortText"
                     android:text="@string/cards_all_deal_damage_element"/>
-            </LinearLayout>
             -->
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/sortImproveTitle"
@@ -616,6 +568,7 @@
                 <CheckBox
                     android:id="@+id/sortImproveNo"
                     style="@style/sortText"
+                    android:checked="true"
                     android:text="@string/cards_improve_no"/>
 
                 <View
@@ -671,51 +624,62 @@
                     android:id="@+id/sortImproveSwitch"
                     style="@style/sortText"
                     android:text="@string/cards_improve_switch"/>
+
+                <CheckBox
+                    android:id="@+id/sortImproveDualMaxAdd"
+                    style="@style/sortText"
+                    android:text="@string/cards_improve_dualMaxAdd"/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/sortHideTitle"
-                style="@style/sortTitle"
-                android:text="@string/cards_hide"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/sortHideTitle"
+                    style="@style/sortTitle"
+                    android:text="@string/cards_hide2"/>
 
-            <GridLayout
+                <include
+                    layout="@layout/view_use_no"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/sortHide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/t20dp"
-                android:columnCount="1">
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/sortHideEmpty"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_empty"/>
 
                 <TextView
                     android:id="@+id/sortHideFarm"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_farm"/>
+                    android:text="@string/cards_hide_farm2"/>
 
                 <TextView
-                    android:id="@+id/sortHideNonFarm"
+                    android:id="@+id/sortHideNormal"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_nonfarm"/>
-
-                <TextView
-                    android:id="@+id/sortHide6xxx"
-                    style="@style/sortText.rect"
-                    android:text="@string/cards_hide_6xxx"/>
+                    android:text="@string/cards_hide_nonfarm2"/>
 
                 <TextView
                     android:id="@+id/sortHide7xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_7xxx"/>
+                    android:text="@string/cards_hide_7xxx_no"/>
 
                 <TextView
                     android:id="@+id/sortHide8xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_8xxx"/>
+                    android:text="@string/cards_hide_804x_no"/>
 
                 <TextView
                     android:id="@+id/sortHide9xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_9xxx"/>
-            </GridLayout>
+                    android:text="@string/cards_hide_9xxx_no"/>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/sortDisplayTitle"
@@ -726,6 +690,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <RadioButton
+                    android:id="@+id/sortDisplayNone"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_no"/>
+                <RadioButton
                     android:id="@+id/sortDisplayNormId"
                     style="@style/sortRadio"
                     android:text="@string/cards_normId"/>
@@ -734,9 +702,11 @@
                     style="@style/sortRadio"
                     android:text="@string/cards_name"/>
             </RadioGroup>
-
             <ImageView
                 style="@style/toswiki_style"/>
+            <Space
+                android:layout_width="@dimen/t300dp"
+                android:layout_height="1dp"/>
         </LinearLayout>
     </HorizontalScrollView>
 

@@ -1,20 +1,22 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
+
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.StageGroup;
 import com.flyingkite.mytoswiki.library.StageGroupAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.util.TaskMonitor;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class StoryStageDialog extends BaseTosDialog {
     private LinearLayout stageList;
@@ -48,7 +50,9 @@ public class StoryStageDialog extends BaseTosDialog {
 
             if (TosWiki.TAG_STORY_STAGE.equals(tag)) {
                 storyStages = TosWiki.getStoryStages();
-                initStages();
+                getActivity().runOnUiThread(() -> {
+                    initStages();
+                });
             }
         }
     };

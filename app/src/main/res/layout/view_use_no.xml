@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/sortText2"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/t5dp"
+        android:paddingLeft="@dimen/t2dp"
+        android:paddingRight="@dimen/t2dp"
+        android:background="@drawable/bg_press_sky_rect"
+        android:text="@string/noUse"/>
+
+    <TextView
+        style="@style/sortText2"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/t5dp"
+        android:paddingLeft="@dimen/t2dp"
+        android:paddingRight="@dimen/t2dp"
+        android:background="@color/skyBlue"
+        android:text="@string/use"/>
+</LinearLayout>

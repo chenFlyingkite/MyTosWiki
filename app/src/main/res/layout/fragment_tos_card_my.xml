@@ -43,6 +43,24 @@
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"/>
 
+            <ImageView
+                android:id="@+id/tosUsage"
+                android:src="@drawable/q1"
+                android:layout_width="@dimen/t45dp"
+                android:layout_height="@dimen/t45dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sortTitle"
+                android:text="@string/cards_pack"/>
+            <TextView
+                android:id="@+id/tosClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/sortText"
+                android:text="@string/clear"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -58,7 +76,8 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_favorite_border_black_48"
+                android:visibility="gone"
+                android:src="@drawable/ic_favorite_border_white_48"
                 android:background="@drawable/bg_press_sky_rect"/>
 
             <ImageView
@@ -66,18 +85,18 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_open_in_browser_black_48dp"
+                android:src="@drawable/ic_open_in_browser_white_48dp"
                 android:background="@drawable/bg_press_sky_rect"/>
 
             <ImageView
                 android:id="@+id/tosGoTop"
-                style="@style/tosGoTop"
+                style="@style/tosGoTopW"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"/>
 
             <ImageView
                 android:id="@+id/tosGoBottom"
-                style="@style/tosGoBottom"
+                style="@style/tosGoBottomW"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"/>
 
@@ -86,7 +105,7 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_sort_black_48dp"/>
+                android:src="@drawable/ic_sort_white_48dp"/>
 
         </LinearLayout>
 
@@ -95,7 +114,12 @@
             android:layout_below="@id/tosUidBox"
             style="@style/common_text"
             android:textColor="@color/grey_white"
-            android:layout_centerVertical="true"
+            tools:text="@string/cards_selection_kind"/>
+        <TextView
+            android:id="@+id/tosInfo2"
+            android:layout_below="@id/tosInfo"
+            style="@style/common_text"
+            android:textColor="@color/grey_white"
             tools:text="@string/cards_selection"/>
     </RelativeLayout>
 
@@ -134,4 +158,23 @@
         app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
         app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
         app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
+
+
+    <TextView
+        android:id="@+id/tosLoading"
+        style="@style/common_text.black"
+        android:layout_centerInParent="true"
+        android:text="@string/cardsLoading"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/tosHow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:text="@string/how_to_use"/>
+
 </RelativeLayout>
