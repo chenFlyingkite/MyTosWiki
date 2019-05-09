@@ -543,6 +543,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             clickSearch(v);
         });
         searchApply.setOnClickListener((v) -> {
+            logSearch();
             search.setChecked(true);
             clickSearch(v);
         });
@@ -1479,6 +1480,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private void logShare(String type) {
         Map<String, String> m = new HashMap<>();
         m.put("share", type);
+        FabricAnswers.logCardFragment(m);
+    }
+
+    private void logSearch() {
+        Map<String, String> m = new HashMap<>();
+        m.put("search", "1");
         FabricAnswers.logCardFragment(m);
     }
 
