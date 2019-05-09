@@ -3,7 +3,7 @@ package com.flyingkite.mytoswiki.util;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 
@@ -37,13 +37,13 @@ public interface GlideUtil {
     }
 
     default void loadLinkToImageView(ImageView img, String link, Context context, int holderId) {
-        Glide.with(context).load(link).centerCrop().placeholder(holderId).animate(R.anim.fadein).into(img);
-        //GlideApp.with(context).load(link).centerCrop().placeholder(holderId).into(img);
+        //Glide.with(context).load(link).centerCrop().placeholder(holderId).animate(R.anim.fadein).into(img);
+        GlideApp.with(context).load(link).centerCrop().placeholder(holderId).into(img);
     }
 
     default void loadLinkToImageView(ImageView img, String link, Context context) {
-        Glide.with(context).load(link).animate(R.anim.fadein).into(img);
-        //GlideApp.with(context).load(link).into(img);
+        //Glide.with(context).load(link).animate(R.anim.fadein).into(img);
+        GlideApp.with(context).load(link).into(img);
     }
 
 }
