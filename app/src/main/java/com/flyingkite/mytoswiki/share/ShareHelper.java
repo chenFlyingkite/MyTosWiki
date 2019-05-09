@@ -12,19 +12,11 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
 
-import com.bumptech.glide.load.DataSource;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.target.Target;
-import com.bumptech.glide.request.transition.Transition;
-import com.flyingkite.library.Say;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.FileUtil;
 import com.flyingkite.library.util.IOUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
-import com.flyingkite.mytoswiki.GlideApp;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.util.WaitingDialog;
 
@@ -34,7 +26,6 @@ import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 /**
  * <a href="https://developer.android.com/training/sharing/send">
@@ -124,34 +115,34 @@ public class ShareHelper {
 
     @Deprecated
     public static void shareBitmap(@NonNull Activity activity, String url) {
-        GlideApp.with(activity).asBitmap().load(url)
-        .listener(new RequestListener<Bitmap>() {
-            @Override
-            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                LogE("onLoadFailed, first = %s, model = %s, e = %s", Say.ox(isFirstResource), model, e);
-                return false;
-            }
-
-            @Override
-            public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                LogV("onResourceReady, first = %s, bmp = %s", Say.ox(isFirstResource), resource);
-                return false;
-            }
-        }).into(new SimpleTarget<Bitmap>() {
-            @Override
-            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                LogV("onResourceReady, bmp = %s", resource);
-
-                Intent it = new Intent(Intent.ACTION_SEND);
-                it.putExtra(Intent.EXTRA_STREAM, resource);
-                it.setType("image/png");
-                try {
-                    activity.startActivity(it);
-                } catch (ActivityNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        GlideApp.with(activity).asBitmap().load(url)
+//        .listener(new RequestListener<Bitmap>() {
+//            @Override
+//            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
+//                LogE("onLoadFailed, first = %s, model = %s, e = %s", Say.ox(isFirstResource), model, e);
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
+//                LogV("onResourceReady, first = %s, bmp = %s", Say.ox(isFirstResource), resource);
+//                return false;
+//            }
+//        }).into(new SimpleTarget<Bitmap>() {
+//            @Override
+//            public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+//                LogV("onResourceReady, bmp = %s", resource);
+//
+//                Intent it = new Intent(Intent.ACTION_SEND);
+//                it.putExtra(Intent.EXTRA_STREAM, resource);
+//                it.setType("image/png");
+//                try {
+//                    activity.startActivity(it);
+//                } catch (ActivityNotFoundException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
     }
 
     public static class SaveViewToBitmapTask extends AsyncTask<Void, Void, Void> {
