@@ -43,6 +43,7 @@ public class TosWiki {
     private static CraftsNormal[] normalCrafts;
     private static CraftsArm[] armCrafts;
     private static Map<String, TosCard> allCardsByIdNorm = new HashMap<>();
+    private static Map<String, List<TosCard>> allCardsBySeries = new HashMap<>();
     private static Map<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
     private static CardFavor cardFavor;
     private static WebPin webPin;
@@ -84,7 +85,18 @@ public class TosWiki {
             for (TosCard c : allCards) {
                 allCardsByIdNorm.put(c.idNorm, c);
             }
+
+            allCardsBySeries.clear();
+            for (TosCard c : allCards) {
+                List<TosCard> s = allCardsBySeries.get(c.series);
+                if (s == null) {
+                    s = new ArrayList<>();
+                }
+                s.add(c);
+                allCardsBySeries.put(c.series, s);
+            }
             t.tac("%s in set OK", allCardsByIdNorm.size());
+            z.logE("%s series", allCardsBySeries.size());
             monitorDB.notifyClientsState();
         });
 
@@ -236,6 +248,10 @@ public class TosWiki {
 
     public static TosCard[] allCards() {
         return copy(allCards);
+    }
+
+    public static List<TosCard> getCardsBySeries(String series) {
+        return allCardsBySeries.get(series);
     }
 
     public static TosCard getCardByIdNorm(String id) {

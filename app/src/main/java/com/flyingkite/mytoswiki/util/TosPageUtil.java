@@ -56,9 +56,14 @@ public interface TosPageUtil extends Loggable, GlideUtil {
         showCraftDialog(c);
     }
 
+    default void setSimpleCard(ImageView view, String idNorm) {
+        setSimpleCard(view, TosWiki.getCardByIdNorm(idNorm));
+    }
+
     default void setSimpleCard(ImageView view, TosCard c) {
         loadCardToImageView(view, c);
         view.setOnClickListener((v) -> {
+            if (c == null) return;
             showCardDialog(c);
         });
         view.setOnLongClickListener((v) -> {

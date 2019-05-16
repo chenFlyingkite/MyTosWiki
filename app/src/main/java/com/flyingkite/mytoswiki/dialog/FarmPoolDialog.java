@@ -1,7 +1,6 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -12,6 +11,8 @@ import com.flyingkite.mytoswiki.R;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 public class FarmPoolDialog extends BaseTosDialog {
     @Override
@@ -29,6 +30,11 @@ public class FarmPoolDialog extends BaseTosDialog {
         super.onViewCreated(view, savedInstanceState);
         logImpression();
         dismissWhenClick(R.id.fpdTitle);
+        setDetails();
+        setBattle();
+    }
+
+    private void setDetails() {
         TextView detail = findViewById(R.id.fpdDetail);
         findViewById(R.id.fpdShare).setOnClickListener((v) -> {
             shareString(detail.getText().toString());
@@ -36,6 +42,18 @@ public class FarmPoolDialog extends BaseTosDialog {
         });
         String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_FARM_POOL_CONTENT);
         detail.setText(escapeNewLine(s));
+    }
+
+    private void setBattle() {
+        String[] ids;
+        ids = new String[]{"0981", "0983", "0985", "0498", "0500", "1083"};
+        setTeamSimple(findViewById(R.id.fpdTeam0), ids);
+
+        ids = new String[]{"1983", "1565", "1639", "", "", "1983"};
+        setTeamSimple(findViewById(R.id.fpdTeam1), ids);
+
+        ids = new String[]{"1277", "1263", "1882", "", "", "1277"};
+        setTeamSimple(findViewById(R.id.fpdTeam2), ids);
     }
 
     //-- Events

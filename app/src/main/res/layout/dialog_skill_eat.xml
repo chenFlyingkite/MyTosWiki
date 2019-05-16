@@ -263,6 +263,8 @@
                     <include
                         layout="@layout/view_skill_eat_080505x5"/>
                     <include
+                        layout="@layout/view_skill_eat_0801a0x14"/>
+                    <include
                         layout="@layout/view_skill_eat_121010x1"/>
                     <include
                         layout="@layout/view_skill_eat_151010x2"/>

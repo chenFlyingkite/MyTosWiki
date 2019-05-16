@@ -1442,6 +1442,11 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             t.tic();
             Document doc = getDocument(TOS_REVIEW + uid);
             t.tac("fetched");
+            // Fail to fetch Document
+            if (doc == null) {
+                return false; // fail
+            }
+
             String data = doc.toString();
 
             String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");

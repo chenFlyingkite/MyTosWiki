@@ -472,6 +472,26 @@
 
                     </LinearLayout>
 
+                    <!-- Same series list-->
+                    <LinearLayout
+                        android:id="@+id/cardSameSeries"
+                        android:layout_width="@dimen/t360dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/t10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cardSameSeriesHeader"
+                            style="@style/cardText.header"
+                            android:background="@drawable/bg_rect_skyblue"
+                            android:text="@string/cards_series_n"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/cardSameSeriesCards"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/t50dp"/>
+                    </LinearLayout>
+
                     <!-- Card info : Amelioration 昇華 -->
                     <LinearLayout
                         android:id="@+id/cardAmeliorationTable"

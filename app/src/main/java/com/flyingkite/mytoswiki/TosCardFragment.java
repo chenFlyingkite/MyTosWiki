@@ -543,7 +543,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             clickSearch(v);
         });
         searchApply.setOnClickListener((v) -> {
-            logSearch();
+            logSearch(searchText.getText().toString());
             search.setChecked(true);
             clickSearch(v);
         });
@@ -651,9 +651,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         applySelection();
     }
 
-    private void clickSearch(View v) { // TODO
-        //setCheckedIncludeNo(v, R.id.sortImproveNo, sortImprove);
-
+    private void clickSearch(View v) {
         String s = searchText.getText().toString();
         new AppPref().setCardsSearchText(s);
         applySelection();
@@ -1483,9 +1481,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         FabricAnswers.logCardFragment(m);
     }
 
-    private void logSearch() {
+    private void logSearch(String s) {
         Map<String, String> m = new HashMap<>();
-        m.put("search", "1");
+        m.put("search", s);
         FabricAnswers.logCardFragment(m);
     }
 

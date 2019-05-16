@@ -74,6 +74,7 @@ public class CardDialog extends BaseTosDialog {
     private Library<CardTileAdapter> sameSkillLibrary;
     private Library<CardCombineAdapter> combineLibrary;
     private Library<CraftTileAdapter> armCraftLibrary;
+    private Library<CardTileAdapter> sameSeriesLibrary;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -192,6 +193,7 @@ public class CardDialog extends BaseTosDialog {
         setRebirth(card);
         setArmCraft(card);
         setSwitching(card);
+        setSameSeries(card);
         setVisibilityByChild(findViewById(R.id.cardChange));
 
         // Fill in Amelioration, I, II, III, IV
@@ -318,6 +320,38 @@ public class CardDialog extends BaseTosDialog {
         sameSkillLibrary.setViewAdapter(a);
         // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
         if (same.size() > 7) { // since 8 items will directly out of the width
+            rv.removeOnItemTouchListener(noIntercept);
+            rv.addOnItemTouchListener(noIntercept);
+        }
+    }
+
+    private void setSameSeries(TosCard c) {
+        // Fetch cards
+        List<TosCard> se = TosWiki.getCardsBySeries(c.series);
+        if (se.isEmpty()) {
+            findViewById(R.id.cardSameSeries).setVisibility(View.GONE);
+            return;
+        }
+
+        // Header
+        TextView h = findViewById(R.id.cardSameSeriesHeader);
+        h.setText(getString(R.string.cards_series_n, "" + se.size()));
+
+        // Setup recycler
+        RecyclerView rv = findViewById(R.id.cardSameSeriesCards);
+
+        // Creating library
+        sameSeriesLibrary = new Library<>(rv);
+        CardTileAdapter a = new CardTileAdapter() {
+            @Override
+            public FragmentManager getFragmentManager() {
+                return CardDialog.this.getFragmentManager();
+            }
+        };
+        a.setDataList(se);
+        sameSeriesLibrary.setViewAdapter(a);
+        // To allow recycler view be scrollable inside ScrollView & HorizontalScrollView
+        if (se.size() > 7) { // since 8 items will directly out of the width
             rv.removeOnItemTouchListener(noIntercept);
             rv.addOnItemTouchListener(noIntercept);
         }

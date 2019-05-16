@@ -39,11 +39,14 @@ public interface GlideUtil {
     default void loadLinkToImageView(ImageView img, String link, Context context, int holderId) {
         //Glide.with(context).load(link).centerCrop().placeholder(holderId).animate(R.anim.fadein).into(img);
         GlideApp.with(context).load(link).centerCrop().placeholder(holderId).into(img);
+        //Picasso.get().load(link)//.resize(img.getMeasuredWidth(), img.getMeasuredHeight()).centerCrop()
+        //        .placeholder(holderId).into(img);// Slow performance
     }
 
     default void loadLinkToImageView(ImageView img, String link, Context context) {
         //Glide.with(context).load(link).animate(R.anim.fadein).into(img);
         GlideApp.with(context).load(link).into(img);
+        //Picasso.get().load(link).into(img);// Slow performance
     }
 
 }

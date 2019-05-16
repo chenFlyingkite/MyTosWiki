@@ -43,6 +43,10 @@
         <item name="android:layout_width">@dimen/t50dp</item>
         <item name="android:layout_height">@dimen/t50dp</item>
     </style>
+    <style name="commonIcon.bgSky">
+        <item name="android:padding">@dimen/t2dp</item>
+        <item name="android:background">@drawable/bg_press_sky</item>
+    </style>
 
     <style name="evoArrow">
         <item name="android:layout_width">@dimen/t30dp</item>
@@ -413,6 +417,12 @@
     <style name="icon_t40.reset">
         <item name="android:src">@drawable/s_i049</item>
     </style>
+    <style name="icon_t45_p2">
+        <item name="android:layout_width">@dimen/t45dp</item>
+        <item name="android:layout_height">@dimen/t45dp</item>
+        <item name="android:padding">@dimen/t2dp</item>
+        <item name="android:background">@drawable/bg_press_sky</item>
+    </style>
 
     <!-- Skill eat -->
 
@@ -460,8 +470,8 @@
     <style name="skillLv_row">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">@dimen/t5dp</item>
-        <item name="android:paddingRight">@dimen/t10dp</item>
+        <item name="android:paddingLeft">@dimen/t2dp</item>
+        <item name="android:paddingRight">@dimen/t2dp</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:gravity">center_vertical</item>
     </style>

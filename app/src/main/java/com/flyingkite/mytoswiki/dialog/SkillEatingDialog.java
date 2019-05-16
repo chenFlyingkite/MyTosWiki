@@ -5,9 +5,6 @@ import android.app.Dialog;
 import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
-import androidx.annotation.IdRes;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,6 +30,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.IdRes;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SkillEatingDialog extends BaseTosDialog {
 
@@ -128,7 +129,7 @@ public class SkillEatingDialog extends BaseTosDialog {
                 return R.layout.view_small_image;
             }
         };
-        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897", "1972");
+        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897", "1972", "2077", "2078", "2128");
         a.setDataList(getCardsByIdNorms(c600));
         card600.setViewAdapter(a);
     }

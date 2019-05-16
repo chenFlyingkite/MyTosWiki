@@ -9,6 +9,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.util.PageUtil;
@@ -193,6 +194,21 @@ public class BaseTosDialog extends DialogFragment implements
             sb.append(t[i]);
         }
         return sb.toString();
+    }
+
+    // VG = R.layout.view_teamSimple
+    public void setTeamSimple(View vg, String[] idNorms) {
+        if (idNorms == null) return;
+        int n = idNorms.length;
+
+        final int[] ids = {R.id.tsLeader, R.id.tsMember1, R.id.tsMember2
+                , R.id.tsMember3, R.id.tsMember4, R.id.tsFriend};
+        ImageView v;
+        int m = Math.min(n, ids.length);
+        for (int i = 0; i < m; i++) {
+            v = vg.findViewById(ids[i]);
+            setSimpleCard(v, idNorms[i]);
+        }
     }
 
 }

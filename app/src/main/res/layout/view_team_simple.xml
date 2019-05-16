@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/grey4"
+    android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/tsLeader"
+        style="@style/commonIcon.bgSky"
+        android:src="@drawable/unknown_card"/>
+
+    <ImageView
+        android:id="@+id/tsMember1"
+        style="@style/icon_t45_p2"
+        android:src="@drawable/unknown_card"/>
+
+    <ImageView
+        android:id="@+id/tsMember2"
+        style="@style/icon_t45_p2"
+        android:src="@drawable/unknown_card"/>
+
+    <ImageView
+        android:id="@+id/tsMember3"
+        style="@style/icon_t45_p2"
+        android:src="@drawable/unknown_card"/>
+
+    <ImageView
+        android:id="@+id/tsMember4"
+        style="@style/icon_t45_p2"
+        android:src="@drawable/unknown_card"/>
+
+    <ImageView
+        android:id="@+id/tsFriend"
+        style="@style/commonIcon.bgSky"
+        android:src="@drawable/unknown_card"/>
+
+</LinearLayout>
