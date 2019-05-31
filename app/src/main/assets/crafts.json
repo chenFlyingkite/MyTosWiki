@@ -2910,7 +2910,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 50%"
+        "detail": "1 回合內，敵人全體的防禦力減少 50%"
       },
       {
         "level": 2,
@@ -2943,7 +2943,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 50%"
+        "detail": "1 回合內，敵人全體的防禦力減少 50%"
       },
       {
         "level": 2,
@@ -2976,7 +2976,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 50%"
+        "detail": "1 回合內，敵人全體的防禦力減少 50%"
       },
       {
         "level": 2,
@@ -3009,7 +3009,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 50%"
+        "detail": "1 回合內，敵人全體的防禦力減少 50%"
       },
       {
         "level": 2,
@@ -3042,7 +3042,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 50%"
+        "detail": "1 回合內，敵人全體的防禦力減少 50%"
       },
       {
         "level": 2,
@@ -4578,7 +4578,7 @@
       {
         "level": 2,
         "score": 4500,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 3,
@@ -4725,7 +4725,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -5599,7 +5599,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -5637,7 +5637,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -5827,7 +5827,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -6983,7 +6983,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，使全體敵人防禦力下降 80%"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -7743,7 +7743,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -7781,7 +7781,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -8009,7 +8009,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -8232,7 +8232,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -8460,7 +8460,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -9621,7 +9621,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -10115,7 +10115,7 @@
       {
         "level": 1,
         "score": 2000,
-        "detail": "1 回合內，無視全體敵人 80% 的防禦力"
+        "detail": "1 回合內，敵人全體的防禦力減少 80%"
       },
       {
         "level": 2,
@@ -11054,6 +11054,82 @@
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e2/C304.png/revision/latest/scale-to-width-down/120?cb\u003d20190213070435\u0026path-prefix\u003dzh",
       "iconKey": "C304.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除光符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個光成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，人類成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0305",
+    "name": "耀之越時龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/ab/C305.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024802\u0026path-prefix\u003dzh",
+      "iconKey": "C305.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為暗符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員的攻擊力提升 40%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於人類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0306",
+    "name": "影之越時龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/00/C306.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024802\u0026path-prefix\u003dzh",
+      "iconKey": "C306.png"
     }
   }
 ]

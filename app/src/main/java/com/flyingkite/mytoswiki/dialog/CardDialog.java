@@ -328,7 +328,7 @@ public class CardDialog extends BaseTosDialog {
     private void setSameSeries(TosCard c) {
         // Fetch cards
         List<TosCard> se = TosWiki.getCardsBySeries(c.series);
-        if (se.isEmpty()) {
+        if (se == null || se.isEmpty()) {
             findViewById(R.id.cardSameSeries).setVisibility(View.GONE);
             return;
         }

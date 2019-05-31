@@ -297,15 +297,21 @@
         <item>轉化為我方生命力</item>
     </string-array>
     <string-array name="cards_regardless_of_defense_keys">
-        <item>無視防禦力</item>
-        <!-- #0845,月想女神 月讀 -->
+        <!-- #1575, 八神庵  #1965, 瑟雷夫-->
+        <item>防禦力減至 0</item>
+        <!-- #0845,月想女神 月讀 50% -->
+        <!-- #514, 白虎,狼人 75% -->
+        <!-- #1702, 曹國舅 80% -->
+        <!-- #0949, 熾焰之翼 ‧ 烏列爾, #1125,古鱗魔龍 90% -->
+        <!--
         <item>無視全體敵人 50% 的防禦力</item>
-        <!-- #514, 白虎,狼人 -->
         <item>無視全體敵人 75% 的防禦力</item>
-        <!-- #1702, 曹國舅 -->
         <item>無視全體敵人 80% 的防禦力</item>
-        <!-- #0949, 熾焰之翼 ‧ 烏列爾, #1125,古鱗魔龍 -->
         <item>無視全體敵人 90% 的防禦力</item>
+        -->
+        <item>全體敵人的防禦力減少</item>
+        <item>敵方全體的防禦力減少</item>
+        <item>敵方的防禦力減少</item>
         <!-- #0227, 美猴王, #0600, #0604 機偶使者 木暗, #0861 千千 -->
         <item>無視全體敵人的防禦力</item>
         <!-- #0294, 通透的蛋 -->
@@ -314,8 +320,7 @@
         <item>此傷害無視防禦力</item>
         <!-- #1762, 小傑-->
         <item>自身攻擊無視敵人的防禦力</item>
-        <!-- #1575, 八神庵  #1965, 瑟雷夫-->
-        <item>防禦力減至 0</item>
+        <item>無視防禦力</item>
     </string-array>
     <string-array name="cards_regardless_of_attribute_keys">
         <!-- #0294, 通透的蛋 -->
@@ -406,6 +411,7 @@
     </string-array>
     <string-array name="cards_delay_keys">
         <item>延遲</item>
+        <item>延長所有敵人行動</item>
     </string-array>
 
     <string name="cards_hide2">顯示卡片設定</string>

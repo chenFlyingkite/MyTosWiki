@@ -2,6 +2,7 @@ package com.flyingkite.mytoswiki.tos;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.flyingkite.crashlytics.CrashReport;
@@ -256,7 +257,7 @@ public class TosWiki {
 
     public static TosCard getCardByIdNorm(String id) {
         TosCard c = allCardsByIdNorm.get(id);
-        if (c == null) {
+        if (c == null && !TextUtils.isEmpty(id)) {
             try {
                 String s = z._fmt("Card null: %s, map = %s, all = %s",
                         id, allCardsByIdNorm.size(), len(allCards));
