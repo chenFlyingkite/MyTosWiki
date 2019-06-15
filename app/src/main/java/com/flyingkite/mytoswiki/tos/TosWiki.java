@@ -51,6 +51,7 @@ public class TosWiki {
     private static MainStage[] mainStages;
     private static RelicStage[][] relicStages;
     private static StageGroup[] storyStages;
+    private static StageGroup ultimStages;
     private static MainStage[] realmStages;
     // Observers
     private static List<OnAction> favorActions = new ArrayList<>();
@@ -64,10 +65,11 @@ public class TosWiki {
     public static final String TAG_STORY_STAGE = "StoryStage";
     public static final String TAG_REALM_STAGE = "RealmStage";
     public static final String TAG_WEB_PIN = "WebPin";
+    public static final String TAG_ULTIM_STAGE = "UltimStage"; // Ultimate stages
     public static final String[] TAG_ALL_TASKS = {
             TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR,
             TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE, TAG_REALM_STAGE,
-            TAG_WEB_PIN
+            TAG_WEB_PIN, TAG_ULTIM_STAGE
     };
 
     public static void init(Context ctx) {
@@ -167,6 +169,14 @@ public class TosWiki {
         p.submit(() -> {
             TicTac2 t = new TicTac2.v();
             t.tic();
+            ultimStages = GsonUtil.loadAsset("ultimateStage.json", StageGroup.class, am);
+            t.tac("%s ultimate stages loaded", ultimStages.stages.size());
+            monitorDB.notifyClientsState();
+        });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2.v();
+            t.tic();
             realmStages = GsonUtil.loadAsset("voidRealm.json", MainStage[].class, am);
             t.tac("%s realm stages loaded", realmStages.length);
             monitorDB.notifyClientsState();
@@ -190,6 +200,10 @@ public class TosWiki {
 
     public static MainStage[] getRealmStages() {
         return realmStages;
+    }
+
+    public static StageGroup getUltimateStages() {
+        return ultimStages;
     }
 
     public static MainStage[] getMainStages() {
@@ -313,6 +327,7 @@ public class TosWiki {
                 case TAG_RELIC_PASS: return relicStages != null;
                 case TAG_STORY_STAGE: return storyStages != null;
                 case TAG_REALM_STAGE: return realmStages != null;
+                case TAG_ULTIM_STAGE: return ultimStages != null;
                 case TAG_WEB_PIN: return webPin != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:

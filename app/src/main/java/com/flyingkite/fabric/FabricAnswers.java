@@ -91,6 +91,10 @@ public class FabricAnswers {
         logCustom("RealmStage", attributes);
     }
 
+    public static void logUltimateStage(Map<String, String> attributes) {
+        logCustom("UltimateStage", attributes);
+    }
+
     public static void logMainStage(Map<String, String> attributes) {
         logCustom("MainStage", attributes);
     }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_round_darkgray">
+
+    <LinearLayout
+        android:layout_width="@dimen/t250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/usd_title"
+            style="@style/cardText"
+            android:text="@string/ultimate_stage"/>
+
+        <LinearLayout
+            android:id="@+id/usd_select"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/usd_select_title"
+                style="@style/cardText.header"
+                android:text="@string/week_stages"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/usd_select_stages"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/t130dp"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t5dp"
+            android:background="@color/green"/>
+
+        <TextView
+            android:id="@+id/usd_main_title"
+            style="@style/cardText.header"
+            android:text="@string/all_stages"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/usd_main_stages"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t350dp"
+            android:scrollbars="vertical"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t5dp"
+            android:background="@color/skyBlue"/>
+    </LinearLayout>
+</ScrollView>

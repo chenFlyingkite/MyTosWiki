@@ -31,6 +31,7 @@ import com.flyingkite.mytoswiki.dialog.StaminaDialog;
 import com.flyingkite.mytoswiki.dialog.StoryStageDialog;
 import com.flyingkite.mytoswiki.dialog.SummonerLevelDialog;
 import com.flyingkite.mytoswiki.dialog.TosEventDialog;
+import com.flyingkite.mytoswiki.dialog.UltimateStageDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
@@ -60,8 +61,9 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.tos_app
             , R.drawable.tos_vestige
             , R.drawable.tos_enochian
-            , R.drawable.tos_lost_relic_pass
+            , R.drawable.card_0674
             , R.drawable.shop_card
+            , R.drawable.tos_lost_relic_pass
             , R.drawable.tos_void_realm
             , R.drawable.tos_story
             , R.drawable.gift_stamina
@@ -237,6 +239,9 @@ public class MainActivity extends BaseActivity implements
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
                 switch (iconId) {
+                    case R.drawable.card_0674:
+                        new UltimateStageDialog().show(getActivity());
+                        break;
                     case R.drawable.card_0617:
                         new SkillEatingDialog().show(getActivity());
                         break;

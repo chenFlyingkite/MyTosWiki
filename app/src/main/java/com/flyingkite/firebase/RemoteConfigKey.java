@@ -10,6 +10,7 @@ public enum RemoteConfigKey implements RemoteConfig.RCKey {
     DIALOG_TOS_EVENT_WEB("dialog_tos_event_web"),
     DIALOG_TOS_EVENT_BANNER("dialog_tos_event_banner"),
     DIALOG_FARM_POOL_CONTENT("dialog_farm_pool_content"),
+    DIALOG_ULTIMATE_STAGE("dialog_ultimate_stage"),
     ;
 
     private final String key;

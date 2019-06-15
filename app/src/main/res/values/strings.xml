@@ -763,6 +763,9 @@
     <string name="lost_relic_pass_title">遺跡特許</string>
     <string name="story_stage">旅人的記憶</string>
     <string name="realm_stage">虛影世界</string>
+    <string name="ultimate_stage">地獄級 / 夢魘級</string>
+    <string name="week_stages">本週關卡 (手動更新) (共 %d 個)</string>
+    <string name="all_stages">所有關卡 (共 %d 個)</string>
 
     <string name="farm_pool_title">肥料卡池小筆記</string>
     <string name="farm_pool_detail">收集肥料的小攻略。提供給召喚師做參考。</string>
