@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
@@ -17,6 +18,7 @@ import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -65,7 +67,7 @@ public class UltimateStageDialog extends BaseTosDialog {
     private void initStages() {
         List<Stage> data;
 
-        data = getWeeklyStage(mainStages.stages);
+        data = getWeeklyStage();
         // Weekly stage
         selectLibrary = new Library<>(findViewById(R.id.usd_select_stages), true);
         StageAdapter az = new StageAdapter();
@@ -104,25 +106,15 @@ public class UltimateStageDialog extends BaseTosDialog {
         t.setText(getString(R.string.all_stages, data.size()));
     }
 
-    private List<Stage> getWeeklyStage(List<Stage> all) {
+    private List<Stage> getWeeklyStage() {
         String json = RemoteConfig.getString(RemoteConfigKey.DIALOG_ULTIMATE_STAGE);
-        String[] stage = new Gson().fromJson(json, String[].class);
-
-        List<Stage> ans = new ArrayList<>();
-        if (stage == null) return ans;
-        // Create all stages as map
-        Map<String, Stage> m = new HashMap<>();
-        for (Stage s : all) {
-            m.put(s.name, s);
+        try {
+            Stage[] stage = new Gson().fromJson(json, Stage[].class);
+            return Arrays.asList(stage);
+        } catch (Exception e) {
+            CrashReport.logException(e);
+            return new ArrayList<>();
         }
-        // List content
-        for (String s : stage) {
-            Stage g = m.get(s);
-            if (g != null) {
-                ans.add(g);
-            }
-        }
-        return ans;
     }
 
     //-- Events

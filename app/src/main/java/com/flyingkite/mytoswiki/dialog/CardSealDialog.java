@@ -27,6 +27,7 @@ import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
+import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
@@ -67,6 +68,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
+        sealOrder.add(new Pair<>(R.id.csdSeriesPrimalDeities,    new PrimalDeities()));
         sealOrder.add(new Pair<>(R.id.csdSeriesSaintSeiya,       new SaintSeiya()));
         sealOrder.add(new Pair<>(R.id.csdSeriesUnearthlyCharm,   new UnearthlyCharm()));
         sealOrder.add(new Pair<>(R.id.csdSeriesGiftedScientists, new GiftedScientists()));
