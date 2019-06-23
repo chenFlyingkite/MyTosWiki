@@ -109,11 +109,11 @@
                     android:text="卡 + 14*小鳥 = 800 + 14*150 = 800 + 2100 = 2900\n卡 + 5*小鳥 + 5卡 = 800 + 5*150 + 2000 = 800 + 750 + 2000 = 3550"/>
                 <TextView
                     style="@style/whiteText.t2"
-                    android:text="★換 20小鳥比 1大鳥便宜"
+                    android:text="★換 15小鳥比 1大鳥便宜"
                     android:textColor="@color/yellow"/>
                 <TextView
                     style="@style/whiteText.t2"
-                    android:text="20 * 小鳥 = 2250 &lt; 大鳥 = 2500"/>
+                    android:text="15 * 小鳥 = 2250 &lt; 大鳥 = 2500"/>
                 <View
                     style="@style/divider_horizontal"
                     android:background="@color/skyBlue"/>

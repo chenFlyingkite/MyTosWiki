@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey4">
+
+    <LinearLayout
+        android:id="@+id/deskHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/deskShare"
+            style="@style/sortIcon.shareW.t40"
+            android:layout_gravity="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deskIcons"
+            android:layout_width="@dimen/t260dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deskTitle"
+        style="@style/common_text.white"
+        android:layout_width="@dimen/t300dp"
+        android:paddingLeft="@dimen/t5dp"
+        android:layout_below="@id/deskHead"
+        tools:text="@string/detail"/>
+
+    <GridLayout
+        android:id="@+id/deskDesktop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_width="@dimen/t300dp"
+        tools:layout_height="@dimen/t300dp"
+        android:layout_below="@id/deskTitle"
+        android:columnCount="6"/>
+</RelativeLayout>

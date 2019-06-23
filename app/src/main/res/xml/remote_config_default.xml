@@ -36,4 +36,8 @@
         <key>dialog_farm_pool_content</key>
         <value>肥料卡池小筆記</value>
     </entry>
+    <entry>
+        <key>dialog_ultimate_stage</key>
+        <value>[]</value>
+    </entry>
 </defaultsMap>

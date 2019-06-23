@@ -13,10 +13,7 @@ import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.dialog.CraftItemDialog;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public interface TosPageUtil extends Loggable, GlideUtil {
+public interface TosPageUtil extends Loggable, GlideUtil, TosWikiUtil {
 
     FragmentManager getFragmentManager();
 
@@ -76,18 +73,6 @@ public interface TosPageUtil extends Loggable, GlideUtil {
         });
     }
 
-    default List<TosCard> getCardsByIdNorms(List<String> idNorms) {
-        List<TosCard> ans = new ArrayList<>();
-        for (int i = 0; i < idNorms.size(); i++) {
-            String id = idNorms.get(i);
-            TosCard c = TosWiki.getCardByIdNorm(id);
-            if (c != null) {
-                ans.add(c);
-            }
-        }
-        return ans;
-    }
-
     default void setSimpleCraft(ImageView view, BaseCraft c) {
         if (c == null) return;
 
@@ -99,17 +84,5 @@ public interface TosPageUtil extends Loggable, GlideUtil {
             App.showToastShort("#" + c.idNorm + " " + c.name);
             return true;
         });
-    }
-
-    default List<BaseCraft> getCraftsByIdNorms(List<String> idNorms) {
-        List<BaseCraft> ans = new ArrayList<>();
-        for (int i = 0; i < idNorms.size(); i++) {
-            String idNorm = idNorms.get(i);
-            BaseCraft c = TosWiki.getCraftByIdNorm(idNorm);
-            if (c != null) {
-                ans.add(c);
-            }
-        }
-        return ans;
     }
 }

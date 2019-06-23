@@ -18,6 +18,7 @@ import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.DailyStageDialog;
 import com.flyingkite.mytoswiki.dialog.FarmPoolDialog;
 import com.flyingkite.mytoswiki.dialog.FeedbackDialog;
+import com.flyingkite.mytoswiki.dialog.FixedStoneDialog;
 import com.flyingkite.mytoswiki.dialog.FreeMoveSampleDialog;
 import com.flyingkite.mytoswiki.dialog.HelpDialog;
 import com.flyingkite.mytoswiki.dialog.MainStageDialog;
@@ -69,6 +70,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.gift_stamina
             , R.drawable.card_1777
             , R.drawable.card_0096
+            , R.drawable.card_1429
             , R.drawable.card_1089
             , R.drawable.q1
             , R.drawable.owl2
@@ -239,6 +241,9 @@ public class MainActivity extends BaseActivity implements
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
                 switch (iconId) {
+                    case R.drawable.card_1429:
+                        new FixedStoneDialog().show(getActivity());
+                        break;
                     case R.drawable.card_0674:
                         new UltimateStageDialog().show(getActivity());
                         break;
