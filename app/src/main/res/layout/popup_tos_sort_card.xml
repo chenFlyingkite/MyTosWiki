@@ -393,6 +393,11 @@
                     android:text="@string/cards_clear_all_effect"/>
 
                 <CheckBox
+                    android:id="@+id/sortSpecialClearLock"
+                    style="@style/sortText"
+                    android:text="@string/cards_clear_lock"/>
+
+                <CheckBox
                     android:id="@+id/sortSpecialStayUntil"
                     style="@style/sortText"
                     android:text="@string/cards_stay_until"/>
@@ -678,28 +683,31 @@
                 <CheckBox
                     android:id="@+id/sortSearchName"
                     style="@style/sortText"
-                    android:checked="true"
+                    android:checked="false"
                     android:text="@string/cards_name"/>
 
                 <CheckBox
                     android:id="@+id/sortSearchSeries"
                     style="@style/sortText"
-                    android:checked="true"
+                    android:checked="false"
                     android:text="@string/cards_series"/>
 
                 <CheckBox
                     android:id="@+id/sortSearchSkillActive"
                     style="@style/sortText"
+                    android:checked="true"
                     android:text="@string/cards_skillActive"/>
 
                 <CheckBox
                     android:id="@+id/sortSearchSkillLeader"
                     style="@style/sortText"
+                    android:checked="true"
                     android:text="@string/cards_skillLeader"/>
 
                 <CheckBox
                     android:id="@+id/sortSearchDetails"
                     style="@style/sortText"
+                    android:checked="true"
                     android:text="@string/cards_details"/>
             </GridLayout>
 

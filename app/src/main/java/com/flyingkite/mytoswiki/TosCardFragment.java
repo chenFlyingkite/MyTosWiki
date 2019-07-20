@@ -125,6 +125,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialAllDealDamageElement;
     private CheckBox sortSpecialTurnEnemyAttr;
     private CheckBox sortSpecialDelay;
+    private CheckBox sortSpecialClearLock;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -493,6 +494,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
+        sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -1112,6 +1114,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialDelay.isChecked()) {
                     accept &= find(key, R.array.cards_delay_keys);
+                }
+                if (sortSpecialClearLock.isChecked()) {
+                    accept &= find(key, R.array.cards_clear_lock_keys);
                 }
             }
             return accept;
