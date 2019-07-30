@@ -23,6 +23,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
+import com.flyingkite.mytoswiki.data.seal.GiantLight;
 import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
@@ -68,6 +69,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealOrder.clear();
+        sealOrder.add(new Pair<>(R.id.csdSeriesGiantLight,       new GiantLight()));
         sealOrder.add(new Pair<>(R.id.csdSeriesPrimalDeities,    new PrimalDeities()));
         sealOrder.add(new Pair<>(R.id.csdSeriesSaintSeiya,       new SaintSeiya()));
         sealOrder.add(new Pair<>(R.id.csdSeriesUnearthlyCharm,   new UnearthlyCharm()));
