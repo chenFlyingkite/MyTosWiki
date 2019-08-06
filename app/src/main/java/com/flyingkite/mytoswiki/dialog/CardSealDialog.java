@@ -1,11 +1,9 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentManager;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -13,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -30,11 +27,13 @@ import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
+import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.SealCardAdapter;
+import com.flyingkite.mytoswiki.library.SealSeriesAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -65,26 +64,27 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     public static final String BUNDLE_SEAL = "BUNDLE_SEAL";
-    private static List<Pair<Integer,BaseSeal>> sealOrder = new ArrayList<>();
+    private static final List<SealItem> sealSeries = new ArrayList<>();
 
     static {
-        sealOrder.clear();
-        sealOrder.add(new Pair<>(R.id.csdSeriesGiantLight,       new GiantLight()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesPrimalDeities,    new PrimalDeities()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesSaintSeiya,       new SaintSeiya()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesUnearthlyCharm,   new UnearthlyCharm()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesGiftedScientists, new GiftedScientists()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesFairyTail,        new FairyTail()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesMasterCathieves,  new MasterCathieves()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesKonoSubarashi,    new KonoSubarashi()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesHinduGods,        new HinduGods()));
-        sealOrder.add(new Pair<>(R.id.csdSeriesSengokuSamurai,   new SengokuSamurai()));
+        sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_giant_light,       new GiantLight()));
+        sealSeries.add(new SealItem(R.string.card_series_primal_deities,    new PrimalDeities()));
+        sealSeries.add(new SealItem(R.string.card_series_saint_seiya,       new SaintSeiya()));
+        sealSeries.add(new SealItem(R.string.card_series_unearthly_charm,   new UnearthlyCharm()));
+        sealSeries.add(new SealItem(R.string.card_series_gifted_scientists, new GiftedScientists()));
+        sealSeries.add(new SealItem(R.string.card_series_fairy_tail,        new FairyTail()));
+        sealSeries.add(new SealItem(R.string.card_series_master_cathieves,  new MasterCathieves()));
+        sealSeries.add(new SealItem(R.string.card_series_kono_subarashi,    new KonoSubarashi()));
+        sealSeries.add(new SealItem(R.string.card_series_hindu_gods,        new HinduGods()));
+        sealSeries.add(new SealItem(R.string.card_series_sengoku_samurai,   new SengokuSamurai()));
     }
 
     private BaseSeal seals;
 
     // Views
     private Library<SealCardAdapter> cardPoolLibrary;
+    private Library<SealSeriesAdapter> seriesLibrary;
     private View share;
     private View save;
     private View resetPool;
@@ -98,7 +98,6 @@ public class CardSealDialog extends BaseTosDialog {
     private Spinner autoDrawN;
     private TextView pearsonChi;
     private TextView pearsonH0;
-    private RadioGroup series;
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
@@ -117,7 +116,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     private void parseBundle(Bundle b) {
         if (b == null) {
-            seals = sealOrder.get(0).second;
+            seals = sealSeries.get(0).seal;
         } else {
             seals = b.getParcelable(BUNDLE_SEAL);
         }
@@ -140,7 +139,6 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     private void initViews() {
-        series = findViewById(R.id.csdCardSeries);
         save = findViewById(R.id.csdSave);
         share = findViewById(R.id.csdShare);
         resetPool = findViewById(R.id.csdPoolReset);
@@ -232,52 +230,29 @@ public class CardSealDialog extends BaseTosDialog {
         super.onViewStateRestored(savedInstanceState);
         if (savedInstanceState != null) {
             // Clear all the selections
-            checkSeries();
+            if (seriesLibrary != null) {
+                seriesLibrary.adapter.setSelectIndex(0);
+            }
             raised.setChecked(false);
             peekCard.setChecked(false);
         }
     }
 
     private void initSeries() {
-        checkSeries();
-        setChildClick(series, this::clickSeries);
-    }
-
-    private void checkSeries() {
-        int idAt = -1;
-        if (seals != null) {
-            for (int i = 0; i < sealOrder.size(); i++) {
-                BaseSeal s1 = seals;
-                BaseSeal s2 = sealOrder.get(i).second;
-                if (s1.getClass().equals(s2.getClass())) {
-                    idAt = i;
-                }
+        seriesLibrary = new Library<>(findViewById(R.id.csdCardSeries2), true);
+        SealSeriesAdapter a = new SealSeriesAdapter();
+        a.setDataList(sealSeries);
+        a.setItemListener(new SealSeriesAdapter.ItemListener() {
+            @Override
+            public void onClick(SealItem item, SealSeriesAdapter.SealVH holder, int position) {
+                BaseSeal p = item.seal;
+                seals = p;
+                logAction("Series:" + p.name());
+                resetPool();
+                setupTable();
             }
-        }
-        if (idAt < 0) {
-            idAt = 0;
-        }
-        int id = sealOrder.get(idAt).first;
-        series.check(id);
-    }
-
-    private void clickSeries(View v) {
-        int id = v.getId();
-        series.check(id);
-        int sealId = 0;
-        Pair<Integer,BaseSeal> p;
-        for (int i = 0; i < sealOrder.size(); i++) {
-            p = sealOrder.get(i);
-            if (p.first == id) {
-                sealId = i;
-            }
-        }
-        // Log the actions
-        p = sealOrder.get(sealId);
-        seals = p.second;
-        logAction("Series:" + p.second.name());
-        resetPool();
-        setupTable();
+        });
+        seriesLibrary.setViewAdapter(a);
     }
 
     private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
@@ -409,7 +384,6 @@ public class CardSealDialog extends BaseTosDialog {
         chart.invalidate();
     }
 
-    @SuppressLint("SetTextI18n")
     private void setupPearsonChi() {
         SealSample ss = getWorkingSample();
         int n = Math2.sum(ss.observe);
