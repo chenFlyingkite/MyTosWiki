@@ -154,7 +154,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox searchRangeSkillActive;
     private CheckBox searchRangeSkillLeader;
     private CheckBox searchRangeDetail;
-
+    // Search select
+    private CheckBox searchOnHp;
+    private CheckBox searchOnAttack;
+    private CheckBox searchOnRecovery;
 
     private CardSort cardSort = new CardSort();
     private CardFavor cardFavor = new CardFavor();
@@ -539,6 +542,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         searchRangeSkillActive = menu.findViewById(R.id.sortSearchSkillActive);
         searchRangeSkillLeader = menu.findViewById(R.id.sortSearchSkillLeader);
         searchRangeDetail = menu.findViewById(R.id.sortSearchDetails);
+        searchOnHp = menu.findViewById(R.id.sortSearchHpImprove);
+        searchOnAttack = menu.findViewById(R.id.sortSearchAttackImprove);
+        searchOnRecovery = menu.findViewById(R.id.sortSearchRecoveryImprove);
 
         searchClear.setOnClickListener((v) -> {
             searchText.setText("");
@@ -549,6 +555,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             search.setChecked(true);
             clickSearch(v);
         });
+        searchOnHp.setOnClickListener(this::clickSearchHar);
+        searchOnAttack.setOnClickListener(this::clickSearchHar);
+        searchOnRecovery.setOnClickListener(this::clickSearchHar);
 
         View[] vs = {search, searchRegex, searchRangeName, searchRangeSeries, searchRangeSkillActive, searchRangeSkillLeader, searchRangeDetail};
         for (View v : vs) {
@@ -657,6 +666,30 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         String s = searchText.getText().toString();
         new AppPref().setCardsSearchText(s);
         applySelection();
+    }
+
+    private void clickSearchHar(View v) {
+        // Prepare text and set to search text
+        List<String> sa = new ArrayList<>();
+        if (searchOnHp.isChecked()) {
+            sa.add("\n" + getString(R.string.regex_searchOnHp));
+        }
+        if (searchOnAttack.isChecked()) {
+            sa.add("\n" + getString(R.string.regex_searchOnAttack));
+        }
+        if (searchOnRecovery.isChecked()) {
+            sa.add("\n" + getString(R.string.regex_searchOnRecovery));
+        }
+        String s = RegexUtil.toRegexOr(sa);
+        searchText.setText(s);
+        search.setChecked(true);
+        searchRegex.setChecked(true);
+        searchRangeName.setChecked(false);
+        searchRangeSeries.setChecked(false);
+        searchRangeSkillActive.setChecked(false);
+        searchRangeSkillLeader.setChecked(false);
+        searchRangeDetail.setChecked(true);
+        clickSearch(v);
     }
     // --------
 

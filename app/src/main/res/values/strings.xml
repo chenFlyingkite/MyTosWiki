@@ -44,6 +44,7 @@
     <string name="useSearch">使用搜尋</string>
     <string name="clear">清除</string>
     <string name="cleared">已清除完成</string>
+    <string name="selectedSearch">特選搜尋</string>
 
     <string name="cards_n_card">%d 張</string>
     <string name="cards_selection_kind">%d / %d 種卡片</string>
@@ -871,6 +872,10 @@ https://review.towerofsaviors.com\n
 \n★ 15心 + 15暗 = 貂蟬(#1296 6星暗人)
 \n★ 6 五屬強化 = 阿囉哈(#1032, #1406)
 \n★</string>
+
+    <string name="regex_searchOnHp">生命力(.{0,30})提升(.{0,20})(倍|點)</string>
+    <string name="regex_searchOnAttack">攻擊力(.{0,30})提升(.{0,20})(倍|點)</string>
+    <string name="regex_searchOnRecovery">回復力(.{0,30})提升(.{0,20})(倍|點)</string>
 
     <string name="a1">第二屆武術大會 猿真
 卡還OK可以打一張

@@ -81,6 +81,7 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("---ww-w-----w----w-----w-ww---", "8水"))
             , new StoneFix("1854",
                 new StoneDesktop("---lll-----l-----l-----l-----l", "7光"))
+                // 2151
         );
     }
 
