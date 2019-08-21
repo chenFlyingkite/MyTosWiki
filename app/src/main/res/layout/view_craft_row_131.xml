@@ -20,6 +20,7 @@
         <TextView
             android:id="@+id/craftSkillDesc"
             style="@style/cardText.item.6"
+            android:textIsSelectable="true"
             tools:text="1 回合內，回復 50% 生命力"/>
 
         <TextView

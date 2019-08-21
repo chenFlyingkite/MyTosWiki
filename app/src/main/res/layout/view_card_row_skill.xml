@@ -39,6 +39,7 @@
         <TextView
             android:id="@+id/cardSkillName"
             style="@style/cardText.item.4"
+            android:textIsSelectable="true"
             tools:text="技能\n名稱"/>
 
         <TextView
@@ -65,6 +66,7 @@
         <TextView
             android:id="@+id/cardSkillDesc"
             style="@style/cardText.item.10"
+            android:textIsSelectable="true"
             tools:text="技能內容"/>
     </LinearLayout>
 </LinearLayout>

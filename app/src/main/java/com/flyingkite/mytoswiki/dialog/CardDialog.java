@@ -120,7 +120,7 @@ public class CardDialog extends BaseTosDialog {
 
         if (card == null) return;
 
-        dismissWhenClick(R.id.cardImages, R.id.cardDetails, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader);
+        dismissWhenClick(R.id.cardImages, R.id.cardMark, R.id.cardEnd, R.id.cardSkill_leader_header, R.id.cardSkill_header);
         loadCardToImageView(cardIcon, card);
         loadCardToImageView(cardIcon2, card);
         loadLinkToImageView(cardImage, card.bigImage, getActivity(), R.drawable.card_background);

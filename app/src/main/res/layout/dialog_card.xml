@@ -128,6 +128,7 @@
                                 <TextView
                                     android:id="@+id/cardName"
                                     style="@style/cardText.item.6"
+                                    android:textIsSelectable="true"
                                     tools:text="水元素\n賢者莫莉"/>
                             </LinearLayout>
 
@@ -179,6 +180,7 @@
                                 <TextView
                                     android:id="@+id/cardSeries"
                                     style="@style/cardText.item.4"
+                                    android:textIsSelectable="true"
                                     tools:text="主角"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -281,6 +283,7 @@
 
                     <!-- Card basic info : skill -->
                     <LinearLayout
+                        android:id="@+id/cardSkill_leader_header"
                         android:orientation="horizontal"
                         style="@style/cardText.header.10"
                         android:padding="@dimen/t5dp"
@@ -305,6 +308,7 @@
 
                     <!-- Card basic info : skill -->
                     <LinearLayout
+                        android:id="@+id/cardSkill_header"
                         android:orientation="horizontal"
                         style="@style/cardText.header.10"
                         android:padding="@dimen/t5dp"
@@ -527,6 +531,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:textColor="@color/skyBlue"
+                                android:textIsSelectable="true"
                                 android:background="@drawable/bg_press_light_sky"
                                 tools:text="涓流的追憶 string cards battleName"/>
 
@@ -722,6 +727,7 @@
                                 android:id="@+id/cardAwkName"
                                 style="@style/cardText.item.10"
                                 android:layout_height="wrap_content"
+                                android:textIsSelectable="true"
                                 android:background="@drawable/bg_rect_green"
                                 tools:text="技能 內容 技能\n內容 技能 內容\n技能 內容 技能 內容 技能 內容 技能 內容 技能"/>
                         </LinearLayout>
@@ -742,6 +748,7 @@
                             android:id="@+id/cardDetails"
                             style="@style/cardText.header.10"
                             android:gravity="left"
+                            android:textIsSelectable="true"
                             android:layout_height="wrap_content"
                             tools:text="@string/texts_t"/>
                     </LinearLayout>

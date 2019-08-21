@@ -95,6 +95,7 @@
                             <TextView
                                 android:id="@+id/craftName"
                                 style="@style/cardText.item.5"
+                                android:textIsSelectable="true"
                                 tools:text="攻之屏息龍印"/>
                         </LinearLayout>
 
@@ -115,6 +116,7 @@
 
                             <TextView
                                 style="@style/cardText.header.6"
+                                android:textIsSelectable="true"
                                 android:text="@string/craft_charge"/>
 
                         </LinearLayout>

@@ -20,6 +20,7 @@
         <TextView
             android:id="@+id/craftLimitDetail"
             style="@style/cardText.item.8"
+            android:textIsSelectable="true"
             tools:text="適用於人類成員"/>
 
     </LinearLayout>

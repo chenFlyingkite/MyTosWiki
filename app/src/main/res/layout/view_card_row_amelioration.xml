@@ -32,6 +32,7 @@
         <TextView
             android:id="@+id/cardAmeName"
             style="@style/cardText.item.6"
+            android:textIsSelectable="true"
             tools:text="@string/cards_name"/>
     </LinearLayout>
 

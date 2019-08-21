@@ -78,17 +78,20 @@
                     android:id="@+id/help_select"
                     style="@style/sortText.rect"
                     android:textSize="@dimen/t20dp"
+                    android:textIsSelectable="true"
                     android:text="淺藍色框可選擇" />
 
                 <TextView
                     android:id="@+id/help_yellow_text"
                     style="@style/cardText.w"
+                    android:textIsSelectable="true"
                     android:text="黃色的字可以點擊"
                     android:textColor="@color/yellow" />
 
                 <TextView
                     android:id="@+id/help_blue_text"
                     style="@style/cardText.w"
+                    android:textIsSelectable="true"
                     android:text="藍色的字可以點擊"
                     android:textColor="@color/skyBlue" />
 
@@ -106,6 +109,7 @@
 
                     <TextView
                         style="@style/cardText.w"
+                        android:textIsSelectable="true"
                         android:text="移除:輕觸卡片上下滑動\n重排:長按卡片左右移動"/>
                 </LinearLayout>
 
@@ -131,7 +135,13 @@
 
                     <TextView
                         style="@style/cardText.w"
+                        android:textIsSelectable="true"
                         android:text="點選 [1] [2] [3] 可釘選網頁至首頁"/>
+
+                    <TextView
+                        style="@style/cardText.w"
+                        android:textIsSelectable="true"
+                        android:text="選取文字 : 可選部分文字,以便複製分享\n如卡片/龍刻的主動技/隊長技/卡片資訊"/>
 
                 </LinearLayout>
             </LinearLayout>
