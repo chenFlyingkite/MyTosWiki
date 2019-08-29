@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content"
                 style="@style/blackText.t2"
                 android:autoLink="all"
+                android:textIsSelectable="true"
                 tools:text="@string/stage_memo_header"/>
         </LinearLayout>
     </ScrollView>

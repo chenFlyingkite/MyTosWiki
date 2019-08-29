@@ -221,6 +221,7 @@
 
                     <TextView
                         style="@style/common_text.white"
+                        android:textIsSelectable="true"
                         android:paddingLeft="@dimen/t8dp"
                         android:textSize="@dimen/t16dp"
                         android:text="@string/skillLv_concept_detail"/>
@@ -268,6 +269,7 @@
 
                 <TextView
                     style="@style/common_text.white"
+                    android:textIsSelectable="true"
                     android:text="@string/skillLv_eat600to10"
                     android:textSize="@dimen/t16dp"/>
 

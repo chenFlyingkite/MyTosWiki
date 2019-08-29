@@ -714,5 +714,31 @@
       "name": "遺跡特許 ‧ 星族異種的恐怖",
       "icon": "0560"
     }
+  ],
+  [
+    {
+      "coin": 0,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E6%98%9F%E8%A9%A0%E4%B9%8B%E6%AD%8C%E5%A7%AC",
+      "name": "遺跡特許 ‧ 星詠之歌姬",
+      "icon": "0401"
+    },
+    {
+      "coin": 0,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E6%B5%B7%E6%B5%AA%E5%85%AB%E9%9F%B3%E7%9B%92",
+      "name": "遺跡特許 ‧ 海浪八音盒",
+      "icon": "0784"
+    },
+    {
+      "coin": 0,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E7%84%9A%E9%A2%A8%E8%87%AA%E9%B3%B4%E7%90%B4",
+      "name": "遺跡特許 ‧ 焚風自鳴琴",
+      "icon": "0787"
+    },
+    {
+      "coin": 0,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E9%A2%A8%E8%A9%A0%E9%9F%B3%E6%A8%82%E7%9B%92",
+      "name": "遺跡特許 ‧ 風詠音樂盒",
+      "icon": "0789"
+    }
   ]
 ]

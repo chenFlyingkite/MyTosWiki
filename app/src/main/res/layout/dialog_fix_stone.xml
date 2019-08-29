@@ -47,6 +47,7 @@
                     <TextView
                         android:id="@+id/fxdDetail"
                         style="@style/common_text.white"
+                        android:textIsSelectable="true"
                         android:paddingLeft="@dimen/t8dp"
                         android:textSize="@dimen/t16dp"
                         android:layout_width="@dimen/t300dp"
