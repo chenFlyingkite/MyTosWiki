@@ -12,9 +12,11 @@
     <item>
         <shape android:shape="rectangle">
             <size android:width="@dimen/t30dp"/>
-            <gradient android:startColor="#00AF"
-                      android:centerColor="#40AF"
-                      android:endColor="#F0AF"/>
+            <gradient
+                android:startColor="#00AF"
+                android:centerColor="#40AF"
+                android:endColor="#F0AF"
+                android:angle="0"/>
         </shape>
     </item>
 </selector>

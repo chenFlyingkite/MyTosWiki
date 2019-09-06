@@ -7,18 +7,33 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.os.Build;
-import androidx.core.app.NotificationCompat;
-import android.util.Log;
 
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.MainActivity;
 import com.flyingkite.mytoswiki.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-import java.util.Locale;
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 
-public class FCMMessagingService extends FirebaseMessagingService {
-    private static final String TAG = "FCMMessagingService";
+public class FCMMessagingService extends FirebaseMessagingService implements Loggable {
+
+    @Override
+    public void onNewToken(@NonNull String s) {
+        super.onNewToken(s);
+        logI("Refreshed token: \n%s", s);
+
+        // If you want to send messages to this application instance or
+        // manage this apps subscriptions on the server side, send the
+        // Instance ID token to your app server.
+        sendRegistrationToServer(s);
+    }
+
+    private void sendRegistrationToServer(String token) {
+        // Implement this method to send token to your app server.
+        CloudMessaging.setToken(token);
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage msg) {
@@ -93,9 +108,5 @@ public class FCMMessagingService extends FirebaseMessagingService {
         }
 
         nm.notify(notifId, nb.build());
-    }
-
-    private static void log(String fmt, Object... params) {
-        Log.i(TAG, "" + String.format(Locale.US, fmt, params));
     }
 }

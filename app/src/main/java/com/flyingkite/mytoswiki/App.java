@@ -47,7 +47,7 @@ public class App extends MultiDexApplication {
         strictMode();
         CrashReport.init(this, DEBUG);
         FirebaseApp.initializeApp(this);
-        RemoteConfig.init(DEBUG, R.xml.remote_config_default);
+        RemoteConfig.init(R.xml.remote_config_default);
         FabricAnswers.logAppOnCreate(null);
         TosWiki.init(this);
         //initCrashHandler();

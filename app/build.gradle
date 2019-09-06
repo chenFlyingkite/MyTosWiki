@@ -1,3 +1,7 @@
+// Beginners Tutorial
+// http://grails.asia/groovy-map-tutorial
+// http://grails.asia/groovy-each-examples
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -13,7 +17,7 @@ buildscript {
 
     dependencies {
         // For Crashlytics
-        classpath 'io.fabric.tools:gradle:1.25.4'
+        classpath 'io.fabric.tools:gradle:1.28.1'
     }
 }
 repositories {
@@ -21,12 +25,11 @@ repositories {
 }
 // Fabric -- End
 
-def googlePlayVersion = "9.8.0"
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 61
-    ext.versionName = "1.0.0.60"
+    ext.versionCode = 62
+    ext.versionName = "1.0.0.61"
     if (!createPlayApk) {
         ext.versionName = "Me"
     }
@@ -136,15 +139,15 @@ dependencies {
     // Firebase
     // https://firebase.google.com/docs/android/setup
     // https://console.firebase.google.com/project/mytoswiki/overview
-    api 'com.google.firebase:firebase-core:16.0.0'
-    api 'com.google.firebase:firebase-config:16.0.0'
-    api 'com.google.firebase:firebase-messaging:17.0.0'
+    api 'com.google.firebase:firebase-core:17.2.0'
+    api 'com.google.firebase:firebase-config:19.0.0'
+    api 'com.google.firebase:firebase-messaging:20.0.0'
 
     // Flurry Analytics
     // https://developer.yahoo.com/flurry/docs/integrateflurry/android/
 
     // Fabric Crashlytics
-    api 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+    api 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     //api 'com.github.User:Repo:Tag'
     api "com.github.chenFlyingkite:MyAndroid:a841193247"
@@ -202,12 +205,12 @@ apply plugin: 'com.google.gms.google-services'
 
 android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
-    variant.assemble.doFirst {
+    variant.getAssembleProvider().get().doFirst {
         println "[applicationVariants.all] ${variant.name}"
     }
 
     if (buildType == "release") {
-        variant.assemble.doLast {
+        variant.getAssembleProvider().get().doLast {
             variant.outputs.all { output ->
                 println "[assemble.doLast] copy" +
                     "\n    from(${output.outputFile})" +
@@ -233,6 +236,65 @@ android.applicationVariants.all { variant ->
         }
     }
 }
+
+//--
+def copyAPK(variant) {
+    // variant : ApplicationVariant
+    // https://android.googlesource.com/platform/tools/build/+/tools_r22/gradle/src/main/groovy/com/android/build/gradle/internal/api
+    description 'copy *.apk and mapping file'
+    variant.outputs.each { output ->
+        Using u = new Using(project)
+        String type = variant.name // = "debug" or "release"
+        // Move APK, E.g.
+        // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\apk\release\ActionDirector-release.apk
+        u.copy(
+            "${output.outputFile}",
+            "${rootDir}/${type}",
+            "${makeInfo.APK}"
+        )
+        if (variant.getBuildType().isMinifyEnabled()) {
+            // Move mapping, E.g.
+            // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\mapping\release\mapping.txt
+            u.copy(
+                "${variant.mappingFile}",
+                "${rootDir}/${type}",
+                "${makeInfo.MAPPING}"
+            )
+        }
+    }
+}
+
+def copyAAB(variant) {
+    String type = variant.name // = "debug" or "release"
+    // Move AAB, E.g.
+    // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\bundle\release\ActionDirector.aab
+    Using u = new Using(project)
+    u.copy(
+        "$buildDir/outputs/bundle/$type/${project.name}.aab",
+        "${rootDir}/${type}",
+        "${makeInfo.AAB}"
+    )
+}
+
+class Using {
+    private Project project
+
+    Using(Project p) {
+        project = p
+    }
+
+    Using copy(String _from, String _into, String _rename) {
+        // Object is type of org.codehaus.groovy.runtime.GStringImpl, here we take String
+        println "copy from $_from\n >   into $_into\n > rename $_rename\n"
+        project.copy {
+            from _from
+            into _into
+            rename '(.*)', _rename
+        }
+        return this
+    }
+}
+//--
 
 
 // BuildAdapter is simple listener for BuildListener

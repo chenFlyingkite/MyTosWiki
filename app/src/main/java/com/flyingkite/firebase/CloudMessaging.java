@@ -9,14 +9,14 @@ import com.google.gson.annotations.SerializedName;
 import java.io.File;
 
 public class CloudMessaging {
-    private static final FCMPref mPreference = new FCMPref();
+    private static final FCMPref pref = new FCMPref();
 
     public static String getToken() {
-        return mPreference.getFcmToken();
+        return pref.getFcmToken();
     }
 
     public static void setToken(String token) {
-        mPreference.setFcmToken(token);
+        pref.setFcmToken(token);
     }
 
     private static class FCMPref extends BasePreference {

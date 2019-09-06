@@ -1,8 +1,5 @@
 package com.flyingkite.firebase;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.XmlRes;
-
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -10,32 +7,34 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
+import java.nio.charset.Charset;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.XmlRes;
+
 public class RemoteConfig {
     private static final String TAG = "RemoteConfig";
-    private static boolean DEBUG = true;
 
-    public static void init(boolean debug, @XmlRes int xmlDefault) {
-        DEBUG = debug;
-
-        FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.getInstance();
+    public static void init(@XmlRes int xmlDefault) {
+        FirebaseRemoteConfig config = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings s = new FirebaseRemoteConfigSettings.Builder()
-                .setDeveloperModeEnabled(DEBUG).build();
-        remoteConfig.setConfigSettings(s);
-        remoteConfig.setDefaults(xmlDefault);
+                .setMinimumFetchIntervalInSeconds(0).build();
+        config.setConfigSettingsAsync(s);
+        config.setDefaults(xmlDefault);
 
         final int cacheExpireTime = 0;
 
         TicTac2.v t = new TicTac2.v();
         //printAll(); // Print them if need to peek old values
         t.tic();
-        remoteConfig.fetch(cacheExpireTime)
+        config.fetch(cacheExpireTime)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         t.tac("Remote config fetch");
                         log("RemoteConfig fetch complete, success = %s", task.isSuccessful());
                         if (task.isSuccessful()) {
-                            remoteConfig.activateFetched();
+                            config.activate();
                         }
                         printAll();
                     }
@@ -60,7 +59,15 @@ public class RemoteConfig {
 
     @NonNull
     public static String getString(RCKey key) {
-        return FirebaseRemoteConfig.getInstance().getString(key.getKey());
+        //return FirebaseRemoteConfig.getInstance().getString(key.getKey());
+        String s = FirebaseRemoteConfig.getInstance().getString(key.getKey());
+        // https://stackoverflow.com/questions/57754661/firebase-remote-config-with-chinese-characters
+        //log("s = %s", s);
+        Charset ISO_8859_1 = Charset.forName("ISO-8859-1");
+        Charset UTF_8 = Charset.forName("UTF-8");
+        String t = new String(s.getBytes(ISO_8859_1), UTF_8);
+        //log("t = %s", t);
+        return t;
     }
 
     private static void printAll() {
