@@ -126,6 +126,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialTurnEnemyAttr;
     private CheckBox sortSpecialDelay;
     private CheckBox sortSpecialClearLock;
+    private CheckBox sortSpecialAlsoHeartActive;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -498,6 +499,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
         sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
+        sortSpecialAlsoHeartActive = menu.findViewById(R.id.sortSpecialAlsoHeartActive);
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -1151,6 +1153,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialClearLock.isChecked()) {
                     accept &= find(key, R.array.cards_clear_lock_keys);
                 }
+                if (sortSpecialAlsoHeartActive.isChecked()) {
+                    key += " & " + c.skillLeaderDesc;
+                    accept &= findRegex(key, R.array.cards_also_heart_keys);
+                }
             }
             return accept;
         }
@@ -1173,6 +1179,16 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         private boolean find(String key, @ArrayRes int dataId) {
             String[] data = App.res().getStringArray(dataId);
             return find(key, data);
+        }
+
+        private boolean findRegex(String key, @ArrayRes int dataId) {
+            List<String> data = ListUtil.nonNull(App.res().getStringArray(dataId));
+            return findRegex(key, data);
+        }
+
+        private boolean findRegex(String key, List<String> data) {
+            String reg = RegexUtil.toRegexOr(data);
+            return Pattern.compile(reg).matcher(key).find();
         }
 
         private boolean find(String key, String[] data) {

@@ -314,6 +314,16 @@
                     android:text="@string/cards_extend_time"/>
 
                 <CheckBox
+                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
+                    style="@style/sortText"
+                    android:text="@string/cards_runestone_drop_rate_transfer"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAlsoHeartActive"
+                    style="@style/sortText"
+                    android:text="@string/cards_active_also_possess_heart"/>
+
+                <CheckBox
                     android:id="@+id/sortSpecialAlsoActive"
                     style="@style/sortText"
                     android:text="@string/cards_active_also_possess"/>
@@ -322,11 +332,6 @@
                     android:id="@+id/sortSpecialAlsoLeader"
                     style="@style/sortText"
                     android:text="@string/cards_leader_also_possess"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_drop_rate_transfer"/>
 
                 <View
                     style="@style/divider_h2px"/>

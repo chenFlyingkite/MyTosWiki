@@ -183,6 +183,7 @@
     <string name="cards_extend_time">移動符石時間 (延長/減少)</string>
     <string name="cards_runestone_drop_rate_transfer">符石掉落機率降至 [機率]</string>
     <!-- #1429, 伊邪那岐, Runestones also possess 50% effect of Runestones -->
+    <string name="cards_active_also_possess_heart">主動技/隊長技 - 兼具心符石效果</string>
     <string name="cards_active_also_possess">主動技 - 兼具</string>
     <string name="cards_leader_also_possess">隊長技 - 兼具</string>
     <!-- #0686, 水遊俠, The next damage received will not lead to your defeat -->
@@ -256,6 +257,9 @@
     </string-array>
     <string-array name="cards_extend_keys">
         <item>移動符石時間</item>
+    </string-array>
+    <string-array name="cards_also_heart_keys">
+        <item>兼具(.*)心符石效果</item>
     </string-array>
     <string-array name="cards_also_keys">
         <!-- #433 #223 #898 #906 #981 兼具隊長技能-->
@@ -502,15 +506,16 @@
     <!-- #246, 點該色有一對 -->
     <string name="craft_9_bubble">鏡像龍丸</string>
     <!-- Keys -->
-    <string name="craft_1_key_pattern">龍紋</string>
-    <string name="craft_2_key_seal">龍印</string>
-    <string name="craft_3_key_spell">龍咒</string>
-    <string name="craft_4_key_amulet">龍符</string>
-    <string name="craft_5_key_jasper">龍玉</string>
-    <string name="craft_6_key_blade">龍刃</string>
-    <string name="craft_7_key_opal">龍璃</string>
-    <string name="craft_8_key_chain">龍結</string>
-    <string name="craft_9_key_bubble">龍丸</string>
+    <string name="craft_01_key_pattern">龍紋</string>
+    <string name="craft_02_key_seal">龍印</string>
+    <string name="craft_03_key_spell">龍咒</string>
+    <string name="craft_04_key_amulet">龍符</string>
+    <string name="craft_05_key_jasper">龍玉</string>
+    <string name="craft_06_key_blade">龍刃</string>
+    <string name="craft_07_key_opal">龍璃</string>
+    <string name="craft_08_key_chain">龍結</string>
+    <string name="craft_09_key_bubble">龍丸</string>
+    <string name="craft_10_key_bubble">龍弦</string>
     <string name="craft_no_limit">沒有限制</string>
     <string name="cards_craft_select">篩選一般龍刻</string>
     <string name="craft_attr">適用卡片屬性</string>
@@ -526,14 +531,14 @@
     <string name="craft_card_sample">例如搜尋 : (水|火|神族|人類|)</string>
     <string name="craft_stone_sample">例如搜尋 : 轉化為(水|水強化|火|火強化|) 符石</string>
     <string-array name="craft_common_keys_mode">
-        <item>@string/craft_1_key_pattern</item>
-        <item>@string/craft_2_key_seal</item>
-        <item>@string/craft_3_key_spell</item>
-        <item>@string/craft_4_key_amulet</item>
-        <item>@string/craft_5_key_jasper</item>
-        <item>@string/craft_6_key_blade</item>
-        <item>@string/craft_7_key_opal</item>
-        <item>@string/craft_8_key_chain</item>
+        <item>@string/craft_01_key_pattern</item>
+        <item>@string/craft_02_key_seal</item>
+        <item>@string/craft_03_key_spell</item>
+        <item>@string/craft_04_key_amulet</item>
+        <item>@string/craft_05_key_jasper</item>
+        <item>@string/craft_06_key_blade</item>
+        <item>@string/craft_07_key_opal</item>
+        <item>@string/craft_08_key_chain</item>
     </string-array>
     <string-array name="craft_common_keys_attr">
         <item>@string/craft_no_limit</item>
@@ -753,6 +758,7 @@
     <string name="card_series_saint_seiya">聖鬥士星矢</string>
     <string name="card_series_primal_deities">上古諸神</string>
     <string name="card_series_giant_light">光之巨人、超人</string>
+    <string name="card_series_virtual_singers">虛擬歌手</string>
 
 
     <string name="tos_event_title">神魔之塔活動表</string>

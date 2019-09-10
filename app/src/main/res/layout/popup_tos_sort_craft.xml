@@ -42,40 +42,44 @@
 
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_1_key_pattern"
+                    android:tag="@string/craft_01_key_pattern"
                     android:src="@drawable/craft_001"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_2_key_seal"
+                    android:tag="@string/craft_02_key_seal"
                     android:src="@drawable/craft_002"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_3_key_spell"
+                    android:tag="@string/craft_03_key_spell"
                     android:src="@drawable/craft_003"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_4_key_amulet"
+                    android:tag="@string/craft_04_key_amulet"
                     android:src="@drawable/craft_004"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_5_key_jasper"
+                    android:tag="@string/craft_05_key_jasper"
                     android:src="@drawable/craft_005"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_6_key_blade"
+                    android:tag="@string/craft_06_key_blade"
                     android:src="@drawable/craft_006"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_7_key_opal"
+                    android:tag="@string/craft_07_key_opal"
                     android:src="@drawable/craft_007"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_8_key_chain"
+                    android:tag="@string/craft_08_key_chain"
                     android:src="@drawable/craft_008"/>
                 <ImageView
                     style="@style/sortIcon"
-                    android:tag="@string/craft_9_key_bubble"
+                    android:tag="@string/craft_09_key_bubble"
                     android:src="@drawable/craft_009"/>
+                <ImageView
+                    style="@style/sortIcon"
+                    android:tag="@string/craft_10_key_bubble"
+                    android:src="@drawable/craft_010"/>
             </GridLayout>
 
             <!-- 123星 -->

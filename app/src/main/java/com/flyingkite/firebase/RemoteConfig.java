@@ -19,8 +19,8 @@ public class RemoteConfig {
         FirebaseRemoteConfig config = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings s = new FirebaseRemoteConfigSettings.Builder()
                 .setMinimumFetchIntervalInSeconds(0).build();
-        config.setConfigSettingsAsync(s);
         config.setDefaults(xmlDefault);
+        config.setConfigSettingsAsync(s);
 
         final int cacheExpireTime = 0;
 

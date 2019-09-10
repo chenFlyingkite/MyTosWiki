@@ -11131,5 +11131,837 @@
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/00/C306.png/revision/latest/scale-to-width-down/120?cb\u003d20190506024802\u0026path-prefix\u003dzh",
       "iconKey": "C306.png"
     }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 10%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0307",
+    "name": "攻之炮擊龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%82%AE%E6%93%8A%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dd/C307.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210301\u0026path-prefix\u003dzh",
+      "iconKey": "C307.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0308",
+    "name": "漩之屏息龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/06/C308.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210302\u0026path-prefix\u003dzh",
+      "iconKey": "C308.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0309",
+    "name": "煉之屏息龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4d/C309.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210302\u0026path-prefix\u003dzh",
+      "iconKey": "C309.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0310",
+    "name": "森之屏息龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3e/C310.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210303\u0026path-prefix\u003dzh",
+      "iconKey": "C310.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，光屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0311",
+    "name": "耀之屏息龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/02/C311.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210303\u0026path-prefix\u003dzh",
+      "iconKey": "C311.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，暗屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0312",
+    "name": "影之屏息龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E5%B1%8F%E6%81%AF%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/65/C312.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210304\u0026path-prefix\u003dzh",
+      "iconKey": "C312.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 10%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，對全體敵人造成 25000 點無屬性傷害"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0313",
+    "name": "攻之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/49/C313.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210323\u0026path-prefix\u003dzh",
+      "iconKey": "C313.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0314",
+    "name": "漩之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C314.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210324\u0026path-prefix\u003dzh",
+      "iconKey": "C314.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0315",
+    "name": "煉之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6f/C315.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210324\u0026path-prefix\u003dzh",
+      "iconKey": "C315.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0316",
+    "name": "森之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0c/C316.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210326\u0026path-prefix\u003dzh",
+      "iconKey": "C316.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，光屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0317",
+    "name": "耀之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/08/C317.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210329\u0026path-prefix\u003dzh",
+      "iconKey": "C317.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，暗屬性成員的攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍回復力提升 30%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0318",
+    "name": "影之狂暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E7%8B%82%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/60/C318.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210329\u0026path-prefix\u003dzh",
+      "iconKey": "C318.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避木屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0319",
+    "name": "漩之機暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C319.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210307\u0026path-prefix\u003dzh",
+      "iconKey": "C319.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避水屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0320",
+    "name": "煉之機暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9f/C320.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210308\u0026path-prefix\u003dzh",
+      "iconKey": "C320.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個木成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0321",
+    "name": "森之機暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0a/C321.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210308\u0026path-prefix\u003dzh",
+      "iconKey": "C321.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為光符石"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0322",
+    "name": "耀之直流龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E7%9B%B4%E6%B5%81%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fd/C322.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210309\u0026path-prefix\u003dzh",
+      "iconKey": "C322.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0323",
+    "name": "影之機暴龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E6%A9%9F%E6%9A%B4%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/eb/C323.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210309\u0026path-prefix\u003dzh",
+      "iconKey": "C323.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避木屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於水屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0324",
+    "name": "漩之靈巧龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%BC%A9%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ee/C324.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210330\u0026path-prefix\u003dzh",
+      "iconKey": "C324.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，迴避水屬性敵人的攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於火屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0325",
+    "name": "煉之靈巧龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E4%B9%8B%E9%9D%88%E5%B7%A7%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c2/C325.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210331\u0026path-prefix\u003dzh",
+      "iconKey": "C325.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個木成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於木屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0326",
+    "name": "森之越時龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e3/C326.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210331\u0026path-prefix\u003dzh",
+      "iconKey": "C326.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "完成龍刻脈動後，隨機把 2 直行的符石轉化為光符石"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於光屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0327",
+    "name": "耀之威嚇龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E5%A8%81%E5%9A%87%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/0e/C327.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210350\u0026path-prefix\u003dzh",
+      "iconKey": "C327.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "適用於暗屬性成員",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0328",
+    "name": "影之越時龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%BD%B1%E4%B9%8B%E8%B6%8A%E6%99%82%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f5/C328.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210350\u0026path-prefix\u003dzh",
+      "iconKey": "C328.png"
+    }
+  },
+  {
+    "rarity": 1,
+    "level": 1,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 10%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0329",
+    "name": "攻之玲瓏龍弦 I",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%BC%A6_I",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/48/C329.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210340\u0026path-prefix\u003dzh",
+      "iconKey": "C329.png"
+    }
+  },
+  {
+    "rarity": 1,
+    "level": 1,
+    "mode": "節奏龍弦",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 10%"
+      }
+    ],
+    "extraSkill": [],
+    "attrLimit": "沒有限制",
+    "raceLimit": "沒有限制",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "",
+    "upAttack": "",
+    "upRecovery": "",
+    "idNorm": "0330",
+    "name": "攻之玲瓏龍弦 II",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%94%BB%E4%B9%8B%E7%8E%B2%E7%93%8F%E9%BE%8D%E5%BC%A6_II",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8d/C330.png/revision/latest/scale-to-width-down/120?cb\u003d20190909210351\u0026path-prefix\u003dzh",
+      "iconKey": "C330.png"
+    }
   }
 ]

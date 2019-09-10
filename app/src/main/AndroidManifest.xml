@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/app_icon"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="userPortrait"

@@ -12360,5 +12360,299 @@
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2c/C7042.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
       "iconKey": "C7042.png"
     }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，機械族攻擊力提升 1.1 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "0",
+    "upRecovery": "+4%",
+    "idNorm": "9001",
+    "name": "時計龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%99%82%E8%A8%88%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/bb/C9001.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200841\u0026path-prefix\u003dzh",
+      "iconKey": "C9001.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，機械族攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 1.39 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "+4%",
+    "upRecovery": "+4%",
+    "idNorm": "9002",
+    "name": "愛恨時計龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%84%9B%E6%81%A8%E6%99%82%E8%A8%88%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/29/C9002.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200843\u0026path-prefix\u003dzh",
+      "iconKey": "C9002.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 10 粒或以上符石，自身攻擊力提升 1.1 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "0",
+    "upRecovery": "+4%",
+    "idNorm": "9003",
+    "name": "林檎龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9E%97%E6%AA%8E%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6b/C9003.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200846\u0026path-prefix\u003dzh",
+      "iconKey": "C9003.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 10 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 1.39 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "+4%",
+    "upRecovery": "+4%",
+    "idNorm": "9004",
+    "name": "結晶林檎龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%B5%90%E6%99%B6%E6%9E%97%E6%AA%8E%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f4/C9004.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200847\u0026path-prefix\u003dzh",
+      "iconKey": "C9004.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的光符石，機械族攻擊力提升 1.2 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "0",
+    "upRecovery": "+4%",
+    "idNorm": "9005",
+    "name": "蝶飾龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9D%B6%E9%A3%BE%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8f/C9005.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200850\u0026path-prefix\u003dzh",
+      "iconKey": "C9005.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 39000 點生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，機械族成員的攻擊力提升 39%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的光符石，機械族攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 1.39 倍"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+4%",
+    "upAttack": "+4%",
+    "upRecovery": "+4%",
+    "idNorm": "9006",
+    "name": "雙生蝶飾龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9B%99%E7%94%9F%E8%9D%B6%E9%A3%BE%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6c/C9006.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200851\u0026path-prefix\u003dzh",
+      "iconKey": "C9006.png"
+    }
   }
 ]

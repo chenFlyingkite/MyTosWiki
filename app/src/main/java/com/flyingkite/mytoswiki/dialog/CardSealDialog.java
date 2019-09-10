@@ -31,6 +31,7 @@ import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
+import com.flyingkite.mytoswiki.data.seal.VirtualSingers;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.SealCardAdapter;
 import com.flyingkite.mytoswiki.library.SealSeriesAdapter;
@@ -68,6 +69,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_virtual_singers,   new VirtualSingers()));
         sealSeries.add(new SealItem(R.string.card_series_giant_light,       new GiantLight()));
         sealSeries.add(new SealItem(R.string.card_series_primal_deities,    new PrimalDeities()));
         sealSeries.add(new SealItem(R.string.card_series_saint_seiya,       new SaintSeiya()));
