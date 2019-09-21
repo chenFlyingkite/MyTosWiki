@@ -154,6 +154,7 @@ public class CraftItemDialog extends BaseTosDialog {
     private void setCraftEffectRow(int[] rowIds, List<CraftSkill> skills) {
         int n = skills == null ? 0 : skills.size();
         setVisibilities(View.GONE, rowIds);
+        n = Math.min(n, rowIds.length);
         for (int i = 0; i < n; i++) {
             CraftSkill cs = skills.get(i);
             setEffect(rowIds[i], cs.level + "", cs.detail, cs.score + "");

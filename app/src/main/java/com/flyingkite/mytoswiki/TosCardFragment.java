@@ -16,6 +16,7 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.library.widget.SimpleItemTouchHelper;
 import com.flyingkite.mytoswiki.data.CardFavor;
@@ -46,6 +47,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 import androidx.annotation.ArrayRes;
 import androidx.annotation.IdRes;
@@ -811,6 +813,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         private Pattern raceStoneRegexAttr;
         private Pattern raceStoneRegexRace;
 
+        private boolean showRegexFail = false;
+
         @Override
         public void onPrepare() {
             prepareShow();
@@ -1008,8 +1012,19 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             target = target.replaceAll("[ \n]", "");
             boolean res;
             if (searchRegex.isChecked()) {
-                Pattern p = Pattern.compile(target);
-                res = p.matcher(key).find();
+                try {
+                    Pattern p = Pattern.compile(target);
+                    res = p.matcher(key).find();
+                } catch (PatternSyntaxException e) {
+                    res = key.contains(target);
+                    e.printStackTrace();
+                    if (!showRegexFail) {
+                        showRegexFail = true;
+                        ThreadUtil.runOnUiThread(() -> {
+                            App.showToast(e.getMessage());
+                        });
+                    }
+                }
             } else {
                 res = key.contains(target);
             }
