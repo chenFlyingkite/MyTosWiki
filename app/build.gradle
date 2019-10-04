@@ -28,7 +28,7 @@ repositories {
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 65
+    ext.versionCode = 66
     ext.versionName = "1.0.0.${versionCode-1}"
     if (!createPlayApk) {
         ext.versionName = "Me"
@@ -69,8 +69,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     flavorDimensions "default"
 
@@ -140,7 +140,7 @@ dependencies {
     // https://firebase.google.com/docs/android/setup
     // https://console.firebase.google.com/project/mytoswiki/overview
     api 'com.google.firebase:firebase-core:17.2.0'
-    api 'com.google.firebase:firebase-config:19.0.0'
+    api 'com.google.firebase:firebase-config:19.0.2'
     api 'com.google.firebase:firebase-messaging:20.0.0'
 
     // Flurry Analytics

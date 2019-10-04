@@ -7,8 +7,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
-import java.nio.charset.Charset;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.XmlRes;
 
@@ -19,7 +17,7 @@ public class RemoteConfig {
         FirebaseRemoteConfig config = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings s = new FirebaseRemoteConfigSettings.Builder()
                 .setMinimumFetchIntervalInSeconds(0).build();
-        config.setDefaults(xmlDefault);
+        config.setDefaultsAsync(xmlDefault);
         config.setConfigSettingsAsync(s);
 
         final int cacheExpireTime = 0;
@@ -59,15 +57,7 @@ public class RemoteConfig {
 
     @NonNull
     public static String getString(RCKey key) {
-        //return FirebaseRemoteConfig.getInstance().getString(key.getKey());
-        String s = FirebaseRemoteConfig.getInstance().getString(key.getKey());
-        // https://stackoverflow.com/questions/57754661/firebase-remote-config-with-chinese-characters
-        //log("s = %s", s);
-        Charset ISO_8859_1 = Charset.forName("ISO-8859-1");
-        Charset UTF_8 = Charset.forName("UTF-8");
-        String t = new String(s.getBytes(ISO_8859_1), UTF_8);
-        //log("t = %s", t);
-        return t;
+        return FirebaseRemoteConfig.getInstance().getString(key.getKey());
     }
 
     private static void printAll() {
