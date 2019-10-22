@@ -1,6 +1,7 @@
 package com.flyingkite.mytoswiki.library;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,25 @@ public class CardAdapter
     private TosSelection<TosCard> selection;
     private List<String> selectedMessage = new ArrayList<>();
     private AsyncTask<Void, Void, Void> selectTask;
+    private boolean showPercentLine = true;
+    private int[] colorPercent;
+
+    public CardAdapter() {
+        prepareColorPercent();
+    }
+
+    private void prepareColorPercent() {
+        //       black, brown, red, orange, yellow,
+        //       green, blue, purple, grey, white
+        String[] codes = {
+                "#000000", "#B97A57", "#FF0000", "#FF8800", "#FFC90E",
+                "#008800", "#0000FF", "#FF00FF", "#888888", "#BBBBBB"};
+        int[] colors = new int[codes.length];
+        for (int i = 0; i < codes.length; i++) {
+            colors[i] = Color.parseColor(codes[i]);
+        }
+        colorPercent = colors;
+    }
 
     @Override
     public boolean hasSelection() {
@@ -109,6 +129,25 @@ public class CardAdapter
             msg = selectedMessage.get(position);
         }
         h.setCard(c, name(c), msg);
+        // Setup right line color
+        if (showPercentLine && getItemCount() > 9) {
+            setColorPercent(h.right, position, getItemCount());
+        } else {
+            h.right.setText("");
+            h.right.setBackgroundColor(Color.TRANSPARENT);
+        }
+    }
+
+    private void setColorPercent(TextView view, int position, int count) {
+        int thiz = colorPercent.length * (position + 0) / count;
+        int next = colorPercent.length * (position + 1) / count;
+        if (thiz != next) {
+            view.setText(next + "");
+            view.setBackgroundColor(colorPercent[thiz]);
+        } else {
+            view.setText("");
+            view.setBackgroundColor(Color.TRANSPARENT);
+        }
     }
 
     @Override
@@ -120,12 +159,14 @@ public class CardAdapter
         private ImageView thumb;
         private TextView text;
         private TextView message;
+        private TextView right;
 
         public CardVH(View v) {
             super(v);
             thumb = v.findViewById(R.id.tiImg);
             text = v.findViewById(R.id.tiText);
             message = v.findViewById(R.id.tiMessage);
+            right = v.findViewById(R.id.tiRightLine);
         }
 
         public void setCard(TosCard c, String name, String msg) {

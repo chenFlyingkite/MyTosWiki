@@ -11,8 +11,19 @@
         android:id="@+id/tiImg"
         android:padding="@dimen/t2dp"
         app:layout_widthPercent="100%"
-        android:src="@drawable/unknown_card"
-        app:layout_aspectRatio="100%"/>
+        app:layout_aspectRatio="100%"
+        android:src="@drawable/unknown_card"/>
+
+    <TextView
+        android:id="@+id/tiRightLine"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        tools:background="#a00"
+        tools:text="5"
+        android:textColor="#fff"
+        android:textStyle="bold|italic"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/t20dp"/>
 
     <TextView
         android:id="@+id/tiText"

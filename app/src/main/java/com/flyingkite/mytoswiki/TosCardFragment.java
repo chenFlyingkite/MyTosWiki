@@ -108,6 +108,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialNonAttribute;
     private CheckBox sortSpecialRegardlessDefense;
     private CheckBox sortSpecialRegardlessAttribute;
+    private CheckBox sortSpecialRegardlessInitialShield;
     private CheckBox sortSpecialClearAllEffect;
     private CheckBox sortSpecialStayUntil;
     private CheckBox sortSpecialStayUntilIf;
@@ -129,6 +130,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialDelay;
     private CheckBox sortSpecialClearLock;
     private CheckBox sortSpecialAlsoHeartActive;
+    private CheckBox sortSpecialAttackBonusCombo;
+    private CheckBox sortSpecialAddComboCount;
+    private CheckBox sortSpecialSkillCdMinus;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -481,6 +485,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialNonAttribute = menu.findViewById(R.id.sortSpecialNonAttribute);
         sortSpecialRegardlessDefense = menu.findViewById(R.id.sortSpecialRegardlessDefense);
         sortSpecialRegardlessAttribute = menu.findViewById(R.id.sortSpecialRegardlessAttribute);
+        sortSpecialRegardlessInitialShield = menu.findViewById(R.id.sortSpecialRegardlessInitialShield);
         sortSpecialClearAllEffect = menu.findViewById(R.id.sortSpecialClearAllEffect);
         sortSpecialStayUntil = menu.findViewById(R.id.sortSpecialStayUntil);
         sortSpecialStayUntilIf = menu.findViewById(R.id.sortSpecialStayUntilIf);
@@ -502,6 +507,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
         sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
         sortSpecialAlsoHeartActive = menu.findViewById(R.id.sortSpecialAlsoHeartActive);
+        sortSpecialAttackBonusCombo = menu.findViewById(R.id.sortSpecialAttackBonusCombo);
+        sortSpecialAddComboCount = menu.findViewById(R.id.sortSpecialAddComboCount);
+        sortSpecialSkillCdMinus = menu.findViewById(R.id.sortSpecialSkillCdMinus);
+
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }
@@ -1108,6 +1117,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialRegardlessAttribute.isChecked()) {
                     accept &= find(key, R.array.cards_regardless_of_attribute_keys);
                 }
+                if (sortSpecialRegardlessInitialShield.isChecked()) {
+                    accept &= find(key, R.array.cards_regardless_of_initial_shield_keys);
+                }
                 if (sortSpecialClearAllEffect.isChecked()) {
                     accept &= find(key, R.array.cards_clear_all_effect_keys);
                 }
@@ -1171,6 +1183,15 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialAlsoHeartActive.isChecked()) {
                     key += " & " + c.skillLeaderDesc;
                     accept &= findRegex(key, R.array.cards_also_heart_keys);
+                }
+                if (sortSpecialAttackBonusCombo.isChecked()) {
+                    accept &= find(key, R.array.cards_attack_bonus_combo_keys);
+                }
+                if (sortSpecialAddComboCount.isChecked()) {
+                    accept &= find(key, R.array.cards_add_combo_count_keys);
+                }
+                if (sortSpecialSkillCdMinus.isChecked()) {
+                    accept &= find(key, R.array.cards_skill_cd_minus_keys);
                 }
             }
             return accept;
@@ -1252,9 +1273,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         @Override
         public List<Integer> sort(@NonNull List<Integer> result) {
             Comparator<Integer> cmp;
-            cmp = getCommonComparator();
-            if (cmp == null) {
+            if (isSortCassandra()) {
                 cmp = getCassandraComparator();
+            } else {
+                cmp = getCommonComparator();
             }
 
             // Apply the comparator on result
@@ -1267,11 +1289,17 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         @Override
         public List<String> getMessages(List<Integer> result) {
             List<String> msgs;
-            msgs = getCommonMessages(result);
-            if (msgs == null) {
+            if (isSortCassandra()) {
                 msgs = getCassandraMessages(result);
+            } else {
+                msgs = getCommonMessages(result);
             }
             return msgs;
+        }
+
+        private boolean isSortCassandra() {
+            int id = sortCassandra.getCheckedRadioButtonId();
+            return id > 0 && id != R.id.sortCassandraNo;
         }
 
         private Comparator<Integer> getCassandraComparator() {
@@ -1355,6 +1383,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                         dsc = false;
                         v1 = ListUtil.indexOf(commonRace, c1.race);
                         v2 = ListUtil.indexOf(commonRace, c2.race);
+                        break;
+                    case R.id.sortCommonMaxTu:
+                        v1 = c1.maxTUAllLevel;
+                        v2 = c2.maxTUAllLevel;
                         break;
                 }
 
@@ -1490,6 +1522,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                             name = cardLib.adapter.name(c);
                         }
                         msg = name + "\n" + c.race;
+                        break;
+                    case R.id.sortCommonMaxTu:
+                        msg = String.valueOf(c.maxTUAllLevel);
                         break;
                     default:
                 }

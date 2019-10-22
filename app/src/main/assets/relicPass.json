@@ -345,6 +345,18 @@
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E7%9C%BE%E9%AD%94%E7%9A%84%E5%B8%9D%E5%90%9B",
       "name": "遺跡特許 ‧ 眾魔的帝君",
       "icon": "1100"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E4%BA%99%E5%8F%A4%E6%B5%81%E5%AD%98%E7%9A%84%E5%8A%9B%E9%87%8F",
+      "name": "遺跡特許 ‧ 亙古流存的力量",
+      "icon": "1134"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E8%A1%8C%E4%BD%BF%E6%AD%A3%E7%BE%A9%E7%9A%84%E6%87%B2%E8%99%95",
+      "name": "遺跡特許 ‧ 行使正義的懲處",
+      "icon": "1164"
     }
   ],
   [
@@ -713,6 +725,66 @@
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E6%98%9F%E6%97%8F%E7%95%B0%E7%A8%AE%E7%9A%84%E6%81%90%E6%80%96",
       "name": "遺跡特許 ‧ 星族異種的恐怖",
       "icon": "0560"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B8%B6%E4%BE%86%E6%AD%BB%E4%BA%A1%E7%9A%84%E9%A8%8E%E5%A3%AB_%E2%80%A7_%E6%B0%B4",
+      "name": "遺跡特許 ‧ 帶來死亡的騎士 ‧ 水",
+      "icon": "1051"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B8%B6%E4%BE%86%E6%AD%BB%E4%BA%A1%E7%9A%84%E9%A8%8E%E5%A3%AB_%E2%80%A7_%E7%81%AB",
+      "name": "遺跡特許 ‧ 帶來死亡的騎士 ‧ 火",
+      "icon": "1052"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B8%B6%E4%BE%86%E6%AD%BB%E4%BA%A1%E7%9A%84%E9%A8%8E%E5%A3%AB_%E2%80%A7_%E6%9C%A8",
+      "name": "遺跡特許 ‧ 帶來死亡的騎士 ‧ 木",
+      "icon": "1053"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B8%B6%E4%BE%86%E6%AD%BB%E4%BA%A1%E7%9A%84%E9%A8%8E%E5%A3%AB_%E2%80%A7_%E5%85%89",
+      "name": "遺跡特許 ‧ 帶來死亡的騎士 ‧ 光",
+      "icon": "1054"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B8%B6%E4%BE%86%E6%AD%BB%E4%BA%A1%E7%9A%84%E9%A8%8E%E5%A3%AB_%E2%80%A7_%E6%9A%97",
+      "name": "遺跡特許 ‧ 帶來死亡的騎士 ‧ 暗",
+      "icon": "1055"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E9%82%80%E7%B4%84%E4%BA%BA%E7%9A%84%E7%9B%AE%E7%9A%84_%E2%80%A7_%E6%B0%B4",
+      "name": "遺跡特許 ‧ 邀約人的目的 ‧ 水",
+      "icon": "1121"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E6%87%89%E7%B4%84%E7%9A%84%E9%A2%A8%E9%9A%AA_%E2%80%A7_%E7%81%AB",
+      "name": "遺跡特許 ‧ 應約的風險 ‧ 火",
+      "icon": "1122"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%B0%8B%E6%89%BE%E9%82%80%E7%B4%84%E4%B9%8B%E4%BA%BA_%E2%80%A7_%E6%9C%A8",
+      "name": "遺跡特許 ‧ 尋找邀約之人 ‧ 木",
+      "icon": "1123"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E9%9B%A2%E7%9B%AE%E7%9A%84%E5%9C%B0%E4%B8%8D%E9%81%A0_%E2%80%A7_%E5%85%89",
+      "name": "遺跡特許 ‧ 離目的地不遠 ‧ 光",
+      "icon": "1124"
+    },
+    {
+      "coin": 200000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E8%88%87%E9%82%80%E7%B4%84%E4%BA%BA%E6%9C%83%E9%9D%A2_%E2%80%A7_%E6%9A%97",
+      "name": "遺跡特許 ‧ 與邀約人會面 ‧ 暗",
+      "icon": "1125"
     }
   ],
   [

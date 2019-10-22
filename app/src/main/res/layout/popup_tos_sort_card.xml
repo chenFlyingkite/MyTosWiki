@@ -91,6 +91,10 @@
                     android:id="@+id/sortCommonRace"
                     style="@style/sortRadio"
                     android:text="@string/cards_common_race"/>
+                <RadioButton
+                    android:id="@+id/sortCommonMaxTu"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_maxTuLv"/>
             </RadioGroup>
 
             <LinearLayout
@@ -291,6 +295,21 @@
                     android:text="@string/cards_freemove"/>
 
                 <CheckBox
+                    android:id="@+id/sortSpecialAttackBonusCombo"
+                    style="@style/sortText"
+                    android:text="@string/cards_attack_bonus_combo"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialAddComboCount"
+                    style="@style/sortText"
+                    android:text="@string/cards_add_combo_count"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialSkillCdMinus"
+                    style="@style/sortText"
+                    android:text="@string/cards_skill_cd_minus"/>
+
+                <CheckBox
                     android:id="@+id/sortSpecialKeep"
                     style="@style/sortText"
                     android:text="@string/cards_keep"/>
@@ -388,6 +407,11 @@
                     android:id="@+id/sortSpecialRegardlessAttribute"
                     style="@style/sortText"
                     android:text="@string/cards_regardless_of_attribute"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialRegardlessInitialShield"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_initial_shield"/>
 
                 <View
                     style="@style/divider_h2px"/>

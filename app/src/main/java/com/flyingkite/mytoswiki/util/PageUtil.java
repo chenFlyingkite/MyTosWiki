@@ -144,7 +144,10 @@ public interface PageUtil extends Loggable, ViewUtil {
             }
         }
 
-        return getActivity().findViewById(id);
+        if (getActivity() != null) {
+            return getActivity().findViewById(id);
+        }
+        return null;
     }
 
     default String decodeURL(String s) {

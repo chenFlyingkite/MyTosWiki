@@ -240,6 +240,11 @@
          #2015, 伽利略, Release the locked Skills of all Machinas.
      -->
     <string name="cards_clear_lock">解除封鎖技能 / 技能不會被鎖</string>
+    <string name="cards_attack_bonus_combo">Combo 時攻擊力提升</string>
+    <string name="cards_add_combo_count">Combo 數目增加</string>
+    <string name="cards_regardless_of_initial_shield">無視攻前盾</string>
+    <string name="cards_skill_cd_minus">技能 CD 減少</string>
+
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
         <item>可任意移動符石</item>
@@ -425,6 +430,22 @@
     <string-array name="cards_clear_lock_keys">
         <item>封鎖</item>
     </string-array>
+    <string-array name="cards_attack_bonus_combo_keys">
+        <!-- 連擊 (Combo) 時攻擊力(|大幅)提升 -->
+        <item>連擊 (Combo) 時攻擊力</item>
+    </string-array>
+    <string-array name="cards_add_combo_count_keys">
+        <!-- 連擊 (Combo) 數目增加 -->
+        <item>數目增加</item>
+    </string-array>
+    <string-array name="cards_regardless_of_initial_shield_keys">
+        <item>攻前盾</item>
+    </string-array>
+    <string-array name="cards_skill_cd_minus_keys">
+        <item>技能 CD 減少</item>
+    </string-array>
+
+
 
     <string name="cards_hide2">顯示卡片設定</string>
     <string name="cards_hide">不顯示卡片</string>
@@ -759,6 +780,7 @@
     <string name="card_series_primal_deities">上古諸神</string>
     <string name="card_series_giant_light">光之巨人、超人</string>
     <string name="card_series_virtual_singers">虛擬歌手</string>
+    <string name="card_series_minerelves">魔幻寶石</string>
 
 
     <string name="tos_event_title">神魔之塔活動表</string>
