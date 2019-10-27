@@ -309,6 +309,7 @@
     <string-array name="cards_damage_to_hp_keys">
         <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
         <item>轉化為我方生命力</item>
+        <item>轉化為生命力</item>
     </string-array>
     <string-array name="cards_regardless_of_defense_keys">
         <!-- #1575, 八神庵  #1965, 瑟雷夫-->
