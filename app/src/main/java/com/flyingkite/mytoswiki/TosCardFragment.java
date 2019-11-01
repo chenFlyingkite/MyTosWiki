@@ -387,7 +387,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private void initShareImage(View parent) {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
             View view = cardsRecycler;
-            //File folder = Environment.getExternalStoragePublicDirectory()
             String name = ShareHelper.cacheName("1.png");
             LogE("Save to %s", name);
 
@@ -1206,6 +1205,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private String joinKey(String key, TosCard c) {
+            // Skill changes
+            StringBuilder skills = new StringBuilder("");
+            for (int i = 0; i < c.skillChange.size(); i++) {
+                SkillLite sl = c.skillChange.get(i);
+                if (i > 0) {
+                    skills.append(" & ");
+                }
+                skills.append(sl.effect);
+            }
+            key += " & " + skills.toString();
+            key += " & " + c.skillAwkName;
+
             if (sortSpecialAddDetail.isSelected()) {
                 key += " & " + c.cardDetails;
             }

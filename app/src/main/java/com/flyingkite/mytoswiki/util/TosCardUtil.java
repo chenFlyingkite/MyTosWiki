@@ -59,7 +59,7 @@ public class TosCardUtil {
     /** 存音石 */
     public static boolean isTunestone(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 8046, 8066);
+        return MathUtil.isInRange(idNorm, 8046, 9000);
     }
 
     /** 72 柱魔神 */
