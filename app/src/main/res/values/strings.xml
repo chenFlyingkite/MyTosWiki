@@ -45,6 +45,8 @@
     <string name="clear">清除</string>
     <string name="cleared">已清除完成</string>
     <string name="selectedSearch">特選搜尋</string>
+    <string name="cards_show">顯示項目</string>
+    <string name="cards_attack_formula">卡片攻擊力計算式</string>
 
     <string name="cards_n_card">%d 張</string>
     <string name="cards_selection_kind">%d / %d 種卡片</string>
@@ -140,10 +142,10 @@
     <string name="cards_runestone_light_enchanted">光強化符石</string>
     <string name="cards_runestone_darks_enchanted">暗強化符石</string>
     <string name="cards_runestone_heart_enchanted">心強化符石</string>
-    <string name="cards_Cassandra">卡珊德拉(水巫)技能: 滿等卡\n3.5x回復力+攻擊力 (露西比較好用 #1955)</string>
+    <string name="cards_Cassandra">#1046 卡珊德拉(水巫) (水人7星)\n3.5x回復力+攻擊力\n(露西比較好用 #1955)</string>
+    <string name="cards_Jade">#2221 翡翠 (木妖6星)\n妖精 = 3x回復力+攻擊力</string>
     <string name="cards_no">無</string>
-    <string name="cards_Cassandra_attack">攻擊力</string>
-    <string name="cards_Cassandra_attack_ratio">攻擊倍率</string>
+    <string name="cards_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
     <string name="cards_common">常用排序 (^ = 滿昇華, # = 滿等滿技)</string>
     <string name="cards_HP">生命力</string>

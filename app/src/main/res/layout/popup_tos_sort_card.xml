@@ -51,6 +51,9 @@
                 android:id="@+id/sortStar"
                 layout="@layout/grid_star_8"/>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <TextView
                 android:id="@+id/sortCommonTitle"
                 style="@style/sortTitle"
@@ -97,6 +100,9 @@
                     android:text="@string/cards_maxTuLv"/>
             </RadioGroup>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,6 +117,7 @@
                     android:paddingLeft="@dimen/t5dp"
                     android:text="@string/cards_add_detail2"/>
             </LinearLayout>
+
             <GridLayout
                 android:id="@+id/sortRunestone"
                 android:layout_width="wrap_content"
@@ -167,6 +174,9 @@
                     android:tag="@string/cards_attr_heart_enchanted"
                     android:src="@drawable/s_i026"/>
             </GridLayout>
+
+            <View
+                style="@style/divider_h2px"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -245,27 +255,64 @@
                 </GridLayout>
             </LinearLayout>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <TextView
-                android:id="@+id/sortCassandraTitle"
                 style="@style/sortTitle"
-                android:text="@string/cards_Cassandra"/>
-            <RadioGroup
-                android:id="@+id/sortCassandraList"
+                android:text="@string/cards_attack_formula"/>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/sortCassandraNo"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_no"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraAttack"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_Cassandra_attack"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraRatio"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_Cassandra_attack_ratio"/>
-            </RadioGroup>
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/t20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/card"/>
+                <RadioGroup
+                    android:id="@+id/sortFormulaCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t10dp">
+                    <RadioButton
+                        android:id="@+id/sortFormulaCardNo"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_no"/>
+                    <RadioButton
+                        android:id="@+id/sortFormulaCardCassandra"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_Cassandra"/>
+                    <RadioButton
+                        android:id="@+id/sortFormulaCardJade"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_Jade"/>
+                </RadioGroup>
+                <TextView
+                    style="@style/sortTitle"
+                    android:text="@string/cards_show"/>
+                <RadioGroup
+                    android:id="@+id/sortFormulaList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/t10dp">
+                    <RadioButton
+                        android:id="@+id/sortFormulaNo"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_no"/>
+                    <RadioButton
+                        android:id="@+id/sortFormulaAttack"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_Attack"/>
+                    <RadioButton
+                        android:id="@+id/sortFormulaAttackRatio"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_attack_ratio"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                style="@style/divider_h2px"/>
 
             <TextView
                 android:id="@+id/sortSpecialTitle"
@@ -508,6 +555,9 @@
                     android:text="@string/cards_all_deal_damage_element"/>
             </LinearLayout>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <TextView
                 android:id="@+id/sortImproveTitle"
                 style="@style/sortTitle"
@@ -585,6 +635,9 @@
                     android:text="@string/cards_improve_dualMaxAdd"/>
             </LinearLayout>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -625,6 +678,9 @@
                     android:text="@string/cards_hide_9xxx_2"/>
             </GridLayout>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <TextView
                 android:id="@+id/sortDisplayTitle"
                 style="@style/sortTitle"
@@ -643,11 +699,13 @@
                     android:text="@string/cards_name"/>
             </RadioGroup>
 
+            <View
+                style="@style/divider_h2px"/>
+
             <TextView
                 android:id="@+id/sortSearchTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_search"/>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -669,13 +727,13 @@
             <TextView
                 style="@style/sortText2"
                 android:layout_width="wrap_content"
-                android:paddingLeft="@dimen/t15dp"
+                android:paddingLeft="@dimen/t10dp"
                 android:text="@string/searchRange"/>
             <GridLayout
                 android:id="@+id/sortSearchSrc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/t15dp"
+                android:paddingLeft="@dimen/t10dp"
                 android:columnCount="3">
 
                 <CheckBox
@@ -711,7 +769,7 @@
             <TextView
                 style="@style/sortText2"
                 android:layout_width="wrap_content"
-                android:paddingLeft="@dimen/t15dp"
+                android:paddingLeft="@dimen/t10dp"
                 android:text="@string/selectedSearch"/>
             <TextView
                 style="@style/sortText2"
@@ -722,7 +780,7 @@
                 android:id="@+id/sortSearchHarImprove"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/t15dp"
+                android:paddingLeft="@dimen/t10dp"
                 android:columnCount="3">
                 <CheckBox
                     android:id="@+id/sortSearchHpImprove"
@@ -770,6 +828,9 @@
                     style="@style/card_icon"
                     android:src="@drawable/ic_clear_white_48dp"/>
             </LinearLayout>
+
+            <View
+                style="@style/divider_h2px"/>
 
             <ImageView
                 style="@style/toswiki_style"/>

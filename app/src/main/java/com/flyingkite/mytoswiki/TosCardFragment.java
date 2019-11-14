@@ -79,8 +79,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private ViewGroup sortStar;
     // Common Sorting order
     private RadioGroup sortCommon;
-    // 水巫
-    private RadioGroup sortCassandra;
+    // 卡片攻擊力計算式
+    private RadioGroup sortFormulaCard;
+    private RadioGroup sortFormulaList;
     // 轉化符石
     private ViewGroup sortRunestone;
     // 種族符石
@@ -412,7 +413,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initSortByAttribute(menu);
         initSortByRace(menu);
         initSortByRaceRuneStones(menu);
-        initSortByCassandra(menu);
+        initSortByFormula(menu);
         initSortByTurnRuneStones(menu);
         initSortByStar(menu);
         initSortByCommon(menu);
@@ -448,8 +449,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortRaceStoneRace = initSortOf(menu, R.id.sortRaceStoneRace, this::clickRaceRuneStones);
     }
 
-    private void initSortByCassandra(View menu) {
-        sortCassandra = initSortOf(menu, R.id.sortCassandraList, this::clickCassandra);
+    private void initSortByFormula(View menu) {
+        sortFormulaCard = initSortOf(menu, R.id.sortFormulaCard, this::clickFormulaCard);
+        sortFormulaList = initSortOf(menu, R.id.sortFormulaList, this::clickFormulaList);
     }
 
     private void initSortByTurnRuneStones(View menu) {
@@ -584,7 +586,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             setAllChildSelected(vg, false);
         }
         sortCommon.check(R.id.sortCommonNormId);
-        sortCassandra.check(R.id.sortCassandraNo);
+        sortFormulaCard.check(R.id.sortFormulaCardNo);
+        sortFormulaList.check(R.id.sortFormulaNo);
         setCheckedIncludeNo(sortSpecialNo, R.id.sortSpecialNo, sortSpecial);
         setCheckedIncludeNo(sortImproveNo, R.id.sortImproveNo, sortImprove);
         search.setChecked(false);
@@ -609,13 +612,26 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         applySelection();
     }
 
-    private void clickCassandra(View v) {
+    private void clickFormulaCard(View v) {
+        final int noId = R.id.sortFormulaCardNo;
         int id = v.getId();
-        sortCassandra.check(id);
-        if (id != R.id.sortCassandraNo) {
+        sortFormulaCard.check(id);
+        if (id != noId) {
             sortCommon.check(R.id.sortCommonNormId);
         }
-        sortCommon.setEnabled(id != R.id.sortCassandraNo);
+        //sortCommon.setEnabled(id != noId);
+
+        applySelection();
+    }
+
+    private void clickFormulaList(View v) {
+        final int noId = R.id.sortFormulaNo;
+        int id = v.getId();
+        sortFormulaList.check(id);
+        if (id != noId) {
+            sortCommon.check(R.id.sortCommonNormId);
+        }
+        //sortCommon.setEnabled(id != noId);
 
         applySelection();
     }
@@ -653,9 +669,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         int id = v.getId();
         sortCommon.check(id);
         if (id != R.id.sortCommonNormId) {
-            sortCassandra.check(R.id.sortCassandraNo);
+            sortFormulaCard.check(R.id.sortFormulaCardNo);
+            sortFormulaList.check(R.id.sortFormulaNo);
         }
-        sortCassandra.setEnabled(id != R.id.sortCassandraNo);
+        //sortFormulaList.setEnabled(id != R.id.sortFormulaNo);
 
         applySelection();
     }
@@ -1284,8 +1301,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         @Override
         public List<Integer> sort(@NonNull List<Integer> result) {
             Comparator<Integer> cmp;
-            if (isSortCassandra()) {
-                cmp = getCassandraComparator();
+            if (isSortFormula()) {
+                cmp = getFormulaComparator();
             } else {
                 cmp = getCommonComparator();
             }
@@ -1300,53 +1317,98 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         @Override
         public List<String> getMessages(List<Integer> result) {
             List<String> msgs;
-            if (isSortCassandra()) {
-                msgs = getCassandraMessages(result);
+            if (isSortFormula()) {
+                msgs = getFormulaMessages(result);
             } else {
                 msgs = getCommonMessages(result);
             }
             return msgs;
         }
 
-        private boolean isSortCassandra() {
-            int id = sortCassandra.getCheckedRadioButtonId();
-            return id > 0 && id != R.id.sortCassandraNo;
+        private boolean isSortFormula() {
+            int id = sortFormulaList.getCheckedRadioButtonId();
+            return id > 0 && id != R.id.sortFormulaNo;
         }
 
-        private Comparator<Integer> getCassandraComparator() {
+        private double getAttackByCassandra(TosCard c) {
+            return c.maxAttackAme + c.maxRecoveryAme * 3.5;
+        }
+
+        private double getAttackByCassandraRatio(TosCard c) {
+            return getAttackByCassandra(c) / c.maxAttackAme;
+        }
+
+        private double getAttackByJade(TosCard c) {
+            if (c.race.contains("妖")) {
+                return c.maxAttackAme + c.maxRecoveryAme * 3;
+            }
+            return c.maxAttackAme;
+        }
+
+        private double getAttackByJadeRatio(TosCard c) {
+            return getAttackByJade(c) / c.maxAttackAme;
+        }
+
+        private double getFormulaAttack(TosCard c) {
+            int cardId = sortFormulaCard.getCheckedRadioButtonId();
+            double atk = c.maxAttackAme;
+            if (cardId == R.id.sortFormulaCardCassandra) {
+                atk = getAttackByCassandra(c);
+            } else if (cardId == R.id.sortFormulaCardJade) {
+                atk = getAttackByJade(c);
+            }
+            return atk;
+        }
+
+        private double getFormulaAttackRatio(TosCard c) {
+            int cardId = sortFormulaCard.getCheckedRadioButtonId();
+            double atk = 1;
+            if (cardId == R.id.sortFormulaCardCassandra) {
+                atk = getAttackByCassandraRatio(c);
+            } else if (cardId == R.id.sortFormulaCardJade) {
+                atk = getAttackByJadeRatio(c);
+            }
+            return atk;
+        }
+
+        private Comparator<Integer> getFormulaComparator() {
             // Create comparator
-            int id = sortCassandra.getCheckedRadioButtonId();
-            switch (id) {
-                case R.id.sortCassandraAttack:
-                    return (o1, o2) -> {
-                        boolean dsc = true;
-                        TosCard c1 = data.get(o1);
-                        TosCard c2 = data.get(o2);
-                        double atk1 = c1.maxAttack + c1.maxRecovery * 3.5;
-                        double atk2 = c2.maxAttack + c2.maxRecovery * 3.5;
-                        //logCard("#1", c1);
-                        //logCard("#2", c2);
-                        if (dsc) {
-                            return Double.compare(atk2, atk1);
-                        } else {
-                            return Double.compare(atk1, atk2);
-                        }
-                    };
-                case R.id.sortCassandraRatio:
-                    return (o1, o2) -> {
-                        boolean dsc = true;
-                        TosCard c1 = data.get(o1);
-                        TosCard c2 = data.get(o2);
-                        double atk1 = 1 + c1.maxRecovery * 3.5 / c1.maxAttack;
-                        double atk2 = 1 + c2.maxRecovery * 3.5 / c2.maxAttack;
-                        if (dsc) {
-                            return Double.compare(atk2, atk1);
-                        } else {
-                            return Double.compare(atk1, atk2);
-                        }
-                    };
-                default:
-                    break;
+            int id = sortFormulaList.getCheckedRadioButtonId();
+            if (id == R.id.sortFormulaAttack) {
+                return (o1, o2) -> {
+                    boolean dsc = true;
+                    // Evaluate formula
+                    TosCard c1 = data.get(o1);
+                    TosCard c2 = data.get(o2);
+                    double atk1 = getFormulaAttack(c1);
+                    double atk2 = getFormulaAttack(c2);
+
+                    //logCard("#1", c1);
+                    //logCard("#2", c2);
+                    // Compare them
+                    if (dsc) {
+                        return Double.compare(atk2, atk1);
+                    } else {
+                        return Double.compare(atk1, atk2);
+                    }
+                };
+            } else if (id == R.id.sortFormulaAttackRatio) {
+                return (o1, o2) -> {
+                    boolean dsc = true;
+                    // Evaluate formula
+                    TosCard c1 = data.get(o1);
+                    TosCard c2 = data.get(o2);
+                    double atk1 = getFormulaAttackRatio(c1);
+                    double atk2 = getFormulaAttackRatio(c2);
+
+                    // Compare them
+                    if (dsc) {
+                        return Double.compare(atk2, atk1);
+                    } else {
+                        return Double.compare(atk1, atk2);
+                    }
+                };
+            } else {
             }
             return null;
         }
@@ -1438,26 +1500,25 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             );
         }
 
-        private List<String> getCassandraMessages(List<Integer> result) {
+        private List<String> getFormulaMessages(List<Integer> result) {
             List<String> message = null;
             TosCard c;
-            String msg;
             // Create Message
-            int id = sortCassandra.getCheckedRadioButtonId();
+            int id = sortFormulaList.getCheckedRadioButtonId();
             switch (id) {
-                case R.id.sortCassandraAttack:
+                case R.id.sortFormulaAttack:
                     message = new ArrayList<>();
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
-                        double atk = c.maxAttack + c.maxRecovery * 3.5;
+                        double atk = getFormulaAttack(c);
                         message.add(_fmt("%.1f", atk));
                     }
                     break;
-                case R.id.sortCassandraRatio:
+                case R.id.sortFormulaAttackRatio:
                     message = new ArrayList<>();
                     for (int i = 0; i < result.size(); i++) {
                         c = data.get(result.get(i));
-                        double atk = 1 + c.maxRecovery * 3.5 / c.maxAttack;
+                        double atk = getFormulaAttackRatio(c);
                         message.add(_fmt("%.2f", atk));
                     }
                     break;

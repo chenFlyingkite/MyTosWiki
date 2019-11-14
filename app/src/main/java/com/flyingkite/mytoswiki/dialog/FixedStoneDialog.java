@@ -45,12 +45,14 @@ public class FixedStoneDialog extends BaseTosDialog {
         Collections.addAll(stones,
               //                           1         2         3
               //                  123456789012345678901234567890
-            new StoneFix("2158",
+            new StoneFix("2232",
+                new StoneDesktop("fhlhwffeldwffeldwffeldwfhehdhf", "心6個 + 五屬各4個"))
+            , new StoneFix("2158",
                 new StoneDesktop("hdwefhhdweflhdweflhdwefldwefll", "心+五屬各5個"))
             , new StoneFix("1719",
                 new StoneDesktop("FWEFFFFWEWEFFWEWEFFWEWEFFFFWEF", "(14火強, 8水強, 8木強)"))
-            , new StoneFix("1428,1429,1960,1969",
-                new StoneDesktop("EEhhEEhhEEhhEEhhEEhhEEhhEEhhEE", "(14心,16木強)\n木強 -> 水強 = 格雷 (#1960) + 茱比亞 (#1969)"))
+            , new StoneFix("1428,1429,1960,1969,2219",
+                new StoneDesktop("EEhhEEhhEEhhEEhhEEhhEEhhEEhhEE", "(14心,16木強)\n木強 -> 水強 = 格雷 (#1960) + 茱比亞 (#1969)\n木強 -> 火強 = 琥珀 (#2219)"))
             , new StoneFix("1169,2044,1175,2050,1666",
                 new StoneDesktop("FFFhhFhhFhhFFFFFFFFhhFhhFhhFFF", "(12心,18X)\n心 -> 心強 = 潛解革新英雄系列 洛可可 (#2044), 優格圖 (#2050)"))
             , new StoneFix("1721,1983",
