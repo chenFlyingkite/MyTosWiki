@@ -40,6 +40,14 @@
                         android:layout_height="wrap_content"
                         style="@style/blackText.t2"
                         android:text="@string/tos_event_header"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/blackText.t2"
+                        android:autoLink="all"
+                        android:text="https://towerofsaviors.com"/>
+
                 </LinearLayout>
 
                 <LinearLayout

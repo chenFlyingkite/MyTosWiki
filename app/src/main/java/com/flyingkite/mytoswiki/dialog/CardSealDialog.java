@@ -26,6 +26,7 @@ import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.Minerelves;
+import com.flyingkite.mytoswiki.data.seal.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
@@ -70,6 +71,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_phantom_troupe, new PhantomTroupe()));
         sealSeries.add(new SealItem(R.string.card_series_minerelves, new Minerelves()));
         sealSeries.add(new SealItem(R.string.card_series_virtual_singers,   new VirtualSingers()));
         sealSeries.add(new SealItem(R.string.card_series_giant_light,       new GiantLight()));
