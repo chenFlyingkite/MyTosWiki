@@ -101,6 +101,7 @@ public class CardAdapter
             default:
             case Misc.NT_ID_NORM: return c.idNorm;
             case Misc.NT_NAME:    return c.name;
+            case Misc.NT_NAME_ID_NORM: return c.idNorm + " " + c.name;
         }
     }
 
@@ -117,7 +118,8 @@ public class CardAdapter
     @NonNull
     @Override
     public CardVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CardVH(inflateView(parent, R.layout.view_tos_item_card));
+        //return new CardVH(inflateView(parent, R.layout.view_tos_item_card));
+        return new CardVH(inflateView(parent, R.layout.view_tos_item_card_white));
     }
 
     @Override

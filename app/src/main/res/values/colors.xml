@@ -6,6 +6,7 @@
     <color name="transparent">#0000</color>
     <color name="alpha3a">#3a000000</color>
     <color name="alpha4">#4000</color>
+    <color name="grey3">#333</color>
     <color name="grey3a">#3a3a3a</color>
     <color name="grey4">#444</color>
     <color name="grey6">#666</color>

@@ -30,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
+        android:background="@color/grey3"
         android:layout_below="@id/mainTools">
 
         <LinearLayout
@@ -43,6 +44,7 @@
                 android:layout_height="@dimen/t20dp"
                 app:tabMode="fixed"
                 app:tabIndicatorHeight="@dimen/t2dp"
+                app:tabTextColor="#fff"
                 app:tabIndicatorColor="@color/green"
                 app:tabSelectedTextColor="@color/green"
                 app:tabRippleColor="@color/skyBlue2"/>
@@ -68,6 +70,7 @@
         android:id="@+id/cardFragment"
         android:layout_below="@id/cardPagers"
         android:layout_above="@id/mainBottom"
+        android:background="@color/grey3a"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

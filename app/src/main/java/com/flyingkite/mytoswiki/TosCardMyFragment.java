@@ -397,6 +397,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             case R.id.sortDisplayNone:
                 type = Misc.NT_NONE;
                 break;
+            case R.id.sortDisplayNameNormId:
+                type = Misc.NT_NAME_ID_NORM;
+                break;
         }
         if (cardLib.adapter != null) {
             cardLib.adapter.setNameType(type);
@@ -772,7 +775,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                 switch (v.getId()) {
                     case R.id.sortHideEmpty:   m = 0; break;
                     case R.id.sortHideFarm:    m = 1; break;
-                    case R.id.sortHideNormal: m = 2; break;
+                    case R.id.sortHideNormal:  m = 2; break;
                     case R.id.sortHide7xxx:    m = 3; break;
                     case R.id.sortHide8xxx:    m = 4; break;
                     case R.id.sortHide9xxx:    m = 5; break;

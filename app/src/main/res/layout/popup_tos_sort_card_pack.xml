@@ -701,6 +701,11 @@
                     android:id="@+id/sortDisplayName"
                     style="@style/sortRadio"
                     android:text="@string/cards_name"/>
+
+                <RadioButton
+                    android:id="@+id/sortDisplayNameNormId"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_name_normId"/>
             </RadioGroup>
             <ImageView
                 style="@style/toswiki_style"/>

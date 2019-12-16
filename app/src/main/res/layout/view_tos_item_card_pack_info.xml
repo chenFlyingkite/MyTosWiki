@@ -37,6 +37,7 @@
             android:textSize="@dimen/t14dp"
             android:paddingLeft="@dimen/t5dp"
             android:paddingRight="@dimen/t5dp"
+            android:textColor="#fff"
             tools:text="1234"
             android:gravity="center"/>
     </LinearLayout>
@@ -62,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="#fff"
             android:text="0"/>
     </LinearLayout>
 

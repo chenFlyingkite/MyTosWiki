@@ -127,6 +127,7 @@
     <string name="cards_details">卡牌資訊</string>
     <string name="cards_pack">我的背包</string>
     <string name="cards_pack_ok">背包讀取完成 %s</string>
+    <string name="cards_name_normId">編號及名稱</string>
 
 
     <string name="cards_runestone_water">水符石</string>
@@ -171,8 +172,17 @@
         <item>@string/cards_race_evolve</item>
         <item>@string/cards_race_level</item>
     </string-array>
+
     <string name="cards_special">技能特選</string>
     <string name="cards_special_add_detail">包括 隊伍技能，組合技能 (卡牌資訊)</string>
+    <string name="cards_special_class_runestone">符石類</string>
+    <string name="cards_special_class_until">自身狀態維持類</string>
+    <string name="cards_special_class_skill">自身狀態類</string>
+    <string name="cards_special_class_enemy">敵方狀態類</string>
+    <string name="cards_special_class_attack_eval">攻擊力計算類</string>
+    <string name="cards_special_class_attack_spec">攻擊特性類</string>
+    <string name="cards_special_class_move_time">移動時間類</string>
+    <string name="cards_special_class_others">其他類</string>
     <!-- #1213, 溫婉白蕾 妍, Unlimited movement -->
     <string name="cards_freemove">排珠</string>
     <!-- #1408, 雲陽, Skill stays in play until reactivation of the Skill or defeated -->
@@ -246,6 +256,8 @@
     <string name="cards_add_combo_count">Combo 數目增加</string>
     <string name="cards_regardless_of_initial_shield">無視攻前盾</string>
     <string name="cards_skill_cd_minus">技能 CD 減少</string>
+    <string name="cards_explode_generate">引爆以掉落[符石]</string>
+    <string name="cards_five_attribute_runestone">解 五屬性(強化)盾</string>
 
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
@@ -258,6 +270,9 @@
     </string-array>
     <string-array name="cards_explode_keys">
         <item>引爆</item>
+    </string-array>
+    <string-array name="cards_explode_generate_keys">
+        <item>以掉落</item>
     </string-array>
     <string-array name="cards_morecoin_keys">
         <item>戰鬥中所獲得的金幣增加</item>
@@ -447,14 +462,60 @@
     <string-array name="cards_skill_cd_minus_keys">
         <item>技能 CD 減少</item>
     </string-array>
-    <!-- 五屬性盾
-    0829,1716 蜈蚣王
-    2158 超人迪加
-    2154 超人ORB
-    2152 超人太郎
-    2069 西施
-    1176 萊夫
-    2139 盤古
+    <!-- 源生混沌 ‧ 倪克斯, 聖杯之永息 · 艾莉亞, 超人ORB, 盈蝶線牽 ‧ 鏡音鈴與鏡音連 -->
+    <string-array name="cards_five_attribute_runestone_keys">
+        <item>1564</item>
+        <item>2081</item>
+        <item>2154</item>
+        <item>6297</item>
+        <item>2189</item>
+        <item>2215</item>
+        <item>2232</item>
+        <item>6319</item>
+        <item>2281</item>
+        <item>0829</item>
+        <item>1716</item>
+        <item>6132</item>
+        <item>1032</item>
+        <item>1406</item>
+        <item>6092</item>
+        <item>1176</item>
+        <item>1350</item>
+        <item>1378</item>
+        <item>1397</item>
+        <item>1870</item>
+        <item>1882</item>
+        <item>6216</item>
+        <item>2069</item>
+        <item>2157</item>
+        <item>2158</item>
+        <item>2176</item>
+        <item>6302</item>
+        <item>2177</item>
+        <item>6303</item>
+    </string-array>
+    <!--
+    <string-array name="cards_five_attribute_runestone_keys2">
+        <item>(1564)</item>
+        <item>(2081)</item>
+        <item>(2154|6297)</item>
+        <item>(2189)</item>
+        <item>(2215)</item>
+        <item>(2232|6319)</item>
+        <item>(2281)</item>
+        <item>(0829|1716|6132)</item>
+        <item>(1032|1406|6092)</item>
+        <item>(1176)</item>
+        <item>(1350)</item>
+        <item>(1378)</item>
+        <item>(1397)</item>
+        <item>(1870)</item>
+        <item>(1882|6216)</item>
+        <item>(2069)</item>
+        <item>(2157|2158)</item>
+        <item>(2176|6302)</item>
+        <item>(2177|6303)</item>
+    </string-array>
     -->
 
 

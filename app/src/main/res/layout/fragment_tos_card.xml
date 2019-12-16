@@ -9,7 +9,8 @@
     <RelativeLayout
         android:id="@+id/tosTopBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/grey3a">
 
         <LinearLayout
             android:id="@+id/tosTools"
@@ -23,7 +24,7 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_favorite_border_black_48"
+                android:src="@drawable/ic_favorite_border_white_48"
                 android:background="@drawable/bg_press_sky_rect"/>
 
             <ImageView
@@ -31,18 +32,18 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_open_in_browser_black_48dp"
+                android:src="@drawable/ic_open_in_browser_white_48dp"
                 android:background="@drawable/bg_press_sky_rect"/>
 
             <ImageView
                 android:id="@+id/tosGoTop"
-                style="@style/tosGoTop"
+                style="@style/tosGoTopW"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"/>
 
             <ImageView
                 android:id="@+id/tosGoBottom"
-                style="@style/tosGoBottom"
+                style="@style/tosGoBottomW"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"/>
 
@@ -51,7 +52,7 @@
                 style="@style/tosIcon"
                 android:layout_width="@dimen/t45dp"
                 android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_sort_black_48dp"/>
+                android:src="@drawable/ic_sort_white_48dp"/>
 
         </LinearLayout>
 
@@ -60,7 +61,7 @@
             android:layout_toLeftOf="@id/tosTools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/common_text"
+            style="@style/common_text.white"
             android:layout_centerVertical="true"
             tools:text="@string/cards_selection"/>
     </RelativeLayout>
@@ -93,7 +94,7 @@
         android:layout_above="@id/tosFavorBox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff"
+        android:background="@color/grey3a"
         app:fastScrollEnabled="true"
         app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
         app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"

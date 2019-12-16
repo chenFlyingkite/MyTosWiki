@@ -124,9 +124,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialRestoreAllIntoEnchanted;
     private CheckBox sortSpecialDodge;
     private CheckBox sortSpecialOneDealDamage;
-    private CheckBox sortSpecialOneDealDamageElement;
+    //private CheckBox sortSpecialOneDealDamageElement;
     private CheckBox sortSpecialAllDealDamage;
-    private CheckBox sortSpecialAllDealDamageElement;
+    //private CheckBox sortSpecialAllDealDamageElement;
     private CheckBox sortSpecialTurnEnemyAttr;
     private CheckBox sortSpecialDelay;
     private CheckBox sortSpecialClearLock;
@@ -134,6 +134,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialAttackBonusCombo;
     private CheckBox sortSpecialAddComboCount;
     private CheckBox sortSpecialSkillCdMinus;
+    private CheckBox sortSpecialExplodeGenerate;
+    private CheckBox sortSpecialFiveRuneStone;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -501,9 +503,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRestoreAllIntoEnchanted = menu.findViewById(R.id.sortSpecialRestoreAllIntoEnchanted);
         sortSpecialDodge = menu.findViewById(R.id.sortSpecialDodge);
         sortSpecialOneDealDamage = menu.findViewById(R.id.sortSpecialOneDealDamage);
-        sortSpecialOneDealDamageElement = menu.findViewById(R.id.sortSpecialOneDealDamageElement);
+        //sortSpecialOneDealDamageElement = menu.findViewById(R.id.sortSpecialOneDealDamageElement);
         sortSpecialAllDealDamage = menu.findViewById(R.id.sortSpecialAllDealDamage);
-        sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
+        //sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
         sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
@@ -511,6 +513,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialAttackBonusCombo = menu.findViewById(R.id.sortSpecialAttackBonusCombo);
         sortSpecialAddComboCount = menu.findViewById(R.id.sortSpecialAddComboCount);
         sortSpecialSkillCdMinus = menu.findViewById(R.id.sortSpecialSkillCdMinus);
+        sortSpecialExplodeGenerate = menu.findViewById(R.id.sortSpecialExplodeGenerate);
+        sortSpecialFiveRuneStone = menu.findViewById(R.id.sortSpecialFiveRuneStone);
 
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
@@ -656,6 +660,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         switch (v.getId()) {
             case R.id.sortDisplayName:
                 type = Misc.NT_NAME;
+                break;
+            case R.id.sortDisplayNameNormId:
+                type = Misc.NT_NAME_ID_NORM;
                 break;
         }
         if (cardLib.adapter != null) {
@@ -1178,15 +1185,15 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialOneDealDamage.isChecked()) {
                     accept &= !element & find(key, R.array.cards_one_deal_damage_keys);
                 }
-                if (sortSpecialOneDealDamageElement.isChecked()) {
-                    accept &= element && find(key, R.array.cards_one_deal_damage_keys);
-                }
+//                if (sortSpecialOneDealDamageElement.isChecked()) {
+//                    accept &= element && find(key, R.array.cards_one_deal_damage_keys);
+//                }
                 if (sortSpecialAllDealDamage.isChecked()) {
                     accept &= !element & find(key, R.array.cards_all_deal_damage_keys);
                 }
-                if (sortSpecialAllDealDamageElement.isChecked()) {
-                    accept &= element && find(key, R.array.cards_all_deal_damage_keys);
-                }
+//                if (sortSpecialAllDealDamageElement.isChecked()) {
+//                    accept &= element && find(key, R.array.cards_all_deal_damage_keys);
+//                }
                 if (sortSpecialTurnEnemyAttr.isChecked()) {
                     accept &= find(key, R.array.cards_turn_enemy_attr_keys);
                 }
@@ -1208,6 +1215,14 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialSkillCdMinus.isChecked()) {
                     accept &= find(key, R.array.cards_skill_cd_minus_keys);
+                }
+                if (sortSpecialExplodeGenerate.isChecked()) {
+                    accept &= find(key, R.array.cards_explode_generate_keys);
+                }
+                if (sortSpecialFiveRuneStone.isChecked()) {
+                    key = c.idNorm;
+                    accept &= find(key, R.array.cards_five_attribute_runestone_keys);
+                    //accept &= findRegex(key, R.array.cards_five_attribute_runestone_keys);
                 }
             }
             return accept;

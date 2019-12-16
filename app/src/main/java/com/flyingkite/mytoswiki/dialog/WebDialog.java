@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -24,6 +23,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class WebDialog extends BaseTosDialog implements ShareUtil {
     public static final String TAG = "WebDialog";
@@ -83,17 +84,17 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
 
     private List<Integer> getToolsIds() {
         List<Integer> ids = new ArrayList<>();
-        ids.add(R.drawable.ic_home_black_48dp);
-        ids.add(R.drawable.ic_arrow_back_black_48dp);
-        ids.add(R.drawable.ic_arrow_forward_black_48dp);
-        ids.add(R.drawable.ic_refresh_black_48);
-        ids.add(R.drawable.ic_share_black_48dp);
+        ids.add(R.drawable.ic_home_white_48dp);
+        ids.add(R.drawable.ic_arrow_back_white_48dp);
+        ids.add(R.drawable.ic_arrow_forward_white_48dp);
+        ids.add(R.drawable.ic_refresh_white_48);
+        ids.add(R.drawable.ic_share_white_48dp);
         if (pinned) {
         } else {
-            ids.add(R.drawable.ic_clear_black_48dp);
-            ids.add(R.drawable.ic_filter_1_black);
-            ids.add(R.drawable.ic_filter_2_black);
-            ids.add(R.drawable.ic_filter_3_black);
+            ids.add(R.drawable.ic_clear_white_48dp);
+            ids.add(R.drawable.ic_filter_1_white);
+            ids.add(R.drawable.ic_filter_2_white);
+            ids.add(R.drawable.ic_filter_3_white);
         }
         return ids;
     }
