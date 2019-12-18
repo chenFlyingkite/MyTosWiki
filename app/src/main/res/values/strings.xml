@@ -353,6 +353,8 @@
         <!-- #1762, 小傑-->
         <item>自身攻擊無視敵人的防禦力</item>
         <item>無視防禦力</item>
+        <!-- #2120, 處女座 ‧ 沙加 -->
+        <item>防禦力變為 0</item>
     </string-array>
     <string-array name="cards_regardless_of_attribute_keys">
         <!-- #0294, 通透的蛋 -->
