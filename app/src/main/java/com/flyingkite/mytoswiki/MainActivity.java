@@ -60,14 +60,14 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.logo_chrome
             //, R.drawable.rune_water
             , R.drawable.tos_app
-            , R.drawable.tos_vestige
+            , R.drawable.gift_stamina
             , R.drawable.tos_enochian
             , R.drawable.card_0674
             , R.drawable.shop_card
             , R.drawable.tos_lost_relic_pass
             , R.drawable.tos_void_realm
             , R.drawable.tos_story
-            , R.drawable.gift_stamina
+            , R.drawable.tos_vestige
             , R.drawable.card_1777
             , R.drawable.card_0096
             , R.drawable.card_1429

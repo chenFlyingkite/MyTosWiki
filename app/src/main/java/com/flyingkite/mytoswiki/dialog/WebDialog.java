@@ -108,40 +108,40 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
             @Override
             public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
                 switch (s) {
-                    case R.drawable.ic_home_black_48dp:
+                    case R.drawable.ic_home_white_48dp:
                         web.loadUrl(tosWikiHome);
                         break;
-                    case R.drawable.ic_arrow_back_black_48dp:
+                    case R.drawable.ic_arrow_back_white_48dp:
                         if (web.canGoBack()) {
                             web.goBack();
                         }
                         break;
-                    case R.drawable.ic_arrow_forward_black_48dp:
+                    case R.drawable.ic_arrow_forward_white_48dp:
                         if (web.canGoForward()) {
                             web.goForward();
                         }
                         break;
-                    case R.drawable.ic_share_black_48dp:
+                    case R.drawable.ic_share_white_48dp:
                         shareString(web.getUrl());
                         logShare();
                         break;
-                    case R.drawable.ic_clear_black_48dp:
+                    case R.drawable.ic_clear_white_48dp:
                         dismissAllowingStateLoss();
                         break;
-                    case R.drawable.ic_refresh_black_48:
+                    case R.drawable.ic_refresh_white_48:
                         web.reload();
                         break;
-                    case R.drawable.ic_filter_1_black:
+                    case R.drawable.ic_filter_1_white:
                         if (onWeb != null) {
                             onWeb.onPin(web.getUrl(), 1);
                         }
                         break;
-                    case R.drawable.ic_filter_2_black:
+                    case R.drawable.ic_filter_2_white:
                         if (onWeb != null) {
                             onWeb.onPin(web.getUrl(), 2);
                         }
                         break;
-                    case R.drawable.ic_filter_3_black:
+                    case R.drawable.ic_filter_3_white:
                         if (onWeb != null) {
                             onWeb.onPin(web.getUrl(), 3);
                         }
