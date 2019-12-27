@@ -1086,7 +1086,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         private boolean selectForSpecial(TosCard c) {
-            String key = activeSkill(c);
+            String key = c.skillLeaderDesc; // leader skill
+            key += " & " + activeSkill(c);
             boolean accept = true;
             if (!sortSpecialNo.isChecked()) {
                 boolean element = c.race.matches(getString(R.string.cards_race_level) + "|" + getString(R.string.cards_race_evolve));
@@ -1102,7 +1103,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_explode_keys);
                 }
                 if (sortSpecialMoreCoin.isChecked()) {
-                    key += " & " + c.skillLeaderDesc;
                     accept &= find(key, R.array.cards_morecoin_keys);
                 }
                 if (sortSpecialExtend.isChecked()) {
@@ -1204,7 +1204,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_clear_lock_keys);
                 }
                 if (sortSpecialAlsoHeartActive.isChecked()) {
-                    key += " & " + c.skillLeaderDesc;
                     accept &= findRegex(key, R.array.cards_also_heart_keys);
                 }
                 if (sortSpecialAttackBonusCombo.isChecked()) {
@@ -1222,7 +1221,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialFiveRuneStone.isChecked()) {
                     key = c.idNorm;
                     accept &= find(key, R.array.cards_five_attribute_runestone_keys);
-                    //accept &= findRegex(key, R.array.cards_five_attribute_runestone_keys);
                 }
             }
             return accept;

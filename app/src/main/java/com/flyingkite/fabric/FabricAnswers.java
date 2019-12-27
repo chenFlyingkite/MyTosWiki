@@ -146,6 +146,11 @@ public class FabricAnswers {
     public static void logRunestone(Map<String, String> attributes) {
         logCustom("Runestone", attributes);
     }
+
+    public static void logEditRunestone(Map<String, String> attributes) {
+        logCustom("EditRunestone", attributes);
+    }
+
     public static void logFixRunestone(Map<String, String> attributes) {
         logCustom("FixRunestone", attributes);
     }

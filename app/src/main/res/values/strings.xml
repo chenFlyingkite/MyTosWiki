@@ -47,6 +47,12 @@
     <string name="selectedSearch">特選搜尋</string>
     <string name="cards_show">顯示項目</string>
     <string name="cards_attack_formula">卡片攻擊力計算式</string>
+    <string name="copy">複製</string>
+    <string name="enterStone">請先選擇符石</string>
+    <string name="desktopStone">符石版面</string>
+    <string name="head">起始</string>
+    <string name="tail">結束</string>
+    <string name="random">隨機</string>
 
     <string name="cards_n_card">%d 張</string>
     <string name="cards_selection_kind">%d / %d 種卡片</string>
@@ -124,6 +130,7 @@
     <string name="cards_runestone">符石</string>
     <string name="cards_runestone_race">符石種族</string>
     <string name="cards_runestone_attr">符石屬性</string>
+    <string name="cards_runestone_enchanted">強化符石</string>
     <string name="cards_details">卡牌資訊</string>
     <string name="cards_pack">我的背包</string>
     <string name="cards_pack_ok">背包讀取完成 %s</string>
@@ -496,29 +503,6 @@
         <item>2177</item>
         <item>6303</item>
     </string-array>
-    <!--
-    <string-array name="cards_five_attribute_runestone_keys2">
-        <item>(1564)</item>
-        <item>(2081)</item>
-        <item>(2154|6297)</item>
-        <item>(2189)</item>
-        <item>(2215)</item>
-        <item>(2232|6319)</item>
-        <item>(2281)</item>
-        <item>(0829|1716|6132)</item>
-        <item>(1032|1406|6092)</item>
-        <item>(1176)</item>
-        <item>(1350)</item>
-        <item>(1378)</item>
-        <item>(1397)</item>
-        <item>(1870)</item>
-        <item>(1882|6216)</item>
-        <item>(2069)</item>
-        <item>(2157|2158)</item>
-        <item>(2176|6302)</item>
-        <item>(2177|6303)</item>
-    </string-array>
-    -->
 
 
 
@@ -858,6 +842,7 @@
     <string name="card_series_minerelves">魔幻寶石</string>
     <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>
 
+    <string name="stones_same_count">符石數目相同</string>
 
     <string name="tos_event_title">神魔之塔活動表</string>
     <string name="tos_event_header">神魔之塔當前活動列表 : </string>

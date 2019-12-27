@@ -62,10 +62,11 @@ public class ShareHelper {
         Intent it = new Intent(Intent.ACTION_SEND);
         it.putExtra(Intent.EXTRA_STREAM, uri);
         it.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
         //it.setClipData(ClipData.newRawUri("", uri));
         //it.setData(uri);
-        //it.setType(type);
         it.setDataAndType(uri, type);
+        LogE("sendUriIntent %s %s", type, uri);
         try {
             context.startActivity(it);
         } catch (ActivityNotFoundException e) {
@@ -83,9 +84,11 @@ public class ShareHelper {
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
 
+                //sendUriIntent(context, Uri.fromFile(new File(filename)), "image/png");
+
                 MediaScannerConnection.scanFile(context, new String[]{filename}, null,
                         (path, uri) -> {
-                            LogV("Scanned %s\n  as -> %s", path, uri);
+                            LogE("Scanned %s\n  as -> %s", path, uri);
                             //Uri u2 = FileProvider.getUriForFile(context, context.getPackageName(), new File(filename));
                             //sendUriIntent(context, u2, "image/png");
                             sendUriIntent(context, uri, "image/png");

@@ -25,6 +25,7 @@ import com.flyingkite.mytoswiki.dialog.MainStageDialog;
 import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.RealmStageDialog;
 import com.flyingkite.mytoswiki.dialog.RelicStageDialog;
+import com.flyingkite.mytoswiki.dialog.RunestoneEditorDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
@@ -64,6 +65,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.tos_enochian
             , R.drawable.card_0674
             , R.drawable.shop_card
+            , R.drawable.s_i047
             , R.drawable.tos_lost_relic_pass
             , R.drawable.tos_void_realm
             , R.drawable.tos_story
@@ -308,7 +310,9 @@ public class MainActivity extends BaseActivity implements
                         new FarmPoolDialog().show(getActivity());
                         break;
                     //case R.drawable.rune_water:
-                        //new RunestoneEditorDialog().show(getActivity());
+                    case R.drawable.s_i047:
+                        new RunestoneEditorDialog().show(getActivity());
+                        break;
                     case R.drawable.card_1089:
                         new FreeMoveSampleDialog().show(getActivity());
                         break;

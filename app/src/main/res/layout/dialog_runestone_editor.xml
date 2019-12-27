@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
+    android:background="@drawable/bg_round_darkgray"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/redTitle"
+        style="@style/dialog_title.white"
+        android:layout_width="@dimen/t360dp"
+        android:text="@string/runestone_editor_title"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,106 +23,227 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fff"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/redTitle"
-                    style="@style/dialog_title.white"
-                    android:paddingLeft="@dimen/t5dp"
-                    android:layout_width="@dimen/t360dp"
-                    android:background="@drawable/bg_round_darkgray"
-                    android:text="@string/runestone_editor_title"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:background="@drawable/bg_rect_skyblue">
+                    <TextView
+                        style="@style/common_text.white"
+                        android:layout_gravity="center"
+                        android:text="@string/cards_runestone"/>
 
-                    <View
-                        android:layout_width="@dimen/t50dp"
-                        android:layout_height="@dimen/t100dp"/>
-
-                    <GridLayout
-                        android:id="@+id/redRunestone"
+                    <LinearLayout
+                        android:id="@+id/redStoneNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:columnCount="6">
+                        android:orientation="horizontal">
 
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_water"
+                            android:tag="w"
                             android:src="@drawable/rune_water"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_fires"
+                            android:tag="f"
                             android:src="@drawable/rune_fire"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_earth"
+                            android:tag="e"
                             android:src="@drawable/rune_earth"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_light"
+                            android:tag="l"
                             android:src="@drawable/rune_light"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_darks"
+                            android:tag="d"
                             android:src="@drawable/rune_dark"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_heart"
+                            android:tag="h"
                             android:src="@drawable/rune_heart"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/redStoneEnchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_water_enchanted"
+                            android:tag="W"
                             android:src="@drawable/s_i021"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_fires_enchanted"
+                            android:tag="F"
                             android:src="@drawable/s_i022"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_earth_enchanted"
+                            android:tag="E"
                             android:src="@drawable/s_i023"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_light_enchanted"
+                            android:tag="L"
                             android:src="@drawable/s_i024"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_darks_enchanted"
+                            android:tag="D"
                             android:src="@drawable/s_i025"/>
                         <ImageView
                             style="@style/sortIcon"
-                            android:tag="@string/cards_runestone_heart_enchanted"
+                            android:tag="H"
                             android:src="@drawable/s_i026"/>
-                    </GridLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/redRandom"
-                    style="@style/sortIcon.reset"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_rect_green">
+
+                    <RelativeLayout
+                        android:id="@+id/redRandom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_press_sky">
+
+                        <ImageView
+                            android:id="@+id/redRandomImg"
+                            style="@style/sortIcon.stones"
+                            android:background="#0000"/>
+                        <TextView
+                            android:id="@+id/redRandomText"
+                            android:layout_below="@id/redRandomImg"
+                            android:layout_centerHorizontal="true"
+                            style="@style/common_text.white.small"
+                            android:text="@string/random"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/t50dp"
+                        android:layout_height="1dp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/redShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_press_sky">
+
+                        <ImageView
+                            android:id="@+id/redShareImg"
+                            style="@style/sortIcon.shareW"
+                            android:background="#0000"/>
+                        <TextView
+                            android:id="@+id/redShareText"
+                            android:layout_below="@id/redShareImg"
+                            android:layout_centerHorizontal="true"
+                            style="@style/common_text.white.small"
+                            android:text="@string/share"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/redCopyDesktopFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_press_sky">
+
+                        <ImageView
+                            android:id="@+id/redCopyDesktopFromImg"
+                            style="@style/tosGoBottomW"
+                            android:background="#0000"/>
+                        <TextView
+                            android:id="@+id/redCopyDesktopFromText"
+                            android:layout_below="@id/redCopyDesktopFromImg"
+                            android:layout_centerHorizontal="true"
+                            style="@style/common_text.white.small"
+                            android:text="@string/copy"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/redCopyDesktopTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_press_sky">
+
+                        <ImageView
+                            android:id="@+id/redCopyDesktopToImg"
+                            style="@style/tosGoTopW"
+                            android:background="#0000"/>
+                        <TextView
+                            android:id="@+id/redCopyDesktopToText"
+                            android:layout_below="@id/redCopyDesktopToImg"
+                            android:layout_centerHorizontal="true"
+                            style="@style/common_text.white.small"
+                            android:text="@string/copy"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        style="@style/common_text.white"
+                        android:paddingRight="@dimen/t20dp"
+                        android:text="@string/desktopStone"/>
+
+                    <TextView
+                        style="@style/common_text.white"
+                        android:text="@string/head"/>
+
+                    <ImageView
+                        style="@style/evoArrow"
+                        android:layout_width="@dimen/t20dp"/>
+
+                    <TextView
+                        style="@style/common_text.white"
+                        android:text="@string/tail"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/redStoneSameCount"
+                    style="@style/common_text.white"
+                    android:drawableLeft="@drawable/icon_yes_no"
+                    android:drawablePadding="@dimen/t5dp"
+                    android:text="@string/stones_same_count"/>
 
                 <LinearLayout
                     android:id="@+id/redDesktop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@color/grey4">
+
+                    <TextView
+                        android:id="@+id/redDesktopFromStones"
+                        style="@style/common_text.white"
+                        android:text="123"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/redDesktopFrom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        style="@style/desktopStone"/>
 
                     <ImageView
-                        style="@style/evoArrow"/>
+                        style="@style/evoArrow"
+                        android:layout_width="@dimen/t20dp"/>
+
+                    <TextView
+                        android:id="@+id/redDesktopToStones"
+                        style="@style/common_text.white"
+                        android:text="456"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/redDesktopTo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        style="@style/desktopStone"/>
 
                 </LinearLayout>
 

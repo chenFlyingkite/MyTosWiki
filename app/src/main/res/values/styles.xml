@@ -38,6 +38,9 @@
     <style name="common_text.black">
         <item name="android:textColor">#000</item>
     </style>
+    <style name="common_text.white.small">
+        <item name="android:textSize">@dimen/t12dp</item>
+    </style>
 
     <style name="commonIcon">
         <item name="android:layout_width">@dimen/t50dp</item>
@@ -240,6 +243,13 @@
         <item name="android:src">@drawable/s_i049</item>
     </style>
     <style name="sortIcon.reset.t40">
+        <item name="android:layout_width">@dimen/t40dp</item>
+        <item name="android:layout_height">@dimen/t40dp</item>
+    </style>
+    <style name="sortIcon.stones">
+        <item name="android:src">@drawable/s_i047</item>
+    </style>
+    <style name="sortIcon.stones.t40">
         <item name="android:layout_width">@dimen/t40dp</item>
         <item name="android:layout_height">@dimen/t40dp</item>
     </style>
@@ -516,6 +526,12 @@
         <item name="android:textColor">#080</item>
         <item name="android:textSize">@dimen/t18dp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Stone Adapter-->
+    <style name="desktopStone">
+        <item name="android:layout_width">@dimen/t300dp</item>
+        <item name="android:layout_height">@dimen/t250dp</item>
     </style>
 
 </resources>
