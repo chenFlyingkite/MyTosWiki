@@ -1109,6 +1109,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_extend_keys);
                 }
                 if (sortSpecialAlsoActive.isChecked()) {
+                    key = activeSkill(c);
                     accept &= find(key, R.array.cards_also_keys);
                 }
                 if (sortSpecialAlsoLeader.isChecked()) {
@@ -1122,6 +1123,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_no_defeat_keys);
                 }
                 if (sortSpecialDamageLessActive.isChecked()) {
+                    key = activeSkill(c);
                     accept &= find(key, R.array.cards_damage_less_keys);
                 }
                 if (sortSpecialDamageLessLeader.isChecked()) {
@@ -1236,6 +1238,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         private String joinKey(String key, TosCard c) {
             // Skill changes
+            // TODO 0228 大聖昇華隊長技 != 主動技
             StringBuilder skills = new StringBuilder("");
             for (int i = 0; i < c.skillChange.size(); i++) {
                 SkillLite sl = c.skillChange.get(i);

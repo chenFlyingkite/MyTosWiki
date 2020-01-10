@@ -329,6 +329,8 @@
         <item>傷害減少</item>
         <!-- #2006 愛因斯坦 -->
         <item>% 所受傷害</item>
+        <!-- #228 大聖減傷-->
+        <item>所受傷害愈低</item>
     </string-array>
     <string-array name="cards_damage_to_hp_keys">
         <!-- #1343 #1478 #1794 木蛋，本多忠勝，飛影回血-->
@@ -502,6 +504,7 @@
         <item>6302</item>
         <item>2177</item>
         <item>6303</item>
+        <item>2262</item>
     </string-array>
 
 
