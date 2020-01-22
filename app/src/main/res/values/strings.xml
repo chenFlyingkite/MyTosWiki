@@ -843,7 +843,8 @@
     <string name="card_series_giant_light">光之巨人、超人</string>
     <string name="card_series_virtual_singers">虛擬歌手</string>
     <string name="card_series_minerelves">魔幻寶石</string>
-    <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>
+    <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>遙古三族
+    <string name="card_series_olden_trio">遙古三族</string>
 
     <string name="stones_same_count">符石數目相同</string>
 
