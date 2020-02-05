@@ -265,6 +265,10 @@
     <string name="cards_skill_cd_minus">技能 CD 減少</string>
     <string name="cards_explode_generate">引爆以掉落[符石]</string>
     <string name="cards_five_attribute_runestone">解 五屬性(強化)盾</string>
+    <string name="cards_petrified_runestone">解除 「石化符石」</string>
+    <string name="cards_regardless_of_burning">無視「燃燒」</string>
+    <string name="cards_regardless_of_sticky">無視「黏腐」</string>
+    <string name="cards_electrified_runestone">電擊符石</string>
 
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
@@ -400,6 +404,7 @@
     </string-array>
     <string-array name="cards_black_white_original_keys">
         <item>將黑白符石變回原來色調</item>
+        <item>解除黑白符石的狀態</item>
     </string-array>
     <string-array name="cards_restore_runestone_normal_keys">
         <item>將場上的符石變回原始模樣</item>
@@ -473,6 +478,19 @@
     <string-array name="cards_skill_cd_minus_keys">
         <item>技能 CD 減少</item>
     </string-array>
+    <string-array name="cards_clear_petrified_runestone_key">
+        <item>解除「石化符石」狀態</item>
+    </string-array>
+    <string-array name="cards_regardless_of_burning_key">
+        <item>無視(.{0,30})「燃燒」</item>
+        <item>「燃燒」(.{0,30})的傷害轉化為我方生命力</item>
+    </string-array>
+    <string-array name="cards_regardless_of_sticky_key">
+        <item>無視(.{0,30})「黏腐」</item>
+    </string-array>
+    <string-array name="cards_cards_electrified_runestone_key">
+        <item>電擊符石</item>
+    </string-array>
     <!-- 源生混沌 ‧ 倪克斯, 聖杯之永息 · 艾莉亞, 超人ORB, 盈蝶線牽 ‧ 鏡音鈴與鏡音連 -->
     <string-array name="cards_five_attribute_runestone_keys">
         <item>1564</item>
@@ -505,6 +523,12 @@
         <item>2177</item>
         <item>6303</item>
         <item>2262</item>
+        <!-- 五屬及心 -->
+        <item>2092</item>
+        <item>6337</item>
+        <item>2307</item>
+        <item>6341</item>
+        <item>2329</item>
     </string-array>
 
 

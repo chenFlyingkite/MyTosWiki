@@ -107,6 +107,9 @@
                             android:id="@+id/csdCardSeries2"
                             android:layout_width="@dimen/t180dp"
                             android:layout_height="match_parent"
+                            android:scrollbars="vertical|horizontal"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:scrollbarAlwaysDrawVerticalTrack="true"
                             android:paddingLeft="@dimen/t10dp"/>
                     </LinearLayout>
                 </LinearLayout>

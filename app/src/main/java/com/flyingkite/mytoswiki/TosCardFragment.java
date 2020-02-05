@@ -136,6 +136,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialSkillCdMinus;
     private CheckBox sortSpecialExplodeGenerate;
     private CheckBox sortSpecialFiveRuneStone;
+    private CheckBox sortSpecialPetrifiedRuneStone;
+    private CheckBox sortSpecialElectrifiedRuneStone;
+    private CheckBox sortSpecialRegardlessBurning;
+    private CheckBox sortSpecialRegardlessSticky;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -515,6 +519,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialSkillCdMinus = menu.findViewById(R.id.sortSpecialSkillCdMinus);
         sortSpecialExplodeGenerate = menu.findViewById(R.id.sortSpecialExplodeGenerate);
         sortSpecialFiveRuneStone = menu.findViewById(R.id.sortSpecialFiveRuneStone);
+        sortSpecialPetrifiedRuneStone = menu.findViewById(R.id.sortSpecialPetrifiedRuneStone);
+        sortSpecialElectrifiedRuneStone = menu.findViewById(R.id.sortSpecialElectrifiedRuneStone);
+        sortSpecialRegardlessBurning = menu.findViewById(R.id.sortSpecialRegardlessBurning);
+        sortSpecialRegardlessSticky = menu.findViewById(R.id.sortSpecialRegardlessSticky);
 
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
@@ -1113,6 +1121,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_also_keys);
                 }
                 if (sortSpecialAlsoLeader.isChecked()) {
+                    if ("2092".equals(c.idNorm)) {
+                        c.idNorm.length();
+                    }
                     key = leaderSkill(c);
                     accept &= find(key, R.array.cards_also_keys);
                 }
@@ -1223,6 +1234,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 if (sortSpecialFiveRuneStone.isChecked()) {
                     key = c.idNorm;
                     accept &= find(key, R.array.cards_five_attribute_runestone_keys);
+                }
+                if (sortSpecialPetrifiedRuneStone.isChecked()) {
+                    accept &= find(key, R.array.cards_clear_petrified_runestone_key);
+                }
+                if (sortSpecialElectrifiedRuneStone.isChecked()) {
+                    accept &= find(key, R.array.cards_cards_electrified_runestone_key);
+                }
+                if (sortSpecialRegardlessBurning.isChecked()) {
+                    accept &= findRegex(key, R.array.cards_regardless_of_burning_key);
+                }
+                if (sortSpecialRegardlessSticky.isChecked()) {
+                    accept &= findRegex(key, R.array.cards_regardless_of_sticky_key);
                 }
             }
             return accept;

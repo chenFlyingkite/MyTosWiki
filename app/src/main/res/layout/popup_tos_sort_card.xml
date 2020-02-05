@@ -367,6 +367,22 @@
                     style="@style/sortText"
                     android:text="@string/cards_five_attribute_runestone"/>
                 <CheckBox
+                    android:id="@+id/sortSpecialRegardlessBurning"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_burning"/>
+                <CheckBox
+                    android:id="@+id/sortSpecialRegardlessSticky"
+                    style="@style/sortText"
+                    android:text="@string/cards_regardless_of_sticky"/>
+                <CheckBox
+                    android:id="@+id/sortSpecialPetrifiedRuneStone"
+                    style="@style/sortText"
+                    android:text="@string/cards_petrified_runestone"/>
+                <CheckBox
+                    android:id="@+id/sortSpecialElectrifiedRuneStone"
+                    style="@style/sortText"
+                    android:text="@string/cards_electrified_runestone"/>
+                <CheckBox
                     android:id="@+id/sortSpecialOriginalColor"
                     style="@style/sortText"
                     android:text="@string/cards_black_white_original"/>

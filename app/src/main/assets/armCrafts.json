@@ -22050,6 +22050,482 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3465",
+    "name": "冒險書龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a1/C3465.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080851\u0026path-prefix\u003dzh",
+      "iconKey": "C3465.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3466",
+    "name": "冒險書龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/22/C3466.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080851\u0026path-prefix\u003dzh",
+      "iconKey": "C3466.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3467",
+    "name": "冒險書龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C3467.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080852\u0026path-prefix\u003dzh",
+      "iconKey": "C3467.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3468",
+    "name": "冒險書龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c0/C3468.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080852\u0026path-prefix\u003dzh",
+      "iconKey": "C3468.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3469",
+    "name": "冒險書龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a7/C3469.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080853\u0026path-prefix\u003dzh",
+      "iconKey": "C3469.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3470",
+    "name": "冒險書龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/84/C3470.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080853\u0026path-prefix\u003dzh",
+      "iconKey": "C3470.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，回復 50% 生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 3 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2100"
+    ],
+    "cardLimitName": [
+      "夢想成真 ‧ 馬休"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3471",
+    "name": "冒險書龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E5%86%92%E9%9A%AA%E6%9B%B8%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/58/C3471.png/revision/latest/scale-to-width-down/120?cb\u003d20200203080854\u0026path-prefix\u003dzh",
+      "iconKey": "C3471.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
@@ -23211,6 +23687,60 @@
     "icon": {
       "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/6c/C9006.png/revision/latest/scale-to-width-down/120?cb\u003d20190909200851\u0026path-prefix\u003dzh",
       "iconKey": "C9006.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "節奏龍弦",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "一年一度的龍刻考驗 - 首次通關獎勵"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+1%",
+    "upAttack": "+1%",
+    "upRecovery": "+1%",
+    "idNorm": "9007",
+    "name": "週年蛋糕龍弦",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%80%B1%E5%B9%B4%E8%9B%8B%E7%B3%95%E9%BE%8D%E5%BC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c1/C9007.png/revision/latest/scale-to-width-down/120?cb\u003d20200123173617\u0026path-prefix\u003dzh",
+      "iconKey": "C9007.png"
     }
   }
 ]
