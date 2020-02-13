@@ -22053,6 +22053,2456 @@
     "rarity": 3,
     "level": 3,
     "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀紋」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3430",
+    "name": "水雲魔刺龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c6/C3430.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055109\u0026path-prefix\u003dzh",
+      "iconKey": "C3430.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀印」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3431",
+    "name": "水雲魔刺龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/3/3a/C3431.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055110\u0026path-prefix\u003dzh",
+      "iconKey": "C3431.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀咒」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3432",
+    "name": "水雲魔刺龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8a/C3432.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055110\u0026path-prefix\u003dzh",
+      "iconKey": "C3432.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀符」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3433",
+    "name": "水雲魔刺龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/82/C3433.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055111\u0026path-prefix\u003dzh",
+      "iconKey": "C3433.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀璃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3434",
+    "name": "水雲魔刺龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/56/C3434.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055111\u0026path-prefix\u003dzh",
+      "iconKey": "C3434.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀刃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3435",
+    "name": "水雲魔刺龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4b/C3435.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055111\u0026path-prefix\u003dzh",
+      "iconKey": "C3435.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為水符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，水屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對火屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀丸」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1326",
+      "1327"
+    ],
+    "cardLimitName": [
+      "血慾永生 ‧ 伊莉莎白",
+      "不生不滅 ‧ 伊莉莎白"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3436",
+    "name": "水雲魔刺龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%B0%B4%E9%9B%B2%E9%AD%94%E5%88%BA%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/12/C3436.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055112\u0026path-prefix\u003dzh",
+      "iconKey": "C3436.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀紋」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3437",
+    "name": "灼熱魔刃龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/9b/C3437.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055112\u0026path-prefix\u003dzh",
+      "iconKey": "C3437.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀印」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3438",
+    "name": "灼熱魔刃龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/c/c8/C3438.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055113\u0026path-prefix\u003dzh",
+      "iconKey": "C3438.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀咒」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3439",
+    "name": "灼熱魔刃龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/15/C3439.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055113\u0026path-prefix\u003dzh",
+      "iconKey": "C3439.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀符」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3440",
+    "name": "灼熱魔刃龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/52/C3440.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055114\u0026path-prefix\u003dzh",
+      "iconKey": "C3440.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀璃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3441",
+    "name": "灼熱魔刃龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f6/C3441.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055114\u0026path-prefix\u003dzh",
+      "iconKey": "C3441.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀刃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3442",
+    "name": "灼熱魔刃龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/e6/C3442.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055114\u0026path-prefix\u003dzh",
+      "iconKey": "C3442.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為火符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，火屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對木屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀丸」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1328",
+      "1329"
+    ],
+    "cardLimitName": [
+      "燧焰熾火 ‧ 潔琪",
+      "命之燃燒 ‧ 潔琪"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3443",
+    "name": "灼熱魔刃龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%81%BC%E7%86%B1%E9%AD%94%E5%88%83%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/7b/C3443.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055115\u0026path-prefix\u003dzh",
+      "iconKey": "C3443.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀紋」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3444",
+    "name": "靈木魔燭龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/2b/C3444.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055115\u0026path-prefix\u003dzh",
+      "iconKey": "C3444.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀印」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3445",
+    "name": "靈木魔燭龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/9/98/C3445.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055116\u0026path-prefix\u003dzh",
+      "iconKey": "C3445.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀咒」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3446",
+    "name": "靈木魔燭龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/8e/C3446.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055116\u0026path-prefix\u003dzh",
+      "iconKey": "C3446.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀符」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3447",
+    "name": "靈木魔燭龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/8/88/C3447.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055117\u0026path-prefix\u003dzh",
+      "iconKey": "C3447.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀璃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3448",
+    "name": "靈木魔燭龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a4/C3448.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055117\u0026path-prefix\u003dzh",
+      "iconKey": "C3448.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀刃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3449",
+    "name": "靈木魔燭龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/fa/C3449.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055117\u0026path-prefix\u003dzh",
+      "iconKey": "C3449.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為木符石"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，木屬性成員的攻擊力提升 50%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對水屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的木符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀丸」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1330",
+      "1331"
+    ],
+    "cardLimitName": [
+      "毒草血妻 ‧ 貝莉",
+      "靈魂枯萎 ‧ 貝莉"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3450",
+    "name": "靈木魔燭龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%9D%88%E6%9C%A8%E9%AD%94%E7%87%AD%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/5f/C3450.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055132\u0026path-prefix\u003dzh",
+      "iconKey": "C3450.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀紋」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3451",
+    "name": "聖緞魔匕龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/6/61/C3451.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055132\u0026path-prefix\u003dzh",
+      "iconKey": "C3451.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀印」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3452",
+    "name": "聖緞魔匕龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f8/C3452.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055133\u0026path-prefix\u003dzh",
+      "iconKey": "C3452.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀咒」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3453",
+    "name": "聖緞魔匕龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/dc/C3453.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055133\u0026path-prefix\u003dzh",
+      "iconKey": "C3453.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀符」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3454",
+    "name": "聖緞魔匕龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f6/C3454.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055134\u0026path-prefix\u003dzh",
+      "iconKey": "C3454.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀璃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3455",
+    "name": "聖緞魔匕龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d8/C3455.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055134\u0026path-prefix\u003dzh",
+      "iconKey": "C3455.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀刃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3456",
+    "name": "聖緞魔匕龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/4e/C3456.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055134\u0026path-prefix\u003dzh",
+      "iconKey": "C3456.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的光符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀丸」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1332",
+      "1333"
+    ],
+    "cardLimitName": [
+      "死亡美學 ‧ 傑克",
+      "殺戮迷思 ‧ 傑克"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3457",
+    "name": "聖緞魔匕龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%B7%9E%E9%AD%94%E5%8C%95%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1c/C3457.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055135\u0026path-prefix\u003dzh",
+      "iconKey": "C3457.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀紋」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3458",
+    "name": "惡靈魔鐮龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/7/73/C3458.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055135\u0026path-prefix\u003dzh",
+      "iconKey": "C3458.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀印」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3459",
+    "name": "惡靈魔鐮龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/24/C3459.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055136\u0026path-prefix\u003dzh",
+      "iconKey": "C3459.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀咒」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3460",
+    "name": "惡靈魔鐮龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/e/ef/C3460.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055136\u0026path-prefix\u003dzh",
+      "iconKey": "C3460.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀符」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3461",
+    "name": "惡靈魔鐮龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/5/57/C3461.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055136\u0026path-prefix\u003dzh",
+      "iconKey": "C3461.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀璃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3462",
+    "name": "惡靈魔鐮龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/0/01/C3462.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055137\u0026path-prefix\u003dzh",
+      "iconKey": "C3462.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀刃」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3463",
+    "name": "惡靈魔鐮龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b1/C3463.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055137\u0026path-prefix\u003dzh",
+      "iconKey": "C3463.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對全體敵人造成 250000 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，魔族成員的攻擊力提升 30%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「銀丸」及 1 張( 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "1334",
+      "1335"
+    ],
+    "cardLimitName": [
+      "淒迷啃魂者 ‧ 陶德",
+      "虛構歡樂 ‧ 陶德"
+    ],
+    "upHp": "0",
+    "upAttack": "+15%",
+    "upRecovery": "0",
+    "idNorm": "3464",
+    "name": "惡靈魔鐮龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E9%9D%88%E9%AD%94%E9%90%AE%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C3464.png/revision/latest/scale-to-width-down/120?cb\u003d20200207055138\u0026path-prefix\u003dzh",
+      "iconKey": "C3464.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
@@ -22299,7 +24749,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": ""
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
       }
     ],
     "attrLimit": "",
@@ -22435,7 +24885,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": ""
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
       }
     ],
     "attrLimit": "",
@@ -22503,7 +24953,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": ""
+        "detail": "成功潛解「尋夢人 ‧ 馬休」後獲得「夢想成真 ‧ 馬休」龍刻武裝自選券 1 張"
       }
     ],
     "attrLimit": "",
