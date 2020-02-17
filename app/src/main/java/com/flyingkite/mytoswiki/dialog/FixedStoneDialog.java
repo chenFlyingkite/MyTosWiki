@@ -95,7 +95,7 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("---ww-w-----w----w-----w-ww---", "8水"))
             , new StoneFix("1854",
                 new StoneDesktop("---lll-----l-----l-----l-----l", "7光"))
-        );
+        );// TODO 2317 暗獸 I. 將 9 個固定位置的符石 ⇒ 轉化為暗獸族強化符石 1 回合內 II. 暗符石兼具 50% 心符石效果
     }
 
     private void initActions() {

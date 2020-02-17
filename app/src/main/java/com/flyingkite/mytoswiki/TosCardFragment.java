@@ -1178,7 +1178,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_fix_keys);
                 }
                 if (sortSpecialRestoreIntoEnchanted.isChecked()) {
-                    accept &= find(key, R.array.cards_runestone_into_enchanted_keys);
+                    accept &= findRegex(key, R.array.cards_runestone_into_enchanted_keys);
                 }
                 if (sortSpecialRestoreAllAttrRandom.isChecked()) {
                     accept &= find(key, R.array.cards_runestone_all_attr_random_keys);
@@ -1229,7 +1229,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_skill_cd_minus_keys);
                 }
                 if (sortSpecialExplodeGenerate.isChecked()) {
-                    accept &= find(key, R.array.cards_explode_generate_keys);
+                    accept &= findRegex(key, R.array.cards_explode_generate_keys);
                 }
                 if (sortSpecialFiveRuneStone.isChecked()) {
                     key = c.idNorm;

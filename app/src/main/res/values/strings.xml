@@ -283,7 +283,8 @@
         <item>引爆</item>
     </string-array>
     <string-array name="cards_explode_generate_keys">
-        <item>以掉落</item>
+        <item>引爆(.{0,30})以掉落</item>
+        <item>引爆(.{0,30}) ⇒ 掉落</item>
     </string-array>
     <string-array name="cards_morecoin_keys">
         <item>戰鬥中所獲得的金幣增加</item>
@@ -416,7 +417,7 @@
         <item>掉落機率降至</item>
     </string-array>
     <string-array name="cards_runestone_into_enchanted_keys">
-        <item>轉化為強化符石</item>
+        <item>轉化為(.{0,15})強化符石</item>
         <!-- #1983 秦始皇 -->
         <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
