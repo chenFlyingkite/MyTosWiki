@@ -4,7 +4,7 @@
     {
       "link": "https://tos.fandom.com/zh/wiki/%E9%AD%94%E7%8E%8B%E7%9A%84%E5%86%8D%E8%87%A8",
       "name": "魔王的再臨",
-      "icon": "0674"
+      "icon": "1947"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E6%97%A5%E6%9C%88%E7%9A%84%E6%92%95%E5%92%AC%E8%80%85",
@@ -19,12 +19,12 @@
     {
       "link": "https://tos.fandom.com/zh/wiki/%E5%85%AB%E8%85%B3%E9%A6%AC%E9%A8%8E%E5%A3%AB",
       "name": "八腳馬騎士",
-      "icon": "0739"
+      "icon": "1310"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E6%93%8D%E7%B8%B1%E6%B3%95%E5%89%87%E7%9A%84%E9%AD%94%E7%8E%8B",
       "name": "操縱法則的魔王",
-      "icon": "0742"
+      "icon": "2215"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E4%B8%96%E7%95%8C%E5%95%83%E8%9D%95%E8%80%85",
@@ -49,22 +49,7 @@
     {
       "link": "https://tos.fandom.com/zh/wiki/%E7%9C%BE%E7%A5%9E%E4%B9%8B%E4%B8%BB",
       "name": "眾神之主",
-      "icon": "1135"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E8%92%BC%E7%A9%B9%E9%A9%9A%E9%9B%B7",
-      "name": "蒼穹驚雷",
-      "icon": "1017"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E6%9B%99%E6%B2%92%E4%B9%8B%E9%97%87",
-      "name": "曙沒之闇",
-      "icon": "1079"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E9%9B%B7%E9%9C%86%E8%BD%9F%E9%B3%B4",
-      "name": "雷霆轟鳴",
-      "icon": "1699"
+      "icon": "2092"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E9%AD%94%E5%A2%83%E7%9A%84%E5%AF%A9%E5%88%A4",
@@ -85,6 +70,16 @@
       "link": "https://tos.fandom.com/zh/wiki/%E7%8E%89%E6%B8%85%E4%B9%8B%E4%B8%BB%E4%BE%86%E8%87%A8",
       "name": "玉清之主來臨",
       "icon": "0542"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E8%92%BC%E7%A9%B9%E9%A9%9A%E9%9B%B7",
+      "name": "蒼穹驚雷",
+      "icon": "1017"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%9B%99%E6%B2%92%E4%B9%8B%E9%97%87",
+      "name": "曙沒之闇",
+      "icon": "1079"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E7%84%A1%E8%B2%8C%E4%B9%8B%E7%A5%9E%E7%9A%84%E8%AA%93%E7%B4%84",
@@ -332,11 +327,6 @@
       "icon": "1654"
     },
     {
-      "link": "https://tos.fandom.com/zh/wiki/%E9%9B%84%E5%BF%83%E5%A3%AF%E5%BF%97",
-      "name": "雄心壯志",
-      "icon": "1687"
-    },
-    {
       "link": "https://tos.fandom.com/zh/wiki/%E9%82%AA%E5%A6%96%E7%9A%84%E8%AA%98%E6%83%91",
       "name": "邪妖的誘惑",
       "icon": "1689"
@@ -345,6 +335,16 @@
       "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%A7%9D%E4%B9%8B%E4%B8%BB%E9%A6%AC%E8%B6%85",
       "name": "羊駝之主馬超",
       "icon": "1688"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E9%9B%84%E5%BF%83%E5%A3%AF%E5%BF%97",
+      "name": "雄心壯志",
+      "icon": "1687"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E9%9B%B7%E9%9C%86%E8%BD%9F%E9%B3%B4",
+      "name": "雷霆轟鳴",
+      "icon": "1699"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E5%A4%B1%E5%8E%BB%E8%87%B3%E8%A6%AA%E7%9A%84%E6%80%A8%E5%BF%B5",
@@ -387,16 +387,6 @@
       "icon": "1854"
     },
     {
-      "link": "https://tos.fandom.com/zh/wiki/%E5%90%9E%E9%A3%9F%E4%BA%BA%E9%A1%9E%E7%9A%84%E8%B2%A0%E9%9D%A2%E6%83%85%E6%84%9F",
-      "name": "吞食人類的負面情感",
-      "icon": "1890"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E5%8A%8D%E8%A1%93%E9%AB%98%E5%BC%B7%E7%9A%84%E7%95%B0%E9%9D%88%E9%A8%8E%E5%A3%AB",
-      "name": "劍術高強的異靈騎士",
-      "icon": "1891"
-    },
-    {
       "link": "https://tos.fandom.com/zh/wiki/%E4%BD%BF%E4%BA%BA%E7%98%8B%E7%8B%82%E7%9A%84%E9%AB%98%E7%86%B1",
       "name": "使人瘋狂的高熱",
       "icon": "1904"
@@ -412,19 +402,114 @@
       "icon": "1938"
     },
     {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%8C%96%E7%9C%BC%E6%AE%BA%E6%88%AE",
+      "name": "挖眼殺戮",
+      "icon": "1939"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%BA%96%E5%A1%B5%E4%B8%8D%E6%9F%93%E4%B9%8B%E9%9D%88",
+      "name": "纖塵不染之靈",
+      "icon": "1986"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%B5%9E%E6%AE%BA%E7%9A%84%E6%B5%AA%E6%BC%AB",
+      "name": "絞殺的浪漫",
+      "icon": "1974"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E8%AB%96%E7%94%A2%E7%94%9F%E5%92%8C%E6%AF%80%E6%BB%85",
+      "name": "論產生和毀滅",
+      "icon": "2024"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%90%86%E5%9E%8B%E7%9A%84%E6%AE%98%E5%BD%B1",
+      "name": "理型的殘影",
+      "icon": "2022"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E8%B3%AA%E9%87%8F%E4%B8%96%E7%95%8C%E7%9A%84%E6%94%AF%E9%85%8D",
+      "name": "質量世界的支配",
+      "icon": "2023"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%BB%A5%E6%84%9B%E6%93%81%E6%8A%B1%E6%96%BD%E8%99%90%E8%80%85",
+      "name": "以愛擁抱施虐者",
+      "icon": "2068"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%B5%A3%E7%B4%97%E4%B8%8B%E7%9A%84%E8%A1%80%E8%86%9A",
+      "name": "浣紗下的血膚",
+      "icon": "2069"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%BA%BA%E5%BD%98%E7%9A%84%E6%BF%83%E6%83%85%E5%AF%86%E8%AA%9E",
+      "name": "人彘的濃情密語",
+      "icon": "2067"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%A8%B9%E7%90%B4%E7%9A%84%E6%BF%9F%E4%B8%96%E5%BC%A6%E9%9F%B3",
+      "name": "樹琴的濟世弦音",
+      "icon": "2138"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%BB%99%E8%A1%93%E5%A4%A9%E6%89%8D%E7%9A%84%E5%82%B2%E7%84%B6",
+      "name": "仙術天才的傲然",
+      "icon": "2139"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%BB%A5%E7%98%B4%E7%82%8E%E6%B7%B9%E6%B2%92%E8%89%AF%E7%9F%A5",
+      "name": "以瘴炎淹沒良知",
+      "icon": "2137"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%A3%9E%E6%AD%BB%E7%A5%9E%E7%B6%93",
+      "name": "壞死神經",
+      "icon": "2172"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%96%BE%E9%A2%A8%E9%AD%94%E5%BD%B1",
+      "name": "疾風魔影",
+      "icon": "2212"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%B1%88%E5%B1%85%E7%AC%AC%E4%BA%8C%E7%9A%84%E5%B1%88%E8%BE%B1",
+      "name": "屈居第二的屈辱",
+      "icon": "2233"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E9%99%8D%E8%87%A8%E5%AD%B8%E9%99%A2%E7%9A%84%E6%95%91%E6%98%9F",
+      "name": "降臨學院的救星",
+      "icon": "2232"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%9C%8B%E7%8E%8B%E6%89%80%E8%83%8C%E8%B2%A0%E7%9A%84%E9%87%8D%E6%93%94",
+      "name": "國王所背負的重擔",
+      "icon": "2234"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%84%9B%E6%83%A1%E4%BD%9C%E5%8A%87%E7%9A%84%E4%BB%99%E5%B0%87%E5%80%91",
+      "name": "愛惡作劇的仙將們",
+      "icon": "2301"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%8C%97%E6%96%97%E6%98%9F%E7%9A%84%E5%B9%95%E5%BE%8C%E4%B8%BB%E8%85%A6",
+      "name": "北斗星的幕後主腦",
+      "icon": "2302"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%9C%A8%E6%B0%B8%E7%B5%95%E7%9A%84%E9%BB%91%E6%9A%97%E4%B8%AD",
+      "name": "在永絕的黑暗中",
+      "icon": "2315"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%B4%8B%E9%BE%8D%E4%B8%80%E6%97%8F%E7%9A%84%E9%81%B7%E7%A7%BB%E8%A8%88%E5%8A%83",
+      "name": "紋龍一族的遷移計劃",
+      "icon": "2314"
+    },
+    {
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%A0%E6%B4%8B%E7%9A%84%E7%8E%8B%E8%80%85",
       "name": "遠洋的王者",
       "icon": "0448"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E5%B7%A8%E6%98%9F%E7%9A%84%E5%90%9B%E8%87%A8",
-      "name": "巨星的君臨",
-      "icon": "0616"
-    },
-    {
-      "link": "https://tos.fandom.com/zh/wiki/%E7%AA%AE%E5%AF%8C%E7%BF%81%E7%9A%84%E5%AE%88%E8%AD%B7%E7%A5%9E",
-      "name": "窮富翁的守護神",
-      "icon": "1210"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E5%82%B2%E5%A5%B3%E5%B7%AB%E7%9A%84%E5%8C%96%E8%BA%AB",
@@ -437,11 +522,6 @@
       "icon": "8022"
     },
     {
-      "link": "https://tos.fandom.com/zh/wiki/%E5%A5%AA%E9%AD%82%E9%AD%85%E9%9F%B3",
-      "name": "奪魂魅音",
-      "icon": "9016"
-    },
-    {
       "link": "https://tos.fandom.com/zh/wiki/%E5%A3%9E%E8%9B%8B%E7%9A%84%E6%83%A1%E8%A1%8C",
       "name": "壞蛋的惡行",
       "icon": "8045"
@@ -450,6 +530,16 @@
       "link": "https://tos.fandom.com/zh/wiki/%E6%89%80%E7%BE%85%E9%96%80%E7%9A%84%E6%82%B2%E5%8A%87",
       "name": "所羅門的悲劇",
       "icon": "9015"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%A5%AA%E9%AD%82%E9%AD%85%E9%9F%B3",
+      "name": "奪魂魅音",
+      "icon": "9016"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%B7%A8%E6%98%9F%E7%9A%84%E5%90%9B%E8%87%A8",
+      "name": "巨星的君臨",
+      "icon": "0616"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E9%9E%A0%E8%BA%AC%E7%9B%A1%E7%98%81%E7%9A%84%E5%BF%A0%E8%87%A3",
@@ -512,6 +602,11 @@
       "icon": "1073"
     },
     {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%AA%AE%E5%AF%8C%E7%BF%81%E7%9A%84%E5%AE%88%E8%AD%B7%E7%A5%9E",
+      "name": "窮富翁的守護神",
+      "icon": "1210"
+    },
+    {
       "link": "https://tos.fandom.com/zh/wiki/%E8%88%88%E9%9B%B2%E9%9B%A8%E7%9A%84%E8%9B%9F",
       "name": "興雲雨的蛟",
       "icon": "1498"
@@ -537,8 +632,8 @@
       "icon": "1517"
     },
     {
-      "link": "https://tos.fandom.com/zh/wiki/%E7%84%A1%E6%B3%95%E8%A7%B8%E6%91%B8%E7%9A%84%E5%86%B7%E8%B1%94",
-      "name": "無法觸摸的冷豔",
+      "link": "https://tos.fandom.com/zh/wiki/%E9%82%AA%E5%B0%8A%E9%81%93%E4%B9%8B%E4%B8%BB",
+      "name": "邪尊道之主",
       "icon": "1519"
     },
     {
@@ -580,6 +675,81 @@
       "link": "https://tos.fandom.com/zh/wiki/%E5%90%9E%E9%A3%9F%E4%BA%BA%E9%A1%9E%E7%9A%84%E8%B2%A0%E9%9D%A2%E6%83%85%E6%84%9F",
       "name": "吞食人類的負面情感",
       "icon": "1890"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%8A%8D%E8%A1%93%E9%AB%98%E5%BC%B7%E7%9A%84%E7%95%B0%E9%9D%88%E9%A8%8E%E5%A3%AB",
+      "name": "劍術高強的異靈騎士",
+      "icon": "1891"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%B6%88%E5%A4%B1%E6%96%BC%E4%B8%83%E6%9C%88%E4%B8%83%E6%97%A5%E7%9A%84%E5%B7%A8%E9%BE%8D",
+      "name": "消失於七月七日的巨龍",
+      "icon": "1964"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%B8%83%E6%98%9F%E5%8A%8D%E7%9A%84%E5%88%B6%E8%A3%81",
+      "name": "七星劍的制裁",
+      "icon": "1963"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%84%A1%E5%8F%AF%E5%8C%B9%E6%95%B5%E7%9A%84%E9%BB%91%E9%AD%94%E6%B3%95",
+      "name": "無可匹敵的黑魔法",
+      "icon": "1965"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%9C%80%E6%8E%A5%E8%BF%91%E7%A5%9E%E7%9A%84%E7%94%B7%E4%BA%BA",
+      "name": "最接近神的男人",
+      "icon": "2120"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%89%8D%E4%BB%BB%E6%95%99%E7%9A%87%E7%9A%84%E7%94%A6%E9%86%92",
+      "name": "前任教皇的甦醒",
+      "icon": "2122"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%95%99%E7%9A%87%E7%9A%84%E7%9C%9F%E9%9D%A2%E7%9B%AE",
+      "name": "教皇的真面目",
+      "icon": "2121"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%BC%86%E9%BB%91%E7%9A%84%E7%94%B2%E6%AE%BC",
+      "name": "漆黑的甲殼",
+      "icon": "2160"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%AD%A3%E7%BE%A9%E7%9A%84%E5%AE%BF%E6%95%B5",
+      "name": "正義的宿敵",
+      "icon": "2161"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%83%A1%E5%8B%A2%E5%8A%9B%E7%9A%84%E9%87%8E%E5%BF%83",
+      "name": "惡勢力的野心",
+      "icon": "2162"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%97%8B%E8%BD%89%E7%9B%B4%E8%87%B3%E5%8E%AD%E5%80%A6",
+      "name": "旋轉直至厭倦",
+      "icon": "2195"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%B8%B1%E8%BA%AB%E4%B8%80%E8%B7%B3",
+      "name": "縱身一跳",
+      "icon": "2194"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%84%A1%E4%BA%BA%E5%8F%AF%E6%93%8B%E7%9A%84%E5%A8%81%E5%8A%9B",
+      "name": "無人可擋的威力",
+      "icon": "2291"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E9%A9%85%E9%80%90%E4%B8%8D%E6%B3%95%E9%81%8A%E6%88%B2%E8%80%85",
+      "name": "驅逐不法遊戲者",
+      "icon": "2292"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%B8%80%E8%A7%B8%E5%8D%B3%E7%A0%B4%E7%9A%84%E7%81%AB%E8%97%A5",
+      "name": "一觸即破的火藥",
+      "icon": "2290"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E8%B3%A2%E8%80%85%E7%9A%84%E8%80%83%E9%A9%97",
