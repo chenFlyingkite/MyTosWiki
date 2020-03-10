@@ -140,7 +140,7 @@
     }
   },
   {
-    "rarity": 2,
+    "rarity": 3,
     "level": 2,
     "mode": "裂空龍刃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
@@ -163,12 +163,12 @@
     "name": "銀刃",
     "link": "https://tos.fandom.com/zh/wiki/%E9%8A%80%E5%88%83",
     "icon": {
-      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C2011.png/revision/latest/scale-to-width-down/120?cb\u003d20190213155412\u0026path-prefix\u003dzh",
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/2/23/C2011.png/revision/latest/scale-to-width-down/120?cb\u003d20200225133552\u0026path-prefix\u003dzh",
       "iconKey": "C2011.png"
     }
   },
   {
-    "rarity": 2,
+    "rarity": 3,
     "level": 2,
     "mode": "鏡像龍丸",
     "charge": "消除任何符石 (只計算首批消除的符石)",
@@ -191,7 +191,7 @@
     "name": "銀丸",
     "link": "https://tos.fandom.com/zh/wiki/%E9%8A%80%E4%B8%B8",
     "icon": {
-      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/12/C2012.png/revision/latest/scale-to-width-down/120?cb\u003d20190213155413\u0026path-prefix\u003dzh",
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/12/C2012.png/revision/latest/scale-to-width-down/120?cb\u003d20200225133554\u0026path-prefix\u003dzh",
       "iconKey": "C2012.png"
     }
   },
@@ -2321,7 +2321,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除一組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
+        "detail": "消除 1 組 6 粒或以上的木符石，龍類攻擊力提升 1.15 倍"
       },
       {
         "level": 3,
@@ -21227,7 +21227,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21249,7 +21249,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21287,7 +21287,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "轉動龍印",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21309,7 +21309,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21347,7 +21347,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "破碎龍咒",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21369,7 +21369,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21407,7 +21407,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "映照龍符",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21429,7 +21429,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21467,7 +21467,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "落影龍璃",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21489,7 +21489,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21527,7 +21527,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "裂空龍刃",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21549,7 +21549,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21587,7 +21587,7 @@
     "rarity": 2,
     "level": 2,
     "mode": "鏡像龍丸",
-    "charge": "消除水符石 (只計算首批消除的符石)",
+    "charge": "消除火符石 (只計算首批消除的符石)",
     "craftSkill": [
       {
         "level": 1,
@@ -21609,7 +21609,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的火符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21669,7 +21669,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21727,7 +21727,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21785,7 +21785,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21843,7 +21843,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21901,7 +21901,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -21959,7 +21959,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -22017,7 +22017,7 @@
       {
         "level": 2,
         "score": 0,
-        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+        "detail": "消除 1 組 3 粒或以上的暗符石，自身攻擊力提升 1.2 倍"
       },
       {
         "level": 3,
@@ -25403,8 +25403,62 @@
     "name": "聖翼之鈴龍咒",
     "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%BF%BC%E4%B9%8B%E9%88%B4%E9%BE%8D%E5%92%92",
     "icon": {
-      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C7031.png/revision/latest/scale-to-width-down/120?cb\u003d20191119123537\u0026path-prefix\u003dzh",
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/b/b4/C7031.png/revision/latest/scale-to-width-down/120?cb\u003d20200225124550\u0026path-prefix\u003dzh",
       "iconKey": "C7031.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 15 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "眾神紀錄 ‧ 惡夢夜幕 - 首次通關獎勵"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於神族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "0",
+    "upRecovery": "+5%",
+    "idNorm": "7032",
+    "name": "聖翼之鈴龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%81%96%E7%BF%BC%E4%B9%8B%E9%88%B4%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1d/C7032.png/revision/latest/scale-to-width-down/120?cb\u003d20200225122752\u0026path-prefix\u003dzh",
+      "iconKey": "C7032.png"
     }
   },
   {

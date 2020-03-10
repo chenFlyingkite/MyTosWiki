@@ -223,6 +223,42 @@
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%89%BD%E6%82%8D%E7%9A%84%E9%AC%A5%E5%A3%AB",
       "name": "遺跡特許 ‧ 剽悍的鬥士",
       "icon": "1552"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%A4%A9%E4%BD%BF%E9%95%B7%E7%9A%84%E9%81%BA%E9%A1%98",
+      "name": "遺跡特許 ‧ 天使長的遺願",
+      "icon": "0998"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E6%B3%95%E5%89%87%E7%9A%84%E5%B9%B3%E8%A1%A1",
+      "name": "遺跡特許 ‧ 法則的平衡",
+      "icon": "1188"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E5%85%83%E7%B4%A0%E6%B5%81%E5%90%91%E7%9A%84%E5%B0%8E%E5%BC%95",
+      "name": "遺跡特許 ‧ 元素流向的導引",
+      "icon": "1716"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E7%A3%85%E7%A4%B4%E6%96%BC%E5%A4%A9%E5%9C%B0%E4%B9%8B%E9%96%93",
+      "name": "遺跡特許 ‧ 磅礴於天地之間",
+      "icon": "1753"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E7%A1%AF%E6%B7%AC%E5%A2%A8%E6%BF%83%E8%AD%B7%E4%BB%99%E5%A2%83",
+      "name": "遺跡特許 ‧ 硯淬墨濃護仙境",
+      "icon": "1754"
+    },
+    {
+      "coin": 250000,
+      "link": "https://tos.fandom.com/zh/wiki/%E9%81%BA%E8%B7%A1%E7%89%B9%E8%A8%B1_%E2%80%A7_%E9%9D%9C%E8%AC%90%E4%B8%AD%E8%A6%93%E8%B7%AF%E5%B0%8B%E9%81%93",
+      "name": "遺跡特許 ‧ 靜謐中覓路尋道",
+      "icon": "1755"
     }
   ],
   [

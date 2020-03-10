@@ -100,11 +100,12 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/csdCardTitle"
                             style="@style/sortTitle"
                             android:text="@string/card_series_seals"/>
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/csdCardSeries2"
+                            android:id="@+id/csdCardSeries"
                             android:layout_width="@dimen/t180dp"
                             android:layout_height="match_parent"
                             android:scrollbars="vertical|horizontal"

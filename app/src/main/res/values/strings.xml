@@ -855,7 +855,7 @@
     <string name="card_luck_abnormal">偏歐洲 (低機率卡片比預期多)\n或非洲 (高機率卡片比預期多)</string>
     <string name="card_pearson_h0">H0：此樣本中已發生事件的次數分配會遵守指定的理論分配</string>
     <string name="card_pearson_limit">如果個別欄位的期望次數太低，會使機率分配無法近似於卡方分配。\n一般要求：自由度 df &gt; 1時，期望次數小於5的欄位不多於總欄位的20%。</string>
-    <string name="card_series_seals">抽卡機系列</string>
+    <string name="card_series_seals">抽卡機系列 (%d 個系列)</string>
     <string name="card_series_sengoku_samurai">武者列魂</string>
     <string name="card_series_hindu_gods">印度神</string>
     <string name="card_series_kono_subarashi">美好世界</string>
@@ -868,8 +868,9 @@
     <string name="card_series_giant_light">光之巨人、超人</string>
     <string name="card_series_virtual_singers">虛擬歌手</string>
     <string name="card_series_minerelves">魔幻寶石</string>
-    <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>遙古三族
+    <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>
     <string name="card_series_olden_trio">遙古三族</string>
+    <string name="card_series_truth_seekers">真理追尋者</string>
 
     <string name="stones_same_count">符石數目相同</string>
 

@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
 import com.flyingkite.library.widget.Library;
+import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
@@ -33,6 +34,7 @@ import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
+import com.flyingkite.mytoswiki.data.seal.TruthSeekers;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.seal.VirtualSingers;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -72,6 +74,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_truth_seekers, new TruthSeekers()));
         sealSeries.add(new SealItem(R.string.card_series_olden_trio, new OldenTrio()));
         sealSeries.add(new SealItem(R.string.card_series_phantom_troupe, new PhantomTroupe()));
         sealSeries.add(new SealItem(R.string.card_series_minerelves, new Minerelves()));
@@ -247,7 +250,7 @@ public class CardSealDialog extends BaseTosDialog {
     }
 
     private void initSeries() {
-        seriesLibrary = new Library<>(findViewById(R.id.csdCardSeries2), true);
+        seriesLibrary = new Library<>(findViewById(R.id.csdCardSeries), true);
         SealSeriesAdapter a = new SealSeriesAdapter();
         a.setDataList(sealSeries);
         a.setItemListener(new SealSeriesAdapter.ItemListener() {
@@ -261,6 +264,8 @@ public class CardSealDialog extends BaseTosDialog {
             }
         });
         seriesLibrary.setViewAdapter(a);
+        TextView title = findViewById(R.id.csdCardTitle);
+        title.setText(App.res().getString(R.string.card_series_seals, sealSeries.size()));
     }
 
     private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
