@@ -30,6 +30,7 @@ import com.flyingkite.mytoswiki.data.seal.Minerelves;
 import com.flyingkite.mytoswiki.data.seal.OldenTrio;
 import com.flyingkite.mytoswiki.data.seal.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
+import com.flyingkite.mytoswiki.data.seal.Rules;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
@@ -74,6 +75,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_0421, new Rules()));
         sealSeries.add(new SealItem(R.string.card_series_truth_seekers, new TruthSeekers()));
         sealSeries.add(new SealItem(R.string.card_series_olden_trio, new OldenTrio()));
         sealSeries.add(new SealItem(R.string.card_series_phantom_troupe, new PhantomTroupe()));

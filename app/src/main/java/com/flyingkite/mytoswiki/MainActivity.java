@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity implements
             data.add(WebDialog.TAG + "_2");
             data.add(WebDialog.TAG + "_3");
         }
-        data.add(TosCardMyFragment.TAG);
+        //data.add(TosCardMyFragment.TAG);
         pagerAdapter.setDataList(data);
 
         p.setAdapter(pagerAdapter);
@@ -142,7 +142,7 @@ public class MainActivity extends BaseActivity implements
             }
 
             Bundle b = new Bundle();
-            Fragment f;
+            Fragment f = null;
             FragmentManager fm = getFragmentManager();
 
             v.setId(id);
@@ -152,18 +152,25 @@ public class MainActivity extends BaseActivity implements
                 b.putString(WebDialog.BUNDLE_LINK, webPin.get(position));
                 b.putBoolean(WebDialog.BUNDLE_PIN, true);
             } else {
-                if (position == 0) {
-                    TosCardFragment fg = new TosCardFragment();
-                    f = fg;
-                } else {
-                    TosCardMyFragment g = new TosCardMyFragment();
-                    f = g;
+                String tag = itemOf(position);
+                switch (tag) {
+                    case TosCardFragment.TAG:
+                        TosCardFragment fg = new TosCardFragment();
+                        f = fg;
+                        break;
+                    case TosCardMyFragment.TAG:
+                        TosCardMyFragment g = new TosCardMyFragment();
+                        f = g;
+                        break;
+                    default:
                 }
             }
 
-            f.setArguments(b);
-            fm.beginTransaction().replace(id, f, itemOf(position)).commitAllowingStateLoss();
-            fm.executePendingTransactions();
+            if (f != null) {
+                f.setArguments(b);
+                fm.beginTransaction().replace(id, f, itemOf(position)).commitAllowingStateLoss();
+                fm.executePendingTransactions();
+            }
         }
 
         @Override

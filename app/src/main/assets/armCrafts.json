@@ -24976,6 +24976,482 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3472",
+    "name": "石中羽龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/f/f1/C3472.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050032\u0026path-prefix\u003dzh",
+      "iconKey": "C3472.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3473",
+    "name": "石中羽龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/1/1f/C3473.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050033\u0026path-prefix\u003dzh",
+      "iconKey": "C3473.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3474",
+    "name": "石中羽龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/a/a1/C3474.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050033\u0026path-prefix\u003dzh",
+      "iconKey": "C3474.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3475",
+    "name": "石中羽龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/da/C3475.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050034\u0026path-prefix\u003dzh",
+      "iconKey": "C3475.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3476",
+    "name": "石中羽龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/d0/C3476.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050034\u0026path-prefix\u003dzh",
+      "iconKey": "C3476.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3477",
+    "name": "石中羽龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/4/43/C3477.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050035\u0026path-prefix\u003dzh",
+      "iconKey": "C3477.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "召喚獸受到攻擊次數",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "消耗全體敵人 30% 總生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，75% 的攻擊傷害無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 3 粒或以上的水符石，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 6 粒或以上的水符石，自身攻擊力提升 2.25 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2306"
+    ],
+    "cardLimitName": [
+      "卿雲護庇 ‧ 蒼璧"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3478",
+    "name": "石中羽龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%9F%B3%E4%B8%AD%E7%BE%BD%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://vignette.wikia.nocookie.net/tos/images/d/db/C3478.png/revision/latest/scale-to-width-down/120?cb\u003d20200420050035\u0026path-prefix\u003dzh",
+      "iconKey": "C3478.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
