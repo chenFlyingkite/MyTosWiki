@@ -54,6 +54,7 @@ public class SkillEatingDialog extends BaseTosDialog {
     private TextView toRnd;
     private TextView needRnd;
     private CheckBox use600;
+    private CheckBox use50;
     private TextView eatCard;
     private Library<CardTileAdapter> card600;
 
@@ -164,7 +165,11 @@ public class SkillEatingDialog extends BaseTosDialog {
         toRnd = findViewById(R.id.skillToRound);
         needRnd = findViewById(R.id.skillNeedRound);
         use600 = findViewById(R.id.skillUse600);
+        use50 = findViewById(R.id.skillUse50);
         eatCard = findViewById(R.id.skillEatCard);
+        use50.setOnClickListener((v1) -> {
+            computeEatCard();
+        });
         use600.setOnClickListener((v1) -> {
             computeEatCard();
         });
@@ -229,7 +234,13 @@ public class SkillEatingDialog extends BaseTosDialog {
             q1 = 0;
             q2 = need / 200;
         }
-        eatCard.setText(getString(R.string.skill_eat_card, q1, q2, r));
+        if (use50.isChecked()) {
+            int q3 = r / 50;
+            r = need % 50;
+            eatCard.setText(getString(R.string.skill_eat_card_2, q1, q2, q3, r));
+        } else {
+            eatCard.setText(getString(R.string.skill_eat_card, q1, q2, r));
+        }
     }
 
     private void updateFromData() {

@@ -45,8 +45,10 @@ public class FixedStoneDialog extends BaseTosDialog {
         Collections.addAll(stones,
               //                           1         2         3
               //                  123456789012345678901234567890
-            new StoneFix("2232",
-                new StoneDesktop("fhlhwffeldwffeldwffeldwfhehdhf", "心6個 + 五屬各4個"))
+            new StoneFix("1963",
+                new StoneDesktop("wfeldwwfeldwwfeldwwfeldwhhhhhh", "心6個 + 五屬各4個"))
+            , new StoneFix("2232",
+                new StoneDesktop("fhlhwhfeldwffeldwffeldwfhehdhf", "心6個 + 五屬各4個"))
             , new StoneFix("2158",
                 new StoneDesktop("hdwefhhdweflhdweflhdwefldwefll", "心+五屬各5個"))
             , new StoneFix("1719",

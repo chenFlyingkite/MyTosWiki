@@ -148,11 +148,18 @@
                     android:text="@string/skill_eat600"
                     android:textSize="@dimen/t15dp"/>
 
+                <CheckBox
+                    android:id="@+id/skillUse50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/t10dp"
+                    android:text="@string/skill_eat50"
+                    android:textSize="@dimen/t15dp"/>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/skillCard600"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
             <TextView

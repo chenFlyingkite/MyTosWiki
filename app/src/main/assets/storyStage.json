@@ -5,32 +5,32 @@
       {
         "link": "https://tos.fandom.com/zh/wiki/%E8%80%80%E4%B9%8B%E8%99%95%E5%A5%B3%E5%AE%AE",
         "name": "耀之處女宮",
-        "icon": "0821"
+        "icon": "0366"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%85%89%E4%B9%8B%E7%8D%85%E5%AD%90%E5%AE%AE",
         "name": "光之獅子宮",
-        "icon": "0820"
+        "icon": "0364"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%B9%BD%E4%B9%8B%E5%B7%A8%E8%9F%B9%E5%AE%AE",
         "name": "幽之巨蟹宮",
-        "icon": "0819"
+        "icon": "0362"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E9%97%87%E4%B9%8B%E9%9B%99%E5%AD%90%E5%AE%AE",
         "name": "闇之雙子宮",
-        "icon": "0818"
+        "icon": "0360"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%82%8E%E4%B9%8B%E9%87%91%E7%89%9B%E5%AE%AE",
         "name": "炎之金牛宮",
-        "icon": "0817"
+        "icon": "0358"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E8%B5%A4%E4%B9%8B%E7%99%BD%E7%BE%8A%E5%AE%AE",
         "name": "赤之白羊宮",
-        "icon": "0816"
+        "icon": "0356"
       }
     ]
   },
@@ -40,32 +40,32 @@
       {
         "link": "https://tos.fandom.com/zh/wiki/%E6%B5%B7%E4%B9%8B%E9%9B%99%E9%AD%9A%E5%AE%AE",
         "name": "海之雙魚宮",
-        "icon": "0827"
+        "icon": "0378"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E6%B8%85%E4%B9%8B%E6%B0%B4%E7%93%B6%E5%AE%AE",
         "name": "清之水瓶宮",
-        "icon": "0826"
+        "icon": "0376"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%BF%A0%E4%B9%8B%E5%B1%B1%E7%BE%8A%E5%AE%AE",
         "name": "翠之山羊宮",
-        "icon": "0825"
+        "icon": "0374"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E6%A3%AE%E4%B9%8B%E4%BA%BA%E9%A6%AC%E5%AE%AE",
         "name": "森之人馬宮",
-        "icon": "0824"
+        "icon": "0372"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E6%AF%92%E4%B9%8B%E5%A4%A9%E8%A0%8D%E5%AE%AE",
         "name": "毒之天蠍宮",
-        "icon": "0823"
+        "icon": "0370"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%BE%A9%E4%B9%8B%E5%A4%A9%E7%A7%A4%E5%AE%AE",
         "name": "義之天秤宮",
-        "icon": "0822"
+        "icon": "0368"
       }
     ]
   },
@@ -75,27 +75,27 @@
       {
         "link": "https://tos.fandom.com/zh/wiki/%E9%8C%A0%E5%85%89%E5%9C%93%E8%A6%BA%E5%AF%BA",
         "name": "錠光圓覺寺",
-        "icon": "1042"
+        "icon": "0534"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E9%9B%B7%E7%BD%A1%E4%BB%99%E9%81%93%E8%A7%80",
         "name": "雷罡仙道觀",
-        "icon": "1045"
+        "icon": "0540"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E8%87%BA%E5%A4%AA%E5%85%AC%E5%BB%9F",
         "name": "神臺太公廟",
-        "icon": "1044"
+        "icon": "0538"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E5%B0%8A%E5%A4%AA%E5%B8%AB%E5%BA%A7",
         "name": "天尊太師座",
-        "icon": "1041"
+        "icon": "0532"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E6%B8%85%E6%BA%90%E4%BA%8C%E9%83%8E%E5%BA%AD",
         "name": "清源二郎庭",
-        "icon": "1043"
+        "icon": "0536"
       }
     ]
   },
@@ -135,27 +135,27 @@
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%85%89%E7%8D%84%E7%9A%84%E7%81%AB",
         "name": "煉獄的火",
-        "icon": "1127"
+        "icon": "0729"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E9%8C%AF%E5%90%91%E7%9A%84%E9%A2%A8",
         "name": "錯向的風",
-        "icon": "1128"
+        "icon": "0731"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%AE%88%E5%80%99%E7%9A%84%E5%BD%B1",
         "name": "守候的影",
-        "icon": "1130"
+        "icon": "0735"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%AD%A4%E5%AF%82%E7%9A%84%E9%9B%AA",
         "name": "孤寂的雪",
-        "icon": "1126"
+        "icon": "0727"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E5%B8%8C%E6%9C%9B%E7%9A%84%E5%85%89",
         "name": "希望的光",
-        "icon": "1129"
+        "icon": "0733"
       }
     ]
   },
@@ -223,19 +223,9 @@
     "group": "天竺之巔",
     "stages": [
       {
-        "link": "https://tos.fandom.com/zh/wiki/%E6%B2%99%E5%83%A7%E4%B9%8B%E9%86%89",
-        "name": "沙僧之醉",
-        "icon": "1666"
-      },
-      {
-        "link": "https://tos.fandom.com/zh/wiki/%E9%87%91%E8%A7%92%E8%88%87%E9%8A%80%E8%A7%92%E4%B9%8B%E6%82%B2",
-        "name": "金角與銀角之悲",
-        "icon": "1667"
-      },
-      {
-        "link": "https://tos.fandom.com/zh/wiki/%E8%B1%AC%E5%85%AB%E6%88%92%E4%B9%8B%E6%88%80",
-        "name": "豬八戒之戀",
-        "icon": "1668"
+        "link": "https://tos.fandom.com/zh/wiki/%E8%9C%98%E8%9B%9B%E7%B2%BE%E4%B9%8B%E7%97%B4",
+        "name": "蜘蛛精之痴",
+        "icon": "1670"
       },
       {
         "link": "https://tos.fandom.com/zh/wiki/%E7%99%BD%E9%AA%A8%E7%B2%BE%E4%B9%8B%E5%96%84",
@@ -243,9 +233,19 @@
         "icon": "1669"
       },
       {
-        "link": "https://tos.fandom.com/zh/wiki/%E8%9C%98%E8%9B%9B%E7%B2%BE%E4%B9%8B%E7%97%B4",
-        "name": "蜘蛛精之痴",
-        "icon": "1670"
+        "link": "https://tos.fandom.com/zh/wiki/%E8%B1%AC%E5%85%AB%E6%88%92%E4%B9%8B%E6%88%80",
+        "name": "豬八戒之戀",
+        "icon": "1668"
+      },
+      {
+        "link": "https://tos.fandom.com/zh/wiki/%E9%87%91%E8%A7%92%E8%88%87%E9%8A%80%E8%A7%92%E4%B9%8B%E6%82%B2",
+        "name": "金角與銀角之悲",
+        "icon": "1667"
+      },
+      {
+        "link": "https://tos.fandom.com/zh/wiki/%E6%B2%99%E5%83%A7%E4%B9%8B%E9%86%89",
+        "name": "沙僧之醉",
+        "icon": "1666"
       }
     ]
   },

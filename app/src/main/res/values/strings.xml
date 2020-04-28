@@ -269,6 +269,8 @@
     <string name="cards_regardless_of_burning">無視「燃燒」</string>
     <string name="cards_regardless_of_sticky">無視「黏腐」</string>
     <string name="cards_electrified_runestone">電擊符石</string>
+    <string name="cards_self_column">自身直行</string>
+    <string name="cards_regard_puzzle">無視指定形狀盾</string>
 
     <string-array name="cards_freemove_keys">
         <item>可任意移動符石而不會發動消除</item>
@@ -492,6 +494,13 @@
     <string-array name="cards_cards_electrified_runestone_key">
         <item>電擊符石</item>
     </string-array>
+    <string-array name="cards_self_column_key">
+        <item>自身直行</item>
+    </string-array>
+    <string-array name="cards_regard_puzzle_key">
+        <item>無視(.{0,10})指定形狀盾</item>
+    </string-array>
+    cards_regard_puzzle
     <!-- 源生混沌 ‧ 倪克斯, 聖杯之永息 · 艾莉亞, 超人ORB, 盈蝶線牽 ‧ 鏡音鈴與鏡音連 -->
     <string-array name="cards_five_attribute_runestone_keys">
         <item>1564</item>
@@ -761,8 +770,10 @@
     <string name="monster_eat_title">卡片堆肥表</string>
 
     <string name="skill_eat">吃技</string>
+    <string name="skill_eat50">吃50</string>
     <string name="skill_eat600">吃600</string>
     <string name="skill_eat_card">600 = %d 張, 200 = %d 張, 餘 %d</string>
+    <string name="skill_eat_card_2">600 = %d 張, 200 = %d 張, 50 = %d 張, 餘 %d</string>
     <string name="skill_eat_title">吃技計算機</string>
     <string name="sumRound">總回合</string>
     <string name="needRound">需要回合</string>

@@ -140,6 +140,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialElectrifiedRuneStone;
     private CheckBox sortSpecialRegardlessBurning;
     private CheckBox sortSpecialRegardlessSticky;
+    private CheckBox sortSpecialSelfColumn;
+    private CheckBox sortSpecialRegardPuzzle;
     // 提升能力
     private ViewGroup sortImprove;
     private CheckBox sortImproveNo;
@@ -523,6 +525,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialElectrifiedRuneStone = menu.findViewById(R.id.sortSpecialElectrifiedRuneStone);
         sortSpecialRegardlessBurning = menu.findViewById(R.id.sortSpecialRegardlessBurning);
         sortSpecialRegardlessSticky = menu.findViewById(R.id.sortSpecialRegardlessSticky);
+        sortSpecialSelfColumn = menu.findViewById(R.id.sortSpecialSelfColumn);
+        sortSpecialRegardPuzzle = menu.findViewById(R.id.sortSpecialRegardPuzzle);
 
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
@@ -1246,6 +1250,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialRegardlessSticky.isChecked()) {
                     accept &= findRegex(key, R.array.cards_regardless_of_sticky_key);
+                }
+                if (sortSpecialSelfColumn.isChecked()) {
+                    accept &= findRegex(key, R.array.cards_self_column_key);
+                }
+                if (sortSpecialRegardPuzzle.isChecked()) {
+                    accept &= findRegex(key, R.array.cards_regard_puzzle_key);
                 }
             }
             return accept;
