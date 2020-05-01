@@ -23,7 +23,7 @@ public interface JsoupUtil {
             if (true) {
                 doc = Jsoup.connect(link).timeout(60_000).maxBodySize(0).get();
             } else {
-                //doc = getByOkHttp(link);
+                //doc = OkHttpUtil.getByOkHttp(link);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -32,27 +32,4 @@ public interface JsoupUtil {
         return doc;
     }
 
-    default String find(String src, int pos, String head, String tail) {
-        int a = src.indexOf(head, pos);
-        if (a < 0) return "";
-        int b = src.indexOf(tail, a);
-
-        return src.substring(a + head.length(), b);
-    }
-
-//
-//    private Document getByOkHttp(String link) {
-//        OkHttpClient c = new OkHttpClient();
-//        Request r = new Request.Builder().url(link).build();
-//        ResponseBody rb = null;
-//        try {
-//            rb = c.newCall(r).execute().body();
-//            if (rb != null) {
-//                return Jsoup.parse(rb.string());
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
 }

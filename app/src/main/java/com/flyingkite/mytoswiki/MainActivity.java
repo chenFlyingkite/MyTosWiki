@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity implements
             data.add(WebDialog.TAG + "_2");
             data.add(WebDialog.TAG + "_3");
         }
-        //data.add(TosCardMyFragment.TAG);
+        data.add(TosCardMyFragment.TAG);
         pagerAdapter.setDataList(data);
 
         p.setAdapter(pagerAdapter);

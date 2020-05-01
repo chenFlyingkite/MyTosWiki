@@ -13,29 +13,67 @@
         android:background="@color/grey3a">
 
         <LinearLayout
+            android:id="@+id/tosMyInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/sortTitle"
+                    android:text="@string/uid"/>
+
+                <EditText
+                    android:id="@+id/tosMyUid"
+                    android:layout_width="@dimen/t120dp"
+                    android:layout_height="wrap_content"
+                    style="@style/sortTitle"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/greyd"
+                    android:inputType="number"
+                    android:hint="@string/enterUid"
+                    tools:text="199215954"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/sortTitle"
+                    android:text="@string/verify"/>
+
+                <EditText
+                    android:id="@+id/tosMyVerify"
+                    android:layout_width="@dimen/t60dp"
+                    android:layout_height="wrap_content"
+                    style="@style/sortTitle"
+                    android:textColor="@color/yellow"
+                    android:textColorHint="@color/greyd"
+                    android:inputType="number"
+                    android:hint="@string/enterVerify"
+                    tools:text="123456"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/tosUidBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
+            android:layout_toRightOf="@id/tosMyInput"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/sortTitle"
-                android:text="@string/uid"/>
-
-            <EditText
-                android:id="@+id/tosMyUid"
-                android:layout_width="@dimen/t120dp"
-                android:layout_height="wrap_content"
-                style="@style/sortTitle"
-                android:textColor="@color/yellow"
-                android:textColorHint="@color/greyd"
-                android:inputType="number"
-                android:hint="@string/enterUid"
-                android:text="199215954"/>
 
             <ImageView
                 android:id="@+id/tosLoad"
@@ -65,7 +103,7 @@
 
         <LinearLayout
             android:id="@+id/tosTools"
-            android:layout_below="@id/tosUidBox"
+            android:layout_below="@id/tosMyInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -109,18 +147,23 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tosInfo"
-            android:layout_below="@id/tosUidBox"
-            style="@style/common_text"
-            android:textColor="@color/grey_white"
-            tools:text="@string/cards_selection_kind"/>
-        <TextView
-            android:id="@+id/tosInfo2"
-            android:layout_below="@id/tosInfo"
-            style="@style/common_text"
-            android:textColor="@color/grey_white"
-            tools:text="@string/cards_selection"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tosTools"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tosInfo"
+                style="@style/common_text"
+                android:textColor="@color/grey_white"
+                tools:text="@string/cards_selection_kind"/>
+            <TextView
+                android:id="@+id/tosInfo2"
+                style="@style/common_text"
+                android:textColor="@color/grey_white"
+                tools:text="@string/cards_selection"/>
+        </LinearLayout>
     </RelativeLayout>
 
     <!-- Remove me -->

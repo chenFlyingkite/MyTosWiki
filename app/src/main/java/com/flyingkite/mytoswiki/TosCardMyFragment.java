@@ -34,15 +34,14 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
-import com.flyingkite.mytoswiki.util.JsoupUtil;
+import com.flyingkite.mytoswiki.util.OkHttpUtil;
 import com.flyingkite.mytoswiki.util.RegexUtil;
+import com.flyingkite.mytoswiki.util.StringUtil3;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
-
-import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,14 +62,17 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
 
-public class TosCardMyFragment extends BaseFragment implements TosPageUtil, JsoupUtil {
+public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardMyFragment";
     public static final String TOS_REVIEW = "https://review.towerofsaviors.com/";
+    public static final String TOS_REVIEW_LOGIN = "https://checkupapi.tosgame.com/user/login";
+    private static final String TOS_REVIEW_PACK = "https://checkupapi.tosgame.com/api/inventoryReview/getUserProfile";
 
     private RecyclerView cardsRecycler;
     private TextView tosInfo;
     private TextView tosInfo2;
     private TextView uidText;
+    private TextView verifyText;
     private View uidLoad;
     private View tosUsage;
     private TextView loading;
@@ -175,6 +177,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         tosInfo2 = findViewById(R.id.tosInfo2);
         uidText = findViewById(R.id.tosMyUid);
         uidLoad = findViewById(R.id.tosLoad);
+        verifyText = findViewById(R.id.tosMyVerify);
         tosUsage = findViewById(R.id.tosUsage);
         tosUsage.setOnClickListener((v) -> {
             logHowToUse();
@@ -190,13 +193,16 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             logClear();
             AppPref p = new AppPref();
             uidText.setText("");
+            verifyText.setText("");
             p.setUserTosInventory("");
             p.setUserUid("");
+            p.setUserVerify("");
             showToast(getString(R.string.cleared));
         });
 
         AppPref p = new AppPref();
         uidText.setText(p.getUserUid());
+        verifyText.setText(p.getUserVerify());
 
         initScrollTools(R.id.tosGoTop, R.id.tosGoBottom, cardsRecycler);
         uidLoad.setOnClickListener((v) -> {
@@ -208,12 +214,19 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
                 return;
             }
 
+            String verify = verify();
+            if (TextUtils.isEmpty(verify)) {
+                new CommonDialog().message(getString(R.string.enterVerify)).show(getActivity());
+                return;
+            }
+
             if (!App.isNetworkConnected()) {
                 new CommonDialog().message(getString(R.string.noNetwork)).show(getActivity());
                 return;
             }
             logDownload(uid);
-            loadMyPack();
+            //parseMyPack();
+            loadPack();
         });
 
         // Setup tool bar
@@ -551,16 +564,30 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
         }
     }
 
-    private void loadMyPack() {
-        loadPack(uid());
+    private void loadPack() {
+        loadPack(uid(), verify());
+    }
+
+    private void parseMyPack() {
+        AppPref p = new AppPref();
+        String token = p.getUserPackToken();
+        parsePack(uid(), verify(), token);
     }
 
     private String uid() {
         return uidText.getText().toString();
     }
 
-    private void loadPack(String uid) {
-        new LoadPackTask(uid).executeOnExecutor(ThreadUtil.cachedThreadPool);
+    private String verify() {
+        return verifyText.getText().toString();
+    }
+
+    private void parsePack(String uid, String verify, String token) {
+        new ParsePackTask(uid, verify, token).executeOnExecutor(ThreadUtil.cachedThreadPool);
+    }
+
+    private void loadPack(String uid, String verify) {
+        new LoginForTokenTask(uid, verify).executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     private void inventory(String inventory) {
@@ -698,7 +725,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             }
 
             updateHide();
-            loadMyPack();
+            parseMyPack();
         }
     };
 
@@ -1416,15 +1443,46 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             }
         }
     }
-    // --------
-    private class LoadPackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
 
-        private String uid = "";
+    private class LoginForTokenTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+
+        private String uid;
+        private String verify;
         private AppPref pref = new AppPref();
         private long tic;
 
-        public LoadPackTask(String id) {
+        public LoginForTokenTask(String id, String code) {
             uid = id;
+            verify = code;
+        }
+
+        private Map<String, String> param() {
+            Map<String, String> m = new HashMap<>();
+            m.put("aid", verify);
+            m.put("uid", uid);
+            m.put("labels", "{\"serviceType\":\"tosCampaign\"}");
+            return m;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+            return null;
+        }
+    }
+
+    // --------
+    private class ParsePackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+
+        private String uid;
+        private String verify;
+        private String token;
+        private AppPref pref = new AppPref();
+        private long tic;
+
+        public ParsePackTask(String id, String code, String tokens) {
+            uid = id;
+            verify = code;
+            token = tokens;
         }
 
         @Override
@@ -1433,9 +1491,18 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             tic = System.currentTimeMillis();
         }
 
+        private Map<String, String> param() {
+            Map<String, String> m = new HashMap<>();
+            m.put("token", token);
+            m.put("aid", verify);
+            m.put("uid", uid);
+            m.put("includeInventory", "true");
+            return m;
+        }
+
         @Override
         protected Boolean doInBackground(Void... voids) {
-            if (TextUtils.isEmpty(uid)) {
+            if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify)) {
                 return false;
             }
 
@@ -1443,16 +1510,18 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil, Jsou
             logE("fetch %s", link);
             TicTac2 t = new TicTac2();
             t.tic();
-            Document doc = getDocument(TOS_REVIEW + uid);
+            // old
+            //Document doc = getDocument(TOS_REVIEW + uid);
+            String raw = OkHttpUtil.getResponse(link, param());
             t.tac("fetched");
             // Fail to fetch Document
-            if (doc == null) {
+            if (TextUtils.isEmpty(raw)) {
                 return false; // fail
             }
 
-            String data = doc.toString();
-
-            String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");
+            //String data = doc.toString();
+            //String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");
+            String inventory = StringUtil3.find(raw, 0, "<body>", "</body>").trim();
             // Load last time if not found
             if (TextUtils.isEmpty(inventory)) {
                 inventory = pref.getUserTosInventory();

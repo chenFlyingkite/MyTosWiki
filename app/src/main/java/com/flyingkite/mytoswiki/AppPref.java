@@ -62,6 +62,28 @@ public class AppPref extends BasePreference implements Loggable {
         putString(KEY_UserUid, s);
     }
 
+    // User verify code of pack
+    private static final String KEY_UserVerify = "UserVerify";
+
+    public String getUserVerify() {
+        return getString(KEY_UserVerify, "");
+    }
+
+    public void setUserVerify(String s) {
+        putString(KEY_UserVerify, s);
+    }
+
+    // User pack's token
+    private static final String KEY_UserPackToken = "UserPackToken";
+
+    public String getUserPackToken() {
+        return getString(KEY_UserPackToken, "");
+    }
+
+    public void setUserPackToken(String s) {
+        putString(KEY_UserPackToken, s);
+    }
+
     // User uid of pack
     private static final String KEY_UserTosInventory = "UserTosInventory";
 

@@ -34,6 +34,8 @@
     <string name="web">網頁</string>
     <string name="uid">UID</string>
     <string name="enterUid">請輸入 UID</string>
+    <string name="verify">驗證碼</string>
+    <string name="enterVerify">請輸入 驗證碼</string>
     <string name="noNetwork">沒有網路</string>
     <string name="how_to_use">使用說明</string>
     <string name="use">使用</string>
