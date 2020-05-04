@@ -1,36 +1,33 @@
 package com.flyingkite.mytoswiki.data.pack;
 
-import com.flyingkite.mytoswiki.util.TosCardUtil;
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+
+import androidx.annotation.NonNull;
 
 public class PackCard {
+
+    @SerializedName("id")
+    public int id;
+
+    @SerializedName("level")
+    public int level;
+
+    @SerializedName("index")
     public int index;
 
-    public String idNorm;
+    @SerializedName("skillLevel")
+    public int skillLevel;
 
-    public int exp;
+    @SerializedName("enhanceLevel")
+    public int enhanceLevel;
 
-    public int lv;
+    @SerializedName("acquiredAt")
+    public long acquiredAt;
 
-    public int skillLv;
-
-    public long createAt;
-
-    public int soulIfSell;
-
-    public int soulOwned;
-
-    public int refineLv;
-
-    public int skinId;
-
-    public int skillExp;
-
-    public int normalSkillCd;
-
-    public String source;
-
-    public PackCard copy() {
-        return TosCardUtil.parseCard(source);
+    @NonNull
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
-
 }

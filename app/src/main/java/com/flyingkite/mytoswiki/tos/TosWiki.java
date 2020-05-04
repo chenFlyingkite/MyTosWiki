@@ -31,8 +31,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 
 import androidx.annotation.NonNull;
@@ -46,6 +48,7 @@ public class TosWiki {
     private static Map<String, TosCard> allCardsByIdNorm = new HashMap<>();
     private static Map<String, List<TosCard>> allCardsBySeries = new HashMap<>();
     private static Map<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
+    private static Set<String> switchChangedIdNorms = new HashSet<>(); // the card ids that after switched
     private static CardFavor cardFavor;
     private static WebPin webPin;
     private static MainStage[] mainStages;
@@ -84,22 +87,32 @@ public class TosWiki {
             //checkCards();
 
             t.tic();
+            // Records card info
             allCardsByIdNorm.clear();
-            for (TosCard c : allCards) {
-                allCardsByIdNorm.put(c.idNorm, c);
-            }
-
             allCardsBySeries.clear();
+            switchChangedIdNorms.clear();
             for (TosCard c : allCards) {
+                // Make card to be (idNorm -> card)
+                allCardsByIdNorm.put(c.idNorm, c);
+
+                // Collect (series -> cards)
                 List<TosCard> s = allCardsBySeries.get(c.series);
                 if (s == null) {
                     s = new ArrayList<>();
                 }
                 s.add(c);
                 allCardsBySeries.put(c.series, s);
+
+                // Collect switched (idNorms)
+                if (TextUtils.isEmpty(c.switchChange)) {
+                } else { // changed
+                    switchChangedIdNorms.add(c.switchChange);
+                }
             }
+
             t.tac("%s in set OK", allCardsByIdNorm.size());
             z.logE("%s series", allCardsBySeries.size());
+            z.logE("%s switched", switchChangedIdNorms.size());
             monitorDB.notifyClientsState();
         });
 
@@ -267,6 +280,10 @@ public class TosWiki {
 
     public static List<TosCard> getCardsBySeries(String series) {
         return allCardsBySeries.get(series);
+    }
+
+    public static boolean isSwitchChangedCard(String idNorm) {
+        return switchChangedIdNorms.contains(idNorm);
     }
 
     public static TosCard getCardByIdNorm(String id) {

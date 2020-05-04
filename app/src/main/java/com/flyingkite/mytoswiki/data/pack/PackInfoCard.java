@@ -32,7 +32,7 @@ public class PackInfoCard implements Formattable {
             if (b.length() > 0) {
                 b.append(", ");
             }
-            b.append(p.source);
+            b.append(p);
         }
         return _fmt("%s : %s => %s", idNorm, packs.size(), b.toString());
     }

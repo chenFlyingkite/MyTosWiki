@@ -25,6 +25,8 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.data.PackSort;
 import com.flyingkite.mytoswiki.data.pack.PackCard;
 import com.flyingkite.mytoswiki.data.pack.PackInfoCard;
+import com.flyingkite.mytoswiki.data.pack.response.PackRes;
+import com.flyingkite.mytoswiki.data.pack.response.TokenRes;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CommonDialog;
 import com.flyingkite.mytoswiki.dialog.UsePackDialog;
@@ -36,12 +38,12 @@ import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.OkHttpUtil;
 import com.flyingkite.mytoswiki.util.RegexUtil;
-import com.flyingkite.mytoswiki.util.StringUtil3;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,7 +54,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 import androidx.annotation.ArrayRes;
@@ -64,7 +65,8 @@ import flyingkite.tool.StringUtil;
 
 public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardMyFragment";
-    public static final String TOS_REVIEW = "https://review.towerofsaviors.com/";
+    //public static final String TOS_REVIEW = "https://review.towerofsaviors.com/";
+    public static final String TOS_REVIEW = "https://checkup.tosgame.com/";
     public static final String TOS_REVIEW_LOGIN = "https://checkupapi.tosgame.com/user/login";
     private static final String TOS_REVIEW_PACK = "https://checkupapi.tosgame.com/api/inventoryReview/getUserProfile";
 
@@ -121,9 +123,12 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     //private Library<CardPackAdapter> cardLib;
     private Library<CardPackInfoAdapter> cardLib;
 
-    private List<TosCard> myBag = new ArrayList<>();
+    // My Pack = all cards from json
     private List<PackCard> myPack = new ArrayList<>();
+    // Merged myPack by idNorm -> [c1, ..., cn]
     private Map<String, PackInfoCard> myInfoPack = new TreeMap<>();
+    // Omitted cards from myPack that did not show on adapter
+    private List<PackCard> myOmit = new ArrayList<>();
     private boolean showHint;
     private WaitingDialog waiting;
     private TosCardFragment.ToolBarOwner toolOwner;
@@ -225,8 +230,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
             logDownload(uid);
-            //parseMyPack();
-            loadPack();
+            loginToken();
         });
 
         // Setup tool bar
@@ -240,6 +244,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 logAction(s ? "showTool" : "hideTool");
             }
             setViewVisibility(findViewById(R.id.tosUidBox), s);
+            setViewVisibility(findViewById(R.id.tosMyInput), s);
         });
         boolean sel = false;
         if (toolOwner != null) {
@@ -564,14 +569,14 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
     }
 
-    private void loadPack() {
-        loadPack(uid(), verify());
+    private void loginToken() {
+        loginToken(uid(), verify());
     }
 
-    private void parseMyPack() {
+    private void fetchPack() {
         AppPref p = new AppPref();
         String token = p.getUserPackToken();
-        parsePack(uid(), verify(), token);
+        fetchPack(uid(), verify(), token);
     }
 
     private String uid() {
@@ -582,55 +587,63 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         return verifyText.getText().toString();
     }
 
-    private void parsePack(String uid, String verify, String token) {
-        new ParsePackTask(uid, verify, token).executeOnExecutor(ThreadUtil.cachedThreadPool);
+    private void parseMyPack() {
+        AppPref pref = new AppPref();
+        String data = pref.getUserTosInventory();
+        if (TextUtils.isEmpty(data)) {
+            showUsage();
+        } else {
+            new ParsePackTask(data).executeOnExecutor(ThreadUtil.cachedThreadPool);
+        }
     }
 
-    private void loadPack(String uid, String verify) {
-        new LoginForTokenTask(uid, verify).executeOnExecutor(ThreadUtil.cachedThreadPool);
+    private void fetchPack(String uid, String verify, String token) {
+        new FetchPackTask(uid, verify, token).executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
-    private void inventory(String inventory) {
-        //logE("inventory_str  = \n%s\n", inventory);
-        String[] invs = inventory.split(",");
-        myBag.clear();
+    private void loginToken(String uid, String verify) {
+        new LoginTokenTask(uid, verify).executeOnExecutor(ThreadUtil.cachedThreadPool);
+    }
+
+    private void listPack(List<PackCard> cards) {
         myPack.clear();
+        myOmit.clear();
         myInfoPack.clear();
+        myPack.addAll(cards);
+        // myInfoPack = card ids we show in myPack
         TosCard[] all = TosWiki.allCards();
         for (int i = 0; i < all.length; i++) {
-            // Make PackInfoCard from TosCard
             TosCard d = all[i];
             if (TosCardUtil.isInBag(d)) {
                 PackInfoCard c = PackInfoCard.from(d);
                 myInfoPack.put(d.idNorm, c);
             }
         }
-
-        for (int i = 0; i < invs.length; i++) {
-            PackCard p = TosCardUtil.parseCard(invs[i]);
-            myPack.add(TosCardUtil.parseCard(invs[i]));
-            String[] a = invs[i].split("[|]");
-            myBag.add(TosWiki.getCardByIdNorm(TosCardUtil.idNorm(a[1])));
-
-            PackInfoCard q = myInfoPack.get(p.idNorm);
+        // Add cards from my bag to infoPack as
+        // idNorm = [c1, c2, c3, ...]
+        for (int i = 0; i < cards.size(); i++) {
+            PackCard c = cards.get(i);
+            String idNorm = TosCardUtil.idNorm("" + c.id);
+            PackInfoCard q = myInfoPack.get(idNorm);
             if (q != null) {
-                q.packs.add(p);
+                q.packs.add(c);
+            } else {
+                //TosCard x = TosWiki.getCardByIdNorm(idNorm);
+                //logE("Omit : %s => %s", c, x);
+                myOmit.add(c);
             }
         }
-        logE("\n\n");
+        if (false) {
+            logE("\n\n");
 
-        if (false) { // TODO print
-            logE("---- PackInfoCard ----- %s items", myInfoPack.size());
-            List<PackInfoCard> p = new ArrayList<>(myInfoPack.values());
-            for (int i = 0; i < p.size(); i++) {
-                PackInfoCard pi = p.get(i);
-                String name = TosWiki.getCardByIdNorm(pi.idNorm).name;
-                logE("#%04d : %s %-20s -> %s", i, pi.idNorm, name, pi);
+            Set<String> keys = myInfoPack.keySet();
+            logE("%s keys", keys.size());
+            for (String k : keys) {
+                PackInfoCard c = myInfoPack.get(k);
+                logE("%s => %s", k, c);
             }
-            logE("---------");
+            logE("%s omitted = %s", myOmit.size(), myOmit);
         }
-
-        //statistics("inventory", invs);
     }
 
     private <T> void print(T[] d) {
@@ -642,59 +655,15 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
     }
 
-    private void statistics(String prefix, String[] data) {
-        // n records
-        int n = data.length;
-        if (n == 0) return;
-
-        // m columns
-        int m = data[0].split("[|]").length;
-        List<Set<Integer>> sets = new ArrayList<>();
-        for (int i = 0; i < m; i++) {
-            sets.add(new TreeSet<>());
-        }
-
-        for (int i = 0; i < n; i++) {
-            String[] di = data[i].split("[|]");
-            for (int j = 0; j < m; j++) {
-                int xij = Integer.parseInt(di[j]);
-                Set<Integer> sj = sets.get(j);
-                sj.add(xij);
-                if (j == 2 && xij == 10) {
-                    logE("data = %s", data[i]);
-                }
-            }
-
-            String idNorm = TosCardUtil.idNorm(di[1]);
-            int slv = Integer.parseInt(di[4]);
-//            TosCard c = allCards.get(idNorm);
-//            // can train
-//            boolean sk = MathUtil.isInRange(1, slv, c.skillCDMax1);
-//            if (c.sameSkills.size() > 2 && sk) {
-//                if (c.rarity >= 5) {
-//                    logE("Skills = %s\n  %s\n", data[i], sc(c));
-//                }
-//            }
-        }
-
-        logE("For %s", prefix);
-        for (int i = 0; i < m; i++) {
-            Set<Integer> s = sets.get(i);
-            logE("#%s has %s items = %s", i, s.size(), s);
-        }
-        //---
-    }
-
-    private void showCardsLoading() {
+    private void showCardsLoading(String msg) {
         if (isActivityGone()) return;
 
         uidLoad.setEnabled(false);
         if (showHint) {
-            waiting = new WaitingDialog.Builder(getActivity()).message(getString(R.string.cardsLoading)).buildAndShow();
+            waiting = new WaitingDialog.Builder(getActivity()).message(msg).buildAndShow();
         } else {
             loading.setVisibility(View.VISIBLE);
         }
-
     }
 
     private void hideCardsLoading() {
@@ -998,7 +967,8 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                     int n = p.packs.size();
                     for (int i = 0; i < n && !yes; i++) {
                         PackCard q = p.packs.get(i);
-                        if (q.skillLv < c.skillCDMax1) {
+                        //if (q.skillLv < c.skillCDMax1) {
+                        if (q.skillLevel < c.skillCDMax1) {
                             yes = true;
                         }
                     }
@@ -1444,14 +1414,15 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
     }
 
-    private class LoginForTokenTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+    // Given uid, aid -> get token
+    private class LoginTokenTask extends AsyncTask<Void, Void, TokenRes> implements Loggable {
 
         private String uid;
         private String verify;
         private AppPref pref = new AppPref();
-        private long tic;
+        private boolean fetchPack = true;
 
-        public LoginForTokenTask(String id, String code) {
+        public LoginTokenTask(String id, String code) {
             uid = id;
             verify = code;
         }
@@ -1465,13 +1436,64 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
-        protected Boolean doInBackground(Void... voids) {
-            return null;
+        protected void onPreExecute() {
+            showCardsLoading(getString(R.string.fetchNetworkData));
+        }
+
+        @Override
+        protected TokenRes doInBackground(Void... voids) {
+            if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify)) {
+                return null;
+            }
+
+            String link = TOS_REVIEW_LOGIN;
+            logE("fetch %s", link);
+            TicTac2 t = new TicTac2();
+            t.tic();
+            // old
+            //Document doc = getDocument(TOS_REVIEW + uid);
+            String src = OkHttpUtil.getResponse(link, param());
+            t.tac("fetched");
+
+            if (TextUtils.isEmpty(src)) {
+                return null; // fail
+            }
+            logE("login src = %s", src);
+
+            Gson g = new Gson();
+            TokenRes tr = null;
+            try {
+                tr = g.fromJson(src, TokenRes.class);
+            } catch (JsonSyntaxException e) {
+                e.printStackTrace();
+                logE("login fail for %s", src);
+            }
+            return tr;
+        }
+
+        @Override
+        protected void onPostExecute(TokenRes tr) {
+            hideCardsLoading();
+            pref.setUserUid(uid);
+            pref.setUserVerify(verify);
+            if (tr != null) {
+                if (tr.isSuccess > 0) {
+                    pref.setUserPackToken(tr.token);
+                    if (fetchPack) {
+                        fetchPack();
+                    }
+                } else {
+                    if (isActivityGone()) return;
+
+                    String msg = tr.errorMessage + "\nerrorCode = " + tr.errorCode;
+                    new CommonDialog().message(msg).show(getActivity());
+                }
+            }
         }
     }
 
-    // --------
-    private class ParsePackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+    // Given uid, aid, token -> get PackList
+    private class FetchPackTask extends AsyncTask<Void, Void, PackRes> implements Loggable {
 
         private String uid;
         private String verify;
@@ -1479,7 +1501,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         private AppPref pref = new AppPref();
         private long tic;
 
-        public ParsePackTask(String id, String code, String tokens) {
+        public FetchPackTask(String id, String code, String tokens) {
             uid = id;
             verify = code;
             token = tokens;
@@ -1487,7 +1509,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
 
         @Override
         protected void onPreExecute() {
-            showCardsLoading();
+            showCardsLoading(getString(R.string.cardsLoading));
             tic = System.currentTimeMillis();
         }
 
@@ -1501,101 +1523,134 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
-        protected Boolean doInBackground(Void... voids) {
-            if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify)) {
-                return false;
+        protected PackRes doInBackground(Void... voids) {
+            if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify) || TextUtils.isEmpty(token)) {
+                return null;
             }
 
-            String link = TOS_REVIEW + uid;
+            // Fetch response as raw from link
+            String link = TOS_REVIEW_PACK;
             logE("fetch %s", link);
             TicTac2 t = new TicTac2();
             t.tic();
-            // old
-            //Document doc = getDocument(TOS_REVIEW + uid);
-            String raw = OkHttpUtil.getResponse(link, param());
+            String src = OkHttpUtil.getResponse(link, param());
             t.tac("fetched");
-            // Fail to fetch Document
-            if (TextUtils.isEmpty(raw)) {
-                return false; // fail
+
+            // Find inventory and parse to PackRes
+            if (TextUtils.isEmpty(src)) {
+                return null;
             }
 
-            //String data = doc.toString();
-            //String inventory = find(data, 0, "inventory_str : '", "'.split(\",\")");
-            String inventory = StringUtil3.find(raw, 0, "<body>", "</body>").trim();
-            // Load last time if not found
-            if (TextUtils.isEmpty(inventory)) {
-                inventory = pref.getUserTosInventory();
+            PackRes r = null;
+            Gson g = new Gson();
+            try {
+                r = g.fromJson(src, PackRes.class);
+                pref.setUserTosInventory(src);
+            } catch (JsonSyntaxException e) {
+                e.printStackTrace();
             }
 
-            // User did not provide
-            if (TextUtils.isEmpty(inventory)) {
-                return false; // fail
+            if (r != null) {
+                listPack(r.card);
             }
-
-            // Save data to preference
-            pref.setUserUid(uid);
-            pref.setUserTosInventory(inventory);
-
-            inventory(inventory);
-            return true;
+            return r;
         }
 
-        private void logTime() {
-            long tac = System.currentTimeMillis();
-            String t = StringUtil.MMSSFFF(tac - tic);
-            String s = getString(R.string.cards_pack_ok, t + "s");
-            App.showToastShort(s);
-            logE(s);
+        @Override
+        protected void onPostExecute(PackRes r) {
+            boolean ok = r != null;
+            if (isActivityGone()) return;
+
+            logTime(tic);
+            hideCardsLoading();
+            setupAdapter(ok);
+        }
+    }
+
+    private void setupAdapter(boolean ok) {
+        if (ok) {
+            CardPackInfoAdapter d = new CardPackInfoAdapter();
+            List<PackInfoCard> list = new ArrayList<>(myInfoPack.values());
+            d.setDataList(list);
+            d.setItemListener(new CardPackInfoAdapter.ItemListener() {
+                @Override
+                public void onFiltered(int selected, int total) {
+                    tosInfo.setText(App.res().getString(R.string.cards_selection_kind, selected, total));
+                }
+
+                @Override
+                public void onFilteredAll(int selected, int total) {
+                    tosInfo2.setText(App.res().getString(R.string.cards_selection, selected, total));
+                }
+
+                @Override
+                public void onClick(PackInfoCard item, CardPackInfoAdapter.PCardVH holder, int position) {
+                    logE("item = %s %s", item.idNorm, item.name);
+                    showCardDialog(TosWiki.getCardByIdNorm(item.idNorm));
+                }
+            });
+
+            cardLib.setViewAdapter(d);
+
+            int n = myInfoPack.size();
+            tosInfo.setText(App.res().getString(R.string.cards_selection_kind, n, n));
+            int n2 = 0;
+            for (int i = 0; i < list.size(); i++) {
+                n2 += list.get(i).packs.size();
+            }
+            tosInfo2.setText(App.res().getString(R.string.cards_selection, n2, n2));
+
+            if (showHint) {
+                showToast(R.string.cards_read, myPack.size());
+            }
+
+            howToUse.setVisibility(View.GONE);
+        } else {
+            showUsage();
+        }
+        applySelection();
+    }
+
+    private void logTime(long tic) {
+        long tac = System.currentTimeMillis();
+        String t = StringUtil.MMSSFFF(tac - tic);
+        String s = getString(R.string.cards_pack_ok, t + "s");
+        App.showToastShort(s);
+        logE(s);
+    }
+
+    // Parse String to json of PackRes, and setup adapter
+    private class ParsePackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+        private String src;
+        public ParsePackTask(String data) {
+            src = data;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids) {
+            PackRes r = parsePack(src);
+            if (r != null) {
+                listPack(r.card);
+            }
+            return r != null;
         }
 
         @Override
         protected void onPostExecute(Boolean ok) {
-            if (isActivityGone()) return;
-
-            logTime();
-            hideCardsLoading();
-            if (ok) {
-                CardPackInfoAdapter d = new CardPackInfoAdapter();
-                List<PackInfoCard> list = new ArrayList<>(myInfoPack.values());
-                d.setDataList(list);
-                d.setItemListener(new CardPackInfoAdapter.ItemListener() {
-                    @Override
-                    public void onFiltered(int selected, int total) {
-                        tosInfo.setText(App.res().getString(R.string.cards_selection_kind, selected, total));
-                    }
-
-                    @Override
-                    public void onFilteredAll(int selected, int total) {
-                        tosInfo2.setText(App.res().getString(R.string.cards_selection, selected, total));
-                    }
-
-                    @Override
-                    public void onClick(PackInfoCard item, CardPackInfoAdapter.PCardVH holder, int position) {
-                        logE("item = %s %s", item.idNorm, item.name);
-                        showCardDialog(TosWiki.getCardByIdNorm(item.idNorm));
-                    }
-                });
-
-                cardLib.setViewAdapter(d);
-
-                int n = myInfoPack.size();
-                tosInfo.setText(App.res().getString(R.string.cards_selection_kind, n, n));
-                int n2 = 0;
-                for (int i = 0; i < list.size(); i++) {
-                    n2 += list.get(i).packs.size();
-                }
-                tosInfo2.setText(App.res().getString(R.string.cards_selection, n2, n2));
-
-                if (showHint) {
-                    showToast(R.string.cards_read, n);
-                }
-
-                howToUse.setVisibility(View.GONE);
-            } else {
-                showUsage();
-            }
-            applySelection();
+            setupAdapter(ok);
         }
+    }
+
+    private PackRes parsePack(String src) {
+        Gson g = new Gson();
+        PackRes r = null;
+        try {
+            r = g.fromJson(src, PackRes.class);
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+            logE("parse pack fail for %s", src);
+        }
+        return r;
     }
 
     private class MyPackPref extends BasePreference {

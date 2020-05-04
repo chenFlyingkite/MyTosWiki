@@ -15,6 +15,7 @@
     <string name="detail">細節</string>
     <string name="ok">確定</string>
     <string name="cancel">取消</string>
+    <string name="fetchNetworkData">從網路取得資料中&#8230;</string>
     <string name="cardsLoading">讀取卡片中&#8230;</string>
     <string name="leave">離開頁面?</string>
     <string name="star">★</string>
@@ -36,7 +37,7 @@
     <string name="enterUid">請輸入 UID</string>
     <string name="verify">驗證碼</string>
     <string name="enterVerify">請輸入 驗證碼</string>
-    <string name="noNetwork">沒有網路</string>
+    <string name="noNetwork">沒有網路，請連接網路後重試</string>
     <string name="how_to_use">使用說明</string>
     <string name="use">使用</string>
     <string name="noUse">不使用</string>
@@ -885,7 +886,7 @@
     <string name="card_series_phantom_troupe">水見式 ‧ 旅團</string>
     <string name="card_series_olden_trio">遙古三族</string>
     <string name="card_series_truth_seekers">真理追尋者</string>
-    <string name="card_series_0421">代偶規條</string>
+    <string name="card_series_creed_earthling">代偶規條</string>
 
     <string name="stones_same_count">符石數目相同</string>
 
@@ -939,17 +940,17 @@
     <string name="web_pinned">已釘選網頁</string>
     <string name="how_to_use_pack">資料更新方式\n
 1. 拜訪「神魔之塔健檢中心」網站\n
-https://review.towerofsaviors.com\n
+https://checkup.tosgame.com\n
 2. 登入你的 UID 和 活動驗證碼\n
-3. 點擊「公開」讓頁面可以取用你的神魔之塔背包資料\n
+3. 點擊「公開背包」讓頁面可以取用你的神魔之塔背包資料\n
 (註 : 若「已公開」，請將公開關閉後再重新打開)\n
-4. 回到這個頁面輸入你的UID，便可檢視卡匣內容\n\n
+4. 回到這個頁面輸入你的 UID 和 活動驗證碼，便可檢視卡匣內容\n\n
 ~~~ 程式/資料 參照表 ~~~\n
 ~~~ Reference ~~~\n
 [1] 神魔之塔卡匣檢視器 (感謝大大 yuh926323)\n
 https://heavenro.info/tos\n
 [2] 「神魔之塔健檢中心」\n
-https://review.towerofsaviors.com\n
+https://checkup.tosgame.com\n
 \n\n謝謝收看 m(_ _)m</string>
 
     <string name="farmBattle1">組隊概念：隊長找輕鬆消除符石(攻擊力要夠)，隊員找消除狀態、萬解版面的卡片。剩下就組加分卡片。\n(大推 眼球(#1639)。沙利葉(#1263)、智障女神阿克婭(#1882)等等也不錯。能夠擋多種盾的優先 如五屬盾，7 Combo盾，拼圖盾等等)</string>

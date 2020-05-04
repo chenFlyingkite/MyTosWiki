@@ -16,6 +16,7 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosSelection;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.mytoswiki.util.TosCardUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +110,7 @@ public class CardPackAdapter extends RVSelectAdapter<PackCard, CardPackAdapter.P
         if (selectedMessage != null && position < selectedMessage.size()) {
             msg = selectedMessage.get(position);
         }
-        TosCard d = TosWiki.getCardByIdNorm(c.idNorm);
+        TosCard d = TosWiki.getCardByIdNorm(TosCardUtil.idNorm("" + c.id));
         h.setCard(c, name(d), msg);
     }
 
@@ -134,7 +135,8 @@ public class CardPackAdapter extends RVSelectAdapter<PackCard, CardPackAdapter.P
             boolean hasMsg = msg != null;
             text.setText(name);
             message.setText(msg);
-            TosCard d = TosWiki.getCardByIdNorm(c.idNorm);
+            //TosCard d = TosWiki.getCardByIdNorm(c.idNorm);
+            TosCard d = TosWiki.getCardByIdNorm(TosCardUtil.idNorm("" + c.id));
             loadCardToImageView(thumb, d);
             setVisible(text, !hasMsg);
             setVisible(message, hasMsg);

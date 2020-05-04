@@ -28,7 +28,7 @@ repositories {
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 84
+    ext.versionCode = 85
     ext.versionName = "1.0.0.${versionCode-1}"
     if (!createPlayApk) {
         ext.versionName = "Me"
@@ -59,7 +59,7 @@ android {
     // http://tools.android.com/tips/lint-checks
     lintOptions {
         warning 'MissingTranslation'
-        ignore  'ContentDescription', 'SpUsage'
+        ignore  'ContentDescription', 'SpUsage', 'ExtraTranslation'
         ignore  'RtlCompat', 'RtlEnabled', 'RtlHardcoded', 'RtlSymmetry'
         abortOnError false
     }
