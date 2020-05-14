@@ -477,6 +477,7 @@
     <string-array name="cards_add_combo_count_keys">
         <!-- 連擊 (Combo) 數目增加 -->
         <item>數目增加</item>
+        <item>增加(.{0,20})連擊</item>
     </string-array>
     <string-array name="cards_regardless_of_initial_shield_keys">
         <item>攻前盾</item>
@@ -506,6 +507,11 @@
     cards_regard_puzzle
     <!-- 源生混沌 ‧ 倪克斯, 聖杯之永息 · 艾莉亞, 超人ORB, 盈蝶線牽 ‧ 鏡音鈴與鏡音連 -->
     <string-array name="cards_five_attribute_runestone_keys">
+        <item>無視(.{0,10})五屬盾</item>
+        <item>五屬</item>
+        <item>(水|火|木|光|暗)((、|及)(水|火|木|光|暗)){4}</item>
+    </string-array>
+    <string-array name="cards_five_attribute_runestone_keys_idNorm">
         <item>1564</item>
         <item>2081</item>
         <item>2154</item>

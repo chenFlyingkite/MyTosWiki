@@ -1227,7 +1227,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_attack_bonus_combo_keys);
                 }
                 if (sortSpecialAddComboCount.isChecked()) {
-                    accept &= find(key, R.array.cards_add_combo_count_keys);
+                    accept &= findRegex(key, R.array.cards_add_combo_count_keys);
                 }
                 if (sortSpecialSkillCdMinus.isChecked()) {
                     accept &= find(key, R.array.cards_skill_cd_minus_keys);
@@ -1236,8 +1236,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= findRegex(key, R.array.cards_explode_generate_keys);
                 }
                 if (sortSpecialFiveRuneStone.isChecked()) {
-                    key = c.idNorm;
-                    accept &= find(key, R.array.cards_five_attribute_runestone_keys);
+                    String key2 = c.idNorm;
+                    boolean inId = find(key2, R.array.cards_five_attribute_runestone_keys_idNorm);
+                    boolean inKey = findRegex(key, R.array.cards_five_attribute_runestone_keys);
+                    accept &= inId || inKey;
                 }
                 if (sortSpecialPetrifiedRuneStone.isChecked()) {
                     accept &= find(key, R.array.cards_clear_petrified_runestone_key);

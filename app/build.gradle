@@ -28,7 +28,7 @@ repositories {
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 85
+    ext.versionCode = 86
     ext.versionName = "1.0.0.${versionCode-1}"
     if (!createPlayApk) {
         ext.versionName = "Me"
