@@ -1400,6 +1400,17 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return getAttackByJade(c) / c.maxAttackAme;
         }
 
+        private double getAttackByPandora(TosCard c) {
+            if (c.race.contains("妖")) {
+                return c.maxAttackAme + c.maxRecoveryAme * 5;
+            }
+            return c.maxAttackAme;
+        }
+
+        private double getAttackByPandoraRatio(TosCard c) {
+            return getAttackByPandora(c) / c.maxAttackAme;
+        }
+
         private double getFormulaAttack(TosCard c) {
             int cardId = sortFormulaCard.getCheckedRadioButtonId();
             double atk = c.maxAttackAme;
@@ -1407,6 +1418,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 atk = getAttackByCassandra(c);
             } else if (cardId == R.id.sortFormulaCardJade) {
                 atk = getAttackByJade(c);
+            } else if (cardId == R.id.sortFormulaCardPandora) {
+                atk = getAttackByPandora(c);
             }
             return atk;
         }
@@ -1418,6 +1431,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 atk = getAttackByCassandraRatio(c);
             } else if (cardId == R.id.sortFormulaCardJade) {
                 atk = getAttackByJadeRatio(c);
+            } else if (cardId == R.id.sortFormulaCardPandora) {
+                atk = getAttackByPandoraRatio(c);
             }
             return atk;
         }

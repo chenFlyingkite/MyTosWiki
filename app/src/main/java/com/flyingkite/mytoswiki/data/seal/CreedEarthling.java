@@ -24,6 +24,6 @@ public class CreedEarthling extends BaseSeal {
     }
 
     public String name() {
-        return "Rules";
+        return "CreedEarthling";
     }
 }

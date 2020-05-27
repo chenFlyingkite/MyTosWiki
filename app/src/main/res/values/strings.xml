@@ -155,6 +155,7 @@
     <string name="cards_runestone_heart_enchanted">心強化符石</string>
     <string name="cards_Cassandra">#1046 卡珊德拉(水巫) (水人7星)\n3.5x回復力+攻擊力\n(露西比較好用 #1955)</string>
     <string name="cards_Jade">#2221 翡翠 (木妖6星)\n妖精 = 3x回復力+攻擊力</string>
+    <string name="cards_Pandora">#2380 潘朵拉 (暗妖7星)\n妖精 = 5x回復力+攻擊力</string>
     <string name="cards_no">無</string>
     <string name="cards_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>

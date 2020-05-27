@@ -297,6 +297,10 @@
                         android:id="@+id/sortFormulaCardJade"
                         style="@style/sortRadio"
                         android:text="@string/cards_Jade"/>
+                    <RadioButton
+                        android:id="@+id/sortFormulaCardPandora"
+                        style="@style/sortRadio"
+                        android:text="@string/cards_Pandora"/>
                 </RadioGroup>
                 <TextView
                     style="@style/sortTitle"
