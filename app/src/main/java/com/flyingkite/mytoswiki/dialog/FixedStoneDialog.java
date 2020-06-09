@@ -55,6 +55,8 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("FWEFFFFWEWEFFWEWEFFWEWEFFFFWEF", "(14火強, 8水強, 8木強)"))
             , new StoneFix("1428,1429,1960,1969,2219",
                 new StoneDesktop("EEhhEEhhEEhhEEhhEEhhEEhhEEhhEE", "(14心,16木強)\n木強 -> 水強 = 格雷 (#1960) + 茱比亞 (#1969)\n木強 -> 火強 = 琥珀 (#2219)"))
+            , new StoneFix("2409",
+                new StoneDesktop("llffllllffllffffffllffllllffll", "(14火,16光)\n火 -> 木, 光 -> 心"))
             , new StoneFix("1169,2044,1175,2050,1666",
                 new StoneDesktop("FFFhhFhhFhhFFFFFFFFhhFhhFhhFFF", "(12心,18X)\n心 -> 心強 = 潛解革新英雄系列 洛可可 (#2044), 優格圖 (#2050)"))
             , new StoneFix("1721,1983",

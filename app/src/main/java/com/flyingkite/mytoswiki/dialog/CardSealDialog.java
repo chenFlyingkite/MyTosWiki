@@ -20,6 +20,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
+import com.flyingkite.mytoswiki.data.seal.CreedEarthling;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
 import com.flyingkite.mytoswiki.data.seal.GiantLight;
 import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
@@ -30,11 +31,11 @@ import com.flyingkite.mytoswiki.data.seal.Minerelves;
 import com.flyingkite.mytoswiki.data.seal.OldenTrio;
 import com.flyingkite.mytoswiki.data.seal.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
-import com.flyingkite.mytoswiki.data.seal.CreedEarthling;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
+import com.flyingkite.mytoswiki.data.seal.TengenToppa;
 import com.flyingkite.mytoswiki.data.seal.TruthSeekers;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.seal.VirtualSingers;
@@ -75,6 +76,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_tengen_toppa, new TengenToppa()));
         sealSeries.add(new SealItem(R.string.card_series_creed_earthling, new CreedEarthling()));
         sealSeries.add(new SealItem(R.string.card_series_truth_seekers, new TruthSeekers()));
         sealSeries.add(new SealItem(R.string.card_series_olden_trio, new OldenTrio()));
