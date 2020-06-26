@@ -20,6 +20,7 @@ import java.util.Map;
 import androidx.annotation.Nullable;
 
 public class RealmStageDialog extends BaseTosDialog {
+    private LinearLayout magiStages;
     private LinearLayout heroStages;
     private LinearLayout ironStages;
     private MainStage[] realmStages;
@@ -38,6 +39,7 @@ public class RealmStageDialog extends BaseTosDialog {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         logImpression();
+        magiStages = findViewById(R.id.zsd_magic_stages);
         heroStages = findViewById(R.id.zsd_hero_stages);
         ironStages = findViewById(R.id.zsd_iron_stages);
 
@@ -61,8 +63,22 @@ public class RealmStageDialog extends BaseTosDialog {
     };
 
     private void initStages() {
+        initMagicStages();
         initHeroStages();
         initIronStages();
+    }
+
+    private void initMagicStages() {
+        //clickToShareSelf(findViewById(R.id.zsd_void3));
+        // Stage content
+        MainStageAdapter a = new MainStageAdapter() {
+            @Override
+            public Activity getActivity() {
+                return RealmStageDialog.this.getActivity();
+            }
+        };
+        a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 0, 1)));
+        fillItems(magiStages, a);
     }
 
     private void initHeroStages() {
@@ -74,7 +90,7 @@ public class RealmStageDialog extends BaseTosDialog {
                 return RealmStageDialog.this.getActivity();
             }
         };
-        a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 0, 4)));
+        a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 1, 2)));
         fillItems(heroStages, a);
     }
 
@@ -87,7 +103,7 @@ public class RealmStageDialog extends BaseTosDialog {
                 return RealmStageDialog.this.getActivity();
             }
         };
-        a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 4, 7)));
+        a.setDataList(Arrays.asList(Arrays.copyOfRange(realmStages, 2, 3)));
         fillItems(ironStages, a);
     }
 

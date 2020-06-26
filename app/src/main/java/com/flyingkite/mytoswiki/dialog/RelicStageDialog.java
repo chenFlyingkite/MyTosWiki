@@ -65,9 +65,8 @@ public class RelicStageDialog extends BaseTosDialog {
         // 遠古遺跡 突發地獄遺跡（期間限定） 永久地獄遺跡（常設開放） 雙週遺跡
 
         addStages("遠古遺跡", relicStages[0], stageList);
-        addStages("永久地獄遺跡（常設開放）", relicStages[2], stageList);
-        addStages("雙週遺跡", relicStages[3], stageList);
-        addStages("突發地獄遺跡（期間限定）", relicStages[1], stageList);
+        addStages("地獄遺跡", relicStages[1], stageList);
+        addStages("雙週遺跡", relicStages[2], stageList);
     }
 
     private void addStages(String title, RelicStage[] stages, ViewGroup parent) {

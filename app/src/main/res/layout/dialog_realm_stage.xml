@@ -19,11 +19,11 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/void1"
+                android:src="@drawable/void3"
                 style="@style/icon_t40"/>
 
             <ImageView
-                android:src="@drawable/void1"
+                android:src="@drawable/void3"
                 style="@style/icon_t40"/>
 
             <ImageView
@@ -39,7 +39,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/void2"
+                android:src="@drawable/void1"
                 style="@style/icon_t40"/>
 
             <ImageView
@@ -67,6 +67,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="@dimen/t230dp"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                android:background="@drawable/bg_rect_green">
+
+                <LinearLayout
+                    android:id="@+id/zsd_magic_stages"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
 
             <ScrollView
                 android:layout_width="@dimen/t230dp"
