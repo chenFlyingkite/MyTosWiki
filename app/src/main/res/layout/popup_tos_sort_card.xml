@@ -875,7 +875,7 @@
                     android:id="@+id/sortSearchName"
                     style="@style/sortText"
                     android:checked="false"
-                    android:text="@string/cards_name"/>
+                    android:text="@string/cards_name_normId"/>
 
                 <CheckBox
                     android:id="@+id/sortSearchSeries"

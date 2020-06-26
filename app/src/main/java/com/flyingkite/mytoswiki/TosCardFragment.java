@@ -1024,6 +1024,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
             List<String> keys = new ArrayList<>();
             if (searchRangeName.isChecked()) {
+                keys.add(c.idNorm);
                 keys.add(c.name);
             }
             if (searchRangeSeries.isChecked()) {
