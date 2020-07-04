@@ -550,6 +550,11 @@
         <item>2307</item>
         <item>6341</item>
         <item>2329</item>
+        <!-- 左上三 = 水火木，右上三 = 光暗心 -->
+        <item>2422</item>
+        <item>2423</item>
+        <item>2424</item>
+        <item>2425</item>
     </string-array>
 
 

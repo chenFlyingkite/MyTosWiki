@@ -52,6 +52,11 @@
       "icon": "2092"
     },
     {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%B8%8D%E5%8F%AF%E9%80%86%E7%9A%84%E9%8A%B3%E8%AE%8A",
+      "name": "不可逆的銳變",
+      "icon": "1871"
+    },
+    {
       "link": "https://tos.fandom.com/zh/wiki/%E9%AD%94%E5%A2%83%E7%9A%84%E5%AF%A9%E5%88%A4",
       "name": "魔境的審判",
       "icon": "0496"
@@ -257,8 +262,8 @@
       "icon": "1436"
     },
     {
-      "link": "https://tos.fandom.com/zh/wiki/%E5%B9%B8%E7%A6%8F%E7%9A%84%E6%AD%B8%E5%AE%BF",
-      "name": "幸福的歸宿",
+      "link": "https://tos.fandom.com/zh/wiki/%E5%B9%B8%E7%A6%8F%E7%9A%84%E6%AD%B8%E5%AE%BF(%E9%97%9C%E5%8D%A1)",
+      "name": "幸福的歸宿(關卡)",
       "icon": "1464"
     },
     {
@@ -795,6 +800,16 @@
       "link": "https://tos.fandom.com/zh/wiki/%E9%90%B5%E5%AF%A6%E5%A6%82%E9%8B%BC%E7%9A%84%E5%A4%A7%E9%A1%8F%E5%9C%9F",
       "name": "鐵實如鋼的大顏土",
       "icon": "2418"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%81%90%E6%80%96%E7%B5%B1%E6%B2%BB",
+      "name": "恐怖統治",
+      "icon": "2419"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%8E%99%E8%84%AB%E5%A4%9A%E5%85%83%E5%AE%87%E5%AE%99",
+      "name": "掙脫多元宇宙",
+      "icon": "2421"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E8%B3%A2%E8%80%85%E7%9A%84%E8%80%83%E9%A9%97",
