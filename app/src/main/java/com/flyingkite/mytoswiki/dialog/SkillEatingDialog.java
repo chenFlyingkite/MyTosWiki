@@ -130,7 +130,9 @@ public class SkillEatingDialog extends BaseTosDialog {
                 return R.layout.view_small_image;
             }
         };
-        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897", "1972", "2077", "2078", "2128", "2170", "2201", "2202", "2328", "2427");
+        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897", "1972", "2077", "2078", "2128", "2170", "2201", "2202", "2328"
+                , "2427", "2428", "2429", "2462", "2471", "2472"
+        );
         a.setDataList(getCardsByIdNorms(c600));
         card600.setViewAdapter(a);
     }

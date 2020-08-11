@@ -39,6 +39,7 @@ import com.flyingkite.mytoswiki.data.seal.TengenToppa;
 import com.flyingkite.mytoswiki.data.seal.TruthSeekers;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.seal.VirtualSingers;
+import com.flyingkite.mytoswiki.data.seal.WrathGods;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.SealCardAdapter;
 import com.flyingkite.mytoswiki.library.SealSeriesAdapter;
@@ -76,6 +77,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_wrath_gods, new WrathGods()));
         sealSeries.add(new SealItem(R.string.card_series_tengen_toppa, new TengenToppa()));
         sealSeries.add(new SealItem(R.string.card_series_creed_earthling, new CreedEarthling()));
         sealSeries.add(new SealItem(R.string.card_series_truth_seekers, new TruthSeekers()));

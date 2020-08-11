@@ -73,6 +73,10 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("eHewHwHfHHfHHffffHeHffHweeHHww", "(5水, 5木, 8火, 12心)\n心 -> 心強 = 牛郎織女合體技能"))
             , new StoneFix("2161",
                 new StoneDesktop("--dd---dlld-dlhhldlh--hlh----h", "6暗(1st) 12暗(2nd:光 -> 暗) 18暗(3rd: 光心 -> 暗)"))
+            , new StoneFix("2425",
+                new StoneDesktop("WFELDHWFELDHWFELDH------------------------------", "心+五屬強化各3個"))
+            , new StoneFix("2422",
+                new StoneDesktop("WWWLLLFFFDDDEEEHHH------------", "心+五屬強化各3個"))
             , new StoneFix("2154",
                 new StoneDesktop("------------WFELDHWFELDHWFELDH", "心+五屬強化各3個"))
             , new StoneFix("2152",//
