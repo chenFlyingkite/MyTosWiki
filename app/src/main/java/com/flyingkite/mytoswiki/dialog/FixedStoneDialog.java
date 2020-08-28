@@ -51,6 +51,8 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("fhlhwhfeldwffeldwffeldwfhehdhf", "心6個 + 五屬各4個"))
             , new StoneFix("2158",
                 new StoneDesktop("hdwefhhdweflhdweflhdwefldwefll", "心+五屬各5個"))
+            , new StoneFix("2452",
+                new StoneDesktop("HLLLLHHLLLLHEHLLHEEHHHHEEEEEEE", "(10木強, 10光強, 10心強)"))
             , new StoneFix("1719",
                 new StoneDesktop("FWEFFFFWEWEFFWEWEFFWEWEFFFFWEF", "(14火強, 8水強, 8木強)"))
             , new StoneFix("1428,1429,1960,1969,2219",
