@@ -28,7 +28,7 @@ repositories {
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 93
+    ext.versionCode = 94
     ext.versionName = "1.0.0.${versionCode-1}"
     if (!createPlayApk) {
         ext.versionName = "Me"
@@ -186,8 +186,8 @@ dependencies {
     // Glide for Image cache library.
     // https://github.com/bumptech/glide
     //api "com.github.bumptech.glide:glide:3.8.0" // fails for 4.4
-    api "com.github.bumptech.glide:glide:4.9.0"
-    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    api "com.github.bumptech.glide:glide:4.11.0"
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
     //annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.

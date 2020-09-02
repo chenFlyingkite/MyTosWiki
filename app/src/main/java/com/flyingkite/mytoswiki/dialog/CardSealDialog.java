@@ -24,6 +24,7 @@ import com.flyingkite.mytoswiki.data.seal.CreedEarthling;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
 import com.flyingkite.mytoswiki.data.seal.GiantLight;
 import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
+import com.flyingkite.mytoswiki.data.seal.GodsDemons;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
@@ -77,6 +78,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_gods_demons, new GodsDemons()));
         sealSeries.add(new SealItem(R.string.card_series_wrath_gods, new WrathGods()));
         sealSeries.add(new SealItem(R.string.card_series_tengen_toppa, new TengenToppa()));
         sealSeries.add(new SealItem(R.string.card_series_creed_earthling, new CreedEarthling()));
