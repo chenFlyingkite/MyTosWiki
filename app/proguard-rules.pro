@@ -28,7 +28,7 @@
 }
 
 # Google Gson library -- Start
--keep class com.google.gson.** { *; }
+-keep class com.google.gson.* { *; }
 # Gson - End
 
 # Glide -- Start
@@ -43,9 +43,9 @@
 # Glide -- End
 
 # MathView - Start
--dontwarn com.x5.**
--keep class com.x5.template.** { *; }
--keep class com.x5.util.** { *; }
+#-dontwarn com.x5.**
+#-keep class com.x5.template.** { *; }
+#-keep class com.x5.util.** { *; }
 # MathView - End
 
 
@@ -59,11 +59,12 @@
 
 
 # Crashlytics -- Start
-# https://docs.fabric.io/android/crashlytics/dex-and-proguard.html
--keep class com.crashlytics.** { *; }
--dontwarn com.crashlytics.**
--printmapping mapping.txt
+# https://firebase.google.com/docs/crashlytics/get-deobfuscated-reports-fabric-sdk?platform=android
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+-keep public class * extends java.lang.Exception
 # Crashlytics -- End
+
 
 # OkHttp -- start
 -dontwarn okhttp3.**

@@ -5,17 +5,14 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.core.CrashlyticsCore;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.FileUtil;
 import com.flyingkite.library.util.StringUtil;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.io.File;
 import java.util.List;
 import java.util.Locale;
-
-import io.fabric.sdk.android.Fabric;
 
 public class CrashReport {
     private static final String TAG = "CrashReport";
@@ -26,13 +23,11 @@ public class CrashReport {
         DEBUG = debug;
         TicTac2.v t = new TicTac2.v();
         t.tic();
-        // https://docs.fabric.io/android/crashlytics/build-tools.html#disable-crashlytics-for-debug-builds
-        // Set up Crashlytics, disabled for debug builds
-        CrashlyticsCore core = new CrashlyticsCore.Builder().disabled(debug).build(); // 10ms
-        Crashlytics kit = new Crashlytics.Builder().core(core).build(); // 10ms
 
-        // Initialize Fabric with the debug-disabled crashlytics.
-        Fabric.with(context, kit); // 50ms
+        // https://firebase.google.com/docs/crashlytics/upgrade-sdk?platform=android
+        // Explicit initialization of Crashlytics is no longer required.
+        // OPTIONAL: If crash reporting has been explicitly disabled previously, add:
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!debug);
 
         logDeviceInfo(context); // 50ms
         t.tac("%s init OK", TAG);
@@ -45,7 +40,7 @@ public class CrashReport {
         if (DEBUG) {
             log(msg);
         } else {
-            Crashlytics.log(msg);
+            FirebaseCrashlytics.getInstance().log(msg);
         }
     }
 
@@ -56,7 +51,7 @@ public class CrashReport {
         if (DEBUG) {
             e.printStackTrace();
         } else {
-            Crashlytics.logException(e);
+            FirebaseCrashlytics.getInstance().recordException(e);
         }
     }
 
@@ -105,18 +100,19 @@ public class CrashReport {
             return;
         }
 
+        FirebaseCrashlytics fc = FirebaseCrashlytics.getInstance();
         if (value instanceof Boolean) {
-            Crashlytics.setBool(key, (Boolean) value);
+            fc.setCustomKey(key, (Boolean) value);
         } else if (value instanceof Integer) {
-            Crashlytics.setInt(key, (Integer) value);
+            fc.setCustomKey(key, (Integer) value);
         } else if (value instanceof Long) {
-            Crashlytics.setLong(key, (Long) value);
+            fc.setCustomKey(key, (Long) value);
         } else if (value instanceof Float) {
-            Crashlytics.setFloat(key, (Float) value);
+            fc.setCustomKey(key, (Float) value);
         } else if (value instanceof Double) {
-            Crashlytics.setDouble(key, (Double) value);
-        } else {
-            Crashlytics.setString(key, (String) value);
+            fc.setCustomKey(key, (Double) value);
+        } else { // Other data type would be treated as String.
+            fc.setCustomKey(key, (String) value);
         }
     }
 

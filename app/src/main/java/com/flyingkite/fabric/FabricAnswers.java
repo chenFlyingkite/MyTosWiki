@@ -1,16 +1,13 @@
 package com.flyingkite.fabric;
 
-import com.crashlytics.android.answers.Answers;
-import com.crashlytics.android.answers.AnswersEvent;
-import com.crashlytics.android.answers.ContentViewEvent;
-import com.crashlytics.android.answers.CustomEvent;
 import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.library.log.Loggable;
-import com.flyingkite.mytoswiki.BuildConfig;
 
 import java.util.Map;
 
+@Deprecated
 public class FabricAnswers {
+    // TODO Remove me
     private static final String TAG = "FabricAnswers";
 
     //-- Tool bars
@@ -158,15 +155,15 @@ public class FabricAnswers {
 
     //-- App statistics
     public static void logAppOnCreate(Map<String, String> attributes) {
-        ContentViewEvent c = new ContentViewEvent();
-        c.putContentName("App.OnCreate");
-        c = addAttr(c, attributes);
-
-        c.putCustomAttribute("FCMToken", token());
-        Answers.getInstance().logContentView(c);
-        if (BuildConfig.DEBUG) {
-            log("log %s", c);
-        }
+//        ContentViewEvent c = new ContentViewEvent();
+//        c.putContentName("App.OnCreate");
+//        c = addAttr(c, attributes);
+//
+//        c.putCustomAttribute("FCMToken", token());
+//        Answers.getInstance().logContentView(c);
+//        if (BuildConfig.DEBUG) {
+//            log("log %s", c);
+//        }
     }
     //-- App statistics
 //    2018-08-14 12:19:57.921 E/Answers: Invalid user input detected
@@ -181,24 +178,24 @@ public class FabricAnswers {
     }
 
     public static void logCustom(String name, Map<String, String> attributes) {
-        CustomEvent c = new CustomEvent(name);
-        c = addAttr(c, attributes);
-        c.putCustomAttribute("FCMToken", token());
-        Answers.getInstance().logCustom(c);
-        if (BuildConfig.DEBUG) {
-            log("log %s", c);
-        }
+//        CustomEvent c = new CustomEvent(name);
+//        c = addAttr(c, attributes);
+//        c.putCustomAttribute("FCMToken", token());
+//        Answers.getInstance().logCustom(c);
+//        if (BuildConfig.DEBUG) {
+//            log("log %s", c);
+//        }
     }
 
-    private static <T extends AnswersEvent> T addAttr(T c, Map<String, String> attributes) {
-        if (attributes != null) {
-            for (String k : attributes.keySet()) {
-                String v = attributes.get(k);
-                c.putCustomAttribute(k, v);
-            }
-        }
-        return c;
-    }
+//    private static <T extends AnswersEvent> T addAttr(T c, Map<String, String> attributes) {
+//        if (attributes != null) {
+//            for (String k : attributes.keySet()) {
+//                String v = attributes.get(k);
+//                c.putCustomAttribute(k, v);
+//            }
+//        }
+//        return c;
+//    }
 
     private static void log(String message) {
         z.logI(message);

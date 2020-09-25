@@ -20,6 +20,9 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // For Firebase
         classpath "com.google.gms:google-services:4.3.3"
+        // https://firebase.google.com/docs/crashlytics/upgrade-sdk?platform=android
+        // Add the Firebase Crashlytics Gradle plugin.
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
