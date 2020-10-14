@@ -91,6 +91,8 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("--dd----dd--dddddd--dd----dd--", "14X\n X = 暗神 -> 超人捷德 (#2169)\n X = 水神 -> 超人捷德 & 超人ZERO (#2150)\n X = 光 -> 亞瑟 (#2169)"))
             , new StoneFix("2107",
                 new StoneDesktop("-L---LL-LLL---LL---L--L-L--L--", "12光強"))
+            , new StoneFix("2521",
+                new StoneDesktop("WW--EEW----E------F----LFF--LL", "水、火、木、光強化各3個"))
             , new StoneFix("2102",
                 new StoneDesktop("ff--wwf----w------w----fww--ff", "(6水,6火)"))
             , new StoneFix("1585",

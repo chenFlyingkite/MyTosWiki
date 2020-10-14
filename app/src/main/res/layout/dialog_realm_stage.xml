@@ -95,7 +95,7 @@
             </ScrollView>
 
             <ScrollView
-                android:layout_width="@dimen/t340dp"
+                android:layout_width="@dimen/t230dp"
                 android:layout_height="match_parent"
                 android:padding="2dp"
                 android:background="@drawable/bg_rect_red">

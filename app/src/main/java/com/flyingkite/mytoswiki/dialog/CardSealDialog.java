@@ -21,6 +21,7 @@ import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.CreedEarthling;
+import com.flyingkite.mytoswiki.data.seal.Evangelion;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
 import com.flyingkite.mytoswiki.data.seal.GiantLight;
 import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
@@ -78,6 +79,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_evangelion, new Evangelion()));
         sealSeries.add(new SealItem(R.string.card_series_gods_demons, new GodsDemons()));
         sealSeries.add(new SealItem(R.string.card_series_wrath_gods, new WrathGods()));
         sealSeries.add(new SealItem(R.string.card_series_tengen_toppa, new TengenToppa()));
@@ -86,17 +88,17 @@ public class CardSealDialog extends BaseTosDialog {
         sealSeries.add(new SealItem(R.string.card_series_olden_trio, new OldenTrio()));
         sealSeries.add(new SealItem(R.string.card_series_phantom_troupe, new PhantomTroupe()));
         sealSeries.add(new SealItem(R.string.card_series_minerelves, new Minerelves()));
-        sealSeries.add(new SealItem(R.string.card_series_virtual_singers,   new VirtualSingers()));
-        sealSeries.add(new SealItem(R.string.card_series_giant_light,       new GiantLight()));
-        sealSeries.add(new SealItem(R.string.card_series_primal_deities,    new PrimalDeities()));
-        sealSeries.add(new SealItem(R.string.card_series_saint_seiya,       new SaintSeiya()));
-        sealSeries.add(new SealItem(R.string.card_series_unearthly_charm,   new UnearthlyCharm()));
+        sealSeries.add(new SealItem(R.string.card_series_virtual_singers, new VirtualSingers()));
+        sealSeries.add(new SealItem(R.string.card_series_giant_light, new GiantLight()));
+        sealSeries.add(new SealItem(R.string.card_series_primal_deities, new PrimalDeities()));
+        sealSeries.add(new SealItem(R.string.card_series_saint_seiya, new SaintSeiya()));
+        sealSeries.add(new SealItem(R.string.card_series_unearthly_charm, new UnearthlyCharm()));
         sealSeries.add(new SealItem(R.string.card_series_gifted_scientists, new GiftedScientists()));
-        sealSeries.add(new SealItem(R.string.card_series_fairy_tail,        new FairyTail()));
-        sealSeries.add(new SealItem(R.string.card_series_master_cathieves,  new MasterCathieves()));
-        sealSeries.add(new SealItem(R.string.card_series_kono_subarashi,    new KonoSubarashi()));
-        sealSeries.add(new SealItem(R.string.card_series_hindu_gods,        new HinduGods()));
-        sealSeries.add(new SealItem(R.string.card_series_sengoku_samurai,   new SengokuSamurai()));
+        sealSeries.add(new SealItem(R.string.card_series_fairy_tail, new FairyTail()));
+        sealSeries.add(new SealItem(R.string.card_series_master_cathieves, new MasterCathieves()));
+        sealSeries.add(new SealItem(R.string.card_series_kono_subarashi, new KonoSubarashi()));
+        sealSeries.add(new SealItem(R.string.card_series_hindu_gods, new HinduGods()));
+        sealSeries.add(new SealItem(R.string.card_series_sengoku_samurai, new SengokuSamurai()));
     }
 
     private BaseSeal seals;
