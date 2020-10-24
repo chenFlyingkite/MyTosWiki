@@ -51,18 +51,20 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("fhlhwhfeldwffeldwffeldwfhehdhf", "心6個 + 五屬各4個"))
             , new StoneFix("2158",
                 new StoneDesktop("hdwefhhdweflhdweflhdwefldwefll", "心+五屬各5個"))
+            , new StoneFix("1721,1983",
+                new StoneDesktop("WDEWDEWDEWDEWDEWDEWDEWDEWDEWDE", "(10X, 10Y, 10Z), X = 水, Y = 暗, Z = 木\n秦始皇 = 自選 X, Y, Z\n艾普塞朗 = (15心,15火) = 1, 3, 5 行火強 + 2, 4, 6 行心強(5火,5心,5火,5心,5火,5心)"))
             , new StoneFix("2452",
                 new StoneDesktop("HLLLLHHLLLLHEHLLHEEHHHHEEEEEEE", "(10木強, 10光強, 10心強)"))
             , new StoneFix("1719",
                 new StoneDesktop("FWEFFFFWEWEFFWEWEFFWEWEFFFFWEF", "(14火強, 8水強, 8木強)"))
-            , new StoneFix("1428,1429,1960,1969,2219",
+            , new StoneFix("2426",
+                new StoneDesktop("hhllhhhhhhhhhhhhhhlhhhhlllhhll", "(20心, 8光)"))
+            , new StoneFix("1428,1429,1960,1969,2219,2487",
                 new StoneDesktop("EEhhEEhhEEhhEEhhEEhhEEhhEEhhEE", "(14心,16木強)\n木強 -> 水強 = 格雷 (#1960) + 茱比亞 (#1969)\n木強 -> 火強 = 琥珀 (#2219)"))
             , new StoneFix("2409",
                 new StoneDesktop("llffllllffllffffffllffllllffll", "(14火,16光)\n火 -> 木, 光 -> 心"))
             , new StoneFix("1169,2044,1175,2050,1666",
                 new StoneDesktop("FFFhhFhhFhhFFFFFFFFhhFhhFhhFFF", "(12心,18X)\n心 -> 心強 = 潛解革新英雄系列 洛可可 (#2044), 優格圖 (#2050)"))
-            , new StoneFix("1721,1983",
-                new StoneDesktop("WDEWDEWDEWDEWDEWDEWDEWDEWDEWDE", "(10X, 10Y, 10Z), X = 水, Y = 暗, Z = 木\n秦始皇 = 自選 X, Y, Z\n艾普塞朗 = (15心,15火) = 1, 3, 5 行火強 + 2, 4, 6 行心強(5火,5心,5火,5心,5火,5心)"))
             , new StoneFix("2108",
                 new StoneDesktop("HLHHHLLHLLLHHHLLHHHLHHLHLHHLHH", "(18心強,12光強)"))
             , new StoneFix("2023",
@@ -101,13 +103,21 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("f--f---f--f---f--ff--f---f--f-", "10火"))
             , new StoneFix("2117",
                 new StoneDesktop("--DD---D--D-D----D-D--D---DD--", "10暗強"))
+            , new StoneFix("2447",
+                new StoneDesktop("LLL---------LLL---------LLL---", "9光強"))
+            , new StoneFix("2449",
+                new StoneDesktop("DDD---------DDD---------DDD---", "9暗強"))
+            , new StoneFix("2317",
+                new StoneDesktop("-------D-D-DD-D-D--D-D-D------", "9暗強獸族"))
+            , new StoneFix("2353",
+                new StoneDesktop("--WW--W----WW----W------WW--WW", "8木強"))
             , new StoneFix("1279",
                 new StoneDesktop("-ff--------ff----ff--------ff-", "8火"))
             , new StoneFix("2101",
                 new StoneDesktop("---ww-w-----w----w-----w-ww---", "8水"))
             , new StoneFix("1854",
                 new StoneDesktop("---lll-----l-----l-----l-----l", "7光"))
-        );// TODO 2317 暗獸 I. 將 9 個固定位置的符石 ⇒ 轉化為暗獸族強化符石 1 回合內 II. 暗符石兼具 50% 心符石效果
+        );// TODO 暗獸 I. 將 9 個固定位置的符石 ⇒ 轉化為暗獸族強化符石 1 回合內 II. 暗符石兼具 50% 心符石效果
     }
 
     private void initActions() {

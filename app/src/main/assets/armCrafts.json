@@ -28812,6 +28812,1560 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3563",
+    "name": "高振動粒子刀龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6b/C3563.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131227\u0026path-prefix\u003dzh",
+      "iconKey": "C3563.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3564",
+    "name": "高振動粒子刀龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/fa/C3564.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131231\u0026path-prefix\u003dzh",
+      "iconKey": "C3564.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3565",
+    "name": "高振動粒子刀龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/4b/C3565.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131233\u0026path-prefix\u003dzh",
+      "iconKey": "C3565.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3566",
+    "name": "高振動粒子刀龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/d6/C3566.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131236\u0026path-prefix\u003dzh",
+      "iconKey": "C3566.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3567",
+    "name": "高振動粒子刀龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/aa/C3567.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131239\u0026path-prefix\u003dzh",
+      "iconKey": "C3567.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3568",
+    "name": "高振動粒子刀龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6b/C3568.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131242\u0026path-prefix\u003dzh",
+      "iconKey": "C3568.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 2 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除神族符石時，自身攻擊力提升 1.8 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (成功通關 綾波零的昇華 後獲得 1 張)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "+5%",
+    "idNorm": "3569",
+    "name": "高振動粒子刀龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%AB%98%E6%8C%AF%E5%8B%95%E7%B2%92%E5%AD%90%E5%88%80%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c7/C3569.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131245\u0026path-prefix\u003dzh",
+      "iconKey": "C3569.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 召喚師BINGO - 合作Bingo完成第三頁全部任務 (2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3570",
+    "name": "陽電子炮龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/24/C3570.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165638\u0026path-prefix\u003dzh",
+      "iconKey": "C3570.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 65% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3571",
+    "name": "陽電子炮龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/d4/C3571.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165637\u0026path-prefix\u003dzh",
+      "iconKey": "C3571.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 65% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3572",
+    "name": "陽電子炮龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/e3/C3572.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165635\u0026path-prefix\u003dzh",
+      "iconKey": "C3572.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 33% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3573",
+    "name": "陽電子炮龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3e/C3573.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165634\u0026path-prefix\u003dzh",
+      "iconKey": "C3573.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 33% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3574",
+    "name": "陽電子炮龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/85/C3574.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165632\u0026path-prefix\u003dzh",
+      "iconKey": "C3574.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 0% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3575",
+    "name": "陽電子炮龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/14/C3575.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165631\u0026path-prefix\u003dzh",
+      "iconKey": "C3575.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，神族成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "神秘的正八面體 - 功勳兌換 (魔神 HP 0% 以下) 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3576",
+    "name": "陽電子炮龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%99%BD%E9%9B%BB%E5%AD%90%E7%82%AE%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6f/C3576.png/revision/latest/scale-to-width-down/120?cb\u003d20201016165629\u0026path-prefix\u003dzh",
+      "iconKey": "C3576.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3577",
+    "name": "朗基努斯之槍龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/1d/C3577.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131355\u0026path-prefix\u003dzh",
+      "iconKey": "C3577.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3578",
+    "name": "朗基努斯之槍龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/53/C3578.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131358\u0026path-prefix\u003dzh",
+      "iconKey": "C3578.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3579",
+    "name": "朗基努斯之槍龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/f0/C3579.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131401\u0026path-prefix\u003dzh",
+      "iconKey": "C3579.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3580",
+    "name": "朗基努斯之槍龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6e/C3580.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131404\u0026path-prefix\u003dzh",
+      "iconKey": "C3580.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3581",
+    "name": "朗基努斯之槍龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/9/97/C3581.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131406\u0026path-prefix\u003dzh",
+      "iconKey": "C3581.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3582",
+    "name": "朗基努斯之槍龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/fa/C3582.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131409\u0026path-prefix\u003dzh",
+      "iconKey": "C3582.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "消耗全體敵人 35% 總生命力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個神族成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "自身對光屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身對暗屬性目標攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對神族目標攻擊力提升 1.3 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2516",
+      "2517",
+      "2518",
+      "2520"
+    ],
+    "cardLimitName": [
+      "碇真嗣與EVA初號機",
+      "碇真嗣與EVA覺醒初號機",
+      "明日香與EVA2號機",
+      "綾波零與EVA零號機"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3583",
+    "name": "朗基努斯之槍龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E6%9C%97%E5%9F%BA%E5%8A%AA%E6%96%AF%E4%B9%8B%E6%A7%8D%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/46/C3583.png/revision/latest/scale-to-width-down/120?cb\u003d20201009131411\u0026path-prefix\u003dzh",
+      "iconKey": "C3583.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
