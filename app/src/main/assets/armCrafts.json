@@ -140,7 +140,7 @@
     }
   },
   {
-    "rarity": 3,
+    "rarity": 2,
     "level": 2,
     "mode": "裂空龍刃",
     "charge": "消除任何符石 (只計算首批消除的符石)",
@@ -168,7 +168,7 @@
     }
   },
   {
-    "rarity": 3,
+    "rarity": 2,
     "level": 2,
     "mode": "鏡像龍丸",
     "charge": "消除任何符石 (只計算首批消除的符石)",
@@ -15246,6 +15246,2106 @@
     }
   },
   {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3276",
+    "name": "獨眼盾龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8c/C3276.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042755\u0026path-prefix\u003dzh",
+      "iconKey": "C3276.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3277",
+    "name": "獨眼盾龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c8/C3277.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042757\u0026path-prefix\u003dzh",
+      "iconKey": "C3277.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3278",
+    "name": "獨眼盾龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c6/C3278.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042759\u0026path-prefix\u003dzh",
+      "iconKey": "C3278.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3279",
+    "name": "獨眼盾龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/ef/C3279.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042800\u0026path-prefix\u003dzh",
+      "iconKey": "C3279.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3280",
+    "name": "獨眼盾龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/de/C3280.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042802\u0026path-prefix\u003dzh",
+      "iconKey": "C3280.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3281",
+    "name": "獨眼盾龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/04/C3281.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042804\u0026path-prefix\u003dzh",
+      "iconKey": "C3281.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0851",
+      "1991"
+    ],
+    "cardLimitName": [
+      "拉萊耶之主 ‧ 克蘇魯",
+      "萬銃呼喚 · 克蘇魯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3282",
+    "name": "獨眼盾龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%8D%A8%E7%9C%BC%E7%9B%BE%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/22/C3282.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042805\u0026path-prefix\u003dzh",
+      "iconKey": "C3282.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3283",
+    "name": "三犬頭戒龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a9/C3283.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042807\u0026path-prefix\u003dzh",
+      "iconKey": "C3283.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3284",
+    "name": "三犬頭戒龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a5/C3284.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042808\u0026path-prefix\u003dzh",
+      "iconKey": "C3284.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3285",
+    "name": "三犬頭戒龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/ab/C3285.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042810\u0026path-prefix\u003dzh",
+      "iconKey": "C3285.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3286",
+    "name": "三犬頭戒龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/68/C3286.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042811\u0026path-prefix\u003dzh",
+      "iconKey": "C3286.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3287",
+    "name": "三犬頭戒龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/36/C3287.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042813\u0026path-prefix\u003dzh",
+      "iconKey": "C3287.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3288",
+    "name": "三犬頭戒龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/77/C3288.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042814\u0026path-prefix\u003dzh",
+      "iconKey": "C3288.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除火符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的火符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0852",
+      "1992"
+    ],
+    "cardLimitName": [
+      "異界叩門者 ‧ 基路比魯斯",
+      "狙槍轟射 · 基路比魯斯"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3289",
+    "name": "三犬頭戒龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E4%B8%89%E7%8A%AC%E9%A0%AD%E6%88%92%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3f/C3289.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042816\u0026path-prefix\u003dzh",
+      "iconKey": "C3289.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3290",
+    "name": "蛇首項鍊龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/ac/C3290.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042817\u0026path-prefix\u003dzh",
+      "iconKey": "C3290.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3291",
+    "name": "蛇首項鍊龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/21/C3291.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042819\u0026path-prefix\u003dzh",
+      "iconKey": "C3291.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3292",
+    "name": "蛇首項鍊龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/bb/C3292.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042821\u0026path-prefix\u003dzh",
+      "iconKey": "C3292.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3293",
+    "name": "蛇首項鍊龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8e/C3293.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042822\u0026path-prefix\u003dzh",
+      "iconKey": "C3293.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3294",
+    "name": "蛇首項鍊龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/ec/C3294.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042824\u0026path-prefix\u003dzh",
+      "iconKey": "C3294.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3295",
+    "name": "蛇首項鍊龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/f4/C3295.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042825\u0026path-prefix\u003dzh",
+      "iconKey": "C3295.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "於自身直行首批消除 1 組 4 粒或以上木符石時，自身技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0853",
+      "1993"
+    ],
+    "cardLimitName": [
+      "窳敗之瞳 ‧ 美杜莎",
+      "木旋輪彈 · 美杜莎"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3296",
+    "name": "蛇首項鍊龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E8%9B%87%E9%A6%96%E9%A0%85%E9%8D%8A%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/83/C3296.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042827\u0026path-prefix\u003dzh",
+      "iconKey": "C3296.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3297",
+    "name": "鷲翼臂章龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/23/C3297.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042829\u0026path-prefix\u003dzh",
+      "iconKey": "C3297.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3298",
+    "name": "鷲翼臂章龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/84/C3298.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042830\u0026path-prefix\u003dzh",
+      "iconKey": "C3298.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3299",
+    "name": "鷲翼臂章龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/23/C3299.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042832\u0026path-prefix\u003dzh",
+      "iconKey": "C3299.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3300",
+    "name": "鷲翼臂章龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/d9/C3300.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042833\u0026path-prefix\u003dzh",
+      "iconKey": "C3300.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3301",
+    "name": "鷲翼臂章龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/0e/C3301.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042835\u0026path-prefix\u003dzh",
+      "iconKey": "C3301.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3302",
+    "name": "鷲翼臂章龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/14/C3302.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042837\u0026path-prefix\u003dzh",
+      "iconKey": "C3302.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除心符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的心符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0854",
+      "1994"
+    ],
+    "cardLimitName": [
+      "聖耀獸王 ‧ 格里芬",
+      "遊炮厲耀 · 格里芬"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3303",
+    "name": "鷲翼臂章龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E9%B7%B2%E7%BF%BC%E8%87%82%E7%AB%A0%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8b/C3303.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042839\u0026path-prefix\u003dzh",
+      "iconKey": "C3303.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3304",
+    "name": "羊骨杯龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/0b/C3304.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042840\u0026path-prefix\u003dzh",
+      "iconKey": "C3304.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3305",
+    "name": "羊骨杯龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a4/C3305.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042842\u0026path-prefix\u003dzh",
+      "iconKey": "C3305.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3306",
+    "name": "羊骨杯龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a2/C3306.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042843\u0026path-prefix\u003dzh",
+      "iconKey": "C3306.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3307",
+    "name": "羊骨杯龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/d2/C3307.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042845\u0026path-prefix\u003dzh",
+      "iconKey": "C3307.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3308",
+    "name": "羊骨杯龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/0c/C3308.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042846\u0026path-prefix\u003dzh",
+      "iconKey": "C3308.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3309",
+    "name": "羊骨杯龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/09/C3309.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042848\u0026path-prefix\u003dzh",
+      "iconKey": "C3309.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除暗符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，50% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "消除 1 組 4 粒或以上的暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "0855",
+      "1995"
+    ],
+    "cardLimitName": [
+      "深淵奪智者 ‧ 巴風特",
+      "幽附鋼刀 · 巴風特"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3310",
+    "name": "羊骨杯龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E7%BE%8A%E9%AA%A8%E6%9D%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/76/C3310.png/revision/latest/scale-to-width-down/120?cb\u003d20201114042854\u0026path-prefix\u003dzh",
+      "iconKey": "C3310.png"
+    }
+  },
+  {
     "rarity": 3,
     "level": 3,
     "mode": "連鎖龍紋",
@@ -25001,7 +27101,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25069,7 +27169,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25137,7 +27237,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25205,7 +27305,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25273,7 +27373,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25341,7 +27441,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -25409,7 +27509,7 @@
       {
         "level": 1,
         "score": 0,
-        "detail": "於自身直行消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
+        "detail": "於自身直行首批消除 1 組 3 粒或以上水符石時，自身技能 EP 增加 1"
       },
       {
         "level": 2,
@@ -28857,7 +30957,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -28931,7 +31031,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29005,7 +31105,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29079,7 +31179,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29153,7 +31253,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29227,7 +31327,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29301,7 +31401,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 可獲得 1 張)"
+        "detail": "對抗不明生命體 - 王關隨機掉落 儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 綾波零的昇華 / 明日香的昇華 / 碇真嗣的昇華 可獲得 1 張)"
       }
     ],
     "attrLimit": "",
@@ -29893,7 +31993,7 @@
       {
         "level": 5,
         "score": 0,
-        "detail": "儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 龍刻武裝自選券 (首次通關 為了與你相遇才誕生 可獲得 1 張)"
+        "detail": "儲值活動『作戰武裝禮包』(2020年10月12日~2020年11月8日) 討伐戰【希望之艦】一般及困難難度 累積15次討伐獎勵 龍刻武裝自選券 (首次通關 為了與你相遇才誕生 可獲得 1 張)"
       }
     ],
     "attrLimit": "",

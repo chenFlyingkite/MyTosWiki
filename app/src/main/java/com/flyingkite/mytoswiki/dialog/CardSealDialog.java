@@ -20,6 +20,7 @@ import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
+import com.flyingkite.mytoswiki.data.seal.CharlouetteMagicAgency;
 import com.flyingkite.mytoswiki.data.seal.CreedEarthling;
 import com.flyingkite.mytoswiki.data.seal.Evangelion;
 import com.flyingkite.mytoswiki.data.seal.FairyTail;
@@ -79,6 +80,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_charlouette, new CharlouetteMagicAgency()));
         sealSeries.add(new SealItem(R.string.card_series_evangelion, new Evangelion()));
         sealSeries.add(new SealItem(R.string.card_series_gods_demons, new GodsDemons()));
         sealSeries.add(new SealItem(R.string.card_series_wrath_gods, new WrathGods()));
