@@ -956,6 +956,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/greyd"
                     android:textColorHint="@color/grey8"
+                    android:textIsSelectable="true"
                     android:hint="@string/enterText"/>
 
                 <ImageView

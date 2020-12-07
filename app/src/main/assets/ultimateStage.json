@@ -263,8 +263,8 @@
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E5%B9%B8%E7%A6%8F%E7%9A%84%E6%AD%B8%E5%AE%BF(%E9%97%9C%E5%8D%A1)",
-      "name": "幸福的歸宿(關卡)",
-      "icon": "1464"
+      "name": "幸福的歸宿",
+      "icon": "幸福的歸宿"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E7%99%BD%E5%85%94%E5%B0%91%E5%B9%B4%E7%9A%84%E6%81%A9%E4%BB%87",
@@ -575,6 +575,11 @@
       "link": "https://tos.fandom.com/zh/wiki/%E4%BB%A5%E9%9D%A9%E8%81%B7%E4%BD%9C%E7%A3%A8%E7%A4%AA",
       "name": "以革職作磨礪",
       "icon": "2510"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%84%9B%E7%9A%84%E6%8A%B1%E6%8A%B1",
+      "name": "愛的抱抱",
+      "icon": "2575"
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%A0%E6%B4%8B%E7%9A%84%E7%8E%8B%E8%80%85",
