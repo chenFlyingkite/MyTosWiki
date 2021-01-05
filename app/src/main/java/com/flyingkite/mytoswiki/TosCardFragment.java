@@ -195,7 +195,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         cardsRecycler = findViewById(R.id.tosRecycler);
         favorBox = findViewById(R.id.tosFavorBox);
         favorRecycler = findViewById(R.id.tosFavorites);
-
         menuEntry = findViewById(R.id.tosSortMenu);
         initCardLibrary();
         initSortMenu();

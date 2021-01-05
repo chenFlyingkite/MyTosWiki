@@ -34,6 +34,7 @@ import com.flyingkite.mytoswiki.data.seal.Minerelves;
 import com.flyingkite.mytoswiki.data.seal.OldenTrio;
 import com.flyingkite.mytoswiki.data.seal.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.PrimalDeities;
+import com.flyingkite.mytoswiki.data.seal.RockManDiVE;
 import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
@@ -80,6 +81,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_rockman, new RockManDiVE()));
         sealSeries.add(new SealItem(R.string.card_series_charlouette, new CharlouetteMagicAgency()));
         sealSeries.add(new SealItem(R.string.card_series_evangelion, new Evangelion()));
         sealSeries.add(new SealItem(R.string.card_series_gods_demons, new GodsDemons()));
