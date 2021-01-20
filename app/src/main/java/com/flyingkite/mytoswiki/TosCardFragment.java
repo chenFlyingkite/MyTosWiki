@@ -668,13 +668,13 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortDisplay.check(v.getId());
 
         int type = Misc.NT_ID_NORM;
-        switch (v.getId()) {
-            case R.id.sortDisplayName:
-                type = Misc.NT_NAME;
-                break;
-            case R.id.sortDisplayNameNormId:
-                type = Misc.NT_NAME_ID_NORM;
-                break;
+        int id = v.getId();
+        if (id == R.id.sortDisplayName) {
+            type = Misc.NT_NAME;
+        } else if (id == R.id.sortDisplayNameNormId) {
+            type = Misc.NT_NAME_ID_NORM;
+        } else if (id == 0) {
+        } else {
         }
         if (cardLib.adapter != null) {
             cardLib.adapter.setNameType(type);
@@ -872,11 +872,17 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             for (int i = 0; i < n; i++) {
                 int m = -1;
                 View v = vg.getChildAt(i);
-                switch (v.getId()) {
-                    case R.id.sortHide6xxx: m = 0; break;
-                    case R.id.sortHide7xxx: m = 1; break;
-                    case R.id.sortHide8xxx: m = 2; break;
-                    case R.id.sortHide9xxx: m = 3; break;
+                int id = v.getId();
+                if (id == R.id.sortHide6xxx) {
+                    m = 0;
+                } else if (id == R.id.sortHide7xxx) {
+                    m = 1;
+                } else if (id == R.id.sortHide8xxx) {
+                    m = 2;
+                } else if (id == R.id.sortHide9xxx) {
+                    m = 3;
+                } else if (id == 0) {
+                } else {
                 }
                 if (MathUtil.isInRange(m, 0, selectForShow.length)) {
                     selectForShow[m] = v.isSelected();
@@ -1491,42 +1497,35 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 TosCard c2 = data.get(o2);
                 long v1 = -1, v2 = -1;
 
-                switch (id) {
-                    case R.id.sortCommonMaxHP:
-                        v1 = c1.maxHPAme;
-                        v2 = c2.maxHPAme;
-                        break;
-                    case R.id.sortCommonMaxAttack:
-                        v1 = c1.maxAttackAme;
-                        v2 = c2.maxAttackAme;
-                        break;
-                    case R.id.sortCommonMaxRecovery:
-                        v1 = c1.maxRecoveryAme;
-                        v2 = c2.maxRecoveryAme;
-                        break;
-                    case R.id.sortCommonMaxSum:
-                        v1 = c1.maxHPAme + c1.maxAttackAme + c1.maxRecoveryAme;
-                        v2 = c2.maxHPAme + c2.maxAttackAme + c2.maxRecoveryAme;
-                        break;
-                    case R.id.sortCommonSkillCDMax:
-                        dsc = false;
-                        v1 = normSkillCD(c1);
-                        v2 = normSkillCD(c2);
-                        break;
-                    case R.id.sortCommonSpace:
-                        dsc = false;
-                        v1 = c1.cost;
-                        v2 = c2.cost;
-                        break;
-                    case R.id.sortCommonRace:
-                        dsc = false;
-                        v1 = ListUtil.indexOf(commonRace, c1.race);
-                        v2 = ListUtil.indexOf(commonRace, c2.race);
-                        break;
-                    case R.id.sortCommonMaxTu:
-                        v1 = c1.maxTUAllLevel;
-                        v2 = c2.maxTUAllLevel;
-                        break;
+                if (id == R.id.sortCommonMaxHP) {
+                    v1 = c1.maxHPAme;
+                    v2 = c2.maxHPAme;
+                } else if (id == R.id.sortCommonMaxAttack) {
+                    v1 = c1.maxAttackAme;
+                    v2 = c2.maxAttackAme;
+                } else if (id == R.id.sortCommonMaxRecovery) {
+                    v1 = c1.maxRecoveryAme;
+                    v2 = c2.maxRecoveryAme;
+                } else if (id == R.id.sortCommonMaxSum) {
+                    v1 = c1.maxHPAme + c1.maxAttackAme + c1.maxRecoveryAme;
+                    v2 = c2.maxHPAme + c2.maxAttackAme + c2.maxRecoveryAme;
+                } else if (id == R.id.sortCommonSkillCDMax) {
+                    dsc = false;
+                    v1 = normSkillCD(c1);
+                    v2 = normSkillCD(c2);
+                } else if (id == R.id.sortCommonSpace) {
+                    dsc = false;
+                    v1 = c1.cost;
+                    v2 = c2.cost;
+                } else if (id == R.id.sortCommonRace) {
+                    dsc = false;
+                    v1 = ListUtil.indexOf(commonRace, c1.race);
+                    v2 = ListUtil.indexOf(commonRace, c2.race);
+                } else if (id == R.id.sortCommonMaxTu) {
+                    v1 = c1.maxTUAllLevel;
+                    v2 = c2.maxTUAllLevel;
+                } else if (id == 0) {
+                } else {
                 }
 
                 if (dsc) {
@@ -1571,25 +1570,23 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             TosCard c;
             // Create Message
             int id = sortFormulaList.getCheckedRadioButtonId();
-            switch (id) {
-                case R.id.sortFormulaAttack:
-                    message = new ArrayList<>();
-                    for (int i = 0; i < result.size(); i++) {
-                        c = data.get(result.get(i));
-                        double atk = getFormulaAttack(c);
-                        message.add(_fmt("%.1f", atk));
-                    }
-                    break;
-                case R.id.sortFormulaAttackRatio:
-                    message = new ArrayList<>();
-                    for (int i = 0; i < result.size(); i++) {
-                        c = data.get(result.get(i));
-                        double atk = getFormulaAttackRatio(c);
-                        message.add(_fmt("%.2f", atk));
-                    }
-                    break;
-                default:
-                    break;
+
+            if (id == R.id.sortFormulaAttack) {
+                message = new ArrayList<>();
+                for (int i = 0; i < result.size(); i++) {
+                    c = data.get(result.get(i));
+                    double atk = getFormulaAttack(c);
+                    message.add(_fmt("%.1f", atk));
+                }
+            } else if (id == R.id.sortFormulaAttackRatio) {
+                message = new ArrayList<>();
+                for (int i = 0; i < result.size(); i++) {
+                    c = data.get(result.get(i));
+                    double atk = getFormulaAttackRatio(c);
+                    message.add(_fmt("%.2f", atk));
+                }
+            } else if (id == 0) {
+            } else {
             }
             return message;
         }
@@ -1605,66 +1602,59 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             for (int i = 0; i < result.size(); i++) {
                 c = data.get(result.get(i));
                 msg = null;
-                switch (id) {
-                    case R.id.sortCommonMaxHP:
-                        msg = String.valueOf(c.maxHp());
-                        if (c.ameAddHP()) {
-                            msg += "^";
-                        }
-                        if (c.maxAddHp()) {
-                            msg += "#";
-                        }
-                        break;
-                    case R.id.sortCommonMaxAttack:
-                        msg = String.valueOf(c.maxAttack());
-                        if (c.ameAddAttack()) {
-                            msg += "^";
-                        }
-                        if (c.maxAddAttack()) {
-                            msg += "#";
-                        }
-                        break;
-                    case R.id.sortCommonMaxRecovery:
-                        msg = String.valueOf(c.maxRecovery());
-                        if (c.ameAddRecovery()) {
-                            msg += "^";
-                        }
-                        if (c.maxAddRecovery()) {
-                            msg += "#";
-                        }
-                        break;
-                    case R.id.sortCommonMaxSum:
-                        msg = String.valueOf(c.maxHAR());
-                        if (c.ameAddAll()) {
-                            msg += "^";
-                        }
-                        if (c.maxAddAll()) {
-                            msg += "#";
-                        }
-                        break;
-                    case R.id.sortCommonSkillCDMax:
-                        msg = "" + c.skillCDMaxAme;
-                        if (c.ameMinusCD()) {
-                            msg += "^";
-                        }
-                        if (c.skillCDMax2 > 0) {
-                             msg += " & " + c.skillCDMax2;
-                        }
-                        break;
-                    case R.id.sortCommonSpace:
-                        msg = String.valueOf(c.cost);
-                        break;
-                    case R.id.sortCommonRace:
-                        String name = c.id;
-                        if (cardLib.adapter != null) {
-                            name = cardLib.adapter.name(c);
-                        }
-                        msg = name + "\n" + c.race;
-                        break;
-                    case R.id.sortCommonMaxTu:
-                        msg = String.valueOf(c.maxTUAllLevel);
-                        break;
-                    default:
+
+                if (id == R.id.sortCommonMaxHP) {
+                    msg = String.valueOf(c.maxHp());
+                    if (c.ameAddHP()) {
+                        msg += "^";
+                    }
+                    if (c.maxAddHp()) {
+                        msg += "#";
+                    }
+                } else if (id == R.id.sortCommonMaxAttack) {
+                    msg = String.valueOf(c.maxAttack());
+                    if (c.ameAddAttack()) {
+                        msg += "^";
+                    }
+                    if (c.maxAddAttack()) {
+                        msg += "#";
+                    }
+                } else if (id == R.id.sortCommonMaxRecovery) {
+                    msg = String.valueOf(c.maxRecovery());
+                    if (c.ameAddRecovery()) {
+                        msg += "^";
+                    }
+                    if (c.maxAddRecovery()) {
+                        msg += "#";
+                    }
+                } else if (id == R.id.sortCommonMaxSum) {
+                    msg = String.valueOf(c.maxHAR());
+                    if (c.ameAddAll()) {
+                        msg += "^";
+                    }
+                    if (c.maxAddAll()) {
+                        msg += "#";
+                    }
+                } else if (id == R.id.sortCommonSkillCDMax) {
+                    msg = "" + c.skillCDMaxAme;
+                    if (c.ameMinusCD()) {
+                        msg += "^";
+                    }
+                    if (c.skillCDMax2 > 0) {
+                        msg += " & " + c.skillCDMax2;
+                    }
+                } else if (id == R.id.sortCommonSpace) {
+                    msg = String.valueOf(c.cost);
+                } else if (id == R.id.sortCommonRace) {
+                    String name = c.id;
+                    if (cardLib.adapter != null) {
+                        name = cardLib.adapter.name(c);
+                    }
+                    msg = name + "\n" + c.race;
+                } else if (id == R.id.sortCommonMaxTu) {
+                    msg = String.valueOf(c.maxTUAllLevel);
+                } else if (id == 0) {
+                } else {
                 }
 
                 if (msg != null) {

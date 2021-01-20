@@ -456,10 +456,11 @@ public class CraftDialog extends BaseTosDialog {
         sortDisplay.check(v.getId());
 
         int type = Misc.NT_NAME;
-        switch (v.getId()) {
-            case R.id.sortDisplayNormId:
-                type = Misc.NT_ID_NORM;
-                break;
+        int id = v.getId();
+        if (id == R.id.sortDisplayNormId) {
+            type = Misc.NT_ID_NORM;
+        } else if (id == 0) {
+        } else {
         }
         if (craftLibrary.adapter != null) {
             craftLibrary.adapter.setNameType(type);
@@ -771,30 +772,19 @@ public class CraftDialog extends BaseTosDialog {
                 BaseCraft c2 = data.get(o2);
                 long v1 = -1, v2 = -1;
 
-                switch (id) {
-                    case R.id.sortCommonMode:
-                        v1 = asCompareIndex(modeN(c1), starN(c1), attrN(c1), raceN(c1));
-                        v2 = asCompareIndex(modeN(c2), starN(c2), attrN(c2), raceN(c2));
-                        break;
-                    case R.id.sortCommonAttr:
-                        v1 = asCompareIndex(attrN(c1), modeN(c1), starN(c1), raceN(c1));
-                        v2 = asCompareIndex(attrN(c2), modeN(c2), starN(c2), raceN(c2));
-                        break;
-                    case R.id.sortCommonRace:
-                        v1 = asCompareIndex(raceN(c1), modeN(c1), starN(c1), attrN(c1));
-                        v2 = asCompareIndex(raceN(c2), modeN(c2), starN(c2), attrN(c2));
-                        break;
-                        /*
-                    case R.id.sortCommonMaxSum:
-                        v1 = c1.maxHP + c1.maxAttack + c1.maxRecovery;
-                        v2 = c2.maxHP + c2.maxAttack + c2.maxRecovery;
-                        break;
-                    case R.id.sortCommonRace:
-                        dsc = false;
-                        v1 = ListUtil.indexOf(commonRace, c1.race);
-                        v2 = ListUtil.indexOf(commonRace, c2.race);
-                        break;
-                        */
+                if (id == R.id.sortCommonMode) {
+                    v1 = asCompareIndex(modeN(c1), starN(c1), attrN(c1), raceN(c1));
+                    v2 = asCompareIndex(modeN(c2), starN(c2), attrN(c2), raceN(c2));
+
+                } else if (id == R.id.sortCommonAttr) {
+                    v1 = asCompareIndex(attrN(c1), modeN(c1), starN(c1), raceN(c1));
+                    v2 = asCompareIndex(attrN(c2), modeN(c2), starN(c2), raceN(c2));
+
+                } else if (id == R.id.sortCommonRace) {
+                    v1 = asCompareIndex(raceN(c1), modeN(c1), starN(c1), attrN(c1));
+                    v2 = asCompareIndex(raceN(c2), modeN(c2), starN(c2), attrN(c2));
+                } else if (id == 0) {
+                } else {
                 }
                 //logE("v1 = %s -> %s", v1, c1);
                 //logE("v2 = %s -> %s", v2, c2);
@@ -873,16 +863,14 @@ public class CraftDialog extends BaseTosDialog {
             for (int i = 0; i < n; i++) {
                 View v = vg.getChildAt(i);
                 if (v.isSelected()) {
-                    switch (v.getId()) {
-                        case R.id.sortHideCraft0xxx:
-                            accept &= !MathUtil.isInRange(idNorm,    0, 1000);
-                            break;
-                        case R.id.sortHideCraft2xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 2000, 3000);
-                            break;
-                        case R.id.sortHideCraft3xxx:
-                            accept &= !MathUtil.isInRange(idNorm, 3000, 4000);
-                            break;
+                    int id = v.getId();
+                    if (id == R.id.sortHideCraft0xxx) {
+                        accept &= !MathUtil.isInRange(idNorm,    0, 1000);
+                    } else if (id == R.id.sortHideCraft2xxx) {
+                        accept &= !MathUtil.isInRange(idNorm, 2000, 3000);
+                    } else if (id == R.id.sortHideCraft3xxx) {
+                        accept &= !MathUtil.isInRange(idNorm, 3000, 4000);
+                    } else {
                     }
                 }
             }

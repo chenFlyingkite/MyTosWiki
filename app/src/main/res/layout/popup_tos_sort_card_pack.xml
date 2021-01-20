@@ -117,6 +117,10 @@
                     android:id="@+id/sortCommonOwnCount"
                     style="@style/sortRadio"
                     android:text="@string/cards_common_own_count"/>
+                <RadioButton
+                    android:id="@+id/sortCommonMaxTu"
+                    style="@style/sortRadio"
+                    android:text="@string/cards_maxTuLv"/>
             </RadioGroup>
 
             <!--

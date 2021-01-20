@@ -249,80 +249,57 @@ public class MainActivity extends BaseActivity implements
 
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
-                switch (iconId) {
-                    case R.drawable.card_1429:
-                        new FixedStoneDialog().show(getActivity());
-                        break;
-                    case R.drawable.card_0674:
-                        new UltimateStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.card_0617:
-                        new SkillEatingDialog().show(getActivity());
-                        break;
-                    case R.drawable.logo_stamina:
-                        new SummonerLevelDialog().show(getActivity());
-                        break;
-                    case R.drawable.exp_eat:
-                        new MonsterLevelDialog().show(getActivity());
-                        break;
-                    case R.drawable.ic_description_black_48dp:
-                        new TextEditorDialog(MainActivity.this::getActivity).show();
-                        break;
-                    case R.drawable.logo_chrome:
-                        new WebDialog().show(getActivity());
-                        break;
-                    case R.drawable.ic_send_black_48dp:
-                        new FeedbackDialog().show(getActivity());
-                        break;
-                    case R.mipmap.app_icon:
-                        new AboutDialog().show(getActivity());
-                        break;
-                    case R.drawable.logo_craft_1:
-                        new CraftDialog().show(getActivity());
-                        break;
-                    case R.drawable.owl2:
-                        new StageMemoDialog().show(getActivity());
-                        break;
-                    case R.drawable.q1:
-                        new HelpDialog().show(getActivity());
-                        break;
-                    case R.drawable.card_1777:
-                        new SkillEatSampleDialog().show(getActivity());
-                        break;
-                    case R.drawable.shop_card:
-                        new CardSealDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_app:
-                        new TosEventDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_enochian:
-                        new MainStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_vestige:
-                        new DailyStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.gift_stamina:
-                        new StaminaDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_lost_relic_pass:
-                        new RelicStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_story:
-                        new StoryStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.tos_void_realm:
-                        new RealmStageDialog().show(getActivity());
-                        break;
-                    case R.drawable.card_0096:
-                        new FarmPoolDialog().show(getActivity());
-                        break;
-                    //case R.drawable.rune_water:
-                    case R.drawable.s_i047:
-                        new RunestoneEditorDialog().show(getActivity());
-                        break;
-                    case R.drawable.card_1089:
-                        new FreeMoveSampleDialog().show(getActivity());
-                        break;
+                if (iconId == R.drawable.card_1429) {
+                    new FixedStoneDialog().show(getActivity());
+                } else if (iconId == R.drawable.card_0674) {
+                    new UltimateStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.card_0617) {
+                    new SkillEatingDialog().show(getActivity());
+                } else if (iconId == R.drawable.logo_stamina) {
+                    new SummonerLevelDialog().show(getActivity());
+                } else if (iconId == R.drawable.exp_eat) {
+                    new MonsterLevelDialog().show(getActivity());
+                } else if (iconId == R.drawable.ic_description_black_48dp) {
+                    new TextEditorDialog(MainActivity.this::getActivity).show();
+                } else if (iconId == R.drawable.logo_chrome) {
+                    new WebDialog().show(getActivity());
+                } else if (iconId == R.drawable.ic_send_black_48dp) {
+                    new FeedbackDialog().show(getActivity());
+                } else if (iconId == R.mipmap.app_icon) {
+                    new AboutDialog().show(getActivity());
+                } else if (iconId == R.drawable.logo_craft_1) {
+                    new CraftDialog().show(getActivity());
+                } else if (iconId == R.drawable.owl2) {
+                    new StageMemoDialog().show(getActivity());
+                } else if (iconId == R.drawable.q1) {
+                    new HelpDialog().show(getActivity());
+                } else if (iconId == R.drawable.card_1777) {
+                    new SkillEatSampleDialog().show(getActivity());
+                } else if (iconId == R.drawable.shop_card) {
+                    new CardSealDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_app) {
+                    new TosEventDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_enochian) {
+                    new MainStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_vestige) {
+                    new DailyStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.gift_stamina) {
+                    new StaminaDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_lost_relic_pass) {
+                    new RelicStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_story) {
+                    new StoryStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.tos_void_realm) {
+                    new RealmStageDialog().show(getActivity());
+                } else if (iconId == R.drawable.card_0096) {
+                    new FarmPoolDialog().show(getActivity());
+                //} else if (iconId == R.drawable.rune_water) {
+                } else if (iconId == R.drawable.s_i047) {
+                    new RunestoneEditorDialog().show(getActivity());
+                } else if (iconId == R.drawable.card_1089) {
+                    new FreeMoveSampleDialog().show(getActivity());
+                } else if (iconId == 0){
+                } else {
                 }
             }
         });

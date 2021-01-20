@@ -487,7 +487,6 @@ public class CardSealDialog extends BaseTosDialog {
 
     private void resetPool() {
         cardPoolLibrary.adapter.setDataList(drawNCards(100)).notifyDataSetChanged();
-        setupTable();
     }
 
     private List<TosCard> drawNCards(int n) {
