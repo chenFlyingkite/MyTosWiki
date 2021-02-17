@@ -14,7 +14,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 boolean createPlayApk = true
 
 task MyBuildInfo {
-    ext.versionCode = 108
+    ext.versionCode = 109
     ext.versionName = "1.0.0.${versionCode-1}"
     if (!createPlayApk) {
         ext.versionName = "Me"
