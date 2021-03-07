@@ -6,10 +6,8 @@ import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.Spinner;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
@@ -47,9 +45,9 @@ public class SkillEatingDialog extends BaseTosDialog {
     // Views
     private RecyclerView recycler;
     private SelectableAdapter adapter;
-    private Spinner fromSpin;
-    private Spinner toSpin;
-    private Spinner pgsSpin;
+    private RoundUI fromRndUI;
+    private RoundUI toRndUI;
+    private RoundUI pgsRndUI;
     private TextView fromRnd;
     private TextView toRnd;
     private TextView needRnd;
@@ -69,10 +67,32 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     private List<String> tableData = new ArrayList<>();
 
+    private static class RoundUI {
+        private SeekBar bar;
+        private TextView text;
+        private int min;
+
+        private int getValue() {
+            int ans = min;
+            if (bar != null) {
+                ans += bar.getProgress();
+            }
+            return ans;
+        }
+
+        @SuppressLint("SetTextI18n")
+        private void setValue(int v) {
+            if (bar != null) {
+                bar.setProgress(v - min);
+            }
+            text.setText("" + v);
+        }
+    }
+
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
         logImpression();
-        initSpinners();
+        initRounds();
         initCard600();
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
@@ -83,10 +103,10 @@ public class SkillEatingDialog extends BaseTosDialog {
     private void initShare() {
         findViewById(R.id.skillShareEat).setOnClickListener((v) -> {
             String shareText = getString(R.string.skill_share_eat_format
-                    , fromSpin.getSelectedItem().toString().trim()
-                    , pgsSpin.getSelectedItem().toString().trim()
+                    , fromRndUI.text.getText()
+                    , pgsRndUI.text.getText()
                     , fromRnd.getText()
-                    , toSpin.getSelectedItem().toString().trim()
+                    , toRndUI.text.getText()
                     , toRnd.getText()
                     , eatCard.getText());
 
@@ -162,7 +182,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         recycler.setAdapter(adapter);
     }
 
-    private void initSpinners() {
+    private void initRounds() {
         fromRnd = findViewById(R.id.skillFromRound);
         toRnd = findViewById(R.id.skillToRound);
         needRnd = findViewById(R.id.skillNeedRound);
@@ -176,50 +196,81 @@ public class SkillEatingDialog extends BaseTosDialog {
             computeEatCard();
         });
 
-        toSpin = makeSpin(R.id.skillTo, 2, 15);
-        pgsSpin = makeSpin(R.id.skillPercent, 0, 99);
-        fromSpin = makeSpin(R.id.skillFrom, 1, 14);
+        toRndUI = makeBar(R.id.skillTo, R.id.sed_to, 2, 15);
+        pgsRndUI = makeBar(R.id.skillPercent, R.id.sed_percent, 0, 99);
+        fromRndUI = makeBar(R.id.skillFrom, R.id.sed_from, 1, 14);
     }
 
-    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-        int downId = android.R.layout.simple_spinner_dropdown_item;
-        int layoutId = R.layout.view_spinner_item;
+    private RoundUI makeBar(@IdRes int barID, @IdRes int valueID, int from, int to) {
+        TextView txt = findViewById(valueID);
+        SeekBar bar = findViewById(barID);
+        bar.setMax(to - from);
 
-        // Set up adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-        adapter.setDropDownViewResource(downId);
-        for (int i = from; i <= to; i++) {
-            adapter.add("" + i);
-        }
+        RoundUI r = new RoundUI();
+        r.text = txt;
+        r.bar = bar;
+        r.min = from;
 
-        // Set up spinner
-        Spinner spinner = findViewById(spinnerID);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(adapterSelect);
+        bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                String s = "" + (from + progress);
+                txt.setText(s);
+                computeEatCard();
+            }
 
-        return spinner;
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        return r;
     }
 
-    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            computeEatCard();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-            computeEatCard();
-        }
-    };
+//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
+//        int downId = android.R.layout.simple_spinner_dropdown_item;
+//        int layoutId = R.layout.view_spinner_item;
+//
+//        // Set up adapter
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
+//        adapter.setDropDownViewResource(downId);
+//        for (int i = from; i <= to; i++) {
+//            adapter.add("" + i);
+//        }
+//
+//        // Set up spinner
+//        Spinner spinner = findViewById(spinnerID);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(adapterSelect);
+//
+//        return spinner;
+//    }
+//
+//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
+//        @Override
+//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//            computeEatCard();
+//        }
+//
+//        @Override
+//        public void onNothingSelected(AdapterView<?> parent) {
+//            computeEatCard();
+//        }
+//    };
 
     @SuppressLint("SetTextI18n")
     private void computeEatCard() {
-        int lvFrom = Integer.parseInt(fromSpin.getSelectedItem().toString());
-        int pgs = Integer.parseInt(pgsSpin.getSelectedItem().toString());
+        int lvFrom = fromRndUI.getValue();
+        int pgs = pgsRndUI.getValue();
         int from = (int) Math.round(ROUNDS_SUM[lvFrom] + 0.01 * pgs * (ROUNDS_SUM[lvFrom + 1] - ROUNDS_SUM[lvFrom]));
         fromRnd.setText("" + from);
 
-        int lvTo = Integer.parseInt(toSpin.getSelectedItem().toString());
+        int lvTo = toRndUI.getValue();
         int to = ROUNDS_SUM[lvTo];
         toRnd.setText("" + to);
 
@@ -246,9 +297,9 @@ public class SkillEatingDialog extends BaseTosDialog {
     }
 
     private void updateFromData() {
-        fromSpin.setSelection(skEat.fromLevel);
-        toSpin.setSelection(skEat.toLevel);
-        pgsSpin.setSelection(skEat.progress);
+        fromRndUI.setValue(skEat.fromLevel);
+        pgsRndUI.setValue(skEat.progress);
+        toRndUI.setValue(skEat.toLevel);
         use600.setChecked(skEat.use600);
         computeEatCard();
     }
@@ -256,10 +307,14 @@ public class SkillEatingDialog extends BaseTosDialog {
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
+        saveEat();
+    }
+
+    private void saveEat() {
         skEat = new SkillEat();
-        skEat.fromLevel = fromSpin.getSelectedItemPosition();
-        skEat.toLevel = toSpin.getSelectedItemPosition();
-        skEat.progress = pgsSpin.getSelectedItemPosition();
+        skEat.fromLevel = fromRndUI.getValue();
+        skEat.progress = pgsRndUI.getValue();
+        skEat.toLevel = toRndUI.getValue();
         skEat.use600 = use600.isChecked();
         sSingle.submit(() -> {
             GsonUtil.writeFile(getSkillEatFile(), new Gson().toJson(skEat));

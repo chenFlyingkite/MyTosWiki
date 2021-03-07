@@ -137,13 +137,6 @@
                         android:textColorHint="@color/green"
                         android:hint="整數"/>
 
-                    <Spinner
-                        android:id="@+id/csdAutoDrawN"
-                        style="@style/sed_spinner"
-                        android:layout_width="@dimen/t150dp"
-                        android:visibility="gone"
-                        tools:visibility="visible"/>
-
                     <TextView
                         style="@style/sortTitle"
                         android:text="@string/n_cards"/>

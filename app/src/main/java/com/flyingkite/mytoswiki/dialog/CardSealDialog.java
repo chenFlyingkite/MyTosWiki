@@ -6,12 +6,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
@@ -27,6 +24,7 @@ import com.flyingkite.mytoswiki.data.seal.FairyTail;
 import com.flyingkite.mytoswiki.data.seal.GiantLight;
 import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.GodsDemons;
+import com.flyingkite.mytoswiki.data.seal.HeroDimension;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
@@ -63,7 +61,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.IdRes;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.math.ChiSquarePearson;
 import flyingkite.math.ChiSquareTable;
@@ -81,6 +78,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_heros_dimension, new HeroDimension()));
         sealSeries.add(new SealItem(R.string.card_series_rockman, new RockManDiVE()));
         sealSeries.add(new SealItem(R.string.card_series_charlouette, new CharlouetteMagicAgency()));
         sealSeries.add(new SealItem(R.string.card_series_evangelion, new Evangelion()));
@@ -120,7 +118,6 @@ public class CardSealDialog extends BaseTosDialog {
     private TextView sealDrawn;
     private BarChart chart;
     private View autoDraw;
-    private Spinner autoDrawN;
     private TextView pearsonChi;
     private TextView pearsonH0;
 
@@ -228,8 +225,6 @@ public class CardSealDialog extends BaseTosDialog {
 
         // Auto draw
         TextView en = findViewById(R.id.csdAutoDrawEN);
-        autoDrawN = makeSpin(R.id.csdAutoDrawN, 1, 1000);
-
         autoDraw.setOnClickListener((v) -> {
             String src = "10";
             src = en.getText().toString();
@@ -282,36 +277,36 @@ public class CardSealDialog extends BaseTosDialog {
         title.setText(App.res().getString(R.string.card_series_seals, sealSeries.size()));
     }
 
-    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-        int downId = android.R.layout.simple_spinner_dropdown_item;
-        int layoutId = R.layout.view_spinner_item;
-
-        // Set up adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-        adapter.setDropDownViewResource(downId);
-        for (int i = from; i <= to; i++) {
-            adapter.add("" + i);
-        }
-
-        // Set up spinner
-        Spinner spinner = findViewById(spinnerID);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(adapterSelect);
-
-        return spinner;
-    }
-
-    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-
-        }
-    };
+//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
+//        int downId = android.R.layout.simple_spinner_dropdown_item;
+//        int layoutId = R.layout.view_spinner_item;
+//
+//        // Set up adapter
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
+//        adapter.setDropDownViewResource(downId);
+//        for (int i = from; i <= to; i++) {
+//            adapter.add("" + i);
+//        }
+//
+//        // Set up spinner
+//        Spinner spinner = findViewById(spinnerID);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(adapterSelect);
+//
+//        return spinner;
+//    }
+//
+//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
+//        @Override
+//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//        }
+//
+//        @Override
+//        public void onNothingSelected(AdapterView<?> parent) {
+//
+//        }
+//    };
 
     private void initTable() {
         resetTable.setOnClickListener((v) -> {
@@ -510,7 +505,6 @@ public class CardSealDialog extends BaseTosDialog {
     private SealSample getWorkingSample(boolean raise) {
         return raise ? seals.raisedSample : seals.normalSample;
     }
-
 
     //-- Events
     private void logShare(String type) {

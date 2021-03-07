@@ -354,11 +354,27 @@
     </style>
 
     <!-- sed = Skill Eat Dialog -->
-    <style name="sed_round_text" parent="blackText">
+    <style name="sed_round_text">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/t40dp</item>
-        <item name="android:gravity">center</item>
+        <item name="android:layout_height">@dimen/t30dp</item>
+        <item name="android:textSize">@dimen/t18dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:gravity">right|center_vertical</item>
     </style>
+    <style name="sed_round_text.title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/t10dp</item>
+    </style>
+    <style name="sed_round_text.title.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="sed_round_text.seekbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/t30dp</item>
+        <item name="android:paddingLeft">@dimen/t30dp</item>
+        <item name="android:paddingRight">@dimen/t30dp</item>
+    </style>
+    <!--
     <style name="sed_round_text.left">
         <item name="android:paddingLeft">@dimen/t10dp</item>
     </style>
@@ -368,6 +384,7 @@
         <item name="android:background">@drawable/bg_spinner</item>
         <item name="android:minWidth">@dimen/t200dp</item>
     </style>
+    -->
 
     <!-- sld = Summoner Level Dialog -->
     <style name="sld_row_item" parent="blackText">

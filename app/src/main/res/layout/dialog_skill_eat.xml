@@ -25,114 +25,162 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/skillArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/t40dp"
-                    android:layout_centerHorizontal="true">
-
-                    <ImageView
-                        style="@style/evoArrow" />
-                </LinearLayout>
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_toLeftOf="@id/skillArrow"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/sed_fromArea"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/sed_from_margin"
+                            style="@style/evoArrow"
+                            android:layout_width="@dimen/t15dp"
+                            android:layout_alignParentLeft="true"
+                            android:visibility="invisible"/>
 
                         <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/cards_level"/>
+                            android:id="@+id/sed_from_title"
+                            style="@style/sed_round_text.title"
+                            android:text="@string/fromLevel"
+                            android:layout_toRightOf="@id/sed_from_margin"/>
 
                         <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/progress"/>
+                            android:id="@+id/sed_from"
+                            style="@style/sed_round_text.title.bold"
+                            android:layout_toRightOf="@id/sed_from_title"
+                            tools:text="11"/>
 
-                        <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/sumRound"/>
-                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingRight="@dimen/t20dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                            <TextView
+                                style="@style/sed_round_text"
+                                android:text="@string/needRound"
+                                android:textColor="#00a"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/skillNeedRound"
+                                style="@style/sed_round_text.title.bold"
+                                tools:text="43210"
+                                android:layout_width="@dimen/t70dp"
+                                android:textColor="#00a"/>
+                        </LinearLayout>
 
-                        <Spinner
+                        <SeekBar
                             android:id="@+id/skillFrom"
-                            style="@style/sed_spinner"/>
+                            style="@style/sed_round_text.seekbar"
+                            android:layout_below="@id/sed_from_title"/>
+                    </RelativeLayout>
 
-                        <Spinner
-                            android:id="@+id/skillPercent"
-                            style="@style/sed_spinner"/>
-
-                        <TextView
-                            android:id="@+id/skillFromRound"
-                            style="@style/sed_round_text.left"
-                            android:text="0"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@id/skillArrow"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
+                    <RelativeLayout
+                        android:id="@+id/sed_pgsArea"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/sed_pgs_margin"
+                            style="@style/evoArrow"
+                            android:layout_width="@dimen/t15dp"
+                            android:layout_alignParentLeft="true"
+                            android:visibility="invisible"/>
 
                         <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/cards_level"/>
+                            android:id="@+id/sed_pgs_title"
+                            style="@style/sed_round_text.title"
+                            android:text="@string/progress"
+                            android:layout_toRightOf="@id/sed_pgs_margin"/>
 
                         <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/sumRound"/>
+                            android:id="@+id/sed_percent"
+                            style="@style/sed_round_text.title.bold"
+                            android:layout_toRightOf="@id/sed_pgs_title"
+                            tools:text="111"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="@dimen/t20dp">
+
+                            <TextView
+                                style="@style/sed_round_text"
+                                android:text="@string/fromRound"/>
+
+                            <TextView
+                                android:id="@+id/skillFromRound"
+                                style="@style/sed_round_text.title"
+                                android:layout_width="@dimen/t70dp"
+                                tools:text="12345"/>
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/skillPercent"
+                            style="@style/sed_round_text.seekbar"
+                            android:layout_below="@id/sed_pgs_title"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/sed_toArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/sed_arrow"
+                            style="@style/evoArrow"
+                            android:layout_width="@dimen/t15dp"
+                            android:layout_alignParentLeft="true"/>
 
                         <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/needRound"
-                            android:textColor="#00a"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Spinner
-                            android:id="@+id/skillTo"
-                            style="@style/sed_spinner"/>
+                            android:id="@+id/sed_to_title"
+                            style="@style/sed_round_text.title"
+                            android:text="@string/toLevel"
+                            android:layout_toRightOf="@id/sed_arrow"/>
 
                         <TextView
-                            android:id="@+id/skillToRound"
-                            style="@style/sed_round_text.left"
-                            android:text="0"/>
-
-                        <TextView
-                            android:id="@+id/skillNeedRound"
-                            style="@style/sed_round_text.left"
-                            android:text="0"
+                            android:id="@+id/sed_to"
+                            style="@style/sed_round_text.title.bold"
+                            android:layout_toRightOf="@id/sed_to_title"
+                            tools:text="12"
                             android:textColor="#00a"/>
-                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="@dimen/t20dp">
+
+                            <TextView
+                                style="@style/sed_round_text"
+                                android:text="@string/toRound"/>
+                            <TextView
+                                android:id="@+id/skillToRound"
+                                style="@style/sed_round_text.title"
+                                android:layout_width="@dimen/t70dp"
+                                tools:text="56789"/>
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/skillTo"
+                            style="@style/sed_round_text.seekbar"
+                            android:layout_below="@id/sed_to_title"/>
+                    </RelativeLayout>
                 </LinearLayout>
+
             </RelativeLayout>
 
             <View
                 style="@style/divider_horizontal"/>
-
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -301,7 +349,6 @@
 
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

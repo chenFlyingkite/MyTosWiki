@@ -32,79 +32,63 @@
                 style="@style/blackText"
                 android:text="@string/current_time"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/staminaArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/t40dp"
-                    android:layout_centerHorizontal="true">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <ImageView
-                        style="@style/evoArrow" />
-                </LinearLayout>
+                        android:id="@+id/sdFromMargin"
+                        style="@style/evoArrow"
+                        android:layout_width="@dimen/t20dp"
+                        android:layout_alignParentLeft="true"
+                        android:visibility="invisible"/>
+                    <TextView
+                        android:id="@+id/sdFromTitle"
+                        style="@style/sed_round_text.title"
+                        android:text="@string/stamina_source"
+                        android:layout_toRightOf="@id/sdFromMargin"/>
+                    <TextView
+                        android:id="@+id/staminaSourceTxt"
+                        android:layout_toRightOf="@id/sdFromTitle"
+                        style="@style/sed_round_text.title.bold"
+                        tools:text="123"/>
+                    <SeekBar
+                        android:id="@+id/staminaSource"
+                        style="@style/sed_round_text.seekbar"
+                        android:layout_below="@id/sdFromTitle"/>
+                </RelativeLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_toLeftOf="@id/staminaArrow"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/sdToArrow"
+                        style="@style/evoArrow"
+                        android:layout_width="@dimen/t20dp"
+                        android:layout_alignParentLeft="true"/>
+                    <TextView
+                        android:id="@+id/sdToTitle"
+                        style="@style/sed_round_text.title"
+                        android:text="@string/stamina_target"
+                        android:layout_toRightOf="@id/sdToArrow"/>
+                    <TextView
+                        android:id="@+id/staminaTargetTxt"
+                        android:layout_toRightOf="@id/sdToTitle"
+                        style="@style/sed_round_text.title.bold"
+                        android:textColor="#00a"
+                        tools:text="321"/>
+                    <SeekBar
+                        android:id="@+id/staminaTarget"
+                        style="@style/sed_round_text.seekbar"
+                        android:layout_below="@id/sdToTitle"/>
+                </RelativeLayout>
+            </LinearLayout>
 
-                        <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/stamina_source"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Spinner
-                            android:id="@+id/staminaSource"
-                            style="@style/sed_spinner"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@id/staminaArrow"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sed_round_text"
-                            android:text="@string/stamina_target"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Spinner
-                            android:id="@+id/staminaTarget"
-                            style="@style/sed_spinner"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-            </RelativeLayout>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"

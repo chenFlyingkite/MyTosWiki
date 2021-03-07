@@ -4,11 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
-import androidx.annotation.IdRes;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
@@ -29,6 +26,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.IdRes;
+
 public class StaminaDialog extends BaseTosDialog {
 
     @Override
@@ -43,10 +42,31 @@ public class StaminaDialog extends BaseTosDialog {
     private Date dateNow = new Date();
     // Views
     private Library<StaminaAdapter> library;
-    private Spinner sourceSpin;
-    private Spinner targetSpin;
+    private StaminaUI sourceBar;
+    private StaminaUI targetBar;
     private TextView nowTime;
     private TextView staminaShare;
+
+    private static class StaminaUI {
+        private SeekBar bar;
+        private TextView text;
+
+        private int getValue() {
+            int ans = 0;
+            if (bar != null) {
+                ans += bar.getProgress();
+            }
+            return ans;
+        }
+
+        @SuppressLint("SetTextI18n")
+        private void setValue(int v) {
+            if (bar != null) {
+                bar.setProgress(v);
+            }
+            text.setText("" + v);
+        }
+    }
 
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
@@ -79,11 +99,11 @@ public class StaminaDialog extends BaseTosDialog {
 
     private List<String> getStaminaTable() {
         List<String> data = new ArrayList<>();
-        int s = Integer.parseInt(sourceSpin.getSelectedItem().toString());
-        int end = Integer.parseInt(targetSpin.getSelectedItem().toString());
-        int size = Math.max(50, (end - s) * period / 30 + 5);
+        int head = sourceBar.getValue();
+        int tail = targetBar.getValue();
+        int size = Math.max(50, (tail - head) * period / 30 + period / 2 + 1);
         for (int i = 0; i < size; i++) {
-            data.add("" + (s + 30 * i / period));
+            data.add("" + (head + 30 * i / period));
         }
 
         return data;
@@ -95,47 +115,74 @@ public class StaminaDialog extends BaseTosDialog {
         nowTime.setText(getString(R.string.current_time, fmt.format(dateNow)));
 
         // Spiners
-        int min = 0;
         int max = 300;
-        targetSpin = makeSpin(R.id.staminaTarget, min, max);
-        sourceSpin = makeSpin(R.id.staminaSource, min, max);
+        sourceBar = makeBar(R.id.staminaSource, R.id.staminaSourceTxt, max);
+        targetBar = makeBar(R.id.staminaTarget, R.id.staminaTargetTxt, max);
     }
 
-    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-        int downId = android.R.layout.simple_spinner_dropdown_item;
-        int layoutId = R.layout.view_spinner_item;
+    @SuppressLint("SetTextI18n")
+    private StaminaUI makeBar(@IdRes int barID, @IdRes int txtID, int max) {
+        StaminaUI u = new StaminaUI();
+        SeekBar b = findViewById(barID);
+        TextView t = findViewById(txtID);
+        u.bar = b;
+        u.text = t;
+        b.setMax(max);
+        b.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                t.setText("" + progress);
+                computeStamina();
+            }
 
-        // Set up adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-        adapter.setDropDownViewResource(downId);
-        for (int i = from; i <= to; i++) {
-            adapter.add("" + i);
-        }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
 
-        // Set up spinner
-        Spinner spin = findViewById(spinnerID);
-        spin.setAdapter(adapter);
-        spin.setOnItemSelectedListener(adapterSelect);
+            }
 
-        return spin;
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        return u;
     }
 
-    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            computeStamina();
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-            computeStamina();
-        }
-    };
+//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
+//        int downId = android.R.layout.simple_spinner_dropdown_item;
+//        int layoutId = R.layout.view_spinner_item;
+//
+//        // Set up adapter
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
+//        adapter.setDropDownViewResource(downId);
+//        for (int i = from; i <= to; i++) {
+//            adapter.add("" + i);
+//        }
+//
+//        // Set up spinner
+//        Spinner spin = findViewById(spinnerID);
+//        spin.setAdapter(adapter);
+//        spin.setOnItemSelectedListener(adapterSelect);
+//
+//        return spin;
+//    }
+//
+//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
+//        @Override
+//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//            computeStamina();
+//        }
+//
+//        @Override
+//        public void onNothingSelected(AdapterView<?> parent) {
+//            computeStamina();
+//        }
+//    };
 
     @SuppressLint("SetTextI18n")
     private void computeStamina() {
-        int source = Integer.parseInt(sourceSpin.getSelectedItem().toString());
-        int target = Integer.parseInt(targetSpin.getSelectedItem().toString());
+        int source = sourceBar.getValue();
+        int target = targetBar.getValue();
         long dt = (target - source) * period * 60_000;
 
         Date d2 = new Date(dateNow.getTime() + dt);
@@ -151,16 +198,20 @@ public class StaminaDialog extends BaseTosDialog {
     }
 
     private void updateFromData() {
-        sourceSpin.setSelection(sdData.sourceIndex);
-        targetSpin.setSelection(sdData.targetIndex);
+        sourceBar.setValue(sdData.sourceIndex);
+        targetBar.setValue(sdData.targetIndex);
     }
 
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
+        saveStamina();
+    }
+
+    private void saveStamina() {
         sdData = new Stamina();
-        sdData.sourceIndex = sourceSpin.getSelectedItemPosition();
-        sdData.targetIndex = targetSpin.getSelectedItemPosition();
+        sdData.sourceIndex = sourceBar.getValue();
+        sdData.targetIndex = targetBar.getValue();
         sSingle.submit(() -> {
             GsonUtil.writeFile(getStaminaFile(), new Gson().toJson(sdData));
         });

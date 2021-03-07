@@ -49,7 +49,7 @@ public class FarmPoolDialog extends BaseTosDialog {
         ids = new String[]{"0981", "0983", "0985", "0498", "0500", "1083"};
         setTeamSimple(findViewById(R.id.fpdTeam0), ids);
 
-        ids = new String[]{"1983", "1565", "1639", "", "", "1983"};
+        ids = new String[]{"1983", "1565", "1719", "", "", "1983"};
         setTeamSimple(findViewById(R.id.fpdTeam1), ids);
 
         ids = new String[]{"1277", "1263", "1882", "", "", "1277"};
