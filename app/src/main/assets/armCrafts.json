@@ -33768,6 +33768,650 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2006】 銀紋」及 1 張( 、 、 、 、 、 、 或 )熔合而成 『時間旅行』每次進行十連抽選項獲得(2021年2月22日~2021年3月28日)"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3675",
+    "name": "【3675】時空沙漏龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903675%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/ce/C3675.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131650\u0026path-prefix\u003dzh",
+      "iconKey": "C3675.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2007】 銀印」及 1 張( 、 、 、 、 、 、 或 )熔合而成 美麗帶來的煩惱 累計通關 5 次"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3676",
+    "name": "【3676】時空沙漏龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903676%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/da/C3676.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131652\u0026path-prefix\u003dzh",
+      "iconKey": "C3676.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2008】 銀咒」及 1 張( 、 、 、 、 、 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3677",
+    "name": "【3677】時空沙漏龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903677%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/5e/C3677.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131654\u0026path-prefix\u003dzh",
+      "iconKey": "C3677.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2009】 銀符」及 1 張( 、 、 、 、 、 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3678",
+    "name": "【3678】時空沙漏龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903678%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b6/C3678.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131655\u0026path-prefix\u003dzh",
+      "iconKey": "C3678.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2010】 銀璃」及 1 張( 、 、 、 、 、 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3679",
+    "name": "【3679】時空沙漏龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903679%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/03/C3679.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131657\u0026path-prefix\u003dzh",
+      "iconKey": "C3679.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2011】 銀刃」及 1 張( 、 、 、 、 、 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3680",
+    "name": "【3680】時空沙漏龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903680%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/47/C3680.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131659\u0026path-prefix\u003dzh",
+      "iconKey": "C3680.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視指定形狀盾"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，所受傷害不會使你死亡"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": "以 2 粒「【2012】 銀丸」及 1 張( 、 、 、 、 、 、 或 )熔合而成"
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2361",
+      "2362",
+      "2363",
+      "2364",
+      "2365",
+      "2636",
+      "2637",
+      "2638",
+      "2639",
+      "2640",
+      "2641",
+      "2642",
+      "2643"
+    ],
+    "cardLimitName": [
+      "瀧川凜",
+      "拉娜 ‧ 帕蒂爾",
+      "奇玄泰",
+      "維克托 ‧ 沃克 ‧ 格林",
+      "絲諾克 ‧ 基爾斯",
+      "九尾狐．玉藻前",
+      "寫作之神．菲呂拉",
+      "傾世妖魅．妲己",
+      "扭曲天使．亞伯汗",
+      "叛逆天使．路西法",
+      "輝日神．天照大神",
+      "神使．八咫烏",
+      "冥妃神．伊邪那美"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3681",
+    "name": "【3681】時空沙漏龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903681%E3%80%91%E6%99%82%E7%A9%BA%E6%B2%99%E6%BC%8F%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3c/C3681.png/revision/latest/scale-to-width-down/120?cb\u003d20210222131700\u0026path-prefix\u003dzh",
+      "iconKey": "C3681.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
@@ -35183,7 +35827,7 @@
       {
         "level": 4,
         "score": 0,
-        "detail": "一年一度的龍刻考驗 - 首次通關獎勵"
+        "detail": "一年一度的龍刻考驗 - 首次通關獎勵 登入獎勵(2021年1月25日~2021年2月24日) ※ 最多擁有 1 粒"
       }
     ],
     "attrLimit": "",
@@ -35237,7 +35881,7 @@
       {
         "level": 4,
         "score": 0,
-        "detail": ""
+        "detail": "週年版賓果任務獎勵(2021年1月25日~2021年2月24日)"
       }
     ],
     "attrLimit": "",
