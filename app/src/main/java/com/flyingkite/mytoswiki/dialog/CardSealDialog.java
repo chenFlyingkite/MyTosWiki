@@ -277,37 +277,6 @@ public class CardSealDialog extends BaseTosDialog {
         title.setText(App.res().getString(R.string.card_series_seals, sealSeries.size()));
     }
 
-//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-//        int downId = android.R.layout.simple_spinner_dropdown_item;
-//        int layoutId = R.layout.view_spinner_item;
-//
-//        // Set up adapter
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-//        adapter.setDropDownViewResource(downId);
-//        for (int i = from; i <= to; i++) {
-//            adapter.add("" + i);
-//        }
-//
-//        // Set up spinner
-//        Spinner spinner = findViewById(spinnerID);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(adapterSelect);
-//
-//        return spinner;
-//    }
-//
-//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-//        @Override
-//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//        }
-//
-//        @Override
-//        public void onNothingSelected(AdapterView<?> parent) {
-//
-//        }
-//    };
-
     private void initTable() {
         resetTable.setOnClickListener((v) -> {
             logAction("Reset:Table");

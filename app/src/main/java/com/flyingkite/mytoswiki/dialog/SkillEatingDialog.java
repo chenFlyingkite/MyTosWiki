@@ -131,7 +131,7 @@ public class SkillEatingDialog extends BaseTosDialog {
             logShare("table");
         });
 
-        dismissWhenClick(R.id.selConcept);
+        dismissWhenClick(R.id.selConcept, R.id.sed_roundNeed);
         findViewById(R.id.skillSample).setOnClickListener((v) -> {
             new SkillEatSampleDialog().show(getActivity());
         });

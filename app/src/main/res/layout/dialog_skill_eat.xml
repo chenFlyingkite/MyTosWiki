@@ -54,6 +54,7 @@
                             tools:text="11"/>
 
                         <LinearLayout
+                            android:id="@+id/sed_roundNeed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"

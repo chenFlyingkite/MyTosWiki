@@ -71,7 +71,7 @@ public class StaminaDialog extends BaseTosDialog {
     @Override
     protected void onFinishInflate(View view, Dialog dialog) {
         logImpression();
-        initSpinners();
+        initStamina();
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
         initShare();
@@ -109,12 +109,12 @@ public class StaminaDialog extends BaseTosDialog {
         return data;
     }
 
-    private void initSpinners() {
+    private void initStamina() {
         // Now text
         nowTime = findViewById(R.id.staminaNow);
         nowTime.setText(getString(R.string.current_time, fmt.format(dateNow)));
 
-        // Spiners
+        // Stamina select
         int max = 300;
         sourceBar = makeBar(R.id.staminaSource, R.id.staminaSourceTxt, max);
         targetBar = makeBar(R.id.staminaTarget, R.id.staminaTargetTxt, max);
@@ -147,37 +147,6 @@ public class StaminaDialog extends BaseTosDialog {
         });
         return u;
     }
-
-//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-//        int downId = android.R.layout.simple_spinner_dropdown_item;
-//        int layoutId = R.layout.view_spinner_item;
-//
-//        // Set up adapter
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-//        adapter.setDropDownViewResource(downId);
-//        for (int i = from; i <= to; i++) {
-//            adapter.add("" + i);
-//        }
-//
-//        // Set up spinner
-//        Spinner spin = findViewById(spinnerID);
-//        spin.setAdapter(adapter);
-//        spin.setOnItemSelectedListener(adapterSelect);
-//
-//        return spin;
-//    }
-//
-//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-//        @Override
-//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//            computeStamina();
-//        }
-//
-//        @Override
-//        public void onNothingSelected(AdapterView<?> parent) {
-//            computeStamina();
-//        }
-//    };
 
     @SuppressLint("SetTextI18n")
     private void computeStamina() {
