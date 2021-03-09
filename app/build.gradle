@@ -12,7 +12,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 task MyBuildInfo {
-    ext.versionCode = 109
+    ext.versionCode = 110
     ext.versionName = "1.0.0.${versionCode-1}"
     //ext.versionName = "Me"
     ext.APK_NAME = "MyTosWiki-${versionName}-${versionCode}.apk"
