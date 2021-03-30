@@ -423,7 +423,7 @@
         <item>掉落機率降至</item>
     </string-array>
     <string-array name="cards_runestone_into_enchanted_keys">
-        <item>轉化為(.{0,15})強化符石</item>
+        <item>轉化(|為)(.{0,15})強化符石</item>
         <!-- #1983 秦始皇 -->
         <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
@@ -434,7 +434,7 @@
         <item>所有符石隨機轉化</item>
     </string-array>
     <string-array name="cards_runestone_all_into_keys">
-        <item>所有符石轉化為</item>
+        <item>所有符石轉化(|為)</item>
         <!-- #1983 秦始皇 -->
         <item>將固定位置的符石轉化為所點擊的強化符石</item>
     </string-array>
@@ -909,6 +909,7 @@
     <string name="card_series_charlouette">魔法閣沙蘿耶</string>
     <string name="card_series_rockman">ROCKMAN X DiVE</string>
     <string name="card_series_heros_dimension">次元英雄</string>
+    <string name="card_series_kimetsu_no_yaiba">鬼滅之刃</string>
 
     <string name="stones_same_count">符石數目相同</string>
 

@@ -26,6 +26,7 @@ import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.GodsDemons;
 import com.flyingkite.mytoswiki.data.seal.HeroDimension;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
+import com.flyingkite.mytoswiki.data.seal.KimetsuNoYaiba;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.Minerelves;
@@ -78,6 +79,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_kimetsu_no_yaiba, new KimetsuNoYaiba()));
         sealSeries.add(new SealItem(R.string.card_series_heros_dimension, new HeroDimension()));
         sealSeries.add(new SealItem(R.string.card_series_rockman, new RockManDiVE()));
         sealSeries.add(new SealItem(R.string.card_series_charlouette, new CharlouetteMagicAgency()));
@@ -213,6 +215,7 @@ public class CardSealDialog extends BaseTosDialog {
         });
         raised.setOnClickListener((v) -> {
             resetPool();
+            setupTable();
             logAction("Raise:" + Say.ox(raised.isChecked()));
         });
         peekCard.setOnClickListener((v) -> {
@@ -241,7 +244,6 @@ public class CardSealDialog extends BaseTosDialog {
             ss.drawSample(auto);
             ss.evalObservePdf();
             setupTable();
-
         });
     }
 

@@ -1197,7 +1197,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_runestone_all_into_random_keys);
                 }
                 if (sortSpecialRestoreAllInto.isChecked()) {
-                    accept &= find(key, R.array.cards_runestone_all_into_keys);
+                    accept &= findRegex(key, R.array.cards_runestone_all_into_keys);
                 }
                 if (sortSpecialRestoreAllIntoEnchanted.isChecked()) {
                     accept &= find(key, R.array.cards_runestone_all_into_enchanted_keys);
