@@ -106,7 +106,7 @@
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/csdCardSeries"
-                            android:layout_width="@dimen/t180dp"
+                            android:layout_width="@dimen/t200dp"
                             android:layout_height="match_parent"
                             android:scrollbars="vertical|horizontal"
                             android:scrollbarAlwaysDrawHorizontalTrack="true"
