@@ -958,6 +958,7 @@
                     android:textColor="@color/greyd"
                     android:textColorHint="@color/grey8"
                     android:textIsSelectable="true"
+                    android:inputType="text"
                     android:hint="@string/enterText"/>
 
                 <ImageView
