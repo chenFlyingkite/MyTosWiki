@@ -251,10 +251,16 @@ def copyAAB(variant) {
         // output = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=release, filters=[], versionCode=112, versionName=1.0.0.111}}
         // output.outputFile = D:\Github\MyTosWiki\app\build\outputs\apk\debug\app-debug.apk
         // output.outputFile = D:\Github\MyTosWiki\app\build\outputs\apk\release\app-release.apk
+        //println("of = " + output.outputFile) // = D:\Github\MyTosWiki\app\release\app-release.apk
         Using u = new Using(project)
         String type = variant.name // = "debug" or "release"
+        String aab = ""
+        // Build Bundles
+        aab = "${buildDir}/outputs/bundle/${type}/app-${type}.aab"
+        // Generate signed bundles
+        aab = "${rootDir}/app/${type}/app-${type}.aab"
         u.copy(
-            "${buildDir}/outputs/bundle/${type}/app-${type}.aab",
+            aab,
             "${rootDir}/apks-${type}",
             "${MyBuildInfo.AAB_NAME}"
         )
