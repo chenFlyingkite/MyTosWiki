@@ -65,6 +65,8 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("FhFhFhhFhFhFFhFhFhhFhFhFFhFhFh", "(15心,15火強)"))
             , new StoneFix("2567",
                 new StoneDesktop("FWFWFWFWFWFWFWFWFWFWFWFWFWFWFW", "(15火強,15水強)"))
+            , new StoneFix("2661",
+                new StoneDesktop("WWWFFFFFFWWWWWWFFFFFFWWWWWWFFF", "(15火強,15水強)"))
             , new StoneFix("2409",
                 new StoneDesktop("llffllllffllffffffllffllllffll", "(14火,16光)\n火 -> 木, 光 -> 心"))
             , new StoneFix("1169,2044,1175,2050,1666",
@@ -81,13 +83,15 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("eHewHwHfHHfHHffffHeHffHweeHHww", "(5水, 5木, 8火, 12心)\n心 -> 心強 = 牛郎織女合體技能"))
             , new StoneFix("2161",
                 new StoneDesktop("--dd---dlld-dlhhldlh--hlh----h", "6暗(1st) 12暗(2nd:光 -> 暗) 18暗(3rd: 光心 -> 暗)"))
+            , new StoneFix("2667",
+                new StoneDesktop("WWWWWWW----WW----WW----WWWWWWW", "18水"))
             , new StoneFix("2425",
                 new StoneDesktop("WFELDHWFELDHWFELDH------------------------------", "心+五屬強化各3個"))
             , new StoneFix("2422",
                 new StoneDesktop("WWWLLLFFFDDDEEEHHH------------", "心+五屬強化各3個"))
             , new StoneFix("2154",
                 new StoneDesktop("------------WFELDHWFELDHWFELDH", "心+五屬強化各3個"))
-            , new StoneFix("2152",//
+            , new StoneFix("2152",
                 new StoneDesktop("---FFF---EEE---LLL---DDD---WWW", "五屬強化各3個"))
             , new StoneFix("2069",
                 new StoneDesktop("WWW---FFF---EEE---LLL---DDD---", "五屬強化各3個"))
@@ -95,6 +99,8 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("D----WD----WD----WD----WWWWDDD", "(7暗強神,7水強神)"))
             , new StoneFix("9018,2169,1094",
                 new StoneDesktop("--dd----dd--dddddd--dd----dd--", "14X\n X = 暗神 -> 超人捷德 (#2169)\n X = 水神 -> 超人捷德 & 超人ZERO (#2150)\n X = 光 -> 亞瑟 (#2169)"))
+            , new StoneFix("2107",
+                new StoneDesktop("-------L----LLLLLL-L-L---L-LLL", "13光強人族"))
             , new StoneFix("2107",
                 new StoneDesktop("-L---LL-LLL---LL---L--L-L--L--", "12光強"))
             , new StoneFix("2521",

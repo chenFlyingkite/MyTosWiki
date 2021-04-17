@@ -209,13 +209,15 @@ android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
 
     //copyAAB(variant) // FIXME make aab ready
-    if (buildType == "release") {
+    if (buildType == "release" || true) {
         assembleRelease.doLast {
             copyAPK(variant)
         }
 
+        bundleDebug.doLast {
+            copyAAB(variant)
+        }
         bundleRelease.doLast {
-            copyAPK(variant)
             copyAAB(variant)
         }
     }
@@ -254,15 +256,27 @@ def copyAPK(variant) {
 
 def copyAAB(variant) {
     description 'copy *.aab and mapping file'
+
+    println("v = " + variant)
+    println("v = " + variant.mappingFile)
+    println("v = " + variant.name)
+    println("v = " + variant.outputs)
+    println("bd = "  + buildDir)
+    //variant.outputs
+    //v.getMappingFileProvider()
+
+
     variant.outputs.each { output ->
         // out = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=debug, filters=[], versionCode=112, versionName=1.0.0.111}}
         // out = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=release, filters=[], versionCode=112, versionName=1.0.0.111}}
-        println("out = " + output)
+        // outFile = D:\Github\MyTosWiki\app\build\outputs\apk\debug\app-debug.apk
+        // outFile = D:\Github\MyTosWiki\app\build\outputs\apk\release\app-release.apk
+//        println("out = " + output)
+//        println("outFile = " + output.outputFile)
         Using u = new Using(project)
-        output
         String type = variant.name // = "debug" or "release"
         u.copy(
-            "${output.outputFile}",
+            "${buildDir}/outputs/bundle/${type}/app-${type}.aab",
             "${rootDir}/apks-${type}",
             "${MyBuildInfo.AAB_NAME}"
         )
@@ -275,6 +289,7 @@ def copyAAB(variant) {
                 "${MyBuildInfo.MAPPING}"
             )
             // Extra no need file...
+            // no such file
             String s = "${rootDir}/app/mapping.txt"
             //delete(s)
             println("delete $s")

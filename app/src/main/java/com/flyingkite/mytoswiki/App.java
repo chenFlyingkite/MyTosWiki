@@ -7,12 +7,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.StrictMode;
-import androidx.annotation.AnyRes;
-import androidx.annotation.ColorRes;
-import androidx.annotation.DimenRes;
-import androidx.annotation.StringRes;
-import androidx.multidex.MultiDex;
-import androidx.multidex.MultiDexApplication;
 import android.widget.Toast;
 
 import com.flyingkite.crashlytics.CrashReport;
@@ -21,12 +15,19 @@ import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.google.firebase.FirebaseApp;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.annotation.AnyRes;
+import androidx.annotation.StringRes;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 
 public class App extends MultiDexApplication {
     public static App me;
