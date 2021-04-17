@@ -12,7 +12,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 task MyBuildInfo {
-    int vCode = 112
+    int vCode = 113
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
@@ -208,15 +208,11 @@ dependencies {
 android.applicationVariants.all { variant ->
     def buildType = variant.buildType.name
 
-    //copyAAB(variant) // FIXME make aab ready
-    if (buildType == "release" || true) {
+    if (buildType == "release") {
         assembleRelease.doLast {
             copyAPK(variant)
         }
 
-        bundleDebug.doLast {
-            copyAAB(variant)
-        }
         bundleRelease.doLast {
             copyAAB(variant)
         }
@@ -232,47 +228,29 @@ def copyAPK(variant) {
         Using u = new Using(project)
         String type = variant.name // = "debug" or "release"
         // Move APK, E.g.
-        // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\apk\release\ActionDirector-release.apk
+        // D:\Github\MyTosWiki\app\build\outputs\apk\release\app-release.apk
         u.copy(
             "${output.outputFile}",
             "${rootDir}/apks-${type}",
             "${MyBuildInfo.APK_NAME}"
         )
         if (variant.getBuildType().isMinifyEnabled()) {
-            // Move mapping, E.g.
-            // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\mapping\release\mapping.txt
             u.copy(
                 "${variant.mappingFile}",
                 "${rootDir}/apks-${type}",
                 "${MyBuildInfo.MAPPING}"
             )
-            // Extra no need file...
-            String s = "${rootDir}/app/mapping.txt"
-            delete(s)
-            println("delete $s")
         }
     }
 }
 
 def copyAAB(variant) {
     description 'copy *.aab and mapping file'
-
-    println("v = " + variant)
-    println("v = " + variant.mappingFile)
-    println("v = " + variant.name)
-    println("v = " + variant.outputs)
-    println("bd = "  + buildDir)
-    //variant.outputs
-    //v.getMappingFileProvider()
-
-
     variant.outputs.each { output ->
-        // out = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=debug, filters=[], versionCode=112, versionName=1.0.0.111}}
-        // out = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=release, filters=[], versionCode=112, versionName=1.0.0.111}}
-        // outFile = D:\Github\MyTosWiki\app\build\outputs\apk\debug\app-debug.apk
-        // outFile = D:\Github\MyTosWiki\app\build\outputs\apk\release\app-release.apk
-//        println("out = " + output)
-//        println("outFile = " + output.outputFile)
+        // output = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=debug, filters=[], versionCode=112, versionName=1.0.0.111}}
+        // output = ApkVariantOutputImpl_Decorated{apkData=Main{type=MAIN, fullName=release, filters=[], versionCode=112, versionName=1.0.0.111}}
+        // output.outputFile = D:\Github\MyTosWiki\app\build\outputs\apk\debug\app-debug.apk
+        // output.outputFile = D:\Github\MyTosWiki\app\build\outputs\apk\release\app-release.apk
         Using u = new Using(project)
         String type = variant.name // = "debug" or "release"
         u.copy(
@@ -282,28 +260,20 @@ def copyAAB(variant) {
         )
         if (variant.getBuildType().isMinifyEnabled()) {
             // Move mapping, E.g.
-            // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\mapping\release\mapping.txt
+            // D:\Github\MyTosWiki\app\build\outputs\mapping\release\mapping.txt
             u.copy(
                 "${variant.mappingFile}",
                 "${rootDir}/apks-${type}",
                 "${MyBuildInfo.MAPPING}"
             )
-            // Extra no need file...
-            // no such file
-            String s = "${rootDir}/app/mapping.txt"
-            //delete(s)
-            println("delete $s")
         }
     }
-//    String type = variant.name // = "debug" or "release"
-//    // Move AAB, E.g.
-//    // D:\ActionDirector_Android\ACD_01\ActionDirector\build\outputs\bundle\release\ActionDirector.aab
-//    Using u = new Using(project)
-//    u.copy(
-//        "$buildDir/outputs/bundle/$type/${project.name}.aab",
-//        "${rootDir}/apks-${type}",
-//        "${MyBuildInfo.AAB_NAME}"
-//    )
+}
+
+// "${rootDir}/app/mapping.txt"
+def deleteIt(s) {
+    delete(s)
+    println("delete $s")
 }
 
 class Using {
