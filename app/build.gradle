@@ -12,7 +12,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 task MyBuildInfo {
-    int vCode = 113
+    int vCode = 114
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 

@@ -565,7 +565,7 @@
     <string name="cards_hide_nonfarm2">僅選一般卡，排除 1~4 星肥料卡</string>
     <string name="cards_hide_empty">僅選 擁有數 > 0</string>
     <string name="cards_hide_804x_no">隱藏 迪士尼</string>
-    <string name="cards_hide_7xxx_no">隱藏 討伐戰</string>
+    <string name="cards_hide_7xxx_no">隱藏 討伐戰、天竺鼠車車</string>
     <string name="cards_hide_9xxx_no">隱藏 72柱神</string>
     <string name="cards_hide_farm">肥料系列</string>
     <string name="cards_hide_nonfarm">非肥料系列</string>
@@ -574,7 +574,7 @@
     <string name="cards_hide_8xxx">迪士尼，存音石</string>
     <string name="cards_hide_9xxx">72柱神</string>
     <string name="cards_hide_6xxx_2">隱藏 動態造型</string>
-    <string name="cards_hide_7xxx_2">隱藏 討伐戰</string>
+    <string name="cards_hide_7xxx_2">隱藏 討伐戰、天竺鼠車車</string>
     <string name="cards_hide_8xxx_2">隱藏 迪士尼，存音石</string>
     <string name="cards_hide_9xxx_2">隱藏 72柱神</string>
     <string name="cards_display">顯示名稱</string>

@@ -55,10 +55,12 @@ public class FixedStoneDialog extends BaseTosDialog {
                 new StoneDesktop("WDEWDEWDEWDEWDEWDEWDEWDEWDEWDE", "(10X, 10Y, 10Z), X = 水, Y = 暗, Z = 木\n秦始皇 = 自選 X, Y, Z\n艾普塞朗 = (15心,15火) = 1, 3, 5 行火強 + 2, 4, 6 行心強(5火,5心,5火,5心,5火,5心)"))
             , new StoneFix("2452",
                 new StoneDesktop("HLLLLHHLLLLHEHLLHEEHHHHEEEEEEE", "(10木強, 10光強, 10心強)"))
-            , new StoneFix("1719",
+            , new StoneFix("1719,2634",
                 new StoneDesktop("FWEFFFFWEWEFFWEWEFFWEWEFFFFWEF", "(14火強, 8水強, 8木強)"))
             , new StoneFix("2426",
                 new StoneDesktop("hhllhhhhhhhhhhhhhhlhhhhlllhhll", "(20心, 8光)"))
+            , new StoneFix("7025",
+                new StoneDesktop("hhhhhhhllllhhhhhhhhdhhdhdhhhhd", "(20心, 4光, 4暗)"))
             , new StoneFix("1428,1429,1960,1969,2219,2487",
                 new StoneDesktop("EEhhEEhhEEhhEEhhEEhhEEhhEEhhEE", "(14心,16木強)\n木強 -> 水強 = 格雷 (#1960) + 茱比亞 (#1969)\n木強 -> 火強 = 琥珀 (#2219)"))
             , new StoneFix("2537",

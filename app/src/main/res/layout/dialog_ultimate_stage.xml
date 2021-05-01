@@ -30,7 +30,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/usd_select_stages"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/t130dp"
+                android:layout_height="@dimen/t230dp"
                 android:scrollbars="vertical"/>
         </LinearLayout>
         <View

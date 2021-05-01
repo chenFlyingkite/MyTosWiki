@@ -5,8 +5,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.firebase.RemoteConfig;
-import com.flyingkite.firebase.RemoteConfigKey;
 import com.flyingkite.mytoswiki.R;
 
 import java.util.HashMap;
@@ -40,8 +38,6 @@ public class FarmPoolDialog extends BaseTosDialog {
             shareString(detail.getText().toString());
             logShare("text");
         });
-        String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_FARM_POOL_CONTENT);
-        detail.setText(escapeNewLine(s));
     }
 
     private void setBattle() {
@@ -49,10 +45,10 @@ public class FarmPoolDialog extends BaseTosDialog {
         ids = new String[]{"0981", "0983", "0985", "0498", "0500", "1083"};
         setTeamSimple(findViewById(R.id.fpdTeam0), ids);
 
-        ids = new String[]{"1983", "1565", "1719", "", "", "1983"};
+        ids = new String[]{"2595", "1565", "2634", "", "", "2595"};
         setTeamSimple(findViewById(R.id.fpdTeam1), ids);
 
-        ids = new String[]{"1277", "1263", "1882", "", "", "1277"};
+        ids = new String[]{"1983", "1565", "1719", "", "", "1983"};
         setTeamSimple(findViewById(R.id.fpdTeam2), ids);
     }
 
