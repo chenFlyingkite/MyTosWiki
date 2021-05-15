@@ -813,7 +813,7 @@
     <string name="feedback_title">許願池 與 傳送意見回饋</string>
     <string name="feedback_author">☆首先，神魔數學家團隊感謝召喚師的安裝。\n(其實團隊只有作者一人 T_T)\n\n
 ★召喚師有什麼想法、建議或是想要的新功能，都可以在這裡告訴團隊哦。\n\n
-★寫完後請按下送出按鈕，意見將會在您下次開啟程式時候一併送給團隊。
+★寫完後請按下送出按鈕，意見將會在您下次開啟程式時候一併送給團隊，並且僅保留90天。
 </string>
     <string name="feedback_hint">想給團隊什麼意見和建議呢?</string>
     <string name="feedback_thanks">感謝您的寶貴意見，意見將會在您下次開啟程式時候一併送給團隊。</string>

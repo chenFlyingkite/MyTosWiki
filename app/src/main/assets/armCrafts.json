@@ -34846,6 +34846,330 @@
   {
     "rarity": 2,
     "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "邪馬台國傳第一章#邪馬台國傳第一章 1-2 - 首次通關獎勵"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7009",
+    "name": "【7009】 骨之凶笛龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907009%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/2f/C7009.png/revision/latest/scale-to-width-down/120?cb\u003d20210511062538\u0026path-prefix\u003dzh",
+      "iconKey": "C7009.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7010",
+    "name": "【7010】 骨之凶笛龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907010%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/aa/C7010.png/revision/latest/scale-to-width-down/120?cb\u003d20210511065054\u0026path-prefix\u003dzh",
+      "iconKey": "C7010.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7011",
+    "name": "【7011】 骨之凶笛龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907011%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/36/C7011.png/revision/latest/scale-to-width-down/120?cb\u003d20210511065056\u0026path-prefix\u003dzh",
+      "iconKey": "C7011.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7012",
+    "name": "【7012】 骨之凶笛龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907012%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/ad/C7012.png/revision/latest/scale-to-width-down/120?cb\u003d20210511065057\u0026path-prefix\u003dzh",
+      "iconKey": "C7012.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7013",
+    "name": "【7013】 骨之凶笛龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907013%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8f/C7013.png/revision/latest/scale-to-width-down/120?cb\u003d20210511065059\u0026path-prefix\u003dzh",
+      "iconKey": "C7013.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個獸類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於獸類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7014",
+    "name": "【7014】 骨之凶笛龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907014%E3%80%91_%E9%AA%A8%E4%B9%8B%E5%87%B6%E7%AC%9B%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3d/C7014.png/revision/latest/scale-to-width-down/120?cb\u003d20210511065100\u0026path-prefix\u003dzh",
+      "iconKey": "C7014.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
     "mode": "連鎖龍紋",
     "charge": "消除心符石 (只計算首批消除的符石)",
     "craftSkill": [
