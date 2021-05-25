@@ -28,6 +28,7 @@ import com.flyingkite.mytoswiki.data.seal.HeroDimension;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
 import com.flyingkite.mytoswiki.data.seal.KimetsuNoYaiba;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
+import com.flyingkite.mytoswiki.data.seal.LostSaga;
 import com.flyingkite.mytoswiki.data.seal.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.Minerelves;
 import com.flyingkite.mytoswiki.data.seal.OldenTrio;
@@ -79,6 +80,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_lost_saga, new LostSaga()));
         sealSeries.add(new SealItem(R.string.card_series_kimetsu_no_yaiba, new KimetsuNoYaiba()));
         sealSeries.add(new SealItem(R.string.card_series_heros_dimension, new HeroDimension()));
         sealSeries.add(new SealItem(R.string.card_series_rockman, new RockManDiVE()));

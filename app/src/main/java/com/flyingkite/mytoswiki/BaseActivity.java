@@ -7,15 +7,16 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
 
 import com.flyingkite.mytoswiki.util.PageUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 
 public abstract class BaseActivity extends Activity implements
         PageUtil
@@ -33,31 +34,31 @@ public abstract class BaseActivity extends Activity implements
     @Override
     protected void onStart() {
         super.onStart();
-        LogV("onStart");
+        LogV("onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogV("onResume");
+        LogV("onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogV("onPause");
+        LogV("onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogV("onStop");
+        LogV("onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogV("onDestroy");
+        LogV("onDestroy()");
     }
 
     @Override

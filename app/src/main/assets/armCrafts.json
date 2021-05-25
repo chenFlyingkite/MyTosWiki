@@ -35278,6 +35278,168 @@
   {
     "rarity": 2,
     "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個龍類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7022",
+    "name": "【7022】 遙之赤琴龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907022%E3%80%91_%E9%81%99%E4%B9%8B%E8%B5%A4%E7%90%B4%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b6/C7022.png/revision/latest/scale-to-width-down/120?cb\u003d20201005034940\u0026path-prefix\u003dzh",
+      "iconKey": "C7022.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個龍類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7023",
+    "name": "【7023】 遙之赤琴龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907023%E3%80%91_%E9%81%99%E4%B9%8B%E8%B5%A4%E7%90%B4%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/d1/C7023.png/revision/latest/scale-to-width-down/120?cb\u003d20201005034940\u0026path-prefix\u003dzh",
+      "iconKey": "C7023.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 2 個龍類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "邪馬台國傳第二章#邪馬台國傳第二章 Extra - 首次通關獎勵"
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於龍類成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "+5%",
+    "upRecovery": "0",
+    "idNorm": "7024",
+    "name": "【7024】 遙之赤琴龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907024%E3%80%91_%E9%81%99%E4%B9%8B%E8%B5%A4%E7%90%B4%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/ec/C7024.png/revision/latest/scale-to-width-down/120?cb\u003d20210517153530\u0026path-prefix\u003dzh",
+      "iconKey": "C7024.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
     "mode": "破碎龍咒",
     "charge": "消除任何符石 (只計算首批消除的符石)",
     "craftSkill": [
@@ -35759,6 +35921,60 @@
     "icon": {
       "iconLink": "https://static.wikia.nocookie.net/tos/images/2/2c/C7042.png/revision/latest/scale-to-width-down/120?cb\u003d20181027151623\u0026path-prefix\u003dzh",
       "iconKey": "C7042.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達 4 或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "對全體敵人造成 500000 點無屬性傷害，此傷害無視防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，攻擊力提升 15%，所有成員無視屬性相剋"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.25 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "沒有限制",
+    "raceLimit": "適用於機械族成員",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+5%",
+    "upAttack": "0",
+    "upRecovery": "+5%",
+    "idNorm": "7043",
+    "name": "【7043】 動之輪鈸龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%907043%E3%80%91_%E5%8B%95%E4%B9%8B%E8%BC%AA%E9%88%B8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/5b/C7043.png/revision/latest/scale-to-width-down/120?cb\u003d20201218055431\u0026path-prefix\u003dzh",
+      "iconKey": "C7043.png"
     }
   },
   {
