@@ -56,6 +56,20 @@
                         android:layout_toRightOf="@id/sdFromTitle"
                         style="@style/sed_round_text.title.bold"
                         tools:text="123"/>
+
+                    <ImageView
+                        android:id="@+id/staminaSourcePlus"
+                        style="@style/number_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/t30dp"
+                        android:src="@drawable/plus"/>
+                    <ImageView
+                        android:id="@+id/staminaSourceMinus"
+                        style="@style/number_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@id/staminaSourcePlus"
+                        android:src="@drawable/minus"/>
                     <SeekBar
                         android:id="@+id/staminaSource"
                         style="@style/sed_round_text.seekbar"
@@ -82,6 +96,20 @@
                         style="@style/sed_round_text.title.bold"
                         android:textColor="#00a"
                         tools:text="321"/>
+
+                    <ImageView
+                        android:id="@+id/staminaTargetPlus"
+                        style="@style/number_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/t30dp"
+                        android:src="@drawable/plus"/>
+                    <ImageView
+                        android:id="@+id/staminaTargetMinus"
+                        style="@style/number_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@id/staminaTargetPlus"
+                        android:src="@drawable/minus"/>
                     <SeekBar
                         android:id="@+id/staminaTarget"
                         style="@style/sed_round_text.seekbar"

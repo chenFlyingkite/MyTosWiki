@@ -50,9 +50,12 @@ public class StaminaDialog extends BaseTosDialog {
     private static class StaminaUI {
         private SeekBar bar;
         private TextView text;
+        private int min = 0;
+        private View add;
+        private View minus;
 
         private int getValue() {
-            int ans = 0;
+            int ans = min;
             if (bar != null) {
                 ans += bar.getProgress();
             }
@@ -62,9 +65,29 @@ public class StaminaDialog extends BaseTosDialog {
         @SuppressLint("SetTextI18n")
         private void setValue(int v) {
             if (bar != null) {
-                bar.setProgress(v);
+                bar.setProgress(v - min);
             }
             text.setText("" + v);
+        }
+
+        private void step(int dx) {
+            int v = getValue() + dx;
+            if (bar != null) {
+                v = Math.min(Math.max(min, v), min + bar.getMax());
+            }
+            setValue(v);
+        }
+
+        private void setStepper(View add1, View minus1) {
+            add1.setOnClickListener((v) -> {
+                step(+1);
+            });
+            add = add1;
+
+            minus1.setOnClickListener((v) -> {
+                step(-1);
+            });
+            minus = minus1;
         }
     }
 
@@ -116,17 +139,18 @@ public class StaminaDialog extends BaseTosDialog {
 
         // Stamina select
         int max = 300;
-        sourceBar = makeBar(R.id.staminaSource, R.id.staminaSourceTxt, max);
-        targetBar = makeBar(R.id.staminaTarget, R.id.staminaTargetTxt, max);
+        sourceBar = makeBar(R.id.staminaSource, R.id.staminaSourceTxt, R.id.staminaSourcePlus, R.id.staminaSourceMinus, max);
+        targetBar = makeBar(R.id.staminaTarget, R.id.staminaTargetTxt, R.id.staminaTargetPlus, R.id.staminaTargetMinus, max);
     }
 
     @SuppressLint("SetTextI18n")
-    private StaminaUI makeBar(@IdRes int barID, @IdRes int txtID, int max) {
+    private StaminaUI makeBar(@IdRes int barID, @IdRes int txtID, @IdRes int addID, @IdRes int minusID, int max) {
         StaminaUI u = new StaminaUI();
         SeekBar b = findViewById(barID);
         TextView t = findViewById(txtID);
         u.bar = b;
         u.text = t;
+        u.setStepper(findViewById(addID), findViewById(minusID));
         b.setMax(max);
         b.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

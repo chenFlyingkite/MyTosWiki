@@ -62,6 +62,14 @@
                             android:layout_alignParentTop="true"
                             android:paddingRight="@dimen/t20dp">
 
+                            <ImageView
+                                android:id="@+id/sed_from_minus"
+                                style="@style/number_icon"
+                                android:src="@drawable/minus"/>
+                            <ImageView
+                                android:id="@+id/sed_from_plus"
+                                style="@style/number_icon"
+                                android:src="@drawable/plus"/>
                             <TextView
                                 style="@style/sed_round_text"
                                 android:text="@string/needRound"
@@ -112,6 +120,14 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="@dimen/t20dp">
 
+                            <ImageView
+                                android:id="@+id/sed_pgs_minus"
+                                style="@style/number_icon"
+                                android:src="@drawable/minus"/>
+                            <ImageView
+                                android:id="@+id/sed_pgs_plus"
+                                style="@style/number_icon"
+                                android:src="@drawable/plus"/>
                             <TextView
                                 style="@style/sed_round_text"
                                 android:text="@string/fromRound"/>
@@ -120,7 +136,7 @@
                                 android:id="@+id/skillFromRound"
                                 style="@style/sed_round_text.title"
                                 android:layout_width="@dimen/t70dp"
-                                tools:text="12345"/>
+                                tools:text="-12345"/>
                         </LinearLayout>
 
                         <SeekBar
@@ -161,6 +177,14 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="@dimen/t20dp">
 
+                            <ImageView
+                                android:id="@+id/sed_to_minus"
+                                style="@style/number_icon"
+                                android:src="@drawable/minus"/>
+                            <ImageView
+                                android:id="@+id/sed_to_plus"
+                                style="@style/number_icon"
+                                android:src="@drawable/plus"/>
                             <TextView
                                 style="@style/sed_round_text"
                                 android:text="@string/toRound"/>

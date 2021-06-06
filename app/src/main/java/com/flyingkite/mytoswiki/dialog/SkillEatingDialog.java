@@ -71,6 +71,8 @@ public class SkillEatingDialog extends BaseTosDialog {
         private SeekBar bar;
         private TextView text;
         private int min;
+        private View add;
+        private View minus;
 
         private int getValue() {
             int ans = min;
@@ -86,6 +88,26 @@ public class SkillEatingDialog extends BaseTosDialog {
                 bar.setProgress(v - min);
             }
             text.setText("" + v);
+        }
+
+        private void step(int dx) {
+            int v = getValue() + dx;
+            if (bar != null) {
+                v = Math.min(Math.max(min, v), min + bar.getMax());
+            }
+            setValue(v);
+        }
+
+        private void setStepper(View add1, View minus1) {
+            add1.setOnClickListener((v) -> {
+                step(+1);
+            });
+            add = add1;
+
+            minus1.setOnClickListener((v) -> {
+                step(-1);
+            });
+            minus = minus1;
         }
     }
 
@@ -196,12 +218,12 @@ public class SkillEatingDialog extends BaseTosDialog {
             computeEatCard();
         });
 
-        toRndUI = makeBar(R.id.skillTo, R.id.sed_to, 2, 15);
-        pgsRndUI = makeBar(R.id.skillPercent, R.id.sed_percent, 0, 99);
-        fromRndUI = makeBar(R.id.skillFrom, R.id.sed_from, 1, 14);
+        toRndUI = makeBar(R.id.skillTo, R.id.sed_to, R.id.sed_to_plus, R.id.sed_to_minus, 2, 15);
+        pgsRndUI = makeBar(R.id.skillPercent, R.id.sed_percent, R.id.sed_pgs_plus, R.id.sed_pgs_minus, 0, 99);
+        fromRndUI = makeBar(R.id.skillFrom, R.id.sed_from, R.id.sed_from_plus, R.id.sed_from_minus, 1, 14);
     }
 
-    private RoundUI makeBar(@IdRes int barID, @IdRes int valueID, int from, int to) {
+    private RoundUI makeBar(@IdRes int barID, @IdRes int valueID, @IdRes int addID, @IdRes int minusID, int from, int to) {
         TextView txt = findViewById(valueID);
         SeekBar bar = findViewById(barID);
         bar.setMax(to - from);
@@ -210,6 +232,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         r.text = txt;
         r.bar = bar;
         r.min = from;
+        r.setStepper(findViewById(addID), findViewById(minusID));
 
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
