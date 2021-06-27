@@ -26,6 +26,7 @@ import com.flyingkite.mytoswiki.data.seal.GiftedScientists;
 import com.flyingkite.mytoswiki.data.seal.GodsDemons;
 import com.flyingkite.mytoswiki.data.seal.HeroDimension;
 import com.flyingkite.mytoswiki.data.seal.HinduGods;
+import com.flyingkite.mytoswiki.data.seal.KamenRider;
 import com.flyingkite.mytoswiki.data.seal.KimetsuNoYaiba;
 import com.flyingkite.mytoswiki.data.seal.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.LostSaga;
@@ -80,6 +81,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     static {
         sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_kamen_rider, new KamenRider()));
         sealSeries.add(new SealItem(R.string.card_series_lost_saga, new LostSaga()));
         sealSeries.add(new SealItem(R.string.card_series_kimetsu_no_yaiba, new KimetsuNoYaiba()));
         sealSeries.add(new SealItem(R.string.card_series_heros_dimension, new HeroDimension()));
