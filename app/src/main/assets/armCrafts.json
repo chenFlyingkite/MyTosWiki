@@ -41874,6 +41874,3898 @@
     }
   },
   {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3787",
+    "name": "【3787】 飛電ZERO-ONE驅動器龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903787%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/52/C3787.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094626\u0026path-prefix\u003dzh",
+      "iconKey": "C3787.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3788",
+    "name": "【3788】 飛電ZERO-ONE驅動器龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903788%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/9/90/C3788.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094628\u0026path-prefix\u003dzh",
+      "iconKey": "C3788.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3789",
+    "name": "【3789】 飛電ZERO-ONE驅動器龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903789%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/02/C3789.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094630\u0026path-prefix\u003dzh",
+      "iconKey": "C3789.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3790",
+    "name": "【3790】 飛電ZERO-ONE驅動器龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903790%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/fb/C3790.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094632\u0026path-prefix\u003dzh",
+      "iconKey": "C3790.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3791",
+    "name": "【3791】 飛電ZERO-ONE驅動器龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903791%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b9/C3791.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094635\u0026path-prefix\u003dzh",
+      "iconKey": "C3791.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3792",
+    "name": "【3792】 飛電ZERO-ONE驅動器龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903792%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a3/C3792.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094637\u0026path-prefix\u003dzh",
+      "iconKey": "C3792.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力及回復力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，完全回復生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "延遲全體敵人行動 1 回合"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 20 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2701",
+      "2719",
+      "2720"
+    ],
+    "cardLimitName": [
+      "假面騎士Zero-One",
+      "假面騎士Zero-Two",
+      "假面騎士Ark-One"
+    ],
+    "upHp": "+5%",
+    "upAttack": "+10%",
+    "upRecovery": "+5%",
+    "idNorm": "3793",
+    "name": "【3793】 飛電ZERO-ONE驅動器龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903793%E3%80%91_%E9%A3%9B%E9%9B%BBZERO-ONE%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/7d/C3793.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094639\u0026path-prefix\u003dzh",
+      "iconKey": "C3793.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3794",
+    "name": "【3794】 K-TOUCH龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903794%E3%80%91_K-TOUCH%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/dc/C3794.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094641\u0026path-prefix\u003dzh",
+      "iconKey": "C3794.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3795",
+    "name": "【3795】 K-TOUCH龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903795%E3%80%91_K-TOUCH%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/51/C3795.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094643\u0026path-prefix\u003dzh",
+      "iconKey": "C3795.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3796",
+    "name": "【3796】 K-TOUCH龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903796%E3%80%91_K-TOUCH%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6f/C3796.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094646\u0026path-prefix\u003dzh",
+      "iconKey": "C3796.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3797",
+    "name": "【3797】 K-TOUCH龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903797%E3%80%91_K-TOUCH%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/5d/C3797.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094648\u0026path-prefix\u003dzh",
+      "iconKey": "C3797.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3798",
+    "name": "【3798】 K-TOUCH龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903798%E3%80%91_K-TOUCH%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/a9/C3798.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094650\u0026path-prefix\u003dzh",
+      "iconKey": "C3798.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3799",
+    "name": "【3799】 K-TOUCH龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903799%E3%80%91_K-TOUCH%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3f/C3799.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094653\u0026path-prefix\u003dzh",
+      "iconKey": "C3799.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個暗成員的技能 CD 減少 2"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，無視五屬盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的暗符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身對人類目標攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2704",
+      "2705"
+    ],
+    "cardLimitName": [
+      "假面騎士Decade",
+      "假面騎士Decade(完全型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3800",
+    "name": "【3800】 K-TOUCH龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903800%E3%80%91_K-TOUCH%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/19/C3800.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094655\u0026path-prefix\u003dzh",
+      "iconKey": "C3800.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3801",
+    "name": "【3801】 亞克魯龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903801%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/82/C3801.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094657\u0026path-prefix\u003dzh",
+      "iconKey": "C3801.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3802",
+    "name": "【3802】 亞克魯龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903802%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/cb/C3802.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094700\u0026path-prefix\u003dzh",
+      "iconKey": "C3802.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3803",
+    "name": "【3803】 亞克魯龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903803%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/f0/C3803.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094702\u0026path-prefix\u003dzh",
+      "iconKey": "C3803.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3804",
+    "name": "【3804】 亞克魯龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903804%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/fe/C3804.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094704\u0026path-prefix\u003dzh",
+      "iconKey": "C3804.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3805",
+    "name": "【3805】 亞克魯龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903805%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c2/C3805.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094706\u0026path-prefix\u003dzh",
+      "iconKey": "C3805.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3806",
+    "name": "【3806】 亞克魯龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903806%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/ec/C3806.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094708\u0026path-prefix\u003dzh",
+      "iconKey": "C3806.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 25%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 80% 生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "隨機 3 個人類成員的技能 CD 減少 2"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除人族符石時，人類攻擊力提升 1.15 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 25 粒或以上符石，自身攻擊力提升 2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2699",
+      "2700"
+    ],
+    "cardLimitName": [
+      "假面騎士空我(全能型態)",
+      "假面騎士空我(究極型態)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3807",
+    "name": "【3807】 亞克魯龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903807%E3%80%91_%E4%BA%9E%E5%85%8B%E9%AD%AF%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/18/C3807.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094710\u0026path-prefix\u003dzh",
+      "iconKey": "C3807.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3808",
+    "name": "【3808】 SUN RISER龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903808%E3%80%91_SUN_RISER%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/02/C3808.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094713\u0026path-prefix\u003dzh",
+      "iconKey": "C3808.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3809",
+    "name": "【3809】 SUN RISER龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903809%E3%80%91_SUN_RISER%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/43/C3809.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094715\u0026path-prefix\u003dzh",
+      "iconKey": "C3809.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3810",
+    "name": "【3810】 SUN RISER龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903810%E3%80%91_SUN_RISER%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/7b/C3810.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094717\u0026path-prefix\u003dzh",
+      "iconKey": "C3810.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3811",
+    "name": "【3811】 SUN RISER龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903811%E3%80%91_SUN_RISER%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/76/C3811.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094719\u0026path-prefix\u003dzh",
+      "iconKey": "C3811.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3812",
+    "name": "【3812】 SUN RISER龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903812%E3%80%91_SUN_RISER%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/4f/C3812.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094721\u0026path-prefix\u003dzh",
+      "iconKey": "C3812.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3813",
+    "name": "【3813】 SUN RISER龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903813%E3%80%91_SUN_RISER%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/9/98/C3813.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094723\u0026path-prefix\u003dzh",
+      "iconKey": "C3813.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "連擊 (Combo) 達4或以上",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 100% 的攻擊力追打火屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "必然延長移動符石時間 0.5 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除火及光符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2702",
+      "2703"
+    ],
+    "cardLimitName": [
+      "假面騎士Black",
+      "假面騎士Black Rx"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3814",
+    "name": "【3814】 SUN RISER龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903814%E3%80%91_SUN_RISER%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/62/C3814.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094725\u0026path-prefix\u003dzh",
+      "iconKey": "C3814.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3815",
+    "name": "【3815】 聖劍SWORD驅動器龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903815%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/1d/C3815.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094728\u0026path-prefix\u003dzh",
+      "iconKey": "C3815.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3816",
+    "name": "【3816】 聖劍SWORD驅動器龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903816%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b7/C3816.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094730\u0026path-prefix\u003dzh",
+      "iconKey": "C3816.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3817",
+    "name": "【3817】 聖劍SWORD驅動器龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903817%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/f9/C3817.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094733\u0026path-prefix\u003dzh",
+      "iconKey": "C3817.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3818",
+    "name": "【3818】 聖劍SWORD驅動器龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903818%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8e/C3818.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094735\u0026path-prefix\u003dzh",
+      "iconKey": "C3818.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3819",
+    "name": "【3819】 聖劍SWORD驅動器龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903819%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/e6/C3819.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094737\u0026path-prefix\u003dzh",
+      "iconKey": "C3819.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3820",
+    "name": "【3820】 聖劍SWORD驅動器龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903820%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c3/C3820.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094739\u0026path-prefix\u003dzh",
+      "iconKey": "C3820.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，單體攻擊轉化為全體攻擊"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "對全體敵人造成 1000000 點火屬性傷害，此傷害無視防禦力"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2706"
+    ],
+    "cardLimitName": [
+      "假面騎士Saber"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3821",
+    "name": "【3821】 聖劍SWORD驅動器龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903821%E3%80%91_%E8%81%96%E5%8A%8DSWORD%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/bd/C3821.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094742\u0026path-prefix\u003dzh",
+      "iconKey": "C3821.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3822",
+    "name": "【3822】 電王腰帶龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903822%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/ac/C3822.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094744\u0026path-prefix\u003dzh",
+      "iconKey": "C3822.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3823",
+    "name": "【3823】 電王腰帶龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903823%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8f/C3823.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094746\u0026path-prefix\u003dzh",
+      "iconKey": "C3823.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3824",
+    "name": "【3824】 電王腰帶龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903824%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/51/C3824.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094748\u0026path-prefix\u003dzh",
+      "iconKey": "C3824.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3825",
+    "name": "【3825】 電王腰帶龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903825%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b7/C3825.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094750\u0026path-prefix\u003dzh",
+      "iconKey": "C3825.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3826",
+    "name": "【3826】 電王腰帶龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903826%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6e/C3826.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094752\u0026path-prefix\u003dzh",
+      "iconKey": "C3826.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3827",
+    "name": "【3827】 電王腰帶龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903827%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/33/C3827.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094754\u0026path-prefix\u003dzh",
+      "iconKey": "C3827.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，回復 50000 點生命力"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，人類成員以 50% 的攻擊力追打光屬性攻擊 1 次"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除 1 組 5 粒或以上的火符石，自身攻擊力提升 1.2 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2708"
+    ],
+    "cardLimitName": [
+      "假面騎士電王"
+    ],
+    "upHp": "0",
+    "upAttack": "+10%",
+    "upRecovery": "+10%",
+    "idNorm": "3828",
+    "name": "【3828】 電王腰帶龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903828%E3%80%91_%E9%9B%BB%E7%8E%8B%E8%85%B0%E5%B8%B6%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/89/C3828.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094756\u0026path-prefix\u003dzh",
+      "iconKey": "C3828.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3829",
+    "name": "【3829】 玩家驅動器龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903829%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/f/fd/C3829.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094759\u0026path-prefix\u003dzh",
+      "iconKey": "C3829.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3830",
+    "name": "【3830】 玩家驅動器龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903830%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/39/C3830.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094801\u0026path-prefix\u003dzh",
+      "iconKey": "C3830.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3831",
+    "name": "【3831】 玩家驅動器龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903831%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/e/e9/C3831.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094803\u0026path-prefix\u003dzh",
+      "iconKey": "C3831.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3832",
+    "name": "【3832】 玩家驅動器龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903832%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/8e/C3832.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094805\u0026path-prefix\u003dzh",
+      "iconKey": "C3832.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3833",
+    "name": "【3833】 玩家驅動器龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903833%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/c/c8/C3833.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094808\u0026path-prefix\u003dzh",
+      "iconKey": "C3833.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3834",
+    "name": "【3834】 玩家驅動器龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903834%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/8/86/C3834.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094810\u0026path-prefix\u003dzh",
+      "iconKey": "C3834.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，敵人全體的防禦力減少 100%"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "完成龍刻脈動後，將場上數量最多的 1 種符石轉化為光符石"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "消除人族符石時，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2709",
+      "2717"
+    ],
+    "cardLimitName": [
+      "假面騎士Ex-Aid",
+      "假面騎士Ex-Aid(無敵玩家)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3835",
+    "name": "【3835】 玩家驅動器龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903835%E3%80%91_%E7%8E%A9%E5%AE%B6%E9%A9%85%E5%8B%95%E5%99%A8%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/11/C3835.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094812\u0026path-prefix\u003dzh",
+      "iconKey": "C3835.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "連鎖龍紋",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3836",
+    "name": "【3836】 颱風變身腰帶龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903836%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/06/C3836.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094814\u0026path-prefix\u003dzh",
+      "iconKey": "C3836.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "轉動龍印",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3837",
+    "name": "【3837】 颱風變身腰帶龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903837%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/7/7e/C3837.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094816\u0026path-prefix\u003dzh",
+      "iconKey": "C3837.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "破碎龍咒",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3838",
+    "name": "【3838】 颱風變身腰帶龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903838%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/d/da/C3838.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094819\u0026path-prefix\u003dzh",
+      "iconKey": "C3838.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "映照龍符",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3839",
+    "name": "【3839】 颱風變身腰帶龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903839%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/65/C3839.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094821\u0026path-prefix\u003dzh",
+      "iconKey": "C3839.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "落影龍璃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3840",
+    "name": "【3840】 颱風變身腰帶龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903840%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/3/3e/C3840.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094823\u0026path-prefix\u003dzh",
+      "iconKey": "C3840.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "裂空龍刃",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3841",
+    "name": "【3841】 颱風變身腰帶龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903841%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/9/96/C3841.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094825\u0026path-prefix\u003dzh",
+      "iconKey": "C3841.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "鏡像龍丸",
+    "charge": "消除任何符石 (只計算首批消除的符石)",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，人類成員的攻擊力提升 20%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，所有成員無視屬性相剋"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，50% 的攻擊傷害無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身攻擊無視敵人防禦力"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [
+      "2707"
+    ],
+    "cardLimitName": [
+      "假面騎士(新1號)"
+    ],
+    "upHp": "+10%",
+    "upAttack": "0",
+    "upRecovery": "+10%",
+    "idNorm": "3842",
+    "name": "【3842】 颱風變身腰帶龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903842%E3%80%91_%E9%A2%B1%E9%A2%A8%E8%AE%8A%E8%BA%AB%E8%85%B0%E5%B8%B6%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/4/4c/C3842.png/revision/latest/scale-to-width-down/120?cb\u003d20210621094827\u0026path-prefix\u003dzh",
+      "iconKey": "C3842.png"
+    }
+  },
+  {
     "rarity": 2,
     "level": 2,
     "mode": "連鎖龍紋",
