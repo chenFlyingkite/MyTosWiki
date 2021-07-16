@@ -64,6 +64,33 @@
                 <TextView
                     style="@style/whiteText.t2"
                     android:text="作者必刷每日任務"/>
+
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="★公會任務貢獻卡片"
+                    android:textColor="@color/skyBlue"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_good"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_10k"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_9k"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_8k"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_7k"/>
+                <TextView
+                    style="@style/whiteText.t2"
+                    android:text="@string/monster_eat_guild_task_6k"/>
+                <View
+                    style="@style/divider_horizontal"
+                    android:background="@color/green"/>
+
                 <TextView
                     style="@style/whiteText.t2"
                     android:text="★捕捉靈魂石 (五色靈魂石隊伍)"
