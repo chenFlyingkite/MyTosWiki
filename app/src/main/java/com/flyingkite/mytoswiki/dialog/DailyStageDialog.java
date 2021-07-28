@@ -2,7 +2,10 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.mytoswiki.App;
@@ -53,10 +56,15 @@ public class DailyStageDialog extends BaseTosDialog {
 
     private void setHeader(int today) {
         // set header background
-        int[] ids = {R.id.dds_day0, R.id.dds_day1, R.id.dds_day2, R.id.dds_day3,
-                R.id.dds_day4, R.id.dds_day5, R.id.dds_day6};
-        for (int i = 0; i < 7; i++) {
-            int id = ids[i];
+        String[] days = {"日", "一", "二", "三", "四", "五", "六", };
+        ViewGroup column = findViewById(R.id.dds_header_2);
+        column.removeAllViews();
+        for (int i = 0; i < days.length; i++) {
+            String d = days[i];
+            View v = LayoutInflater.from(column.getContext()).inflate(R.layout.view_open_column, column, false);
+            TextView txt = v.findViewById(R.id.openTitle);
+            txt.setText(d);
+            // set background
             int color = Color.TRANSPARENT;
             if (i % 2 == 0) { // even number
                 color = App.res().getColor(R.color.colorPrimaryDark);
@@ -64,7 +72,8 @@ public class DailyStageDialog extends BaseTosDialog {
             if (i == today) {
                 color = App.res().getColor(R.color.grey6);
             }
-            findViewById(id).setBackgroundColor(color);
+            v.setBackgroundColor(color);
+            column.addView(v);
         }
     }
 

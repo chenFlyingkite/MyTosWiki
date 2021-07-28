@@ -12,12 +12,4 @@
         android:layout_width="@dimen/t40dp"
         tools:text="一"/>
 
-    <LinearLayout
-        android:id="@+id/openList"
-        android:layout_width="@dimen/t40dp"
-        android:layout_height="wrap_content"
-        android:divider="@drawable/divider_skyblue_t2"
-        android:showDividers="middle|beginning"
-        android:orientation="vertical"/>
-
 </LinearLayout>

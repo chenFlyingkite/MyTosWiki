@@ -70,47 +70,13 @@
                             android:text="@string/cards_battleName"
                             style="@style/cardText.item.6"/>
 
-                        <TextView
-                            android:id="@+id/dds_day0"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="日"/>
+                        <LinearLayout
+                            android:id="@+id/dds_header_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/dds_day1"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="一"/>
-
-                        <TextView
-                            android:id="@+id/dds_day2"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="二"/>
-
-                        <TextView
-                            android:id="@+id/dds_day3"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="三"/>
-
-                        <TextView
-                            android:id="@+id/dds_day4"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="四"/>
-
-                        <TextView
-                            android:id="@+id/dds_day5"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="五"/>
-
-                        <TextView
-                            android:id="@+id/dds_day6"
-                            style="@style/cardText.item.6"
-                            android:layout_width="@dimen/t40dp"
-                            android:text="六"/>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -124,20 +90,6 @@
                         tools:layout_height="@dimen/t20dp"
                         tools:background="@color/skyBlue"
                         android:orientation="vertical"/>
-
-                    <!--
-                    <LinearLayout
-                        android:id="@+id/dds_days"
-                        android:layout_below="@id/dds_header"
-                        android:layout_toRightOf="@id/dds_stages"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:layout_width="@dimen/t280dp"
-                        tools:layout_height="@dimen/t20dp"
-                        tools:background="@color/yellow"
-                        android:orientation="horizontal">
-                    </LinearLayout>
-                    -->
                 </RelativeLayout>
             </LinearLayout>
         </HorizontalScrollView>
