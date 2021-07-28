@@ -18,7 +18,7 @@ public class TosSummonerChart {
     public static final String[] header = TosSummonerLevel.headerZh;
     private static final long[][] table = TosSummonerLevel.table;
     private static final List<ILineDataSet> allDataSet = new ArrayList<>();
-    private static TicTac2 clock = new TicTac2();
+    private static final TicTac2 clock = new TicTac2();
 
     public static int getRowCount() {
         return table.length;

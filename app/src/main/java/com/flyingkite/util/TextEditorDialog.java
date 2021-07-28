@@ -32,7 +32,7 @@ public class TextEditorDialog {
     }
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 
-    private DialogOwner owner;
+    private final DialogOwner owner;
     private Texts texts;
 
     // Views

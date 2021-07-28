@@ -24,7 +24,7 @@ public class FreeMoveSampleDialog extends BaseTosDialog {
         return R.layout.dialog_free_move_sample;
     }
 
-    private List<StoneDesktop> stones = new ArrayList<>();
+    private final List<StoneDesktop> stones = new ArrayList<>();
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

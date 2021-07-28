@@ -45,10 +45,10 @@ public class TosWiki {
     private static TosCard[] allCards;
     private static CraftsNormal[] normalCrafts;
     private static CraftsArm[] armCrafts;
-    private static Map<String, TosCard> allCardsByIdNorm = new HashMap<>();
-    private static Map<String, List<TosCard>> allCardsBySeries = new HashMap<>();
-    private static Map<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
-    private static Set<String> switchChangedIdNorms = new HashSet<>(); // the card ids that after switched
+    private static final Map<String, TosCard> allCardsByIdNorm = new HashMap<>();
+    private static final Map<String, List<TosCard>> allCardsBySeries = new HashMap<>();
+    private static final Map<String, BaseCraft> allCraftsByIdNorm = new HashMap<>();
+    private static final Set<String> switchChangedIdNorms = new HashSet<>(); // the card ids that after switched
     private static CardFavor cardFavor;
     private static WebPin webPin;
     private static MainStage[] mainStages;
@@ -57,7 +57,7 @@ public class TosWiki {
     private static StageGroup ultimStages;
     private static MainStage[] realmStages;
     // Observers
-    private static List<OnAction> favorActions = new ArrayList<>();
+    private static final List<OnAction> favorActions = new ArrayList<>();
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_NORMAL_CRAFTS = "Crafts";
@@ -327,7 +327,7 @@ public class TosWiki {
         return copy(armCrafts);
     }
 
-    private static TaskMonitor.TaskOwner monitorSource = new TaskMonitor.TaskOwner() {
+    private static final TaskMonitor.TaskOwner monitorSource = new TaskMonitor.TaskOwner() {
         @Override
         public int taskCount() {
             return TAG_ALL_TASKS.length;
@@ -358,7 +358,7 @@ public class TosWiki {
             return TAG_ALL_TASKS[index];
         }
     };
-    private static TaskMonitor monitorDB = new TaskMonitor(monitorSource);
+    private static final TaskMonitor monitorDB = new TaskMonitor(monitorSource);
 
     // attend & absent
     // retain & remove
@@ -441,7 +441,7 @@ public class TosWiki {
         }
     }
 
-    private static Loggable z = new Loggable() {
+    private static final Loggable z = new Loggable() {
         @Override
         public void log(String message) {
             Log.i(LTag(), message);

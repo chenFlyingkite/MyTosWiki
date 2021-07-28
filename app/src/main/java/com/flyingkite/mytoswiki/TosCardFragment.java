@@ -312,7 +312,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private SimpleItemTouchHelper helper;
 
-    private OnAction favorAction = new OnAction() {
+    private final OnAction favorAction = new OnAction() {
         @Override
         public void onChanged() {
             initFavorLib();
@@ -325,7 +325,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         logAction(s);
     }
 
-    private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
+    private final TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
             log("#%s (%s) is done", index, tag);
@@ -840,7 +840,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private class TosSelectCard extends AllCards<TosCard> {
         private final String[] commonRace = App.res().getStringArray(R.array.cards_common_keys_race);
 
-        private TosCondition select;
+        private final TosCondition select;
 
         public TosSelectCard(List<TosCard> source, TosCondition condition) {
             super(source);
@@ -1280,7 +1280,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         private String joinKey(String key, TosCard c) {
             // Skill changes
             // TODO 0228 大聖昇華隊長技 != 主動技
-            StringBuilder skills = new StringBuilder("");
+            StringBuilder skills = new StringBuilder();
             for (int i = 0; i < c.skillChange.size(); i++) {
                 SkillLite sl = c.skillChange.get(i);
                 if (i > 0) {

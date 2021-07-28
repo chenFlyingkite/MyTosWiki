@@ -38,9 +38,9 @@ public abstract class CardEvolveAdapter extends RVAdapter<Evolve, CardEvolveAdap
     }
 
     public class EvolveVH extends RecyclerView.ViewHolder implements GlideUtil, ViewUtil {
-        private ImageView from;
-        private ImageView to;
-        private Library<CardTileAdapter> needLibrary;
+        private final ImageView from;
+        private final ImageView to;
+        private final Library<CardTileAdapter> needLibrary;
 
         public EvolveVH(View v) {
             super(v);

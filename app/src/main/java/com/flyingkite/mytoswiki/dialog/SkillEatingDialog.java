@@ -351,7 +351,7 @@ public class SkillEatingDialog extends BaseTosDialog {
 
     @SuppressLint("StaticFieldLeak")
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
-        private TicTac2 clk = new TicTac2();
+        private final TicTac2 clk = new TicTac2();
         @Override
         protected void onPreExecute() {
             clk.tic();

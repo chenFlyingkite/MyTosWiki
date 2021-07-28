@@ -28,7 +28,7 @@ public class NumberLineAdapter extends RVAdapter<Integer, NumberLineAdapter.Numb
     }
 
     public class NumberVH extends RecyclerView.ViewHolder {
-        private ImageView number;
+        private final ImageView number;
 
         public NumberVH(View w) {
             super(w);

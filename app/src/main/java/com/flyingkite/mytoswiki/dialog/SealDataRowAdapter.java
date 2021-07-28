@@ -68,12 +68,12 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
     }
 
     public class SealRowVH extends RecyclerView.ViewHolder {
-        private TextView title;
-        private TextView expect;
-        private ImageView actor;
-        private TextView observe;
-        private ImageView plus;
-        private ImageView minus;
+        private final TextView title;
+        private final TextView expect;
+        private final ImageView actor;
+        private final TextView observe;
+        private final ImageView plus;
+        private final ImageView minus;
 
         public SealRowVH(View v) {
             super(v);

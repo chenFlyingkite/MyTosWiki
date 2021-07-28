@@ -28,7 +28,7 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
     private final long[][] table = TosSummonerLevel.table;
     private ItemListener onClick;
     private int selected = NO_POS;
-    private int[] bgs = new int[5];
+    private final int[] bgs = new int[5];
 
     public SummonLvAdapter() {
         Arrays.fill(bgs, R.color.transparent);
@@ -93,8 +93,8 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
     }
 
     public static class SummonLvVH extends RecyclerView.ViewHolder {
-        private List<TextView> texts = new ArrayList<>();
-        private View divider;
+        private final List<TextView> texts = new ArrayList<>();
+        private final View divider;
 
         public SummonLvVH(View v) {
             super(v);

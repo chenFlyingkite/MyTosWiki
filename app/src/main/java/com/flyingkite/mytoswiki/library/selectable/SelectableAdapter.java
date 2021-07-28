@@ -57,7 +57,7 @@ public class SelectableAdapter extends RVAdapter<String, SelectableAdapter.Selec
     }
 
     public static class SelectableVH extends RecyclerView.ViewHolder {
-        private TextView text;
+        private final TextView text;
         public SelectableVH(View v) {
             super(v);
             text = v.findViewById(R.id.simpleText);

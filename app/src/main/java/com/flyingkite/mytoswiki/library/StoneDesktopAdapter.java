@@ -38,9 +38,9 @@ public class StoneDesktopAdapter extends RVAdapter<StoneDesktop, StoneDesktopAda
     }
 
     public static class StoneDesktopVH extends RecyclerView.ViewHolder implements ViewUtil {
-        private View share;
-        private TextView title;
-        private ViewGroup stone;
+        private final View share;
+        private final TextView title;
+        private final ViewGroup stone;
 
         public StoneDesktopVH(@NonNull View v) {
             super(v);

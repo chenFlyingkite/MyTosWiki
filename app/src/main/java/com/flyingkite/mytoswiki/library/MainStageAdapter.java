@@ -33,8 +33,8 @@ public abstract class MainStageAdapter extends RVAdapter<MainStage, MainStageAda
     }
 
     public class MStageVH extends RecyclerView.ViewHolder implements ViewUtil {
-        private TextView title;
-        private LinearLayout items;
+        private final TextView title;
+        private final LinearLayout items;
 
         public MStageVH(View v) {
             super(v);

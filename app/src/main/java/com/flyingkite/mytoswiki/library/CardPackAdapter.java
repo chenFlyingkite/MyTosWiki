@@ -120,9 +120,9 @@ public class CardPackAdapter extends RVSelectAdapter<PackCard, CardPackAdapter.P
     }
 
     public static class PCardVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView thumb;
-        private TextView text;
-        private TextView message;
+        private final ImageView thumb;
+        private final TextView text;
+        private final TextView message;
 
         public PCardVH(View v) {
             super(v);

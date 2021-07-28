@@ -27,7 +27,7 @@ public class FixedStoneDialog extends BaseTosDialog {
         return R.layout.dialog_fix_stone;
     }
 
-    private List<StoneFix> stones = new ArrayList<>();
+    private final List<StoneFix> stones = new ArrayList<>();
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

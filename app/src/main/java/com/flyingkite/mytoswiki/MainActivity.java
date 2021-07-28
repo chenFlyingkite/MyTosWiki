@@ -57,7 +57,7 @@ public class MainActivity extends BaseActivity implements
 {
     // Provide alternative bitmaps
     // https://developer.android.com/training/multiscreen/screendensities
-    private List<Integer> tools = Arrays.asList(R.drawable.card_0617
+    private final List<Integer> tools = Arrays.asList(R.drawable.card_0617
             , R.drawable.logo_chrome
             //, R.drawable.rune_water
             , R.drawable.tos_app
@@ -86,7 +86,7 @@ public class MainActivity extends BaseActivity implements
     private Library<IconAdapter> iconLibrary;
     private ViewPager cardPager;
     private boolean pagerOK = false;
-    private List<String> homePagerTags = new ArrayList<>();
+    private final List<String> homePagerTags = new ArrayList<>();
 
     private WaitingDialog waiting;
 
@@ -128,7 +128,7 @@ public class MainActivity extends BaseActivity implements
         t.setupWithViewPager(p); // Thin tab
     }
 
-    private PGAdapter<String> pagerAdapter = new PGAdapter<String>() {
+    private final PGAdapter<String> pagerAdapter = new PGAdapter<String>() {
         @Override
         public int pageLayoutId(ViewGroup parent, int position) {
             return R.layout.view_box;
@@ -339,7 +339,7 @@ public class MainActivity extends BaseActivity implements
 
     private WebPin webPin = new WebPin();
 
-    private TaskMonitor.OnTaskState onDatabaseState = new TaskMonitor.OnTaskState() {
+    private final TaskMonitor.OnTaskState onDatabaseState = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
             logI("#%s (%s) is done", index, tag);

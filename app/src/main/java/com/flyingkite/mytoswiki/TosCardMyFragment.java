@@ -124,11 +124,11 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     private Library<CardPackInfoAdapter> cardLib;
 
     // My Pack = all cards from json
-    private List<PackCard> myPack = new ArrayList<>();
+    private final List<PackCard> myPack = new ArrayList<>();
     // Merged myPack by idNorm -> [c1, ..., cn]
-    private Map<String, PackInfoCard> myInfoPack = new TreeMap<>();
+    private final Map<String, PackInfoCard> myInfoPack = new TreeMap<>();
     // Omitted cards from myPack that did not show on adapter
-    private List<PackCard> myOmit = new ArrayList<>();
+    private final List<PackCard> myOmit = new ArrayList<>();
     private boolean showHint;
     private WaitingDialog waiting;
     private TosCardFragment.ToolBarOwner toolOwner;
@@ -679,7 +679,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
     }
 
-    private TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
+    private final TaskMonitor.OnTaskState onCardsReady = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
             log("#%s (%s) is done", index, tag);
@@ -734,14 +734,14 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     private class TosSelectCard extends AllCards<PackInfoCard> {
         private final String[] commonRace = App.res().getStringArray(R.array.cards_common_keys_race);
 
-        private TosCondition select;
+        private final TosCondition select;
 
         public TosSelectCard(List<PackInfoCard> source, TosCondition condition) {
             super(source);
             select = condition;
         }
 
-        private SparseBooleanArray selectForShow = new SparseBooleanArray();
+        private final SparseBooleanArray selectForShow = new SparseBooleanArray();
         private Pattern farmSeries;
         private Pattern turnStoneRegex;
 
@@ -1416,10 +1416,10 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     // Given uid, aid -> get token
     private class LoginTokenTask extends AsyncTask<Void, Void, TokenRes> implements Loggable {
 
-        private String uid;
-        private String verify;
-        private AppPref pref = new AppPref();
-        private boolean fetchPack = true;
+        private final String uid;
+        private final String verify;
+        private final AppPref pref = new AppPref();
+        private final boolean fetchPack = true;
 
         public LoginTokenTask(String id, String code) {
             uid = id;
@@ -1494,10 +1494,10 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     // Given uid, aid, token -> get PackList
     private class FetchPackTask extends AsyncTask<Void, Void, PackRes> implements Loggable {
 
-        private String uid;
-        private String verify;
-        private String token;
-        private AppPref pref = new AppPref();
+        private final String uid;
+        private final String verify;
+        private final String token;
+        private final AppPref pref = new AppPref();
         private long tic;
 
         public FetchPackTask(String id, String code, String tokens) {
@@ -1620,7 +1620,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
 
     // Parse String to json of PackRes, and setup adapter
     private class ParsePackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
-        private String src;
+        private final String src;
         public ParsePackTask(String data) {
             src = data;
         }

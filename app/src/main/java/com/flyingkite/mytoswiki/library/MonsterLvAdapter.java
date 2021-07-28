@@ -35,7 +35,7 @@ public class MonsterLvAdapter extends RecyclerView.Adapter<MonsterLvAdapter.Mons
 
     private ItemListener onClick;
     private int selected = NO_POS;
-    private int[] bgs = new int[5];
+    private final int[] bgs = new int[5];
 
     public MonsterLvAdapter() {
         Arrays.fill(bgs, R.color.transparent);
@@ -121,8 +121,8 @@ public class MonsterLvAdapter extends RecyclerView.Adapter<MonsterLvAdapter.Mons
     }
 
     public static class MonsterLvVH extends RecyclerView.ViewHolder {
-        private List<TextView> texts = new ArrayList<>();
-        private View divider;
+        private final List<TextView> texts = new ArrayList<>();
+        private final View divider;
 
         public MonsterLvVH(View v) {
             super(v);

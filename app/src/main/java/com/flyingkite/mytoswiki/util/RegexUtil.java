@@ -13,7 +13,7 @@ public class RegexUtil {
     public static String join(String prefix, String suffix, String delim, List<String> keys) {
         if (keys.isEmpty()) return "";
 
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         s.append(prefix);
         s.append(TextUtils.join(delim, keys));
         s.append(suffix);

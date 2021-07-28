@@ -149,13 +149,13 @@ public class ShareHelper {
     }
 
     public static class SaveViewToBitmapTask extends AsyncTask<Void, Void, Void> {
-        private WeakReference<Activity> activity;
-        private WeakReference<View> view;
-        private String savedName;
+        private final WeakReference<Activity> activity;
+        private final WeakReference<View> view;
+        private final String savedName;
         private int width;
         private int height;
         private WaitingDialog w;
-        private TicTac2 tt = new TicTac2();
+        private final TicTac2 tt = new TicTac2();
 
         public SaveViewToBitmapTask(Activity act, View v, String filename) {
             activity = new WeakReference<>(act);

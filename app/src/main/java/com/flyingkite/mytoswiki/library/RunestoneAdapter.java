@@ -59,7 +59,7 @@ public class RunestoneAdapter extends RVAdapter<Character, RunestoneAdapter.Rune
     }
 
     public String getStones() {
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         for (int i = 0; i < dataList.size(); i++) {
             s.append(dataList.get(i));
         }
@@ -76,7 +76,7 @@ public class RunestoneAdapter extends RVAdapter<Character, RunestoneAdapter.Rune
     }
 
     public static class RunestoneVH extends RecyclerView.ViewHolder {
-        private ImageView stone;
+        private final ImageView stone;
 
         public RunestoneVH(@NonNull View v) {
             super(v);

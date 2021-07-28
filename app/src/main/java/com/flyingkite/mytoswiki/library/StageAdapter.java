@@ -39,8 +39,8 @@ public class StageAdapter extends RVAdapter<Stage, StageAdapter.StageVH, StageAd
     }
 
     public class StageVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView icon;
-        private TextView name;
+        private final ImageView icon;
+        private final TextView name;
 
         public StageVH(View v) {
             super(v);

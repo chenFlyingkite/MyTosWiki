@@ -181,7 +181,7 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
         swipe.setOnRefreshListener(refresher);
     }
 
-    private SwipeRefreshLayout.OnRefreshListener refresher = new SwipeRefreshLayout.OnRefreshListener() {
+    private final SwipeRefreshLayout.OnRefreshListener refresher = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
             web.reload();
@@ -189,7 +189,7 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
         }
     };
 
-    private WebChromeClient chromeClient = new WebChromeClient() {
+    private final WebChromeClient chromeClient = new WebChromeClient() {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);
@@ -197,7 +197,7 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
         }
     };
 
-    private WebViewClient client = new WebViewClient() {
+    private final WebViewClient client = new WebViewClient() {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);

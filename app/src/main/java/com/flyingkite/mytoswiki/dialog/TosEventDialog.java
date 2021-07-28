@@ -28,7 +28,7 @@ public class TosEventDialog extends BaseTosDialog {
 
     private TextView eventMemo;
     private String eventPage = "https://towerofsaviors.com/2018/08/18/%E3%80%90%E6%9C%AB%E4%B8%96%E6%A2%B5%E9%9F%B3%EF%BC%9A%E8%B6%85%E8%84%AB%E8%84%88%E8%BC%AA%E4%B9%8B%E7%90%86%E3%80%91%E6%85%B6%E7%A5%9D%E6%B4%BB%E5%8B%95%E8%A9%B3%E6%83%85/";
-    private String eventImage = "https://tos157310821.files.wordpress.com/2018/08/138_website_851x315_zh_logo.jpg";
+    private final String eventImage = "https://tos157310821.files.wordpress.com/2018/08/138_website_851x315_zh_logo.jpg";
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

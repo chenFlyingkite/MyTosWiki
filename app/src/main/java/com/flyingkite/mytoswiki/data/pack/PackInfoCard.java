@@ -27,7 +27,7 @@ public class PackInfoCard implements Formattable {
     @NonNull
     @Override
     public String toString() {
-        StringBuilder b = new StringBuilder("");
+        StringBuilder b = new StringBuilder();
         for (PackCard p : packs) {
             if (b.length() > 0) {
                 b.append(", ");

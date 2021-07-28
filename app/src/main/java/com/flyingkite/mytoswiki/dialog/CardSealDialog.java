@@ -415,7 +415,7 @@ public class CardSealDialog extends BaseTosDialog {
         chart.getDescription().setText(s);
     }
 
-    private OnChartValueSelectedListener onChartValue = new OnChartValueSelectedListener() {
+    private final OnChartValueSelectedListener onChartValue = new OnChartValueSelectedListener() {
         @Override
         public void onValueSelected(Entry e, Highlight h) {
             setDesc(e.getData().toString());

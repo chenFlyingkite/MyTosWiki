@@ -229,7 +229,7 @@ public class CraftDialog extends BaseTosDialog {
         super.onResume();
     }
 
-    private TaskMonitor.OnTaskState onCraftsReady = new TaskMonitor.OnTaskState() {
+    private final TaskMonitor.OnTaskState onCraftsReady = new TaskMonitor.OnTaskState() {
         private boolean normalOK = false;
         private boolean armOK = false;
         @Override
@@ -540,7 +540,7 @@ public class CraftDialog extends BaseTosDialog {
         private final String[] commonAttr = getResources().getStringArray(R.array.craft_common_keys_attr);
         private final String[] commonRace = getResources().getStringArray(R.array.craft_common_keys_race);
         private final String noLimit = getString(R.string.craft_no_limit);
-        private TosCondition select;
+        private final TosCondition select;
         private Pattern attackIncRegex;
         private Pattern coldDownDecRegex;
         private Pattern runestoneRegex;

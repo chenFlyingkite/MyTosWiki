@@ -114,9 +114,9 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     }
 
     public static class CraftVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView thumb;
-        private TextView text;
-        private TextView message;
+        private final ImageView thumb;
+        private final TextView text;
+        private final TextView message;
 
         public CraftVH(View v) {
             super(v);

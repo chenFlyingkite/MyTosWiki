@@ -35,8 +35,8 @@ public class TextsAdapter extends RVAdapter<String, TextsAdapter.TextsVH, TextsA
     }
 
     public static class TextsVH extends RecyclerView.ViewHolder {
-        private TextView text;
-        private View delete;
+        private final TextView text;
+        private final View delete;
         public TextsVH(View v) {
             super(v);
             text = v.findViewById(R.id.textMsg);

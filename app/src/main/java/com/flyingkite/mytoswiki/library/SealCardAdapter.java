@@ -22,7 +22,7 @@ public class SealCardAdapter extends RVSelectAdapter<TosCard, SealCardAdapter.SC
 
     }
 
-    private Set<Integer> drawnIndex = new HashSet<>();
+    private final Set<Integer> drawnIndex = new HashSet<>();
 
     private boolean peekCard;
 
@@ -60,8 +60,8 @@ public class SealCardAdapter extends RVSelectAdapter<TosCard, SealCardAdapter.SC
 
     public class SCardVH extends RecyclerView.ViewHolder {
         public ImageView img;
-        private TextView text;
-        private ImageView img2;
+        private final TextView text;
+        private final ImageView img2;
 
         public SCardVH(View v) {
             super(v);

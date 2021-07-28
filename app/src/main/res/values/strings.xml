@@ -801,7 +801,7 @@
 
     <string name="monster_eat_form1">經驗收益 = 貢獻經驗 - 飼料經驗</string>
     <string name="monster_eat_detail">如何堆肥最有效益? 建議堆肥的卡片\n等級不超過   肥料上限 Lv，\n愈接近   肥料最佳 Lv   愈好。</string>
-    <string name="monster_eat_guild_task_good">A = 五屬3☆妖精(#0067)\nB = 五屬2☆人類(#0086)\nC = 五屬3☆人類(#0087)\nD = 五屬3☆命運女神,遊俠,巨象,西方獸,妖蛋(#0116, #0131, #0146, #0176), 2☆機械獸,魔幼龍,寧芙(#0161, #1111, #1146)</string>
+    <string name="monster_eat_guild_task_good">A = Lv 6~10 五屬3☆妖精(#0067)\nB = 五屬2☆人類(#0086)\nC = Lv 5~7 五屬3☆人類(#0087)\nD = Lv 7~11 五屬3☆命運女神,遊俠,巨象,西方獸,妖蛋(#0116, #0131, #0146, #0176), 2☆機械獸,魔幼龍,寧芙(#0161, #1111, #1146)</string>
     <string name="monster_eat_guild_task_10k">★10k = Lv10 A，Lv11 B，Lv11 D</string>
     <string name="monster_eat_guild_task_9k">★9k = Lv9 A，Lv6 C，Lv10 D</string>
     <string name="monster_eat_guild_task_8k">★8k = Lv8 A，Lv10 B，Lv9 D</string>

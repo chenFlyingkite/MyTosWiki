@@ -33,7 +33,7 @@ public class WaitingDialog extends AlertDialog {
     }
 
     public static class Builder {
-        private WaitingDialog dlg;
+        private final WaitingDialog dlg;
 
         public Builder(Activity act) {
             this(act, false);
@@ -104,7 +104,7 @@ public class WaitingDialog extends AlertDialog {
         }
     }
 
-    private Runnable showLoading = new Runnable() {
+    private final Runnable showLoading = new Runnable() {
         @Override
         public void run() {
             setWindowAttr(0.6F, 1F);

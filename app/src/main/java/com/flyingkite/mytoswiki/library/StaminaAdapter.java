@@ -98,9 +98,9 @@ public class StaminaAdapter extends RVAdapter<String, StaminaAdapter.StaminaVH, 
     }
 
     public static class StaminaVH extends RecyclerView.ViewHolder {
-        private TextView stamina;
-        private TextView date;
-        private TextView time;
+        private final TextView stamina;
+        private final TextView date;
+        private final TextView time;
 
         public StaminaVH(@NonNull View v) {
             super(v);

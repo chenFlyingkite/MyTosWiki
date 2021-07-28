@@ -48,7 +48,7 @@ public class UltimateStageDialog extends BaseTosDialog {
         TosWiki.attendDatabaseTasks(onStagesReady);
     }
 
-    private TaskMonitor.OnTaskState onStagesReady = new TaskMonitor.OnTaskState() {
+    private final TaskMonitor.OnTaskState onStagesReady = new TaskMonitor.OnTaskState() {
         @Override
         public void onTaskDone(int index, String tag) {
             if (isActivityGone()) {

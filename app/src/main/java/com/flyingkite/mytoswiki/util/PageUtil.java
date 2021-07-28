@@ -31,7 +31,7 @@ public interface PageUtil extends Loggable, ViewUtil {
 
     default View getView() {
         return null;
-    };
+    }
 
     default void onToolScrollToPosition(RecyclerView rv, int position) {
 
@@ -158,9 +158,7 @@ public interface PageUtil extends Loggable, ViewUtil {
         Activity act = getActivity();
         if (act == null || act.isFinishing()) return true;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            if (act.isDestroyed()) {
-                return true;
-            }
+            return act.isDestroyed();
         }
         return false;
     }

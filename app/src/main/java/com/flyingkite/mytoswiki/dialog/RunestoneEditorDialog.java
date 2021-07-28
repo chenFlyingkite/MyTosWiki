@@ -201,7 +201,7 @@ public class RunestoneEditorDialog extends BaseTosDialog {
         sameStone.setSelected(toStone.getText().equals(fromStone.getText()));
     }
 
-    private RecyclerView.AdapterDataObserver onStoneToChanged = new RecyclerView.AdapterDataObserver() {
+    private final RecyclerView.AdapterDataObserver onStoneToChanged = new RecyclerView.AdapterDataObserver() {
         @Override
         public void onChanged() {
             super.onChanged();
@@ -225,7 +225,7 @@ public class RunestoneEditorDialog extends BaseTosDialog {
             stone[k]++;
         }
 
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         String[] attr = {"", "水", "火", "木", "光", "暗", "心"};
         for (int i = 1; i < attr.length; i++) {
             if (i > 1) {

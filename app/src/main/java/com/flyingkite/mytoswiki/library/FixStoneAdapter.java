@@ -46,10 +46,10 @@ public abstract class FixStoneAdapter extends RVAdapter<StoneFix, FixStoneAdapte
     }
 
     public class StoneFixVH extends RecyclerView.ViewHolder implements ViewUtil {
-        private View share;
-        private TextView title;
-        private ViewGroup stone;
-        private Library<CardTileAdapter> cards;
+        private final View share;
+        private final TextView title;
+        private final ViewGroup stone;
+        private final Library<CardTileAdapter> cards;
 
         public StoneFixVH(@NonNull View v) {
             super(v);

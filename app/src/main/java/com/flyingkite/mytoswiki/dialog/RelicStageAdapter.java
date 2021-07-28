@@ -35,9 +35,9 @@ public abstract class RelicStageAdapter extends RVAdapter<RelicStage, RelicStage
     }
 
     public class RelicVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView icon;
-        private TextView name;
-        private TextView price;
+        private final ImageView icon;
+        private final TextView name;
+        private final TextView price;
 
         public RelicVH(View v) {
             super(v);

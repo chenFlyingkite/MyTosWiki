@@ -205,7 +205,7 @@ public class FabricAnswers {
         z.logI(fmt, params);
     }
 
-    private static Loggable z = new Loggable() {
+    private static final Loggable z = new Loggable() {
         @Override
         public String LTag() {
             return TAG;

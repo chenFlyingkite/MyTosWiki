@@ -32,31 +32,31 @@ public class TosCardUtil {
         }
     }
 
-    /** 動態造型 */
+    // 動態造型
     public static boolean isSkin(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
         return MathUtil.isInRange(idNorm, 6000, 7000);
     }
 
-    /** 討伐戰 */
+    // 討伐戰
     public static boolean isTauFa(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
         return MathUtil.isInRange(idNorm, 7000, 8000);
     }
 
-    /** 迪士尼 */
+    // 迪士尼
     public static boolean isDisney(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
         return MathUtil.isInRange(idNorm, 8000, 8046);
     }
 
-    /** 存音石 */
+    // 存音石
     public static boolean isTunestone(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
         return MathUtil.isInRange(idNorm, 8046, 9000);
     }
 
-    /** 72 柱魔神 */
+    // 72 柱魔神
     public static boolean is72Demon(TosCard c) {
         int idNorm = Integer.parseInt(c.idNorm);
         return MathUtil.isInRange(idNorm, 9000, 9020);
@@ -78,11 +78,7 @@ public class TosCardUtil {
             List<String> s = new ArrayList<>();
             s.add("希臘神像");
             p = Pattern.compile(RegexUtil.toRegexOr(s));
-            if (p.matcher(c.series).find()) {
-                 return true;
-            } else {
-                return false;
-            }
+            return p.matcher(c.series).find();
         }
         // 合體卡的合體後
         if (c.combineTo.size() > 0) {

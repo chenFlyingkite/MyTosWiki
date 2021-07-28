@@ -35,7 +35,7 @@ public class CardAdapter
     private TosSelection<TosCard> selection;
     private List<String> selectedMessage = new ArrayList<>();
     private AsyncTask<Void, Void, Void> selectTask;
-    private boolean showPercentLine = true;
+    private final boolean showPercentLine = true;
     private int[] colorPercent;
 
     public CardAdapter() {
@@ -158,10 +158,10 @@ public class CardAdapter
     }
 
     public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil {
-        private ImageView thumb;
-        private TextView text;
-        private TextView message;
-        private TextView right;
+        private final ImageView thumb;
+        private final TextView text;
+        private final TextView message;
+        private final TextView right;
 
         public CardVH(View v) {
             super(v);

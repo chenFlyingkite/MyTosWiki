@@ -50,7 +50,7 @@ public class SealSeriesAdapter extends RVAdapter<SealItem, SealSeriesAdapter.Sea
     }
 
     public static class SealVH extends RecyclerView.ViewHolder {
-        private RadioButton box;
+        private final RadioButton box;
 
         public SealVH(View v) {
             super(v);

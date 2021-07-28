@@ -16,7 +16,7 @@ public class TaskMonitor implements Loggable {
      */
     private final List<OnTaskState> clients = Collections.synchronizedList(new ArrayList<>());
 
-    private TaskOwner taskOwner;
+    private final TaskOwner taskOwner;
 
     public TaskMonitor(@NonNull TaskOwner source) {
         taskOwner = source;

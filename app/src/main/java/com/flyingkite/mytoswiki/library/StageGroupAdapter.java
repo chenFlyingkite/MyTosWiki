@@ -35,9 +35,9 @@ public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroup
     }
 
     public class StageGVH extends RecyclerView.ViewHolder implements ViewUtil {
-        private TextView title;
-        private LinearLayout items;
-        private View line;
+        private final TextView title;
+        private final LinearLayout items;
+        private final View line;
 
         public StageGVH(View v) {
             super(v);

@@ -39,7 +39,7 @@ public class StaminaDialog extends BaseTosDialog {
     private static final int period = 8;
     // Data
     private Stamina sdData = new Stamina();
-    private Date dateNow = new Date();
+    private final Date dateNow = new Date();
     // Views
     private Library<StaminaAdapter> library;
     private StaminaUI sourceBar;
@@ -50,7 +50,7 @@ public class StaminaDialog extends BaseTosDialog {
     private static class StaminaUI {
         private SeekBar bar;
         private TextView text;
-        private int min = 0;
+        private final int min = 0;
         private View add;
         private View minus;
 
@@ -217,7 +217,7 @@ public class StaminaDialog extends BaseTosDialog {
 
     @SuppressLint("StaticFieldLeak")
     private class LoadDataAsyncTask extends AsyncTask<Void, Void, Stamina> {
-        private TicTac2 clk = new TicTac2();
+        private final TicTac2 clk = new TicTac2();
         @Override
         protected void onPreExecute() {
             clk.tic();

@@ -2,17 +2,19 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
 import com.flyingkite.mytoswiki.R;
 
+import androidx.annotation.Nullable;
+
 public class CommonDialog extends BaseTosDialog {
     public interface Action {
-        default void onConfirm(){};
-        default void onCancel(){};
+        default void onConfirm(){}
+
+        default void onCancel(){}
     }
 
     private Action action;

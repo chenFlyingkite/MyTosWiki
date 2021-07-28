@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:gravity="center"
+    android:gravity="center_vertical"
     android:background="@drawable/bg_press_gray4"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -16,10 +16,18 @@
 
     <TextView
         android:id="@+id/stageName"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/t170dp"
         android:layout_height="wrap_content"
         style="@style/cardText"
         android:textColor="@color/sky_yellow"
         tools:text="123456"/>
+
+    <LinearLayout
+        android:id="@+id/stageDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
 </LinearLayout>
