@@ -10,13 +10,10 @@ import android.os.StrictMode;
 import android.widget.Toast;
 
 import com.flyingkite.crashlytics.CrashReport;
-import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.google.firebase.FirebaseApp;
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
@@ -46,10 +43,10 @@ public class App extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         strictMode();
-        CrashReport.init(this, DEBUG);
         FirebaseApp.initializeApp(this);
+        CrashReport.init(this, DEBUG);
         RemoteConfig.init(R.xml.remote_config_default);
-        FabricAnswers.logAppOnCreate(null);
+//        FabricAnswers.logAppOnCreate(null);
         TosWiki.init(this);
         //initCrashHandler();
     }

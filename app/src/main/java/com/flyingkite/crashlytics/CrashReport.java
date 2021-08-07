@@ -70,7 +70,6 @@ public class CrashReport {
     }
 
     private static String parseCpuHardwareInfo() {
-
         List<String> cpuInfo = FileUtil.readFromFile(new File("/proc/cpuinfo"));
         for (String line : cpuInfo) {
             if (line != null && line.toLowerCase().contains("hardware\t:")) {

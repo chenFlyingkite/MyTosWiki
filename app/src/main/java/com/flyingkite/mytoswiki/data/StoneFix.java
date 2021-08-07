@@ -1,16 +1,16 @@
 package com.flyingkite.mytoswiki.data;
 
 public class StoneFix {
-    public StoneDesktop desktop = new StoneDesktop("", "");
-    public String cards = "";
+    public StoneDesktop desktop;
+    public String cards;
 
-    public StoneFix(String card, StoneDesktop desk) {
+    public StoneFix(String card, String stones, String detail) {
         cards = card;
-        desktop = desk;
+        desktop =  new StoneDesktop(stones, detail);
     }
 
     @Override
     public String toString() {
-        return cards + " " + desktop.toString();
+        return cards + " " + desktop;
     }
 }

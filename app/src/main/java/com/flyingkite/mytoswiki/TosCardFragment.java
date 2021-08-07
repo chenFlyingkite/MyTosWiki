@@ -899,10 +899,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
 
-            // 轉化(|為)(光|光強化)(|神族|魔族|人族|獸族|龍族|妖族|機械族)符石
+            // 添加種族符石, 轉化光強化
+            // (轉化|添加)(|為)(光|光強化)(|神族|魔族|人族|獸族|龍族|妖族|機械族)符石
             List<String> allRace = getRaces();
             allRace.add(0, ""); // No specified race
-            String r = getString(R.string.cards_turn_into2) + "(|為)"
+            String r = getString(R.string.cards_turn_into)
                     + RegexUtil.toRegexOr(stones)
                     + RegexUtil.toRegexOr(allRace)
                     + getString(R.string.cards_runestone);
@@ -937,7 +938,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         private List<String> getRaces() {
             List<String> race = new ArrayList<>();
-            getTagsWhen((w) -> true, sortRaceStoneRace, race, false);
+            getTagsWhen((w) -> {
+                return true;
+            }, sortRaceStoneRace, race, false);
             return race;
         }
 

@@ -15,8 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "717212475904-ov8utqsvsmjhtv1h7f7d1ovdsf629mqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flyingkite.mytoswiki",
+            "certificate_hash": "dc7c43fb8385f4d46763e95d6937f4f2a7dd6843"
+          }
         },
         {
           "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
@@ -29,15 +33,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     },
@@ -52,10 +54,6 @@
         {
           "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
           "client_type": 3
-        },
-        {
-          "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -64,15 +62,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717212475904-6m7j42j254n9vnn3t3af0pbfjqvcrhhg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

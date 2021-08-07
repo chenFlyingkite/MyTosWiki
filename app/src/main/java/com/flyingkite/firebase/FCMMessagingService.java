@@ -81,6 +81,9 @@ public class FCMMessagingService extends FirebaseMessagingService implements Log
      * @param messageBody FCM message body received.
      */
     private void sendNotification(String messageBody) {
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (nm == null) return;
+
         final int notifId = 0;
         final int requestCode = 0;
         Intent main = new Intent(this, MainActivity.class);
@@ -95,9 +98,6 @@ public class FCMMessagingService extends FirebaseMessagingService implements Log
                 .setAutoCancel(true)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setContentIntent(pi);
-
-        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        if (nm == null) return;
 
         // Since android Oreo notification channel is needed.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

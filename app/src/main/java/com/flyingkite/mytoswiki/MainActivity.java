@@ -249,55 +249,56 @@ public class MainActivity extends BaseActivity implements
 
             @Override
             public void onClick(Integer iconId, IconAdapter.IconVH vh, int position) {
+                Activity a = getActivity();
                 if (iconId == R.drawable.card_1429) {
-                    new FixedStoneDialog().show(getActivity());
+                    new FixedStoneDialog().show(a);
                 } else if (iconId == R.drawable.card_0674) {
-                    new UltimateStageDialog().show(getActivity());
+                    new UltimateStageDialog().show(a);
                 } else if (iconId == R.drawable.card_0617) {
-                    new SkillEatingDialog().show(getActivity());
+                    new SkillEatingDialog().show(a);
                 } else if (iconId == R.drawable.logo_stamina) {
-                    new SummonerLevelDialog().show(getActivity());
+                    new SummonerLevelDialog().show(a);
                 } else if (iconId == R.drawable.exp_eat) {
-                    new MonsterLevelDialog().show(getActivity());
+                    new MonsterLevelDialog().show(a);
                 } else if (iconId == R.drawable.ic_description_black_48dp) {
                     new TextEditorDialog(MainActivity.this::getActivity).show();
                 } else if (iconId == R.drawable.logo_chrome) {
-                    new WebDialog().show(getActivity());
+                    new WebDialog().show(a);
                 } else if (iconId == R.drawable.ic_send_black_48dp) {
-                    new FeedbackDialog().show(getActivity());
+                    new FeedbackDialog().show(a);
                 } else if (iconId == R.mipmap.app_icon) {
-                    new AboutDialog().show(getActivity());
+                    new AboutDialog().show(a);
                 } else if (iconId == R.drawable.logo_craft_1) {
-                    new CraftDialog().show(getActivity());
+                    new CraftDialog().show(a);
                 } else if (iconId == R.drawable.owl2) {
-                    new StageMemoDialog().show(getActivity());
+                    new StageMemoDialog().show(a);
                 } else if (iconId == R.drawable.q1) {
-                    new HelpDialog().show(getActivity());
+                    new HelpDialog().show(a);
                 } else if (iconId == R.drawable.card_1777) {
-                    new SkillEatSampleDialog().show(getActivity());
+                    new SkillEatSampleDialog().show(a);
                 } else if (iconId == R.drawable.shop_card) {
-                    new CardSealDialog().show(getActivity());
+                    new CardSealDialog().show(a);
                 } else if (iconId == R.drawable.tos_app) {
-                    new TosEventDialog().show(getActivity());
+                    new TosEventDialog().show(a);
                 } else if (iconId == R.drawable.tos_enochian) {
-                    new MainStageDialog().show(getActivity());
+                    new MainStageDialog().show(a);
                 } else if (iconId == R.drawable.tos_vestige) {
-                    new DailyStageDialog().show(getActivity());
+                    new DailyStageDialog().show(a);
                 } else if (iconId == R.drawable.gift_stamina) {
-                    new StaminaDialog().show(getActivity());
+                    new StaminaDialog().show(a);
                 } else if (iconId == R.drawable.tos_lost_relic_pass) {
-                    new RelicStageDialog().show(getActivity());
+                    new RelicStageDialog().show(a);
                 } else if (iconId == R.drawable.tos_story) {
-                    new StoryStageDialog().show(getActivity());
+                    new StoryStageDialog().show(a);
                 } else if (iconId == R.drawable.tos_void_realm) {
-                    new RealmStageDialog().show(getActivity());
+                    new RealmStageDialog().show(a);
                 } else if (iconId == R.drawable.card_0096) {
-                    new FarmPoolDialog().show(getActivity());
+                    new FarmPoolDialog().show(a);
                 //} else if (iconId == R.drawable.rune_water) {
                 } else if (iconId == R.drawable.s_i047) {
-                    new RunestoneEditorDialog().show(getActivity());
+                    new RunestoneEditorDialog().show(a);
                 } else if (iconId == R.drawable.card_1089) {
-                    new FreeMoveSampleDialog().show(getActivity());
+                    new FreeMoveSampleDialog().show(a);
                 } else if (iconId == 0){
                 } else {
                 }

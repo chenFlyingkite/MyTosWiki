@@ -58,8 +58,8 @@
     <string name="random">隨機</string>
 
     <string name="cards_n_card">%d 張</string>
-    <string name="cards_selection_kind">%d / %d 種卡片</string>
-    <string name="cards_selection">%d / %d 張卡片</string>
+    <string name="cards_selection_kind">%1$d / %2$d 種卡片</string>
+    <string name="cards_selection">%1$d / %2$d 張卡片</string>
     <string name="cards_read">%s 張卡片已讀取</string>
     <string name="cards_normId">編號</string>
     <string name="cards_level">等級</string>
@@ -108,8 +108,7 @@
     <string name="cards_race_evolve">進化素材</string>
     <string name="cards_race_level">強化素材</string>
     <string name="cards_turn_runestone">轉化為X符石</string>
-    <string name="cards_turn_into">轉化為</string>
-    <string name="cards_turn_into2">轉化</string>
+    <string name="cards_turn_into">(轉化|添加)(|為)</string>
     <string name="cards_skillSameActive">相同主動技能卡片</string>
     <string name="cards_skillSameActive_n">相同主動技能卡片 (共 %s 張)</string>
     <string name="cards_series_n">同系列卡片 (共 %s 張)</string>
@@ -153,7 +152,7 @@
     <string name="cards_runestone_light_enchanted">光強化符石</string>
     <string name="cards_runestone_darks_enchanted">暗強化符石</string>
     <string name="cards_runestone_heart_enchanted">心強化符石</string>
-    <string name="cards_Cassandra">#1046 卡珊德拉(水巫) (水人7星)\n3.5x回復力+攻擊力\n(露西比較好用 #1955)</string>
+    <string name="cards_Cassandra">#1046 卡珊德拉(水巫) (水人7星)\n3.5x回復力+攻擊力\n(更好的有, 露西 #1955, 瑪奇 #2281)</string>
     <string name="cards_Jade">#2221 翡翠 (木妖6星)\n妖精 = 3x回復力+攻擊力</string>
     <string name="cards_Pandora">#2380 潘朵拉 (暗妖7星)\n妖精 = 5x回復力+攻擊力</string>
     <string name="cards_no">無</string>
@@ -613,7 +612,7 @@
     <string name="cards_special_skill_enough_detail">(4 星或以下練技卡 >= 5 張)</string>
 
     <!-- Crafts & Armed crafts -->
-    <string name="craft_selection">%d / %d 個龍刻</string>
+    <string name="craft_selection">%1$d / %2$d 個龍刻</string>
     <string name="craft_arm_craft">武裝龍刻</string>
     <string name="craft_mode">模式</string>
     <string name="craft_charge">增加能量條件</string>
@@ -706,6 +705,10 @@
     <string name="craft_one_deal_damage">對單一敵人造成 X 點 Y 屬性傷害</string>
     <string name="craft_delay_cd">延遲 敵人行動 X 回合</string>
     <string name="craft_single_to_full">單體攻擊轉化為全體攻擊</string>
+    <!--
+    敵方技能及常用詞彙
+    https://towerofsaviors.com/2021/07/30/40673/
+    -->
     <string-array name="craft_attack_increase_keys">
         <item>攻擊力提升</item>
     </string-array>
@@ -787,8 +790,8 @@
     <string name="skill_eat">吃技</string>
     <string name="skill_eat50">吃50</string>
     <string name="skill_eat600">吃600</string>
-    <string name="skill_eat_card">600 = %d 張, 200 = %d 張, 餘 %d</string>
-    <string name="skill_eat_card_2">600 = %d 張, 200 = %d 張, 50 = %d 張, 餘 %d</string>
+    <string name="skill_eat_card">600 = %1$d 張, 200 = %2$d 張, 餘 %3$d</string>
+    <string name="skill_eat_card_2">600 = %1$d 張, 200 = %2$d 張, 50 = %3$d 張, 餘 %4$d</string>
     <string name="skill_eat_title">吃技計算機</string>
     <string name="fromRound">從總回合</string>
     <string name="toRound">到總回合</string>
@@ -797,7 +800,7 @@
     <string name="needRound">需要回合</string>
     <string name="skill_needRnd">需要回合數</string>
     <string name="skill_sumRnd">累積回合數</string>
-    <string name="skill_share_eat_format">從技 %s, %s%% (累積經驗 %s) &#61;&#62; 到技 %s (累積經驗 %s)\n需要 %s</string>
+    <string name="skill_share_eat_format">從技 %1$s, %2$s%% (累積經驗 %3$s) &#61;&#62; 到技 %4$s (累積經驗 %5$s)\n需要 %6$s</string>
 
     <string name="monster_eat_form1">經驗收益 = 貢獻經驗 - 飼料經驗</string>
     <string name="monster_eat_detail">如何堆肥最有效益? 建議堆肥的卡片\n等級不超過   肥料上限 Lv，\n愈接近   肥料最佳 Lv   愈好。</string>
@@ -880,7 +883,7 @@
     <string name="card_preview">預覽卡片</string>
     <string name="card_expect">期望值\n期望機率</string>
     <string name="card_observe">樣本值\n樣本機率</string>
-    <string name="card_n_draw">總共 %d 抽，需 %d 個魔法石。</string>
+    <string name="card_n_draw">總共 %1$d 抽，需 %2$d 個魔法石。</string>
     <string name="card_expect_value">期望值</string>
     <string name="card_observe_value">樣本值</string>
     <string name="card_computer_draw">電腦代抽</string>
@@ -936,7 +939,7 @@
     <string name="stamina_source">現有體力</string>
     <string name="stamina_target">目標體力</string>
     <string name="stamina_rule">每8分鐘回復體力1點</string>
-    <string name="stamina_desc">現有體力 %s (%s)\n目標體力 %s (%s)</string>
+    <string name="stamina_desc">現有體力 %1$s (%2$s)\n目標體力 %3$s (%4$s)</string>
 
     <string name="lost_relic_pass_title">遺跡特許</string>
     <string name="story_stage">旅人的記憶</string>
@@ -1050,7 +1053,7 @@ https://checkup.tosgame.com\n
 隊長副隊長 : 星靈魔導士 ‧ 露西 (#1955)
 隊員 : 傑拉爾(#1963), 艾爾莎(#1958), 梅比斯(#1971), 酷拉皮卡(#1764)</string>
 
-    <string name="texts_t">消除三個為100%，每一個符石差距 25%，強化石 15%，種族石 30%。
+    <string name="texts_t">消除三個為100%%，每一個符石差距 25%%，強化石 15%%，種族石 30%%。
 單次消除了 N 個符石，其中包含強化 S 個，種族符石 R 個。 (N >= S >= 0, N >= R >= 0)
 若 N >= 2 且卡片攻擊力 = A, 則當次攻擊 = A * (0.25 + 0.25 * N + 0.15 * S + 0.3 * R)</string>
     <string name="asd">Combo 總數 = 1 + N => 倍率 = 1 + 0.25 N</string>

@@ -12,26 +12,12 @@
         android:layout_height="wrap_content"/>
 
     <LinearLayout
-        android:id="@+id/mainBottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_alignParentBottom="true">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mainStages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/cardPagers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:background="@color/grey3"
-        android:layout_below="@id/mainTools">
+        android:layout_below="@id/mainTools"
+        android:background="@color/grey3">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -69,7 +55,6 @@
     <FrameLayout
         android:id="@+id/cardFragment"
         android:layout_below="@id/cardPagers"
-        android:layout_above="@id/mainBottom"
         android:background="@color/grey3a"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
