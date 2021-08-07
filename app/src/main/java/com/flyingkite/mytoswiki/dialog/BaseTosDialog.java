@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ShareUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
@@ -26,6 +27,7 @@ import androidx.annotation.Nullable;
 
 public class BaseTosDialog extends DialogFragment implements
         PageUtil, TosPageUtil, ShareUtil,
+        BackPage,
         DialogInterface.OnKeyListener,
         DialogInterface.OnShowListener {
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
@@ -151,15 +153,6 @@ public class BaseTosDialog extends DialogFragment implements
     public void show(Activity activity) {
         log("show %s", sig());
         show(activity.getFragmentManager(), sig());
-    }
-
-    /**
-     *
-     * @return true if this event was consumed.
-     * @see Dialog#dispatchKeyEvent(KeyEvent)
-     */
-    public boolean onBackPressed() {
-        return false;
     }
 
     @Override

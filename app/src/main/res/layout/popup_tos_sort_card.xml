@@ -959,7 +959,8 @@
                     android:textColorHint="@color/grey8"
                     android:textIsSelectable="true"
                     android:inputType="text"
-                    android:hint="@string/enterText"/>
+                    android:hint="@string/enterText"
+                    android:autofillHints="" />
 
                 <ImageView
                     android:id="@+id/sortSearchClear"

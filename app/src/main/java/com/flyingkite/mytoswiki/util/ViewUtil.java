@@ -260,7 +260,7 @@ public interface ViewUtil {
         if (result == null) {
             result = new ArrayList<>();
         }
-        int n = vg.getChildCount();
+        int n = vg == null ? 0 : vg.getChildCount();
 
         List<String> all = new ArrayList<>();
         boolean added = false;

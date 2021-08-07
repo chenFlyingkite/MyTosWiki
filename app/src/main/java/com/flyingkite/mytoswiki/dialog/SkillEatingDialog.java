@@ -64,6 +64,8 @@ public class SkillEatingDialog extends BaseTosDialog {
             // LV 11 ~ 15, diff = 3000
             , 11260, 14260, 17260, 20260, 23260
     };
+    // Skill eat wrong :
+    // #1526 ~ #1535, #1592 ~ #1596 英靈地精，女孩，黑鐵學徒
 
     private List<String> tableData = new ArrayList<>();
 

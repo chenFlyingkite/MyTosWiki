@@ -101,4 +101,19 @@
         app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
         app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
 
+    <RelativeLayout
+        android:id="@+id/tosFliterBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+        <include
+            android:id="@+id/tosMenuSel"
+            android:layout_marginTop="@dimen/t50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/popup_tos_sort_card"/>
+
+    </RelativeLayout>
+
 </RelativeLayout>

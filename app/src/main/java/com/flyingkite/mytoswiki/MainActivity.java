@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.data.WebPin;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
-import com.flyingkite.mytoswiki.dialog.BaseTosDialog;
 import com.flyingkite.mytoswiki.dialog.CardSealDialog;
 import com.flyingkite.mytoswiki.dialog.CraftDialog;
 import com.flyingkite.mytoswiki.dialog.DailyStageDialog;
@@ -37,6 +36,7 @@ import com.flyingkite.mytoswiki.dialog.UltimateStageDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
+import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.util.PGAdapter;
 import com.flyingkite.util.TaskMonitor;
@@ -216,14 +216,18 @@ public class MainActivity extends BaseActivity implements
 
     private boolean onBackCardPager() {
         int page = cardPager.getCurrentItem();
-        if (page > 0) {
-            Fragment f = findFragmentByTag(homePagerTags.get(page));
-            if (f instanceof BaseTosDialog) {
-                BaseTosDialog b = (BaseTosDialog) f;
-                if (b.onBackPressed()) {
-                    return true;
-                }
+        Fragment f = findFragmentByTag(homePagerTags.get(page));
+        // dismiss shown dialogs of WebPage
+        // dismiss the sort filter of main
+        if (f instanceof BackPage) {
+            BackPage p = (BackPage) f;
+            if (p.onBackPressed()) {
+                return true;
             }
+        }
+
+        // back to page of main
+        if (page > 0) {
             cardPager.setCurrentItem(0);
             return true;
         }

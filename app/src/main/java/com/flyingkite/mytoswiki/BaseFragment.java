@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 
 import java.util.concurrent.ExecutorService;
@@ -18,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 
-public class BaseFragment extends Fragment implements PageUtil {
+public class BaseFragment extends Fragment implements PageUtil, BackPage {
     protected static final ExecutorService sSingle = new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 
     @Override
@@ -71,6 +72,13 @@ public class BaseFragment extends Fragment implements PageUtil {
     public void onDestroy() {
         super.onDestroy();
         LogV("onDestroy()");
+    }
+
+    /**
+     * @return true if this event was consumed
+     */
+    public boolean onBackPressed() {
+        return false;
     }
 
     @LayoutRes

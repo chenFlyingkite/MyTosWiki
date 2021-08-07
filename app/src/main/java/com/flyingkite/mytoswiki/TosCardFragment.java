@@ -71,6 +71,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     // Popup Menus
     private View menuEntry;
     private PopupWindow sortWindow;
+    private View filterArea;
     // Popup Menu tool bar
     private View sortReset;
     // 屬性 種族 星
@@ -199,7 +200,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initCardLibrary();
         initSortMenu();
         initToolIcons();
-        resetMenu();
+        resetMenu(); // fixme, popup window cannot type edittext in z3
 
         new LoadDataAsyncTask().executeOnExecutor(sSingle);
 
@@ -372,8 +373,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             }
         });
         cardLib.setViewAdapter(a);
-        updateHide();
-        applySelection();
+        updateHide(); // fixme
+        applySelection(); // fixme
+
         //testAllCardDialog();
     }
 
@@ -403,8 +405,58 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         });
     }
 
+    private void makeMenu(View menu) {
+        initShareImage(menu);
+        initSortReset(menu);
+        initSortByAttribute(menu);
+        initSortByRace(menu);
+        initSortByRaceRuneStones(menu);
+        initSortByFormula(menu);
+        initSortByTurnRuneStones(menu);
+        initSortByStar(menu);
+        initSortByCommon(menu);
+        initSortBySpecial(menu);
+        initSortByHide(menu);
+        initDisplay(menu);
+        initSortByImprove(menu);
+        initSortBySearch(menu);
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        if (filterArea.getVisibility() == View.VISIBLE) {
+            filterArea.performClick();
+            return true;
+        }
+        return super.onBackPressed();
+    }
+
     // init sort menus and put onClickListeners --------
     private void initSortMenu() {
+        View pop = findViewById(R.id.tosFliterBg);
+        pop.setOnClickListener((v) -> {
+            pop.setVisibility(View.INVISIBLE);
+        });
+        // fail... and cause much crash
+        menuEntry.setOnClickListener((v) -> {
+            pop.setVisibility(View.VISIBLE);
+//            new DialogManager.GenericViewBuilder(getActivity(), R.layout.popup_tos_sort_card, new DialogManager.GenericViewBuilder.InflateListener() {
+//                @Override
+//                public void onFinishInflate(View view, AlertDialog dialog) {
+//                    makeMenu(view);
+//                    logSelectCard();
+//                }
+//            }).buildAndShow();
+//            logSelectCard();
+        });
+        filterArea = pop;
+        View menu = findViewById(R.id.tosMenuSel);
+        makeMenu(menu);
+
+        //new DialogManager.GenericViewBuilder(owner.getActivity(), R.layout.dialog_text_editor, this::onFinishInflate).buildAndShow();
+    }
+
+    private void initSortMenu2() {
         // Create MenuWindow
         Pair<View, PopupWindow> pair = createPopupWindow(R.layout.popup_tos_sort_card, (ViewGroup) getView());
         sortWindow = pair.second;
@@ -592,6 +644,11 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         for (View v : vs) {
             v.setOnClickListener(this::clickSearch);
         }
+
+        searchText.setOnFocusChangeListener((v, hasFocus) -> {
+            logE("focus = %s, v = %s", hasFocus, v);
+            showKeyBoard(hasFocus, v);
+        });
     }
     // --------
 
