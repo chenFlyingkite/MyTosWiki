@@ -794,8 +794,10 @@
     <string name="skill_eat">吃技</string>
     <string name="skill_eat50">吃50</string>
     <string name="skill_eat600">吃600</string>
-    <string name="skill_eat_card">600 = %1$d 張, 200 = %2$d 張, 餘 %3$d</string>
-    <string name="skill_eat_card_2">600 = %1$d 張, 200 = %2$d 張, 50 = %3$d 張, 餘 %4$d</string>
+    <string name="skill_eat1000">吃1000</string>
+    <string name="skill_eat3000">吃3000</string>
+    <string name="skill_eat_card_each">%1$d = %2$d 張,</string>
+    <string name="skill_eat_card_remain">餘 %1$d</string>
     <string name="skill_eat_title">吃技計算機</string>
     <string name="fromRound">從總回合</string>
     <string name="toRound">到總回合</string>
@@ -843,42 +845,12 @@
     <string name="help_title">神魔數學家 功能小提示</string>
     <string name="help_open_web">開啟網頁</string>
     <string name="help_save_image">另存圖片</string>
-    <string name="help_card_long_press">長按顯示卡片</string>
+    <string name="help_card_long_press">點擊、長按顯示卡片、右下角文字為十分位 (x/10)</string>
 
 
     <string name="skillLv_title">詳細吃技方式</string>
     <string name="skillLv_concept">吃技概念</string>
-    <string name="skillLv_header">常用吃技方式</string>
-    <string name="skillLv_eat600to10">★Lv1 + 2200回合 (吃11雛鳥 或 2雛鳥+3x技600)\n + 60回合(出場) + 5x技600(吃5隻升技一等)</string>
-    <string name="skillLv_concept_detail">★一次吃5隻技能相同的卡片，至少提升技能1等級。
-\n★技5 = 技1 + 1 x 人面雛鳥 (#0617)\n★技7 = 技1 + 5 x 人面雛鳥 (#0617)\n★吃 人面大鳥(#0292) 提升技能1等級\n★吃 技1 (餘回合 0) => 視為增加 10 回合，非 0 回合</string>
-    <string name="skillLv_sample_title">吃技範例</string>
-    <string name="skillLv_gemini_title">雙子座 (#0359) 練滿技到15，需要 3張 技10的 邪魔史萊姆 (#0333)。</string>
-    <string name="skillLv_gemini_01">★1 練一隻 小史萊姆 [暗史萊姆 #104] 從 技1 變成 技5，可吃小魔女 [小魔女莉莉絲 #0094] 或小史萊姆</string>
-    <string name="skillLv_gemini_02">★2 進化成 中史萊姆 [幽靈史萊姆 (#105)] 技5</string>
-    <string name="skillLv_gemini_03">★3 重複步驟 1 &amp; 2 直到練成 6隻 [技5 中史萊姆]</string>
-    <string name="skillLv_gemini_04">★4 練成 [技8 中史萊姆] (技8 = 技5 + 5 x 技5)</string>
-    <string name="skillLv_gemini_05">★5 連續吃 5隻 [技1 中史萊姆] 到技10 (技9 or 技10 = 技8 + 5 x 技1)</string>
-    <string name="skillLv_gemini_06">★6 進化 [技10 中史萊姆] 到 大史萊姆 [技10 邪魔史萊姆 (#0333)]</string>
-    <string name="skillLv_gemini_07">★7 重複步驟 3, 4, 5 &amp; 6 直到練成 3隻 [技10 大史萊姆]</string>
-    <string name="skillLv_gemini_08">★8 雙子座 吃 3隻 [技10 大史萊姆] 直接滿技</string>
-    <!-- athena? -->
-    <string name="skillLv_chessia_title">切西亞 (#1238) 練滿技到10，需要 1張 技10的 赤焰蜥蜴戰士 (#0079)。</string>
-    <string name="skillLv_chessia_01">★1~★4 練一隻 [技5 赤蜥蜴戰士 (#0078)]，可用小地精、小狼人吃技到技5</string>
-    <string name="skillLv_chessia_02">★5 進化成 中蜥蜴 [技5 赤焰蜥蜴戰士 (#0079)]</string>
-    <string name="skillLv_chessia_03">★6 連續吃 5隻 [技1 中蜥蜴] 直到練成 1隻 [技10 中蜥蜴]</string>
-    <string name="skillLv_chessia_04">★7 切西亞 吃 1隻 [技10 中蜥蜴] 直接滿技</string>
-    <string name="skillLv_azazel_title">阿撒茲勒 (#1101) 練滿技到12，需要 2張 技10的 寒霜龍 (#1112)。(切西亞練技方式 x 2)</string>
-    <string name="skillLv_azazel_01">★1~★4 練一隻 [技5 中史萊姆 (#0097)]</string>
-    <string name="skillLv_azazel_02">★5 [技1 寒霜幼龍 (#1111)] 吃 [技5 中史萊姆] 變成 技5</string>
-    <string name="skillLv_azazel_03">★6 連續吃 5隻 [技1 中史萊姆] 直到練成 1隻 [技10 寒霜幼龍]</string>
-    <string name="skillLv_azazel_04">★7 [技10 寒霜幼龍] 進化成 [技10 寒霜龍]</string>
-    <string name="skillLv_azazel_05">★8 重複步驟 5, 6 &amp; 7 到練成 2張 [技10 寒霜龍]</string>
-    <string name="skillLv_azazel_06">★9 阿撒茲勒 吃 2隻 [技10 寒霜龍] 直接滿技</string>
-    <string name="skillLv_special_x1_title">僅用 14張 卡片吃到技6的方式 (舊版，請轉用 11張卡片吃到技6)</string>
-    <string name="skillLv_special_x1_01">★1 技4 (餘回合0) = 技1 + 5 x 技1\n★2 技4 (餘回合30) = 技4 (餘回合0) + 3 x 技1\n★3 技6 = 技4 (餘回合30) + 5 x 技1</string>
-    <string name="skillLv_special_01_title">僅用 11張 卡片吃到技6的方式</string>
-    <string name="skillLv_special_01_01">★1 技1 = 技1 + 10 x 技1</string>
+    <string name="skillLv_concept_detail">★人面大鳥(#0292) = 3000回合，相同編號卡片 = 1000回合，系列吃技卡 = 600回合，人面雛鳥 (#0617) = 200回合。\n★關卡 4-1 可以很有效率的打地精、蜥蜴、等等的卡片，再到  商店 > 行商要塞 > 強化素材類  購買 異彩史萊姆(#2400)\n★若是用同張卡吃滿等：\n技 10 = 9張 + 260\n技12 = 15張 + 260\n技15 = 24張 + 260</string>
 
     <string name="card_seal_title">封印卡抽卡模擬器</string>
     <string name="card_seal_pure_intent">本模擬器僅使用隨機亂數和神魔公布之抽卡機率進行模擬。抽卡結果並不影響召喚師的神魔卡片。</string>
@@ -926,6 +898,7 @@
     <string name="card_series_kimetsu_no_yaiba">鬼滅之刃</string>
     <string name="card_series_lost_saga">丹心魂夢</string>
     <string name="card_series_kamen_rider">假面騎士</string>
+    <string name="card_series_summoner_candidate">召喚師候選者</string>
 
 
     <string name="stones_same_count">符石數目相同</string>

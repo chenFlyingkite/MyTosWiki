@@ -35,7 +35,7 @@ public class StaminaDialog extends BaseTosDialog {
     }
 
     private static final SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.US);
-    private static final int period = 8;
+    private static final int period = 8; // period minutes per 1 stamina
     // Data
     private Stamina sdData = new Stamina();
     private final Date dateNow = new Date();
@@ -123,7 +123,7 @@ public class StaminaDialog extends BaseTosDialog {
         List<String> data = new ArrayList<>();
         int head = sourceBar.getValue();
         int tail = targetBar.getValue();
-        int size = Math.max(50, (tail - head) * period / 30 + period / 2 + 1);
+        int size = Math.max(70, (tail - head) * period / 30 + period / 2 + 1);
         for (int i = 0; i < size; i++) {
             data.add("" + (head + 30 * i / period));
         }
@@ -192,6 +192,7 @@ public class StaminaDialog extends BaseTosDialog {
     private void updateFromData() {
         sourceBar.setValue(sdData.sourceIndex);
         targetBar.setValue(sdData.targetIndex);
+        computeStamina();
     }
 
     @Override

@@ -15,9 +15,12 @@
     <color name="skyBlue">#00A2FF</color>
     <color name="skyBlue2">#2000A2FF</color>
     <color name="skyBlue4">#4000A2FF</color>
-    <color name="green">#F1A5</color>
-    <color name="green4">#41A5</color>
-    <color name="green8">#81A5</color>
+    <color name="green">#FF198964</color>
+    <color name="green4">#44198964</color>
+    <color name="green8">#88198964</color>
+    <color name="green_">#F1A5</color>
+    <color name="green_4">#41A5</color>
+    <color name="green_8">#81A5</color>
     <color name="yellow">#FFD4</color>
     <color name="yellow4">#4FD4</color>
     <color name="yellow8">#8FD4</color>

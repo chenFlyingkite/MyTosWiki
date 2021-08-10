@@ -358,7 +358,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/t30dp</item>
         <item name="android:textSize">@dimen/t18dp</item>
-        <item name="android:textColor">#000</item>
+        <item name="android:textColor">#fff</item>
         <item name="android:gravity">right|center_vertical</item>
     </style>
     <style name="sed_round_text.title">
@@ -549,6 +549,13 @@
     <style name="desktopStone">
         <item name="android:layout_width">@dimen/t300dp</item>
         <item name="android:layout_height">@dimen/t250dp</item>
+    </style>
+
+    <style name="sed_check">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/t15dp</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
 </resources>

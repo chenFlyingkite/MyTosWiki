@@ -6,17 +6,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     style="@style/cardRow.greenV"
-    android:gravity="center">
+    android:gravity="center"
+    tools:background="@color/grey3">
 
     <TextView
         android:id="@+id/sealNumber"
         style="@style/cardText.header.1"
-        android:layout_width="@dimen/t25dp"
-        android:text="#1"/>
+        tools:text="#12"/>
 
     <TextView
         android:id="@+id/sealExpect"
-        style="@style/cardText.header.2"/>
+        style="@style/cardText.header.2"
+        android:layout_width="@dimen/t80dp"
+        tools:text="1.2\n3.45 %"/>
 
     <ImageView
         android:id="@+id/sealActor"
@@ -24,7 +26,9 @@
 
     <TextView
         android:id="@+id/sealObserve"
-        style="@style/cardText.header.2"/>
+        style="@style/cardText.header.2"
+        android:layout_width="@dimen/t80dp"
+        tools:text="1\n100.00 %"/>
 
     <ImageView
         android:id="@+id/sealMinus"

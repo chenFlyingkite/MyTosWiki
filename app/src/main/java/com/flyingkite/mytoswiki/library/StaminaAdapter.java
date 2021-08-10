@@ -1,8 +1,6 @@
 package com.flyingkite.mytoswiki.library;
 
 import android.graphics.Color;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -13,6 +11,9 @@ import com.flyingkite.mytoswiki.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class StaminaAdapter extends RVAdapter<String, StaminaAdapter.StaminaVH, StaminaAdapter.ItemListener> {
     public interface ItemListener extends RVAdapter.ItemListener<String, StaminaVH> {
@@ -61,13 +62,12 @@ public class StaminaAdapter extends RVAdapter<String, StaminaAdapter.StaminaVH, 
             vh.stamina.setText(R.string.stamina);
             vh.date.setText(R.string.date);
             vh.time.setText("\uD83C\uDF1E \uD83C\uDF1B"); // Sun, Moon
-            vh.itemView.setBackgroundColor(Color.WHITE);
         } else {
             Date d = new Date(startTime + periodTime * p);
 
             vh.stamina.setText(s);
             // Set text color
-            int tColor = Color.WHITE;
+            int tColor = Color.TRANSPARENT;
             if (p == hlIndex) { // Target stamina
                 tColor = App.res().getColor(R.color.green);
             } else if (position == 1) { // 1st one

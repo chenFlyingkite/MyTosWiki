@@ -50,6 +50,8 @@ public class SkillEatingDialog extends BaseTosDialog {
     private TextView fromRnd;
     private TextView toRnd;
     private TextView needRnd;
+    private CheckBox use3000;
+    private CheckBox use1000;
     private CheckBox use600;
     private CheckBox use50;
     private TextView eatCard;
@@ -149,15 +151,12 @@ public class SkillEatingDialog extends BaseTosDialog {
                 String s2 = tableData.get(3 * i + 2);
                 s.append(_fmt("%7s | %7s | %7s\n", s0, s1, s2));
             }
-            Say.Log("s = %s", s);
+            logE("s = %s", s);
             shareString(s.toString());
             logShare("table");
         });
 
         dismissWhenClick(R.id.selConcept, R.id.sed_roundNeed);
-        findViewById(R.id.skillSample).setOnClickListener((v) -> {
-            new SkillEatSampleDialog().show(getActivity());
-        });
     }
 
     private void initCard600() {
@@ -173,8 +172,11 @@ public class SkillEatingDialog extends BaseTosDialog {
                 return R.layout.view_small_image;
             }
         };
-        List<String> c600 = Arrays.asList("1709", "1735", "1777", "1801", "1897", "1972", "2077", "2078", "2128", "2170", "2201", "2202", "2328"
-                , "2427", "2428", "2429", "2462", "2471", "2472", "2509", "2535", "2633"
+
+        // 1777 (斯芬克斯) & 2400(異彩史萊姆) + 600
+        List<String> c600 = Arrays.asList("0292", "1709", "1735", "1777", "1801", "1897", "1972", "2077", "2078", "2128", "2170", "2201", "2202", "2328"
+                , "2400", "2427", "2428", "2429", "2462", "2471", "2472", "2509", "2535", "2583", "2633", "2653", "2681", "2694", "2718"
+                , "7027", "7034", "10046"
         );
         a.setDataList(getCardsByIdNorms(c600));
         card600.setViewAdapter(a);
@@ -209,15 +211,14 @@ public class SkillEatingDialog extends BaseTosDialog {
         fromRnd = findViewById(R.id.skillFromRound);
         toRnd = findViewById(R.id.skillToRound);
         needRnd = findViewById(R.id.skillNeedRound);
+        use3000 = findViewById(R.id.skillUse3000);
+        use1000 = findViewById(R.id.skillUse1000);
         use600 = findViewById(R.id.skillUse600);
         use50 = findViewById(R.id.skillUse50);
         eatCard = findViewById(R.id.skillEatCard);
-        use50.setOnClickListener((v1) -> {
+        setOnClickListeners((v1) -> {
             computeEatCard();
-        });
-        use600.setOnClickListener((v1) -> {
-            computeEatCard();
-        });
+        }, R.id.skillUse3000, R.id.skillUse1000, R.id.skillUse600, R.id.skillUse50);
 
         toRndUI = makeBar(R.id.skillTo, R.id.sed_to, R.id.sed_to_plus, R.id.sed_to_minus, 2, 15);
         pgsRndUI = makeBar(R.id.skillPercent, R.id.sed_percent, R.id.sed_pgs_plus, R.id.sed_pgs_minus, 0, 99);
@@ -256,37 +257,6 @@ public class SkillEatingDialog extends BaseTosDialog {
         return r;
     }
 
-//    private Spinner makeSpin(@IdRes int spinnerID, int from, int to) {
-//        int downId = android.R.layout.simple_spinner_dropdown_item;
-//        int layoutId = R.layout.view_spinner_item;
-//
-//        // Set up adapter
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), layoutId);
-//        adapter.setDropDownViewResource(downId);
-//        for (int i = from; i <= to; i++) {
-//            adapter.add("" + i);
-//        }
-//
-//        // Set up spinner
-//        Spinner spinner = findViewById(spinnerID);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(adapterSelect);
-//
-//        return spinner;
-//    }
-//
-//    private AdapterView.OnItemSelectedListener adapterSelect = new AdapterView.OnItemSelectedListener() {
-//        @Override
-//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//            computeEatCard();
-//        }
-//
-//        @Override
-//        public void onNothingSelected(AdapterView<?> parent) {
-//            computeEatCard();
-//        }
-//    };
-
     @SuppressLint("SetTextI18n")
     private void computeEatCard() {
         int lvFrom = fromRndUI.getValue();
@@ -302,29 +272,63 @@ public class SkillEatingDialog extends BaseTosDialog {
         needRnd.setText("" + need);
 
         // Evaluate card count to eat
-        int q1, q2;
-        int r = need % 200;
-        if (use600.isChecked()) {
-            q1 = need / 600;
-            q2 = (need % 600) / 200;
-        } else {
-            q1 = 0;
-            q2 = need / 200;
+
+        int[] each = getEach();
+        int[] result = evalSkills(need, each);
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < each.length; i++) {
+            int k = each[i];
+            int v = result[i];
+            if (s.length() > 0) {
+                s.append(" ");
+            }
+            if (i == each.length - 1) { // remain 1
+                s.append(getString(R.string.skill_eat_card_remain, v));
+            } else if (k > 0) {
+                s.append(getString(R.string.skill_eat_card_each, k, v));
+            }
         }
-        if (use50.isChecked()) {
-            int q3 = r / 50;
-            r = need % 50;
-            eatCard.setText(getString(R.string.skill_eat_card_2, q1, q2, q3, r));
-        } else {
-            eatCard.setText(getString(R.string.skill_eat_card, q1, q2, r));
+        eatCard.setText(s.toString());
+    }
+
+    private int[] getEach() {
+        return new int[] {
+                3000 * (use3000.isChecked() ? 1 : -1),
+                1000 * (use1000.isChecked() ? 1 : -1),
+                600  * (use600.isChecked() ? 1 : -1),
+                200,
+                50   * (use50.isChecked() ? 1 : -1),
+                1
+        };
+    }
+
+    // evaluate the need into each one
+    // s_i = (each[i] <= 0) ? 0 : each[i];
+    // so need = s_0 * ans[0] + ... + s_k * ans[k] + s_n * ans[n]
+    private int[] evalSkills(int need, int[] each) {
+        int n = each.length;
+        int[] ans = new int[n];
+        int now = need;
+        for (int i = 0; i < n; i++) {
+            int si = each[i]; // card each of one
+            if (si > 0) {
+                ans[i] = now / si;
+                now = now % si;
+            } else {
+                ans[i] = 0;
+            }
         }
+        return ans;
     }
 
     private void updateFromData() {
         fromRndUI.setValue(skEat.fromLevel);
         pgsRndUI.setValue(skEat.progress);
         toRndUI.setValue(skEat.toLevel);
+        use3000.setChecked(skEat.use3000);
+        use1000.setChecked(skEat.use1000);
         use600.setChecked(skEat.use600);
+        use50.setChecked(skEat.use50);
         computeEatCard();
     }
 
@@ -339,7 +343,10 @@ public class SkillEatingDialog extends BaseTosDialog {
         skEat.fromLevel = fromRndUI.getValue();
         skEat.progress = pgsRndUI.getValue();
         skEat.toLevel = toRndUI.getValue();
+        skEat.use3000 = use3000.isChecked();
+        skEat.use1000 = use1000.isChecked();
         skEat.use600 = use600.isChecked();
+        skEat.use50 = use50.isChecked();
         sSingle.submit(() -> {
             GsonUtil.writeFile(getSkillEatFile(), new Gson().toJson(skEat));
         });

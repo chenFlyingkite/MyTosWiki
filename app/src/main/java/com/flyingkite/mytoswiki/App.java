@@ -61,7 +61,6 @@ public class App extends MultiDexApplication {
                     .build());
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
                     .detectActivityLeaks()
-                    .detectFileUriExposure()
                     .detectLeakedRegistrationObjects()
                     .penaltyLog()
                     .build());

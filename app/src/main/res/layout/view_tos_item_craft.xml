@@ -11,8 +11,8 @@
         android:id="@+id/tiImg"
         android:padding="@dimen/t2dp"
         app:layout_widthPercent="100%"
-        android:src="@drawable/unknown_card"
-        app:layout_aspectRatio="100%"/>
+        app:layout_aspectRatio="100%"
+        android:src="@drawable/unknown_card"/>
 
     <TextView
         android:id="@+id/tiText"
@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/t14dp"
         android:gravity="center"
+        android:textColor="#fff"
         android:layout_below="@id/tiImg"/>
 
     <TextView

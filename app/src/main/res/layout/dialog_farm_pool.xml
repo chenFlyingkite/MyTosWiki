@@ -70,6 +70,10 @@
                     android:text="★公會任務貢獻卡片"
                     android:textColor="@color/skyBlue"/>
                 <TextView
+                    style="@style/whiteText"
+                    android:text="打 4-1 關卡，可以直接給地精等等的肥料"/>
+                <!--
+                <TextView
                     style="@style/whiteText.t2"
                     android:text="@string/monster_eat_guild_task_good"/>
                 <TextView
@@ -87,6 +91,8 @@
                 <TextView
                     style="@style/whiteText.t2"
                     android:text="@string/monster_eat_guild_task_6k"/>
+                -->
+
                 <View
                     style="@style/divider_horizontal"
                     android:background="@color/green"/>

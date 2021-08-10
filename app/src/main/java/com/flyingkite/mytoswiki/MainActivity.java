@@ -25,7 +25,6 @@ import com.flyingkite.mytoswiki.dialog.MonsterLevelDialog;
 import com.flyingkite.mytoswiki.dialog.RealmStageDialog;
 import com.flyingkite.mytoswiki.dialog.RelicStageDialog;
 import com.flyingkite.mytoswiki.dialog.RunestoneEditorDialog;
-import com.flyingkite.mytoswiki.dialog.SkillEatSampleDialog;
 import com.flyingkite.mytoswiki.dialog.SkillEatingDialog;
 import com.flyingkite.mytoswiki.dialog.StageMemoDialog;
 import com.flyingkite.mytoswiki.dialog.StaminaDialog;
@@ -69,7 +68,7 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.tos_void_realm
             , R.drawable.tos_story
             , R.drawable.tos_vestige
-            , R.drawable.card_1777
+            //, R.drawable.card_1777
             , R.drawable.card_0096
             , R.drawable.card_1429
             , R.drawable.card_1089
@@ -275,8 +274,6 @@ public class MainActivity extends BaseActivity implements
                     new StageMemoDialog().show(a);
                 } else if (iconId == R.drawable.q1) {
                     new HelpDialog().show(a);
-                } else if (iconId == R.drawable.card_1777) {
-                    new SkillEatSampleDialog().show(a);
                 } else if (iconId == R.drawable.shop_card) {
                     new CardSealDialog().show(a);
                 } else if (iconId == R.drawable.tos_app) {

@@ -205,7 +205,7 @@
                         <!-- Left table -->
                         <LinearLayout
                             android:id="@+id/csdTableContent"
-                            android:layout_width="@dimen/t290dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 

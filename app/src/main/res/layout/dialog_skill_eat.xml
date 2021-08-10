@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/grey3">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,11 +14,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#fff">
+            android:orientation="vertical">
 
             <TextView
-                style="@style/dialog_title"
+                style="@style/dialog_title.white"
                 android:text="@string/skill_eat_title"/>
 
             <RelativeLayout
@@ -51,7 +51,7 @@
                             android:id="@+id/sed_from"
                             style="@style/sed_round_text.title.bold"
                             android:layout_toRightOf="@id/sed_from_title"
-                            tools:text="11"/>
+                            tools:text="11" />
 
                         <LinearLayout
                             android:id="@+id/sed_roundNeed"
@@ -73,14 +73,14 @@
                             <TextView
                                 style="@style/sed_round_text"
                                 android:text="@string/needRound"
-                                android:textColor="#00a"
+                                android:textColor="@color/skyBlue"
                                 android:textStyle="bold"/>
                             <TextView
                                 android:id="@+id/skillNeedRound"
                                 style="@style/sed_round_text.title.bold"
                                 tools:text="43210"
                                 android:layout_width="@dimen/t70dp"
-                                android:textColor="#00a"/>
+                                android:textColor="@color/skyBlue"/>
                         </LinearLayout>
 
                         <SeekBar
@@ -166,8 +166,8 @@
                             android:id="@+id/sed_to"
                             style="@style/sed_round_text.title.bold"
                             android:layout_toRightOf="@id/sed_to_title"
-                            tools:text="12"
-                            android:textColor="#00a"/>
+                            android:textColor="@color/skyBlue"
+                            tools:text="12" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -214,32 +214,42 @@
                 android:gravity="center_vertical">
 
                 <CheckBox
-                    android:id="@+id/skillUse600"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/skillUse3000"
+                    style="@style/sed_check"
                     android:paddingRight="@dimen/t10dp"
-                    android:text="@string/skill_eat600"
-                    android:textSize="@dimen/t15dp"/>
+                    android:text="@string/skill_eat3000" />
+
+                <CheckBox
+                    android:id="@+id/skillUse1000"
+                    style="@style/sed_check"
+                    android:paddingRight="@dimen/t10dp"
+                    android:text="@string/skill_eat1000" />
+
+                <CheckBox
+                    android:id="@+id/skillUse600"
+                    style="@style/sed_check"
+                    android:paddingRight="@dimen/t10dp"
+                    android:text="@string/skill_eat600" />
 
                 <CheckBox
                     android:id="@+id/skillUse50"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/sed_check"
                     android:paddingRight="@dimen/t10dp"
-                    android:text="@string/skill_eat50"
-                    android:textSize="@dimen/t15dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/skillCard600"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:text="@string/skill_eat50"/>
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/skillCard600"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/skillEatCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/skill_eat_card"
+                android:text="@string/skill_eat_card_each"
+                android:padding="@dimen/t20dp"
+                android:background="@drawable/bg_rect_skyblue"
                 android:textColor="#080"
                 android:textSize="@dimen/t18dp"
                 android:textStyle="bold"/>
@@ -253,7 +263,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/blackText"
+                    style="@style/whiteText"
                     android:text="@string/share"/>
 
                 <Button
@@ -278,7 +288,8 @@
                 android:id="@+id/skillTable"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/t200dp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:background="#fff"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -311,6 +322,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/t20dp"/>
 
+                <!--
                 <TextView
                     style="@style/common_text.white"
                     android:text="@string/skillLv_header"
@@ -373,6 +385,7 @@
                         android:src="@drawable/ic_list_white_48"/>
 
                 </LinearLayout>
+                -->
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

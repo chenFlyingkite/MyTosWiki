@@ -40,6 +40,7 @@ import com.flyingkite.mytoswiki.data.seal.SaintSeiya;
 import com.flyingkite.mytoswiki.data.seal.SealItem;
 import com.flyingkite.mytoswiki.data.seal.SealSample;
 import com.flyingkite.mytoswiki.data.seal.SengokuSamurai;
+import com.flyingkite.mytoswiki.data.seal.SummonerCandidates;
 import com.flyingkite.mytoswiki.data.seal.TengenToppa;
 import com.flyingkite.mytoswiki.data.seal.TruthSeekers;
 import com.flyingkite.mytoswiki.data.seal.UnearthlyCharm;
@@ -80,7 +81,7 @@ public class CardSealDialog extends BaseTosDialog {
     private static final List<SealItem> sealSeries = new ArrayList<>();
 
     static {
-        sealSeries.clear();
+        sealSeries.add(new SealItem(R.string.card_series_summoner_candidate, new SummonerCandidates()));
         sealSeries.add(new SealItem(R.string.card_series_kamen_rider, new KamenRider()));
         sealSeries.add(new SealItem(R.string.card_series_lost_saga, new LostSaga()));
         sealSeries.add(new SealItem(R.string.card_series_kimetsu_no_yaiba, new KimetsuNoYaiba()));

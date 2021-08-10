@@ -12,6 +12,15 @@ public class SkillEat {
     @SerializedName("toLevel")
     public int toLevel;
 
+    @SerializedName("use3000")
+    public boolean use3000;
+
+    @SerializedName("use1000")
+    public boolean use1000;
+
     @SerializedName("use600")
     public boolean use600;
+
+    @SerializedName("use50")
+    public boolean use50;
 }
