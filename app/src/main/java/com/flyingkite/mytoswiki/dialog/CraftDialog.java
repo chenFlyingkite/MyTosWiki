@@ -1,6 +1,5 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
@@ -13,6 +12,7 @@ import android.widget.TextView;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.MathUtil;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.R;
@@ -28,6 +28,7 @@ import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.util.TaskMonitor;
+import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -43,6 +44,7 @@ import java.util.regex.Pattern;
 
 import androidx.annotation.ArrayRes;
 import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
@@ -121,7 +123,7 @@ public class CraftDialog extends BaseTosDialog {
         craftLibrary = new Library<>(recycler, 5);
         initScrollTools(R.id.craftGoTop, R.id.craftGoBottom, recycler);
 
-        new LoadDataAsyncTask().executeOnExecutor(sSingle);
+        sSingle.submit(getLoadDataTask());
         TosWiki.attendDatabaseTasks(onCraftsReady);
     }
 
@@ -524,11 +526,11 @@ public class CraftDialog extends BaseTosDialog {
         craftSort.hideCraft3xxx = sortHide.findViewById(R.id.sortHideCraft3xxx).isSelected();
         craftSort.displayById = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayNormId;
         sSingle.submit(() -> {
-            GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(craftSort));
+            GsonUtil.writeFile(getTosCraftSortFile(), new Gson().toJson(craftSort));
         });
     }
 
-    private File getTosCardSortFile() {
+    private File getTosCraftSortFile() {
         return ShareHelper.extFilesFile("craftSort.txt");
     }
     // ------
@@ -743,24 +745,20 @@ public class CraftDialog extends BaseTosDialog {
             return mode && attr && race && star;
         }
 
-        // FIXME
-//        @NonNull
-//        @Override
-//        public List<Integer> sort(@NonNull List<Integer> result) {
-//            Comparator<Integer> cmp;
-//            cmp = getCommonComparator();
-//            if (cmp == null) {
-//                //cmp = getCassandraComparator();
-//            }
-//
-//            // Apply the comparator on result
-//            if (cmp != null) {
-//                Collections.sort(result, cmp);
-//            }
-//            return result;
-//        }
+        @NonNull
+        @Override
+        public List<SelectedData> sort(@NonNull List<SelectedData> result) {
+            Comparator<SelectedData> cmp;
+            cmp = getCommonComparator();
 
-        private Comparator<Integer> getCommonComparator() {
+            // Apply the comparator on result
+            if (cmp != null) {
+                Collections.sort(result, cmp);
+            }
+            return result;
+        }
+
+        private Comparator<SelectedData> getCommonComparator() {
             // Create comparator
             int id = sortCommon.getCheckedRadioButtonId();
             if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
@@ -768,8 +766,10 @@ public class CraftDialog extends BaseTosDialog {
             }
             return (o1, o2) -> {
                 boolean dsc = false;
-                BaseCraft c1 = data.get(o1);
-                BaseCraft c2 = data.get(o2);
+                int k1 = o1.index;
+                int k2 = o2.index;
+                BaseCraft c1 = data.get(k1);
+                BaseCraft c2 = data.get(k2);
                 long v1 = -1, v2 = -1;
 
                 if (id == R.id.sortCommonMode) {
@@ -900,23 +900,29 @@ public class CraftDialog extends BaseTosDialog {
     }
     // --------
 
-    private class LoadDataAsyncTask extends AsyncTask<Void, Void, CraftSort> {
-        @Override
-        protected CraftSort doInBackground(Void... voids) {
-            File f = getTosCardSortFile();
-            if (f.exists()) {
-                return GsonUtil.loadFile(getTosCardSortFile(), CraftSort.class);
-            } else {
-                return null;
-            }
-        }
+    private Runnable getLoadDataTask() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                CraftSort data = get();
+                if (getActivity() == null) return;
 
-        @Override
-        protected void onPostExecute(CraftSort data) {
-            craftSort = data != null ? data : new CraftSort();
-            updateHide();
-            applySelection();
-        }
+                ThreadUtil.runOnUiThread(() -> {
+                    craftSort = data != null ? data : new CraftSort();
+                    updateHide();
+                    applySelection();
+                });
+            }
+
+            private CraftSort get() {
+                File f = getTosCraftSortFile();
+                if (f.exists()) {
+                    return GsonUtil.loadFile(getTosCraftSortFile(), CraftSort.class);
+                } else {
+                    return null;
+                }
+            }
+        };
     }
 
     //-- Events

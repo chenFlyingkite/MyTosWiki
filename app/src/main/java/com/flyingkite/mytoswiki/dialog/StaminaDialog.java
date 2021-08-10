@@ -3,14 +3,13 @@ package com.flyingkite.mytoswiki.dialog;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.GsonUtil;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.Stamina;
@@ -95,7 +94,7 @@ public class StaminaDialog extends BaseTosDialog {
     protected void onFinishInflate(View view, Dialog dialog) {
         logImpression();
         initStamina();
-        new LoadDataAsyncTask().executeOnExecutor(sSingle);
+        sSingle.submit(getLoadDataTask());
 
         initShare();
         initTable();
@@ -176,7 +175,7 @@ public class StaminaDialog extends BaseTosDialog {
     private void computeStamina() {
         int source = sourceBar.getValue();
         int target = targetBar.getValue();
-        long dt = (target - source) * period * 60_000;
+        long dt = (target - source) * period * 60_000L;
 
         Date d2 = new Date(dateNow.getTime() + dt);
         staminaShare.setText(getString(R.string.stamina_desc
@@ -215,31 +214,30 @@ public class StaminaDialog extends BaseTosDialog {
         return ShareHelper.extFilesFile("stamina.txt");
     }
 
-    @SuppressLint("StaticFieldLeak")
-    private class LoadDataAsyncTask extends AsyncTask<Void, Void, Stamina> {
-        private final TicTac2 clk = new TicTac2();
-        @Override
-        protected void onPreExecute() {
-            clk.tic();
-        }
+    private Runnable getLoadDataTask() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                Stamina data = get();
+                if (getActivity() == null) return;
 
-        @Override
-        protected Stamina doInBackground(Void... voids) {
-            File f = getStaminaFile();
-            if (f.exists()) {
-                return GsonUtil.loadFile(getStaminaFile(), Stamina.class);
-            } else {
-                return null;
+                ThreadUtil.runOnUiThread(() -> {
+                    sdData = data != null ? data : new Stamina();
+                    updateFromData();
+                });
             }
-        }
 
-        @Override
-        protected void onPostExecute(Stamina data) {
-            clk.tac("sdData loaded");
-            sdData = data != null ? data : new Stamina();
-            updateFromData();
-        }
+            private Stamina get() {
+                File f = getStaminaFile();
+                if (f.exists()) {
+                    return GsonUtil.loadFile(getStaminaFile(), Stamina.class);
+                } else {
+                    return null;
+                }
+            }
+        };
     }
+
 
     //-- Events
     private void logImpression() {

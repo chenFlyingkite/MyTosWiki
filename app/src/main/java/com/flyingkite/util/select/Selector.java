@@ -1,7 +1,5 @@
 package com.flyingkite.util.select;
 
-import android.util.Log;
-
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.ListUtil;
 
@@ -42,14 +40,14 @@ public interface Selector<T> {
     default List<SelectedData> query() {
         TicTac2 t = new TicTac2();
         t.tic();
-        t.tic();
+        //t.tic();
         List<SelectedData> chosen = select();
-        t.tac("1. chosen");
-        Log.e("Sel", "chosen = " + chosen);
-        t.tic();
+        //t.tac("1. chosen");
+        //Log.e("Sel", "chosen = " + chosen);
+        //t.tic();
         List<SelectedData> sorted = sort(chosen);
-        t.tac("2. sorted");
-        Log.e("Sel", "sorted = " + sorted);
+        //t.tac("2. sorted");
+        //Log.e("Sel", "sorted = " + sorted);
         t.tac("From %s selects %s items (%s)", from().size(), sorted.size(), typeName());
         return sorted;
     }

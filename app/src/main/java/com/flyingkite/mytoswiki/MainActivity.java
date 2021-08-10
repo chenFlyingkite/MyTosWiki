@@ -40,7 +40,6 @@ import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.util.PGAdapter;
 import com.flyingkite.util.TaskMonitor;
-import com.flyingkite.util.TextEditorDialog;
 import com.flyingkite.util.WaitingDialog;
 import com.google.android.material.tabs.TabLayout;
 
@@ -81,7 +80,6 @@ public class MainActivity extends BaseActivity implements
             , R.drawable.logo_craft_1
             , R.drawable.logo_stamina
             , R.drawable.exp_eat
-            , R.drawable.ic_description_black_48dp
     );
     private Library<IconAdapter> iconLibrary;
     private ViewPager cardPager;
@@ -109,6 +107,7 @@ public class MainActivity extends BaseActivity implements
         boolean atLeast17 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
         List<String> data = homePagerTags;
         data.add(TosCardFragment.TAG);
+        //atLeast17 = false;
         if (atLeast17) {
             data.add(WebDialog.TAG + "_1");
             data.add(WebDialog.TAG + "_2");
@@ -264,8 +263,6 @@ public class MainActivity extends BaseActivity implements
                     new SummonerLevelDialog().show(a);
                 } else if (iconId == R.drawable.exp_eat) {
                     new MonsterLevelDialog().show(a);
-                } else if (iconId == R.drawable.ic_description_black_48dp) {
-                    new TextEditorDialog(MainActivity.this::getActivity).show();
                 } else if (iconId == R.drawable.logo_chrome) {
                     new WebDialog().show(a);
                 } else if (iconId == R.drawable.ic_send_black_48dp) {

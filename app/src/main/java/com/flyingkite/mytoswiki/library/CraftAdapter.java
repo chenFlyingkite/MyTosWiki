@@ -1,7 +1,5 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.annotation.SuppressLint;
-import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,6 +12,7 @@ import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.util.select.SelectedData;
 import com.flyingkite.util.select.Selector;
 
 import java.util.ArrayList;
@@ -31,44 +30,42 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     private int nameType = Misc.NT_ID_NORM;
 
     private Selector<BaseCraft> selection; // It is the selection on crafts, but they have same item
-    private List<String> selectedMessage = new ArrayList<>();
-    private AsyncTask<Void, Void, Void> selectTask;
+    private List<SelectedData> selectedResult = new ArrayList<>();
+    private Runnable selectTask;
 
     @Override
     public boolean hasSelection() {
         return selectTask != null;
     }
 
-    @SuppressLint("StaticFieldLeak")
     public void setSelection(Selector<BaseCraft> s) {
-        if (selectTask != null) {
-            selectTask.cancel(true);
+        if (selection != null) {
+            selection.setCancelled(true);
         }
-        selectTask = new AsyncTask<Void, Void, Void>() {
-            // Very fast to clicking on selection icons will have Inconsistency
-            // java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{d9296d2 position=15 id=-1, oldPos=-1, pLpos:-1 no parent}
-            // So we save result when in background, and then set data set on UI thread
-            private List<Integer> _indices = new ArrayList<>();
-            private List<String> _msg = new ArrayList<>();
-            @Override
-            protected Void doInBackground(Void... voids) {
-                selection = s == null ? new AllCards<>(dataList) : s;
-                if (isCancelled()) return null;
-                // fixme
-//                _indices = selection.query();
-//                _msg = selection.getMessages(_indices);
-                return null;
-            }
+        selectTask = getSearchTask(s);
+        ThreadUtil.cachedThreadPool.submit(selectTask);
+    }
 
+    private Runnable getSearchTask(Selector<BaseCraft> s) {
+        return new Runnable() {
             @Override
-            protected void onPostExecute(Void aVoid) {
-                selectedIndices = _indices;
-                selectedMessage = _msg;
-                notifyDataSetChanged();
-                notifyFiltered();
+            public void run() {
+                selection = s == null ? new AllCards<>(dataList) : s;
+                if (selectTask != this) return;
+                // perform query and projection on index
+                List<SelectedData> done = selection.query();
+                List<Integer> index = SelectedData.getIndices(done);
+
+                ThreadUtil.runOnUiThread(() -> {
+                    if (selectTask != this) return;
+
+                    selectedResult = done;
+                    selectedIndices = index;
+                    notifyDataSetChanged();
+                    notifyFiltered();
+                });
             }
         };
-        selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     public void setNameType(@NameType int type) {
@@ -76,10 +73,11 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     }
 
     public String name(BaseCraft c) {
-        switch (nameType) {
-            default:
-            case Misc.NT_ID_NORM: return c.idNorm;
-            case Misc.NT_NAME:    return c.name;
+        int it = nameType;
+        if (it == Misc.NT_NAME) {
+            return c.name;
+        } else {
+            return c.idNorm;
         }
     }
 
@@ -104,15 +102,14 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
         super.onBindViewHolder(holder, position);
         BaseCraft c = itemOf(position);
         String msg = null;
-        if (selectedMessage != null && position < selectedMessage.size()) {
-            msg = selectedMessage.get(position);
+        if (selectedResult != null && position < selectedResult.size()) {
+            msg = selectedResult.get(position).message;
         }
         holder.setCard(c, name(c), msg);
     }
 
     @Override
     protected void onDidClickItem(BaseCraft c, CraftVH holder) {
-        //Say.Log("click %s, %s", c.idNorm, c.name);
     }
 
     public static class CraftVH extends RecyclerView.ViewHolder implements GlideUtil {
@@ -122,8 +119,8 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
 
         public CraftVH(View v) {
             super(v);
-            thumb = v.findViewById(R.id.tiImg);
             text = v.findViewById(R.id.tiText);
+            thumb = v.findViewById(R.id.tiImg);
             message = v.findViewById(R.id.tiMessage);
         }
 
@@ -131,7 +128,7 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
             boolean hasMsg = msg != null;
             text.setText(name);
             message.setText(msg);
-            loadImage(thumb, c.icon.iconLink);
+            loadCraftToImageView(thumb, c.icon.iconLink);
             setVisible(text, !hasMsg);
             setVisible(message, hasMsg);
         }
@@ -140,10 +137,6 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
             if (v != null) {
                 v.setVisibility(visible ? View.VISIBLE : View.GONE);
             }
-        }
-
-        private void loadImage(ImageView v, String url) {
-            loadCraftToImageView(v, url);
         }
     }
 }

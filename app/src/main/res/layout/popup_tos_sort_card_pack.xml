@@ -85,6 +85,7 @@
                 <RadioButton
                     android:id="@+id/sortCommonNormId"
                     style="@style/sortRadio"
+                    android:checked="true"
                     android:text="@string/cards_normId"/>
                 <RadioButton
                     android:id="@+id/sortCommonMaxHP"

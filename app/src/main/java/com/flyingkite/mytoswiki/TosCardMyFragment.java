@@ -1,7 +1,6 @@
 package com.flyingkite.mytoswiki;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Pair;
@@ -593,16 +592,16 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         if (TextUtils.isEmpty(data)) {
             showUsage();
         } else {
-            new ParsePackTask(data).executeOnExecutor(ThreadUtil.cachedThreadPool);
+            ThreadUtil.cachedThreadPool.submit(new ParsePackTask(data));
         }
     }
 
     private void fetchPack(String uid, String verify, String token) {
-        new FetchPackTask(uid, verify, token).executeOnExecutor(ThreadUtil.cachedThreadPool);
+        ThreadUtil.cachedThreadPool.submit(new FetchPackTask(uid, verify, token));
     }
 
     private void loginToken(String uid, String verify) {
-        new LoginTokenTask(uid, verify).executeOnExecutor(ThreadUtil.cachedThreadPool);
+        ThreadUtil.cachedThreadPool.submit(new LoginTokenTask(uid, verify));
     }
 
     private void listPack(List<PackCard> cards) {
@@ -788,55 +787,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             }
             logE("prepared show as %s", selectForShow);
         }
-//
-//        private void prepareTurnRunestones() {
-//            List<String> stones = new ArrayList<>();
-//            getSelectTags(sortRunestone, stones, false);
-//            int n = stones.size();
-//            if (n == 0) {
-//                turnStoneRegex = null;
-//                return;
-//            }
-//
-//            // 轉化(|為)(光|光強化)(|神族|魔族|人族|獸族|龍族|妖族|機械族)符石
-//            List<String> allRace = getRaces();
-//            allRace.add(0, ""); // No specified race
-//            String r = getString(R.string.cards_turn_into2) + "(|為)"
-//                    + RegexUtil.toRegexOr(stones)
-//                    + RegexUtil.toRegexOr(allRace)
-//                    + getString(R.string.cards_runestone);
-//            turnStoneRegex = Pattern.compile(r);
-//            logE("(T) = %s", turnStoneRegex);
-//        }
-//
-//        private void prepareRaceStones() {
-//            List<String> attr = new ArrayList<>();
-//            getSelectTags(sortRaceStoneAttr, attr, false);
-//            List<String> race = new ArrayList<>();
-//            getSelectTags(sortRaceStoneRace, race, false);
-//            if (attr.isEmpty() && race.isEmpty()) {
-//                raceStoneRegex1 = null;
-//                raceStoneRegex2 = null;
-//                return;
-//            }
-//
-//            // (火|光)(人族|獸族)(|強化)符石
-//            String attrs = toRegex(attr);
-//            String races = toRegex(race);
-//
-//            String regex = attrs + races + "(|強化)符石";
-//            raceStoneRegex1 = Pattern.compile(regex);
-//
-//            String raceK = toRegex(race).replace("族", "");
-//            raceStoneRegex2 = Pattern.compile(raceK);
-//            logE("(R1, R2) = %s   %s", raceStoneRegex1, raceStoneRegex2);
-//        }
-//
-//        private List<String> getRaces() {
-//            List<String> race = new ArrayList<>();
-//            getTagsWhen((w) -> true, sortRaceStoneRace, race, false);
-//            return race;
-//        }
 
         @Override
         public String typeName() {
@@ -847,8 +797,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         public boolean onSelect(PackInfoCard p) {
             TosCard c = TosWiki.getCardByIdNorm(p.idNorm);
             return selectForBasic(c)
-                    //&& selectForTurnRunestones(c)
-                    //&& selectForRaceRunestones(c)
                     && selectForImprove(c)
                     && selectForSpecial(c, p)
                     && selectForShow(c, p)
@@ -1548,7 +1496,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     // Given uid, aid -> get token
-    private class LoginTokenTask extends AsyncTask<Void, Void, TokenRes> implements Loggable {
+    private class LoginTokenTask implements Runnable, Loggable {
 
         private final String uid;
         private final String verify;
@@ -1569,11 +1517,21 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
+        public void run() {
+            ThreadUtil.runOnUiThread(() -> {
+                onPreExecute();
+            });
+            TokenRes t = doInBackground();
+
+            ThreadUtil.runOnUiThread(() -> {
+                onPostExecute(t);
+            });
+        }
+
         protected void onPreExecute() {
             showCardsLoading(getString(R.string.fetchNetworkData));
         }
 
-        @Override
         protected TokenRes doInBackground(Void... voids) {
             if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify)) {
                 return null;
@@ -1604,7 +1562,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return tr;
         }
 
-        @Override
+
         protected void onPostExecute(TokenRes tr) {
             hideCardsLoading();
             pref.setUserUid(uid);
@@ -1626,7 +1584,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     // Given uid, aid, token -> get PackList
-    private class FetchPackTask extends AsyncTask<Void, Void, PackRes> implements Loggable {
+    private class FetchPackTask implements Runnable, Loggable {
 
         private final String uid;
         private final String verify;
@@ -1641,6 +1599,17 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
+        public void run() {
+            ThreadUtil.runOnUiThread(() -> {
+                onPreExecute();
+            });
+            PackRes t = doInBackground();
+
+            ThreadUtil.runOnUiThread(() -> {
+                onPostExecute(t);
+            });
+        }
+
         protected void onPreExecute() {
             showCardsLoading(getString(R.string.cardsLoading));
             tic = System.currentTimeMillis();
@@ -1655,7 +1624,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return m;
         }
 
-        @Override
         protected PackRes doInBackground(Void... voids) {
             if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(verify) || TextUtils.isEmpty(token)) {
                 return null;
@@ -1689,7 +1657,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return r;
         }
 
-        @Override
         protected void onPostExecute(PackRes r) {
             boolean ok = r != null;
             if (isActivityGone()) return;
@@ -1753,13 +1720,18 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     // Parse String to json of PackRes, and setup adapter
-    private class ParsePackTask extends AsyncTask<Void, Void, Boolean> implements Loggable {
+    private class ParsePackTask implements Runnable, Loggable {
         private final String src;
         public ParsePackTask(String data) {
             src = data;
         }
 
         @Override
+        public void run() {
+            boolean b = doInBackground();
+            onPostExecute(b);
+        }
+
         protected Boolean doInBackground(Void... voids) {
             PackRes r = parsePack(src);
             if (r != null) {
@@ -1768,7 +1740,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return r != null;
         }
 
-        @Override
         protected void onPostExecute(Boolean ok) {
             setupAdapter(ok);
         }

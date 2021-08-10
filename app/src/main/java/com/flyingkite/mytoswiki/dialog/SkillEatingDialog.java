@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.FragmentManager;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
@@ -12,8 +11,8 @@ import android.widget.TextView;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.Say;
-import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.GsonUtil;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
@@ -118,7 +117,7 @@ public class SkillEatingDialog extends BaseTosDialog {
         logImpression();
         initRounds();
         initCard600();
-        new LoadDataAsyncTask().executeOnExecutor(sSingle);
+        sSingle.submit(getLoadDataTask());
 
         initShare();
         initTable();
@@ -351,30 +350,28 @@ public class SkillEatingDialog extends BaseTosDialog {
         return ShareHelper.extFilesFile("skillEat.txt");
     }
 
-    @SuppressLint("StaticFieldLeak")
-    private class LoadDataAsyncTask extends AsyncTask<Void, Void, SkillEat> {
-        private final TicTac2 clk = new TicTac2();
-        @Override
-        protected void onPreExecute() {
-            clk.tic();
-        }
+    private Runnable getLoadDataTask() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                SkillEat data = get();
+                if (getActivity() == null) return;
 
-        @Override
-        protected SkillEat doInBackground(Void... voids) {
-            File f = getSkillEatFile();
-            if (f.exists()) {
-                return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
-            } else {
-                return null;
+                ThreadUtil.runOnUiThread(() -> {
+                    skEat = data != null ? data : new SkillEat();
+                    updateFromData();
+                });
             }
-        }
 
-        @Override
-        protected void onPostExecute(SkillEat data) {
-            clk.tac("skEat loaded");
-            skEat = data != null ? data : new SkillEat();
-            updateFromData();
-        }
+            private SkillEat get() {
+                File f = getSkillEatFile();
+                if (f.exists()) {
+                    return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
+                } else {
+                    return null;
+                }
+            }
+        };
     }
 
     //-- Events

@@ -203,8 +203,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initToolIcons();
         resetMenu();
 
-        TosWiki.attendDatabaseTasks(onCardsReady);
         sSingle.submit(getLoadDataTask());
+        TosWiki.attendDatabaseTasks(onCardsReady);
     }
 
     private void initCardLibrary() {
@@ -441,20 +441,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         // fail... and cause much crash
         menuEntry.setOnClickListener((v) -> {
             pop.setVisibility(View.VISIBLE);
-//            new DialogManager.GenericViewBuilder(getActivity(), R.layout.popup_tos_sort_card, new DialogManager.GenericViewBuilder.InflateListener() {
-//                @Override
-//                public void onFinishInflate(View view, AlertDialog dialog) {
-//                    makeMenu(view);
-//                    logSelectCard();
-//                }
-//            }).buildAndShow();
-//            logSelectCard();
         });
         filterArea = pop;
         View menu = findViewById(R.id.tosMenuSel);
         makeMenu(menu);
-
-        //new DialogManager.GenericViewBuilder(owner.getActivity(), R.layout.dialog_text_editor, this::onFinishInflate).buildAndShow();
     }
 
     private void initSortMenu2() {
@@ -580,7 +570,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialRegardlessSticky = menu.findViewById(R.id.sortSpecialRegardlessSticky);
         sortSpecialSelfColumn = menu.findViewById(R.id.sortSpecialSelfColumn);
         sortSpecialRegardPuzzle = menu.findViewById(R.id.sortSpecialRegardPuzzle);
-
 
         sortSpecial = initSortOf(menu, R.id.sortSpecialList, this::clickSpecial);
     }

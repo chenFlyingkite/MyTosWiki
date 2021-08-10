@@ -96,11 +96,13 @@ public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, Ca
     }
 
     public String name(TosCard c) {
-        switch (nameType) {
-            default:
-            case Misc.NT_ID_NORM: return c.idNorm;
-            case Misc.NT_NAME:    return c.name;
-            case Misc.NT_NAME_ID_NORM: return c.idNorm + " " + c.name;
+        int it = nameType;
+        if (it == Misc.NT_NAME_ID_NORM) {
+            return c.idNorm + " " + c.name;
+        } else if (it == Misc.NT_NAME) {
+            return c.name;
+        } else {
+            return c.idNorm;
         }
     }
 
