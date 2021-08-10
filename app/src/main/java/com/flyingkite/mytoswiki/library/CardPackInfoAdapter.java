@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.App;
@@ -16,9 +15,8 @@ import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.pack.PackInfoCard;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.mytoswiki.tos.query.AllCards;
-import com.flyingkite.mytoswiki.tos.query.TosSelection;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.util.select.Selector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +33,7 @@ public class CardPackInfoAdapter extends RVSelectAdapter<PackInfoCard, CardPackI
 
     private int nameType = Misc.NT_ID_NORM;
 
-    private TosSelection<PackInfoCard> selection;
+    private Selector<PackInfoCard> selection;
     private List<String> selectedMessage = new ArrayList<>();
     private AsyncTask<Void, Void, Void> selectTask;
     // Including same cards
@@ -58,35 +56,36 @@ public class CardPackInfoAdapter extends RVSelectAdapter<PackInfoCard, CardPackI
     }
 
     @SuppressLint("StaticFieldLeak")
-    public void setSelection(TosSelection<PackInfoCard> s) {
-        if (selectTask != null) {
-            selectTask.cancel(true);
-        }
-        selectTask = new AsyncTask<Void, Void, Void>() {
-            // Very fast to clicking on selection icons will have Inconsistency
-            // java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{d9296d2 position=15 id=-1, oldPos=-1, pLpos:-1 no parent}
-            // So we save result when in background, and then set data set on UI thread
-            private List<Integer> _indices = new ArrayList<>();
-            private List<String> _msg = new ArrayList<>();
-            @Override
-            protected Void doInBackground(Void... voids) {
-                selection = s == null ? new AllCards<>(dataList) : s;
-                if (isCancelled()) return null;
-                _indices = selection.query();
-                if (isCancelled()) return null;
-                _msg = selection.getMessages(_indices);
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                selectedIndices = _indices;
-                selectedMessage = _msg;
-                notifyDataSetChanged();
-                notifyFiltered();
-            }
-        };
-        selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
+    public void setSelection(Selector<PackInfoCard> s) {
+        // fixme
+//        if (selectTask != null) {
+//            selectTask.cancel(true);
+//        }
+//        selectTask = new AsyncTask<Void, Void, Void>() {
+//            // Very fast to clicking on selection icons will have Inconsistency
+//            // java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{d9296d2 position=15 id=-1, oldPos=-1, pLpos:-1 no parent}
+//            // So we save result when in background, and then set data set on UI thread
+//            private List<Integer> _indices = new ArrayList<>();
+//            private List<String> _msg = new ArrayList<>();
+//            @Override
+//            protected Void doInBackground(Void... voids) {
+//                selection = s == null ? new AllCards<>(dataList) : s;
+//                if (isCancelled()) return null;
+//                _indices = selection.query();
+//                if (isCancelled()) return null;
+//                _msg = selection.getMessages(_indices);
+//                return null;
+//            }
+//
+//            @Override
+//            protected void onPostExecute(Void aVoid) {
+//                selectedIndices = _indices;
+//                selectedMessage = _msg;
+//                notifyDataSetChanged();
+//                notifyFiltered();
+//            }
+//        };
+//        selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     public void setNameType(@NameType int type) {

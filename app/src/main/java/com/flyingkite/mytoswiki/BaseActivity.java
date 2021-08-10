@@ -27,44 +27,44 @@ public abstract class BaseActivity extends Activity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogV("onCreate(%s)", savedInstanceState);
+        log("onCreate(%s)", savedInstanceState);
         requestPermissions();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        LogV("onStart()");
+        log("onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogV("onResume()");
+        log("onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogV("onPause()");
+        log("onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogV("onStop()");
+        log("onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogV("onDestroy()");
+        log("onDestroy()");
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        LogV("result : %s", RESULT_STATE[resultCode + 1]);
+        log("result : %s", RESULT_STATE[resultCode + 1]);
     }
 
     protected Fragment findFragmentById(@IdRes int fragmentId) {
@@ -110,8 +110,8 @@ public abstract class BaseActivity extends Activity implements
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case REQ_PERMISSION:
-                LogV("Request permissions = " + Arrays.toString(permissions));
-                LogV("and returns results = " + Arrays.toString(grantResults));
+                log("Request permissions = " + Arrays.toString(permissions));
+                log("and returns results = " + Arrays.toString(grantResults));
                 break;
         }
     }

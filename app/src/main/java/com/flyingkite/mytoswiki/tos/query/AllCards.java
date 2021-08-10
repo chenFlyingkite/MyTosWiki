@@ -1,11 +1,15 @@
 package com.flyingkite.mytoswiki.tos.query;
 
-import androidx.annotation.NonNull;
+import com.flyingkite.util.select.Selector;
 
 import java.util.List;
 
-public class AllCards<T> implements TosSelection<T> {
+import androidx.annotation.NonNull;
+
+public class AllCards<T> implements Selector<T> {
     protected List<T> data;
+    private boolean isCancelled = false;
+
     public AllCards(List<T> list) {
         data = list;
     }
@@ -15,4 +19,15 @@ public class AllCards<T> implements TosSelection<T> {
     public List<T> from() {
         return data;
     }
+
+    @Override
+    public void setCancelled(boolean cancel) {
+        isCancelled = cancel;
+    }
+
+    @Override
+    public boolean isCancelled() {
+        return isCancelled;
+    }
+
 }

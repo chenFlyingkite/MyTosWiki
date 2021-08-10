@@ -505,6 +505,10 @@
                         android:text="@string/cards_special_class_enemy"/>
                 </LinearLayout>
                 <CheckBox
+                    android:id="@+id/sortSpecialStun"
+                    style="@style/sortText"
+                    android:text="@string/cards_stun"/>
+                <CheckBox
                     android:id="@+id/sortSpecialDelay"
                     style="@style/sortText"
                     android:text="@string/cards_delay"/>

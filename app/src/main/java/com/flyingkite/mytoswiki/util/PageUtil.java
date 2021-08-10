@@ -7,7 +7,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -180,30 +179,4 @@ public interface PageUtil extends Loggable, ViewUtil {
     default void setMovementMethod(TextView t) {
         t.setMovementMethod(LinkMovementMethod.getInstance());
     }
-
-    //-- Logging -- start
-    default String sig() {
-        return this.getClass().getCanonicalName();
-    }
-
-    default String getTagName() {
-        return "" + getClass().getSimpleName();
-    }
-
-    default void LogV(String msg, Object... param) {
-        LogV(String.format(msg, param));
-    }
-
-    default void LogV(String msg) {
-        Log.v(getTagName(), msg);
-    }
-
-    default void LogE(String msg, Object... param) {
-        LogE(String.format(msg, param));
-    }
-
-    default void LogE(String msg) {
-        Log.e(getTagName(), msg);
-    }
-    //-- Logging -- end
 }

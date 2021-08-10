@@ -2,8 +2,6 @@ package com.flyingkite.mytoswiki.library;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,11 +13,14 @@ import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
-import com.flyingkite.mytoswiki.tos.query.TosSelection;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.util.select.Selector;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftVH, CraftAdapter.ItemListener> {
 
@@ -29,7 +30,7 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
 
     private int nameType = Misc.NT_ID_NORM;
 
-    private TosSelection<BaseCraft> selection; // It is the selection on crafts, but they have same item
+    private Selector<BaseCraft> selection; // It is the selection on crafts, but they have same item
     private List<String> selectedMessage = new ArrayList<>();
     private AsyncTask<Void, Void, Void> selectTask;
 
@@ -39,7 +40,7 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
     }
 
     @SuppressLint("StaticFieldLeak")
-    public void setSelection(TosSelection<BaseCraft> s) {
+    public void setSelection(Selector<BaseCraft> s) {
         if (selectTask != null) {
             selectTask.cancel(true);
         }
@@ -53,8 +54,9 @@ public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftV
             protected Void doInBackground(Void... voids) {
                 selection = s == null ? new AllCards<>(dataList) : s;
                 if (isCancelled()) return null;
-                _indices = selection.query();
-                _msg = selection.getMessages(_indices);
+                // fixme
+//                _indices = selection.query();
+//                _msg = selection.getMessages(_indices);
                 return null;
             }
 

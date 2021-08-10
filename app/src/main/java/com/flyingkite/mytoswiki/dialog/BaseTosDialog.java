@@ -151,8 +151,9 @@ public class BaseTosDialog extends DialogFragment implements
 //    }
 
     public void show(Activity activity) {
-        log("show %s", sig());
-        show(activity.getFragmentManager(), sig());
+        String s = LTag();
+        log("show %s", s);
+        show(activity.getFragmentManager(), s);
     }
 
     @Override

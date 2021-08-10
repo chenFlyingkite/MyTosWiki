@@ -2,7 +2,6 @@ package com.flyingkite.mytoswiki;
 
 import android.app.FragmentManager;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
@@ -36,6 +35,7 @@ import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
+import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -129,6 +129,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private CheckBox sortSpecialAllDealDamage;
     //private CheckBox sortSpecialAllDealDamageElement;
     private CheckBox sortSpecialTurnEnemyAttr;
+    private CheckBox sortSpecialStun;
     private CheckBox sortSpecialDelay;
     private CheckBox sortSpecialClearLock;
     private CheckBox sortSpecialAlsoHeartActive;
@@ -200,11 +201,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initCardLibrary();
         initSortMenu();
         initToolIcons();
-        resetMenu(); // fixme, popup window cannot type edittext in z3
-
-        new LoadDataAsyncTask().executeOnExecutor(sSingle);
+        resetMenu();
 
         TosWiki.attendDatabaseTasks(onCardsReady);
+        sSingle.submit(getLoadDataTask());
     }
 
     private void initCardLibrary() {
@@ -373,8 +373,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             }
         });
         cardLib.setViewAdapter(a);
-        updateHide(); // fixme
-        applySelection(); // fixme
+        updateHide();
+        applySelection();
 
         //testAllCardDialog();
     }
@@ -398,7 +398,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
             View view = cardsRecycler;
             String name = ShareHelper.cacheName("1.png");
-            LogE("Save to %s", name);
+            logE("Save to %s", name);
 
             ShareHelper.shareImage(getActivity(), view, name);
             logShare("library");
@@ -431,6 +431,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         return super.onBackPressed();
     }
 
+    // todo
     // init sort menus and put onClickListeners --------
     private void initSortMenu() {
         View pop = findViewById(R.id.tosFliterBg);
@@ -564,6 +565,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         sortSpecialAllDealDamage = menu.findViewById(R.id.sortSpecialAllDealDamage);
         //sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
+        sortSpecialStun = menu.findViewById(R.id.sortSpecialStun);
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
         sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
         sortSpecialAlsoHeartActive = menu.findViewById(R.id.sortSpecialAlsoHeartActive);
@@ -691,7 +693,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         if (id != noId) {
             sortCommon.check(R.id.sortCommonNormId);
         }
-        //sortCommon.setEnabled(id != noId);
 
         applySelection();
     }
@@ -703,7 +704,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         if (id != noId) {
             sortCommon.check(R.id.sortCommonNormId);
         }
-        //sortCommon.setEnabled(id != noId);
 
         applySelection();
     }
@@ -746,8 +746,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         if (id != R.id.sortCommonNormId) {
             sortFormulaCard.check(R.id.sortFormulaCardNo);
             sortFormulaList.check(R.id.sortFormulaNo);
-        }
-        //sortFormulaList.setEnabled(id != R.id.sortFormulaNo);
+        };
 
         applySelection();
     }
@@ -809,10 +808,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         List<String> stars = new ArrayList<>();
         getSelectTags(sortStar, stars, true);
 
-        LogE("-----Cards-----");
-        LogE("A = %s", attrs);
-        LogE("R = %s", races);
-        LogE("S = %s", stars);
+        logE("-----Cards-----");
+        logE("A = %s", attrs);
+        logE("R = %s", races);
+        logE("S = %s", stars);
 
         if (cardLib.adapter != null) {
             TosCondition cond = new TosCondition().attr(attrs).race(races).star(stars);
@@ -922,6 +921,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             prepareRaceStones();
         }
 
+        @Override
+        public void onSelected() {
+        }
+
         private void prepareShow() {
             selectForShow = new boolean[4];
             ViewGroup vg = sortHide;
@@ -1007,7 +1010,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
-        public boolean onSelect(TosCard c){
+        public boolean onSelect(TosCard c) {
             return selectForBasic(c)
                     && selectForTurnRunestones(c)
                     && selectForRaceRunestones(c)
@@ -1191,9 +1194,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     accept &= find(key, R.array.cards_also_keys);
                 }
                 if (sortSpecialAlsoLeader.isChecked()) {
-                    if ("2092".equals(c.idNorm)) {
-                        c.idNorm.length();
-                    }
+                    // card #2092
                     key = leaderSkill(c);
                     accept &= find(key, R.array.cards_also_keys);
                 }
@@ -1279,6 +1280,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 //                }
                 if (sortSpecialTurnEnemyAttr.isChecked()) {
                     accept &= find(key, R.array.cards_turn_enemy_attr_keys);
+                }
+                if (sortSpecialStun.isChecked()) {
+                    accept &= find(key, R.array.cards_stun_keys);
                 }
                 if (sortSpecialDelay.isChecked()) {
                     accept &= find(key, R.array.cards_delay_keys);
@@ -1416,8 +1420,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         @NonNull
         @Override
-        public List<Integer> sort(@NonNull List<Integer> result) {
-            Comparator<Integer> cmp;
+        public List<SelectedData> sort(@NonNull List<SelectedData> result) {
+            Comparator<SelectedData> cmp;
             if (isSortFormula()) {
                 cmp = getFormulaComparator();
             } else {
@@ -1432,14 +1436,14 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
 
         @Override
-        public List<String> getMessages(List<Integer> result) {
-            List<String> msgs;
+        public String getMessage(TosCard card) {
+            String s;
             if (isSortFormula()) {
-                msgs = getFormulaMessages(result);
+                s = getFormulaMessage(card);
             } else {
-                msgs = getCommonMessages(result);
+                s = getCommonMessages(card);
             }
-            return msgs;
+            return s;
         }
 
         private boolean isSortFormula() {
@@ -1503,20 +1507,20 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return atk;
         }
 
-        private Comparator<Integer> getFormulaComparator() {
+        private Comparator<SelectedData> getFormulaComparator() {
             // Create comparator
             int id = sortFormulaList.getCheckedRadioButtonId();
             if (id == R.id.sortFormulaAttack) {
                 return (o1, o2) -> {
+                    int k1 = o1.index;
+                    int k2 = o2.index;
                     boolean dsc = true;
                     // Evaluate formula
-                    TosCard c1 = data.get(o1);
-                    TosCard c2 = data.get(o2);
+                    TosCard c1 = data.get(k1);
+                    TosCard c2 = data.get(k2);
                     double atk1 = getFormulaAttack(c1);
                     double atk2 = getFormulaAttack(c2);
 
-                    //logCard("#1", c1);
-                    //logCard("#2", c2);
                     // Compare them
                     if (dsc) {
                         return Double.compare(atk2, atk1);
@@ -1526,10 +1530,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 };
             } else if (id == R.id.sortFormulaAttackRatio) {
                 return (o1, o2) -> {
+                    int k1 = o1.index;
+                    int k2 = o2.index;
                     boolean dsc = true;
                     // Evaluate formula
-                    TosCard c1 = data.get(o1);
-                    TosCard c2 = data.get(o2);
+                    TosCard c1 = data.get(k1);
+                    TosCard c2 = data.get(k2);
                     double atk1 = getFormulaAttackRatio(c1);
                     double atk2 = getFormulaAttackRatio(c2);
 
@@ -1545,16 +1551,18 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return null;
         }
 
-        private Comparator<Integer> getCommonComparator() {
+        private Comparator<SelectedData> getCommonComparator() {
             // Create comparator
             int id = sortCommon.getCheckedRadioButtonId();
             if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
                 return null;
             }
             return (o1, o2) -> {
+                int k1 = o1.index;
+                int k2 = o2.index;
                 boolean dsc = true;
-                TosCard c1 = data.get(o1);
-                TosCard c2 = data.get(o2);
+                TosCard c1 = data.get(k1);
+                TosCard c2 = data.get(k2);
                 long v1 = -1, v2 = -1;
 
                 if (id == R.id.sortCommonMaxHP) {
@@ -1616,118 +1624,79 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
             return norm;
         }
 
-        private void logCard(String prefix, TosCard c) {
-            // https://stackoverflow.com/questions/16946694/how-do-i-align-the-decimal-point-when-displaying-doubles-and-floats
-            // Align float point is %(x+y+1).yf
-            LogE("%s %s -> %4s + %4s * 3.5 = %7.1f => %s"
-                , prefix, c.idNorm, c.maxAttack, c.maxRecovery
-                , c.maxAttack + c.maxRecovery * 3.5, c.name
-            );
-        }
-
-        private List<String> getFormulaMessages(List<Integer> result) {
-            List<String> message = null;
-            TosCard c;
+        private String getFormulaMessage(TosCard c) {
+            String ans = null;
             // Create Message
             int id = sortFormulaList.getCheckedRadioButtonId();
 
             if (id == R.id.sortFormulaAttack) {
-                message = new ArrayList<>();
-                for (int i = 0; i < result.size(); i++) {
-                    c = data.get(result.get(i));
-                    double atk = getFormulaAttack(c);
-                    message.add(_fmt("%.1f", atk));
-                }
+                double atk = getFormulaAttack(c);
+                ans = _fmt("%.1f", atk);
             } else if (id == R.id.sortFormulaAttackRatio) {
-                message = new ArrayList<>();
-                for (int i = 0; i < result.size(); i++) {
-                    c = data.get(result.get(i));
-                    double atk = getFormulaAttackRatio(c);
-                    message.add(_fmt("%.2f", atk));
-                }
-            } else if (id == 0) {
+                double atk = getFormulaAttackRatio(c);
+                ans = _fmt("%.2f", atk);
             } else {
             }
-            return message;
+            return ans;
         }
 
-        private List<String> getCommonMessages(List<Integer> result) {
-            List<String> message = new ArrayList<>();
-            TosCard c;
-            String msg;
-            // Create Message
-            boolean added = false;
+        private String getCommonMessages(TosCard c) {
+            //String msg = c.idNorm;
+            String msg = null;
             int id = sortCommon.getCheckedRadioButtonId();
-
-            for (int i = 0; i < result.size(); i++) {
-                c = data.get(result.get(i));
-                msg = null;
-
-                if (id == R.id.sortCommonMaxHP) {
-                    msg = String.valueOf(c.maxHp());
-                    if (c.ameAddHP()) {
-                        msg += "^";
-                    }
-                    if (c.maxAddHp()) {
-                        msg += "#";
-                    }
-                } else if (id == R.id.sortCommonMaxAttack) {
-                    msg = String.valueOf(c.maxAttack());
-                    if (c.ameAddAttack()) {
-                        msg += "^";
-                    }
-                    if (c.maxAddAttack()) {
-                        msg += "#";
-                    }
-                } else if (id == R.id.sortCommonMaxRecovery) {
-                    msg = String.valueOf(c.maxRecovery());
-                    if (c.ameAddRecovery()) {
-                        msg += "^";
-                    }
-                    if (c.maxAddRecovery()) {
-                        msg += "#";
-                    }
-                } else if (id == R.id.sortCommonMaxSum) {
-                    msg = String.valueOf(c.maxHAR());
-                    if (c.ameAddAll()) {
-                        msg += "^";
-                    }
-                    if (c.maxAddAll()) {
-                        msg += "#";
-                    }
-                } else if (id == R.id.sortCommonSkillCDMax) {
-                    msg = "" + c.skillCDMaxAme;
-                    if (c.ameMinusCD()) {
-                        msg += "^";
-                    }
-                    if (c.skillCDMax2 > 0) {
-                        msg += " & " + c.skillCDMax2;
-                    }
-                } else if (id == R.id.sortCommonSpace) {
-                    msg = String.valueOf(c.cost);
-                } else if (id == R.id.sortCommonRace) {
-                    String name = c.id;
-                    if (cardLib.adapter != null) {
-                        name = cardLib.adapter.name(c);
-                    }
-                    msg = name + "\n" + c.race;
-                } else if (id == R.id.sortCommonMaxTu) {
-                    msg = String.valueOf(c.maxTUAllLevel);
-                } else if (id == 0) {
-                } else {
+            if (id == R.id.sortCommonMaxHP) {
+                msg = String.valueOf(c.maxHp());
+                if (c.ameAddHP()) {
+                    msg += "^";
                 }
-
-                if (msg != null) {
-                    added = true;
-                    message.add(msg);
+                if (c.maxAddHp()) {
+                    msg += "#";
                 }
-            }
-
-            if (added) {
-                return message;
+            } else if (id == R.id.sortCommonMaxAttack) {
+                msg = String.valueOf(c.maxAttack());
+                if (c.ameAddAttack()) {
+                    msg += "^";
+                }
+                if (c.maxAddAttack()) {
+                    msg += "#";
+                }
+            } else if (id == R.id.sortCommonMaxRecovery) {
+                msg = String.valueOf(c.maxRecovery());
+                if (c.ameAddRecovery()) {
+                    msg += "^";
+                }
+                if (c.maxAddRecovery()) {
+                    msg += "#";
+                }
+            } else if (id == R.id.sortCommonMaxSum) {
+                msg = String.valueOf(c.maxHAR());
+                if (c.ameAddAll()) {
+                    msg += "^";
+                }
+                if (c.maxAddAll()) {
+                    msg += "#";
+                }
+            } else if (id == R.id.sortCommonSkillCDMax) {
+                msg = "" + c.skillCDMaxAme;
+                if (c.ameMinusCD()) {
+                    msg += "^";
+                }
+                if (c.skillCDMax2 > 0) {
+                    msg += " & " + c.skillCDMax2;
+                }
+            } else if (id == R.id.sortCommonSpace) {
+                msg = String.valueOf(c.cost);
+            } else if (id == R.id.sortCommonRace) {
+                String name = c.id;
+                if (cardLib.adapter != null) {
+                    name = cardLib.adapter.name(c);
+                }
+                msg = name + "\n" + c.race;
+            } else if (id == R.id.sortCommonMaxTu) {
+                msg = String.valueOf(c.maxTUAllLevel);
             } else {
-                return null;
             }
+            return msg;
         }
     }
     // --------
@@ -1744,26 +1713,30 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         return ShareHelper.extFilesFile("cardSort.txt");
     }
 
-    private class LoadDataAsyncTask extends AsyncTask<Void, Void, CardSort> {
-        @Override
-        protected CardSort doInBackground(Void... voids) {
-            File f = getTosCardSortFile();
-            if (f.exists()) {
-                return GsonUtil.loadFile(f, CardSort.class);
-            } else {
-                return null;
+    private Runnable getLoadDataTask() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                CardSort data = get();
+                if (getActivity() == null) return;
+
+                ThreadUtil.runOnUiThread(() -> {
+                    cardSort = data != null ? data : new CardSort();
+                    updateHide();
+                    updateFromPref();
+                    applySelection();
+                });
             }
-        }
 
-        @Override
-        protected void onPostExecute(CardSort data) {
-            if (getActivity() == null) return;
-
-            cardSort = data != null ? data : new CardSort();
-            updateHide();
-            updateFromPref();
-            applySelection();
-        }
+            private CardSort get() {
+                File f = getTosCardSortFile();
+                if (f.exists()) {
+                    return GsonUtil.loadFile(f, CardSort.class);
+                } else {
+                    return null;
+                }
+            }
+        };
     }
 
     //-- Events

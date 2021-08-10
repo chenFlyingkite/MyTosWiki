@@ -258,6 +258,7 @@
     <string name="cards_all_deal_damage_element">_全體直傷 (僅限素材)</string>
     <string name="cards_turn_enemy_attr">敵方全體轉為 X 屬性</string>
     <string name="cards_delay">延遲 敵人行動</string>
+    <string name="cards_stun">暈擊</string>
     <!-- #1765, 酷拉皮卡, Monsters' Active Skills will not be locked
          #2015, 伽利略, Release the locked Skills of all Machinas.
      -->
@@ -462,6 +463,9 @@
     </string-array>
     <string-array name="cards_turn_enemy_attr_keys">
         <item>敵方全體轉為</item>
+    </string-array>
+    <string-array name="cards_stun_keys">
+        <item>暈擊</item>
     </string-array>
     <string-array name="cards_delay_keys">
         <item>延遲</item>

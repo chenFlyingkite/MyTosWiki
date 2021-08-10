@@ -43,7 +43,6 @@ import java.util.regex.Pattern;
 
 import androidx.annotation.ArrayRes;
 import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
@@ -744,21 +743,22 @@ public class CraftDialog extends BaseTosDialog {
             return mode && attr && race && star;
         }
 
-        @NonNull
-        @Override
-        public List<Integer> sort(@NonNull List<Integer> result) {
-            Comparator<Integer> cmp;
-            cmp = getCommonComparator();
-            if (cmp == null) {
-                //cmp = getCassandraComparator();
-            }
-
-            // Apply the comparator on result
-            if (cmp != null) {
-                Collections.sort(result, cmp);
-            }
-            return result;
-        }
+        // FIXME
+//        @NonNull
+//        @Override
+//        public List<Integer> sort(@NonNull List<Integer> result) {
+//            Comparator<Integer> cmp;
+//            cmp = getCommonComparator();
+//            if (cmp == null) {
+//                //cmp = getCassandraComparator();
+//            }
+//
+//            // Apply the comparator on result
+//            if (cmp != null) {
+//                Collections.sort(result, cmp);
+//            }
+//            return result;
+//        }
 
         private Comparator<Integer> getCommonComparator() {
             // Create comparator

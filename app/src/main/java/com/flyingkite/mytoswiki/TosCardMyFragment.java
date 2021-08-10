@@ -42,6 +42,7 @@ import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
+import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -463,10 +464,10 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         List<String> stars = new ArrayList<>();
         getSelectTags(sortStar, stars, true);
 
-        LogE("-----Cards-----");
-        LogE("A = %s", attrs);
-        LogE("R = %s", races);
-        LogE("S = %s", stars);
+        logE("-----Cards-----");
+        logE("A = %s", attrs);
+        logE("R = %s", races);
+        logE("S = %s", stars);
 
         if (cardLib.adapter != null) {
             TosCondition cond = new TosCondition().attr(attrs).race(races).star(stars);
@@ -1165,15 +1166,12 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return accept;
         }
 
+
         @NonNull
         @Override
-        public List<Integer> sort(@NonNull List<Integer> result) {
-            Comparator<Integer> cmp;
+        public List<SelectedData> sort(@NonNull List<SelectedData> result) {
+            Comparator<SelectedData> cmp;
             cmp = getCommonComparator();
-//            if (cmp == null) {
-//                cmp = getCassandraComparator();
-//            }
-
             // Apply the comparator on result
             if (cmp != null) {
                 Collections.sort(result, cmp);
@@ -1181,10 +1179,33 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             return result;
         }
 
+//
+//        @NonNull
+//        public List<Integer> sort2(@NonNull List<Integer> result) {
+//            Comparator<Integer> cmp;
+//            cmp = getCommonComparator();
+////            if (cmp == null) {
+////                cmp = getCassandraComparator();
+////            }
+//
+//            // Apply the comparator on result
+//            if (cmp != null) {
+//                Collections.sort(result, cmp);
+//            }
+//            return result;
+//        }
+
+
         @Override
+        public String getMessage(PackInfoCard card) {
+            return getCommonMessage(card);
+        }
+
+        //--
+        @Deprecated
         public List<String> getMessages(List<Integer> result) {
             List<String> msgs;
-            msgs = getCommonMessages(result);
+            msgs = getCommonMessages2(result);
 //            if (msgs == null) {
 //                msgs = getCassandraMessages(result);
 //            }
@@ -1229,7 +1250,66 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
 //            return null;
 //        }
 
-        private Comparator<Integer> getCommonComparator() {
+        private Comparator<SelectedData> getCommonComparator() {
+            // Create comparator
+            int id = sortCommon.getCheckedRadioButtonId();
+            if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
+                return null;
+            }
+            return (o1, o2) -> {
+                int k1 = o1.index;
+                int k2 = o2.index;
+                boolean dsc = true;
+                PackInfoCard p1 = data.get(k1);
+                PackInfoCard p2 = data.get(k2);
+                TosCard c1 = TosWiki.getCardByIdNorm(p1.idNorm);
+                TosCard c2 = TosWiki.getCardByIdNorm(p2.idNorm);
+                long v1 = -1, v2 = -1;
+
+                if (id == R.id.sortCommonMaxHP) {
+                    v1 = c1.maxHPAme;
+                    v2 = c2.maxHPAme;
+                } else if (id == R.id.sortCommonMaxAttack) {
+                    v1 = c1.maxAttackAme;
+                    v2 = c2.maxAttackAme;
+                } else if (id == R.id.sortCommonMaxRecovery) {
+                    v1 = c1.maxRecoveryAme;
+                    v2 = c2.maxRecoveryAme;
+                } else if (id == R.id.sortCommonMaxSum) {
+                    v1 = c1.maxHPAme + c1.maxAttackAme + c1.maxRecoveryAme;
+                    v2 = c2.maxHPAme + c2.maxAttackAme + c2.maxRecoveryAme;
+                } else if (id == R.id.sortCommonSkillCDMax) {
+                    dsc = false;
+                    v1 = normSkillCD(c1);
+                    v2 = normSkillCD(c2);
+                } else if (id == R.id.sortCommonSpace) {
+                    dsc = false;
+                    v1 = c1.cost;
+                    v2 = c2.cost;
+                } else if (id == R.id.sortCommonRace) {
+                    dsc = false;
+                    v1 = ListUtil.indexOf(commonRace, c1.race);
+                    v2 = ListUtil.indexOf(commonRace, c2.race);
+                } else if (id == R.id.sortCommonOwnCount) {
+                    v1 = p1.packs.size();
+                    v2 = p2.packs.size();
+                } else if (id == R.id.sortCommonMaxTu) {
+                    v1 = c1.maxTUAllLevel;
+                    v2 = c2.maxTUAllLevel;
+                } else if (id == 0) {
+                } else {
+                }
+
+                if (dsc) {
+                    return Long.compare(v2, v1);
+                } else {
+                    return Long.compare(v1, v2);
+                }
+            };
+        }
+
+        @Deprecated
+        private Comparator<Integer> getCommonComparator2() {
             // Create comparator
             int id = sortCommon.getCheckedRadioButtonId();
             if (id == RadioGroup.NO_ID || id == R.id.sortCommonNormId) {
@@ -1308,7 +1388,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         private void logCard(String prefix, TosCard c) {
             // https://stackoverflow.com/questions/16946694/how-do-i-align-the-decimal-point-when-displaying-doubles-and-floats
             // Align float point is %(x+y+1).yf
-            LogE("%s %s -> %4s + %4s * 3.5 = %7.1f => %s"
+            logE("%s %s -> %4s + %4s * 3.5 = %7.1f => %s"
                     , prefix, c.idNorm, c.maxAttack, c.maxRecovery
                     , c.maxAttack + c.maxRecovery * 3.5, c.name
             );
@@ -1343,7 +1423,61 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
 //            return message;
 //        }
 
-        private List<String> getCommonMessages(List<Integer> result) {
+
+        private String getCommonMessage(PackInfoCard card) {
+            // Create Message
+            boolean added = false;
+            int id = sortCommon.getCheckedRadioButtonId();
+
+            PackInfoCard p = card;
+            TosCard c = TosWiki.getCardByIdNorm(p.idNorm);
+            String msg = null;
+            if (id == R.id.sortCommonMaxHP) {
+                msg = String.valueOf(c.maxHPAme);
+                if (c.ameAddHP()) {
+                    msg += "^";
+                }
+            } else if (id == R.id.sortCommonMaxAttack) {
+                msg = String.valueOf(c.maxAttackAme);
+                if (c.ameAddAttack()) {
+                    msg += "^";
+                }
+            } else if (id == R.id.sortCommonMaxRecovery) {
+                msg = String.valueOf(c.maxRecoveryAme);
+                if (c.ameAddRecovery()) {
+                    msg += "^";
+                }
+            } else if (id == R.id.sortCommonMaxSum) {
+                msg = String.valueOf(c.maxHPAme + c.maxAttackAme + c.maxRecoveryAme);
+                if (c.ameAddAll()) {
+                    msg += "^";
+                }
+            } else if (id == R.id.sortCommonSkillCDMax) {
+                msg = "" + c.skillCDMaxAme;
+                if (c.ameMinusCD()) {
+                    msg += "^";
+                }
+                if (c.skillCDMax2 > 0) {
+                    msg += " & " + c.skillCDMax2;
+                }
+            } else if (id == R.id.sortCommonSpace) {
+                msg = String.valueOf(c.cost);
+            } else if (id == R.id.sortCommonRace) {
+                String name = c.id;
+                if (cardLib.adapter != null) {
+                    name = cardLib.adapter.name(c);
+                }
+                msg = name + "\n" + c.race;
+            } else if (id == R.id.sortCommonMaxTu) {
+                msg = String.valueOf(c.maxTUAllLevel);
+            } else if (id == R.id.sortDisplayName) {
+            } else {
+            }
+            return msg;
+        }
+
+        @Deprecated
+        private List<String> getCommonMessages2(List<Integer> result) {
             List<String> message = new ArrayList<>();
             PackInfoCard p;
             TosCard c;

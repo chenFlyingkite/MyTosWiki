@@ -22496,12 +22496,12 @@ com.flyingkite.mytoswiki.dialog.WebDialog$4 -> com.flyingkite.mytoswiki.c.bz$4:
     167:168:boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
 com.flyingkite.mytoswiki.library.CardAdapter -> com.flyingkite.mytoswiki.d.a:
     int nameType -> g
-    com.flyingkite.mytoswiki.tos.query.TosSelection selection -> h
+    com.flyingkite.util.select.Selector selection -> h
     java.util.List selectedMessage -> i
     android.os.AsyncTask selectTask -> j
     23:34:void <init>() -> <init>
     39:39:boolean hasSelection() -> d
-    44:71:void setSelection(com.flyingkite.mytoswiki.tos.query.TosSelection) -> a
+    44:71:void setSelection(com.flyingkite.util.select.Selector) -> a
     74:75:void setNameType(int) -> g
     78:81:java.lang.String name(com.flyingkite.mytoswiki.data.tos.TosCard) -> a
     86:87:void updateSelection() -> e
@@ -22512,18 +22512,18 @@ com.flyingkite.mytoswiki.library.CardAdapter -> com.flyingkite.mytoswiki.d.a:
     23:23:void onDidClickItem(java.lang.Object,android.support.v7.widget.RecyclerView$ViewHolder) -> b
     23:23:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
     23:23:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
-    23:23:com.flyingkite.mytoswiki.tos.query.TosSelection access$002(com.flyingkite.mytoswiki.library.CardAdapter,com.flyingkite.mytoswiki.tos.query.TosSelection) -> a
+    23:23:com.flyingkite.util.select.Selector access$002(com.flyingkite.mytoswiki.library.CardAdapter,com.flyingkite.util.select.Selector) -> a
     23:23:java.util.List access$100(com.flyingkite.mytoswiki.library.CardAdapter) -> a
-    23:23:com.flyingkite.mytoswiki.tos.query.TosSelection access$000(com.flyingkite.mytoswiki.library.CardAdapter) -> b
+    23:23:com.flyingkite.util.select.Selector access$000(com.flyingkite.mytoswiki.library.CardAdapter) -> b
     23:23:java.util.List access$202(com.flyingkite.mytoswiki.library.CardAdapter,java.util.List) -> a
     23:23:java.util.List access$302(com.flyingkite.mytoswiki.library.CardAdapter,java.util.List) -> b
     23:23:void access$400(com.flyingkite.mytoswiki.library.CardAdapter) -> c
 com.flyingkite.mytoswiki.library.CardAdapter$1 -> com.flyingkite.mytoswiki.d.a$1:
     java.util.List _indices -> c
     java.util.List _msg -> d
-    com.flyingkite.mytoswiki.tos.query.TosSelection val$s -> a
+    com.flyingkite.util.select.Selector val$s -> a
     com.flyingkite.mytoswiki.library.CardAdapter this$0 -> b
-    47:52:void <init>(com.flyingkite.mytoswiki.library.CardAdapter,com.flyingkite.mytoswiki.tos.query.TosSelection) -> <init>
+    47:52:void <init>(com.flyingkite.mytoswiki.library.CardAdapter,com.flyingkite.util.select.Selector) -> <init>
     55:59:java.lang.Void doInBackground(java.lang.Void[]) -> a
     64:68:void onPostExecute(java.lang.Void) -> a
     47:47:void onPostExecute(java.lang.Object) -> onPostExecute
@@ -22635,12 +22635,12 @@ com.flyingkite.mytoswiki.library.CardTileAdapter$TileVH -> com.flyingkite.mytosw
     30:31:void setCard(com.flyingkite.mytoswiki.data.tos.TosCard) -> a
 com.flyingkite.mytoswiki.library.CraftAdapter -> com.flyingkite.mytoswiki.d.h:
     int nameType -> g
-    com.flyingkite.mytoswiki.tos.query.TosSelection selection -> h
+    com.flyingkite.util.select.Selector selection -> h
     java.util.List selectedMessage -> i
     android.os.AsyncTask selectTask -> j
     24:33:void <init>() -> <init>
     38:38:boolean hasSelection() -> d
-    43:70:void setSelection(com.flyingkite.mytoswiki.tos.query.TosSelection) -> a
+    43:70:void setSelection(com.flyingkite.util.select.Selector) -> a
     73:74:void setNameType(int) -> g
     77:80:java.lang.String name(com.flyingkite.mytoswiki.data.tos.BaseCraft) -> a
     85:86:void updateSelection() -> e
@@ -22651,18 +22651,18 @@ com.flyingkite.mytoswiki.library.CraftAdapter -> com.flyingkite.mytoswiki.d.h:
     24:24:void onDidClickItem(java.lang.Object,android.support.v7.widget.RecyclerView$ViewHolder) -> b
     24:24:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> a
     24:24:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> a
-    24:24:com.flyingkite.mytoswiki.tos.query.TosSelection access$002(com.flyingkite.mytoswiki.library.CraftAdapter,com.flyingkite.mytoswiki.tos.query.TosSelection) -> a
+    24:24:com.flyingkite.util.select.Selector access$002(com.flyingkite.mytoswiki.library.CraftAdapter,com.flyingkite.util.select.Selector) -> a
     24:24:java.util.List access$100(com.flyingkite.mytoswiki.library.CraftAdapter) -> a
-    24:24:com.flyingkite.mytoswiki.tos.query.TosSelection access$000(com.flyingkite.mytoswiki.library.CraftAdapter) -> b
+    24:24:com.flyingkite.util.select.Selector access$000(com.flyingkite.mytoswiki.library.CraftAdapter) -> b
     24:24:java.util.List access$202(com.flyingkite.mytoswiki.library.CraftAdapter,java.util.List) -> a
     24:24:java.util.List access$302(com.flyingkite.mytoswiki.library.CraftAdapter,java.util.List) -> b
     24:24:void access$400(com.flyingkite.mytoswiki.library.CraftAdapter) -> c
 com.flyingkite.mytoswiki.library.CraftAdapter$1 -> com.flyingkite.mytoswiki.d.h$1:
     java.util.List _indices -> c
     java.util.List _msg -> d
-    com.flyingkite.mytoswiki.tos.query.TosSelection val$s -> a
+    com.flyingkite.util.select.Selector val$s -> a
     com.flyingkite.mytoswiki.library.CraftAdapter this$0 -> b
-    46:51:void <init>(com.flyingkite.mytoswiki.library.CraftAdapter,com.flyingkite.mytoswiki.tos.query.TosSelection) -> <init>
+    46:51:void <init>(com.flyingkite.mytoswiki.library.CraftAdapter,com.flyingkite.util.select.Selector) -> <init>
     54:58:java.lang.Void doInBackground(java.lang.Void[]) -> a
     63:67:void onPostExecute(java.lang.Void) -> a
     46:46:void onPostExecute(java.lang.Object) -> onPostExecute
@@ -22982,7 +22982,7 @@ com.flyingkite.mytoswiki.tos.query.TosCondition -> com.flyingkite.mytoswiki.f.a.
     40:40:java.util.List getRace() -> b
     44:44:java.util.List getStar() -> c
     48:48:java.util.List getMode() -> d
-com.flyingkite.mytoswiki.tos.query.TosSelection -> com.flyingkite.mytoswiki.f.a.c:
+com.flyingkite.util.select.Selector -> com.flyingkite.mytoswiki.f.a.c:
     java.util.List from() -> b
     java.util.List select() -> c
     boolean onSelect(java.lang.Object) -> a
@@ -22990,13 +22990,13 @@ com.flyingkite.mytoswiki.tos.query.TosSelection -> com.flyingkite.mytoswiki.f.a.
     java.util.List query() -> d
     java.util.List getMessages(java.util.List) -> b
     java.lang.String typeName() -> a
-com.flyingkite.mytoswiki.tos.query.TosSelection$$CC -> com.flyingkite.mytoswiki.f.a.d:
-    21:31:java.util.List select(com.flyingkite.mytoswiki.tos.query.TosSelection) -> a
-    35:35:boolean onSelect(com.flyingkite.mytoswiki.tos.query.TosSelection,java.lang.Object) -> a
-    40:40:java.util.List sort(com.flyingkite.mytoswiki.tos.query.TosSelection,java.util.List) -> a
-    44:52:java.util.List query(com.flyingkite.mytoswiki.tos.query.TosSelection) -> b
-    56:56:java.util.List getMessages(com.flyingkite.mytoswiki.tos.query.TosSelection,java.util.List) -> b
-    69:69:java.lang.String typeName(com.flyingkite.mytoswiki.tos.query.TosSelection) -> c
+com.flyingkite.util.select.Selector$$CC -> com.flyingkite.mytoswiki.f.a.d:
+    21:31:java.util.List select(com.flyingkite.util.select.Selector) -> a
+    35:35:boolean onSelect(com.flyingkite.util.select.Selector,java.lang.Object) -> a
+    40:40:java.util.List sort(com.flyingkite.util.select.Selector,java.util.List) -> a
+    44:52:java.util.List query(com.flyingkite.util.select.Selector) -> b
+    56:56:java.util.List getMessages(com.flyingkite.util.select.Selector,java.util.List) -> b
+    69:69:java.lang.String typeName(com.flyingkite.util.select.Selector) -> c
 com.flyingkite.mytoswiki.util.GlideUtil -> com.flyingkite.mytoswiki.g.a:
     void loadCraftToImageView(android.widget.ImageView,java.lang.String) -> a
     void loadCardToImageView(android.widget.ImageView,com.flyingkite.mytoswiki.data.tos.TosCard) -> a

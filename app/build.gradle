@@ -151,6 +151,11 @@ dependencies {
     //api 'com.github.User:Repo:Tag'
     String ver = ''
     ver = 'a841193247'
+    ver = '4df6b34674' // o
+    ver = 'da0650b654' // x
+    ver = '07f703f1f9' // x
+    ver = 'aaec6aec05' // x
+
     ver = '4df6b34674'
     api "com.github.chenFlyingkite:MyAndroid:$ver"
     //api "com.github.chenFlyingkite:MyAndroid:1f5c017f30"
@@ -158,7 +163,7 @@ dependencies {
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 
     // https://github.com/google/gson
-    api 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.8.7'
 
     // jsoup HTML parser library @ https://jsoup.org/
     // https://github.com/jhy/jsoup

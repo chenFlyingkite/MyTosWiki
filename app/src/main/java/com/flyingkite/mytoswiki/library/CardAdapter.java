@@ -1,20 +1,20 @@
 package com.flyingkite.mytoswiki.library;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
-import com.flyingkite.mytoswiki.tos.query.TosSelection;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.util.select.SelectedData;
+import com.flyingkite.util.select.Selector;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +22,8 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CardAdapter
-        extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>
+public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>
+    implements Loggable
 {
 
     public interface ItemListener extends RVSelectAdapter.ItemListener<TosCard, CardVH> {
@@ -32,11 +32,12 @@ public class CardAdapter
 
     private int nameType = Misc.NT_ID_NORM;
 
-    private TosSelection<TosCard> selection;
-    private List<String> selectedMessage = new ArrayList<>();
-    private AsyncTask<Void, Void, Void> selectTask;
+    private Selector<TosCard> selection;
     private final boolean showPercentLine = true;
     private int[] colorPercent;
+    private List<SelectedData> selectedResult = new ArrayList<>();
+    // current selection runnable
+    private Runnable selectTask;
 
     public CardAdapter() {
         prepareColorPercent();
@@ -60,36 +61,34 @@ public class CardAdapter
         return selectTask != null;
     }
 
-    @SuppressLint("StaticFieldLeak")
-    public void setSelection(TosSelection<TosCard> s) {
-        if (selectTask != null) {
-            selectTask.cancel(true);
+    public void setSelection(Selector<TosCard> s) {
+        if (selection != null) {
+            selection.setCancelled(true);
         }
-        selectTask = new AsyncTask<Void, Void, Void>() {
-            // Very fast to clicking on selection icons will have Inconsistency
-            // java.lang.IndexOutOfBoundsException: Inconsistency detected. Invalid view holder adapter positionViewHolder{d9296d2 position=15 id=-1, oldPos=-1, pLpos:-1 no parent}
-            // So we save result when in background, and then set data set on UI thread
-            private List<Integer> _indices = new ArrayList<>();
-            private List<String> _msg = new ArrayList<>();
-            @Override
-            protected Void doInBackground(Void... voids) {
-                selection = s == null ? new AllCards<>(dataList) : s;
-                if (isCancelled()) return null;
-                _indices = selection.query();
-                if (isCancelled()) return null;
-                _msg = selection.getMessages(_indices);
-                return null;
-            }
+        selectTask = getSearchTask(s);
+        ThreadUtil.cachedThreadPool.submit(selectTask);
+    }
 
+    private Runnable getSearchTask(Selector<TosCard> s) {
+        return new Runnable() {
             @Override
-            protected void onPostExecute(Void aVoid) {
-                selectedIndices = _indices;
-                selectedMessage = _msg;
-                notifyDataSetChanged();
-                notifyFiltered();
+            public void run() {
+                selection = s == null ? new AllCards<>(dataList) : s;
+                if (selectTask != this) return;
+                // perform query and projection on index
+                List<SelectedData> done = selection.query();
+                List<Integer> index = SelectedData.getIndices(done);
+
+                ThreadUtil.runOnUiThread(() -> {
+                    if (selectTask != this) return;
+
+                    selectedResult = done;
+                    selectedIndices = index;
+                    notifyDataSetChanged();
+                    notifyFiltered();
+                });
             }
         };
-        selectTask.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
     public void setNameType(@NameType int type) {
@@ -111,14 +110,13 @@ public class CardAdapter
 
     private void notifyFiltered() {
         if (onItem != null) {
-            onItem.onFiltered(selectedIndices.size(), dataList.size());
+            onItem.onFiltered(selectedResult.size(), dataList.size());
         }
     }
 
     @NonNull
     @Override
     public CardVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //return new CardVH(inflateView(parent, R.layout.view_tos_item_card));
         return new CardVH(inflateView(parent, R.layout.view_tos_item_card_white));
     }
 
@@ -126,9 +124,11 @@ public class CardAdapter
     public void onBindViewHolder(@NonNull CardVH h, int position) {
         super.onBindViewHolder(h, position);
         TosCard c = itemOf(position);
+        //logE("bind #%4d = %s", position, c);
         String msg = null;
-        if (selectedMessage != null && position < selectedMessage.size()) {
-            msg = selectedMessage.get(position);
+
+        if (selectedResult != null && position < selectedResult.size()) {
+            msg = selectedResult.get(position).message;
         }
         h.setCard(c, name(c), msg);
         // Setup right line color
@@ -141,8 +141,9 @@ public class CardAdapter
     }
 
     private void setColorPercent(TextView view, int position, int count) {
-        int thiz = colorPercent.length * (position + 0) / count;
-        int next = colorPercent.length * (position + 1) / count;
+        int n = colorPercent.length;
+        int thiz = n * (position + 0) / count;
+        int next = n * (position + 1) / count;
         if (thiz != next) {
             view.setText(next + "");
             view.setBackgroundColor(colorPercent[thiz]);
@@ -154,7 +155,7 @@ public class CardAdapter
 
     @Override
     protected void onDidClickItem(TosCard c, CardVH holder) {
-        //Say.Log("click %s, %s", c.idNorm, c.name);
+
     }
 
     public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil {
@@ -165,10 +166,10 @@ public class CardAdapter
 
         public CardVH(View v) {
             super(v);
-            thumb = v.findViewById(R.id.tiImg);
             text = v.findViewById(R.id.tiText);
-            message = v.findViewById(R.id.tiMessage);
+            thumb = v.findViewById(R.id.tiImg);
             right = v.findViewById(R.id.tiRightLine);
+            message = v.findViewById(R.id.tiMessage);
         }
 
         public void setCard(TosCard c, String name, String msg) {

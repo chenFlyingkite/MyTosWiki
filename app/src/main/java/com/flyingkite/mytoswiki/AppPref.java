@@ -17,10 +17,6 @@ public class AppPref extends BasePreference implements Loggable {
         super(context);
     }
 
-    public AppPref(Context context, String name) {
-        super(context, name);
-    }
-
     public void printAll() {
         Map<String, ?> m = mPreference.getAll();
         for (String s : m.keySet()) {

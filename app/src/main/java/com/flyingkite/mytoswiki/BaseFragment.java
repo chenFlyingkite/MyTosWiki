@@ -3,7 +3,6 @@ package com.flyingkite.mytoswiki;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,13 +24,13 @@ public class BaseFragment extends Fragment implements PageUtil, BackPage {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        LogV("onAttach(%s)", context);
+        log("onAttach(%s)", context);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogV("onCreate(%s)", savedInstanceState);
+        log("onCreate(%s)", savedInstanceState);
     }
 
     @Override
@@ -47,48 +46,36 @@ public class BaseFragment extends Fragment implements PageUtil, BackPage {
     @Override
     public void onStart() {
         super.onStart();
-        LogV("onStart()");
+        log("onStart()");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogV("onResume()");
+        log("onResume()");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        LogV("onPause()");
+        log("onPause()");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        LogV("onStop()");
+        log("onStop()");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogV("onDestroy()");
-    }
-
-    /**
-     * @return true if this event was consumed
-     */
-    public boolean onBackPressed() {
-        return false;
+        log("onDestroy()");
     }
 
     @LayoutRes
     protected int getPageLayoutId() {
         return -1;
-    }
-
-    @Override
-    public void log(String message) {
-        Log.w(LTag(), message);
     }
 
 }
