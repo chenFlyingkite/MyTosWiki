@@ -17,7 +17,8 @@
         <TextView
             android:id="@+id/sld_row_level"
             style="@style/sld_row_item"
-            tools:text="850"/>
+            android:layout_width="@dimen/t70dp"
+            tools:text="1150"/>
 
         <View
             android:layout_width="2dp"
@@ -27,13 +28,14 @@
         <TextView
             android:id="@+id/sld_row_exp_dx"
             style="@style/sld_row_item"
-            android:layout_width="@dimen/t100dp"
-            tools:text="980665"/>
+            android:layout_width="@dimen/t110dp"
+            tools:text="980665"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/sld_row_exp_sum"
             style="@style/sld_row_item"
-            android:layout_width="@dimen/t120dp"
+            android:layout_width="@dimen/t140dp"
             tools:text="315699657"/>
 
         <View

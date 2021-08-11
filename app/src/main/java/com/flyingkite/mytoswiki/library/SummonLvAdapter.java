@@ -1,6 +1,5 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.SummonLvVH> {
     public interface ItemListener {
         void onClick(String item, SummonLvVH holder, int position);
@@ -22,7 +23,8 @@ public class SummonLvAdapter extends RecyclerView.Adapter<SummonLvAdapter.Summon
 
     private static final int NO_POS = RecyclerView.NO_POSITION;
 
-    private static final int[] CHILD_IDS = {R.id.sld_row_level, R.id.sld_row_exp_dx, R.id.sld_row_exp_sum
+    private static final int[] CHILD_IDS = {R.id.sld_row_level//, R.id.sld_row_exp_dx,
+            , R.id.sld_row_exp_sum
             , R.id.sld_row_stamina, R.id.sld_row_team_cost, R.id.sld_row_team_slot};
     private final String[] header = TosSummonerLevel.headerZh;
     private final long[][] table = TosSummonerLevel.table;

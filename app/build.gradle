@@ -72,11 +72,12 @@ android {
         // https://stackoverflow.com/questions/44322178/room-schema-export-directory-is-not-provided-to-the-annotation-processor-so-we
         kapt {
             arguments {
-                arg("room.schemaLocation", "$projectDir/schemas")
+                //arg("room.schemaLocation", "$projectDir/schemas")
             }
         }
     }
 
+    // https://developer.android.com/studio/build/optimize-your-build
     buildTypes {
         debug {
             signingConfig signingConfigs.config
@@ -184,7 +185,7 @@ dependencies {
     // https://github.com/bumptech/glide
     api "com.github.bumptech.glide:glide:4.11.0"
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
-    //annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     // MathView is a third-party view library, which might help you display math formula on Android apps easier.
     // https://github.com/kexanie/MathView
