@@ -19,6 +19,7 @@ public class PackCard {
     @SerializedName("skillLevel")
     public int skillLevel;
 
+    // 1 = 昇華1, 4 = 昇華4, 5 = 極限昇華
     @SerializedName("enhanceLevel")
     public int enhanceLevel;
 

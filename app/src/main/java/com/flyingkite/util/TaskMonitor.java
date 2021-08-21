@@ -1,12 +1,12 @@
 package com.flyingkite.util;
 
-import androidx.annotation.NonNull;
-
 import com.flyingkite.library.log.Loggable;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import androidx.annotation.NonNull;
 
 public class TaskMonitor implements Loggable {
     /**
@@ -58,7 +58,7 @@ public class TaskMonitor implements Loggable {
 
     public synchronized void notifyClientsState() {
         synchronized (clients) {
-            List<Integer> toRemove = new ArrayList<>();
+            List<OnTaskState> toRemove = new ArrayList<>();
             int n = clients.size();
             log("+ notify state to %s clients = %s", clients.size(), clients);
             for (int i = 0; i < n; i++) {
@@ -74,23 +74,19 @@ public class TaskMonitor implements Loggable {
                 // If all tasks are done, we plans to remove client[i]
                 if (done == taskOwner.taskCount()) {
                     ci.onAllTaskDone();
-                    toRemove.add(i);
+                    toRemove.add(ci);
                 }
             }
-
-            // Remove the clients, from largest index to smallest
-            log("Remove clients = %s", toRemove);
-            n = toRemove.size();
-            for (int i = n - 1; i >= 0; i--) {
-                int clientIndex = toRemove.get(i);
-                clients.remove(clientIndex);
+            for (OnTaskState c : toRemove) {
+                clients.remove(c);
             }
+
             log("- end with %s clients = %s", clients.size(), clients);
         }
     }
 
     @Override
     public void log(String message) {
-        //Log.i(LTag(), message);
+        //logE(message);
     }
 }

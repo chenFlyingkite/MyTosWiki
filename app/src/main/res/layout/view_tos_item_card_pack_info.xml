@@ -46,11 +46,11 @@
         android:id="@+id/tiMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/t14dp"
-        tools:text="Message"
-        android:textColor="@color/skyBlue"
+        android:layout_below="@id/tiTextBox"
         android:gravity="center"
-        android:layout_below="@id/tiTextBox"/>
+        android:textColor="@color/skyBlue"
+        android:textSize="@dimen/t14dp"
+        tools:text="Message" />
 
     <LinearLayout
         android:layout_below="@id/tiMessage"

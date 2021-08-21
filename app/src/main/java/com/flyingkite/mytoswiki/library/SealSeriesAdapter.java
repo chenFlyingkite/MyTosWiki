@@ -7,7 +7,7 @@ import android.widget.RadioButton;
 import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.data.seal.SealItem;
+import com.flyingkite.mytoswiki.data.seal.v1.SealItem;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;

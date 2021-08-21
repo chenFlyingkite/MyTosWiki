@@ -35,6 +35,9 @@
     <style name="common_text.white">
         <item name="android:textColor">#fff</item>
     </style>
+    <style name="common_text.grey">
+        <item name="android:textColor">@color/grey_white</item>
+    </style>
     <style name="common_text.black">
         <item name="android:textColor">#000</item>
     </style>
@@ -57,6 +60,10 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:src">@drawable/evo_arrow</item>
+    </style>
+
+    <style name="evoArrow.R">
+        <item name="android:scaleX">-1</item>
     </style>
 
     <style name="evoPlus">
@@ -291,6 +298,12 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/bg_press_sky</item>
+    </style>
+
+    <style name="tosIcon.t45">
+        <item name="android:layout_width">@dimen/t45dp</item>
+        <item name="android:layout_height">@dimen/t45dp</item>
+        <item name="android:background">@drawable/bg_press_sky_rect</item>
     </style>
 
     <style name="tosGo" parent="tosIcon">

@@ -6,6 +6,12 @@ public class PackSort {
     @SerializedName("ownExist")
     public boolean ownExist;
 
+    @SerializedName("ownZero")
+    public boolean ownZero;
+
+    @SerializedName("unownedPath")
+    public boolean unownedPath;
+
     @SerializedName("farm")
     public boolean farm;
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/t70dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_press_sky"
+    tools:background="@color/grey3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/evolveArrow"
+            style="@style/evoArrow.R"
+            android:layout_width="@dimen/t20dp"/>
+
+        <ImageView
+            android:id="@+id/evolveCard"
+            style="@style/cardIcon"
+            android:background="#0000"
+            android:src="@drawable/unknown_card"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/evolveText"
+        style="@style/dialog_title.white"
+        android:textSize="@dimen/t14dp"
+        tools:text="1234\n56789"/>
+</LinearLayout>

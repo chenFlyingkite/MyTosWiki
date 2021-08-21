@@ -13,6 +13,7 @@ public class SelectedData {
         return index + " -> " + message;
     }
 
+    // projection on list for field, [list.index]
     public static List<Integer> getIndices(List<SelectedData> list) {
         List<Integer> ans = new ArrayList<>();
         if (list != null) {

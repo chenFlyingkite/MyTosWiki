@@ -21379,8 +21379,8 @@ com.flyingkite.mytoswiki.data.Texts -> com.flyingkite.mytoswiki.b.d:
     java.util.List data -> a
     8:9:void <init>() -> <init>
 com.flyingkite.mytoswiki.data.seal.BaseSeal -> com.flyingkite.mytoswiki.b.a.a:
-    com.flyingkite.mytoswiki.data.seal.SealSample normalSample -> a
-    com.flyingkite.mytoswiki.data.seal.SealSample raisedSample -> b
+    com.flyingkite.mytoswiki.data.seal.v1.SealSample normalSample -> a
+    com.flyingkite.mytoswiki.data.seal.v1.SealSample raisedSample -> b
     java.util.List sealCards -> c
     android.os.Parcelable$Creator CREATOR -> CREATOR
     13:16:void <init>() -> <init>
@@ -21395,22 +21395,22 @@ com.flyingkite.mytoswiki.data.seal.BaseSeal$1 -> com.flyingkite.mytoswiki.b.a.a$
     105:105:com.flyingkite.mytoswiki.data.seal.BaseSeal[] newArray(int) -> a
     97:97:java.lang.Object[] newArray(int) -> newArray
     97:97:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-com.flyingkite.mytoswiki.data.seal.HinduGods -> com.flyingkite.mytoswiki.b.a.b:
+com.flyingkite.mytoswiki.data.seal.v1.HinduGods -> com.flyingkite.mytoswiki.b.a.b:
     8:21:void <init>() -> <init>
-com.flyingkite.mytoswiki.data.seal.SealSample -> com.flyingkite.mytoswiki.b.a.c:
+com.flyingkite.mytoswiki.data.seal.v1.SealSample -> com.flyingkite.mytoswiki.b.a.c:
     android.os.Parcelable$Creator CREATOR -> CREATOR
     11:12:void <init>(int) -> <init>
     16:16:int describeContents() -> describeContents
     21:26:void writeToParcel(android.os.Parcel,int) -> writeToParcel
     28:33:void <init>(android.os.Parcel) -> <init>
     35:35:void <clinit>() -> <clinit>
-com.flyingkite.mytoswiki.data.seal.SealSample$1 -> com.flyingkite.mytoswiki.b.a.c$1:
+com.flyingkite.mytoswiki.data.seal.v1.SealSample$1 -> com.flyingkite.mytoswiki.b.a.c$1:
     35:35:void <init>() -> <init>
-    38:38:com.flyingkite.mytoswiki.data.seal.SealSample createFromParcel(android.os.Parcel) -> a
-    43:43:com.flyingkite.mytoswiki.data.seal.SealSample[] newArray(int) -> a
+    38:38:com.flyingkite.mytoswiki.data.seal.v1.SealSample createFromParcel(android.os.Parcel) -> a
+    43:43:com.flyingkite.mytoswiki.data.seal.v1.SealSample[] newArray(int) -> a
     35:35:java.lang.Object[] newArray(int) -> newArray
     35:35:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-com.flyingkite.mytoswiki.data.seal.SengokuSamurai -> com.flyingkite.mytoswiki.b.a.d:
+com.flyingkite.mytoswiki.data.seal.v1.SengokuSamurai -> com.flyingkite.mytoswiki.b.a.d:
     8:21:void <init>() -> <init>
 com.flyingkite.mytoswiki.data.tos.BaseCraft -> com.flyingkite.mytoswiki.b.b.a:
     java.lang.String idNorm -> a
@@ -21812,8 +21812,8 @@ com.flyingkite.mytoswiki.dialog.CardSealDialog -> com.flyingkite.mytoswiki.c.q:
     417:419:void resetPool() -> r
     422:422:java.util.List drawNCards(int) -> a
     426:432:java.util.List drawNCards(boolean,int) -> a
-    436:436:com.flyingkite.mytoswiki.data.seal.SealSample getWorkingSample() -> s
-    440:440:com.flyingkite.mytoswiki.data.seal.SealSample getWorkingSample(boolean) -> a
+    436:436:com.flyingkite.mytoswiki.data.seal.v1.SealSample getWorkingSample() -> s
+    440:440:com.flyingkite.mytoswiki.data.seal.v1.SealSample getWorkingSample(boolean) -> a
     446:449:void logShare(java.lang.String) -> l
     451:454:void logAction(java.lang.String) -> m
     457:460:void logImpression() -> t
@@ -21824,7 +21824,7 @@ com.flyingkite.mytoswiki.dialog.CardSealDialog -> com.flyingkite.mytoswiki.c.q:
     158:160:void lambda$initPools$2$CardSealDialog(android.view.View) -> f
     154:155:void lambda$initPools$1$CardSealDialog(android.view.View) -> g
     147:149:void lambda$initPools$0$CardSealDialog(android.view.View) -> h
-    51:51:com.flyingkite.mytoswiki.data.seal.SealSample access$000(com.flyingkite.mytoswiki.dialog.CardSealDialog) -> a
+    51:51:com.flyingkite.mytoswiki.data.seal.v1.SealSample access$000(com.flyingkite.mytoswiki.dialog.CardSealDialog) -> a
     51:51:com.flyingkite.mytoswiki.data.seal.BaseSeal access$100(com.flyingkite.mytoswiki.dialog.CardSealDialog) -> b
     51:51:void access$200(com.flyingkite.mytoswiki.dialog.CardSealDialog) -> c
     51:51:void access$300(com.flyingkite.mytoswiki.dialog.CardSealDialog,java.lang.String) -> a

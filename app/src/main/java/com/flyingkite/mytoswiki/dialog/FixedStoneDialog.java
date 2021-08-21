@@ -44,6 +44,14 @@ public class FixedStoneDialog extends BaseTosDialog {
         Collections.addAll(stones,
             //                1         2         3
             //       123456789012345678901234567890
+            new StoneFix("2595",
+                    "fffefwefwefwefwefwefwefwefwfff", "(14火, 8水, 8木)"),
+            new StoneFix("2595",
+                    "ffflhdwfelhdwfelhdwfelhdwfefff", "(4水, 10火, 4木, 4光, 4暗, 4心)"),
+            new StoneFix("2595",
+                    "lllhhhdldldldldldldldldlhhhddd", "(12光, 12暗, 6心)"),
+            new StoneFix("2595",
+                    "wfeldwwfeldwwfeldwwfeldwhhhhhh", "心6個 + 五屬各4個"),
             new StoneFix("1963",
                     "wfeldwwfeldwwfeldwwfeldwhhhhhh", "心6個 + 五屬各4個"),
             new StoneFix("2232",
@@ -96,7 +104,9 @@ public class FixedStoneDialog extends BaseTosDialog {
                     "---FFF---EEE---LLL---DDD---WWW", "五屬強化各3個"),
             new StoneFix("2069",  
                     "WWW---FFF---EEE---LLL---DDD---", "五屬強化各3個"),
-            new StoneFix("2151",  
+            new StoneFix("2576",
+                    "D-D-D--D-D-DD-D-D--D-D-DD-D-D-", "15暗強"),
+            new StoneFix("2151",
                     "D----WD----WD----WD----WWWWDDD", "(7暗強神,7水強神)"),
             new StoneFix("9018,2169,1094",  
                     "--dd----dd--dddddd--dd----dd--", "14X\n X = 暗神 -> 超人捷德 (#2169)\n X = 水神 -> 超人捷德 & 超人ZERO (#2150)\n X = 光 -> 亞瑟 (#2169)"),
@@ -131,9 +141,6 @@ public class FixedStoneDialog extends BaseTosDialog {
             new StoneFix("1854",  
                     "---lll-----l-----l-----l-----l", "7光")
         );
-        // TODO
-        // #2576,面紗下的微光 ‧ 塔維爾 ?
-        // #2497,蜃樓星火 ‧ 伊斯塔 ?
     }
 
     private void initActions() {

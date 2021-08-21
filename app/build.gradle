@@ -12,7 +12,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.firebase.firebase-perf'
 
 task MyBuildInfo {
-    int vCode = 119
+    int vCode = 120
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
@@ -63,7 +63,7 @@ android {
 
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode

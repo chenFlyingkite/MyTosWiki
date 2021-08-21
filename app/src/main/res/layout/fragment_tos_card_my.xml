@@ -4,13 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/grey3a">
 
     <RelativeLayout
         android:id="@+id/tosTopBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/grey3a">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/tosMyInput"
@@ -101,108 +101,105 @@
                 android:text="@string/clear"/>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tosTools"
-            android:layout_below="@id/tosUidBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/tosFavor"
-                style="@style/tosIcon"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"
-                android:visibility="gone"
-                android:src="@drawable/ic_favorite_border_white_48"
-                android:background="@drawable/bg_press_sky_rect"/>
-
-            <ImageView
-                android:id="@+id/tosToolBar"
-                style="@style/tosIcon"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_open_in_browser_white_48dp"
-                android:background="@drawable/bg_press_sky_rect"/>
-
-            <ImageView
-                android:id="@+id/tosGoTop"
-                style="@style/tosGoTopW"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"/>
-
-            <ImageView
-                android:id="@+id/tosGoBottom"
-                style="@style/tosGoBottomW"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"/>
-
-            <ImageView
-                android:id="@+id/tosSortMenu"
-                style="@style/tosIcon"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_sort_white_48dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/tosTools"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tosInfo"
-                style="@style/common_text"
-                android:textColor="@color/grey_white"
-                tools:text="@string/cards_selection_kind"/>
-            <TextView
-                android:id="@+id/tosInfo2"
-                style="@style/common_text"
-                android:textColor="@color/grey_white"
-                tools:text="@string/cards_selection"/>
-        </LinearLayout>
     </RelativeLayout>
 
-    <!-- Remove me -->
-    <LinearLayout
-        android:id="@+id/tosFavorBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        tools:visibility="visible"
-        android:visibility="gone">
-
-        <ImageView
-            style="@style/card_icon.favorW"
-            android:layout_width="@dimen/t20dp"
-            android:layout_height="@dimen/t20dp"
-            android:background="@color/green"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tosFavorites"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/t50dp"
-            android:scrollbars="horizontal"/>
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tosRecycler"
-        android:layout_below="@id/tosTopBar"
-        android:layout_above="@id/tosFavorBox"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/grey3a"
-        app:fastScrollEnabled="true"
-        app:fastScrollVerticalTrackDrawable="@drawable/recycler_track"
-        app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
-        app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
-        app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
+        android:layout_below="@id/tosTopBar">
 
+        <Button
+            android:id="@+id/tosHow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/how_to_use"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/tosMyPackArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tosTools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tosFavor"
+                    style="@style/tosIcon.t45"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_favorite_border_white_48" />
+
+                <ImageView
+                    android:id="@+id/tosToolBar"
+                    style="@style/tosIcon.t45"
+                    android:src="@drawable/ic_open_in_browser_white_48dp" />
+
+                <ImageView
+                    android:id="@+id/tosGoTop"
+                    style="@style/tosGoTopW"
+                    android:layout_width="@dimen/t45dp"
+                    android:layout_height="@dimen/t45dp" />
+
+                <ImageView
+                    android:id="@+id/tosGoBottom"
+                    style="@style/tosGoBottomW"
+                    android:layout_width="@dimen/t45dp"
+                    android:layout_height="@dimen/t45dp" />
+
+                <ImageView
+                    android:id="@+id/tosSortMenu"
+                    style="@style/tosIcon"
+                    android:layout_width="@dimen/t45dp"
+                    android:layout_height="@dimen/t45dp"
+                    android:src="@drawable/ic_sort_white_48dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tosTools"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tosInfo"
+                    style="@style/common_text.grey"
+                    tools:text="@string/cards_selection_kind" />
+
+                <TextView
+                    android:id="@+id/tosInfo2"
+                    style="@style/common_text.grey"
+                    tools:text="@string/cards_selection" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tosCardRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tosTools"
+                app:fastScrollEnabled="true"
+                app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"
+                app:fastScrollHorizontalTrackDrawable="@drawable/recycler_track"
+                app:fastScrollVerticalThumbDrawable="@drawable/recycler_thumb"
+                app:fastScrollVerticalTrackDrawable="@drawable/recycler_track" />
+        </RelativeLayout>
+
+        <!--
+        <RelativeLayout
+            android:id="@+id/tosEvolvePathArea"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t300dp"
+            android:layout_alignParentBottom="true">
+
+        </RelativeLayout>
+        -->
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tosLoading"
@@ -211,14 +208,5 @@
         android:text="@string/cardsLoading"
         android:visibility="gone"
         tools:visibility="visible"/>
-
-    <Button
-        android:id="@+id/tosHow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"
-        tools:visibility="visible"
-        android:text="@string/how_to_use"/>
 
 </RelativeLayout>

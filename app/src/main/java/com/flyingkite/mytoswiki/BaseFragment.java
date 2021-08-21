@@ -1,5 +1,6 @@
 package com.flyingkite.mytoswiki;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -78,4 +79,12 @@ public class BaseFragment extends Fragment implements PageUtil, BackPage {
         return -1;
     }
 
+    //-- common method for fragment
+
+    public final void runOnUiThread(Runnable r) {
+        Activity a = getActivity();
+        if (a != null) {
+            a.runOnUiThread(r);
+        }
+    }
 }

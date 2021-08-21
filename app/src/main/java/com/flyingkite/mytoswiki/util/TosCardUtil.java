@@ -68,6 +68,8 @@ public class TosCardUtil {
     }
 
     public static boolean isInBag(TosCard c) {
+        if (c == null) return false;
+
         Pattern p;
         if (isSkin(c) || isTunestone(c)) {
             return false;

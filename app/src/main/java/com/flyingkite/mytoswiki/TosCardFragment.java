@@ -15,7 +15,6 @@ import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.util.GsonUtil;
 import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.library.util.MathUtil;
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.Library;
 import com.flyingkite.library.widget.SimpleItemTouchHelper;
 import com.flyingkite.mytoswiki.data.CardFavor;
@@ -24,7 +23,6 @@ import com.flyingkite.mytoswiki.data.tos.SkillLite;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.OnAction;
 import com.flyingkite.mytoswiki.library.CardAdapter;
-import com.flyingkite.mytoswiki.library.CardLibrary;
 import com.flyingkite.mytoswiki.library.CardTileAdapter;
 import com.flyingkite.mytoswiki.library.Misc;
 import com.flyingkite.mytoswiki.share.ShareHelper;
@@ -32,6 +30,7 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.RegexUtil;
+import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 import com.flyingkite.util.TaskMonitor;
@@ -63,7 +62,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private TextView tosInfo;
     // Main library
     private RecyclerView cardsRecycler;
-    private CardLibrary cardLib;
+    private Library<CardAdapter> cardLib;
     // Favorite library
     private View favorBox;
     private RecyclerView favorRecycler;
@@ -184,20 +183,14 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     private List<TosCard> allCards;
 
     private ToolBarOwner toolOwner;
-
-    public interface ToolBarOwner {
-        void setToolsVisible(boolean visible);
-        boolean isToolsVisible();
-    }
+    private AppPref appPref = new AppPref();
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         tosInfo = findViewById(R.id.tosInfo);
 
-        cardsRecycler = findViewById(R.id.tosRecycler);
         favorBox = findViewById(R.id.tosFavorBox);
         favorRecycler = findViewById(R.id.tosFavorites);
-        menuEntry = findViewById(R.id.tosSortMenu);
         initCardLibrary();
         initSortMenu();
         initToolIcons();
@@ -208,7 +201,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void initCardLibrary() {
-        cardLib = new CardLibrary(cardsRecycler);
+        cardsRecycler = findViewById(R.id.tosRecycler);
+        cardLib = new Library<>(cardsRecycler, 5);
     }
 
     private void initToolIcons() {
@@ -236,10 +230,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         favor.setOnClickListener((v) -> {
             boolean s = !v.isSelected();
             updateFavor(s);
-            new AppPref().setShowFavorite(s);
+            appPref.setShowFavorite(s);
             logAction(s ? "showFavor" : "hideFavor");
         });
-        updateFavor(new AppPref().getShowFavorite());
+        updateFavor(appPref.getShowFavorite());
     }
 
     private void updateFavor(boolean b) {
@@ -339,7 +333,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
 
-            getActivity().runOnUiThread(() -> {
+            runOnUiThread(() -> {
                 onCardsReady(TosWiki.allCards());
                 TosWiki.joinFavorAction(favorAction);
             });
@@ -394,15 +388,42 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
     */
 
-    private void initShareImage(View parent) {
-        parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
-            View view = cardsRecycler;
-            String name = ShareHelper.cacheName("1.png");
-            logE("Save to %s", name);
+    @Override
+    public boolean onBackPressed() {
+        if (filterArea.getVisibility() == View.VISIBLE) {
+            filterArea.performClick();
+            return true;
+        }
+        return super.onBackPressed();
+    }
 
-            ShareHelper.shareImage(getActivity(), view, name);
-            logShare("library");
+    // todo
+    // init sort menus and put onClickListeners --------
+    private void initSortMenu() {
+        menuEntry = findViewById(R.id.tosSortMenu);
+        View pop = findViewById(R.id.tosFilterBg);
+        pop.setOnClickListener((v) -> {
+            pop.setVisibility(View.INVISIBLE);
         });
+        menuEntry.setOnClickListener((v) -> {
+            pop.setVisibility(View.VISIBLE);
+        });
+        filterArea = pop;
+        View menu = findViewById(R.id.tosMenuSel);
+        makeMenu(menu);
+    }
+
+    private void initSortMenu2() {
+        // Create MenuWindow
+        Pair<View, PopupWindow> pair = createPopupWindow(R.layout.popup_tos_sort_card, (ViewGroup) getView());
+        sortWindow = pair.second;
+        View menu = pair.first;
+
+        menuEntry.setOnClickListener(v -> {
+            sortWindow.showAsDropDown(v);
+        });
+
+        makeMenu(menu);
     }
 
     private void makeMenu(View menu) {
@@ -422,56 +443,15 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         initSortBySearch(menu);
     }
 
-    @Override
-    public boolean onBackPressed() {
-        if (filterArea.getVisibility() == View.VISIBLE) {
-            filterArea.performClick();
-            return true;
-        }
-        return super.onBackPressed();
-    }
+    private void initShareImage(View parent) {
+        parent.findViewById(R.id.tosSave).setOnClickListener((v) -> {
+            View view = cardsRecycler;
+            String name = ShareHelper.cacheName("1.png");
+            logE("Save to %s", name);
 
-    // todo
-    // init sort menus and put onClickListeners --------
-    private void initSortMenu() {
-        View pop = findViewById(R.id.tosFliterBg);
-        pop.setOnClickListener((v) -> {
-            pop.setVisibility(View.INVISIBLE);
+            ShareHelper.shareImage(getActivity(), view, name);
+            logShare("library");
         });
-        // fail... and cause much crash
-        menuEntry.setOnClickListener((v) -> {
-            pop.setVisibility(View.VISIBLE);
-        });
-        filterArea = pop;
-        View menu = findViewById(R.id.tosMenuSel);
-        makeMenu(menu);
-    }
-
-    private void initSortMenu2() {
-        // Create MenuWindow
-        Pair<View, PopupWindow> pair = createPopupWindow(R.layout.popup_tos_sort_card, (ViewGroup) getView());
-        sortWindow = pair.second;
-        View menu = pair.first;
-
-        menuEntry.setOnClickListener(v -> {
-            sortWindow.showAsDropDown(v);
-            logSelectCard();
-        });
-
-        initShareImage(menu);
-        initSortReset(menu);
-        initSortByAttribute(menu);
-        initSortByRace(menu);
-        initSortByRaceRuneStones(menu);
-        initSortByFormula(menu);
-        initSortByTurnRuneStones(menu);
-        initSortByStar(menu);
-        initSortByCommon(menu);
-        initSortBySpecial(menu);
-        initSortByHide(menu);
-        initDisplay(menu);
-        initSortByImprove(menu);
-        initSortBySearch(menu);
     }
 
     private void initSortReset(View menu) {
@@ -724,8 +704,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         }
         if (cardLib.adapter != null) {
             cardLib.adapter.setNameType(type);
-            cardLib.adapter.updateSelection();
-            cardLib.adapter.notifyDataSetChanged();
+            int n = cardLib.adapter.getItemCount();
+            cardLib.adapter.notifyItemRangeChanged(0, n);
         }
     }
 
@@ -735,7 +715,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         if (id != R.id.sortCommonNormId) {
             sortFormulaCard.check(R.id.sortFormulaCardNo);
             sortFormulaList.check(R.id.sortFormulaNo);
-        };
+        }
 
         applySelection();
     }
@@ -756,7 +736,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
     private void clickSearch(View v) {
         String s = searchText.getText().toString();
-        new AppPref().setCardsSearchText(s);
+        appPref.setCardsSearchText(s);
         applySelection();
     }
 
@@ -815,9 +795,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void updateFromPref() {
-        AppPref p = new AppPref();
         if (searchText != null) {
-            searchText.setText(p.getCardsSearchText());
+            searchText.setText(appPref.getCardsSearchText());
         }
     }
 
@@ -1122,7 +1101,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                     e.printStackTrace();
                     if (!showRegexFail) {
                         showRegexFail = true;
-                        ThreadUtil.runOnUiThread(() -> {
+                        runOnUiThread(() -> {
                             App.showToast(e.getMessage());
                         });
                     }
@@ -1690,13 +1669,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     }
     // --------
 
-    private void logSelectCard() {
-        Map<String, String> m = new HashMap<>();
-        //String id = craft == null ? "--" : craft.idNorm;
-        //m.put("craft", id);
-        FabricAnswers.logSelectCard(null);
-    }
-
     // The file of dialog setting
     private File getTosCardSortFile() {
         return ShareHelper.extFilesFile("cardSort.txt");
@@ -1709,7 +1681,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 CardSort data = get();
                 if (getActivity() == null) return;
 
-                ThreadUtil.runOnUiThread(() -> {
+                runOnUiThread(() -> {
                     cardSort = data != null ? data : new CardSort();
                     updateHide();
                     updateFromPref();

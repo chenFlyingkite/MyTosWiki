@@ -23,6 +23,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.math.Provider;
 
 public interface PageUtil extends Loggable, ViewUtil {
 
@@ -44,14 +45,18 @@ public interface PageUtil extends Loggable, ViewUtil {
         d.show(getActivity());
     }
 
-    default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
+    default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, Provider<RecyclerView> owner) {
         View w;
         w = findViewById(goTop);
         if (w != null) {
             w.setOnClickListener((v) -> {
-                if (recycler != null) {
-                    recycler.scrollToPosition(0);
-                    onToolScrollToPosition(recycler, 0);
+                RecyclerView rv = null;
+                if (owner != null) {
+                    rv = owner.provide();
+                }
+                if (rv != null) {
+                    rv.scrollToPosition(0);
+                    onToolScrollToPosition(rv, 0);
                 }
             });
         }
@@ -59,27 +64,28 @@ public interface PageUtil extends Loggable, ViewUtil {
         w = findViewById(goBottom);
         if (w != null) {
             w.setOnClickListener((v) -> {
-                if (recycler != null) {
-                    RecyclerView.Adapter a = recycler.getAdapter();
+                RecyclerView rv = null;
+                if (owner != null) {
+                    rv = owner.provide();
+                }
+                if (rv != null) {
+                    RecyclerView.Adapter a = rv.getAdapter();
                     int end = 0;
                     if (a != null) {
                         end = a.getItemCount() - 1;
                     }
-                    recycler.scrollToPosition(end);
-                    onToolScrollToPosition(recycler, end);
+                    rv.scrollToPosition(end);
+                    onToolScrollToPosition(rv, end);
                 }
             });
         }
     }
 
-//    default void runOnUiThread(Runnable r) {
-//        Activity a = getActivity();
-//        if (a == null) {
-//            ThreadUtil.runOnUiThread(r);
-//        } else {
-//            a.runOnUiThread(r);
-//        }
-//    }
+    default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, RecyclerView recycler) {
+        initScrollTools(goTop, goBottom, () -> {
+            return recycler;
+        });
+    }
 
     /**
      * @return pair of inflated menu view & popup window

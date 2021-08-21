@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +36,7 @@ import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
+import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.util.PGAdapter;
 import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
@@ -49,7 +49,7 @@ import java.util.List;
 import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends BaseActivity implements
-        TosCardFragment.ToolBarOwner,
+        ToolBarOwner,
         WebDialog.OnWebAction,
         PageUtil
 {
@@ -86,6 +86,7 @@ public class MainActivity extends BaseActivity implements
     private final List<String> homePagerTags = new ArrayList<>();
 
     private WaitingDialog waiting;
+    private AppPref appPref = new AppPref();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,11 +104,9 @@ public class MainActivity extends BaseActivity implements
         pagerOK = true;
         cardPager = findViewById(R.id.cardPager);
         ViewPager p = cardPager;
-        boolean atLeast17 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1;
         List<String> data = homePagerTags;
         data.add(TosCardFragment.TAG);
-        //atLeast17 = false;
-        if (atLeast17) {
+        if (1 > 0) { // use web
             data.add(WebDialog.TAG + "_1");
             data.add(WebDialog.TAG + "_2");
             data.add(WebDialog.TAG + "_3");
@@ -134,10 +133,7 @@ public class MainActivity extends BaseActivity implements
 
         @Override
         public void onCreateView(View v, int position) {
-            int id = R.id.layoutBox;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                id = View.generateViewId();
-            }
+            int id = View.generateViewId();
 
             Bundle b = new Bundle();
             Fragment f = null;
@@ -303,7 +299,7 @@ public class MainActivity extends BaseActivity implements
             }
         });
         iconLibrary.setViewAdapter(adapter);
-        updateTools(new AppPref().getShowAppTool());
+        updateTools(appPref.getShowAppTool());
     }
 
     @Override
@@ -324,7 +320,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void setToolsVisible(boolean visible) {
         updateTools(visible);
-        new AppPref().setShowAppTool(visible);
+        appPref.setShowAppTool(visible);
     }
 
     @Override

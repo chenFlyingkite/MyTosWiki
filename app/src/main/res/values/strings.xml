@@ -60,7 +60,11 @@
     <string name="cards_n_card">%d 張</string>
     <string name="cards_selection_kind">%1$d / %2$d 種卡片</string>
     <string name="cards_selection">%1$d / %2$d 張卡片</string>
+    <string name="cards_evolution">%1$d / %2$d 條進化</string>
+    <string name="cards_evolution_info">#%1$s : %2$s</string>
+    <string name="cards_evolution_info_each">( %1$d等, 技%2$d)</string>
     <string name="cards_read">%s 張卡片已讀取</string>
+    <string name="cards_path_read">%s 條進化已讀取</string>
     <string name="cards_normId">編號</string>
     <string name="cards_level">等級</string>
     <string name="cards_attr">屬性</string>
@@ -158,6 +162,7 @@
     <string name="cards_no">無</string>
     <string name="cards_attack_ratio">攻擊倍率</string>
     <string name="cards_star">星 (稀有度)</string>
+    <string name="cards_evolve_path">進化長度</string>
     <string name="cards_common">常用排序 (^ = 滿昇華, # = 滿等滿技)</string>
     <string name="cards_HP">生命力</string>
     <string name="cards_Attack">攻擊力</string>
@@ -182,6 +187,8 @@
         <item>@string/cards_race_evolve</item>
         <item>@string/cards_race_level</item>
     </string-array>
+
+    <string name="cards_pack_non_skill_level_max">最高進化卡片未滿技 (可吃技到滿技)</string>
 
     <string name="cards_special">技能特選</string>
     <string name="cards_special_add_detail">包括 隊伍技能，組合技能 (卡牌資訊)</string>
@@ -566,11 +573,13 @@
     <string name="cards_hide">不顯示卡片</string>
     <string name="cards_hide_farm2">僅選 1~4 星肥料卡，排除一般卡</string>
     <string name="cards_hide_nonfarm2">僅選一般卡，排除 1~4 星肥料卡</string>
-    <string name="cards_hide_empty">僅選 擁有數 > 0</string>
+    <string name="cards_hide_empty">僅選 最高進化卡片_擁有數 > 0</string>
+    <string name="cards_hide_show_empty">僅選 最高進化卡片_擁有數 = 0</string>
+    <string name="cards_hide_show_unowned">僅選 進化路徑卡片_擁有數 = 0</string>
     <string name="cards_hide_804x_no">隱藏 迪士尼</string>
     <string name="cards_hide_7xxx_no">隱藏 討伐戰、天竺鼠車車、哥吉拉</string>
     <string name="cards_hide_9xxx_no">隱藏 72柱神</string>
-    <string name="cards_hide_farm">肥料系列</string>
+    <string name="cards_hide_farm">素材背包卡片系列</string>
     <string name="cards_hide_nonfarm">非肥料系列</string>
     <string name="cards_hide_6xxx">動態造型</string>
     <string name="cards_hide_7xxx">討伐戰</string>
@@ -581,6 +590,9 @@
     <string name="cards_hide_8xxx_2">隱藏 迪士尼、存音石</string>
     <string name="cards_hide_9xxx_2">隱藏 72柱神</string>
     <string name="cards_display">顯示名稱</string>
+    <string name="cards_display_content">顯示內容</string>
+    <string name="cards_display_card">卡片張數</string>
+    <string name="cards_display_detail">詳細內容</string>
     <string name="cards_improve">卡片提升能力</string>
     <string name="cards_improve_no">無限制</string>
     <string name="cards_improve_amelioration">可昇華</string>
@@ -607,6 +619,7 @@
     <string name="cards_filter">卡片特選</string>
     <string name="cards_filter_fast">快速選擇</string>
     <string name="cards_filter_skill">5 星可練技卡</string>
+    <string name="cards_filter_skill_max">滿技等級</string>
     <string name="cards_special_skill_eatable">可練技</string>
     <string name="cards_special_skill_eatable2">可練技 (同技能 >= 2 張)</string>
     <string name="cards_special_skill_eatable3">可練技 (同技能 >= 3 張)</string>
@@ -828,6 +841,7 @@
 
     <string name="feedback_title">許願池 與 傳送意見回饋</string>
     <string name="feedback_author">☆首先，神魔數學家團隊感謝召喚師的安裝。\n(其實團隊只有作者一人 T_T)\n\n
+★如果有遇到 bug ，也歡迎在這裡回報，請記得寫下操作步驟以及出錯內容，如果能有圖片更佳。\n
 ★召喚師有什麼想法、建議或是想要的新功能，都可以在這裡告訴團隊哦。\n\n
 ★寫完後請按下送出按鈕，意見將會在您下次開啟程式時候一併送給團隊，並且僅保留90天。
 </string>
@@ -845,12 +859,12 @@
     <string name="help_title">神魔數學家 功能小提示</string>
     <string name="help_open_web">開啟網頁</string>
     <string name="help_save_image">另存圖片</string>
-    <string name="help_card_long_press">點擊、長按顯示卡片、右下角文字為十分位 (x/10)</string>
+    <string name="help_card_long_press">點擊、長按顯示卡片、右下角文字為十分位數</string>
 
 
     <string name="skillLv_title">詳細吃技方式</string>
     <string name="skillLv_concept">吃技概念</string>
-    <string name="skillLv_concept_detail">★人面大鳥(#0292) = 3000回合，相同編號卡片 = 1000回合，系列吃技卡 = 600回合，人面雛鳥 (#0617) = 200回合。\n★關卡 4-1 可以很有效率的打地精、蜥蜴、等等的卡片，再到  商店 > 行商要塞 > 強化素材類  購買 異彩史萊姆(#2400)\n★若是用同張卡吃滿等：\n技 10 = 9張 + 260\n技12 = 15張 + 260\n技15 = 24張 + 260</string>
+    <string name="skillLv_concept_detail"><![CDATA[★人面大鳥(#0292) = 3000回合，相同編號卡片 = 1000回合，系列吃技卡 = 600回合，人面雛鳥 (#0617) = 200回合。\n★關卡 4–1 可以很有效率的打地精、蜥蜴、等等的卡片，再到  商店 > 行商要塞 > 強化素材類  購買 異彩史萊姆(#2400)\n★若是用同張卡吃滿等：\n技 10 = 9張 + 260\n技12 = 15張 + 260\n技15 = 24張 + 260]]></string>
 
     <string name="card_seal_title">封印卡抽卡模擬器</string>
     <string name="card_seal_pure_intent">本模擬器僅使用隨機亂數和神魔公布之抽卡機率進行模擬。抽卡結果並不影響召喚師的神魔卡片。</string>
@@ -966,7 +980,7 @@ https://heavenro.info/tos\n
 https://checkup.tosgame.com\n
 \n\n謝謝收看 m(_ _)m</string>
 
-    <string name="farmBattle1">組隊概念：隊長找輕鬆消除符石(攻擊力要夠)，隊員找消除狀態、萬解版面的卡片。剩下就組加分卡片。\n(推 五屬強化角色(西施(#2069))，龐貝(#1719)，眼球(#1639)。沙利葉(#1263)、智障女神阿克婭(#1882)等等也不錯。能夠擋多種盾的優先 如五屬盾，7 Combo盾，拼圖盾等等)</string>
+    <string name="farmBattle1">組隊概念：隊長找輕鬆消除符石(攻擊力要夠)，隊員找消除狀態、萬解版面的卡片。剩下就組加分卡片。\n(推 五屬強化角色(西施(#2069))，龐貝(#2634)，眼球(#1639)。沙利葉(#1263)、智障女神阿克婭(#1882)等等也不錯。能夠擋多種盾的優先 如五屬盾，7 Combo盾，拼圖盾等等)</string>
     <string-array name="series">Android 機械人, B.Duck, BIGBANG元素師, FAIRY TAIL, 七十二柱魔神, 七原罪, 三國, 三國 ‧ 貳, 三國小兵, 三教頂峰, 不死英雄, 中國神, 中國神幻化, 中國神煉化, 中國神獸, 主角, 仙劍列傳, 仙劍靈傑, 仙劍靈獸, 修羅場, 修道仙妖, 修驗道式神, 傳世神器, 傳教士, 八仙, 八仙素材, 公會任務, 公會戰, 列王之爭, 創塔者們, 劍靈, 動能兵, 化物器獸, 北域巨人, 北域遺族, 北域霸獸, 北歐神, 北歐神幻化, 北歐神煉化, 協助者, 印度神, 古希臘神, 古蹟源龍, 可口羊駝, 史萊姆, 吉祥物, 命運女神, 圓桌騎士, 地獄魔王, 地精, 埃及皇權, 埃及神, 埃及神幻化, 埃及神煉化, 塔之魔神, 墮天, 夢幻聖物, 大和, 大富翁, 大富翁 ‧ 神明, 大蛇的眷屬, 天竺, 奇想典故, 奧羅茲遺族, 女王之塔, 女王之塔(系列), 妖女, 妖嬈花夢, 妖魔傾城, 存音石, 宇宙序章, 寧芙, 封王, 封神演義, 巨像, 巨型蟾蜍, 巨神兵, 巫女, 巴比倫主神, 巴比倫主神幻化, 巴比倫主神煉化, 巴比倫神明, 布袋小偶, 希冀, 希臘妖獸, 希臘神, 希臘神像, 希臘神幻化, 希臘神煉化, 幻境惡棍, 幽☆遊☆白書, 強力武裝, 強化素材, 忠誠侍童, 怪物彈珠, 怪物彈珠 ‧ 英雄, 慶節精靈, 憶念, 戰慄級, 戰鬥魔導士, 拳皇, 新手夥伴, 新革童話, 旅人的夥伴, 星詠之歌姬, 果實精靈, 機偶使者, 機偶合體, 機偶夥伴, 機械城的守護者, 機械小兵, 機械獸, 機械神兵, 機龍, 武者烈魂, 武術大會參賽者, 武術大賽, 武魂附體, 死亡騎士, 死物附靈, 毛毛三姐弟, 海上霸者, 潛能解放素材, 無名勇士, 狼人, 獵人×獵人, 獸伴, 王的護衛, 玩具精靈, 珍饈美點, 畫緣相遇, 異世界生物, 異界龍, 異神使徒, 異空轉生素材, 瘋頭, 百鬼夜行 ‧ 妖魅, 百鬼夜行 ‧ 怪譚, 百鬼夜行 ‧ 惡鬼, 碎羽墮落者, 神界守衛, 神話創世, 神貓大盜, 神魔員工, 科學少女, 科學與哲理, 科研敍論, 究極北歐神, 究極融煉素材, 童話仙蹤, 競技場, 笨小魔, 粉碎亂鬥, 粉碎狂熱, 精靈, 約誓之翼, 素材, 美好世界, 美好異想, 耀脈星芒, 聖酒女武神, 自然德魯依, 艾克希特, 英靈地精, 英靈女孩, 荒誕精靈, 蜥蜴戰士, 街頭流氓, 西方魔獸, 要塞兵團, 討伐戰, 誓約之花, 諸界看守者, 豐腴珍獸, 貓公爵傭兵團, 財迷塵世, 超獸魔神, 軒轅仙獸, 軒轅列傳, 追擊始源, 逐願邪星, 進化素材, 遊俠, 遠古的恐懼, 遠古神龍, 遠洋的旅人, 遠洋的英雄, 部落精獸, 都市傳說, 金屬生命, 鋼鐵神獸, 鐵皮部隊, 防龍, 隱士支配者, 霹靂布袋戲, 靈殿狛犬, 靈獸役使, 靈界獸, 靈魂精髓, 革新英雄, 願望果園精靈, 風格樂團, 高手隱士, 鬼魅奸佞, 魔像, 魔境住民, 魔境入侵者, 魔境造物, 魔導之眾, 魔幻嘍囉, 魔幼龍, 魔族始源, 魔族賢者, 魔法女孩, 魔變凶龍, 鮮紅恩典, 鮮紅恩典幻化, 鮮紅恩典煉化, 黃道十二宮, 黑鐵學徒, 龍僕, 龍牙棋
         <item>單體攻擊轉化為全體攻擊</item>
         <item>單體攻擊轉化為全體攻擊</item>
@@ -979,8 +993,11 @@ https://checkup.tosgame.com\n
         <item>魔法女孩</item>
         <item>史萊姆</item>
         <item>狼人</item>
-        <item>進化素材</item>
-        <item>強化素材</item>
+        <item>魂寵</item>
+        <item>素材</item>
+        <item>潛能解放素材</item>
+        <item>究極融煉素材</item>
+        <item>異空轉生素材</item>
         <item>希臘神像</item>
         <!--
         <item>黃道十二宮</item> // For 星靈
@@ -1005,6 +1022,11 @@ https://checkup.tosgame.com\n
         <item>無名勇士</item>
         <item>布袋小偶</item>
         <item>街頭流氓</item>
+        <item>動能兵</item>
+        <item>英靈地精</item>
+        <item>英靈女孩</item>
+        <item>黑鐵學徒</item>
+        <item>魔幻嘍囉</item>
     </string-array>
     <string name="fix_stone_title">轉換固定數量或位置筆記</string>
     <string name="fix_stone_detail">★ 15木強 + 15心強 = 紫龍(#2106)

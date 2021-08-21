@@ -13,6 +13,7 @@ import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.mytoswiki.util.ViewUtil2;
 import com.flyingkite.util.select.SelectedData;
 import com.flyingkite.util.select.Selector;
 
@@ -106,10 +107,6 @@ public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, Ca
         }
     }
 
-    public void updateSelection() {
-        setSelection(selection);
-    }
-
     private void notifyFiltered() {
         if (onItem != null) {
             onItem.onFiltered(selectedResult.size(), dataList.size());
@@ -160,7 +157,7 @@ public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, Ca
 
     }
 
-    public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil {
+    public static class CardVH extends RecyclerView.ViewHolder implements GlideUtil, ViewUtil2 {
         private final ImageView thumb;
         private final TextView text;
         private final TextView message;
@@ -179,14 +176,8 @@ public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, Ca
             text.setText(name);
             message.setText(msg);
             loadCardToImageView(thumb, c);
-            setVisible(text, !hasMsg);
-            setVisible(message, hasMsg);
-        }
-
-        private void setVisible(View v, boolean visible) {
-            if (v != null) {
-                v.setVisibility(visible ? View.VISIBLE : View.GONE);
-            }
+            setViewVisibility(text, !hasMsg);
+            setViewVisibility(message, hasMsg);
         }
     }
 }

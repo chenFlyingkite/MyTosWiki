@@ -71,7 +71,8 @@
                     android:textColor="@color/skyBlue"/>
                 <TextView
                     style="@style/whiteText"
-                    android:text="打 4-1 關卡，可以直接給地精等等的肥料"/>
+                    android:textColor="@color/yellow"
+                    android:text="打 4-1 關卡，可以直接給地精等等的肥料，再到背包【移至素材背包】"/>
                 <!--
                 <TextView
                     style="@style/whiteText.t2"
@@ -135,11 +136,8 @@
                     android:text="競技場換獎賞\n800 = 卡，2000 = 5卡，150 = 小鳥，2500 = 大鳥"/>
                 <TextView
                     style="@style/whiteText.t2"
-                    android:text="★大肥好用都換光。\n★換到技8卡 -> 用 1卡 + 14鳥比較便宜"
+                    android:text="★大肥好用都換光。\n★新卡換15張 : 技12 = 換15張 = 1張 + 14同卡 + 260回合"
                     android:textColor="@color/yellow"/>
-                <TextView
-                    style="@style/whiteText.t2"
-                    android:text="卡 + 14*小鳥 = 800 + 14*150 = 800 + 2100 = 2900\n卡 + 5*小鳥 + 5卡 = 800 + 5*150 + 2000 = 800 + 750 + 2000 = 3550"/>
                 <TextView
                     style="@style/whiteText.t2"
                     android:text="★換 15小鳥比 1大鳥便宜"

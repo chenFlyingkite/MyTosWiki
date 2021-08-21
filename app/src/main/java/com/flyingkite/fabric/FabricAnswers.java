@@ -1,7 +1,12 @@
 package com.flyingkite.fabric;
 
+import android.os.Bundle;
+
 import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.library.log.Loggable;
+import com.flyingkite.mytoswiki.App;
+import com.flyingkite.mytoswiki.BuildConfig;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.Map;
 
@@ -17,14 +22,6 @@ public class FabricAnswers {
     //-- Tool bars
     public static void logSkillEat(Map<String, String> attributes) {
         logCustom("SkillEat", attributes);
-    }
-
-    public static void logTosFragment(Map<String, String> attributes) {
-        logCustom("TosFragment", attributes);
-    }
-
-    public static void logSkillEatSample(Map<String, String> attributes) {
-        logCustom("SkillEatSample", attributes);
     }
 
     public static void logWeb(Map<String, String> attributes) {
@@ -74,10 +71,6 @@ public class FabricAnswers {
 
     public static void logMonsterEat(Map<String, String> attributes) {
         logCustom("MonsterEat", attributes);
-    }
-
-    public static void logTextEditor(Map<String, String> attributes) {
-        logCustom("TextEditor", attributes);
     }
 
     public static void logFavorite(Map<String, String> attributes) {
@@ -136,10 +129,6 @@ public class FabricAnswers {
         logCustom("Craft", attributes);
     }
 
-    public static void logSelectCard(Map<String, String> attributes) {
-        logCustom("SelectCard", attributes);
-    }
-
     public static void logSelectCraft(Map<String, String> attributes) {
         logCustom("SelectCraft", attributes);
     }
@@ -182,31 +171,25 @@ public class FabricAnswers {
     }
 
     public static void logCustom(String name, Map<String, String> attributes) {
-//        CustomEvent c = new CustomEvent(name);
-//        c = addAttr(c, attributes);
-//        c.putCustomAttribute("FCMToken", token());
-//        Answers.getInstance().logCustom(c);
-//        if (BuildConfig.DEBUG) {
-//            log("log %s", c);
-//        }
+        Bundle p = new Bundle();
+        if (attributes != null) {
+            for (Map.Entry<String, String> e : attributes.entrySet()) {
+                p.putString(e.getKey(), e.getValue());
+            }
+        }
+        FirebaseAnalytics.getInstance(App.me).logEvent("zz_" + name, p);
+
+        if (BuildConfig.DEBUG) {
+            log("log %s, %s", name, p);
+        }
     }
 
-//    private static <T extends AnswersEvent> T addAttr(T c, Map<String, String> attributes) {
-//        if (attributes != null) {
-//            for (String k : attributes.keySet()) {
-//                String v = attributes.get(k);
-//                c.putCustomAttribute(k, v);
-//            }
-//        }
-//        return c;
-//    }
-
     private static void log(String message) {
-        z.logI(message);
+        z.logE(message);
     }
 
     private static void log(String fmt, Object... params) {
-        z.logI(fmt, params);
+        z.logE(fmt, params);
     }
 
     private static final Loggable z = new Loggable() {

@@ -14,8 +14,7 @@
         android:src="@drawable/unknown_card"/>
 
     <ImageView
-        style="@style/evoArrow"
-        android:scaleX="-1"/>
+        style="@style/evoArrow.R"/>
 
     <ImageView
         android:id="@+id/cardEvolveFrom"

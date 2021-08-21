@@ -56,12 +56,13 @@ public class TosWiki {
     private static StageGroup[] storyStages;
     private static StageGroup ultimStages;
     private static MainStage[] realmStages;
+    private static List<List<String>> evolvePath = new ArrayList<>();
     // Observers
     private static final List<OnAction> favorActions = new ArrayList<>();
     // Tags for Task monitor
     public static final String TAG_ALL_CARDS = "AllCards";
     public static final String TAG_NORMAL_CRAFTS = "Crafts";
-    public static final String TAG_ARM_CRAFTS = "ArmCards";
+    public static final String TAG_ARM_CRAFTS = "ArmCrafts";
     public static final String TAG_CARD_FAVOR = "CardFavor";
     public static final String TAG_MAIN_STAGE = "MainStage";
     public static final String TAG_RELIC_PASS = "RelicPass";
@@ -69,10 +70,11 @@ public class TosWiki {
     public static final String TAG_REALM_STAGE = "RealmStage";
     public static final String TAG_WEB_PIN = "WebPin";
     public static final String TAG_ULTIM_STAGE = "UltimStage"; // Ultimate stages
+    public static final String TAG_EVOLVE_PATH = "EvolvePath";
     public static final String[] TAG_ALL_TASKS = {
             TAG_ALL_CARDS, TAG_NORMAL_CRAFTS, TAG_ARM_CRAFTS, TAG_CARD_FAVOR,
             TAG_MAIN_STAGE, TAG_RELIC_PASS, TAG_STORY_STAGE, TAG_REALM_STAGE,
-            TAG_WEB_PIN, TAG_ULTIM_STAGE
+            TAG_WEB_PIN, TAG_ULTIM_STAGE, TAG_EVOLVE_PATH
     };
 
     public static void init(Context ctx) {
@@ -209,10 +211,26 @@ public class TosWiki {
             t.tac("web pinned as\n%s", webPin);
             monitorDB.notifyClientsState();
         });
+
+        p.submit(() -> {
+            TicTac2 t = new TicTac2.v();
+            t.tic();
+            evolvePath = GsonUtil.loadAsset("evolvePath.json", evolvePath.getClass(), am);
+            int n = 0;
+            for (int i = 0; i < evolvePath.size(); i++) {
+                n = Math.max(n, evolvePath.get(i).size());
+            }
+            t.tac("%s evolve path loaded, max = %d", evolvePath.size(), n);
+            monitorDB.notifyClientsState();
+        });
     }
 
     public static MainStage[] getRealmStages() {
         return realmStages;
+    }
+
+    public static List<List<String>> getEvolvePath() {
+        return evolvePath;
     }
 
     public static StageGroup getUltimateStages() {
@@ -346,6 +364,7 @@ public class TosWiki {
                 case TAG_STORY_STAGE: return storyStages != null;
                 case TAG_REALM_STAGE: return realmStages != null;
                 case TAG_ULTIM_STAGE: return ultimStages != null;
+                case TAG_EVOLVE_PATH: return evolvePath != null;
                 case TAG_WEB_PIN: return webPin != null;
                 //case TAG_AME_SKILL: return ameSkills != null;
                 default:

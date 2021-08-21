@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
-import com.flyingkite.mytoswiki.data.seal.SealSample;
+import com.flyingkite.mytoswiki.data.seal.v1.SealSample;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 

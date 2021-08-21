@@ -31,26 +31,31 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/sortSpecialFast"
+                android:id="@+id/sortSpecialTitle"
                 style="@style/sortTitle"
                 android:text="@string/cards_filter"/>
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/sortFastSkill"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimary"
-                        android:text="@string/cards_filter_skill"/>
+            <LinearLayout
+                android:id="@+id/sortSpecialList"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/t20dp">
+                <CheckBox
+                    android:id="@+id/sortSpecialNo"
+                    style="@style/sortText"
+                    android:checked="true"
+                    android:text="@string/cards_no"/>
 
-                </LinearLayout>
-            </HorizontalScrollView>
+                <View
+                    style="@style/divider_h2px"/>
+
+                <CheckBox
+                    android:id="@+id/sortSpecialNonSlvMax"
+                    style="@style/sortText"
+                    android:text="@string/cards_pack_non_skill_level_max"/>
+
+            </LinearLayout>
 
             <TextView
                 style="@style/sortTitle"
@@ -64,7 +69,7 @@
                 android:text="@string/cards_race"/>
             <include
                 android:id="@+id/sortRaces"
-                layout="@layout/grid_race_all"/>
+                layout="@layout/grid_race"/>
 
             <TextView
                 android:id="@+id/sortStarTitle"
@@ -73,6 +78,14 @@
             <include
                 android:id="@+id/sortStar"
                 layout="@layout/grid_star_8"/>
+
+            <TextView
+                android:id="@+id/sortPathLengthTitle"
+                style="@style/sortTitle"
+                android:text="@string/cards_evolve_path"/>
+            <include
+                android:id="@+id/sortPathLength"
+                layout="@layout/grid_evolve_path_length"/>
 
             <TextView
                 android:id="@+id/sortCommonTitle"
@@ -119,523 +132,7 @@
                     android:id="@+id/sortCommonOwnCount"
                     style="@style/sortRadio"
                     android:text="@string/cards_common_own_count"/>
-                <RadioButton
-                    android:id="@+id/sortCommonMaxTu"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_maxTuLv"/>
             </RadioGroup>
-
-            <!--
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/sortTurnRunestone"
-                    style="@style/sortTitle"
-                    android:text="@string/cards_turn_runestone"/>
-
-                <TextView
-                    style="@style/sortText2"
-                    android:paddingLeft="@dimen/t5dp"
-                    android:text="@string/cards_add_detail2"/>
-            </LinearLayout>
-            <GridLayout
-                android:id="@+id/sortRunestone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="6">
-
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_water"
-                    android:src="@drawable/rune_water"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_fires"
-                    android:src="@drawable/rune_fire"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_earth"
-                    android:src="@drawable/rune_earth"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_light"
-                    android:src="@drawable/rune_light"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_darks"
-                    android:src="@drawable/rune_dark"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_heart"
-                    android:src="@drawable/rune_heart"/>
-
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_water_enchanted"
-                    android:src="@drawable/s_i021"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_fires_enchanted"
-                    android:src="@drawable/s_i022"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_earth_enchanted"
-                    android:src="@drawable/s_i023"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_light_enchanted"
-                    android:src="@drawable/s_i024"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_darks_enchanted"
-                    android:src="@drawable/s_i025"/>
-                <ImageView
-                    style="@style/sortIcon"
-                    android:tag="@string/cards_attr_heart_enchanted"
-                    android:src="@drawable/s_i026"/>
-            </GridLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sortAttrRaceTitle"
-                    style="@style/sortTitle"
-                    android:text="@string/cards_race_runestone"/>
-
-                <TextView
-                    style="@style/sortText2"
-                    android:paddingLeft="@dimen/t5dp"
-                    android:text="@string/cards_race_stone_sample"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="@dimen/t20dp">
-                <TextView
-                    android:id="@+id/sortRaceStoneAddDetail"
-                    style="@style/sortText.rect"
-                    android:text="@string/cards_add_detail"/>
-                <TextView
-                    android:id="@+id/sortRaceStoneAddLeader"
-                    style="@style/sortText.rect"
-                    android:text="@string/cards_add_leader"/>
-
-                <TextView
-                    style="@style/sortTitle"
-                    android:text="@string/cards_runestone_attr"/>
-                <LinearLayout
-                    android:id="@+id/sortRaceStoneAttr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_water"
-                        android:src="@drawable/rune_water"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_fires"
-                        android:src="@drawable/rune_fire"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_earth"
-                        android:src="@drawable/rune_earth"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_light"
-                        android:src="@drawable/rune_light"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_attr_darks"
-                        android:src="@drawable/rune_dark"/>
-                </LinearLayout>
-
-                <TextView
-                    style="@style/sortTitle"
-                    android:text="@string/cards_runestone_race"/>
-                <GridLayout
-                    android:id="@+id/sortRaceStoneRace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:columnCount="5">
-
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_god"
-                        android:src="@drawable/s_i079"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_demon"
-                        android:src="@drawable/s_i080"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_human"
-                        android:src="@drawable/s_i081"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_beast"
-                        android:src="@drawable/s_i082"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_dragon"
-                        android:src="@drawable/s_i083"/>
-
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_elf"
-                        android:src="@drawable/s_i084"/>
-                    <ImageView
-                        style="@style/sortIcon"
-                        android:tag="@string/cards_race_stone_machina"
-                        android:src="@drawable/s_i085"/>
-                </GridLayout>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/sortCassandraTitle"
-                style="@style/sortTitle"
-                android:text="@string/cards_Cassandra"/>
-            <RadioGroup
-                android:id="@+id/sortCassandraList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/sortCassandraNo"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_no"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraAttack"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_Cassandra_attack"/>
-                <RadioButton
-                    android:id="@+id/sortCassandraRatio"
-                    style="@style/sortRadio"
-                    android:text="@string/cards_Cassandra_attack_ratio"/>
-            </RadioGroup>
-            -->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/sortSpecialTitle"
-                    style="@style/sortTitle"
-                    android:text="@string/cards_filter"/>
-            </LinearLayout>
-            <!--
-            <TextView
-                android:id="@+id/sortSpecialAddDetail"
-                style="@style/sortText.rect"
-                android:text="@string/cards_special_add_detail"/>
-            -->
-            <LinearLayout
-                android:id="@+id/sortSpecialList"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/t20dp">
-                <CheckBox
-                    android:id="@+id/sortSpecialNo"
-                    style="@style/sortText"
-                    android:checked="true"
-                    android:text="@string/cards_no"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialSkillEatable2"
-                    style="@style/sortText"
-                    android:text="@string/cards_special_skill_eatable2"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialSkillEatable3"
-                    style="@style/sortText"
-                    android:text="@string/cards_special_skill_eatable3"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialSkillEatable4"
-                    style="@style/sortText"
-                    android:text="@string/cards_special_skill_eatable4"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialSkillNotMax"
-                    style="@style/sortText"
-                    android:text="@string/cards_special_skill_not_max"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialSkillEnough"
-                    style="@style/sortText"
-                    android:text="@string/cards_special_skill_enough"/>
-
-                <TextView
-                    android:paddingLeft="@dimen/t40dp"
-                    style="@style/sortText2"
-                    android:text="@string/cards_special_skill_enough_detail"/>
-
-                <!--
-                <CheckBox
-                    android:id="@+id/sortSpecialMoreCoin"
-                    style="@style/sortText"
-                    android:text="@string/cards_morecoin"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialExtend"
-                    style="@style/sortText"
-                    android:text="@string/cards_extend_time"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialAlsoActive"
-                    style="@style/sortText"
-                    android:text="@string/cards_active_also_possess"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialAlsoLeader"
-                    style="@style/sortText"
-                    android:text="@string/cards_leader_also_possess"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreDropRateTransfer"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_drop_rate_transfer"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialNoDefeat"
-                    style="@style/sortText"
-                    android:text="@string/cards_no_defeat"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialDamageLessActive"
-                    style="@style/sortText"
-                    android:text="@string/cards_active_damage_less"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialDamageLessLeader"
-                    style="@style/sortText"
-                    android:text="@string/cards_leader_damage_less"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialDamageToHp"
-                    style="@style/sortText"
-                    android:text="@string/cards_damage_to_hp"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialDodge"
-                    style="@style/sortText"
-                    android:text="@string/cards_dodge"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialDelay"
-                    style="@style/sortText"
-                    android:text="@string/cards_delay"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialExtraAttack"
-                    style="@style/sortText"
-                    android:text="@string/cards_extra_attack"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialNonAttribute"
-                    style="@style/sortText"
-                    android:text="@string/cards_non_attribute"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRegardlessDefense"
-                    style="@style/sortText"
-                    android:text="@string/cards_regardless_of_defense"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRegardlessAttribute"
-                    style="@style/sortText"
-                    android:text="@string/cards_regardless_of_attribute"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialClearAllEffect"
-                    style="@style/sortText"
-                    android:text="@string/cards_clear_all_effect"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialStayUntil"
-                    style="@style/sortText"
-                    android:text="@string/cards_stay_until"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialStayUntilIf"
-                    style="@style/sortText"
-                    android:text="@string/cards_stay_until_if"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialOriginalColor"
-                    style="@style/sortText"
-                    android:text="@string/cards_black_white_original"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreNormal"
-                    style="@style/sortText"
-                    android:text="@string/cards_restore_runestone_normal"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialTurnEnemyAttr"
-                    style="@style/sortText"
-                    android:text="@string/cards_turn_enemy_attr"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialFix"
-                    style="@style/sortText"
-                    android:text="@string/cards_fix"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreIntoEnchanted"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_into_enchanted"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreAllAttrRandom"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_all_attr_random"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreAllIntoRandom"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_all_into_random"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreAllInto"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_all_into"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialRestoreAllIntoEnchanted"
-                    style="@style/sortText"
-                    android:text="@string/cards_runestone_all_into_enchanted"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialOneDealDamage"
-                    style="@style/sortText"
-                    android:text="@string/cards_one_deal_damage"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialAllDealDamage"
-                    style="@style/sortText"
-                    android:text="@string/cards_all_deal_damage"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialOneDealDamageElement"
-                    style="@style/sortText"
-                    android:text="@string/cards_one_deal_damage_element"/>
-
-                <CheckBox
-                    android:id="@+id/sortSpecialAllDealDamageElement"
-                    style="@style/sortText"
-                    android:text="@string/cards_all_deal_damage_element"/>
-            -->
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/sortImproveTitle"
-                style="@style/sortTitle"
-                android:text="@string/cards_improve"/>
-
-            <LinearLayout
-                android:id="@+id/sortImprove"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/t20dp"
-                android:orientation="vertical">
-
-                <CheckBox
-                    android:id="@+id/sortImproveNo"
-                    style="@style/sortText"
-                    android:checked="true"
-                    android:text="@string/cards_improve_no"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveTwoSkill"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_two_skill"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveCombine"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_combine"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveAwakenRecall"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_awakenRecall"/>
-
-                <CheckBox
-                    android:id="@+id/sortImprovePowerRelease"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_powerRelease"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveAmelioration"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_amelioration"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveSkillChange"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_skill_change"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveVirtualRebirth"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_virtualRebirth"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveVirtualRebirthChange"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_virtualRebirthChange"/>
-
-                <View
-                    style="@style/divider_h2px"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveSwitch"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_switch"/>
-
-                <CheckBox
-                    android:id="@+id/sortImproveDualMaxAdd"
-                    style="@style/sortText"
-                    android:text="@string/cards_improve_dualMaxAdd"/>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -662,9 +159,14 @@
                     android:text="@string/cards_hide_empty"/>
 
                 <TextView
-                    android:id="@+id/sortHideFarm"
+                    android:id="@+id/sortHideShowEmpty"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_farm2"/>
+                    android:text="@string/cards_hide_show_empty"/>
+
+                <TextView
+                    android:id="@+id/sortHideShowUnowned"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_show_unowned"/>
 
                 <TextView
                     android:id="@+id/sortHideNormal"
@@ -690,7 +192,24 @@
             <TextView
                 android:id="@+id/sortDisplayTitle"
                 style="@style/sortTitle"
-                android:text="@string/cards_display"/>
+                android:text="@string/cards_display_content"/>
+            <LinearLayout
+                android:id="@+id/sortDisplayList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/sortDisplayName"
+                    style="@style/sortText"
+                    android:checked="true"
+                    android:text="@string/cards_display_card"/>
+
+                <CheckBox
+                    android:id="@+id/sortDisplayDetail"
+                    style="@style/sortText"
+                    android:text="@string/cards_display_detail"/>
+            </LinearLayout>
+            <!--
             <RadioGroup
                 android:id="@+id/sortDisplayList"
                 android:layout_width="match_parent"
@@ -707,12 +226,12 @@
                     android:id="@+id/sortDisplayName"
                     style="@style/sortRadio"
                     android:text="@string/cards_name"/>
-
                 <RadioButton
                     android:id="@+id/sortDisplayNameNormId"
                     style="@style/sortRadio"
                     android:text="@string/cards_name_normId"/>
             </RadioGroup>
+            -->
             <ImageView
                 style="@style/toswiki_style"/>
             <Space
@@ -720,5 +239,4 @@
                 android:layout_height="1dp"/>
         </LinearLayout>
     </HorizontalScrollView>
-
 </ScrollView>

@@ -21,19 +21,13 @@
 
             <ImageView
                 android:id="@+id/tosFavor"
-                style="@style/tosIcon"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_favorite_border_white_48"
-                android:background="@drawable/bg_press_sky_rect"/>
+                style="@style/tosIcon.t45"
+                android:src="@drawable/ic_favorite_border_white_48"/>
 
             <ImageView
                 android:id="@+id/tosToolBar"
-                style="@style/tosIcon"
-                android:layout_width="@dimen/t45dp"
-                android:layout_height="@dimen/t45dp"
-                android:src="@drawable/ic_open_in_browser_white_48dp"
-                android:background="@drawable/bg_press_sky_rect"/>
+                style="@style/tosIcon.t45"
+                android:src="@drawable/ic_open_in_browser_white_48dp"/>
 
             <ImageView
                 android:id="@+id/tosGoTop"
@@ -102,7 +96,7 @@
         app:fastScrollHorizontalThumbDrawable="@drawable/recycler_thumb"/>
 
     <RelativeLayout
-        android:id="@+id/tosFliterBg"
+        android:id="@+id/tosFilterBg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"

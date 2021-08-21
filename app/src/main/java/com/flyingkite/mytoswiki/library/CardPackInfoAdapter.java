@@ -16,6 +16,7 @@ import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+import com.flyingkite.mytoswiki.util.ViewUtil2;
 import com.flyingkite.util.select.SelectedData;
 import com.flyingkite.util.select.Selector;
 
@@ -103,10 +104,6 @@ public class CardPackInfoAdapter extends RVSelectAdapter<PackInfoCard, CardPackI
         }
     }
 
-    public void updateSelection() {
-        setSelection(selection);
-    }
-
     private void notifyFiltered() {
         if (onItem != null) {
             onItem.onFiltered(selectedIndices.size(), dataList.size());
@@ -143,7 +140,7 @@ public class CardPackInfoAdapter extends RVSelectAdapter<PackInfoCard, CardPackI
     protected void onDidClickItem(PackInfoCard c, CardPackInfoAdapter.PCardVH holder) {
     }
 
-    public static class PCardVH extends RecyclerView.ViewHolder implements GlideUtil {
+    public static class PCardVH extends RecyclerView.ViewHolder implements GlideUtil, ViewUtil2 {
         private final ImageView thumb;
         private final TextView text;
         private final TextView cards;
@@ -169,19 +166,13 @@ public class CardPackInfoAdapter extends RVSelectAdapter<PackInfoCard, CardPackI
             TosCard d = TosWiki.getCardByIdNorm(c.idNorm);
             loadCardToImageView(thumb, d);
             if (TextUtils.isEmpty(name)) {
-                setVisible(text, false);
-                setVisible(message, false);
-                setVisible(cards, false);
+                setViewVisibility(text, false);
+                setViewVisibility(message, false);
+                setViewVisibility(cards, false);
             } else {
-                setVisible(text, !hasMsg);
-                setVisible(message, hasMsg);
-                setVisible(cards, true);
-            }
-        }
-
-        private void setVisible(View v, boolean visible) {
-            if (v != null) {
-                v.setVisibility(visible ? View.VISIBLE : View.GONE);
+                setViewVisibility(text, !hasMsg);
+                setViewVisibility(message, hasMsg);
+                setViewVisibility(cards, true);
             }
         }
     }

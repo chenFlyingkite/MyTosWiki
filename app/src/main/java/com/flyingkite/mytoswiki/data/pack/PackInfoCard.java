@@ -17,10 +17,10 @@ public class PackInfoCard implements Formattable {
 
     public static PackInfoCard from(TosCard s) {
         PackInfoCard c = new PackInfoCard();
-        if (s == null) return c;
-
-        c.idNorm = s.idNorm;
-        c.name = s.name;
+        if (s != null) {
+            c.idNorm = s.idNorm;
+            c.name = s.name;
+        }
         return c;
     }
 
@@ -28,8 +28,9 @@ public class PackInfoCard implements Formattable {
     @Override
     public String toString() {
         StringBuilder b = new StringBuilder();
-        for (PackCard p : packs) {
-            if (b.length() > 0) {
+        for (int i = 0; i < packs.size(); i++) {
+            PackCard p = packs.get(i);
+            if (i > 0) {
                 b.append(", ");
             }
             b.append(p);
