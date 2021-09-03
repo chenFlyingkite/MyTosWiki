@@ -2,6 +2,7 @@ package com.flyingkite.util.select;
 
 import android.util.Log;
 
+import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.util.ListUtil;
 
@@ -56,6 +57,7 @@ public interface Selector<T> {
         } catch (Exception e) {
             e.printStackTrace();
             Log.e("Selector", "failed", e);
+            CrashReport.logException(e);
         }
         return sorted;
     }

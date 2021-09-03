@@ -10,13 +10,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.Map;
 
-@Deprecated
 public class FabricAnswers {
-//    Bundle bundle = new Bundle();
-//    bundle.putString(FirebaseAnalytics.Param.CHARACTER, character);
-//    bundle.putLong(FirebaseAnalytics.Param.LEVEL, level);
-//    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.LEVEL_UP, bundle);
-    // TODO Remove me
     private static final String TAG = "FabricAnswers";
 
     //-- Tool bars

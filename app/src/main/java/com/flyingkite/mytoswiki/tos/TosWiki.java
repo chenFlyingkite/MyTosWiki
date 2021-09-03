@@ -5,7 +5,6 @@ import android.content.res.AssetManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.library.TicTac2;
 import com.flyingkite.library.log.Loggable;
@@ -306,34 +305,11 @@ public class TosWiki {
 
     public static TosCard getCardByIdNorm(String id) {
         TosCard c = allCardsByIdNorm.get(id);
-        // For new version, it will have new cards, so null is ok
-//        if (c == null && !TextUtils.isEmpty(id)) {
-//            try {
-//                String s = z._fmt("Card null: %s, map = %s, all = %s",
-//                        id, allCardsByIdNorm.size(), len(allCards));
-//                if (!allCardsByIdNorm.isEmpty()) {
-//                    throw new NullPointerException(s);
-//                }
-//            } catch (NullPointerException npe) {
-//                CrashReport.logException(npe);
-//            }
-//        }
         return c;
     }
 
     public static BaseCraft getCraftByIdNorm(String id) {
         BaseCraft c = allCraftsByIdNorm.get(id);
-        if (c == null) {
-            try {
-                String s = z._fmt("Craft null: %s, map = %s, normal = %s, arm = %s",
-                        id, allCraftsByIdNorm.size(), len(normalCrafts), len(armCrafts));
-                if (!allCraftsByIdNorm.isEmpty()) {
-                    throw new NullPointerException(s);
-                }
-            } catch (NullPointerException npe) {
-                CrashReport.logException(npe);
-            }
-        }
         return c;
     }
 

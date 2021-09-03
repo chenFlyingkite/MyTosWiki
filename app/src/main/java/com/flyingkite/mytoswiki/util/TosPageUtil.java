@@ -17,13 +17,12 @@ public interface TosPageUtil extends Loggable, GlideUtil, TosWikiUtil {
 
     FragmentManager getFragmentManager();
 
-    default CardDialog showCardDialog(TosCard card) {
+    default void showCardDialog(TosCard card) {
         CardDialog d = new CardDialog();
         Bundle b = new Bundle();
         b.putParcelable(CardDialog.BUNDLE_CARD, card);
         d.setArguments(b);
         d.show(getFragmentManager(), CardDialog.TAG);
-        return d;
     }
 
     default void showCardDialog(String idNorm) {

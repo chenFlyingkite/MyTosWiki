@@ -37,8 +37,6 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
         }
     }
 
-    //private int nameType = Misc.NT_ID_NORM;
-
     private Selector<List<String>> selection;
     private List<SelectedData> selectedResult = new ArrayList<>();
     // current selection runnable
@@ -83,31 +81,8 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
         if (onItem != null) {
             onItem.onFiltered(selectedIndices.size(), dataList.size());
             onItem.onFilteredIndex(selectedIndices);
-
-//            int n = 0;
-//            for (int i = 0; i < selectedIndices.size(); i++) {
-//                int si = selectedIndices.get(i);
-//                List<String> p = super_itemOf(si);
-//                n += p.packs.size();
-//            }
-//            onItem.onFilteredAll(n, cardsCount);
         }
     }
-
-//    public void setNameType(@NameType int type) {
-//        nameType = type;
-//    }
-//
-//    public String name(TosCard c) {
-//        int it = nameType;
-//        if (it == Misc.NT_NONE) {
-//            return "";
-//        } else if (it == Misc.NT_NAME) {
-//            return c.name;
-//        } else {
-//            return c.idNorm;
-//        }
-//    }
 
     @NonNull
     @Override
@@ -174,53 +149,6 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
             if (onItem != null) {
                 onItem.onPath(path, this);
             }
-            //--
-//            StringBuilder msg = new StringBuilder();
-//            StringBuilder slv = new StringBuilder("SLvMax = ");
-//            StringBuilder sb = new StringBuilder();
-//            for (int i = 0; i < cards.size(); i++) {
-//                CardVH vh = cards.get(i);
-//                TosCard c = null;
-//                PackInfoCard k = null;
-//                int z = 0;
-//                boolean hasCard = i < n;
-//                if (hasCard) {
-//                    c = TosWiki.getCardByIdNorm(path.get(i));
-//                    k = myPack.get(c.idNorm);
-//                    if (k != null) {
-//                        z = k.packs.size();
-//                    }
-//                }
-//
-//                vh.arrow.setVisibility(View.GONE);
-//                if (i > 0 && hasCard) {
-//                    vh.arrow.setVisibility(View.VISIBLE);
-//                }
-//                setViewVisibility(vh.parent, hasCard);
-//                vh.thumb.setImageAlpha(z == 0 ? 0x99 : 0xFF);
-//                loadCardToImageView(vh.thumb, c);
-//                vh.text.setText(itemMsg(c, k));
-//
-//                if (c != null) {
-//                    int slvMax = c.skillCDMin1 - c.skillCDMax1 + 1;
-//                    if (i > 0) {
-//                        slv.append(", ");
-//                    }
-//                    slv.append(slvMax);
-//                    String m = getMessage(c, k);
-//
-//                    if (i == 0 && n > 1 && m.contains("Eat")) {
-//                        Log.e("Evolve", "Eat " + c + "\n, " + m);
-//                    }
-//                    String mi = App.me.getString(R.string.cards_evolution_info, c.idNorm, m);
-//                    if (i > 0) {
-//                        msg.append("\n");
-//                    }
-//                    msg.append(mi);
-//                }
-//            }
-//            sb.append(slv).append("\n").append(msg);
-//            message.setText(sb);
         }
 
         private String itemMsg(TosCard c, PackInfoCard k) {

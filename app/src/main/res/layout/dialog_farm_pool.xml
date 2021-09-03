@@ -73,10 +73,11 @@
                     style="@style/whiteText"
                     android:textColor="@color/yellow"
                     android:text="打 4-1 關卡，可以直接給地精等等的肥料，再到背包【移至素材背包】"/>
-                <!--
+
                 <TextView
-                    style="@style/whiteText.t2"
-                    android:text="@string/monster_eat_guild_task_good"/>
+                    style="@style/whiteText"
+                    android:text="修羅場可以用天元突破五卡，一進場後合體，然後每一場都是盡量一康追求快速過關，麻煩是消心盾或是指定30符石盾"/>
+                <!--
                 <TextView
                     style="@style/whiteText.t2"
                     android:text="@string/monster_eat_guild_task_10k"/>
