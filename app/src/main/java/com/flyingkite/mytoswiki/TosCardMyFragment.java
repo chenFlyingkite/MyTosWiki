@@ -796,8 +796,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
 
-            evolvePath.clear();
-            evolvePath.addAll(TosWiki.getEvolvePath());
             updateHide();
             parseMyPack();
             setupAdapter(true);

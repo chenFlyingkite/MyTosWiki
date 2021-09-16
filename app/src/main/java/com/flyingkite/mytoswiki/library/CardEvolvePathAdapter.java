@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.library.widget.RVSelectAdapter;
@@ -25,7 +26,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvolvePathAdapter.EvolvePathVH, CardEvolvePathAdapter.ItemListener> {
+public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvolvePathAdapter.EvolvePathVH, CardEvolvePathAdapter.ItemListener> implements Loggable {
 
     public interface ItemListener extends RVAdapter.ItemListener<List<String>, EvolvePathVH> {
         default void onFiltered(int selected, int total) {}
@@ -96,6 +97,7 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
         //String msg = selectedResult.get(position).message;
         //vh.message.setText(msg);
         List<String> path = itemOf(position);
+        //logE("bind(%d) #%4d, %s", getItemCount(), position, path);
         vh.setPath(path);
     }
 
@@ -116,6 +118,8 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
                 CardVH vh = cards.get(i);
                 final int at = i;
                 vh.parent.setOnClickListener((w) -> {
+                    if (paths == null) return;
+
                     if (onItem != null) {
                         onItem.onClickEach(at, paths.get(at), EvolvePathVH.this, getAdapterPosition());
                     }
@@ -124,6 +128,7 @@ public class CardEvolvePathAdapter extends RVSelectAdapter<List<String>, CardEvo
         }
 
         private void setPath(List<String> path) {
+            if (path == null) return;
             paths = path;
             int n = path.size();
             for (int i = 0; i < cards.size(); i++) {

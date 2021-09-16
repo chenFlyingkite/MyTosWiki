@@ -37,15 +37,16 @@ import com.flyingkite.mytoswiki.data.seal.v1.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.v1.PrimalDeities;
 import com.flyingkite.mytoswiki.data.seal.v1.RockManDiVE;
 import com.flyingkite.mytoswiki.data.seal.v1.SaintSeiya;
+import com.flyingkite.mytoswiki.data.seal.v1.SaintSeiyaHades;
 import com.flyingkite.mytoswiki.data.seal.v1.SealItem;
 import com.flyingkite.mytoswiki.data.seal.v1.SealSample;
 import com.flyingkite.mytoswiki.data.seal.v1.SengokuSamurai;
-import com.flyingkite.mytoswiki.data.seal.v2.SummonerCandidates;
 import com.flyingkite.mytoswiki.data.seal.v1.TengenToppa;
 import com.flyingkite.mytoswiki.data.seal.v1.TruthSeekers;
 import com.flyingkite.mytoswiki.data.seal.v1.UnearthlyCharm;
 import com.flyingkite.mytoswiki.data.seal.v1.VirtualSingers;
 import com.flyingkite.mytoswiki.data.seal.v1.WrathGods;
+import com.flyingkite.mytoswiki.data.seal.v2.SummonerCandidates;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.SealCardAdapter;
 import com.flyingkite.mytoswiki.library.SealSeriesAdapter;
@@ -81,6 +82,7 @@ public class CardSealDialog extends BaseTosDialog {
     private static final List<SealItem> sealSeries = new ArrayList<>();
 
     static {
+        sealSeries.add(new SealItem(R.string.card_series_saint_seiya_hades, new SaintSeiyaHades()));
         sealSeries.add(new SealItem(R.string.card_series_summoner_candidate, new SummonerCandidates()));
         sealSeries.add(new SealItem(R.string.card_series_kamen_rider, new KamenRider()));
         sealSeries.add(new SealItem(R.string.card_series_lost_saga, new LostSaga()));

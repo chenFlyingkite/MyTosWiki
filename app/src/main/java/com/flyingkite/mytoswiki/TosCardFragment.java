@@ -979,6 +979,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
 
         @Override
         public boolean onSelect(TosCard c) {
+            if (getActivity() == null) {
+                return true;
+            }
+
             return selectForBasic(c)
                     && selectForTurnRunestones(c)
                     && selectForRaceRunestones(c)

@@ -33462,6 +33462,454 @@
   {
     "rarity": 3,
     "level": 3,
+    "mode": "龍刻類型",
+    "charge": "連鎖龍紋",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3605",
+    "name": "【3605】 雙生核龍紋",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903605%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E7%B4%8B",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/0/0c/C3605.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061945\u0026path-prefix\u003dzh",
+      "iconKey": "C3605.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "轉動龍印",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3606",
+    "name": "【3606】 雙生核龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903606%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/a/ad/C3606.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061947\u0026path-prefix\u003dzh",
+      "iconKey": "C3606.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "破碎龍咒",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3607",
+    "name": "【3607】 雙生核龍咒",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903607%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E5%92%92",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/5/54/C3607.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061948\u0026path-prefix\u003dzh",
+      "iconKey": "C3607.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "映照龍符",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3608",
+    "name": "【3608】 雙生核龍符",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903608%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E7%AC%A6",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/b/b4/C3608.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061950\u0026path-prefix\u003dzh",
+      "iconKey": "C3608.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "落影龍璃",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3609",
+    "name": "【3609】 雙生核龍璃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903609%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E7%92%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/6/6b/C3609.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061951\u0026path-prefix\u003dzh",
+      "iconKey": "C3609.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "裂空龍刃",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3610",
+    "name": "【3610】 雙生核龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903610%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/9/96/C3610.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061953\u0026path-prefix\u003dzh",
+      "iconKey": "C3610.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
+    "mode": "龍刻類型",
+    "charge": "鏡像龍丸",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，隊伍攻擊力提升 15%"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隨機 3 個獸類成員的技能 CD 減少 3"
+      },
+      {
+        "level": 3,
+        "score": 7000,
+        "detail": "1 回合內，25% 的攻擊傷害無視指定形狀盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "進入關卡後，自身主動技能 CD 減少 1"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "同時消除光及暗符石，自身攻擊力提升 1.5 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "自身無視〖腐化〗敵技"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 5,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+10%",
+    "upAttack": "+10%",
+    "upRecovery": "0",
+    "idNorm": "3611",
+    "name": "【3611】 雙生核龍丸",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%903611%E3%80%91_%E9%9B%99%E7%94%9F%E6%A0%B8%E9%BE%8D%E4%B8%B8",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/1e/C3611.png/revision/latest/scale-to-width-down/120?cb\u003d20210903061954\u0026path-prefix\u003dzh",
+      "iconKey": "C3611.png"
+    }
+  },
+  {
+    "rarity": 3,
+    "level": 3,
     "mode": "連鎖龍紋",
     "charge": "裝備此龍刻的召喚獸發動攻擊的次數",
     "craftSkill": [
