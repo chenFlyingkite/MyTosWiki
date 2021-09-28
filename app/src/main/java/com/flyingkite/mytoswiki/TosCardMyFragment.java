@@ -1193,7 +1193,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                         List<String> ids = evolvePath.get(x);
                         for (int j = 0; j < ids.size(); j++) {
                             String id = ids.get(j);
-                            if (!seen.contains(id)) {
+                            if (id != null && !seen.contains(id)) {
                                 PackInfoCard c = myInfoPack.get(id);
                                 if (c != null) {
                                     seen.add(id);

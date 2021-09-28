@@ -637,6 +637,36 @@
       "icon": "2659"
     },
     {
+      "link": "https://tos.fandom.com/zh/wiki/%E4%BE%B5%E8%9D%95%E9%87%8E%E6%9C%9B",
+      "name": "侵蝕野望",
+      "icon": "3001"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E8%99%9B%E5%81%BD%E7%9A%84%E6%86%90%E6%86%AB",
+      "name": "虛偽的憐憫",
+      "icon": "1990"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E7%A5%9E%E9%80%9A%E5%BB%A3%E5%A4%A7%E7%9A%84%E5%8D%A0%E5%8D%9C%E8%A1%93",
+      "name": "神通廣大的占卜術",
+      "icon": "10056"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E8%8F%9F%E7%B5%B2%E7%9A%84%E8%9D%95%E8%BA%AB%E7%BA%8F%E9%AA%A8",
+      "name": "菟絲的蝕身纏骨",
+      "icon": "10055"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E9%AF%A8%E5%90%9E%E7%BE%8E%E9%A3%9F%E7%9A%84%E5%A6%96%E7%B2%BE",
+      "name": "鯨吞美食的妖精",
+      "icon": "10054"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%A2%9C%E8%90%BD%E9%99%BD%E6%97%A5",
+      "name": "墜落陽日",
+      "icon": "3002"
+    },
+    {
       "link": "https://tos.fandom.com/zh/wiki/%E9%81%A0%E6%B4%8B%E7%9A%84%E7%8E%8B%E8%80%85",
       "name": "遠洋的王者",
       "icon": "0448"
@@ -987,14 +1017,24 @@
       "icon": "2722"
     },
     {
+      "link": "https://tos.fandom.com/zh/wiki/%E5%A4%A9%E7%8C%9B%E6%98%9F%E7%9A%84%E7%BF%BC%E9%BE%8D",
+      "name": "天猛星的翼龍",
+      "icon": "10089"
+    },
+    {
+      "link": "https://tos.fandom.com/zh/wiki/%E6%8A%8A%E5%B9%BB%E6%83%B3%E5%8C%96%E7%82%BA%E7%8F%BE%E5%AF%A6%E7%9A%84%E7%A5%9E",
+      "name": "把幻想化為現實的神",
+      "icon": "10090"
+    },
+    {
       "link": "https://tos.fandom.com/zh/wiki/%E8%B3%A2%E8%80%85%E7%9A%84%E8%80%83%E9%A9%97",
       "name": "賢者的考驗",
-      "icon": "0292"
+      "icon": ""
     },
     {
       "link": "https://tos.fandom.com/zh/wiki/%E6%88%91%E8%A6%81%E6%88%90%E7%82%BA%E4%BD%A0%E5%A5%B3%E5%8F%8B",
       "name": "我要成為你女友",
-      "icon": "2213"
+      "icon": ""
     }
   ]
 }

@@ -12,7 +12,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.firebase.firebase-perf'
 
 task MyBuildInfo {
-    int vCode = 122
+    int vCode = 123
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
@@ -129,7 +129,7 @@ dependencies {
     api "com.google.android.material:material:1.4.0"
     api "androidx.percentlayout:percentlayout:1.0.0"
     api "androidx.recyclerview:recyclerview:1.2.1"
-    api "androidx.constraintlayout:constraintlayout:2.1.0"
+    api "androidx.constraintlayout:constraintlayout:2.1.1"
     api "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     // Firebase
