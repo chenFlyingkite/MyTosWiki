@@ -509,6 +509,14 @@
                     style="@style/sortText"
                     android:text="@string/cards_stun"/>
                 <CheckBox
+                    android:id="@+id/sortSpecialFreeze"
+                    style="@style/sortText"
+                    android:text="@string/cards_freeze"/>
+                <CheckBox
+                    android:id="@+id/sortSpecialIgnite"
+                    style="@style/sortText"
+                    android:text="@string/cards_ignite"/>
+                <CheckBox
                     android:id="@+id/sortSpecialDelay"
                     style="@style/sortText"
                     android:text="@string/cards_delay"/>

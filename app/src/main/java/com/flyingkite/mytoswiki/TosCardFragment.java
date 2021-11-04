@@ -129,6 +129,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
     //private CheckBox sortSpecialAllDealDamageElement;
     private CheckBox sortSpecialTurnEnemyAttr;
     private CheckBox sortSpecialStun;
+    private CheckBox sortSpecialFreeze;
+    private CheckBox sortSpecialIgnite;
     private CheckBox sortSpecialDelay;
     private CheckBox sortSpecialClearLock;
     private CheckBox sortSpecialAlsoHeartActive;
@@ -536,6 +538,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
         //sortSpecialAllDealDamageElement = menu.findViewById(R.id.sortSpecialAllDealDamageElement);
         sortSpecialTurnEnemyAttr = menu.findViewById(R.id.sortSpecialTurnEnemyAttr);
         sortSpecialStun = menu.findViewById(R.id.sortSpecialStun);
+        sortSpecialFreeze = menu.findViewById(R.id.sortSpecialFreeze);
+        sortSpecialIgnite = menu.findViewById(R.id.sortSpecialIgnite);
         sortSpecialDelay = menu.findViewById(R.id.sortSpecialDelay);
         sortSpecialClearLock = menu.findViewById(R.id.sortSpecialClearLock);
         sortSpecialAlsoHeartActive = menu.findViewById(R.id.sortSpecialAlsoHeartActive);
@@ -1255,6 +1259,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil {
                 }
                 if (sortSpecialStun.isChecked()) {
                     accept &= find(key, R.array.cards_stun_keys);
+                }
+                if (sortSpecialFreeze.isChecked()) {
+                    accept &= find(key, R.array.cards_freeze_keys);
+                }
+                if (sortSpecialIgnite.isChecked()) {
+                    accept &= find(key, R.array.cards_ignite_keys);
                 }
                 if (sortSpecialDelay.isChecked()) {
                     accept &= find(key, R.array.cards_delay_keys);
