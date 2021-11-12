@@ -2,13 +2,21 @@ package com.flyingkite.fabric;
 
 import android.os.Bundle;
 
+import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.firebase.CloudMessaging;
+import com.flyingkite.firebase.RemoteConfig;
+import com.flyingkite.firebase.RemoteConfigKey;
 import com.flyingkite.library.log.Loggable;
+import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.BuildConfig;
+import com.flyingkite.mytoswiki.dialog.FeedbackException;
+import com.flyingkite.mytoswiki.util.OkHttpUtil;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.Map;
+
+import flyingkite.log.L;
 
 public class FabricAnswers {
     private static final String TAG = "FabricAnswers";
@@ -141,7 +149,8 @@ public class FabricAnswers {
     //-- Tos Items
 
     //-- App statistics
-    public static void logAppOnCreate(Map<String, String> attributes) {
+    public static void logAppOnCreate() {
+        logIP();
 //        ContentViewEvent c = new ContentViewEvent();
 //        c.putContentName("App.OnCreate");
 //        c = addAttr(c, attributes);
@@ -151,6 +160,26 @@ public class FabricAnswers {
 //        if (BuildConfig.DEBUG) {
 //            log("log %s", c);
 //        }
+    }
+
+    public static void logIP() {
+        boolean on = RemoteConfig.getBoolean(RemoteConfigKey.APP_SEND_IP_INFO);
+        if (App.isNetworkConnected() && on) {
+            ThreadUtil.runOnWorkerThread(() -> {
+                String link = "http://ip-api.com/json";
+                final String s = OkHttpUtil.getResponse(link, null);
+                ThreadUtil.runOnUiThread(() -> {
+                    try {
+                        String t = null;
+                        t.length();
+                    } catch (NullPointerException e) {
+                        FeedbackException fe = new FeedbackException("ipapi\n" + s);
+                        L.log("fe = %s", fe);
+                        CrashReport.logException(fe);
+                    }
+                });
+            });
+        }
     }
     //-- App statistics
 //    2018-08-14 12:19:57.921 E/Answers: Invalid user input detected

@@ -1,15 +1,15 @@
 package com.flyingkite.mytoswiki.dialog;
 
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
 import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
+
+import androidx.annotation.Nullable;
 
 public class FeedbackDialog extends BaseTosDialog {
     @Override
@@ -58,12 +58,6 @@ public class FeedbackDialog extends BaseTosDialog {
             return true;
         } else {
             return super.onBackPressed();
-        }
-    }
-
-    private class FeedbackException extends Exception {
-        public FeedbackException(CharSequence s) {
-            super("\n" + s + "\n\nFCM Token= " + CloudMessaging.getToken() + "\n");
         }
     }
 }

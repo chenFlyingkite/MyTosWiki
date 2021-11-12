@@ -53,7 +53,7 @@ public class TosEventDialog extends BaseTosDialog {
         loadLinkToImageView(findViewById(R.id.tedEventImage), image, getActivity());
 
         // Set text
-        boolean html = RemoteConfig.getBoolean(RemoteConfigKey.DIALOG_TOS_EVENT_MEMO_USE_HTML);
+        boolean html = false;
         String s = RemoteConfig.getString(RemoteConfigKey.DIALOG_TOS_EVENT_MEMO_CONTENT);
         eventMemo.setText(html ? Html.fromHtml(s) : escapeNewLine(s));
     }
