@@ -49768,5 +49768,113 @@
       "iconLink": "https://static.wikia.nocookie.net/tos/images/9/91/C9008.png/revision/latest/scale-to-width-down/120?cb\u003d20210121090600\u0026path-prefix\u003dzh",
       "iconKey": "C9008.png"
     }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "裂空龍刃",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對單一敵人造成 2020 點無屬性傷害"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "1 回合內，無視攻前盾"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "此召喚獸發動技能的回合，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 15 粒或以上符石，自身攻擊力提升 1.1 倍"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+2%",
+    "upAttack": "+2%",
+    "upRecovery": "+2%",
+    "idNorm": "9009",
+    "name": "【9009】 奪冠花劍龍刃",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%909009%E3%80%91_%E5%A5%AA%E5%86%A0%E8%8A%B1%E5%8A%8D%E9%BE%8D%E5%88%83",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/1/18/C9009.png/revision/latest/scale-to-width-down/120?cb\u003d20210811035710\u0026path-prefix\u003dzh",
+      "iconKey": "C9009.png"
+    }
+  },
+  {
+    "rarity": 2,
+    "level": 2,
+    "mode": "龍刻類型",
+    "charge": "轉動龍印",
+    "craftSkill": [
+      {
+        "level": 1,
+        "score": 2000,
+        "detail": "1 回合內，對單一敵人造成 500000 點火屬性傷害，此傷害無視防禦力"
+      },
+      {
+        "level": 2,
+        "score": 4500,
+        "detail": "隊長及戰友的技能 CD 減少 1"
+      }
+    ],
+    "extraSkill": [
+      {
+        "level": 1,
+        "score": 0,
+        "detail": "延長移動符石時間 1 秒"
+      },
+      {
+        "level": 2,
+        "score": 0,
+        "detail": "消除 4 粒或以上的心符石，回復 1.5 倍隊伍回復力等值的生命力"
+      },
+      {
+        "level": 3,
+        "score": 0,
+        "detail": "來源"
+      },
+      {
+        "level": 4,
+        "score": 0,
+        "detail": ""
+      }
+    ],
+    "attrLimit": "",
+    "raceLimit": "",
+    "cardLimit": [],
+    "cardLimitName": [],
+    "upHp": "+1%",
+    "upAttack": "+1%",
+    "upRecovery": "+1%",
+    "idNorm": "9010",
+    "name": "【9010】 章魚丸龍印",
+    "link": "https://tos.fandom.com/zh/wiki/%E3%80%909010%E3%80%91_%E7%AB%A0%E9%AD%9A%E4%B8%B8%E9%BE%8D%E5%8D%B0",
+    "icon": {
+      "iconLink": "https://static.wikia.nocookie.net/tos/images/2/27/C9010.png/revision/latest/scale-to-width-down/120?cb\u003d20211109041617\u0026path-prefix\u003dzh",
+      "iconKey": "C9010.png"
+    }
   }
 ]
