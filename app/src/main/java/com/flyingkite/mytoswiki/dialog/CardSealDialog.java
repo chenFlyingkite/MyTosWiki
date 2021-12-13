@@ -32,6 +32,7 @@ import com.flyingkite.mytoswiki.data.seal.v1.KonoSubarashi;
 import com.flyingkite.mytoswiki.data.seal.v1.LostSaga;
 import com.flyingkite.mytoswiki.data.seal.v1.MasterCathieves;
 import com.flyingkite.mytoswiki.data.seal.v1.Minerelves;
+import com.flyingkite.mytoswiki.data.seal.v1.MyHero;
 import com.flyingkite.mytoswiki.data.seal.v1.OldenTrio;
 import com.flyingkite.mytoswiki.data.seal.v1.PhantomTroupe;
 import com.flyingkite.mytoswiki.data.seal.v1.PrimalDeities;
@@ -82,6 +83,7 @@ public class CardSealDialog extends BaseTosDialog {
     private static final List<SealItem> sealSeries = new ArrayList<>();
 
     static {
+        sealSeries.add(new SealItem(R.string.card_series_my_hero, new MyHero()));;
         sealSeries.add(new SealItem(R.string.card_series_saint_seiya_hades, new SaintSeiyaHades()));
         sealSeries.add(new SealItem(R.string.card_series_summoner_candidate, new SummonerCandidates()));
         sealSeries.add(new SealItem(R.string.card_series_kamen_rider, new KamenRider()));
