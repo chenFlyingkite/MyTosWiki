@@ -19,6 +19,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="userPortrait"
+            android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -28,7 +29,8 @@
         </activity>
 
         <service
-            android:name="com.flyingkite.firebase.FCMMessagingService">
+            android:name="com.flyingkite.firebase.FCMMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
