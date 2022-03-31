@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#a000">
+    <ImageView
+        android:layout_width="@dimen/t70dp"
+        android:layout_height="@dimen/t70dp"/>
+
+    <ImageView
+        android:layout_width="@dimen/t60dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/t5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/android_jetpack"/>
+</FrameLayout>

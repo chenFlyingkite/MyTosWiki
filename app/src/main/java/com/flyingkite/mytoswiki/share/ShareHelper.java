@@ -9,15 +9,16 @@ import android.graphics.Canvas;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.View;
 
 import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.library.util.FileUtil;
 import com.flyingkite.library.util.IOUtil;
 import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
+import com.flyingkite.mytoswiki.util.ShareUtil;
 import com.flyingkite.util.WaitingDialog;
 
 import java.io.File;
@@ -26,24 +27,33 @@ import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
 
 /**
  * <a href="https://developer.android.com/training/sharing/send">
  *     https://developer.android.com/training/sharing/send
  *     </a>
+ *
+ * https://developer.android.com/training/data-storage
  */
 public class ShareHelper {
+    private static final Loggable z = new Loggable() {};
 
-    public static void shareString(@NonNull Context context, String msg) {
-        shareString(context, msg, context.getString(R.string.share_to));
+    // i18n text string for share title
+    public static String shareTo(Context context) {
+        return context.getString(R.string.share_to);
     }
 
-    public static void shareString(@NonNull Context context, String msg, CharSequence chooser) {
+    public static void sendString(@NonNull Context context, String msg) {
+        sendString(context, msg, shareTo(context));
+    }
+
+    public static void sendString(@NonNull Context context, String msg, CharSequence title) {
         Intent it = new Intent(Intent.ACTION_SEND);
         it.putExtra(Intent.EXTRA_TEXT, msg);
         it.setType("text/plain");
         try {
-            context.startActivity(Intent.createChooser(it, chooser));
+            context.startActivity(Intent.createChooser(it, title));
         } catch (ActivityNotFoundException e) {
             e.printStackTrace();
         }
@@ -59,16 +69,21 @@ public class ShareHelper {
     }
 
     public static void sendUriIntent(@NonNull Context context, Uri uri, String type) {
+        sendUriIntent(context, shareTo(context), uri, type);
+    }
+
+    public static void sendUriIntent(@NonNull Context context, String title, Uri uri, String type) {
         Intent it = new Intent(Intent.ACTION_SEND);
         it.putExtra(Intent.EXTRA_STREAM, uri);
-        it.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
+        int flg = Intent.FLAG_GRANT_READ_URI_PERMISSION;
+        //flg |= Intent.FLAG_GRANT_WRITE_URI_PERMISSION;
+        it.addFlags(flg);
         //it.setClipData(ClipData.newRawUri("", uri));
         //it.setData(uri);
         it.setDataAndType(uri, type);
-        LogE("sendUriIntent %s %s", type, uri);
+        //z.logE("sendUriIntent %s %s", type, uri);
         try {
-            context.startActivity(it);
+            context.startActivity(Intent.createChooser(it, title));
         } catch (ActivityNotFoundException e) {
             e.printStackTrace();
         }
@@ -83,41 +98,68 @@ public class ShareHelper {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-
-                //sendUriIntent(context, Uri.fromFile(new File(filename)), "image/png");
-
-                MediaScannerConnection.scanFile(context, new String[]{filename}, null,
-                        (path, uri) -> {
-                            LogE("Scanned %s\n  as -> %s", path, uri);
-                            //Uri u2 = FileProvider.getUriForFile(context, context.getPackageName(), new File(filename));
-                            //sendUriIntent(context, u2, "image/png");
-                            sendUriIntent(context, uri, "image/png");
-                        });
+                sharePng(context, filename);
             }
         };
         task.ofSize(width, height);
         task.executeOnExecutor(ThreadUtil.cachedThreadPool);
     }
 
+    /**
+     * 1. Scan png path as uri by file provider and send it as "image/png" intent
+     * 2.
+     */
+    private static void sharePng(Context context, String pngPath) {
+        File file = new File(pngPath);
+        Uri uri = FileProvider.getUriForFile(context, getAuthority(context), file);
+//        file = /storage/emulated/0/Android/data/com.flyingkite.mytoswiki.debug/cache/20220331_100723829.png
+//        uri = content://com.flyingkite.mytoswiki.debug.fileprovider/cache_data/20220331_100723829.png
+        z.logE("file = %s\nuri = %s", file, uri);
+        sendUriIntent(context, uri, "image/png");
+    }
+
+    private static void scanFile(Context context, String filename) {
+        MediaScannerConnection.scanFile(context, new String[]{filename}, null, (path, uri) -> {
+            z.logE("Scanned %s\n  as -> %s", path, uri);
+        });
+    }
+
+    // Fields for #extFilesFile()
+    // Maybe public for other class
+    private static final String data = "data";
+    public static String getAuthority(Context c) {
+        String a = c.getPackageName() + ".fileprovider";
+        //z.logE("auth = %s", a);
+        return a;
+    }
+
     public static String cacheName(String name) {
         File folder = App.me.getExternalCacheDir();
         // FIXME : In 4.3, getExternalCacheDir() returns null
-        if (folder != null) {
-            return folder.getAbsolutePath() + File.separator + name;
+        File it = null;
+        if (folder == null) {
+            it = extFilesFile(name);
         } else {
-            return extFilesFile(name).getAbsolutePath();
+            it = new File(folder, name);
         }
+        return it.getAbsolutePath();
     }
-
-    private static final String data = "data";
 
     public static File extFilesFile(String filename) {
         File folder = App.me.getExternalFilesDir(data);
         return new File(folder, filename);
     }
 
-    @Deprecated
-    public static void shareBitmap(@NonNull Activity activity, String url) {
+    public static void makeSendImage(View w, ShareUtil util) {
+        w.setOnClickListener((v) -> {
+            util.shareImageTime(w);
+            z.logE("ok");
+            //showToast("ok : " + name);
+        });
+    }
+
+//    @Deprecated
+//    public static void shareBitmap(@NonNull Activity activity, String url) {
 //        GlideApp.with(activity).asBitmap().load(url)
 //        .listener(new RequestListener<Bitmap>() {
 //            @Override
@@ -146,7 +188,7 @@ public class ShareHelper {
 //                }
 //            }
 //        });
-    }
+//    }
 
     public static class SaveViewToBitmapTask extends AsyncTask<Void, Void, Void> {
         private final WeakReference<Activity> activity;
@@ -194,7 +236,7 @@ public class ShareHelper {
         protected Void doInBackground(Void... voids) {
             View vw = getW(view);
             if (vw == null || savedName == null) {
-                LogV("Cannot save bitmap : %s, %s", view, savedName);
+                z.log("Cannot save bitmap : %s, %s", view, savedName);
                 return null;
             }
 
@@ -238,27 +280,12 @@ public class ShareHelper {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            tt.tac("Save done");
+            tt.tac("Image saved %s", savedName);
+            activity.clear();
+            view.clear();
             if (w != null) {
                 w.dismiss();
             }
         }
     }
-
-    private static void LogV(String msg, Object... param) {
-        LogV(String.format(msg, param));
-    }
-
-    private static void LogV(String msg) {
-        Log.v("ShareHelper", msg);
-    }
-
-    private static void LogE(String msg, Object... param) {
-        LogE(String.format(msg, param));
-    }
-
-    private static void LogE(String msg) {
-        Log.e("ShareHelper", msg);
-    }
-
 }

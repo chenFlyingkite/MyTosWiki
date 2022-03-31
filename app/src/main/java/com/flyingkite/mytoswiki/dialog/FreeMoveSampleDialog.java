@@ -57,7 +57,7 @@ public class FreeMoveSampleDialog extends BaseTosDialog {
     private void initActions() {
         TextView detail = findViewById(R.id.fsdDetail);
         detail.setOnClickListener((v) -> {
-            ShareHelper.shareString(getActivity(), detail.getText().toString());
+            ShareHelper.sendString(getActivity(), detail.getText().toString());
             logShare("detail");
         });
 

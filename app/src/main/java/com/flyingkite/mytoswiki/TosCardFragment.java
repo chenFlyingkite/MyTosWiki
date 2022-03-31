@@ -30,6 +30,7 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.RegexUtil;
+import com.flyingkite.mytoswiki.util.ShareUtil;
 import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
@@ -56,7 +57,7 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import flyingkite.tool.StringUtil;
 
-public class TosCardFragment extends BaseFragment implements TosPageUtil {
+public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareUtil {
     public static final String TAG = "TosCardFragment";
     // Top Status bar
     private TextView tosInfo;

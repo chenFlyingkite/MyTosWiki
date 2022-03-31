@@ -24,22 +24,25 @@
     <View
         style="@style/divider_h2px"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbarThumbVertical="@color/colorPrimaryDark"
-        android:scrollbars="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarThumbVertical="@color/colorPrimaryDark"
+    android:scrollbars="vertical">
 
-        <HorizontalScrollView
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scrollbars="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/t80dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/t80dp">
+            <View
+                style="@style/divider_h2px"/>
 
             <TextView
                 style="@style/sortTitle"

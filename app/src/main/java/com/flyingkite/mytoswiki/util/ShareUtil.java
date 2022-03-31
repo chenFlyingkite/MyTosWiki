@@ -1,11 +1,15 @@
 package com.flyingkite.mytoswiki.util;
 
 import android.app.Activity;
-import androidx.annotation.StringRes;
 import android.view.View;
 
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.share.ShareHelper;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import androidx.annotation.StringRes;
 
 public interface ShareUtil {
     Activity getActivity();
@@ -23,8 +27,8 @@ public interface ShareUtil {
         shareString(msg, getString(R.string.share_to));
     }
 
-    default void shareString(String msg, CharSequence chooser) {
-        ShareHelper.shareString(getActivity(), msg, chooser);
+    default void shareString(String msg, CharSequence title) {
+        ShareHelper.sendString(getActivity(), msg, title);
     }
 
     default void viewLink(String link) {
@@ -38,5 +42,17 @@ public interface ShareUtil {
     default void shareImage(View v) {
         String name = ShareHelper.cacheName("2.png");
         shareImage(v, name);
+    }
+
+    default void shareImageCache(View v, String name) {
+        String it = ShareHelper.cacheName(name);
+        shareImage(v, it);
+    }
+
+    default void shareImageTime(View v) {
+        Date now = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyyMMdd_hhmmssSSS");
+        String name = String.format("%s.png", f.format(now));
+        shareImageCache(v, name);
     }
 }

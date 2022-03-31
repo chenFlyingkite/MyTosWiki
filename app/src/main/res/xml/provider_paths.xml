@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+    <!--
+    https://developer.android.com/training/secure-file-sharing/setup-sharing#DefineMetaData
+    https://developer.android.com/reference/androidx/core/content/FileProvider
+    -->
+    <!--
+        {Context.getFilesDir()}/files/
+        <files-path name="name" path="path" />
+
+        {getCacheDir()}/{path}
+        <cache-path name="name" path="path" />
+
+        {Environment.getExternalStorageDirectory()}
+        <external-path name="name" path="path" />
+
+        {Context#getExternalFilesDir(String) Context.getExternalFilesDir(null)}
+        <external-files-path name="name" path="path" />
+
+        {Context.getExternalCacheDir()}
+        <external-cache-path name="name" path="path" />
+
+        {Context.getExternalMediaDirs()}
+        <external-media-path name="name" path="path" />
+    -->
+<!--    <external-files-path name="file_data" path="data/"/>-->
+    <external-cache-path name="cache_data" path="/"/>
+
+    <!--
     <files-path name="share" path="external_path"/>
+    -->
+
 </paths>
