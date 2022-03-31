@@ -181,6 +181,20 @@ public class FabricAnswers {
             });
         }
     }
+
+    public static void logAppClearCache() {
+        ThreadUtil.runOnWorkerThread(() -> {
+            try {
+                String t = null;
+                t.length();
+            } catch (NullPointerException e) {
+                FeedbackException fe = new FeedbackException("logAppClearCache");
+                L.log("ca = %s", fe);
+                CrashReport.logException(fe);
+            }
+        });
+    }
+
     //-- App statistics
 //    2018-08-14 12:19:57.921 E/Answers: Invalid user input detected
 //    java.lang.IllegalArgumentException: String is too long, truncating to 100 characters

@@ -29,6 +29,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="@dimen/t10dp">
+                <TextView
+                    style="@style/cardText"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/t15dp"
+                    android:text="@string/help_auto_clean_cache"/>
 
                 <LinearLayout
                     android:id="@+id/help_web"

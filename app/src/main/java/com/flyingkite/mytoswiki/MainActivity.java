@@ -44,9 +44,11 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import androidx.viewpager.widget.ViewPager;
+import flyingkite.math.MathUtil;
 
 public class MainActivity extends BaseActivity implements
         ToolBarOwner,
@@ -87,6 +89,15 @@ public class MainActivity extends BaseActivity implements
 
     private WaitingDialog waiting;
     private AppPref appPref = new AppPref();
+
+    @Override
+    protected boolean clearCacheWhenOnDestroy() {
+        Date now = new Date();
+        int min = now.getMinutes();
+        boolean clean = MathUtil.isInRange(min, 30, 35);
+        logE("clean = %s, min = %s, now = %s", clean, min, now);
+        return clean;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,6 +209,11 @@ public class MainActivity extends BaseActivity implements
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override

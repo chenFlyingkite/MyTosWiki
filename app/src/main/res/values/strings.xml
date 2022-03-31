@@ -865,6 +865,7 @@
     <string name="stage_memo_header">筆記內容：</string>
 
     <string name="help_title">神魔數學家 功能小提示</string>
+    <string name="help_auto_clean_cache">程式清理快取，節省硬碟空間 : 程式離開時間為30~35分</string>
     <string name="help_open_web">開啟網頁</string>
     <string name="help_save_image">另存圖片</string>
     <string name="help_card_long_press">點擊、長按顯示卡片、右下角文字為十分位數</string>

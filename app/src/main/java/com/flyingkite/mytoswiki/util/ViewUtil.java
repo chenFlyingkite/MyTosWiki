@@ -284,4 +284,36 @@ public interface ViewUtil extends ViewUtil2 {
         return null;
     }
     //-- View helpers --
+
+    //-#0 : android.widget.RelativeLayout{ac8cca9 V.E...... ........ 0,0-1080,2208}
+    //--#0 : android.widget.LinearLayout{990d22e V.E...... ........ 0,1957-1080,2208 #7f090189 app:id/rcf_bottomBar}
+    //---#0 : android.support.v7.widget.AppCompatTextView{47b1cf VFED..C.. ........ 114,56-524,195 #7f09018b app:id/rcf_demoServer}
+    //---#1 : android.support.v7.widget.AppCompatTextView{bcdf75c VFED..C.. ........ 552,56-965,195 #7f09018f app:id/rcf_kycSetting}
+    //--#1 : android.widget.ScrollView{5388a65 VFED.V... ........ 0,0-1080,1957 #7f0902e3 app:id/rcf_main_login}
+    //---#0 : android.widget.LinearLayout{25be33a V.E...... ........ 0,0-1080,1482}
+    //----#0 : android.view.View{9379beb V.ED..... ........ 538,56-541,197}
+    //----#1 : android.widget.LinearLayout{f12d48 V.E...... ........ 315,197-765,450}
+    //-----#0 : android.support.v7.widget.AppCompatImageView{394f906 V.ED..... ........ 0,0-197,197 #7f090192 app:id/rcf_you_app}
+    //-----#1 : android.support.v7.widget.AppCompatTextView{af20bc7 G.ED..... ......I. 0,0-0,0}
+    //-----#2 : android.support.v7.widget.AppCompatTextView{b8fd5f4 G.ED..... ......I. 0,0-0,0}
+    //-----#3 : android.support.v7.widget.AppCompatImageView{e26a11d V.ED...L. ........ 253,0-450,197 #7f09018d app:id/rcf_face_app}
+    //----#2 : android.support.v7.widget.AppCompatTextView{4f79f92 V.ED..... ........ 248,450-831,554}
+    default void printTree(View v, int k, String prefix) {
+        // for prefix = "-"
+        StringBuilder pre = new StringBuilder(prefix);
+        for (int i = 0; i < k; i++) {
+            pre.append(prefix);
+        }
+        //android.R.id.content
+        if (v instanceof ViewGroup) {
+            ViewGroup g = (ViewGroup) v;
+            for (int i = 0; i < g.getChildCount(); i++) {
+                View x = g.getChildAt(i);
+                //logE("%s#%s : %s", pre, i, x); // here print logs
+                if (x instanceof ViewGroup) {
+                    printTree(x, k + 1, prefix);
+                }
+            }
+        }
+    }
 }

@@ -12,10 +12,13 @@ import android.widget.Toast;
 import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
+import com.flyingkite.library.TicTac2;
+import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.google.firebase.FirebaseApp;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
@@ -26,8 +29,9 @@ import androidx.annotation.AnyRes;
 import androidx.annotation.StringRes;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
+import flyingkite.files.FileUtil;
 
-public class App extends MultiDexApplication {
+public class App extends MultiDexApplication implements Loggable {
     public static App me;
     private static final SimpleDateFormat timeFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh_mm_ss_SSS", Locale.US);
     private static Thread.UncaughtExceptionHandler defaultHandler;
@@ -38,6 +42,15 @@ public class App extends MultiDexApplication {
         super.attachBaseContext(base);
         MultiDex.install(this);
         me = this;
+    }
+
+    public void clearAppCache() {
+        FabricAnswers.logAppClearCache();
+        File cache = me.getCacheDir();
+        TicTac2 t = new TicTac2();
+        t.tic();
+        FileUtil.ensureDelete(cache);
+        t.tac("clear cache %s", cache);
     }
 
     @Override
@@ -125,6 +138,17 @@ public class App extends MultiDexApplication {
 
         ConnectivityManager c = (ConnectivityManager) me.getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo n = c.getActiveNetworkInfo();
+        return n != null && n.isConnected();
+    }
+
+    // todo
+    // https://developer.android.com/reference/android/net/NetworkInfo
+    public static boolean isWifi() {
+        if (me == null) return false;
+
+        ConnectivityManager c = (ConnectivityManager) me.getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo n = c.getActiveNetworkInfo();
+
         return n != null && n.isConnected();
     }
 }

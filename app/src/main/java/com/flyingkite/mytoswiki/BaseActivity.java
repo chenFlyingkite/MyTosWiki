@@ -59,6 +59,13 @@ public abstract class BaseActivity extends Activity implements
     protected void onDestroy() {
         super.onDestroy();
         log("onDestroy()");
+        if (clearCacheWhenOnDestroy()) {
+            App.me.clearAppCache();
+        }
+    }
+
+    protected boolean clearCacheWhenOnDestroy() {
+        return false;
     }
 
     @Override
