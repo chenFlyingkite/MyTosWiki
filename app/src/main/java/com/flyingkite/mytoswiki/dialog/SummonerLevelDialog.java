@@ -2,17 +2,16 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
 import android.graphics.Color;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.TosSummonerChart;
 import com.flyingkite.mytoswiki.library.SummonLvAdapter;
@@ -29,6 +28,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import flyingkite.library.androidx.recyclerview.Library;
 
 public class SummonerLevelDialog extends BaseTosDialog {
     private Library<SummonLvAdapter> tableLibrary;
@@ -73,10 +74,10 @@ public class SummonerLevelDialog extends BaseTosDialog {
             s.add("" + i);
         }
         ba.setDataList(s);
-        ba.setAutoScroll(true);
         ba.setItemListener(new TextAdapter.ItemListener() {
             @Override
             public void onClick(String item, TextAdapter.TextVH holder, int position) {
+                ba.scroller.smoothScrollToCenter(position);
                 setHeader(item);
 
                 // Scroll to item

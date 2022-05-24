@@ -1,16 +1,17 @@
 package com.flyingkite.mytoswiki;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.util.GlideUtil;
 import com.flyingkite.util.PGAdapter;
+
+import flyingkite.library.android.log.Loggable;
 
 public class TextPagerAdapter extends PGAdapter<TosCard> implements GlideUtil, Loggable {
 

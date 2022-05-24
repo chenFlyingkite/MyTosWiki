@@ -3,7 +3,7 @@ package com.flyingkite.mytoswiki.data.seal.v1;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import flyingkite.math.DiscreteSample;
+import flyingkite.library.java.math.DiscreteSample;
 
 public class SealSample extends DiscreteSample implements Parcelable {
 
@@ -32,7 +32,7 @@ public class SealSample extends DiscreteSample implements Parcelable {
         in.readDoubleArray(observePdf);
     }
 
-    public static final Creator<SealSample> CREATOR = new Creator<SealSample>() {
+    public static final Creator<SealSample> CREATOR = new Creator<>() {
         @Override
         public SealSample createFromParcel(Parcel in) {
             return new SealSample(in);

@@ -4,10 +4,9 @@ import android.app.FragmentManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.util.ListUtil;
-import com.flyingkite.library.widget.Library;
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.StoneFix;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -17,8 +16,9 @@ import com.flyingkite.mytoswiki.util.ViewUtil;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
+import flyingkite.library.java.util.ListUtil;
 
 public abstract class FixStoneAdapter extends RVAdapter<StoneFix, FixStoneAdapter.StoneFixVH, FixStoneAdapter.ItemListener> implements TosPageUtil {
 

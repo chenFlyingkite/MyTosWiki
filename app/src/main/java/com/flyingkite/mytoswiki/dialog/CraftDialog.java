@@ -8,12 +8,13 @@ import android.widget.CheckBox;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import androidx.annotation.ArrayRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.util.MathUtil;
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.CraftSort;
@@ -26,8 +27,6 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
-import com.flyingkite.mytoswiki.util.RegexUtil;
-import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 
@@ -42,12 +41,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import androidx.annotation.ArrayRes;
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.tool.StringUtil;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.tool.TaskMonitor;
+import flyingkite.library.java.util.MathUtil;
+import flyingkite.library.java.util.RegexUtil;
+import flyingkite.library.java.util.StringUtil;
 
 public class CraftDialog extends BaseTosDialog {
     private Library<CraftAdapter> craftLibrary;
@@ -890,11 +890,11 @@ public class CraftDialog extends BaseTosDialog {
         }
 
         private int containsAt(String key, List<String> data) {
-            return flyingkite.tool.StringUtil.containsAt(key, data);
+            return StringUtil.containsAt(key, data);
         }
 
         private int containsAt(String key, String[] data) {
-            return flyingkite.tool.StringUtil.containsAt(key, data);
+            return StringUtil.containsAt(key, data);
         }
 
     }
@@ -917,7 +917,7 @@ public class CraftDialog extends BaseTosDialog {
             private CraftSort get() {
                 File f = getTosCraftSortFile();
                 if (f.exists()) {
-                    return GsonUtil.loadFile(getTosCraftSortFile(), CraftSort.class);
+                    return GsonUtil.fromFile(getTosCraftSortFile(), CraftSort.class);
                 } else {
                     return null;
                 }

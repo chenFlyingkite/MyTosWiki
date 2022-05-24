@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.library.CardEvolvePathAdapter;
 import com.flyingkite.mytoswiki.share.ShareHelper;
@@ -20,9 +22,7 @@ import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.IdRes;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.Library;
 
 @Deprecated
 public class TosCardEvolvePathFragment extends BaseFragment {

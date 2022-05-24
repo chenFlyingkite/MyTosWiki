@@ -3,15 +3,15 @@ package com.flyingkite.mytoswiki.library;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.tos.Runestones;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.math.MathUtil;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
+import flyingkite.library.java.util.MathUtil;
 
 public class RunestoneAdapter extends RVAdapter<Character, RunestoneAdapter.RunestoneVH, RunestoneAdapter.ItemListener> {
 

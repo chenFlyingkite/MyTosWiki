@@ -10,9 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
@@ -30,10 +33,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.DrawableRes;
-import androidx.annotation.IdRes;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.Library;
 
 @SuppressLint("SetTextI18n")
 public class CardDialog extends BaseTosDialog {

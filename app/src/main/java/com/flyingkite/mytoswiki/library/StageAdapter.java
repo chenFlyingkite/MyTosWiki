@@ -1,19 +1,20 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.Stage;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class StageAdapter extends RVAdapter<Stage, StageAdapter.StageVH, StageAdapter.ItemListener> {
 

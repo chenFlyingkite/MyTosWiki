@@ -1,18 +1,17 @@
 package com.flyingkite.firebase;
 
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.log.Loggable;
+import androidx.annotation.NonNull;
+import androidx.annotation.XmlRes;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.XmlRes;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.androidx.TicTac2;
 
 public class RemoteConfig {
-    private static final String TAG = "RemoteConfig";
-
     public static void init(@XmlRes int xmlDefault) {
         FirebaseRemoteConfig config = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings s = new FirebaseRemoteConfigSettings.Builder()
@@ -30,7 +29,7 @@ public class RemoteConfig {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         t.tac("Remote config fetch");
-                        log("RemoteConfig fetch complete, success = %s", task.isSuccessful());
+                        z.logI("RemoteConfig fetch complete, success = %s", task.isSuccessful());
                         if (task.isSuccessful()) {
                             config.activate();
                         }
@@ -61,27 +60,14 @@ public class RemoteConfig {
     }
 
     private static void printAll() {
-        log("--- Config Values --- Begin");
+        z.logI("--- Config Values --- Begin");
         for (RemoteConfigKey k : RemoteConfigKey.values()) {
             if (k != null) {
-                log(k.getKey() + "\n-> " + getString(k));
+                z.logI(k.getKey() + "\n-> " + getString(k));
             }
         }
-        log("--- Config Values --- End");
+        z.logI("--- Config Values --- End");
     }
 
-    private static void log(String message) {
-        z.logI(message);
-    }
-
-    private static void log(String fmt, Object... params) {
-        z.logI(fmt, params);
-    }
-
-    private static final Loggable z = new Loggable() {
-        @Override
-        public String LTag() {
-            return TAG;
-        }
-    };
+    private static final Loggable z = new Loggable() {};
 }

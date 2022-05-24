@@ -1,18 +1,19 @@
 package com.flyingkite.mytoswiki.library;
 
 import android.app.Activity;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.MainStage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ViewUtil;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public abstract class MainStageAdapter extends RVAdapter<MainStage, MainStageAdapter.MStageVH, MainStageAdapter.ItemListener> implements PageUtil {
 

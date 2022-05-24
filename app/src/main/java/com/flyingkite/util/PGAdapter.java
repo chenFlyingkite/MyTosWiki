@@ -1,17 +1,17 @@
 package com.flyingkite.util;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.ListUtil;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.java.util.ListUtil;
 
 public class PGAdapter<T> extends PagerAdapter implements Loggable {
 

@@ -5,14 +5,14 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.util.FileUtil;
-import com.flyingkite.library.util.StringUtil;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.io.File;
 import java.util.List;
 import java.util.Locale;
+
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.util.FileUtil;
 
 public class CrashReport {
     private static final String TAG = "CrashReport";
@@ -86,8 +86,8 @@ public class CrashReport {
         ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
         am.getMemoryInfo(memInfo);
 
-        setValue("Max_Hw_Mem", StringUtil.formatByte(memInfo.totalMem));
-        setValue("Max_Vm_Mem", StringUtil.formatByte(Runtime.getRuntime().maxMemory()));
+        setValue("Max_Hw_Mem", FileUtil.toMbKbB(memInfo.totalMem));
+        setValue("Max_Vm_Mem", FileUtil.toMbKbB(Runtime.getRuntime().maxMemory()));
 
         // GLES
         setValue("GL_ES_Ver", Integer.toString(am.getDeviceConfigurationInfo().reqGlEsVersion, 16));

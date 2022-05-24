@@ -6,11 +6,9 @@ import android.content.DialogInterface;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import androidx.annotation.IdRes;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.Stamina;
 import com.flyingkite.mytoswiki.library.StaminaAdapter;
@@ -25,7 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.IdRes;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.recyclerview.Library;
 
 public class StaminaDialog extends BaseTosDialog {
 
@@ -231,7 +231,7 @@ public class StaminaDialog extends BaseTosDialog {
             private Stamina get() {
                 File f = getStaminaFile();
                 if (f.exists()) {
-                    return GsonUtil.loadFile(getStaminaFile(), Stamina.class);
+                    return GsonUtil.fromFile(getStaminaFile(), Stamina.class);
                 } else {
                     return null;
                 }

@@ -3,14 +3,14 @@ package com.flyingkite.mytoswiki.library;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.v1.SealItem;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class SealSeriesAdapter extends RVAdapter<SealItem, SealSeriesAdapter.SealVH, SealSeriesAdapter.ItemListener> implements Loggable {
 

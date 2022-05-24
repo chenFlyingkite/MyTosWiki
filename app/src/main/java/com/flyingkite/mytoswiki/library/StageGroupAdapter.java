@@ -5,8 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.Stage;
@@ -14,8 +15,7 @@ import com.flyingkite.mytoswiki.data.stage.StageGroup;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ViewUtil;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public abstract class StageGroupAdapter extends RVAdapter<StageGroup, StageGroupAdapter.StageGVH, StageGroupAdapter.ItemLisntener> implements PageUtil {
     public interface ItemLisntener extends RVAdapter.ItemListener<StageGroup, StageGVH> {

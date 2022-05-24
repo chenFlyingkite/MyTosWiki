@@ -10,12 +10,9 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
 
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.FileUtil;
-import com.flyingkite.library.util.IOUtil;
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.util.ShareUtil;
@@ -26,8 +23,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.lang.ref.WeakReference;
 
-import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.android.util.IOUtil;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.util.FileUtil;
 
 /**
  * <a href="https://developer.android.com/training/sharing/send">

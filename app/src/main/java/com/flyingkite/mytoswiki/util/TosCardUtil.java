@@ -2,14 +2,15 @@ package com.flyingkite.mytoswiki.util;
 
 import android.text.TextUtils;
 
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.MathUtil;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import flyingkite.library.java.util.MathUtil;
+import flyingkite.library.java.util.RegexUtil;
 
 public class TosCardUtil {
 
@@ -103,6 +104,4 @@ public class TosCardUtil {
 
         return true;
     }
-
-    private static final Loggable z = new Loggable() {};
 }

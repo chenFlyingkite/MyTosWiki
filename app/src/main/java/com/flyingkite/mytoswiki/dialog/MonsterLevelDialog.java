@@ -2,13 +2,12 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.MonsterLvAdapter;
 import com.flyingkite.mytoswiki.library.TextAdapter;
@@ -17,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import flyingkite.library.androidx.recyclerview.Library;
 
 public class MonsterLevelDialog extends BaseTosDialog {
     private Library<MonsterLvAdapter> tableLibrary;
@@ -60,10 +61,10 @@ public class MonsterLevelDialog extends BaseTosDialog {
             s.add(i + "萬");
         }
         ba.setDataList(s);
-        ba.setAutoScroll(true);
         ba.setItemListener(new TextAdapter.ItemListener() {
             @Override
             public void onClick(String item, TextAdapter.TextVH holder, int position) {
+                ba.scroller.smoothScrollToCenter(position);
                 setHeader(item);
 
                 // Change table

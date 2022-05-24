@@ -8,12 +8,11 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import androidx.annotation.IdRes;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.Say;
-import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.SkillEat;
 import com.flyingkite.mytoswiki.library.CardTileAdapter;
@@ -28,9 +27,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.IdRes;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.recyclerview.Library;
 
 public class SkillEatingDialog extends BaseTosDialog {
 
@@ -135,7 +134,6 @@ public class SkillEatingDialog extends BaseTosDialog {
                     , toRnd.getText()
                     , eatCard.getText());
 
-            Say.Log("s = %s", shareText);
             shareString(shareText);
             logShare("eat");
         });
@@ -151,7 +149,7 @@ public class SkillEatingDialog extends BaseTosDialog {
                 String s2 = tableData.get(3 * i + 2);
                 s.append(_fmt("%7s | %7s | %7s\n", s0, s1, s2));
             }
-            logE("s = %s", s);
+
             shareString(s.toString());
             logShare("table");
         });
@@ -373,7 +371,7 @@ public class SkillEatingDialog extends BaseTosDialog {
             private SkillEat get() {
                 File f = getSkillEatFile();
                 if (f.exists()) {
-                    return GsonUtil.loadFile(getSkillEatFile(), SkillEat.class);
+                    return GsonUtil.fromFile(getSkillEatFile(), SkillEat.class);
                 } else {
                     return null;
                 }

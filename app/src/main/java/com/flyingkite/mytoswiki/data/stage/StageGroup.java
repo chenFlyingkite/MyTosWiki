@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-import flyingkite.log.Formattable;
+import flyingkite.library.java.log.Formattable;
 
 public class StageGroup implements Formattable {
     @SerializedName("group")

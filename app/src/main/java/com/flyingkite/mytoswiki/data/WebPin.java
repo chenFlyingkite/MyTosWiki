@@ -1,8 +1,9 @@
 package com.flyingkite.mytoswiki.data;
 
 import com.flyingkite.mytoswiki.dialog.WebDialog;
-import com.flyingkite.mytoswiki.util.UrlUtil;
 import com.google.gson.annotations.SerializedName;
+
+import flyingkite.library.java.util.URLUtil;
 
 public class WebPin {
 
@@ -17,9 +18,9 @@ public class WebPin {
 
     @Override
     public String toString() {
-        return UrlUtil.decodeURL(web1) + "\n" +
-               UrlUtil.decodeURL(web2) + "\n" +
-               UrlUtil.decodeURL(web3);
+        return URLUtil.decodeURL(web1) + "\n" +
+                URLUtil.decodeURL(web2) + "\n" +
+                URLUtil.decodeURL(web3);
     }
 
     public String get(int position) {

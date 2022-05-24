@@ -1,15 +1,16 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.util.GlideUtil;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class CraftLiteAdapter extends RVAdapter<BaseCraft, CraftLiteAdapter.BCraftVH, CraftLiteAdapter.ItemListener> {
 

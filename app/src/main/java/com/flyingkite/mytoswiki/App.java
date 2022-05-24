@@ -8,12 +8,14 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.StrictMode;
 import android.widget.Toast;
+import androidx.annotation.AnyRes;
+import androidx.annotation.StringRes;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 
 import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.google.firebase.FirebaseApp;
@@ -25,11 +27,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import androidx.annotation.AnyRes;
-import androidx.annotation.StringRes;
-import androidx.multidex.MultiDex;
-import androidx.multidex.MultiDexApplication;
-import flyingkite.files.FileUtil;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.util.FileUtil;
 
 public class App extends MultiDexApplication implements Loggable {
     public static App me;

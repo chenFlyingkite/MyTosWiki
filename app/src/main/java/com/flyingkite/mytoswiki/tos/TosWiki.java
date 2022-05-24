@@ -4,12 +4,9 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.text.TextUtils;
 import android.util.Log;
+import androidx.annotation.NonNull;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.WebPin;
@@ -22,13 +19,10 @@ import com.flyingkite.mytoswiki.data.tos.CraftsNormal;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.OnAction;
 import com.flyingkite.mytoswiki.share.ShareHelper;
-import com.flyingkite.mytoswiki.util.UrlUtil;
-import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -36,7 +30,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 
-import androidx.annotation.NonNull;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.tool.TaskMonitor;
+import flyingkite.library.java.util.ArrayUtil;
+import flyingkite.library.java.util.URLUtil;
 
 public class TosWiki {
     private TosWiki() {}
@@ -146,7 +146,7 @@ public class TosWiki {
             t.tic();
             File f = getTosCardFavorFile();
             if (f.exists()) {
-                cardFavor = GsonUtil.loadFile(f, CardFavor.class);
+                cardFavor = GsonUtil.fromFile(f, CardFavor.class);
             }
             if (cardFavor == null) {
                 cardFavor = new CardFavor();
@@ -201,7 +201,7 @@ public class TosWiki {
             t.tic();
             File f = getWebPinFile();
             if (f.exists()) {
-                webPin = GsonUtil.loadFile(f, WebPin.class);
+                webPin = GsonUtil.fromFile(f, WebPin.class);
             }
             if (webPin == null) {
                 webPin = new WebPin();
@@ -376,9 +376,9 @@ public class TosWiki {
 
     private static void logWebPin(WebPin w) {
         Map<String, String> m = new HashMap<>();
-        m.put("w1", UrlUtil.liteLink(w.web1));
-        m.put("w2", UrlUtil.liteLink(w.web2));
-        m.put("w3", UrlUtil.liteLink(w.web3));
+        m.put("w1", URLUtil.liteLink(w.web1));
+        m.put("w2", URLUtil.liteLink(w.web2));
+        m.put("w3", URLUtil.liteLink(w.web3));
         FabricAnswers.logWebPin(m);
     }
 
@@ -429,11 +429,7 @@ public class TosWiki {
     }
 
     private static <T> T[] copy(T[] a) {
-        if (a == null) {
-            return null;
-        } else {
-            return Arrays.copyOf(a, len(a));
-        }
+        return ArrayUtil.copyOf(a);
     }
 
     private static final Loggable z = new Loggable() {

@@ -5,10 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
@@ -20,12 +19,11 @@ import com.flyingkite.util.select.Selector;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.recyclerview.RVSelectAdapter;
 
-public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener>
-    implements Loggable
-{
+public class CardAdapter extends RVSelectAdapter<TosCard, CardAdapter.CardVH, CardAdapter.ItemListener> implements Loggable {
 
     public interface ItemListener extends RVSelectAdapter.ItemListener<TosCard, CardVH> {
         default void onFiltered(int selected, int total) {}

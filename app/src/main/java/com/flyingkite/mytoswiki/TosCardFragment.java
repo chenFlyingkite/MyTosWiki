@@ -10,13 +10,14 @@ import android.widget.CheckBox;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import androidx.annotation.ArrayRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.util.GsonUtil;
-import com.flyingkite.library.util.ListUtil;
-import com.flyingkite.library.util.MathUtil;
-import com.flyingkite.library.widget.Library;
-import com.flyingkite.library.widget.SimpleItemTouchHelper;
 import com.flyingkite.mytoswiki.data.CardFavor;
 import com.flyingkite.mytoswiki.data.CardSort;
 import com.flyingkite.mytoswiki.data.tos.SkillLite;
@@ -29,12 +30,10 @@ import com.flyingkite.mytoswiki.share.ShareHelper;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
-import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.mytoswiki.util.ShareUtil;
 import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
-import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 
@@ -49,13 +48,14 @@ import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-import androidx.annotation.ArrayRes;
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.tool.StringUtil;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.androidx.recyclerview.SimpleItemTouchHelper;
+import flyingkite.library.java.tool.TaskMonitor;
+import flyingkite.library.java.util.ListUtil;
+import flyingkite.library.java.util.MathUtil;
+import flyingkite.library.java.util.RegexUtil;
+import flyingkite.library.java.util.StringUtil;
 
 public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareUtil {
     public static final String TAG = "TosCardFragment";
@@ -233,10 +233,10 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
         favor.setOnClickListener((v) -> {
             boolean s = !v.isSelected();
             updateFavor(s);
-            appPref.setShowFavorite(s);
+            appPref.showFavorite.set(s);
             logAction(s ? "showFavor" : "hideFavor");
         });
-        updateFavor(appPref.getShowFavorite());
+        updateFavor(appPref.showFavorite.get());
     }
 
     private void updateFavor(boolean b) {
@@ -741,7 +741,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
 
     private void clickSearch(View v) {
         String s = searchText.getText().toString();
-        appPref.setCardsSearchText(s);
+        appPref.cardsSearchText.set(s);
         applySelection();
     }
 
@@ -801,7 +801,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
 
     private void updateFromPref() {
         if (searchText != null) {
-            searchText.setText(appPref.getCardsSearchText());
+            searchText.setText(appPref.cardsSearchText.get());
         }
     }
 
@@ -1707,7 +1707,7 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
             private CardSort get() {
                 File f = getTosCardSortFile();
                 if (f.exists()) {
-                    return GsonUtil.loadFile(f, CardSort.class);
+                    return GsonUtil.fromFile(f, CardSort.class);
                 } else {
                     return null;
                 }

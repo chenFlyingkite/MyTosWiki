@@ -3,11 +3,11 @@ package com.flyingkite.mytoswiki.library.selectable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class SelectableAdapter extends RVAdapter<String, SelectableAdapter.SelectableVH, SelectableAdapter.ItemListener> {
     public interface ItemListener extends RVAdapter.ItemListener<String, SelectableVH> {

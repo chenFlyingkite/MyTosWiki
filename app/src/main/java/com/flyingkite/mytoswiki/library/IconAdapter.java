@@ -3,8 +3,9 @@ package com.flyingkite.mytoswiki.library;
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 
-import com.flyingkite.library.widget.IconRVAdapter;
 import com.flyingkite.mytoswiki.R;
+
+import flyingkite.library.androidx.recyclerview.IconRVAdapter;
 
 public class IconAdapter extends IconRVAdapter {
     protected @LayoutRes int holderLayout() {

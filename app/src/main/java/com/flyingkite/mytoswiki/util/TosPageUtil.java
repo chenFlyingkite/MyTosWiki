@@ -4,7 +4,6 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
@@ -12,6 +11,8 @@ import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.dialog.CardDialog;
 import com.flyingkite.mytoswiki.dialog.CraftItemDialog;
 import com.flyingkite.mytoswiki.tos.TosWiki;
+
+import flyingkite.library.android.log.Loggable;
 
 public interface TosPageUtil extends Loggable, GlideUtil, TosWikiUtil {
 

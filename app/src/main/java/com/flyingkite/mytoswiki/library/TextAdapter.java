@@ -1,7 +1,8 @@
 package com.flyingkite.mytoswiki.library;
 
-import com.flyingkite.library.widget.TextRVAdapter;
 import com.flyingkite.mytoswiki.R;
+
+import flyingkite.library.androidx.recyclerview.TextRVAdapter;
 
 public class TextAdapter extends TextRVAdapter {
 

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.util.Pair;
@@ -15,15 +14,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.mytoswiki.dialog.WebDialog;
-
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.math.Provider;
+
+import com.flyingkite.mytoswiki.dialog.WebDialog;
+
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.java.functional.FT;
+import flyingkite.library.java.util.URLUtil;
 
 public interface PageUtil extends Loggable, ViewUtil {
 
@@ -45,14 +45,14 @@ public interface PageUtil extends Loggable, ViewUtil {
         d.show(getActivity());
     }
 
-    default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, Provider<RecyclerView> owner) {
+    default void initScrollTools(@IdRes int goTop, @IdRes int goBottom, FT<RecyclerView> owner) {
         View w;
         w = findViewById(goTop);
         if (w != null) {
             w.setOnClickListener((v) -> {
                 RecyclerView rv = null;
                 if (owner != null) {
-                    rv = owner.provide();
+                    rv = owner.get();
                 }
                 if (rv != null) {
                     rv.scrollToPosition(0);
@@ -66,10 +66,10 @@ public interface PageUtil extends Loggable, ViewUtil {
             w.setOnClickListener((v) -> {
                 RecyclerView rv = null;
                 if (owner != null) {
-                    rv = owner.provide();
+                    rv = owner.get();
                 }
                 if (rv != null) {
-                    RecyclerView.Adapter a = rv.getAdapter();
+                    RecyclerView.Adapter<?> a = rv.getAdapter();
                     int end = 0;
                     if (a != null) {
                         end = a.getItemCount() - 1;
@@ -156,16 +156,13 @@ public interface PageUtil extends Loggable, ViewUtil {
     }
 
     default String decodeURL(String s) {
-        return UrlUtil.decodeURL(s);
+        return URLUtil.decodeURL(s);
     }
 
     default boolean isActivityGone() {
         Activity act = getActivity();
         if (act == null || act.isFinishing()) return true;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            return act.isDestroyed();
-        }
-        return false;
+        return act.isDestroyed();
     }
 
     // https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard

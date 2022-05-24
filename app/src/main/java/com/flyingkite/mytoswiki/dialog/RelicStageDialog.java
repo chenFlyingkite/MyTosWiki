@@ -7,19 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.Nullable;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.RelicStage;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.util.TaskMonitor;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import androidx.annotation.Nullable;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.tool.TaskMonitor;
 
 public class RelicStageDialog extends BaseTosDialog {
     private LinearLayout stageList;

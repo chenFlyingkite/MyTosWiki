@@ -10,10 +10,9 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.Say;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
@@ -67,10 +66,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.math.ChiSquarePearson;
-import flyingkite.math.ChiSquareTable;
-import flyingkite.math.Math2;
+import flyingkite.library.android.log.L;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.math.ChiSquarePearson;
+import flyingkite.library.java.math.ChiSquareTable;
+import flyingkite.library.java.math.Math2;
+import flyingkite.library.java.util.MathUtil;
 
 public class CardSealDialog extends BaseTosDialog {
 
@@ -225,13 +226,13 @@ public class CardSealDialog extends BaseTosDialog {
         raised.setOnClickListener((v) -> {
             resetPool();
             setupTable();
-            logAction("Raise:" + Say.ox(raised.isChecked()));
+            logAction("Raise:" + L.ox(raised.isChecked()));
         });
         peekCard.setOnClickListener((v) -> {
             boolean chk = peekCard.isChecked();
             a.setPeekCard(chk);
             a.notifyDataSetChanged();
-            logAction("Peek:" + Say.ox(chk));
+            logAction("Peek:" + L.ox(chk));
         });
         initScrollTools(R.id.csdPoolGoTop, R.id.csdPoolGoBottom, pool);
 
@@ -331,7 +332,7 @@ public class CardSealDialog extends BaseTosDialog {
         fillItems(sealTable, a);
 
         // Update drawn N
-        int n = Math2.sum(getWorkingSample().observe);
+        int n = MathUtil.sum(getWorkingSample().observe);
         sealDrawn.setText(getString(R.string.card_n_draw, n, 5 * n));
 
         // Update chart & pearson
@@ -388,7 +389,7 @@ public class CardSealDialog extends BaseTosDialog {
 
     private void setupPearsonChi() {
         SealSample ss = getWorkingSample();
-        int n = Math2.sum(ss.observe);
+        int n = MathUtil.sum(ss.observe);
         boolean pearson = false;
         if (n > 0) {
             pearson = ChiSquarePearson.acceptH0(ss, ChiSquareTable._100);

@@ -2,104 +2,39 @@ package com.flyingkite.mytoswiki;
 
 import android.content.Context;
 
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.preference.BasePreference;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.android.preference.EasyPreference;
 
-import java.util.Map;
-
-public class AppPref extends BasePreference implements Loggable {
+public class AppPref extends EasyPreference implements Loggable {
 
     public AppPref() {
         this(App.me);
     }
 
     public AppPref(Context context) {
-        super(context);
-    }
-
-    public void printAll() {
-        Map<String, ?> m = mPreference.getAll();
-        for (String s : m.keySet()) {
-            logE("%s -> %s", s, m.get(s));
-        }
+        super(context, context.getPackageName() + "_preferences");
     }
 
     //---- MainActivity preference
     // Tool bar
-    private static final String KEY_showAppTool = "showAppTool";
-
-    public boolean getShowAppTool() {
-        return getBoolean(KEY_showAppTool, true);
-    }
-
-    public void setShowAppTool(boolean v) {
-        putBoolean(KEY_showAppTool, v);
-    }
+    public final BoolPref showAppTool = new BoolPref("showAppTool", true);
 
     // Tool bar
-    private static final String KEY_showFavorite = "showFavorite";
-
-    public boolean getShowFavorite() {
-        return getBoolean(KEY_showFavorite, false);
-    }
-
-    public void setShowFavorite(boolean v) {
-        putBoolean(KEY_showFavorite, v);
-    }
+    public final BoolPref showFavorite = new BoolPref("showFavorite", true);
 
     // User uid of pack
-    private static final String KEY_UserUid = "UserUid";
-
-    public String getUserUid() {
-        return getString(KEY_UserUid, "");
-    }
-
-    public void setUserUid(String s) {
-        putString(KEY_UserUid, s);
-    }
+    public final StringPref userUid = new StringPref("UserUid", "");
 
     // User verify code of pack
-    private static final String KEY_UserVerify = "UserVerify";
-
-    public String getUserVerify() {
-        return getString(KEY_UserVerify, "");
-    }
-
-    public void setUserVerify(String s) {
-        putString(KEY_UserVerify, s);
-    }
+    public final StringPref userVerify = new StringPref("UserVerify", "");
 
     // User pack's token
-    private static final String KEY_UserPackToken = "UserPackToken";
-
-    public String getUserPackToken() {
-        return getString(KEY_UserPackToken, "");
-    }
-
-    public void setUserPackToken(String s) {
-        putString(KEY_UserPackToken, s);
-    }
+    public final StringPref userPackToken = new StringPref("UserPackToken", "");
 
     // User uid of pack
-    private static final String KEY_UserTosInventory = "UserTosInventory";
+    public final StringPref userTosInventory = new StringPref("UserTosInventory", "");
 
-    public String getUserTosInventory() {
-        return getString(KEY_UserTosInventory, "");
-    }
-
-    public void setUserTosInventory(String s) {
-        putString(KEY_UserTosInventory, s);
-    }
-
-    // User uid of pack
-    private static final String KEY_CardsSearchText = "CardsSearchText";
-
-    public String getCardsSearchText() {
-        return getString(KEY_CardsSearchText, "");
-    }
-
-    public void setCardsSearchText(String s) {
-        putString(KEY_CardsSearchText, s);
-    }
+    // Search text on cards
+    public final StringPref cardsSearchText = new StringPref("CardsSearchText", "");
     //----
 }

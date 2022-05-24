@@ -1,20 +1,20 @@
 package com.flyingkite.mytoswiki.dialog;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.seal.BaseSeal;
 import com.flyingkite.mytoswiki.data.seal.v1.SealSample;
 import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
 
-import flyingkite.math.Math2;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
+import flyingkite.library.java.util.MathUtil;
 
 public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRowAdapter.SealRowVH, SealDataRowAdapter.ItemListener> implements TosPageUtil {
 
@@ -45,7 +45,7 @@ public abstract class SealDataRowAdapter extends RVAdapter<BaseSeal, SealDataRow
         //noinspection UnnecessaryLocalVariable
         final int i = position;
         SealSample ss = raised ? seal.raisedSample : seal.normalSample;
-        int n = Math2.sum(ss.observe);
+        int n = MathUtil.sum(ss.observe);
         vh.title.setText("#" + (position + 1)); // ↦
         vh.expect.setText(_fmt("%.1f\n%.2f %%", ss.pdf[i] * n, ss.pdf[i] * 100));
         vh.observe.setText(_fmt("%s\n%.2f %%", ss.observe[i], ss.observePdf[i] * 100));

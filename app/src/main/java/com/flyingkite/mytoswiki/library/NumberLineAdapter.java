@@ -1,13 +1,14 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class NumberLineAdapter extends RVAdapter<Integer, NumberLineAdapter.NumberVH, NumberLineAdapter.ItemListener> {
     public interface ItemListener extends RVAdapter.ItemListener<Integer, NumberVH> {

@@ -1,9 +1,9 @@
 package com.flyingkite.mytoswiki.tos.query;
 
-import com.flyingkite.library.util.ListUtil;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import flyingkite.library.java.util.ListUtil;
 
 public class TosCondition {
     private List<String> attr = new ArrayList<>();

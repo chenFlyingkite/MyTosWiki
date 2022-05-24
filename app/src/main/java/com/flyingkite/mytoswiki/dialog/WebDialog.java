@@ -10,21 +10,20 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.Say;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.util.ShareUtil;
-import com.flyingkite.mytoswiki.util.UrlUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.util.URLUtil;
 
 public class WebDialog extends BaseTosDialog implements ShareUtil {
     public static final String TAG = "WebDialog";
@@ -102,11 +101,11 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
     private void initToolBar() {
         iconLibrary = new Library<>(findViewById(R.id.wdTools));
         IconAdapter adapter = new IconAdapter();
-        adapter.setAutoScroll(true);
         adapter.setDataList(getToolsIds());
         adapter.setItemListener(new IconAdapter.ItemListener() {
             @Override
             public void onClick(Integer s, IconAdapter.IconVH iconVH, int position) {
+                adapter.scroller.smoothScrollToCenter(position);
                 switch (s) {
                     case R.drawable.ic_home_white_48dp:
                         web.loadUrl(tosWikiHome);
@@ -213,7 +212,6 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            Say.Log("page : %s", url);
             return super.shouldOverrideUrlLoading(view, url);
         }
     };
@@ -235,7 +233,7 @@ public class WebDialog extends BaseTosDialog implements ShareUtil {
     //-- Event
 
     private String liteLink(String link) {
-        return UrlUtil.liteLink(link);
+        return URLUtil.liteLink(link);
     }
 
     private void logImpression() {

@@ -1,14 +1,12 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
-import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 import com.flyingkite.mytoswiki.util.GlideUtil;
@@ -16,6 +14,9 @@ import com.flyingkite.mytoswiki.util.GlideUtil;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
+import flyingkite.library.androidx.recyclerview.RVSelectAdapter;
 
 public class SealCardAdapter extends RVSelectAdapter<TosCard, SealCardAdapter.SCardVH, SealCardAdapter.ItemListener> implements GlideUtil {
     public interface ItemListener extends RVAdapter.ItemListener<TosCard, SCardVH> {

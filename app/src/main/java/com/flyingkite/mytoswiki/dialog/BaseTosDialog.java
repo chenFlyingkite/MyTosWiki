@@ -10,9 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import androidx.annotation.IdRes;
+import androidx.annotation.Nullable;
 
 import com.flyingkite.mytoswiki.R;
-import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ShareUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
@@ -22,8 +23,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import androidx.annotation.IdRes;
-import androidx.annotation.Nullable;
+import flyingkite.library.android.util.BackPage;
 
 public class BaseTosDialog extends DialogFragment implements
         PageUtil, TosPageUtil, ShareUtil,

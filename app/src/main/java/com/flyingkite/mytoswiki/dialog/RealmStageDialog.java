@@ -5,19 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import androidx.annotation.Nullable;
 
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.MainStage;
 import com.flyingkite.mytoswiki.library.MainStageAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.util.TaskMonitor;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import androidx.annotation.Nullable;
+import flyingkite.library.java.tool.TaskMonitor;
 
 public class RealmStageDialog extends BaseTosDialog {
     private LinearLayout magiStages;

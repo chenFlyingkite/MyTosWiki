@@ -1,12 +1,13 @@
 package com.flyingkite.mytoswiki.data.pack;
 
+import androidx.annotation.NonNull;
+
 import com.flyingkite.mytoswiki.data.tos.TosCard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import flyingkite.log.Formattable;
+import flyingkite.library.java.log.Formattable;
 
 public class PackInfoCard implements Formattable {
     public String idNorm = "";

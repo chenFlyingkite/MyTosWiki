@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-import flyingkite.log.Formattable;
+import flyingkite.library.java.log.Formattable;
 
 public abstract class BaseCraft implements Parcelable, Formattable {
     @SerializedName(CRS.idNorm)

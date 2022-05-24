@@ -6,8 +6,6 @@ import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.firebase.CloudMessaging;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
-import com.flyingkite.library.log.Loggable;
-import com.flyingkite.library.util.ThreadUtil;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.BuildConfig;
 import com.flyingkite.mytoswiki.dialog.FeedbackException;
@@ -16,7 +14,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.Map;
 
-import flyingkite.log.L;
+import flyingkite.library.android.log.Loggable;
+import flyingkite.library.android.util.ThreadUtil;
 
 public class FabricAnswers {
     private static final String TAG = "FabricAnswers";
@@ -174,7 +173,7 @@ public class FabricAnswers {
                         t.length();
                     } catch (NullPointerException e) {
                         FeedbackException fe = new FeedbackException("ipapi\n" + s);
-                        L.log("fe = %s", fe);
+                        log("fe = %s", fe);
                         CrashReport.logException(fe);
                     }
                 });
@@ -189,7 +188,7 @@ public class FabricAnswers {
                 t.length();
             } catch (NullPointerException e) {
                 FeedbackException fe = new FeedbackException("logAppClearCache");
-                L.log("ca = %s", fe);
+                log("ca = %s", fe);
                 CrashReport.logException(fe);
             }
         });

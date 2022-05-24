@@ -4,16 +4,16 @@ import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.App;
 import com.flyingkite.mytoswiki.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class StaminaAdapter extends RVAdapter<String, StaminaAdapter.StaminaVH, StaminaAdapter.ItemListener> {
     public interface ItemListener extends RVAdapter.ItemListener<String, StaminaVH> {

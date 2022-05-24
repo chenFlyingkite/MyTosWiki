@@ -11,14 +11,12 @@ import android.widget.Checkable;
 import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.preference.BasePreference;
-import com.flyingkite.library.util.ListUtil;
-import com.flyingkite.library.util.MathUtil;
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.data.PackSort;
 import com.flyingkite.mytoswiki.data.pack.PackCard;
 import com.flyingkite.mytoswiki.data.pack.PackInfoCard;
@@ -33,14 +31,10 @@ import com.flyingkite.mytoswiki.tos.TosWiki;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
 import com.flyingkite.mytoswiki.tos.query.TosCondition;
 import com.flyingkite.mytoswiki.util.OkHttpUtil;
-import com.flyingkite.mytoswiki.util.RegexUtil;
 import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.mytoswiki.util.TosCardUtil;
 import com.flyingkite.mytoswiki.util.TosPageUtil;
-import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
-import com.flyingkite.util.lib.Gsons;
-import com.flyingkite.util.lib.RunningTask;
 import com.flyingkite.util.select.SelectedData;
 import com.google.gson.Gson;
 
@@ -56,11 +50,17 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
 
-import androidx.annotation.IdRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-import flyingkite.tool.StringUtil;
+import flyingkite.library.android.preference.EasyPreference;
+import flyingkite.library.android.util.GsonUtil;
+import flyingkite.library.android.util.RunningTask;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.tool.TaskMonitor;
+import flyingkite.library.java.util.ListUtil;
+import flyingkite.library.java.util.MathUtil;
+import flyingkite.library.java.util.RegexUtil;
+import flyingkite.library.java.util.StringUtil;
 
 public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     public static final String TAG = "TosCardMyFragment";
@@ -255,13 +255,13 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void fillInfoPref() {
-        fillInfo(appPref.getUserUid(), appPref.getUserVerify());
+        fillInfo(appPref.userUid.get(), appPref.userVerify.get());
     }
 
     private void clearInfo() {
-        appPref.setUserTosInventory("");
-        appPref.setUserUid("");
-        appPref.setUserVerify("");
+        appPref.userTosInventory.set("");
+        appPref.userUid.set("");
+        appPref.userVerify.set("");
     }
 
     // init sort menus and put onClickListeners --------
@@ -528,7 +528,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void updateHide() {
-        PackSort p = new MyPackPref().getPref();
+        PackSort p = new MyPackPref().pref.get();
 
         sortHideEmpty.setSelected(p.ownExist);
         sortHideShowEmpty.setSelected(p.ownZero);
@@ -555,7 +555,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         p.demon72     = sortHide9xxx.isSelected();
 
         p.display = findCheckedIndex(sortDisplay);
-        new MyPackPref().setPref(p);
+        new MyPackPref().pref.set(p);
     }
     //----
 
@@ -581,7 +581,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         if (uidText != null) {
             String uid = uid();
             // Save to preference
-            appPref.setUserUid(uid);
+            appPref.userUid.set(uid);
         }
     }
 
@@ -627,7 +627,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void fetchPack() {
-        String token = appPref.getUserPackToken();
+        String token = appPref.userPackToken.get();
         fetchPack(uid(), verify(), token);
     }
 
@@ -640,7 +640,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void parseMyPack() {
-        String data = appPref.getUserTosInventory();
+        String data = appPref.userTosInventory.get();
         if (TextUtils.isEmpty(data)) {
             showUsage();
         } else {
@@ -1407,7 +1407,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 return; // fail
             }
             //logE("login src = %s", src);
-            result = Gsons.from(src, TokenRes.class);
+            result = GsonUtil.from(src, TokenRes.class);
         }
 
         @Override
@@ -1418,11 +1418,11 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             hideCardsLoading();
             AppPref pref = appPref;
             // save to preference and parse pack
-            pref.setUserUid(uid);
-            pref.setUserVerify(aid);
+            pref.userUid.set(uid);
+            pref.userVerify.set(aid);
             if (tr != null) {
                 if (tr.isSuccess > 0) {
-                    pref.setUserPackToken(tr.token);
+                    pref.userPackToken.set(tr.token);
                     fetchPack();
                 } else {
                     String msg = tr.errorMessage + "\nerrorCode = " + tr.errorCode;
@@ -1480,9 +1480,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 return;
             }
 
-            PackRes r = Gsons.from(src, PackRes.class);
+            PackRes r = GsonUtil.from(src, PackRes.class);
             if (r != null) {
-                appPref.setUserTosInventory(src);
+                appPref.userTosInventory.set(src);
                 listPack(r.card);
             }
             result = r;
@@ -1517,7 +1517,7 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
 
         @Override
         public void doInBackground() {
-            PackRes r = Gsons.from(src, PackRes.class);
+            PackRes r = GsonUtil.from(src, PackRes.class);
             if (r != null) {
                 listPack(r.card);
             }
@@ -1530,27 +1530,30 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         }
     }
 
-    private class MyPackPref extends BasePreference {
+    private class MyPackPref extends EasyPreference {
         public MyPackPref() {
             super(App.me, "MyPackPref");
         }
 
         private final Gson gson = new Gson();
 
-        private static final String pref = "pref";
-        public void setPref(PackSort src) {
-            String s = gson.toJson(src);
-            //logE(">> set pack.Pref = %s", s);
-            edit().putString(pref, s).apply();
-        }
-        public PackSort getPref() {
-            String s = getString(pref, "");
-            //logE("<< get pack.Pref = %s", s);
-            PackSort p = gson.fromJson(s, PackSort.class);
-            if (p == null) {
-                p = new PackSort();
+        public TypePref<PackSort> pref = new TypePref<>("pref") {
+            private final StringPref pack = new StringPref(key);
+            @Override
+            public PackSort get(PackSort src) {
+                String s = pack.get("");
+                PackSort p = gson.fromJson(s, PackSort.class);
+                if (p == null) {
+                    p = new PackSort();
+                }
+                return p;
             }
-            return p;
-        }
+
+            @Override
+            public void set(PackSort src) {
+                String s = gson.toJson(src);
+                pack.set(s);
+            }
+        };
     }
 }

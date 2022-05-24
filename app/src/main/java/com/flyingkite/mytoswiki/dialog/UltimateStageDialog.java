@@ -3,18 +3,17 @@ package com.flyingkite.mytoswiki.dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import androidx.annotation.Nullable;
 
 import com.flyingkite.crashlytics.CrashReport;
 import com.flyingkite.fabric.FabricAnswers;
 import com.flyingkite.firebase.RemoteConfig;
 import com.flyingkite.firebase.RemoteConfigKey;
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.stage.Stage;
 import com.flyingkite.mytoswiki.data.stage.StageGroup;
 import com.flyingkite.mytoswiki.library.StageAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.util.TaskMonitor;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -23,7 +22,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.annotation.Nullable;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.tool.TaskMonitor;
 
 public class UltimateStageDialog extends BaseTosDialog {
     private StageGroup mainStages;

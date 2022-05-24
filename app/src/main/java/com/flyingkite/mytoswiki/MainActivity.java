@@ -7,8 +7,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.viewpager.widget.ViewPager;
 
-import com.flyingkite.library.widget.Library;
 import com.flyingkite.mytoswiki.data.WebPin;
 import com.flyingkite.mytoswiki.dialog.AboutDialog;
 import com.flyingkite.mytoswiki.dialog.CardSealDialog;
@@ -34,11 +34,9 @@ import com.flyingkite.mytoswiki.dialog.UltimateStageDialog;
 import com.flyingkite.mytoswiki.dialog.WebDialog;
 import com.flyingkite.mytoswiki.library.IconAdapter;
 import com.flyingkite.mytoswiki.tos.TosWiki;
-import com.flyingkite.mytoswiki.util.BackPage;
 import com.flyingkite.mytoswiki.util.PageUtil;
 import com.flyingkite.mytoswiki.util.ToolBarOwner;
 import com.flyingkite.util.PGAdapter;
-import com.flyingkite.util.TaskMonitor;
 import com.flyingkite.util.WaitingDialog;
 import com.google.android.material.tabs.TabLayout;
 
@@ -47,8 +45,10 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import androidx.viewpager.widget.ViewPager;
-import flyingkite.math.MathUtil;
+import flyingkite.library.android.util.BackPage;
+import flyingkite.library.androidx.recyclerview.Library;
+import flyingkite.library.java.tool.TaskMonitor;
+import flyingkite.library.java.util.MathUtil;
 
 public class MainActivity extends BaseActivity implements
         ToolBarOwner,
@@ -315,7 +315,7 @@ public class MainActivity extends BaseActivity implements
             }
         });
         iconLibrary.setViewAdapter(adapter);
-        updateTools(appPref.getShowAppTool());
+        updateTools(appPref.showAppTool.get());
     }
 
     @Override
@@ -336,7 +336,7 @@ public class MainActivity extends BaseActivity implements
     @Override
     public void setToolsVisible(boolean visible) {
         updateTools(visible);
-        appPref.setShowAppTool(visible);
+        appPref.showAppTool.set(visible);
     }
 
     @Override

@@ -1,16 +1,17 @@
 package com.flyingkite.mytoswiki.library;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.widget.RVAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.StoneDesktop;
 import com.flyingkite.mytoswiki.tos.Runestones;
 import com.flyingkite.mytoswiki.util.ViewUtil;
+
+import flyingkite.library.androidx.recyclerview.RVAdapter;
 
 public class StoneDesktopAdapter extends RVAdapter<StoneDesktop, StoneDesktopAdapter.StoneDesktopVH, StoneDesktopAdapter.ItemListener> {
 

@@ -1,15 +1,26 @@
 // Beginners Tutorial
 // http://grails.asia/groovy-map-tutorial
 // http://grails.asia/groovy-each-examples
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'com.google.gms.google-services'
+    id 'com.google.gms.google-services'
 // Add the Firebase Crashlytics plugin.
-apply plugin: 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.crashlytics'
 // Apply the Performance Monitoring plugin
-apply plugin: 'com.google.firebase.firebase-perf'
+    id 'com.google.firebase.firebase-perf'
+}
+
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+//apply plugin: 'com.google.gms.google-services'
+//// Add the Firebase Crashlytics plugin.
+//apply plugin: 'com.google.firebase.crashlytics'
+//// Apply the Performance Monitoring plugin
+//apply plugin: 'com.google.firebase.firebase-perf'
 
 task MyBuildInfo {
     int vCode = 137
@@ -151,15 +162,16 @@ dependencies {
     // See usage in https://jitpack.io/
     //api 'com.github.User:Repo:Tag'
     String ver = ''
-    ver = 'a841193247'
-    ver = '4df6b34674' // o
-    ver = 'da0650b654' // x
-    ver = '07f703f1f9' // x
-    ver = 'aaec6aec05' // x
-
-    ver = '4df6b34674'
+    ver = "7864a0042f"
     api "com.github.chenFlyingkite:MyAndroid:$ver"
-    //api "com.github.chenFlyingkite:MyAndroid:1f5c017f30"
+    // sub library
+    //api "com.github.chenFlyingkite.MyAndroid:CoreJava:$vg"
+    //api "com.github.chenFlyingkite.MyAndroid:CoreAndroid:$vg"
+    // using following imports each cases will work
+    // Case 1
+    //api "com.github.chenFlyingkite.MyAndroid:CoreAndroidX:$vg" // ok
+    // Case 2
+    //api "com.github.chenFlyingkite:MyAndroid:$vg" // ok
 
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 
@@ -168,7 +180,7 @@ dependencies {
 
     // jsoup HTML parser library @ https://jsoup.org/
     // https://github.com/jhy/jsoup
-    api 'org.jsoup:jsoup:1.11.3'
+    //api 'org.jsoup:jsoup:1.11.3'
 
     // Room Persistence Library
     // https://developer.android.com/training/data-storage/room/
@@ -197,7 +209,7 @@ dependencies {
     // OkHttp for web
     // https://github.com/square/okhttp/
     // http://square.github.io/okhttp/
-    api "com.squareup.okhttp3:okhttp:4.9.1"
+    //api "com.squareup.okhttp3:okhttp:4.9.1"
 
     // https://github.com/Wikia/vignette#scale-to-width
     // Picasso

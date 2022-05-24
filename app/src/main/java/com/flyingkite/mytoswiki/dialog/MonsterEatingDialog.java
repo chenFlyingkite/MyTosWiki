@@ -2,11 +2,10 @@ package com.flyingkite.mytoswiki.dialog;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.View;
+import androidx.annotation.Nullable;
 
 import com.flyingkite.fabric.FabricAnswers;
-import com.flyingkite.library.TicTac2;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.charts.MPChartUtil;
 import com.flyingkite.mytoswiki.data.tos.TosCard;
@@ -23,6 +22,8 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import flyingkite.library.androidx.TicTac2;
 
 public class MonsterEatingDialog extends BaseTosDialog {
     @Override

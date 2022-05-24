@@ -2,8 +2,6 @@ package com.flyingkite.mytoswiki.charts;
 
 import android.graphics.Color;
 
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.util.ListUtil;
 import com.flyingkite.mytoswiki.tos.TosSummonerLevel;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -13,6 +11,9 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.util.ListUtil;
 
 public class TosSummonerChart {
     public static final String[] header = TosSummonerLevel.headerZh;

@@ -1,15 +1,15 @@
 package com.flyingkite.util.select;
 
 import android.util.Log;
+import androidx.annotation.NonNull;
 
 import com.flyingkite.crashlytics.CrashReport;
-import com.flyingkite.library.TicTac2;
-import com.flyingkite.library.util.ListUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
+import flyingkite.library.androidx.TicTac2;
+import flyingkite.library.java.util.ListUtil;
 
 /**
  * Mainly perform the selection by query, it will load from data list and perform the select

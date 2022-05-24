@@ -4,10 +4,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.flyingkite.library.util.ThreadUtil;
-import com.flyingkite.library.widget.RVAdapter;
-import com.flyingkite.library.widget.RVSelectAdapter;
 import com.flyingkite.mytoswiki.R;
 import com.flyingkite.mytoswiki.data.tos.BaseCraft;
 import com.flyingkite.mytoswiki.tos.query.AllCards;
@@ -18,8 +17,9 @@ import com.flyingkite.util.select.Selector;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import flyingkite.library.android.util.ThreadUtil;
+import flyingkite.library.androidx.recyclerview.RVAdapter;
+import flyingkite.library.androidx.recyclerview.RVSelectAdapter;
 
 public class CraftAdapter extends RVSelectAdapter<BaseCraft, CraftAdapter.CraftVH, CraftAdapter.ItemListener> {
 

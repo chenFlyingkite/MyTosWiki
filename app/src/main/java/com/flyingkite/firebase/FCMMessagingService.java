@@ -7,15 +7,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.os.Build;
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 
-import com.flyingkite.library.log.Loggable;
 import com.flyingkite.mytoswiki.MainActivity;
 import com.flyingkite.mytoswiki.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
+import flyingkite.library.android.log.Loggable;
 
 public class FCMMessagingService extends FirebaseMessagingService implements Loggable {
 
