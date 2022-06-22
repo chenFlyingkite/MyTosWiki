@@ -13,17 +13,8 @@ plugins {
     id 'com.google.firebase.firebase-perf'
 }
 
-//apply plugin: 'com.android.application'
-//apply plugin: 'kotlin-android'
-//apply plugin: 'kotlin-kapt'
-//apply plugin: 'com.google.gms.google-services'
-//// Add the Firebase Crashlytics plugin.
-//apply plugin: 'com.google.firebase.crashlytics'
-//// Apply the Performance Monitoring plugin
-//apply plugin: 'com.google.firebase.firebase-perf'
-
 task MyBuildInfo {
-    int vCode = 137
+    int vCode = 138
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
