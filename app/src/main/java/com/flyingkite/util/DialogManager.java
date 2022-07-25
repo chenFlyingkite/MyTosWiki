@@ -8,13 +8,12 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
-import com.flyingkite.mytoswiki.R;
-
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StyleRes;
+
+import com.flyingkite.mytoswiki.R;
 
 public class DialogManager {
 

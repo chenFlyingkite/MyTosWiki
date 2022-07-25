@@ -14,7 +14,7 @@ plugins {
 }
 
 task MyBuildInfo {
-    int vCode = 138
+    int vCode = 139
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
@@ -58,15 +58,15 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
 
-    compileSdkVersion 32
-    buildToolsVersion "32.0.0"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
 
     flavorDimensions "default"
 
     defaultConfig {
         applicationId "com.flyingkite.mytoswiki"
         minSdkVersion 19
-        targetSdkVersion 32
+        targetSdkVersion 33
         multiDexEnabled true
         versionCode MyBuildInfo.versionCode
         versionName MyBuildInfo.versionName
