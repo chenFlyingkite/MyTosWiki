@@ -14,7 +14,7 @@ plugins {
 }
 
 task MyBuildInfo {
-    int vCode = 140
+    int vCode = 141
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
