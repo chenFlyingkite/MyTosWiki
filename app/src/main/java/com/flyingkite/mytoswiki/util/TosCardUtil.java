@@ -35,32 +35,41 @@ public class TosCardUtil {
 
     // 動態造型
     public static boolean isSkin(TosCard c) {
-        int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 6000, 7000);
+        return isIDInRange(c, 6000, 7000);
     }
 
     // 討伐戰
     public static boolean isTauFa(TosCard c) {
-        int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 7000, 8000);
+        return isIDInRange(c, 7000, 8000);
     }
 
     // 迪士尼
     public static boolean isDisney(TosCard c) {
-        int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 8000, 8046);
+        return isIDInRange(c, 8000, 8046);
     }
 
     // 存音石
     public static boolean isTunestone(TosCard c) {
-        int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 8046, 9000);
+        return isIDInRange(c, 8046, 9000);
     }
 
     // 72 柱魔神
     public static boolean is72Demon(TosCard c) {
+        return isIDInRange(c, 9000, 9020);
+    }
+
+    public static boolean isCard5xxxx(TosCard c) {
+        return isIDInRange(c, 50000, 60000);
+    }
+
+    public static boolean isCard6xxxx(TosCard c) {
+        return isIDInRange(c, 60000, 70000);
+    }
+
+    public static boolean isIDInRange(TosCard c, int from, int to) {
+        if (c == null) return false;
         int idNorm = Integer.parseInt(c.idNorm);
-        return MathUtil.isInRange(idNorm, 9000, 9020);
+        return MathUtil.isInRange(idNorm, from, to);
     }
 
     public static boolean isMaterial(TosCard c) {

@@ -141,7 +141,6 @@ public class App extends MultiDexApplication implements Loggable {
         return n != null && n.isConnected();
     }
 
-    // todo
     // https://developer.android.com/reference/android/net/NetworkInfo
     public static boolean isWifi() {
         if (me == null) return false;

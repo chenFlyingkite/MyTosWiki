@@ -128,6 +128,8 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     private TextView sortHide7xxx;
     private TextView sortHide8xxx;
     private TextView sortHide9xxx;
+    private TextView sortHide5xxxx;
+    private TextView sortHide6xxxx;
     // Display card name
     private ViewGroup sortDisplay;
 
@@ -344,6 +346,8 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         sortHide7xxx = menu.findViewById(R.id.sortHide7xxx);
         sortHide8xxx = menu.findViewById(R.id.sortHide8xxx);
         sortHide9xxx = menu.findViewById(R.id.sortHide9xxx);
+        sortHide5xxxx = menu.findViewById(R.id.sortHide5xxxx);
+        sortHide6xxxx = menu.findViewById(R.id.sortHide6xxxx);
     }
 
     private void initDisplay(View menu) {
@@ -537,6 +541,9 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         sortHide7xxx.setSelected(p.tauFa);
         sortHide8xxx.setSelected(p.disney);
         sortHide9xxx.setSelected(p.demon72);
+        sortHide5xxxx.setSelected(p.hide5xxxx);
+        sortHide6xxxx.setSelected(p.hide6xxxx);
+
 
         int k = (int) MathUtil.makeInRange(p.display, 0, sortDisplay.getChildCount());
         clickDisplay(sortDisplay.getChildAt(k));
@@ -553,6 +560,8 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
         p.tauFa       = sortHide7xxx.isSelected();
         p.disney      = sortHide8xxx.isSelected();
         p.demon72     = sortHide9xxx.isSelected();
+        p.hide5xxxx   = sortHide5xxxx.isSelected();
+        p.hide6xxxx   = sortHide6xxxx.isSelected();
 
         p.display = findCheckedIndex(sortDisplay);
         new MyPackPref().pref.set(p);
@@ -640,9 +649,12 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
     }
 
     private void parseMyPack() {
+        boolean noInput = TextUtils.isEmpty(appPref.userUid.get()) || TextUtils.isEmpty(appPref.userVerify.get());
         String data = appPref.userTosInventory.get();
         if (TextUtils.isEmpty(data)) {
-            showUsage();
+            if (!noInput) {
+                showUsage();
+            }
         } else {
             ThreadUtil.cachedThreadPool.submit(new ParsePackTask(data));
         }
@@ -947,6 +959,12 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             if (sortHide9xxx.isSelected()) {
                 accept &= !TosCardUtil.is72Demon(c);
             }
+            if (sortHide5xxxx.isSelected()) {
+                accept &= !TosCardUtil.isCard5xxxx(c);
+            }
+            if (sortHide6xxxx.isSelected()) {
+                accept &= !TosCardUtil.isCard6xxxx(c);
+            }
             return accept;
         }
 
@@ -972,46 +990,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             }
             return accept;
         }
-        /*
-        private boolean selectForImprove(TosCard c) {
-            boolean accept = true;
-            if (!sortImproveNo.isChecked()) {
-                if (sortImproveAme.isChecked()) {
-                    //noinspection ConstantConditions
-                    accept &= c.skillAmeCost1 > 0;
-                }
-                if (sortImproveAwk.isChecked()) {
-                    accept &= !c.skillAwkName.isEmpty();
-                }
-                if (sortImprovePow.isChecked()) {
-                    accept &= c.skillPowBattle.size() > 0;
-                }
-                if (sortImproveVir.isChecked()) {
-                    accept &= !c.skillVirBattleName.isEmpty();
-                }
-                if (sortImproveTwo.isChecked()) {
-                    accept &= !c.skillName2.isEmpty();
-                }
-                if (sortImproveChg.isChecked()) {
-                    accept &= c.skillChange.size() > 0;
-                }
-                if (sortImproveCom.isChecked()) {
-                    accept &= c.combineFrom.size() > 0 && c.combineTo.size() > 0;
-                }
-                if (sortImproveVr2.isChecked()) {
-                    accept &= c.rebirthChange.length() > 0;
-                }
-                if (sortImproveSwt.isChecked()) {
-                    accept &= c.skillsDesc().contains("變身");
-                }
-                if (sortImproveDmx.isChecked()) {
-                    accept &= c.maxAddAll();
-                }
-            }
-            return accept;
-        }
-        */
-
 
         @NonNull
         @Override
@@ -1046,8 +1024,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
                 TosCard c1 = TosWiki.getCardByIdNorm(s1);
                 TosCard c2 = TosWiki.getCardByIdNorm(s2);
                 long v1 = -1, v2 = -1;
-                //logE("c1 = %s", c1);
-                //logE("c2 = %s", c2);
 
                 if (id == R.id.sortCommonMaxHP) {
                     v1 = c1.maxHPAme;
@@ -1210,7 +1186,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             public void onFilteredIndex(List<Integer> indices) {
                 int sum = getPathCardCount(indices);
                 int n = myPack.size();
-                // todo why first time gets sum < n? strange
                 tosInfo2.setText(App.res().getString(R.string.cards_selection, sum, n));
             }
 
@@ -1248,12 +1223,6 @@ public class TosCardMyFragment extends BaseFragment implements TosPageUtil {
             showToast(R.string.cards_path_read, n);
         }
 
-        // todo
-//        if (ok) {
-//            howToUse.setVisibility(View.GONE);
-//        } else {
-//            showUsage();
-//        }
         howToUse.setVisibility(View.GONE);
         applySelection();
     }

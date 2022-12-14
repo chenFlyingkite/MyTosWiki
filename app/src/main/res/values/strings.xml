@@ -589,14 +589,12 @@
     <string name="cards_hide_9xxx_no">隱藏 72柱神</string>
     <string name="cards_hide_farm">素材背包卡片系列</string>
     <string name="cards_hide_nonfarm">非肥料系列</string>
-    <string name="cards_hide_6xxx">動態造型</string>
-    <string name="cards_hide_7xxx">討伐戰</string>
-    <string name="cards_hide_8xxx">迪士尼，存音石</string>
-    <string name="cards_hide_9xxx">72柱神</string>
-    <string name="cards_hide_6xxx_2">隱藏 動態造型</string>
-    <string name="cards_hide_7xxx_2">隱藏 討伐戰、天竺鼠車車、哥吉拉</string>
-    <string name="cards_hide_8xxx_2">隱藏 迪士尼、存音石</string>
-    <string name="cards_hide_9xxx_2">隱藏 72柱神</string>
+    <string name="cards_hide_6xxx">隱藏 動態造型</string>
+    <string name="cards_hide_7xxx">隱藏 討伐戰、天竺鼠車車、哥吉拉</string>
+    <string name="cards_hide_8xxx">隱藏 迪士尼、存音石</string>
+    <string name="cards_hide_9xxx">隱藏 72柱神</string>
+    <string name="cards_hide_5xxxx">隱藏 50000 ~ 59999</string>
+    <string name="cards_hide_6xxxx">隱藏 60000 ~ 69999</string>
     <string name="cards_display">顯示名稱</string>
     <string name="cards_display_content">顯示內容</string>
     <string name="cards_display_card">卡片張數</string>
@@ -924,6 +922,7 @@
     <string name="card_series_summoner_candidate">召喚師候選者</string>
     <string name="card_series_saint_seiya_hades">聖鬥士星矢冥界篇</string>
     <string name="card_series_my_hero">雄英高校</string>
+    <string name="card_series_pretty_guardian_sailor_moon">美少女戰士</string>
 
 
     <string name="stones_same_count">符石數目相同</string>

@@ -400,7 +400,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
         return super.onBackPressed();
     }
 
-    // todo
     // init sort menus and put onClickListeners --------
     private void initSortMenu() {
         menuEntry = findViewById(R.id.tosSortMenu);
@@ -810,6 +809,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
         sortHide.findViewById(R.id.sortHide7xxx).setSelected(cardSort.hideCard7xxx);
         sortHide.findViewById(R.id.sortHide8xxx).setSelected(cardSort.hideCard8xxx);
         sortHide.findViewById(R.id.sortHide9xxx).setSelected(cardSort.hideCard9xxx);
+        sortHide.findViewById(R.id.sortHide5xxxx).setSelected(cardSort.hideCard5xxxx);
+        sortHide.findViewById(R.id.sortHide6xxxx).setSelected(cardSort.hideCard6xxxx);
         int id = cardSort.displayByName ? R.id.sortDisplayName : R.id.sortDisplayNormId;
         clickDisplay(sortDisplay.findViewById(id));
     }
@@ -821,6 +822,8 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
         cardSort.hideCard7xxx = sortHide.findViewById(R.id.sortHide7xxx).isSelected();
         cardSort.hideCard8xxx = sortHide.findViewById(R.id.sortHide8xxx).isSelected();
         cardSort.hideCard9xxx = sortHide.findViewById(R.id.sortHide9xxx).isSelected();
+        cardSort.hideCard5xxxx = sortHide.findViewById(R.id.sortHide5xxxx).isSelected();
+        cardSort.hideCard6xxxx = sortHide.findViewById(R.id.sortHide6xxxx).isSelected();
         cardSort.displayByName = sortDisplay.getCheckedRadioButtonId() == R.id.sortDisplayName;
         sSingle.submit(() -> {
             GsonUtil.writeFile(getTosCardSortFile(), new Gson().toJson(cardSort));
@@ -876,7 +879,9 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
             select = condition;
         }
 
-        private boolean[] selectForShow = new boolean[4];
+        private final int[] selectIDs = {R.id.sortHide6xxx, R.id.sortHide7xxx,
+                R.id.sortHide8xxx, R.id.sortHide9xxx, R.id.sortHide5xxxx, R.id.sortHide6xxxx,};
+        private final boolean[] selectForShow = new boolean[selectIDs.length];
         private Pattern turnStoneRegex;
 
         // Find a good regex for 種族符石
@@ -899,23 +904,16 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
         }
 
         private void prepareShow() {
-            selectForShow = new boolean[4];
             ViewGroup vg = sortHide;
             int n = vg.getChildCount();
             for (int i = 0; i < n; i++) {
                 int m = -1;
                 View v = vg.getChildAt(i);
                 int id = v.getId();
-                if (id == R.id.sortHide6xxx) {
-                    m = 0;
-                } else if (id == R.id.sortHide7xxx) {
-                    m = 1;
-                } else if (id == R.id.sortHide8xxx) {
-                    m = 2;
-                } else if (id == R.id.sortHide9xxx) {
-                    m = 3;
-                } else if (id == 0) {
-                } else {
+                for (int j = 0; j < selectIDs.length && m < 0; j++) {
+                    if (id == selectIDs[i]) {
+                        m = i;
+                    }
                 }
                 if (MathUtil.isInRange(m, 0, selectForShow.length)) {
                     selectForShow[m] = v.isSelected();
@@ -1140,6 +1138,12 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
             if (selectForShow[3]) {
                 accept &= !TosCardUtil.is72Demon(c);
             }
+            if (selectForShow[4]) {
+                accept &= !TosCardUtil.isCard5xxxx(c);
+            }
+            if (selectForShow[5]) {
+                accept &= !TosCardUtil.isCard6xxxx(c);
+            }
             return accept;
         }
 
@@ -1326,7 +1330,6 @@ public class TosCardFragment extends BaseFragment implements TosPageUtil, ShareU
 
         private String joinKey(String key, TosCard c) {
             // Skill changes
-            // TODO 0228 大聖昇華隊長技 != 主動技
             StringBuilder skills = new StringBuilder();
             for (int i = 0; i < c.skillChange.size(); i++) {
                 SkillLite sl = c.skillChange.get(i);

@@ -12,9 +12,6 @@ public class PackSort {
     @SerializedName("unownedPath")
     public boolean unownedPath;
 
-    @SerializedName("farm")
-    public boolean farm;
-
     @SerializedName("normal")
     public boolean normal;
 
@@ -26,6 +23,12 @@ public class PackSort {
 
     @SerializedName("demon72")
     public boolean demon72;
+
+    @SerializedName("hide5xxxx")
+    public boolean hide5xxxx;
+
+    @SerializedName("hide6xxxx")
+    public boolean hide6xxxx;
 
     @SerializedName("display")
     public int display = 1;

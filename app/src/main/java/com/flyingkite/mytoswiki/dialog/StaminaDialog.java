@@ -247,7 +247,7 @@ public class StaminaDialog extends BaseTosDialog {
         FabricAnswers.logStamina(m);
     }
 
-    private void logShare(String type) { //TODO
+    private void logShare(String type) {
         Map<String, String> m = new HashMap<>();
         m.put("share", type);
         FabricAnswers.logStamina(m);

@@ -187,6 +187,16 @@
                     android:id="@+id/sortHide9xxx"
                     style="@style/sortText.rect"
                     android:text="@string/cards_hide_9xxx_no"/>
+
+                <TextView
+                    android:id="@+id/sortHide5xxxx"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_5xxxx"/>
+
+                <TextView
+                    android:id="@+id/sortHide6xxxx"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_6xxxx"/>
             </LinearLayout>
 
             <TextView

@@ -808,22 +808,32 @@
                 <TextView
                     android:id="@+id/sortHide6xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_6xxx_2"/>
+                    android:text="@string/cards_hide_6xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide7xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_7xxx_2"/>
+                    android:text="@string/cards_hide_7xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide8xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_8xxx_2"/>
+                    android:text="@string/cards_hide_8xxx"/>
 
                 <TextView
                     android:id="@+id/sortHide9xxx"
                     style="@style/sortText.rect"
-                    android:text="@string/cards_hide_9xxx_2"/>
+                    android:text="@string/cards_hide_9xxx"/>
+
+                <TextView
+                    android:id="@+id/sortHide5xxxx"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_5xxxx"/>
+
+                <TextView
+                    android:id="@+id/sortHide6xxxx"
+                    style="@style/sortText.rect"
+                    android:text="@string/cards_hide_6xxxx"/>
             </GridLayout>
 
             <View

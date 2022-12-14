@@ -34,6 +34,7 @@ import com.flyingkite.mytoswiki.data.seal.v1.Minerelves;
 import com.flyingkite.mytoswiki.data.seal.v1.MyHero;
 import com.flyingkite.mytoswiki.data.seal.v1.OldenTrio;
 import com.flyingkite.mytoswiki.data.seal.v1.PhantomTroupe;
+import com.flyingkite.mytoswiki.data.seal.v1.PrettyGuardianSailorMoon;
 import com.flyingkite.mytoswiki.data.seal.v1.PrimalDeities;
 import com.flyingkite.mytoswiki.data.seal.v1.RockManDiVE;
 import com.flyingkite.mytoswiki.data.seal.v1.SaintSeiya;
@@ -70,7 +71,6 @@ import flyingkite.library.android.log.L;
 import flyingkite.library.androidx.recyclerview.Library;
 import flyingkite.library.java.math.ChiSquarePearson;
 import flyingkite.library.java.math.ChiSquareTable;
-import flyingkite.library.java.math.Math2;
 import flyingkite.library.java.util.MathUtil;
 
 public class CardSealDialog extends BaseTosDialog {
@@ -84,6 +84,7 @@ public class CardSealDialog extends BaseTosDialog {
     private static final List<SealItem> sealSeries = new ArrayList<>();
 
     static {
+        sealSeries.add(new SealItem(R.string.card_series_pretty_guardian_sailor_moon, new PrettyGuardianSailorMoon()));
         sealSeries.add(new SealItem(R.string.card_series_my_hero, new MyHero()));;
         sealSeries.add(new SealItem(R.string.card_series_saint_seiya_hades, new SaintSeiyaHades()));
         sealSeries.add(new SealItem(R.string.card_series_summoner_candidate, new SummonerCandidates()));
