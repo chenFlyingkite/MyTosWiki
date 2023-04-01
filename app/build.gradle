@@ -14,7 +14,7 @@ plugins {
 }
 
 task MyBuildInfo {
-    int vCode = 143
+    int vCode = 144
     String vName = "1.0.0.${vCode-1}"
     String name = "MyTosWiki-${vName}-${vCode}"
 
@@ -37,12 +37,15 @@ android {
     }
 
     // https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.DexOptions.html
-    dexOptions {
-        jumboMode false
-        javaMaxHeapSize "1g"
-        maxProcessCount 4 // Total Memory = maxProcessCount * javaMaxHeapSize
-        threadCount (maxProcessCount * 3)
-    }
+//    DSL element 'dexOptions' is obsolete and should be removed.
+//    It will be removed in version 8.0 of the Android Gradle plugin.
+//    Using it has no effect, and the AndroidGradle plugin optimizes dexing automatically.
+//    dexOptions {
+//        jumboMode false
+//        javaMaxHeapSize "1g"
+//        maxProcessCount 4 // Total Memory = maxProcessCount * javaMaxHeapSize
+//        threadCount (maxProcessCount * 3)
+//    }
 
     // See this for options
     // http://tools.android.com/tips/lint-checks
@@ -124,28 +127,31 @@ android {
 // https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa
 // https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration#variant_aware
 dependencies {
-    api fileTree(include: ['*.jar'], dir: 'libs')
-    api "androidx.multidex:multidex:2.0.1"
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    api "androidx.appcompat:appcompat:1.4.1"
-    api "com.google.android.material:material:1.6.0"
-    api "androidx.percentlayout:percentlayout:1.0.0"
-    api "androidx.recyclerview:recyclerview:1.2.1"
-    api "androidx.constraintlayout:constraintlayout:2.1.3"
-    api "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.multidex:multidex:2.0.1"
+
+
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk11:$kotlin_version"
+
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.google.android.material:material:1.8.0"
+    implementation "androidx.percentlayout:percentlayout:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.3.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     // Firebase
     // https://firebase.google.com/docs/android/setup
     // Import the Firebase BoM
-    api platform('com.google.firebase:firebase-bom:28.3.0')
+    implementation platform('com.google.firebase:firebase-bom:28.3.0')
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
-    api 'com.google.firebase:firebase-crashlytics-ndk'
-    api 'com.google.firebase:firebase-crashlytics-ktx'
-    api 'com.google.firebase:firebase-analytics-ktx'
-    api 'com.google.firebase:firebase-messaging-ktx'
-    api 'com.google.firebase:firebase-config-ktx'
-    api 'com.google.firebase:firebase-perf-ktx' // performance
+    implementation 'com.google.firebase:firebase-crashlytics-ndk'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-perf-ktx' // performance
 
     // Flurry Analytics
     // https://developer.yahoo.com/flurry/docs/integrateflurry/android/
@@ -154,7 +160,7 @@ dependencies {
     //api 'com.github.User:Repo:Tag'
     String ver = ''
     ver = "7864a0042f"
-    api "com.github.chenFlyingkite:MyAndroid:$ver"
+    implementation "com.github.chenFlyingkite:MyAndroid:$ver"
     // sub library
     //api "com.github.chenFlyingkite.MyAndroid:CoreJava:$vg"
     //api "com.github.chenFlyingkite.MyAndroid:CoreAndroid:$vg"
@@ -167,7 +173,7 @@ dependencies {
     // A Java serialization/deserialization library to convert Java Objects into JSON and back
 
     // https://github.com/google/gson
-    api 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.google.code.gson:gson:2.8.9'
 
     // jsoup HTML parser library @ https://jsoup.org/
     // https://github.com/jhy/jsoup
@@ -186,7 +192,7 @@ dependencies {
 
     // Glide for Image cache library.
     // https://github.com/bumptech/glide
-    api "com.github.bumptech.glide:glide:4.11.0"
+    implementation "com.github.bumptech.glide:glide:4.13.0"
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
@@ -195,7 +201,7 @@ dependencies {
     //api 'io.github.kexanie.library:MathView:0.0.6'
 
     // Drawing the Charts like Excel in Android
-    api 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 
     // OkHttp for web
     // https://github.com/square/okhttp/
@@ -282,8 +288,8 @@ def copyAAB(variant) {
 
 // "${rootDir}/app/mapping.txt"
 def deleteIt(s) {
+    description "delete $s"
     delete(s)
-    println("delete $s")
 }
 // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.Exec.html
 
